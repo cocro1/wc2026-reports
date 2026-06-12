@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 韩国 vs 捷克（2026-06-12）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>韩国 vs 捷克 · 2026年6月12日 · 复盘时间：2026年6月12日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇰🇷</div>
+        <div class="name">韩国</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">置信度：中</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num" style="color:#2e7d32;">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">韩国胜</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇨🇿</div>
+        <div class="name">捷克</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">胜平负命中</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">备选比分覆盖 (2-1)</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">大小球判断（预测小球，实际3球）</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>韩国 1-1 捷克</td><td class="miss-row">韩国 <strong>2-1</strong> 捷克</td></tr>
+      <tr><td><strong>韩国胜率</strong></td><td>38%</td><td class="partial-row">韩国胜（概率偏低）</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>30%</td><td class="miss-row">无平局</td></tr>
+      <tr><td><strong>捷克胜率</strong></td><td>32%</td><td>捷克负</td></tr>
+      <tr><td><strong>进球数趋势</strong></td><td>小球 ≤2.5</td><td class="miss-row"><strong>大球 3球</strong></td></tr>
+      <tr><td><strong>裴俊浩出场</strong></td><td>"大概率缺阵"</td><td class="hit-row"><strong>替补席（#17）</strong>，未首发 ✅</td></tr>
+      <tr><td><strong>捷克定位球得分</strong></td><td>"最强武器"</td><td class="hit-row"><strong>克雷伊奇头球</strong>（界外球进攻）✅</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>裴俊浩状态</td><td>脚踝伤，大概率缺阵首发</td><td>替补席出场（#17），未首发</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>捷克进球方式</td><td>定位球/头球</td><td>界外球长传头球破门</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>金玟哉防守</td><td>世界级中卫</td><td>全场化解希克威胁，表现稳健</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>孙兴慜核心威胁</td><td>最具威胁攻击点</td><td>多次射门造成威胁，单刀险些破门</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>韩国控球优势</td><td>韩国倾向于控球</td><td>控球率62%，主导比赛节奏</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>捷克防守策略</td><td>稳守+定位球反击</td><td>低位防守，长传/界外球找高点</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>韩国中路防守</td><td>金玟哉领衔，防线稳定</td><td>仅失1球（界外球），运动战稳固</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>绍切克头球威胁</td><td>后插上头球</td><td>77'头球进但越位被吹</td><td>✅</td></tr>
+      <tr class="hit-row"><td>9</td><td>比赛节奏</td><td>韩国快节奏，捷克慢节奏</td><td>上半场平淡，下半场加速</td><td>✅</td></tr>
+      <tr class="partial-row"><td>10</td><td>裴俊浩缺阵影响</td><td>"严重削弱中场创造力"</td><td>韩国仍创造2.00 xG，创造力未受明显影响</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>xG 预期</td><td>小球，双方谨慎</td><td>韩国 xG 2.00，捷克 xG 0.80，合计2.80</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>12</td><td>赛果</td><td>1-1 平局</td><td>韩国 2-1 逆转胜</td><td>❌</td></tr>
+      <tr class="miss-row"><td>13</td><td>韩国首球来源</td><td>孙兴慜个人能力</td><td>黄仁范个人突破挑射</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>黄仁范角色</td><td>未列为关键对位</td><td>全场最佳级别，打入扳平球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>吴贤圭</td><td>未提及</td><td>替补出场，打入制胜球（80'）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>韩国门将表现</td><td>未重点分析</td><td>金承奎补时阶段关键扑救保胜</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>捷克门将</td><td>未充分分析</td><td>科瓦日 4 次扑救，多次神扑（50'双扑、56'挡孙兴慜单刀）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>韩国替补战术</td><td>未分析</td><td>吴贤圭 + 黄喜灿替补登场改变比赛</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>捷克犯规战术</td><td>未分析</td><td>16次犯规，远超韩国8次</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>天气/海拔影响</td><td>未证实分析</td><td>海拔1566m可能影响体能分配</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">9</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">2</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">9</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">45%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：赛果判断错误（预测平局 → 韩国胜）</h4>
+    <div class="insight-box">
+      <strong>核心原因：过度依赖"缺少裴俊浩 = 进攻创造力不足"的线性推演</strong><br><br>
+      原报告中裴俊浩的缺阵被列为下调韩国胜率的核心依据（从42%降至38%），但实际比赛中李在城首发填补了中场位置，黄仁范站了出来承担了进攻推进角色。韩国最终创造了 <strong>2.00 xG</strong>（高于赛前平均的1.12），证明中场创造力并未因一人缺阵而崩塌。这是本次预测最大的认知偏差：<strong>用"一名球员缺席"线性推导了整个体系的瘫痪</strong>，低估了洪明甫体系的中场轮转韧性。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：进球数判断错误（预测小球 → 实际3球大球）</h4>
+    <div class="insight-box">
+      <strong>核心原因：低估了落后方的反扑强度和替补奇兵效应</strong><br><br>
+      预测"双方谨慎"、"世界杯首轮保守"在下半场被打破：捷克领先后并未死守，而是继续尝试扩大比分（绍切克77'头球越位被吹）；韩国落后的反扑比预期更猛烈（67'到80'连进两球）。另外，<strong>吴贤圭的替补登场制胜球</strong>是完全超出预测框架的变量——原报告未做任何替补策略分析。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：韩国进球来源判断错误</h4>
+    <div class="insight-box">
+      <strong>核心原因：球员数据库不完整，遗漏关键进攻点</strong><br><br>
+      预测报告聚焦孙兴慜（距纪录2球战意强）和李刚仁（创造力源泉），但完全未提及黄仁范（效力费耶诺德的中场）和吴贤圭（凯尔特人前锋）。黄仁范在荷甲已展现出色的前插得分能力，吴贤圭在苏超的替补效率出色——这些数据在原报告的数据采集环节完全缺失。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：捷克定位球威胁被高估</h4>
+    <div class="insight-box">
+      <strong>核心原因：将俱乐部/预选赛数据直接迁移到世界杯，未做对手强度加权</strong><br><br>
+      "世预赛定位球11球全欧第一"确实触目惊心，但这些进球大部分是对阵法罗群岛、圣马力诺、直布罗陀等弱旅打入的。韩国防线的世界杯级别远高于捷克的预选赛对手。虽然捷克确实通过界外球头球得分，但仅1次定位球破门，远未达到"统治级"表现。这暴露了<strong>未对预选赛数据进行对手强度校准</strong>的系统性问题。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：门将分析完全缺失</h4>
+    <div class="insight-box">
+      <strong>核心原因：报告中门将仅被一句话带过，未纳入关键对位</strong><br><br>
+      实际比赛中，捷克门将科瓦日做出4次扑救（含50分钟的双重神扑和56分钟单刀扑救），如果他没有这些表现，韩国可能在上半场就已领先。韩国门将金承圭在补时阶段扑出赫洛热克的近距离射门保住胜果。门将位置是预测框架的<strong>盲区</strong>。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="miss-row">
+        <td><strong>韩国胜</strong></td>
+        <td>38%</td>
+        <td>"略低于平局和捷克胜"</td>
+        <td>✅ 发生</td>
+        <td>概率被低估。赛后回看，韩国胜率应在 42-45% 更为合理</td>
+      </tr>
+      <tr>
+        <td><strong>平局</strong></td>
+        <td>30%</td>
+        <td>"最可能单一结果"</td>
+        <td>❌ 未发生</td>
+        <td>平局概率合理，但不应作为首选</td>
+      </tr>
+      <tr>
+        <td><strong>捷克胜</strong></td>
+        <td>32%</td>
+        <td>"与韩国胜接近"</td>
+        <td>❌ 未发生</td>
+        <td>捷克胜率被高估约 8-10%，主要因为高估了定位球换算为进球的效率</td>
+      </tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的核心缺陷</strong>：三档概率接近（38/30/32）看起来很"审慎"，实际上是一种<strong>过度平均主义</strong>，掩盖了韩国在控球、世预赛防守韧性、大赛经验等维度上的真实优势。真正的分析应该是韩国 ~42%、平局 ~30%、捷克 ~28%，而非平均分配。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>韩国 vs 捷克历史交锋（2016年后无记录）</td><td>无法参考对战心理和战术克制关系</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>韩国球员俱乐部状态（黄仁范-费耶诺德、吴贤圭-凯尔特人）</td><td>遗漏关键得分点，进攻火力被低估</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>捷克门将科瓦日（勒沃库森）的扑救数据</td><td>门将位置分析空白，低估了捷克防守韧性</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>韩国门将金承奎赛季状态</td><td>门将位置分析空白</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>xG（预期进球）赛前数据</td><td>缺失量化参考，只能用"小球"模糊判断</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>两队替补球员效率数据</td><td>吴贤圭制胜球完全在预测框架之外</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>捷克预选赛定位球进球按对手分档统计</td><td>高估了定位球在面对韩国防线时的威胁</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>海拔 1566m 对体能分配的真实影响</td><td>未能评估下半场体能变化对逆转的贡献</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>实际赛前天气（湿度、风速）</td><td>仅用了气候均值，不够精确</td><td><span class="badge badge-gray">低</span></td></tr>
+      <tr><td>韩国大赛"逆转文化"的历史数据</td><td>低估了韩国落后时的心理韧性和战术调整能力</td><td><span class="badge badge-yellow">中</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：引入"对手强度校准"机制</h4>
+      <ul>
+        <li>将预选赛/友谊赛数据按对手 FIFA 排名分档（1-20 / 21-50 / 51-80 / 80+），分别统计进球/失球/定位球效率。</li>
+        <li>捷克"世预赛11球定位球全欧第一"如果拆分为「对阵前50名：1球，对阵50名外：10球」，结论将截然不同。</li>
+        <li><strong>操作</strong>：在数据采集阶段增加对手实力加权（Opponent Strength Rating, OSR），加权后的数据才是有效预测依据。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：球员数据库覆盖全队核心轮换（至少 15 人）</h4>
+      <ul>
+        <li>当前报告只覆盖了孙兴慜、金玟哉、李刚仁、裴俊浩 — 仅 4 人。黄仁范、吴贤圭、黄喜灿等关键轮换球员完全没被分析。</li>
+        <li><strong>操作</strong>：每支球队至少采集 14-16 名球员的近期俱乐部数据（进球、助攻、出场时间、WhoScored评分），特别标注"近5场状态热度"。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：增加门将专项分析模块</h4>
+      <ul>
+        <li>门将是本场比赛的关键：科瓦日 4 次扑救阻止韩国上半场领先，金承圭补时神扑保胜。</li>
+        <li><strong>操作</strong>：采集两国首发门将近10场的扑救率、xG阻止值（PSxG+/-）、面对不同类型射门的表现，作为独立模块列出。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：增加"替补攻击力"专项评估</h4>
+      <ul>
+        <li>吴贤圭的制胜球来自替补登场后 10 分钟内。未来预测中应评估两队替补席的攻击储备。</li>
+        <li><strong>操作</strong>：统计两队替补球员的"替补进球数/出场数"比率、替补登场后球队进攻效率变化。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：引入 xG 量化指标，替代模糊的"大球/小球"判断</h4>
+      <ul>
+        <li>"小球"的判断过于二元化且缺乏量化依据。引入预期进球（xG）后，可以给出更精确的进球数预测区间。</li>
+        <li><strong>操作</strong>：采集两队近 10 场比赛的 xG/xGA 数据，用加权平均预测本场 xG 区间，替代"大/小/不确定"的模糊分类。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：概率预测避免"过度平均主义"</h4>
+      <ul>
+        <li>38/30/32 的三档分布看起来审慎但实际上是一种"安全偏差"——不敢给出明确判断，用模糊的概率分布来隐藏不确定性。</li>
+        <li><strong>操作</strong>：引入"概率置信度梯级"——当数据明显倾向某一方时，敢于给出 ≥40% 的胜率；当数据不足以区分时，明确标注"数据高度不确定"而非强行平摊。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：增加"逆转/翻盘概率"子模型</h4>
+      <ul>
+        <li>韩国以大赛逆转能力闻名（2018 胜德国 2-0、2022 平乌拉圭后逆转葡萄牙），但原报告完全没有考虑这一因素。</li>
+        <li><strong>操作</strong>：建立球队历史大赛逆转/落后追平的频率数据库，作为概率预测的微调因子。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">9/10</span></td><td>比赛时间、地点、阶段、最新FIFA排名、近期赛果全部正确</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-green">8/10</span></td><td>韩国控球+边路、捷克稳守+定位球的框架完全正确</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-red">4/10</span></td><td>遗漏黄仁范、吴贤圭、金承奎、科瓦日等多名关键球员</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>缺少 xG、门将扑救率、对手强度校准等量化指标</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>三档过度平均，韩国真实胜率被压低</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>主预测 1-1 错误，但备选包含了 2-1；大小球判断错误</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-green">8/10</span></td><td>置信度标注"中"，明确说明数据缺失影响，符合要求</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">9/10</span></td><td>格式规范，分区清晰，易于快速查阅</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：预测报告在"战术框架"和"赛前基本信息"层面表现优秀</strong>——正确识别了韩国控球主导、捷克定位球反击、金玟哉的防守核心地位和孙兴慜的攻击威胁。裴俊浩缺阵首发的判断也是准确的。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>但在"结果预测"层面的偏差源于三个核心缺陷：</strong>
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>数据维度不足</strong>：缺少俱乐部球员实时状态、xG量化指标、门将专项数据，导致对比赛走势的判断缺少"骨骼"。</li>
+        <li><strong>线性思维偏差</strong>：将"1名球员缺阵 → 整体进攻下滑"简化为因果关系，忽略了球队系统韧性。</li>
+        <li><strong>概率过度审慎</strong>：用三档平均概率替代了真正的优势评估，不敢做出有倾向性的判断。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：6.0 / 10</strong>（战术判断和赛前信息 8-9 分，但最终预测结果偏差较大，拉低总分。以足球预测行业标准来看，属于及格但远未优秀的水平）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：球员数据库扩容 + 对手强度校准 + xG 量化引入 + 门将专项模块。实施以上 7 项建议后，下次预测的命中率和可靠性应有显著提升。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

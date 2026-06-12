@@ -7,7 +7,7 @@
 <style>
   * { box-sizing: border-box; margin:0; padding:0; }
   body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
-  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:28px 24px 24px; text-align:center; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:28px 24px 24px; text-align:center; }
   .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
   .header p { font-size:13px; opacity:0.85; margin-top:6px; }
   .nav { background:white; padding:10px 24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
@@ -17,7 +17,7 @@
   .nav a:not(.active):hover { background:#d0dffa; }
   .container { max-width:900px; margin:0 auto; padding:24px 16px 48px; }
   .welcome { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:28px; margin-bottom:20px; text-align:center; }
-  .welcome h2 { color:#0033A0; margin-bottom:8px; font-size:18px; }
+  .welcome h2 { color:#0033A0; margin-bottom:8px; }
   .welcome p { color:#666; font-size:14px; }
   .report-frame { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); margin-bottom:20px; overflow:hidden; }
   .report-frame iframe { width:100%; height:800px; border:none; }
@@ -31,6 +31,7 @@
   .history-match { font-size:14px; flex:1; }
   .history-result { font-size:12px; padding:2px 10px; border-radius:4px; font-weight:600; }
   .tag-ok { background:#e8f5e9; color:#2e7d32; }
+  .tag-pending { background:#fff8e1; color:#f57f17; }
   .footer { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
   .empty-state { text-align:center; padding:60px 20px; color:#888; }
   .empty-state .icon { font-size:48px; margin-bottom:12px; }
@@ -40,32 +41,33 @@
 <body>
 
 <div class="header">
-  <h1>2026 FIFA 世界杯 · 每日预测报告</h1>
+  <h1>🏆 2026 FIFA 世界杯 · 每日预测报告</h1>
   <p>自动更新 · 数据驱动 · 多维度分析</p>
 </div>
 
 <div class="nav">
-  <a href="index.html" class="active">最新报告</a>
-  <a href="#history">历史报告</a>
-  <a href="reports/review-2026-06-12.html">复盘报告</a>
-  <a href="reports/goal-analysis-2026-06-12.html">进球分析</a>
-  <a href="about.html">关于</a>
+  <a href="index.html" class="active">📊 最新报告</a>
+  <a href="#history">📋 历史报告</a>
+  <a href="about.html">ℹ️ 关于</a>
 </div>
 
 <div class="container">
 
+  <!-- 欢迎区 -->
   <div class="welcome">
     <h2 id="latest-title">正在加载最新报告…</h2>
     <p id="latest-subtitle">请稍候</p>
   </div>
 
+  <!-- 最新报告嵌入区 -->
   <div class="report-frame" id="report-frame">
-    <div class="loading" id="loading-msg">正在加载报告内容…</div>
+    <div class="loading" id="loading-msg">📊 正在加载报告内容…</div>
     <iframe id="report-iframe" style="display:none;"></iframe>
   </div>
 
+  <!-- 历史报告列表 -->
   <div class="history-section" id="history">
-    <div class="history-title">历史报告存档</div>
+    <div class="history-title">📋 历史报告存档</div>
     <div class="history-list" id="history-list">
       <div class="empty-state">
         <div class="icon">📭</div>
@@ -81,84 +83,53 @@
 </div>
 
 <script>
-  var REPORTS = [
+  // 报告索引数据（每次自动化运行时会自动更新此数组）
+  const REPORTS = [
     {
       date: "2026-06-12",
       file: "reports/report-2026-06-12.html",
       title: "韩国 vs 捷克",
       group: "A组 小组赛",
-      prediction: "预测 1-1 / 实际 2-1",
-      confidence: "中",
-      actual: true
+      prediction: "1-1",
+      confidence: "中"
     }
+    // 后续报告会自动追加到此数组
   ];
 
-  var REVIEWS = [
-    {
-      date: "2026-06-12",
-      file: "reports/review-2026-06-12.html",
-      title: "复盘：韩国 vs 捷克",
-      group: "赛后分析",
-      prediction: "评分 6.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-12",
-      file: "reports/goal-analysis-2026-06-12.html",
-      title: "进球分析：前2场 5球",
-      group: "数据统计",
-      prediction: "场均 2.50球",
-      confidence: ""
-    }
-  ];
-
+  // 渲染最新报告
   function renderLatest() {
     if (REPORTS.length === 0) return;
-    var latest = REPORTS[0];
-    document.getElementById("latest-title").textContent = "最新报告：" + latest.title;
-    document.getElementById("latest-subtitle").textContent = latest.group + " · 预测 " + latest.prediction + " · 置信度 " + latest.confidence;
-    var iframe = document.getElementById("report-iframe");
+    const latest = REPORTS[0];
+    document.getElementById('latest-title').textContent = `最新报告：${latest.title}`;
+    document.getElementById('latest-subtitle').textContent = `${latest.group} · 预测 ${latest.prediction} · 置信度 ${latest.confidence}`;
+
+    const iframe = document.getElementById('report-iframe');
     iframe.src = latest.file;
-    iframe.style.display = "block";
-    document.getElementById("loading-msg").style.display = "none";
+    iframe.style.display = 'block';
+    document.getElementById('loading-msg').style.display = 'none';
   }
 
+  // 渲染历史列表
   function renderHistory() {
-    var list = document.getElementById("history-list");
-    var html = "";
-
-    // Reviews section
-    if (REVIEWS && REVIEWS.length > 0) {
-      html += '<div style="font-size:13px;font-weight:700;color:#e65100;margin-bottom:10px;padding-left:4px;">🔍 赛后复盘</div>';
-      REVIEWS.forEach(function(r) {
-        html += '<a class="history-item" href="' + r.file + '" style="border-left:3px solid #e65100;">';
-        html += '<div class="history-date">' + r.date + '</div>';
-        html += '<div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div>';
-        html += '<div class="history-result tag-ok">' + r.prediction + '</div>';
-        html += '</a>';
-      });
-    }
-
-    // Prediction reports (skip the first one - it's the latest)
-    if (REPORTS.length > 1) {
-      html += '<div style="font-size:13px;font-weight:700;color:#0033A0;margin:16px 0 10px;padding-left:4px;">📊 往期预测</div>';
-      REPORTS.slice(1).forEach(function(r) {
-        var tagClass = r.actual ? "tag-ok" : "tag-ok";
-        html += '<a class="history-item" href="' + r.file + '">';
-        html += '<div class="history-date">' + r.date + '</div>';
-        html += '<div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div>';
-        html += '<div class="history-result ' + tagClass + '">' + r.prediction + '</div>';
-        html += '</a>';
-      });
-    }
-
-    if (html === "") {
-      html = '<div class="empty-state"><div class="icon">📭</div><div>暂无历史报告，请稍后查看</div></div>';
-    }
-    list.innerHTML = html;
+    if (REPORTS.length <= 1) return; // 只有最新报告时不显示历史
+    const list = document.getElementById('history-list');
+    list.innerHTML = '';
+    // 从第二份开始（第一份已在"最新报告"显示）
+    REPORTS.slice(1).forEach(r => {
+      const item = document.createElement('a');
+      item.className = 'history-item';
+      item.href = r.file;
+      item.innerHTML = `
+        <div class="history-date">${r.date}</div>
+        <div class="history-match">${r.title} <span style="color:#888;font-size:12px;">（${r.group}）</span></div>
+        <div class="history-result tag-ok">预测 ${r.prediction}</div>
+      `;
+      list.appendChild(item);
+    });
   }
 
-  document.addEventListener("DOMContentLoaded", function() {
+  // 页面加载完成后渲染
+  document.addEventListener('DOMContentLoaded', () => {
     renderLatest();
     renderHistory();
   });

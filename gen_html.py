@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+import os
+import base64
+
+base = r'C:\Users\cocro\WorkBuddy\wc2026-reports'
+
+# index.html
+index = '''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -47,8 +53,6 @@
 <div class="nav">
   <a href="index.html" class="active">最新报告</a>
   <a href="#history">历史报告</a>
-  <a href="reports/review-2026-06-12.html">复盘报告</a>
-  <a href="reports/goal-analysis-2026-06-12.html">进球分析</a>
   <a href="about.html">关于</a>
 </div>
 
@@ -87,28 +91,8 @@
       file: "reports/report-2026-06-12.html",
       title: "韩国 vs 捷克",
       group: "A组 小组赛",
-      prediction: "预测 1-1 / 实际 2-1",
-      confidence: "中",
-      actual: true
-    }
-  ];
-
-  var REVIEWS = [
-    {
-      date: "2026-06-12",
-      file: "reports/review-2026-06-12.html",
-      title: "复盘：韩国 vs 捷克",
-      group: "赛后分析",
-      prediction: "评分 6.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-12",
-      file: "reports/goal-analysis-2026-06-12.html",
-      title: "进球分析：前2场 5球",
-      group: "数据统计",
-      prediction: "场均 2.50球",
-      confidence: ""
+      prediction: "1-1",
+      confidence: "中"
     }
   ];
 
@@ -124,38 +108,16 @@
   }
 
   function renderHistory() {
+    if (REPORTS.length <= 1) return;
     var list = document.getElementById("history-list");
-    var html = "";
-
-    // Reviews section
-    if (REVIEWS && REVIEWS.length > 0) {
-      html += '<div style="font-size:13px;font-weight:700;color:#e65100;margin-bottom:10px;padding-left:4px;">🔍 赛后复盘</div>';
-      REVIEWS.forEach(function(r) {
-        html += '<a class="history-item" href="' + r.file + '" style="border-left:3px solid #e65100;">';
-        html += '<div class="history-date">' + r.date + '</div>';
-        html += '<div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div>';
-        html += '<div class="history-result tag-ok">' + r.prediction + '</div>';
-        html += '</a>';
-      });
-    }
-
-    // Prediction reports (skip the first one - it's the latest)
-    if (REPORTS.length > 1) {
-      html += '<div style="font-size:13px;font-weight:700;color:#0033A0;margin:16px 0 10px;padding-left:4px;">📊 往期预测</div>';
-      REPORTS.slice(1).forEach(function(r) {
-        var tagClass = r.actual ? "tag-ok" : "tag-ok";
-        html += '<a class="history-item" href="' + r.file + '">';
-        html += '<div class="history-date">' + r.date + '</div>';
-        html += '<div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div>';
-        html += '<div class="history-result ' + tagClass + '">' + r.prediction + '</div>';
-        html += '</a>';
-      });
-    }
-
-    if (html === "") {
-      html = '<div class="empty-state"><div class="icon">📭</div><div>暂无历史报告，请稍后查看</div></div>';
-    }
-    list.innerHTML = html;
+    list.innerHTML = "";
+    REPORTS.slice(1).forEach(function(r) {
+      var item = document.createElement("a");
+      item.className = "history-item";
+      item.href = r.file;
+      item.innerHTML = '<div class="history-date">' + r.date + '</div><div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div><div class="history-result tag-ok">预测 ' + r.prediction + '</div>';
+      list.appendChild(item);
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -165,4 +127,74 @@
 </script>
 
 </body>
-</html>
+</html>'''
+
+with open(os.path.join(base, 'index.html'), 'w', encoding='utf-8') as f:
+    f.write(index)
+print('index.html written:', len(index), 'bytes')
+
+# about.html
+about = '''<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 · 2026世界杯预测报告</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:28px 24px 24px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; }
+  .back { display:block; max-width:820px; margin:16px auto 0; padding:0 16px; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card h2 { font-size:16px; color:#0033A0; margin-bottom:12px; border-left:4px solid #0033A0; padding-left:12px; }
+  .card p { font-size:14px; color:#444; margin-bottom:10px; }
+  .card ul { font-size:13.5px; color:#444; padding-left:20px; }
+  .card li { margin-bottom:6px; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; background:#e8f0fe; color:#0033A0; }
+  .footer { text-align:center; font-size:11px; color:#aaa; padding:20px; }
+</style>
+</head>
+<body>
+<div class="header"><h1>关于本项目</h1></div>
+<a class="back" href="index.html">← 返回首页</a>
+<div class="container">
+  <div class="card">
+    <h2>项目说明</h2>
+    <p>本网站由 <strong>WorkBuddy AI 自动化任务</strong> 每日生成 2026 FIFA 世界杯比赛预测报告，涵盖：</p>
+    <ul>
+      <li>比赛双方、时间、地点、阶段确认</li>
+      <li>双方近期状态分析（最近5场）</li>
+      <li>攻防能力对比（数据驱动）</li>
+      <li>关键球员/战术对位分析</li>
+      <li>胜/平/负概率预测（含置信度）</li>
+      <li>最可能比分 + 2-3个备选比分</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>数据来源</h2>
+    <ul>
+      <li>FIFA 官网（赛程、排名、球队名单）</li>
+      <li>LiveScore / ESPN（近期赛果、伤停）</li>
+      <li>SportBot AI 蒙特卡洛模拟（概率参考）</li>
+      <li>市场赔率（隐含概率参考）</li>
+    </ul>
+    <p style="margin-top:10px; color:#888; font-size:12.5px;">数据更新时间标注于每份报告顶部，通常赛前 2-6 小时更新。</p>
+  </div>
+  <div class="card">
+    <h2>免责声明</h2>
+    <p>所有预测基于公开数据，通过统计模型生成，<strong>体现不确定性，不构成确定性结论</strong>。足球比赛存在高度随机性，任何预测均可能出错。</p>
+    <p style="color:#c62828; font-weight:600;">本内容仅供参考，不构成任何投注建议。请理性观赛，远离非法赌博。</p>
+  </div>
+  <div class="footer">WorkBuddy AI · 2026 FIFA World Cup Prediction Project</div>
+</div>
+</body>
+</html>'''
+
+with open(os.path.join(base, 'about.html'), 'w', encoding='utf-8') as f:
+    f.write(about)
+print('about.html written:', len(about), 'bytes')
+
+print('Done!')
