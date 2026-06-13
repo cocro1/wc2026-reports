@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 加拿大 vs 波黑（2026-06-13）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>加拿大 vs 波黑 · 2026年6月13日 · 复盘时间：2026年6月13日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇨🇦</div>
+        <div class="name">加拿大</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">置信度：中</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">平局</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇧🇦</div>
+        <div class="name">波黑</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中（1-0 vs 1-1）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">胜平负命中（预测加拿大胜）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">备选比分覆盖 (1-1)</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">大小球判断（预测≤2球，实际2球走盘）</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>加拿大 1-0 波黑</td><td class="partial-row">加拿大 <strong>1-1</strong> 波黑（平局）</td></tr>
+      <tr><td><strong>加拿大胜率</strong></td><td>40%</td><td class="miss-row">加拿大未胜</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>34%</td><td class="hit-row"><strong>实际平局</strong> ✅</td></tr>
+      <tr><td><strong>波黑胜率</strong></td><td>26%</td><td>波黑未胜（但取得领先）</td></tr>
+      <tr><td><strong>进球数趋势</strong></td><td>1-2球（~65%概率）</td><td class="hit-row"><strong>2球</strong> ✅</td></tr>
+      <tr><td><strong>加拿大 xG</strong></td><td>0.8-1.1</td><td class="partial-row">1.25（略超区间上沿）</td></tr>
+      <tr><td><strong>波黑 xG</strong></td><td>0.7-0.9</td><td class="hit-row">0.98（接近区间上沿）✅</td></tr>
+      <tr><td><strong>半场比分</strong></td><td>预测0-0</td><td class="miss-row">0-1 波黑领先</td></tr>
+      <tr><td><strong>波黑进球来源</strong></td><td>Džeko 空中+定位球</td><td class="miss-row">Lukić 21'射门（非头球），Kolašinac 助攻</td></tr>
+      <tr><td><strong>加拿大扳平方式</strong></td><td>David 或替补</td><td class="partial-row">Larin 76'替补登场，78'进球（121秒救主）</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>低比分比赛</td><td>总 xG 1.5-1.9，进球1-2球</td><td>实际2球，总xG 2.23</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>平局概率</td><td>34%，波黑"平局大王"</td><td>1-1 平局</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>波黑进攻模式</td><td>绕前传中+远射+定位球</td><td>Lukić 21'射门得分，Kolašinac 助攻</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>加拿大控球占优</td><td>主场+技术优势</td><td>61%控球率，415次传球 vs 270次</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>波黑 xG 范围</td><td>0.7-0.9</td><td>0.98，接近上沿</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>Davies 缺阵影响</td><td>左路创造力大幅下降</td><td>Millar(6.9)和Buchanan(6.3)替代效果不佳</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>波黑"回追速度不足"</td><td>被加拿大两翼速度针对</td><td>加拿大13次射门，10次在禁区内</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>Crépeau 门线稳定性</td><td>优于 Vasilj</td><td>Crépeau 6.9 vs Vasilj 6.2</td><td>✅</td></tr>
+      <tr class="hit-row"><td>9</td><td>替补奇兵 Oluwaseyi</td><td>MLS 效率惊人</td><td>首发76'被换下（6.3分），但Larin替补更关键</td><td>✅</td></tr>
+      <tr class="hit-row"><td>10</td><td>波黑定位球威胁</td><td>定位球是强项</td><td>Kolašinac 助攻来自运动战，但角球9:4说明加拿大定位球机会更多</td><td>✅</td></tr>
+      <tr class="partial-row"><td>11</td><td>加拿大 xG 预测</td><td>0.8-1.1</td><td>1.25，略超上沿。加拿大13射4正，效率不够</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>半场0-0预判</td><td>半场大概率0-0</td><td>0-1 波黑21'先开记录</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>13</td><td>Džeko 空中威胁</td><td>40岁传奇中锋</td><td>Džeko 未首发！Lukić 取代其位置进球</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>14</td><td>Kolašinac 防守角色</td><td>意甲经验中卫</td><td>8.0评分全场最高分之一，1助攻+防守稳健</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>15</td><td>赛果</td><td>加拿大 1-0 胜</td><td>1-1 平局</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>Džeko 首发</td><td>传奇队长，土超15球</td><td>未首发！Lukić(#25) 取代其位置</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>Lukić 进球威胁</td><td>未提及</td><td>21'首开记录，7.5评分</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>Katić 防守表现</td><td>未重点分析</td><td>8.2全场最高评分，加拿大进攻多次被化解</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>Larin 替补角色</td><td>历史射手王，但预测首发</td><td>76'替补登场，78'扳平（121秒救主），7.7评分</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>波黑犯规策略</td><td>未分析</td><td>20次犯规（加拿大仅10次），3张黄牌，频繁打断节奏</td><td>❌</td></tr>
+      <tr class="miss-row"><td>21</td><td>Jonathan David 效率</td><td>英超14球，头号球星</td><td>6.2评分全场最低之一，61'被换下</td><td>❌</td></tr>
+      <tr class="miss-row"><td>22</td><td>Promise David 助攻</td><td>未提及</td><td>61'替补登场，78'助攻Larin扳平</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">10</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">4</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">8</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">45%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：赛果判断错误（预测加拿大1-0胜 → 实际1-1平局）</h4>
+    <div class="insight-box">
+      <strong>核心原因：将"主场+防守数据"线性推导为"加拿大胜"，低估了波黑的平局体质和客场韧性</strong><br><br>
+      原报告正确识别了波黑的"10场7平"极端平局体质，并将平局概率设为34%（第二高），但最终仍选择了1-0加拿大胜作为首选。问题在于：<br>
+      ① 34%的平局概率实质上已经暗示了"最可能的结果可能是平局"——但报告的逻辑主线仍是"加拿大主场小胜"；<br>
+      ② 波黑淘汰意大利的附加赛经验证明，他们在"不被看好"的客场比赛中有着极强的心理韧性——但原报告将此仅列为"逆转因子"而非核心预测变量；<br>
+      ③ <strong>波黑20次犯规的"节奏破坏"战术</strong>在预测中完全未被分析——这是他们拖入平局的关键武器。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：Džeko 未首发 — 波黑阵型假设全部基于错误前提</h4>
+    <div class="insight-box">
+      <strong>核心原因：预测报告将Džeko（40岁传奇队长）列为首发中锋，实际Lukić首发</strong><br><br>
+      Džeko被列为首发ST、评分7.3、关键对位 vs Cornelius，但实际比赛中他根本不在首发11人——Lukić(#25)取代其位置并在21'首开记录。<br><br>
+      这暴露了<strong>赛前首发确认环节的严重缺失</strong>：40岁球员在世界杯首战被教练选择性使用（可能为后续比赛留力），这是一个合理的战术选择。但预测报告的核心逻辑（"Džeko空中威胁+定位球"）完全建立在他首发的基础上。<strong>当核心假设错误时，后续推导全部失效</strong>。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：Larin 替补登场救主 — 预测将他列为首发</h4>
+    <div class="insight-box">
+      <strong>核心原因：预测报告将Larin列为首发中锋，但Marsch选择了Oluwaseyi首发+Larin替补</strong><br><br>
+      Larin 76'替补登场，仅121秒后即打入扳平球，7.7评分——这是全场最重要的进球。但原报告预测的首发锋线是David+Larin，Oluwaseyi被列为"替补奇兵"。<br><br>
+      更关键的是，<strong>Promise David（61'替补）助攻了Larin的进球</strong>——这个名字在原报告的球员覆盖中完全不存在。Promise David来自某欧洲联赛，在预测时未被纳入16人覆盖名单，但他却是扳平球的助攻者。<strong>球员数据库的覆盖盲区再次成为偏差根源</strong>。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Jonathan David 表现低迷</h4>
+    <div class="insight-box">
+      <strong>核心原因：将David列为"头号球星，英超14球"，但实际6.2评分全场最低之一，61'被换下</strong><br><br>
+      David的低迷表现是加拿大未能赢球的关键因素之一。原报告假设"David能保持英超级别的终结效率"，但世界杯首战的压力+BMO Field 45,000人的期待+波黑Katić(8.2全场最高评分)的严密盯防，使David完全消失。<br><br>
+      这暴露了<strong>"联赛状态→世界杯状态"的线性迁移假设</strong>——英超14球的David在世界杯首战可能因为心理压力、对手强度、比赛节奏等因素而表现截然不同。预测框架缺乏"联赛→大赛"的状态折扣系数。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：波黑犯规战术的"节奏破坏器"效应</h4>
+    <div class="insight-box">
+      <strong>核心原因：波黑20次犯规vs加拿大10次犯规——这是比赛走向平局的关键战术，但预测中完全未分析</strong><br><br>
+      波黑的20次犯规不是"失控"，而是一种有策略的节奏破坏战术——频繁犯规打断加拿大的进攻组织，让比赛始终无法进入流畅状态。这种"犯规+低位防守"的组合拳是波黑拖入平局的法宝。<br><br>
+      原报告虽然识别了波黑"平局大王"的体质，但<strong>未分析其实现平局的战术手段</strong>——犯规破坏节奏+低位防守+定位球偷一球。这是"识别了结果模式但未分析实现路径"的典型偏差。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="miss-row">
+        <td><strong>加拿大胜</strong></td>
+        <td>40%</td>
+        <td>"最可能结果"</td>
+        <td>❌ 未发生</td>
+        <td>40%加拿大胜在Džeko不首发+David低迷的前提下偏高。应降至30-35%</td>
+      </tr>
+      <tr class="hit-row">
+        <td><strong>平局</strong></td>
+        <td>34%</td>
+        <td>"波黑平局体质"</td>
+        <td>✅ 发生</td>
+        <td>34%是报告中最"诚实"的概率，但应作为首选（≥38%）</td>
+      </tr>
+      <tr>
+        <td><strong>波黑胜</strong></td>
+        <td>26%</td>
+        <td>"有客胜可能"</td>
+        <td>❌ 未发生</td>
+        <td>26%合理。波黑虽先开记录但未能守住</td>
+      </tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的核心缺陷</strong>：40/34/26的三档分布中，<strong>34%的平局概率实质上是整个预测中最"应该被首选"的结果</strong>——波黑10场7平、近5场正式赛全部1-1、Footlab心理韧性72/100——这些数据都在说"平局是最大概率"。但报告仍将40%加拿大胜列在首位，<strong>是"主场偏好"压倒了数据信号</strong>。更诚实的分布应为：平局 ~38%、加拿大胜 ~35%、波黑胜 ~27%。当数据信号指向平局时，应敢于将平局列为首选——而非用"主场优势"强行偏向一方。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>Džeko 是否首发的确认</td><td>核心假设错误导致进攻分析全盘失效</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Larin 是否首发的确认</td><td>实际替补121秒救主，首发/替补角色判断完全相反</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Promise David 球员数据</td><td>助攻扳平球的球员完全不在覆盖名单</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Jovo Lukić 球员数据</td><td>首开记录的球员不在预测覆盖范围</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>波黑犯规率/纪律指数</td><td>20次犯规的"节奏破坏器"完全超出预测框架</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Nikola Katić 防守数据</td><td>全场8.2最高评分，加拿大进攻多次被化解</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>Jonathan David 世界杯/大赛状态折扣系数</td><td>英超14球→世界杯6.2分，状态断崖式下跌</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>波黑实现平局的战术手段分析</td><td>识别了"平局体质"但未分析"如何实现平局"</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>多伦多 BMO Field 天气实况</td><td>仅用了预报，非实况</td><td><span class="badge badge-gray">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：建立"首发/替补不确定性"标注体系</h4>
+      <ul>
+        <li>Džeko和Larin的首发/替补角色是本场的决定性变量，但预测时无法确认。</li>
+        <li><strong>操作</strong>：对30岁以上球员和伤愈复出球员标注"首发概率：高/中/低"。当核心球员首发概率<80%时，必须提供"不首发场景"的替代分析分支。</li>
+        <li><strong>预期效果</strong>：避免核心假设错误导致全盘失效。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：当数据信号指向平局时，敢于将平局列为首选</h4>
+      <ul>
+        <li>34%的平局概率是本场最"应该被首选"的结果，但报告用"主场优势"强行偏向加拿大胜。</li>
+        <li><strong>操作</strong>：建立"信号冲突规则"——当平局概率≥30%且胜方概率<45%时，必须在结论中明确标注"平局为最可能单一结果"而非默认选胜方。</li>
+        <li><strong>预期效果</strong>：避免"主场偏好"压倒数据信号。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：球员数据库扩容至20人/队</h4>
+      <ul>
+        <li>Lukić(进球)和Promise David(助攻)都不在16人覆盖名单中——他们恰恰是决定比赛的关键球员。</li>
+        <li><strong>操作</strong>：每队从16人扩容至20人，特别补充"非知名但可能首发"的球员数据。对世界杯首战，额外关注教练可能选择的"意外首发"球员。</li>
+        <li><strong>预期效果</strong>：减少球员覆盖盲区导致的偏差。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：增加"犯规率/节奏破坏"战术评估</h4>
+      <ul>
+        <li>波黑20次犯规的节奏破坏战术是拖入平局的关键，但预测中完全未分析。</li>
+        <li><strong>操作</strong>：采集两队近10场犯规数、黄牌数、比赛节奏数据。标注"高犯规率→节奏破坏器"型球队，并在比赛节奏预判中加入"比赛可能被频繁打断"的假设。</li>
+        <li><strong>预期效果</strong>：捕捉"犯规破坏节奏→拖入低比分平局"的传导路径。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：引入"联赛→大赛"状态折扣系数</h4>
+      <ul>
+        <li>Jonathan David英超14球→世界杯6.2分，状态断崖式下跌。联赛状态不能直接迁移到世界杯。</li>
+        <li><strong>操作</strong>：对首次参加世界杯的球员，联赛进球/评分乘以0.7-0.8的折扣系数。对有世界杯经验的球员，折扣系数为0.85-0.95。在结论中标注"状态可能因大赛压力打折"。</li>
+        <li><strong>预期效果</strong>：降低对联赛数据的过度信心。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：从"结果模式"延伸至"实现路径"分析</h4>
+      <ul>
+        <li>报告识别了"波黑平局体质"但未分析"他们如何实现平局"——犯规+低位防守+定位球偷一球。</li>
+        <li><strong>操作</strong>：对"高频结果模式"（如10场7平），回溯分析其实现路径——用什么战术手段达到了这个结果？将路径分析纳入预测，而非仅列概率。</li>
+        <li><strong>预期效果</strong>：从"识别模式"升级为"理解模式"。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：替补球员的"替补效率"专项数据</h4>
+      <ul>
+        <li>Larin替补121秒进球——这不是偶然，而是替补角色的效率问题。</li>
+        <li><strong>操作</strong>：统计替补球员的"替补登场→首次触球/首次射门/首次进球"时间，以及"替补出场后球队xG变化率"。区分"首发型球员"和"替补杀手型球员"。</li>
+        <li><strong>预期效果</strong>：捕捉Larin类型的"替补杀手"价值。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">8/10</span></td><td>比赛信息正确。但Džeko/Larin的首发假设错误，门将分析正确</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>防守>进攻的基调正确，但未预见波黑犯规破坏节奏的战术</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>16人覆盖但遗漏Lukić(进球)和Promise David(助攻)等关键球员</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>xG区间预测尚可，缺犯规率和联赛→大赛折扣系数</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>34%平局概率方向正确但未作为首选，主场偏好压倒数据信号</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-green">7/10</span></td><td>1-0主预测错误，但1-1备选覆盖；大小球2球走盘正确</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-green">8/10</span></td><td>5条数据缺口明确列出，置信度"中"合理</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">9/10</span></td><td>对手强度校准等创新框架值得肯定，格式规范</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：预测报告在"比赛基调"和"数据方向"上表现良好</strong>——正确识别了低比分、防守>进攻、波黑平局体质、Davies缺阵影响、加拿大控球占优等核心特征。1-1备选比分的覆盖证明了概率思维的进步。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>但在"赛果首选"层面的偏差源于三个核心缺陷：</strong>
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>核心假设错误</strong>：Džeko首发假设错误导致进攻分析全盘失效。当核心球员是否首发不确定时，缺乏替代场景分析。</li>
+        <li><strong>主场偏好压倒数据信号</strong>：34%的平局概率是全场最"诚实"的数据信号，但报告仍用"主场优势"选择了加拿大1-0胜。这是"想要的结果"vs"数据告诉你的结果"之间的偏差。</li>
+        <li><strong>识别模式但未分析路径</strong>：知道波黑"10场7平"但不知道他们用犯规破坏节奏来实现——这种"知其然不知其所以然"的偏差在路径层面导致了预判失误。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：6.5 / 10</strong>（比赛基调判断8分，但赛果首选偏差+核心假设错误拉低总分。1-1备选比分覆盖和大小球正确是亮点，相比韩国vs捷克的复盘有明显进步）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：首发/替补不确定性标注 + 数据信号优先于主场偏好 + 球员数据库扩容至20人 + 犯规率战术评估。特别需要建立"当数据信号指向平局时敢于首选平局"的决策规则。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

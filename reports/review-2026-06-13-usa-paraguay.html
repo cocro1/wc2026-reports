@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 美国 vs 巴拉圭（2026-06-13）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>美国 vs 巴拉圭 · 2026年6月13日 · 复盘时间：2026年6月13日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇺🇸</div>
+        <div class="name">美国</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">置信度：中</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num" style="color:#2e7d32;">4</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">美国胜</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇵🇾</div>
+        <div class="name">巴拉圭</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">胜平负命中（美国胜）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">大小球判断（预测≤2球，实际5球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">备选比分覆盖</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>美国 1-0 巴拉圭</td><td class="miss-row">美国 <strong>4-1</strong> 巴拉圭</td></tr>
+      <tr><td><strong>美国胜率</strong></td><td>48%</td><td class="partial-row">美国大胜（概率被严重低估）</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>30%</td><td class="miss-row">无平局</td></tr>
+      <tr><td><strong>巴拉圭胜率</strong></td><td>22%</td><td>巴拉圭负</td></tr>
+      <tr><td><strong>进球数趋势</strong></td><td>小球 ≤2（60%概率）</td><td class="miss-row"><strong>大球 5球</strong></td></tr>
+      <tr><td><strong>美国 xG 预测</strong></td><td>1.0-1.4</td><td class="partial-row">1.35（落入区间）</td></tr>
+      <tr><td><strong>巴拉圭 xG 预测</strong></td><td>0.4-0.7</td><td class="hit-row">0.47（落入区间）</td></tr>
+      <tr><td><strong>Pulisic 核心威胁</strong></td><td>队魂，最危险攻击点</td><td class="hit-row"><strong>9分评分，1助攻，爆破右路</strong> ✅</td></tr>
+      <tr><td><strong>巴拉圭防守</strong></td><td>预选赛仅失14球，极难攻破</td><td class="miss-row"><strong>7分钟乌龙+31分钟失2球，防线崩盘</strong></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>美国胜</td><td>48%胜率，预测1-0</td><td>美国4-1大胜</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>Pulisic核心威胁</td><td>队魂，33球，最危险攻击点</td><td>9分评分，1助攻，反复撕裂右路</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>美国控球占优</td><td>主场优势+实力差</td><td>65%控球率，上半场71%创纪录</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>Balogun进攻核心</td><td>赛季19球，🔥状态</td><td>梅开二度，9分评分，历史级表现</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>McKennie后插上</td><td>B2B全能，打破密集防守关键</td><td>8分评分，10号位自由人，摧毁巴拉圭防线</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>巴拉圭 xG 范围</td><td>0.4-0.7</td><td>0.47，落入区间</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>左路Pulisic+Robinson组合</td><td>对巴拉圭4-4-2最大考验</td><td>Pulisic爆破右路，Robinson策动第二球</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>巴拉圭Almirón反击</td><td>反击发动机</td><td>73'助攻Mauricio进球，制造威胁</td><td>✅</td></tr>
+      <tr class="hit-row"><td>9</td><td>Enciso缺阵</td><td>重大存疑</td><td>首发但62'被换下，表现平淡</td><td>✅</td></tr>
+      <tr class="hit-row"><td>10</td><td>Adams刚恢复</td><td>⚠️刚恢复，状态存疑</td><td>上半场传球30/30完美，下半场失误致丢球</td><td>✅</td></tr>
+      <tr class="partial-row"><td>11</td><td>美国 xG 预测</td><td>1.0-1.4</td><td>1.35落入区间，但实际4球远超xG——运气+对手乌龙加持</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>替补奇兵Pepi</td><td>65'后登场威胁极大</td><td>72'登场但5分最低评分，2打1选传球失误</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>13</td><td>门将Freese分析</td><td>新一门，大赛经验不足</td><td>6分评分，基本无事可做，非比赛决定因素</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>14</td><td>巴拉圭定位球防守</td><td>极强，Gómez+Alderete组合</td><td>被7分钟乌龙打懵，但定位球防守未被打穿</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>15</td><td>比分预测</td><td>1-0（22%）</td><td>4-1，差距巨大</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>进球数判断</td><td>60%概率≤2球，偏向低比分</td><td>5球，大球碾压</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>巴拉圭防守能力</td><td>预选赛仅失14球，极难攻破</td><td>7'乌龙+31'失2球，半场0-3崩盘</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>比赛节奏判断</td><td>艰难破僵，1-0剧本</td><td>7'即开记录，上半场3-0，毫无悬念</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>波切蒂诺战术变化</td><td>未预测阵型和McKennie角色</td><td>4-2-3-1中Tillman后置+McKennie10号位自由人，战术天才</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>Gio Reyna替补角色</td><td>仅列为"超级替补候选"</td><td>82'登场，90+8'外脚背世界波破门，8分评分</td><td>❌</td></tr>
+      <tr class="miss-row"><td>21</td><td>Bobadilla乌龙</td><td>未预测任何乌龙球可能</td><td>7'乌龙球直接改变比赛走向</td><td>❌</td></tr>
+      <tr class="miss-row"><td>22</td><td>巴拉圭黄牌/纪律</td><td>未重点分析</td><td>5张黄牌，Cáceres 10'即染黄，防线彻底失控</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">10</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">4</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">8</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">45%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：比分预测严重偏小（1-0 → 4-1）</h4>
+    <div class="insight-box">
+      <strong>核心原因：将"预选赛防守数据"直接迁移到世界杯首战，忽略了大赛首战的心理/战术变量</strong><br><br>
+      巴拉圭"预选赛18场仅失14球"被反复强调为难以攻破的证据。但预选赛数据存在三个致命盲区：<br>
+      ① 预选赛大部分对手为南美中下游球队，进攻强度远不及美国队Pulisic+Balogun的配置；<br>
+      ② 预选赛是"淘汰赛式谨慎"——双方都不愿冒险。世界杯首战对美国队则是"必须赢"的比赛，主场7万人的压力使巴拉圭的谨慎变成了被动挨打；<br>
+      ③ <strong>7分钟乌龙球完全摧毁了巴拉圭的比赛计划</strong>——原计划的低位防守+等待反击被迫变为主动压上，防线身后的空间被美国反复利用。<br><br>
+      这是典型的<strong>"用过去的稳态数据预测非稳态场景"</strong>——大赛首战的早期进球会引发级联效应，这在历史数据中反复出现。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：进球数判断完全相反（预测小球 → 实际5球大球）</h4>
+    <div class="insight-box">
+      <strong>核心原因：过度依赖"双方谨慎+世界杯首战保守"的均值假设，未考虑领先后的进攻释放效应</strong><br><br>
+      报告预测"60%概率≤2球"基于两队进攻效率偏低的均值。但这一逻辑忽略了：<br>
+      ① <strong>乌龙球的级联效应</strong>：7分钟即1-0领先，美国不需要保守——他们可以更自由地进攻，而巴拉圭被迫压上后暴露更多身后空间；<br>
+      ② <strong>3-0半场领先后的比赛彻底开放</strong>——巴拉圭在下半场全面压上，形成对攻格局。此时进球概率不降反升；<br>
+      ③ xG 1.35 vs 0.47 的数据看似"低产出"，但实际4球进账说明<strong>xG对极端比赛事件的捕捉能力有限</strong>——乌龙球、远射世界波不在xG模型的高概率区间内。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：未预测到波切蒂诺的战术变阵</h4>
+    <div class="insight-box">
+      <strong>核心原因：预测报告假设美国沿用3-4-3或4-3-3，未分析4-2-3-1及McKennie位置解放的可能性</strong><br><br>
+      实际比赛中，波切蒂诺将<strong>Tillman后置与Adams搭档双后腰</strong>，解放McKennie到10号位自由穿梭。这一变招被评分机构给出<strong>主帅9分</strong>的评价。巴拉圭完全没有应对McKennie在肋部自由活动的方案。<br><br>
+      原报告虽然提到了McKennie的"B2B全能"属性，但仅列为"中场二对二争夺"的对位分析，<strong>没有预见到他会被战术释放为全场自由人</strong>。这暴露了预测框架的一个盲区：<strong>未分析主教练的战术灵活性维度</strong>——尤其是波切蒂诺这样的战术大师级教练。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Pulisic半场被换下未预测</h4>
+    <div class="insight-box">
+      <strong>核心原因：将Pulisic视为"全场核心威胁"但未分析被换下的风险和替补深度</strong><br><br>
+      Pulisic上半场9分评分、1助攻、反复撕裂右路，但<strong>半场被换下</strong>（原因赛后未立即公布）。原报告将Pulisic列为"美国进攻闸门"的关键假设之一，如果他在场仅45分钟，美国进攻应大幅降级——但实际并未发生。<br><br>
+      这说明<strong>美国替补深度远超预期</strong>：Berhalter（6分）虽表现一般，但McKennie继续自由穿行，Reyna登场后外脚背世界波锁定胜局。原报告低估了美国替补席的攻击储备——尤其是Gio Reyna的终结能力。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：巴拉圭门将Gill实际为R. Fernández首发</h4>
+    <div class="insight-box">
+      <strong>核心原因：预测报告中门将分析基于Orlando Gill，但实际首发是R. Fernández</strong><br><br>
+      原报告详细分析了Orlando Gill"仅5场国家队经验"的劣势，但阿尔法罗最终选择了经验更丰富的R. Fernández首发。这暴露了<strong>赛前最后时刻的首发确认环节缺失</strong>——直到比赛开始前1-2小时才能确认的首发阵容，对预测的影响是决定性的。<br><br>
+      更重要的是，<strong>巴拉圭全场17次犯规、5张黄牌</strong>的纪律失控在预测中完全没有被预见到——原报告认为巴拉圭会"稳守+耐心等待反击"，但实际比赛中巴拉圭完全失控。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="partial-row">
+        <td><strong>美国胜</strong></td>
+        <td>48%</td>
+        <td>"略占优但非压倒性"</td>
+        <td>✅ 4-1大胜</td>
+        <td>方向正确，但48%严重低估了美国胜的确定性。实际美国胜概率应在55-60%</td>
+      </tr>
+      <tr class="miss-row">
+        <td><strong>平局</strong></td>
+        <td>30%</td>
+        <td>"巴拉圭防守可拖入平局"</td>
+        <td>❌ 未发生</td>
+        <td>30%平局概率基于巴拉圭防守韧性假设，但7'乌龙后此概率应立即归零</td>
+      </tr>
+      <tr>
+        <td><strong>巴拉圭胜</strong></td>
+        <td>22%</td>
+        <td>"有反击可能"</td>
+        <td>❌ 未发生</td>
+        <td>22%偏高。巴拉圭对T1对手3场1胜2负，且世界杯首战从未击败东道主</td>
+      </tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的核心缺陷</strong>：虽然48%的美国胜率方向正确，但<strong>"美国胜+巴拉圭胜+平局"的三档分布过于谨慎</strong>。当数据中有5条以上的强信号指向美国胜（主场7万人、FIFA排名差23位、近3次交锋全胜、Pulisic+Balogun状态火热、巴拉圭16年后重返世界杯），<strong>48%的胜率本质上是一种"过度审慎"</strong>——不敢给出明确倾向，用平均主义掩盖了真实的优势差距。更诚实的概率分布应为：美国 ~55%、平局 ~25%、巴拉圭 ~20%。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>波切蒂诺战术变化可能性（4-2-3-1 vs 3-4-3）</td><td>McKennie10号位自由人完全超出预测框架</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>巴拉圭实际首发门将确认（Gill vs Fernández）</td><td>门将分析基于错误球员</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>大赛首战早期进球的级联效应数据</td><td>7'乌龙后巴拉圭被迫压上，比赛形态完全改变</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>巴拉圭在0-2落后时的历史表现数据</td><td>预选赛4场0-1失利全为小负——但0-2+时可能崩溃</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Pulisic受伤/被换下风险概率</td><td>半场被换下是重大事件，预测中未考虑</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>Gio Reyna替补终结能力数据</td><td>90+8'世界波来自预测中仅"候选"的替补</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>巴拉圭纪律性/犯规率数据</td><td>17次犯规+5张黄牌，完全失控</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>SoFi室内体育场对美国传控的加成效应</td><td>71%上半场控球率创现代世界杯纪录</td><td><span class="badge badge-gray">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：增加"主教练战术灵活性"评估模块</h4>
+      <ul>
+        <li>波切蒂诺9分的战术表现证明，主教练的阵型选择和球员定位可能是比赛的最大变量。</li>
+        <li><strong>操作</strong>：为每场比赛增加主教练的"战术变化频次"和"阵型切换历史"数据。标注教练是否为"战术保守型"（如阿尔法罗）vs"战术创新型"（如波切蒂诺），并在概率预测中赋予不同权重。</li>
+        <li><strong>预期效果</strong>：避免仅基于当前阵型预测，捕捉到McKennie角色解放等关键变量。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：引入"非稳态场景"概率修正</h4>
+      <ul>
+        <li>本场7'乌龙球后比赛形态完全改变——但预测模型假设的是"0-0开局、双方谨慎"的稳态场景。</li>
+        <li><strong>操作</strong>：在概率模型中增加"早期进球场景"分支——计算0-0（稳态）vs N-N（非稳态）下的条件概率。对"大赛首战+东道主+强队"的组合，应赋予更高的"早期领先→大胜"概率。</li>
+        <li><strong>预期效果</strong>：避免将所有进球数预测基于"0-0开局"假设，提升大球场景的捕捉率。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：赛前最后确认首发阵容和门将</h4>
+      <ul>
+        <li>本场门将分析基于错误球员（Gill vs Fernández），说明预测时距离开球仍有不确定信息。</li>
+        <li><strong>操作</strong>：在比赛开球前1-2小时再次确认首发阵容，并在报告中标注"基于赛前X小时的首发确认"。如无法确认，标注"门将位置存在X种可能性"并分别分析。</li>
+        <li><strong>预期效果</strong>：避免核心位置分析基于错误球员。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：对"防守数据"增加对手强度校准后的崩溃率分析</h4>
+      <ul>
+        <li>巴拉圭"预选赛仅失14球"被反复引用，但这些数据是0-0或0-1的小比分场景——从未在0-2或0-3的崩溃场景中被测试。</li>
+        <li><strong>操作</strong>：为每支球队增加"落后2球时的防守表现"数据——统计历史比赛中0-2后的失球率和阵型崩坏率。区分"稳态防守"和"崩溃场景防守"。</li>
+        <li><strong>预期效果</strong>：识别"纸面防守强但崩溃后无法止损"的球队，避免将稳态防守数据迁移到非稳态场景。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：强化替补攻击力的终结能力分析</h4>
+      <ul>
+        <li>Reyna的90+8'世界波来自仅列"候选"的替补。Pepi的5分最低评分则说明替补登场不一定等同于威胁。</li>
+        <li><strong>操作</strong>：对替补球员区分"组织型替补"vs"终结型替补"——Reyna属于后者，Pepi虽有效率但本场选择失误。统计替补球员的"替补进球/替补出场"比率，并标注"终结型"或"策应型"。</li>
+        <li><strong>预期效果</strong>：更准确地评估替补席的攻击储备和比赛末段变数。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：概率预测对"强信号"场景敢于给出明确倾向</h4>
+      <ul>
+        <li>48/30/22的三档分布看似审慎，实则是对5条强信号（主场+FIFA差+交锋+球星+重返世界杯）的回避。</li>
+        <li><strong>操作</strong>：建立"信号强度评分"——当≥4条强信号指向同方向时，胜率不得低于50%。只有当信号矛盾或数据不足时才使用38-32-30式的平均分布。</li>
+        <li><strong>预期效果</strong>：概率分布更"诚实"，避免用审慎掩盖明确倾向。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：增加"纪律性/犯规率"评估指标</h4>
+      <ul>
+        <li>巴拉圭17次犯规+5张黄牌的纪律失控是比赛走势的重要因素，但原报告完全未分析。</li>
+        <li><strong>操作</strong>：采集两队近10场犯规数、黄牌数、红牌数，计算"纪律指数"。对"低位防守+身体对抗"型球队标注"高犯规风险"，并在概率模型中赋予犯规→定位球→失球的传导概率。</li>
+        <li><strong>预期效果</strong>：捕捉巴拉圭类型的"犯规→黄牌→防线降级"级联风险。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">8/10</span></td><td>比赛时间、地点、阶段、FIFA排名、近期赛果正确。但门将信息有误（Gill vs Fernández）</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>预测美国控球占优、左路爆破、巴拉圭防守反击的大方向正确，但完全未预见McKennie10号位变阵和4-2-3-1阵型</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-green">8/10</span></td><td>14-16人/队覆盖较全，Pulisic、Balogun、McKennie状态判断准确。但Gio Reyna替补能力低估</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>xG区间预测尚可（1.35落入1.0-1.4），但缺少崩溃场景分析、纪律指数等维度</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>48%美国胜方向正确但严重低估；30%平率基于错误假设；对强信号场景不够"诚实"</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-red">3/10</span></td><td>1-0预测与4-1实际差距巨大；所有备选比分（2-1/0-0/2-0）均未覆盖4-1；大小球完全反判</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-green">7/10</span></td><td>置信度标注"中"合理，数据缺口明确列出7项。但"不确定性"的范围应包含"大胜"场景</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">9/10</span></td><td>格式规范，分区清晰，对手强度校准等创新框架有前瞻性</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：预测报告在"方向判断"和"球员状态识别"层面表现优秀</strong>——正确预测了美国胜、Pulisic核心威胁、Balogun进攻火力、美国控球主导和巴拉圭xG偏低。这些命中项证明了数据采集框架和球员覆盖的进步。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>但在"幅度预测"层面的偏差极为显著：</strong>
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>过度依赖稳态数据</strong>：将巴拉圭的"预选赛防守数据"直接迁移到世界杯首战+7万人的非稳态场景，未能预见到乌龙球后的级联崩溃。</li>
+        <li><strong>未考虑主教练战术变量</strong>：波切蒂诺的4-2-3-1变阵和McKennie角色解放是本场最大变量，完全超出预测框架。</li>
+        <li><strong>概率过度审慎</strong>：5条强信号指向美国胜时仍给出48%，本质上是不敢做出明确判断。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：5.5 / 10</strong>（方向正确但幅度严重偏差。预测"美国1-0小胜"vs实际"4-1大胜"的差距，就像预测"晴天"vs实际"暴风雨"——方向对了，但场景完全不同）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：引入非稳态场景概率修正 + 主教练战术灵活性评估 + 崩溃场景防守分析 + 强信号场景概率校正。实施以上7项建议后，特别是"级联效应"和"战术变量"两个维度，将大幅提升对极端赛果的预测能力。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
