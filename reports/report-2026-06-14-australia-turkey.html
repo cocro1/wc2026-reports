@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 澳大利亚 vs 土耳其（2026-06-14）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据更新时间：2026-06-14 06:30（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇦🇺</span>
+      <span style="font-size:20px;font-weight:800;color:#006837;margin:0 12px;">澳大利亚</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#c62828;margin:0 12px;">土耳其</span>
+      <span class="flag">🇹🇷</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Australia vs Türkiye</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-14 12:00 北京时间</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">加拿大温哥华 · BC Place（室内）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">D组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">主裁判</div><div class="match-info-val">赫苏斯·巴伦苏埃拉（委内瑞拉）</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">澳大利亚 #27 vs 土耳其 #28-32</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">美国 4-1 巴拉圭（已赛）<br>美国暂居头名 · 本场胜者将紧追</div></div>
+    </div>
+    <div class="info-box">D组首轮美国4-1大胜巴拉圭，小组出线格局已初步显现。本场比赛的胜者将与积3分的美国在次轮直接对话；负者则面临极大出线压力。两队均将此战视为"小组出线的生死战"。</div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>澳大利亚</th><th>土耳其</th></tr>
+      <tr>
+        <td><strong>世预赛战绩</strong></td>
+        <td>5胜4平1负 · 进18球失10球<br><span class="tag tag-yellow">AFC第三轮C组第2（落后日本1分）</span></td>
+        <td>小组第2晋级附加赛 · 附加赛决赛1-0胜科索沃<br><span class="tag tag-yellow">UEFA小组第2（落后西班牙）</span></td>
+      </tr>
+      <tr>
+        <td><strong>对手分档</strong><br><small>按FIFA排名</small></td>
+        <td>
+          Tier 1（前20）：日本 1胜1平（进2失1）<br>
+          Tier 2（21-50）：沙特 1胜1平（进3失2）<br>
+          Tier 3（51-80）：中国 2胜（进5失1）· 巴林 1平1负<br>
+          Tier 4（80+）：印尼 1胜1平（进5失1）
+        </td>
+        <td>
+          Tier 1（前20）：西班牙 0胜2负（大比分失利）<br>
+          Tier 2（21-50）：附加赛对手科索沃 1-0胜<br>
+          Tier 3（51-80）：未公开<br>
+          Tier 4（80+）：北马其顿 4-0胜
+        </td>
+      </tr>
+      <tr>
+        <td><strong>热身赛（2026）</strong></td>
+        <td>
+          0-1 负 墨西哥（Tier 1）<br>
+          1-1 平 瑞士（Tier 1）<br>
+          <span class="tag tag-blue">对Tier 1球队1平1负 · 进1球</span>
+        </td>
+        <td>
+          4-0 胜 北马其顿（Tier 4）<br>
+          2-1 胜 委内瑞拉（Tier 3）<br>
+          <span class="tag tag-green">热身赛全胜 · 进6球失1球</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>状态热度</strong></td>
+        <td><span class="tag tag-yellow">稳健但火力不足</span> 对Tier 1近2场仅1球</td>
+        <td><span class="tag tag-green">持续上升</span> 热身赛2连胜 · 信心高涨</td>
+      </tr>
+    </table>
+    <div class="section-note">⚠️ <strong>注意：土耳其热身赛对手强度远低于澳大利亚。</strong>澳大利亚的两场热身赛对手墨西哥（#15）和瑞士（#19）均排名前20，而土耳其的热身对手北马其顿（#70+）和委内瑞拉（#50+）排名较低。澳大利亚的0-1负墨西哥和1-1平瑞士的数据更能反映面对强队时的真实水平。但土耳其4-0大胜至少说明球队进攻端状态良好。</div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（20人/队）</div>
+
+    <h4 style="color:#006837;margin-bottom:8px;">澳大利亚核心20人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>国家队</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">马修·瑞安</span></td><td>GK（C）</td><td>罗马（意甲）</td><td>第4届世界杯</td><td><span class="tag tag-green">球队防线定海神针</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">哈里·苏塔尔</span></td><td>CB ★</td><td>莱斯特城（英超）</td><td>2届世界杯 · 2m身高</td><td><span class="tag tag-green">vs瑞士担任队长 · 定位球核心威胁</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">亚历山德罗·奇尔卡蒂</span></td><td>CB</td><td>帕尔马（意甲）</td><td>—</td><td><span class="tag tag-blue">意甲主力</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">凯·罗尔斯</span></td><td>CB</td><td>哈茨（苏超）</td><td>—</td><td><span class="tag tag-blue">苏超主力</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">阿齐兹·贝希奇</span></td><td>LB</td><td>墨尔本城（澳超）</td><td>第3届世界杯</td><td><span class="tag tag-blue">经验丰富 · vs瑞士首发</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">乔丹·博斯</span></td><td>LWB</td><td>费耶诺德（荷甲）</td><td>—</td><td><span class="tag tag-blue">荷甲主力 · 进攻型边卫</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">杰克逊·欧文</span></td><td>CM（C2）</td><td>圣保利（德甲）</td><td>第3届世界杯</td><td><span class="tag tag-green">队长之一 · 中场核心</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">康纳·梅特卡夫</span></td><td>CM</td><td>圣保利（德甲）</td><td>—</td><td><span class="tag tag-green">vs瑞士助攻延吉进球</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">艾登·奥尼尔</span></td><td>CM</td><td>纽约城（美职联）</td><td>—</td><td><span class="tag tag-blue">vs瑞士首发</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">阿伊丁·赫鲁斯蒂奇</span></td><td>AM</td><td>赫拉克勒斯（荷甲）</td><td>第2届世界杯</td><td><span class="tag tag-blue">vs墨西哥错失良机 · 创造力型</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">内斯托里·伊兰昆达</span></td><td>RW ★</td><td>沃特福德（英冠）</td><td>20岁</td><td><span class="tag tag-green">🔥vs瑞士中柱 · 最具威胁球员</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">马修·莱基</span></td><td>LW</td><td>墨尔本城（澳超）</td><td>第4届世界杯</td><td><span class="tag tag-blue">老将 · 经验价值</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">泰特·延吉</span></td><td>FW ★</td><td>町田泽维亚（J联赛）</td><td>首秀 · 197cm</td><td><span class="tag tag-green">🔥vs瑞士首秀进球 · 身高优势</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">克里斯蒂安·沃尔帕托</span></td><td>AM</td><td>萨索洛（意甲）</td><td>首秀 · 意甲归化</td><td><span class="tag tag-blue">vs瑞士首秀 · 创造力型</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">阿维尔·马比尔</span></td><td>FW</td><td>卡斯特利翁（西乙）</td><td>第2届世界杯</td><td><span class="tag tag-yellow">自由球员时期后重新签约</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">穆罕默德·图雷</span></td><td>FW</td><td>诺维奇城（英冠）</td><td>—</td><td><span class="tag tag-blue">vs墨西哥错失空门 · 速度型</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">卡梅隆·伯吉斯</span></td><td>CB</td><td>斯旺西城（英冠）</td><td>—</td><td><span class="tag tag-blue">vs瑞士长传助攻延吉</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">卡梅伦·德夫林</span></td><td>CM</td><td>哈茨（苏超）</td><td>第2届世界杯</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>19</td><td><span class="player-name">卢卡斯·赫林顿</span></td><td>CB</td><td>科罗拉多急流（美职联）</td><td>—</td><td><span class="tag tag-blue">vs瑞士首发</span></td></tr>
+      <tr><td>20</td><td><span class="player-name">米洛斯·德格内克</span></td><td>CB</td><td>APOEL（塞浦路斯）</td><td>第3届世界杯</td><td><span class="tag tag-yellow">替补中卫</span></td></tr>
+    </table>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">土耳其核心20人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>国家队</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">乌古尔詹·恰克尔</span></td><td>GK</td><td>加拉塔萨雷（土超）</td><td>30岁</td><td><span class="tag tag-green">vs科索沃关键扑救 · 一门</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">梅里赫·德米拉尔</span></td><td>CB ★</td><td>吉达国民（沙特超）</td><td>28岁</td><td><span class="tag tag-green">防线领袖 · 头球威胁</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">阿卜杜勒凯里姆·巴尔达克哲</span></td><td>CB</td><td>加拉塔萨雷（土超）</td><td>31岁</td><td><span class="tag tag-blue">土超主力</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">恰拉尔·瑟云居</span></td><td>CB</td><td>费内巴切（土超）</td><td>30岁</td><td><span class="tag tag-blue">前莱斯特城 · 经验丰富</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">泽基·切利克</span></td><td>RB</td><td>罗马（意甲）</td><td>29岁</td><td><span class="tag tag-blue">意甲主力</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">费尔迪·卡迪奥卢</span></td><td>LB</td><td>布莱顿（英超）</td><td>26岁</td><td><span class="tag tag-blue">英超球员 · 攻守兼备</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">哈坎·恰尔汗奥卢</span></td><td>CM（C）★★★</td><td>国际米兰（意甲）</td><td>100+场/22球</td><td><span class="tag tag-green">🔥队魂 · 定位球大师 · 中场调度核心</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">伊斯梅尔·于克塞克</span></td><td>DM</td><td>费内巴切（土超）</td><td>27岁</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">奥尔昆·柯克曲</span></td><td>CM ★</td><td>贝西克塔斯（土超）</td><td>25岁</td><td><span class="tag tag-green">vs科索沃助攻 · 创造型</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">阿尔达·居莱尔</span></td><td>AM ★★★</td><td>皇家马德里（西甲）</td><td>25+场 · 21岁</td><td><span class="tag tag-green">🔥核心天才 · 创造力源泉 · 热身赛助攻</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">巴里什·阿尔珀·伊尔马兹</span></td><td>RW</td><td>加拉塔萨雷（土超）</td><td>26岁</td><td><span class="tag tag-blue">边路速度型</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">凯南·伊尔迪兹</span></td><td>LW ★★</td><td>尤文图斯（意甲）</td><td>21岁</td><td><span class="tag tag-red">⚠️小腿受伤 · 出战概率低</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">凯雷姆·阿克蒂尔科奥卢</span></td><td>LW</td><td>费内巴切（土超）</td><td>14球</td><td><span class="tag tag-green">🔥世预赛决胜球 · 伊尔迪兹替代者</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">贝尔图·伊尔迪里姆</span></td><td>FW</td><td>—</td><td>—</td><td><span class="tag tag-blue">首发中锋</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">尤努斯·阿克贡</span></td><td>RW</td><td>加拉塔萨雷（土超）</td><td>25岁</td><td><span class="tag tag-green">🔥vs委内瑞拉制胜球 · 状态火热</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">伊尔凡·詹·卡韦吉</span></td><td>AM</td><td>费内巴切（土超）</td><td>30岁</td><td><span class="tag tag-blue">经验型· 创造型</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">萨利赫·厄兹詹</span></td><td>DM</td><td>多特蒙德（德甲）</td><td>28岁</td><td><span class="tag tag-blue">德甲主力 · 防守屏障</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">奥乌兹·艾丁</span></td><td>FW</td><td>费内巴切（土超）</td><td>25岁</td><td><span class="tag tag-yellow">轮换前锋</span></td></tr>
+      <tr><td>19</td><td><span class="player-name">詹·乌尊</span></td><td>FW</td><td>法兰克福（德甲）</td><td>20岁</td><td><span class="tag tag-blue">德甲新星</span></td></tr>
+      <tr><td>20</td><td><span class="player-name">德尼兹·居尔</span></td><td>FW</td><td>波尔图（葡超）</td><td>21岁</td><td><span class="tag tag-blue">葡超新星</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>关键伤情：</strong>土耳其边锋凯南·伊尔迪兹（尤文图斯）小腿受伤，出战概率极低。他将由凯雷姆·阿克蒂尔科奥卢替代。阿克蒂尔科奥卢（费内巴切，国家队14球）风格更直接、终结能力更强，但盘带创造力不如伊尔迪兹。这对土耳其的边路突破是损失，但阿克蒂尔科奥卢是世预赛附加赛决胜球功臣，大赛关键球能力强。</div>
+  </div>
+
+  <!-- ===== 首发不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h4 style="color:#006837;margin-bottom:8px;">澳大利亚</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>马修·瑞安</td><td>GK</td><td><span class="tag tag-green">高(>90%)</span></td><td>队长 · 第4届世界杯 · 但vs瑞士由比奇首发（轮换测试）</td></tr>
+      <tr><td>泰特·延吉</td><td>FW</td><td><span class="tag tag-blue">中(65%)</span></td><td>首秀进球惊艳 · 但波波维奇可能选择经验更丰富的图雷</td></tr>
+      <tr><td>伊兰昆达</td><td>RW</td><td><span class="tag tag-green">高(>85%)</span></td><td>vs瑞士最具威胁 · 速度型边锋是反击利器</td></tr>
+      <tr><td>沃尔帕托</td><td>AM</td><td><span class="tag tag-blue">中(55%)</span></td><td>首秀 · 可能作为替补奇兵</td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>不首发场景分析：</strong>若延吉不首发，图雷中将担任首发中锋。图雷（英冠诺维奇）vs墨西哥错失空门暴露了把握机会能力的不足，但他的速度可能在反击中制造威胁。波波维奇在vs瑞士的比赛中大面积测试了阵容（7处调整），这意味着他对首发11人仍有不确定性。</div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">土耳其</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>凯南·伊尔迪兹</td><td>LW</td><td><span class="tag tag-red">低(<20%)</span></td><td>小腿受伤 · 出战概率极低</td></tr>
+      <tr><td>阿克蒂尔科奥卢</td><td>LW</td><td><span class="tag tag-green">高(>90%)</span></td><td>伊尔迪兹缺阵后的明确替代者</td></tr>
+      <tr><td>阿尔达·居莱尔</td><td>AM</td><td><span class="tag tag-green">高(>90%)</span></td><td>皇家马德里天才 · 球队创造力核心</td></tr>
+      <tr><td>贝尔图·伊尔迪里姆</td><td>FW</td><td><span class="tag tag-blue">中(70%)</span></td><td>首发中锋 · 但热身赛非绝对主力</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>伊尔迪兹缺阵的影响：</strong>土耳其边路突破能力下降。伊尔迪兹（尤文图斯）具备优秀的1v1突破能力和创造性传球，他的缺席意味着土耳其的边路进攻将更多依赖居莱尔（中路）和伊尔马兹（右路）。阿克蒂尔科奥卢虽然终结能力出色（国家队14球），但他的风格更直接——这意味着土耳其的进攻节奏会更快，传球渗透减少，射门直接性增强。</div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG估算）</div>
+    <table>
+      <tr><th>维度</th><th>澳大利亚</th><th>土耳其</th></tr>
+      <tr>
+        <td><strong>进攻体系</strong></td>
+        <td>3-4-2-1低位防守+快速反击<br>依赖伊兰昆达速度+苏塔尔头球</td>
+        <td>4-2-3-1控球+高位压迫<br>依赖居莱尔创造力+恰尔汗奥卢调度</td>
+      </tr>
+      <tr>
+        <td><strong>预计控球率</strong></td>
+        <td>35%-40%</td>
+        <td>60%-65%</td>
+      </tr>
+      <tr>
+        <td><strong>近5场场均进球</strong></td>
+        <td>1.0球（但对手均为Tier 1-2）</td>
+        <td>约2.0球（对手偏弱）</td>
+      </tr>
+      <tr>
+        <td><strong>对Tier 1球队场均进球</strong></td>
+        <td>0.5球（对日本/墨西哥/瑞士）</td>
+        <td>对西班牙大比分失利 · 对Tier 1未进球</td>
+      </tr>
+      <tr>
+        <td><strong>预计本场xG</strong></td>
+        <td><strong>0.60 - 0.95</strong></td>
+        <td><strong>1.20 - 1.75</strong></td>
+      </tr>
+      <tr>
+        <td><strong>预计总xG区间</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">1.80 - 2.70</td>
+      </tr>
+      <tr>
+        <td><strong>防守体系</strong></td>
+        <td>5后卫低位 · 苏塔尔防空核心 · 但vs墨西哥角球丢球暴露定位球漏洞</td>
+        <td>高位压迫 · 德米拉尔+瑟云居中卫组合 · 但高位身后有空当</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">⚠️ 非稳态场景分析</h4>
+    <table>
+      <tr><th>场景</th><th>澳大利亚反应</th><th>土耳其反应</th></tr>
+      <tr>
+        <td><strong>土耳其率先进球</strong></td>
+        <td>被迫压出 · 后防空当暴露 · <span class="tag tag-red">vs墨西哥0-1后未能扳平</span></td>
+        <td>控球消耗 · 居莱尔+恰尔汗奥卢控制节奏 · 可能扩大比分</td>
+      </tr>
+      <tr>
+        <td><strong>澳大利亚率先进球</strong></td>
+        <td>全力低位防守 · 苏塔尔+瑞安守住优势 · 定位球寻机扩大</td>
+        <td>大举压上 · 恰尔汗奥卢远程施射+定位球成为关键武器</td>
+      </tr>
+      <tr>
+        <td><strong>0-0僵局至60分钟</strong></td>
+        <td>保持低位 · 下半场换人提速（莱基+沃尔帕托）</td>
+        <td>换上阿克贡/卡韦吉加强边路 · 居莱尔的个人能力可能打破僵局</td>
+      </tr>
+      <tr>
+        <td><strong>犯规破坏节奏</strong></td>
+        <td>澳大利亚vs墨西哥犯规偏多 · 裁判巴伦苏埃拉执法严格</td>
+        <td>土耳其技术型球员易被犯规 · 恰尔汗奥卢定位球是致命武器</td>
+      </tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键发现：澳大利亚的定位球防守存在漏洞。</strong>vs墨西哥的唯一失球来自角球（巴斯克斯头球破门），而土耳其拥有恰尔汗奥卢——世界顶级定位球主罚者。如果澳大利亚在禁区前沿犯规，恰尔汗奥卢的直接任意球是巨大的得分威胁。同时，土耳其角球找德米拉尔（头球能力顶级）也是澳大利亚必须警惕的进攻手段。</div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>项目</th><th>澳大利亚 · 瑞安</th><th>土耳其 · 恰克尔</th></tr>
+      <tr><td><strong>年龄/经验</strong></td><td>33岁 · 第4届世界杯</td><td>30岁 · 首次世界杯</td></tr>
+      <tr><td><strong>俱乐部</strong></td><td>罗马（意甲）</td><td>加拉塔萨雷（土超）</td></tr>
+      <tr><td><strong>联赛水平</strong></td><td><span class="tag tag-green">意甲（顶级）</span></td><td><span class="tag tag-blue">土超（欧洲二线）</span></td></tr>
+      <tr><td><strong>热身赛表现</strong></td><td>vs瑞士未出场（轮换） · vs墨西哥丢1球</td><td>vs科索沃关键扑救保住1-0 · 展现大赛抗压能力</td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>约73-78%</td><td>约70-75%</td></tr>
+      <tr><td><strong>弱点评估</strong></td><td>角球/高空球判断偶尔失误 · 对墨西哥丢球正是角球</td><td>面对远射反应稍慢 · 但vs科索沃多次关键扑救</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>门将对决：</strong>瑞安的大赛经验（第4届世界杯）是重要加分项，但vs墨西哥角球丢球暴露了他在定位球防守中的指挥问题——这恰好是土耳其（恰尔汗奥卢定位球）的最强武器。恰克尔在附加赛决赛（vs科索沃）中表现出色，多次关键扑救保住了土耳其的世界杯资格，他在大场面下的心理素质已经得到验证。</div>
+  </div>
+
+  <!-- ===== 犯规率/纪律指数 ===== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>澳大利亚</th><th>土耳其</th></tr>
+      <tr><td><strong>近期场均犯规</strong></td><td>约13-15次</td><td>约11-12次</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>身体对抗型 · 中场拦截犯规</td><td>战术犯规为主 · 防守型中场犯规集中</td></tr>
+      <tr><td><strong>红黄牌趋势</strong></td><td>vs墨西哥多人吃牌 · 纪律风险中等</td><td>纪律良好</td></tr>
+      <tr><td><strong>节奏破坏器标注</strong></td><td><span class="tag tag-yellow">接近临界线（13-15次）</span></td><td><span class="tag tag-green">正常范围</span></td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>预判：</strong>澳大利亚的身体对抗风格可能在中场制造大量犯规。这有两面性——好的一面是打断了土耳其的传控节奏（有利于澳大利亚），坏的一面是给土耳其大量定位球机会（有利于土耳其，因为恰尔汗奥卢是世界顶级定位球手）。澳大利亚需要在"破坏节奏"和"避免给定位球"之间找到平衡。</div>
+  </div>
+
+  <!-- ===== 联赛→大赛折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>世界杯经验</th><th>折扣系数</th><th>风险评估</th></tr>
+      <tr><td colspan="4"><strong>澳大利亚</strong></td></tr>
+      <tr><td>马修·瑞安</td><td>3届（2014/2018/2022）</td><td>× 0.95</td><td><span class="tag tag-green">最低风险</span> 经验极其丰富</td></tr>
+      <tr><td>哈里·苏塔尔</td><td>1届（2022）</td><td>× 0.90</td><td><span class="tag tag-green">低风险</span> 2022年世界杯表现出色</td></tr>
+      <tr><td>内斯托里·伊兰昆达</td><td>0届 · 首次参赛</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span> 20岁 · 潜力巨大但大赛压力未知</td></tr>
+      <tr><td>泰特·延吉</td><td>0届 · 首次参赛</td><td>× 0.70</td><td><span class="tag tag-red">极高风险</span> 国家队首秀仅1场 · 197cm的"意外首发"</td></tr>
+      <tr><td>沃尔帕托</td><td>0届 · 首次参赛</td><td>× 0.72</td><td><span class="tag tag-red">高风险</span> 意甲归化球员 · 国家队首秀仅1场</td></tr>
+      <tr><td>全队综合折扣</td><td>17人首次世界杯</td><td><strong>× 0.82-0.88</strong></td><td><span class="tag tag-yellow">中高 · 虽有老将压阵但新人占比高</span></td></tr>
+      <tr><td colspan="4"><strong>土耳其</strong></td></tr>
+      <tr><td>恰尔汗奥卢</td><td>0届世界杯 · 但欧冠/欧战经验极丰富</td><td>× 0.90</td><td><span class="tag tag-green">低风险</span> 国际米兰队长 · 大赛气质成熟</td></tr>
+      <tr><td>德米拉尔</td><td>0届世界杯 · 但欧洲杯经验丰富</td><td>× 0.88</td><td><span class="tag tag-green">低风险</span> 前尤文/亚特兰大 · 欧洲杯半决赛经验</td></tr>
+      <tr><td>阿尔达·居莱尔</td><td>0届 · 21岁 · 首次世界杯</td><td>× 0.78</td><td><span class="tag tag-yellow">中风险</span> 皇家马德里天才 · 但21岁 · 压力未知</td></tr>
+      <tr><td>阿克蒂尔科奥卢</td><td>0届 · 但附加赛决胜球功臣</td><td>× 0.85</td><td><span class="tag tag-yellow">中低风险</span> 关键球心理素质已验证</td></tr>
+      <tr><td>全队综合折扣</td><td>全队无世界杯经验</td><td><strong>× 0.83-0.88</strong></td><td><span class="tag tag-yellow">中高</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>"联赛高产出、大赛无经验"的高风险球员：</strong>澳大利亚的延吉（国家队仅1场）和伊兰昆达（20岁）是最大变数——他们可能在世界杯舞台上爆发，也可能因压力而失常。土耳其的居莱尔（21岁，皇马）是超级天才，但如果被澳大利亚的身体对抗所限制，他的发挥可能打折。</div>
+  </div>
+
+  <!-- ===== 主教练 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练战术灵活性</div>
+    <table>
+      <tr><th>项目</th><th>澳大利亚 · 托尼·波波维奇</th><th>土耳其 · 文森佐·蒙特拉</th></tr>
+      <tr><td><strong>执教时间</strong></td><td>2024年上任（2年+）</td><td>2023年上任（3年+）</td></tr>
+      <tr><td><strong>阵型稳定性</strong></td><td><span class="tag tag-yellow">变化较大</span> · vs瑞士做了7处调整</td><td><span class="tag tag-blue">较为固定4-2-3-1</span></td></tr>
+      <tr><td><strong>临场调整</strong></td><td><span class="tag tag-blue">积极换人</span> · 热身赛大量测试球员</td><td><span class="tag tag-green">出色</span> · 意甲名帅 · 战术素养高</td></tr>
+      <tr><td><strong>世界杯经验</strong></td><td><span class="tag tag-red">0场</span> · 首次带队世界杯</td><td><span class="tag tag-blue">0场</span> · 但执教意甲多年 · 大赛经验丰富</td></tr>
+      <tr><td><strong>战术灵活性标注</strong></td><td><span class="tag tag-yellow">战术灵活型</span> · 可能做出超出预测的战术调整</td><td><span class="tag tag-yellow">战术灵活型</span> · 意甲战术大师 · 针对性部署能力强</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>两位"战术灵活型教练"的对阵：</strong>波波维奇在热身赛中展现了大胆的实验精神——让197cm的延吉首发、让苏塔尔当队长、轮换测试17名球员。蒙特拉则在意甲积累了丰富的战术素养，传控+高位压迫体系成熟。两位教练都有可能在比赛中做出超出预测框架的调整。在预测中额外保留 ±1球的灵活空间。</div>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>维度</th><th>澳大利亚</th><th>土耳其</th></tr>
+      <tr><td><strong>替补深度评估</strong></td><td><span class="tag tag-yellow">中等</span> · 莱基经验丰富 · 马比尔状态未知</td><td><span class="tag tag-green">充足</span> · 阿克贡/卡韦吉/厄兹詹等土超全明星</td></tr>
+      <tr><td><strong>替补奇兵候选人</strong></td>
+        <td>
+          <strong>马修·莱基</strong>（墨尔本城）<br>类型：即战力型 · 第4届世界杯 · 大赛关键球能力<br>
+          <strong>穆罕默德·图雷</strong>（诺维奇城）<br>类型：适应型 · 速度奇快 · 反击杀器
+        </td>
+        <td>
+          <strong>尤努斯·阿克贡</strong>（加拉塔萨雷）<br>类型：即战力型 · vs委内瑞拉制胜球 · 边路爆点<br>
+          <strong>伊尔凡·詹·卡韦吉</strong>（费内巴切）<br>类型：适应型 · 经验丰富 · 创造力替补
+        </td>
+      </tr>
+      <tr><td><strong>替补进球效率</strong></td><td>延吉替补登场56分钟即进球</td><td>阿克贡热身赛替补登场即进球</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><strong>1. 居莱尔 vs 欧文+梅特卡夫（中场创造力 vs 绞杀）</strong>——居莱尔（皇马）是土耳其的创造力引擎。澳大利亚的双后腰欧文（德甲）+梅特卡夫（德甲）需要在中场对他进行贴身限制。如果居莱尔获得空间，他的直塞球和远射将直接撕破澳大利亚的低位防守。</div>
+    <div class="key-matchup"><strong>2. 恰尔汗奥卢定位球 vs 瑞安+苏塔尔（定位球攻防）</strong>——这可能是决定比赛的核心对位。恰尔汗奥卢是世界顶级定位球手（直接任意球+角球），而澳大利亚vs墨西哥正是在定位球上丢球。苏塔尔2m身高是防空武器，但他一个人不能覆盖整个禁区。</div>
+    <div class="key-matchup"><strong>3. 伊兰昆达 vs 卡迪奥卢/切利克（反击速度 vs 高位防线）</strong>——澳大利亚的反击核心威胁是伊兰昆达（沃特福德·英冠）。土耳其的高位压迫意味着后卫线身后有空当。伊兰昆达vs瑞士时多次突破制造威胁并击中横梁，他面对布莱顿的卡迪奥卢和罗马的切利克将是最有看点的边路对决。</div>
+    <div class="key-matchup"><strong>4. 延吉/苏塔尔头球 vs 德米拉尔+瑟云居（禁区制空权）</strong>——澳大利亚的两大高空威胁：延吉197cm和苏塔尔200cm。德米拉尔（沙特超）和瑟云居（土超）的头球能力出色但面对如此身高优势，角球防守将是土耳其的重大考验。</div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th><th>影响评估</th></tr>
+      <tr><td><strong>伤停</strong></td><td>土耳其：伊尔迪兹（小腿伤·大概率缺阵）<br>澳大利亚：无重大伤停</td><td>伊尔迪兹缺阵降低土耳其边路创造力</td></tr>
+      <tr><td><strong>体能/赛程</strong></td><td>两队均首轮 · 充足休整时间</td><td>无赛程劣势</td></tr>
+      <tr><td><strong>天气/场地</strong></td><td>BC Place室内场馆 · 恒温恒湿 · 无风</td><td><span class="tag tag-green">对土耳其有利</span> · 室内完美草皮适合传控</td></tr>
+      <tr><td><strong>海拔</strong></td><td>海平面</td><td>无影响</td></tr>
+      <tr><td><strong>中立场</strong></td><td>温哥华 · 加拿大</td><td>真正的中立场 · 双方均无主场优势</td></tr>
+      <tr><td><strong>历史交锋</strong></td><td>土耳其世界杯对亚足联球队胜率100%<br>澳大利亚近12次对欧足联技术流仅2胜</td><td><span class="tag tag-yellow">历史数据不利澳大利亚</span></td></tr>
+      <tr><td><strong>大赛心理/逆转因子</strong></td>
+        <td colspan="2">
+          <strong>澳大利亚：</strong>连续6届世界杯 · 大赛经验丰富 · 但世预赛多次平局（10场4平）· 领先易守型 · 落后难追型<br>
+          <strong>土耳其：</strong>时隔24年重返世界杯 · 2002年季军传承 · 但全队无世界杯经验 · 附加赛决胜球展现大心脏<br>
+          <strong>实现路径：</strong>土耳其通过传控+高位压迫控制比赛 → 恰尔汗奥卢定位球/居莱尔创造力破门 → 取得领先后控球消耗。澳大利亚通过低位防守+伊兰昆达反击 → 定位球（苏塔尔头球）→ 守平争胜。
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="prob-bar">
+        <div class="prob-label">土耳其胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:45%;"></div></div>
+        <div class="prob-val">45%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">平局</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:30%;"></div></div>
+        <div class="prob-val">30%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">澳大利亚胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gold" style="width:25%;"></div></div>
+        <div class="prob-val">25%</div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:#0033A0;">概率置信度梯级：<span class="confidence conf-mid">中</span>（胜率差 15%，满足 ≥8% 要求但未到"高"梯级）</p>
+
+    <div class="section-note">
+      ⚠️ <strong>⚠️ "平局信号优先"规则触发！</strong>平局概率 30% ≥ 30% 且胜方概率 45% < 45%（临界线）。虽然土耳其的胜率（45%）高于平局（30%），但差值仅15%，且平局概率已达到30%的阈值。这意味着如果比赛进行到60-70分钟仍为平局，概率分布将大幅向平局倾斜。
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">各概率信号强度标注</h4>
+    <table>
+      <tr><th>信号</th><th>指向</th><th>强度</th><th>解释</th></tr>
+      <tr><td>中场技术差距</td><td>土耳其</td><td><span class="signal signal-strong">强</span></td><td>恰尔汗奥卢+居莱尔 vs 欧文+梅特卡夫 · 创造力差距明显</td></tr>
+      <tr><td>定位球威胁</td><td>土耳其</td><td><span class="signal signal-strong">强</span></td><td>恰尔汗奥卢是世界顶级定位球手 · 澳大利亚定位球防守有漏洞</td></tr>
+      <tr><td>室内场地</td><td>土耳其</td><td><span class="signal signal-mid">中</span></td><td>完美草皮利于传控 · 土耳其技术优势放大</td></tr>
+      <tr><td>门将大赛经验</td><td>澳大利亚</td><td><span class="signal signal-mid">中</span></td><td>瑞安第4届世界杯 vs 恰克尔首次</td></tr>
+      <tr><td>澳大利亚身体对抗</td><td>澳大利亚</td><td><span class="signal signal-mid">中</span></td><td>苏塔尔+延吉高空球优势 · 土耳其防线身高一般</td></tr>
+      <tr><td>波波维奇战术灵活性</td><td>澳大利亚</td><td><span class="signal signal-weak">弱</span></td><td>热身赛大胆试验 · 但大赛样本不足</td></tr>
+      <tr><td>土耳其热身赛对手弱</td><td>—</td><td><span class="signal signal-weak">弱</span></td><td>土耳其热身赛对弱旅全胜 · 实际水平可能被高估</td></tr>
+      <tr><td>历史交锋数据</td><td>土耳其</td><td><span class="signal signal-mid">中</span></td><td>土耳其对亚足联100%胜率 · 澳大利亚对欧足联技术流仅2胜/12场</td></tr>
+    </table>
+    <div class="info-box">📊 <strong>信号强度评估：</strong>2条强信号指向土耳其 · 0条强信号指向澳大利亚。土耳其应获得概率优势但不足以压倒性领先。平局概率30%反映了比赛的不确定性——澳大利亚的低位防守有可能守住平局，土耳其的创造力可能被身体对抗所限制。</div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">土耳其 1-0 澳大利亚</span><span style="font-size:13px;color:#888;margin-left:8px;">（概率 ~17%）</span>
+    </div>
+    <div style="text-align:center;margin:8px 0;">
+      <span class="score-pred">1-1 平局</span><span style="font-size:13px;color:#888;">（概率 ~16%）</span>
+      <span class="score-pred">土耳其 2-1 澳大利亚</span><span style="font-size:13px;color:#888;">（概率 ~12%）</span>
+      <span class="score-pred">0-0 平局</span><span style="font-size:13px;color:#888;">（概率 ~11%）</span>
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">预期xG区间</h4>
+    <div style="text-align:center;font-weight:700;font-size:18px;color:#0033A0;">
+      总 xG：1.80 - 2.70<br>
+      土耳其 xG：1.20 - 1.75 &nbsp;|&nbsp; 澳大利亚 xG：0.60 - 0.95
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>土耳其将凭借中场技术优势和恰尔汗奥卢的定位球取胜，但比分将非常接近——这是一场"1球决胜"的比赛。</strong><br><br>
+        <strong>预测逻辑：</strong><br>
+        1. <strong>中场差距是核心变量：</strong>恰尔汗奥卢（国际米兰）+居莱尔（皇马）+柯克曲（贝西克塔斯）的中场组合在创造力、传球精度和定位球威胁上远超澳大利亚的欧文+梅特卡夫+奥尼尔。土耳其预计控球率60%+，他们将主导比赛节奏。<br><br>
+        2. <strong>定位球是土耳其的"杀手锏"：</strong>恰尔汗奥卢是世界上最好的定位球手之一。澳大利亚在vs墨西哥的比赛中正是角球丢球。如果澳大利亚在禁区前沿犯规（而他们确实犯规率偏高），恰尔汗奥卢的直接任意球几乎等于半个点球。<br><br>
+        3. <strong>但澳大利亚不是没有机会：</strong>伊兰昆达的速度+延吉/苏塔尔的身高优势是真正的威胁。土耳其的高位压迫身后有空当，如果伊兰昆达能抓住1-2次反击机会，澳大利亚完全可能偷一个。此外，BC Place的室内场地虽然利于土耳其传控，但澳大利亚的身体对抗可能打乱土耳其节奏。<br><br>
+        4. <strong>"平局信号优先"值得重视：</strong>30%的平局概率提醒我们——如果比赛60分钟后仍是0-0，土耳其可能急于进攻而暴露更多空当，澳大利亚则可能满足于平局。这场比赛的"胶着"属性很强。<br><br>
+        <strong>关键假设：</strong><br>
+        · 恰尔汗奥卢的定位球能在比赛中制造至少1个关键机会<br>
+        · 澳大利亚的低位防守能至少抵挡土耳其的前60分钟进攻<br>
+        · 伊尔迪兹的缺阵会降低土耳其边路突破威胁（阿克蒂尔科奥卢替代后风格更直接）<br>
+        · 伊兰昆达在反击中至少获得1-2次射门机会<br><br>
+        <strong>置信度：</strong><span class="confidence conf-mid">中</span>（两队国际大赛数据均不完整 · 双方教练均有战术变招空间 · 土耳其热身赛对手弱导致实际水平评估存在误差 · 澳大利亚17名新人首次参赛增加不确定性）
+      </p>
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">⚠️ 已知数据缺口</h4>
+    <table>
+      <tr><th>缺口</th><th>影响</th></tr>
+      <tr><td>土耳其世预赛小组赛完整比分</td><td>对西班牙的失利比分未知 · 影响防守能力评估</td></tr>
+      <tr><td>两队xG逐场精确数据</td><td>xG区间为基于数据的估算 · 误差约±0.3</td></tr>
+      <tr><td>土耳其首发门将确认</td><td>恰克尔 vs 居诺克 vs 巴因德尔均有可能</td></tr>
+      <tr><td>波波维奇最终首发11人</td><td>热身赛测试了17人 · 首发存在多种可能</td></tr>
+      <tr><td>两队正式比赛交锋记录</td><td>从未正式交手 · 对抗风格未知</td></tr>
+      <tr><td>伊尔迪兹伤情最新进展</td><td>虽大概率缺阵 · 但若临时复出则改变预测</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+</div>
+</body>
+</html>

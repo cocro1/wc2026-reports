@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 海地 vs 苏格兰（2026-06-14）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据更新时间：2026-06-14 06:30（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇭🇹</span>
+      <span style="font-size:20px;font-weight:800;color:#8e0000;margin:0 12px;">海地</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">苏格兰</span>
+      <span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Haiti vs Scotland</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-14 09:00 北京时间</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">美国福克斯伯勒 · 吉列体育场</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">C组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">主裁判</div><div class="match-info-val">穆斯塔法·戈尔巴尔（阿尔及利亚）</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">海地 #83 vs 苏格兰 #43</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">巴西 1-1 摩洛哥（已赛）<br>本场胜者将占据出线主动权</div></div>
+    </div>
+    <div class="info-box">C组首轮巴西1-1战平摩洛哥，使得本场比赛的意义显著提升——胜者将升至小组头名，在出线竞争中占据有利位置。对于两队而言，这是"必须拿分"的比赛，因为后续均需对阵巴西和摩洛哥。</div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>海地</th><th>苏格兰</th></tr>
+      <tr>
+        <td><strong>世预赛战绩</strong></td>
+        <td>3胜2平1负 · 进9球失6球<br><span class="tag tag-yellow">CONCACAF第三轮C组头名</span></td>
+        <td>4胜1平1负 · 进13球失7球<br><span class="tag tag-green">UEFA C组头名（力压丹麦）</span></td>
+      </tr>
+      <tr>
+        <td><strong>对手分档</strong><br><small>按FIFA排名</small></td>
+        <td>
+          Tier 1（前20）：无交锋<br>
+          Tier 2（21-50）：哥斯达黎加 1胜1平（进4失3）<br>
+          Tier 3（51-80）：洪都拉斯 1平1负（进0失3）<br>
+          Tier 4（80+）：尼加拉瓜 2胜（进5失0）
+        </td>
+        <td>
+          Tier 1（前20）：丹麦 1胜1平（进4失2）<br>
+          Tier 2（21-50）：希腊 1胜1负（进5失4）<br>
+          Tier 3（51-80）：—<br>
+          Tier 4（80+）：白俄罗斯 2胜（进4失1）
+        </td>
+      </tr>
+      <tr>
+        <td><strong>热身赛（2026）</strong></td>
+        <td>
+          4-0 胜 新西兰（Tier 4）<br>
+          1-2 负 秘鲁（Tier 2）<br>
+          0-1 负 突尼斯（Tier 2）<br>
+          1-1 平 冰岛（Tier 3）
+        </td>
+        <td>
+          4-1 胜 库拉索（Tier 4）<br>
+          4-0 胜 玻利维亚（Tier 3）<br>
+          <span class="tag tag-green">近2场进8球 · 连续大胜</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>状态热度</strong></td>
+        <td><span class="tag tag-yellow">起伏不定</span> 近5场2胜1平2负</td>
+        <td><span class="tag tag-green">极度火热</span> 近5场4胜1负 · 近2场8球</td>
+      </tr>
+    </table>
+    <div class="section-note">⚠️ <strong>警告：对手强度差异巨大。</strong>海地世预赛所遇最强对手为哥斯达黎加（FIFA约40名），而苏格兰击败了FIFA前20的丹麦（4-2）并战平（0-0客场）。苏格兰的热身赛对手虽弱，但其世预赛含金量远超海地。海地对Tier 2球队（秘鲁+突尼斯）全败，进1球失3球，暴露了面对中等强度对手时的攻防短板。</div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（18人/队）</div>
+
+    <h4 style="color:#0033A0;margin-bottom:8px;">海地核心18人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>国家队出场/进球</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">约翰尼·普拉西德</span></td><td>GK（C）</td><td>巴斯蒂亚（法乙）</td><td>队长 · 38岁</td><td><span class="tag tag-blue">WC首发概率:高</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">里卡多·阿德</span></td><td>CB</td><td>基多大学（厄瓜多尔甲）</td><td>50+场</td><td><span class="tag tag-blue">防线指挥官</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">汉内斯·德尔克鲁瓦</span></td><td>CB</td><td>卢加诺（瑞士超）</td><td>—</td><td><span class="tag tag-blue">前伯恩利球员 · 欧洲联赛经验</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">卡伦斯·阿库斯</span></td><td>RB</td><td>昂热（法乙）</td><td>—</td><td><span class="tag tag-blue">vs新西兰助攻1次</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">马丁·埃克斯佩里恩斯</span></td><td>LB</td><td>南锡（法丙）</td><td>—</td><td><span class="tag tag-yellow">联赛级别较低</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">让-里奇纳·贝勒加德</span></td><td>CM ★</td><td>狼队（英超）</td><td>2025年转籍</td><td><span class="tag tag-green">队内唯一英超球员 · 进攻核心</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">丹利·让·雅克</span></td><td>DM</td><td>费城联合（美职联）</td><td>—</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">卡尔·桑特</span></td><td>CM</td><td>埃尔帕索机车（USL）</td><td>26场</td><td><span class="tag tag-yellow">23岁 · 二级联赛</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">多米尼克·西蒙</span></td><td>CM</td><td>普雷绍夫（斯洛伐克超）</td><td>—</td><td><span class="tag tag-yellow">联赛级别较低</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">杜肯斯·纳宗</span></td><td>FW ★</td><td>德黑兰独立（伊朗超）</td><td>74场/44球</td><td><span class="tag tag-green">队史射手王 · 世预赛6球</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">弗兰茨迪·皮埃罗</span></td><td>FW ★</td><td>里泽体育（土超）</td><td>—</td><td><span class="tag tag-green">vs新西兰1球1助</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">威尔逊·伊西多尔</span></td><td>FW</td><td>桑德兰（英冠）</td><td>2026年转籍</td><td><span class="tag tag-blue">2026年初转籍 · 速度快</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">路易修斯·迪德森</span></td><td>FW</td><td>达拉斯FC（美职联）</td><td>—</td><td><span class="tag tag-blue">vs新西兰1次助攻</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">鲁本·普罗维登斯</span></td><td>FW</td><td>阿尔梅勒城（荷甲）</td><td>—</td><td><span class="tag tag-green">vs新西兰进球</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">德里克·埃蒂安</span></td><td>FW</td><td>多伦多FC（美职联）</td><td>—</td><td><span class="tag tag-yellow">替补奇兵</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">伦尼·约瑟夫</span></td><td>FW</td><td>费伦茨瓦罗斯（匈牙利甲）</td><td>—</td><td><span class="tag tag-green">vs新西兰进球</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">约书亚·卡西米尔</span></td><td>FW</td><td>欧塞尔（法甲）</td><td>—</td><td><span class="tag tag-blue">法甲球员</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">莱弗顿·皮埃尔</span></td><td>MF</td><td>维泽拉（葡甲）</td><td>—</td><td><span class="tag tag-yellow">葡甲联赛</span></td></tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:16px 0 8px;">苏格兰核心18人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>国家队出场/进球</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">安格斯·冈恩</span></td><td>GK</td><td>诺丁汉森林（英超）</td><td>—</td><td><span class="tag tag-blue">WC首发概率:高</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">安迪·罗伯逊</span></td><td>LB（C）</td><td>利物浦（英超）</td><td>92场 · 队长</td><td><span class="tag tag-green">vs玻利维亚助攻 · 进攻发起核心</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">格兰特·汉利</span></td><td>CB</td><td>希伯尼安（苏超）</td><td>—</td><td><span class="tag tag-blue">vs玻利维亚首发</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">杰克·亨德利</span></td><td>CB</td><td>艾因费塔克（沙特）</td><td>—</td><td><span class="tag tag-blue">vs玻利维亚首发</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">阿伦·希基</span></td><td>RB</td><td>布伦特福德（英超）</td><td>—</td><td><span class="tag tag-blue">英超主力 · 攻守均衡</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">斯科特·麦克托米奈</span></td><td>CM ★★★</td><td>那不勒斯（意甲）</td><td>70场 · 世预赛2球</td><td><span class="tag tag-green">🔥火热 · vs玻利维亚破门 · 核心引擎</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">刘易斯·弗格森</span></td><td>CM</td><td>博洛尼亚（意甲）</td><td>—</td><td><span class="tag tag-blue">意甲主力 · 攻守兼备</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">约翰·麦金</span></td><td>CM ★</td><td>阿斯顿维拉（英超）</td><td>85场</td><td><span class="tag tag-blue">英超顶级中场 · 创造型</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">瑞恩·克里斯蒂</span></td><td>AM</td><td>伯恩茅斯（英超）</td><td>世预赛2球</td><td><span class="tag tag-green">vs库拉索1球 · 组织核心</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">本·甘农-多克</span></td><td>RW</td><td>伯恩茅斯（英超）</td><td>—</td><td><span class="tag tag-green">vs玻利维亚助攻 · 速度型</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">切·亚当斯</span></td><td>FW ★</td><td>都灵（意甲）</td><td>世预赛2球</td><td><span class="tag tag-green">🔥火热 · vs玻利维亚梅开二度</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">劳伦斯·尚克兰</span></td><td>FW ★★★</td><td>哈茨（苏超）</td><td>世预赛1球</td><td><span class="tag tag-green">🔥超级火热 · 近2场4球 · 状态爆棚</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">肯尼·麦克莱恩</span></td><td>CM</td><td>诺维奇城（英冠）</td><td>世预赛1球</td><td><span class="tag tag-blue">经验丰富 · 世预赛关键球</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">利昂德·戴克斯</span></td><td>FW</td><td>查尔顿竞技（英甲）</td><td>—</td><td><span class="tag tag-blue">替补中锋 · 身体对抗强</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">基兰·蒂尔尼</span></td><td>LB/CB</td><td>凯尔特人（苏超）</td><td>世预赛关键球</td><td><span class="tag tag-blue">后防多面手 · 世预赛绝杀功臣</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">泰勒·弗莱彻</span></td><td>MF</td><td>曼联（英超）</td><td>1场 · 19岁</td><td><span class="tag tag-yellow">替补 · 顶替吉尔摩入选</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">芬德利·柯蒂斯</span></td><td>MF</td><td>基尔马诺克（苏超）</td><td>1场1球</td><td><span class="tag tag-green">vs库拉索替补首秀即破门</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">乔治·赫斯特</span></td><td>FW</td><td>伊普斯维奇城（英冠）</td><td>—</td><td><span class="tag tag-yellow">前锋轮换</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>数据缺失项：</strong>海地多数球员的精确国家队出场数/进球数因公开数据有限而缺失；两队xG逐场精确数据因付费墙限制无法获取完整；海地门将普拉西德的扑救率/PSxG+/-精确值无法获取。</div>
+  </div>
+
+  <!-- ===== 首发不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h4 style="color:#8e0000;margin-bottom:8px;">海地</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>约翰尼·普拉西德</td><td>GK</td><td><span class="tag tag-green">高(>90%)</span></td><td>队长 · 38岁 · 经验无可替代 · 热身赛均首发</td></tr>
+      <tr><td>贝勒加德</td><td>CM</td><td><span class="tag tag-green">高(>90%)</span></td><td>唯一英超球员 · 进攻必须依赖</td></tr>
+      <tr><td>纳宗</td><td>FW</td><td><span class="tag tag-green">高(>85%)</span></td><td>队史射手王 · 但年龄32岁 · 热身赛有轮换</td></tr>
+      <tr><td>伊西多尔</td><td>FW</td><td><span class="tag tag-blue">中(70%)</span></td><td>2026新转籍 · 但英冠表现出色 · 热身赛未打满</td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>不首发场景分析：</strong>伊西多尔若替补，海地将派出纳宗+皮埃罗双前锋。皮埃罗（土超）vs新西兰有进球+助攻，状态不错。但伊西多尔的速度是海地反击体系的关键——他是海地唯一具备"英冠级别单点爆破能力"的前锋。若伊西多尔替补，海地反击威胁降低约30%。</div>
+
+    <h4 style="color:#0033A0;margin:16px 0 8px;">苏格兰</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>安格斯·冈恩</td><td>GK</td><td><span class="tag tag-green">高(>90%)</span></td><td>vs玻利维亚首发 · 零封 · 一门已定</td></tr>
+      <tr><td>麦克托米奈</td><td>CM</td><td><span class="tag tag-green">高(>90%)</span></td><td>核心中的核心 · 70场纪念战后状态巅峰</td></tr>
+      <tr><td>尚克兰</td><td>FW</td><td><span class="tag tag-green">高(>85%)</span></td><td>近2场4球 · 无法不让他首发</td></tr>
+      <tr><td>切·亚当斯</td><td>FW</td><td><span class="tag tag-green">高(>85%)</span></td><td>vs玻利维亚梅开二度 · 和尚克兰锁定双前锋</td></tr>
+      <tr><td>约翰·麦金</td><td>CM</td><td><span class="tag tag-blue">中(75%)</span></td><td>vs玻利维亚未首发 · 但世预赛核心 · 可能轮换出场</td></tr>
+      <tr><td>甘农-多克</td><td>RW</td><td><span class="tag tag-green">高(>85%)</span></td><td>vs玻利维亚助攻 · 速度和突破是破密集防守关键</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>比利·吉尔摩（那不勒斯）因膝伤缺席</strong>——已由泰勒·弗莱彻替换进入大名单。吉尔摩的缺席意味着苏格兰缺少一名具备"高压力下控球出球"能力的组织中场，但这在苏格兰4-0大胜玻利维亚的比赛中并未暴露出问题，因为弗格森和麦克托米奈的双后腰组合运转良好。</div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG估算）</div>
+    <table>
+      <tr><th>维度</th><th>海地</th><th>苏格兰</th></tr>
+      <tr>
+        <td><strong>进攻体系</strong></td>
+        <td>4-2-3-1防守反击 · 依赖边路速度+前锋个人能力</td>
+        <td>4-2-3-1控球压迫 · 中场创造力+边后卫前插+定位球</td>
+      </tr>
+      <tr>
+        <td><strong>预计控球率</strong></td>
+        <td>30%-35%</td>
+        <td>65%-70%</td>
+      </tr>
+      <tr>
+        <td><strong>近5场场均进球</strong></td>
+        <td>1.6球（但对手偏弱）</td>
+        <td>2.6球（含对丹麦4球）</td>
+      </tr>
+      <tr>
+        <td><strong>对Tier 1-2场均进球</strong></td>
+        <td>0.5球（对秘鲁/突尼斯仅1球）</td>
+        <td>2.0球（对丹麦/希腊 8场8球）</td>
+      </tr>
+      <tr>
+        <td><strong>预计本场xG</strong></td>
+        <td><strong>0.45 - 0.70</strong></td>
+        <td><strong>1.80 - 2.30</strong></td>
+      </tr>
+      <tr>
+        <td><strong>预计总xG区间</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">2.25 - 3.00</td>
+      </tr>
+      <tr>
+        <td><strong>防守体系</strong></td>
+        <td>低位防守 · 紧凑阵型 · 边路防守是弱点<br>对Tier 2球队场均失1.5球</td>
+        <td>高位防守 · 中场绞杀 · 但高位身后有空当<br>世预赛仅对希腊丢3球（客场）</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">⚠️ 非稳态场景分析</h4>
+    <table>
+      <tr><th>场景</th><th>海地反应</th><th>苏格兰反应</th></tr>
+      <tr>
+        <td><strong>海地率先进球</strong></td>
+        <td>全力低位防守 · 犯规打断节奏 · 寻求第二个反击</td>
+        <td>大举压上 · 甘农-多克+罗伯逊边路强攻 · 定位球成为关键武器</td>
+      </tr>
+      <tr>
+        <td><strong>苏格兰率先进球</strong></td>
+        <td>被迫压出 · 后防空当增大 · <span class="tag tag-red">防守崩溃风险高</span></td>
+        <td>控球消耗 · 寻找反击机会 · 可能再进一球扩大比分</td>
+      </tr>
+      <tr>
+        <td><strong>0-0僵局至60分钟</strong></td>
+        <td>保持低位 · 寻求定位球/反击偷一个 · 平局可接受</td>
+        <td>换上麦金/戴克斯加强进攻 · 麦克托米奈前插频率增加</td>
+      </tr>
+      <tr>
+        <td><strong>犯规破坏节奏</strong></td>
+        <td>海地世预赛场均犯规约13次 · 战术犯规为主</td>
+        <td>苏格兰善于利用定位球（罗伯逊传中+汉利/亨德利头球）</td>
+      </tr>
+    </table>
+    <div class="section-note">⚠️ <strong>海地"落后场景"下的防守韧性存疑。</strong>海地世预赛仅1次落后（0-3负洪都拉斯），那次他们完全崩溃。在热身赛1-2负秘鲁的比赛中，海地也未能展现出落后时的反扑能力。相比之下，苏格兰在1-3落后希腊的客场比赛中展现了韧性（最终2-3惜败），并在0-1落后丹麦的关键战中完成4-2惊天逆转。</div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>项目</th><th>海地 · 普拉西德</th><th>苏格兰 · 冈恩</th></tr>
+      <tr><td><strong>年龄</strong></td><td>38岁 · 经验丰富</td><td>30岁 · 当打之年</td></tr>
+      <tr><td><strong>俱乐部</strong></td><td>巴斯蒂亚（法乙）</td><td>诺丁汉森林（英超）</td></tr>
+      <tr><td><strong>联赛水平</strong></td><td><span class="tag tag-yellow">法乙</span></td><td><span class="tag tag-green">英超</span></td></tr>
+      <tr><td><strong>热身赛表现</strong></td><td>vs新西兰零封 · vs秘鲁丢2球</td><td>vs玻利维亚零封 · vs库拉索未出场（戈登首发）</td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>约68-72%（法乙水平）</td><td>约72-76%（英超水平）</td></tr>
+      <tr><td><strong>弱点评估</strong></td><td>面对高质量远射、快速传中反应偏慢<br>定位球防守指挥存疑</td><td>面对近距离乱战偶尔脱手<br>但整体稳定</td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>数据缺失：</strong>普拉西德的精确Save%和PSxG+/-值无法从公开数据获取。38岁的年龄在世界杯高强度比赛中可能成为体能短板，尤其面对苏格兰的持续压迫和大量射门。海地热身赛4-0零封新西兰的参考价值有限（新西兰为Tier 4球队），而对秘鲁丢2球更真实反映其水平。</div>
+  </div>
+
+  <!-- ===== 犯规率/纪律指数 ===== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>海地</th><th>苏格兰</th></tr>
+      <tr><td><strong>世预赛场均犯规</strong></td><td>约13-14次</td><td>约11-12次</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>战术犯规为主 · 防守型中场犯规集中</td><td>均衡 · 中场对抗犯规</td></tr>
+      <tr><td><strong>红黄牌趋势</strong></td><td>预选赛多张黄牌 · 纪律问题需关注</td><td>纪律良好 · 世预赛无红牌</td></tr>
+      <tr><td><strong>节奏破坏器标注</strong></td><td><span class="tag tag-yellow">接近临界线（13-14次）</span></td><td><span class="tag tag-green">正常范围</span></td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>预判：</strong>海地若在比赛中频繁战术犯规（尤其是在0-0阶段），将打断苏格兰的进攻节奏，导致比赛碎片化。这对海地有利——比赛越碎片化，越接近"平局场景"。但苏格兰的定位球威胁极大（罗伯逊传中+麦克托米奈/汉利/亨德利的头球能力），海地每给苏格兰一个定位球，就增加一次丢球风险。</div>
+  </div>
+
+  <!-- ===== 联赛→大赛折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>世界杯经验</th><th>折扣系数</th><th>风险评估</th></tr>
+      <tr><td colspan="4"><strong>海地</strong></td></tr>
+      <tr><td>贝勒加德（英超狼队）</td><td>0届 · 首次参赛</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span> 联赛高产出但国家队经验极浅（2025年转籍）</td></tr>
+      <tr><td>伊西多尔（英冠桑德兰）</td><td>0届 · 首次参赛</td><td>× 0.70</td><td><span class="tag tag-red">最高风险</span> 2026年新转籍 · 从未参加国家队大赛 · 磨合时间极短</td></tr>
+      <tr><td>纳宗（伊朗超）</td><td>0届 · 首次参赛</td><td>× 0.80</td><td><span class="tag tag-yellow">中风险</span> 虽为国家队射手王 · 但32岁 · 世界杯强度远超其经历</td></tr>
+      <tr><td>普拉西德（法乙）</td><td>0届 · 首次参赛</td><td>× 0.85</td><td><span class="tag tag-yellow">中风险</span> 38岁经验丰富 · 但从未面对世界杯级别进攻</td></tr>
+      <tr><td>全队综合折扣</td><td>52年未参加世界杯</td><td><strong>× 0.75-0.80</strong></td><td><span class="tag tag-red">极高 · 全队无世界杯经验</span></td></tr>
+      <tr><td colspan="4"><strong>苏格兰</strong></td></tr>
+      <tr><td>罗伯逊（英超利物浦）</td><td>1届（2022欧洲杯/欧国联大赛经验丰富）</td><td>× 0.95</td><td><span class="tag tag-green">低风险</span> 欧冠+英超冠军 · 但无世界杯经验</td></tr>
+      <tr><td>麦克托米奈（意甲那不勒斯）</td><td>1届（2022欧洲杯）</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span> 大赛经验丰富 · 世预赛关键战证明了自己</td></tr>
+      <tr><td>麦金（英超维拉）</td><td>1届（2022欧洲杯）</td><td>× 0.90</td><td><span class="tag tag-green">低风险</span> 英超+欧战经验丰富</td></tr>
+      <tr><td>亚当斯+尚克兰</td><td>0届 · 首次世界杯</td><td>× 0.82</td><td><span class="tag tag-yellow">中风险</span> 联赛高产出但世界杯是全新舞台</td></tr>
+      <tr><td>全队综合折扣</td><td>28年未参加世界杯</td><td><strong>× 0.88-0.92</strong></td><td><span class="tag tag-yellow">中低</span> 虽无世界杯经验 · 但英超球员比例远超海地</td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>"联赛高产出、大赛无经验"的高风险球员：</strong>海地的贝勒加德和伊西多尔是典型例子。贝勒加德在狼队是英超常规主力，但2025年才转籍海地，国家队磨合时间不足半年。伊西多尔2026年初转籍，与队友的默契度更低。相比之下，苏格兰的尚克兰和亚当斯虽然也首次参加世界杯，但他们与国家队队友已有2-3年的磨合期。</div>
+  </div>
+
+  <!-- ===== 主教练 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练战术灵活性</div>
+    <table>
+      <tr><th>项目</th><th>海地 · 塞巴斯蒂安·米涅</th><th>苏格兰 · 史蒂夫·克拉克</th></tr>
+      <tr><td><strong>国籍</strong></td><td>法国</td><td>苏格兰</td></tr>
+      <tr><td><strong>执教时间</strong></td><td>2024年3月上任（2年+）</td><td>2019年上任（7年+）</td></tr>
+      <tr><td><strong>阵型稳定性</strong></td><td><span class="tag tag-blue">固定4-2-3-1</span> · 几乎不变</td><td><span class="tag tag-blue">基本稳定4-2-3-1</span> · 偶尔3后卫</td></tr>
+      <tr><td><strong>临场调整</strong></td><td><span class="tag tag-red">能力未知</span> · 缺少顶级赛事经验</td><td><span class="tag tag-green">出色</span> · 世预赛多次关键换人见效</td></tr>
+      <tr><td><strong>世界杯经验</strong></td><td><span class="tag tag-red">0场</span> · 仅执教过非洲杯（1胜2负）和金杯赛（1平2负）</td><td><span class="tag tag-yellow">0场</span> · 但执教苏格兰7年 · 23场预选赛经验</td></tr>
+      <tr><td><strong>战术灵活性标注</strong></td><td>固定型 · 应对变化的工具有限</td><td>较为灵活 · 可切换3后卫 · 换人时机精准</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>维度</th><th>海地</th><th>苏格兰</th></tr>
+      <tr><td><strong>替补深度评估</strong></td><td><span class="tag tag-red">薄弱</span> · 大多数球员来自低级别联赛</td><td><span class="tag tag-green">充足</span> · 麦金/戴克斯/蒂尔尼等英超级别</td></tr>
+      <tr><td><strong>替补奇兵候选人</strong></td>
+        <td>
+          <strong>德里克·埃蒂安</strong>（美职联多伦多FC）<br>类型：适应型替补 · 边路速度<br>
+          <strong>伦尼·约瑟夫</strong>（费伦茨瓦罗斯）<br>类型：即战力型 · vs新西兰替补进球
+        </td>
+        <td>
+          <strong>约翰·麦金</strong>（英超维拉）<br>类型：即战力型 · 如替补登场将大幅提升中场控制<br>
+          <strong>利昂德·戴克斯</strong>（英甲查尔顿）<br>类型：适应型 · 身体对抗+高空球 · 破密集防守利器<br>
+          <strong>芬德利·柯蒂斯</strong>（苏超基尔马诺克）<br>类型：即战力型 · vs库拉索替补首秀即破门
+        </td>
+      </tr>
+      <tr><td><strong>替补进球效率</strong></td><td>vs新西兰替补球员贡献2球（下半场）</td><td>vs库拉索替补球员贡献1球（柯蒂斯）</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><strong>1. 麦克托米奈 vs 贝勒加德（中场）</strong>——英超狼队vs意甲那不勒斯的中场对决。麦克托米奈的进攻后插上+远射能力是苏格兰的核心武器，贝勒加德需要在防守端限制他的前插。如果贝勒加德被压制，苏格兰的中场将完全控制比赛。</div>
+    <div class="key-matchup"><strong>2. 罗伯逊+甘农-多克 vs 阿库斯+埃克斯佩里恩斯（边路）</strong>——苏格兰的左路（罗伯逊）和右路（甘农-多克）是进攻主要通道。海地的边后卫阿库斯（法乙）和埃克斯佩里恩斯（法丙）将面临英超级别边路冲击。这是海地防线最大的弱点。</div>
+    <div class="key-matchup"><strong>3. 尚克兰 vs 阿德+德尔克鲁瓦（禁区）</strong>——尚克兰近2场4球状态火热，他的跑位和抢点能力考验海地中卫组合。德尔克鲁瓦有欧洲联赛经验（瑞士超+前伯恩利），但尚克兰目前的势头难以阻挡。</div>
+    <div class="key-matchup"><strong>4. 纳宗 vs 汉利+亨德利（反击）</strong>——海地唯一的进攻希望在于纳宗的个人能力和反击中的跑位。汉利（苏超）和亨德利（沙特联赛）的速度并非顶级，纳宗有机会利用他们的转身速度劣势。</div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th><th>影响评估</th></tr>
+      <tr><td><strong>伤停</strong></td><td>苏格兰：吉尔摩（膝伤缺席）<br>海地：无重大伤停</td><td>吉尔摩缺席影响有限（苏格兰vs玻利维亚已证明）</td></tr>
+      <tr><td><strong>体能/赛程</strong></td><td>两队均首轮出战 · 赛前均有一周调整</td><td>无赛程劣势</td></tr>
+      <tr><td><strong>天气/场地</strong></td><td>福克斯伯勒 · 6月气温约20-28°C · 湿度适中</td><td>对欧洲球队友好 · 无极端条件</td></tr>
+      <tr><td><strong>海拔</strong></td><td>海平面</td><td>无影响</td></tr>
+      <tr><td><strong>中立场</strong></td><td>美国波士顿附近 · 海地裔社区较大</td><td><span class="tag tag-yellow">海地可能获得"半个主场"支持</span></td></tr>
+      <tr><td><strong>大赛心理/逆转因子</strong></td>
+        <td colspan="2">
+          <strong>海地：</strong>从未在世界杯赢球（1974年3战全败）· 近10场正式比赛领先被追平1次 · 无逆转基因<br>
+          <strong>苏格兰：</strong>世预赛关键战2次逆转（对希腊3-1、对丹麦4-2）· 有"绝杀基因"（蒂尔尼/麦克莱恩世预赛补时绝杀丹麦）<br>
+          <strong>实现路径：</strong>海地若想拿分，路径为：低位防守→犯规打断节奏→利用定位球/反击→偷一个→死守。但海地的防守体系面对持续压制容易崩溃。
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="prob-bar">
+        <div class="prob-label">苏格兰胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:62%;"></div></div>
+        <div class="prob-val">62%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">平局</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:23%;"></div></div>
+        <div class="prob-val">23%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">海地胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:15%;"></div></div>
+        <div class="prob-val">15%</div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:#0033A0;">概率置信度梯级：<span class="confidence conf-high">高</span>（胜率差 39%，远超 8% 最低要求）</p>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">各概率信号强度标注</h4>
+    <table>
+      <tr><th>信号</th><th>指向</th><th>强度</th><th>解释</th></tr>
+      <tr><td>近2场热身赛状态</td><td>苏格兰</td><td><span class="signal signal-strong">强</span></td><td>8球入账 vs 海地近2场仅1场进球</td></tr>
+      <tr><td>世预赛对战Tier 1-2球队表现</td><td>苏格兰</td><td><span class="signal signal-strong">强</span></td><td>苏格兰击败丹麦/希腊 · 海地对Tier 2全败</td></tr>
+      <tr><td>联赛级别差距</td><td>苏格兰</td><td><span class="signal signal-strong">强</span></td><td>英超/意甲 vs 法乙/法丙/美职联二级</td></tr>
+      <tr><td>世界杯经验</td><td>苏格兰</td><td><span class="signal signal-mid">中</span></td><td>两队均无 · 但苏格兰球员俱乐部大赛经验丰富</td></tr>
+      <tr><td>波士顿海地裔社区</td><td>海地</td><td><span class="signal signal-weak">弱</span></td><td>"半个主场"有心理加成 · 但不足以扭转实力差距</td></tr>
+      <tr><td>苏格兰高空球优势</td><td>苏格兰</td><td><span class="signal signal-strong">强</span></td><td>尚克兰头球+定位球威胁 · 海地防空能力弱</td></tr>
+    </table>
+    <div class="info-box">📊 <strong>信号强度评估：</strong>4条强信号指向苏格兰，0条强信号指向海地。按照概率规则，当积累≥3条强信号指向同一方向时，胜率应≥55%。苏格兰62%的胜率符合此规则。平局23%的概率低于30%，因此不触发"平局信号优先"规则。</div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">苏格兰 2-0 海地</span><span style="font-size:13px;color:#888;margin-left:8px;">（概率 ~22%）</span>
+    </div>
+    <div style="text-align:center;margin:8px 0;">
+      <span class="score-pred">苏格兰 2-1 海地</span><span style="font-size:13px;color:#888;">（概率 ~16%）</span>
+      <span class="score-pred">苏格兰 3-0 海地</span><span style="font-size:13px;color:#888;">（概率 ~13%）</span>
+      <span class="score-pred">苏格兰 1-0 海地</span><span style="font-size:13px;color:#888;">（概率 ~12%）</span>
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">预期xG区间</h4>
+    <div style="text-align:center;font-weight:700;font-size:18px;color:#0033A0;">
+      总 xG：2.25 - 3.00<br>
+      苏格兰 xG：1.80 - 2.30 &nbsp;|&nbsp; 海地 xG：0.45 - 0.70
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>苏格兰将在时隔28年的世界杯首战中取得胜利。</strong><br><br>
+        <strong>预测逻辑：</strong><br>
+        1. <strong>绝对的实力差距：</strong>苏格兰在球员联赛级别（英超/意甲 vs 法乙/美职联二级）、世预赛含金量（击败丹麦 vs 击败尼加拉瓜）、近期状态（近2场8球 vs 近3场对Tier 2球队全败）三个维度上全面碾压海地。<br><br>
+        2. <strong>海地唯一的希望——反击偷一个——被苏格兰的体系克制：</strong>海地的4-2-3-1低位反击需要边路速度和前锋个人能力，但苏格兰的双后腰覆盖（麦克托米奈+弗格森）和门将冈恩（英超）级别远超海地所习惯的对手强度。<br><br>
+        3. <strong>大赛折扣进一步拉大差距：</strong>海地全队无世界杯经验，核心球员在大赛压力下可能发挥打折30%。苏格兰虽也28年未参赛，但球员的英超/意甲/欧冠经验转化为大赛适应力。<br><br>
+        <strong>关键假设：</strong><br>
+        · 苏格兰不会在开局阶段因"28年重返世界杯"的紧张情绪而发挥失常<br>
+        · 海地的贝勒加德将被利物浦/维拉/那不勒斯级别的中场完全压制<br>
+        · 苏格兰的定位球会制造至少1个进球<br>
+        · 海地无法在落后后组织有效反扑<br><br>
+        <strong>置信度：</strong><span class="confidence conf-high">高</span>（有爆冷风险——海地的士气加成+波士顿海地裔社区的"主场"氛围不可完全忽视）
+      </p>
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">⚠️ 已知数据缺口</h4>
+    <table>
+      <tr><th>缺口</th><th>影响</th></tr>
+      <tr><td>海地门将普拉西德精确Save%/PSxG+/-</td><td>无法精确评估门将差距 · 降低射门转化率预测精度</td></tr>
+      <tr><td>两队xG逐场精确数据</td><td>xG区间为基于数据的估算 · 误差约±0.3</td></tr>
+      <tr><td>海地球员国家队出场/进球精确数据</td><td>部分球员数据缺失 · 影响球员状态评估精度</td></tr>
+      <tr><td>两队正式比赛交锋记录</td><td>无历史交锋数据 · 无法参考过往对决模式</td></tr>
+      <tr><td>麦金是否首发的确切信息</td><td>若麦金替补，苏格兰中场控制力初期可能稍弱</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+</div>
+</body>
+</html>
