@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 巴西 vs 摩洛哥（2026-06-13）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:80px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:50px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:18px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:13px; padding:3px 10px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:60px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据更新时间：2026-06-13 17:00（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇧🇷</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">巴西</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#c62828;margin:0 12px;">摩洛哥</span>
+      <span class="flag">🇲🇦</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Brazil vs Morocco</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026年6月14日 06:00（北京时间）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">🇺🇸 大都会人寿球场（新泽西东卢瑟福）</div></div>
+      <div class="match-info-item"><div class="match-info-label">赛事阶段</div><div class="match-info-val">C组 小组赛 · 第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">执法裁判</div><div class="match-info-val">斯拉夫科·温契奇（斯洛文尼亚）</div></div>
+      <div class="match-info-item"><div class="match-info-label">主教练</div><div class="match-info-val">🇧🇷 安切洛蒂（Carlo Ancelotti） vs 🇲🇦 瓦赫比（Mohamed Ouahbi）</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">🇧🇷 #3 vs 🇲🇦 #12（2026年4月，均前十）</div></div>
+    </div>
+    <div class="section-note"><strong>📊 同组形势：</strong>C组4队均未赛。巴西、摩洛哥、苏格兰、海地均0积分。本场比赛对小组出线格局至关重要——胜者掌握出线主动权，负者面临极大压力。海地 vs 苏格兰稍后比赛。</div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📈 近期状态（对手强度校准后）</div>
+
+    <p><strong>🇧🇷 巴西（近9场：6胜1平2负，进26球失11球，胜率67%）</strong></p>
+    <table>
+      <tr><th>日期</th><th>对手</th><th>对手FIFA档位</th><th>结果</th><th>比赛性质</th></tr>
+      <tr><td>2026.06.06</td><td>🇪🇬 埃及</td><td><span class="tag tag-purple">Tier 2 (21-50)</span></td><td>2-1 胜</td><td>热身赛</td></tr>
+      <tr><td>2026.05.31</td><td>🇵🇦 巴拿马</td><td><span class="tag tag-yellow">Tier 3 (51-80)</span></td><td>6-2 胜</td><td>热身赛</td></tr>
+      <tr><td>2026.04.01</td><td>🇭🇷 克罗地亚</td><td><span class="tag tag-blue">Tier 1 (1-20)</span></td><td>3-1 胜</td><td>友谊赛</td></tr>
+      <tr><td>2026.03.26</td><td>🇫🇷 法国</td><td><span class="tag tag-blue">Tier 1 (1-20)</span></td><td>1-2 负</td><td>友谊赛</td></tr>
+      <tr><td>2026.03.25</td><td>🇲🇦 摩洛哥</td><td><span class="tag tag-blue">Tier 1 (1-20)</span></td><td>1-2 负</td><td>友谊赛</td></tr>
+    </table>
+    <div class="section-note">
+      ✅ <strong>对手强度校准：</strong>巴西近5场中3场面对Tier 1对手（克罗地亚、法国、摩洛哥），2胜1负。对Tier 1胜率67%，进攻端对Tier 1场均2.0球，数据可信度<strong>高</strong>。安切洛蒂上任后近3场热身赛打入10球，进攻线焕发生机。⚠️ 但<strong>2026年3月25日曾1-2负于摩洛哥</strong>，当时内马尔在队。
+    </div>
+
+    <p style="margin-top:16px;"><strong>🇲🇦 摩洛哥（近7场：4胜3平0负，进15球失4球，胜率57%·不败）</strong></p>
+    <table>
+      <tr><th>日期</th><th>对手</th><th>对手FIFA档位</th><th>结果</th><th>比赛性质</th></tr>
+      <tr><td>2026.06.07</td><td>🇳🇴 挪威</td><td><span class="tag tag-purple">Tier 2 (21-50)</span></td><td>1-1 平</td><td>热身赛</td></tr>
+      <tr><td>2026.06.02</td><td>🇲🇬 马达加斯加</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>4-0 胜</td><td>热身赛</td></tr>
+      <tr><td>2026.05.26</td><td>🇧🇮 布隆迪</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>5-0 胜</td><td>热身赛</td></tr>
+      <tr><td>2026.03.31</td><td>🇵🇾 巴拉圭</td><td><span class="tag tag-yellow">Tier 3 (51-80)</span></td><td>2-1 胜</td><td>友谊赛</td></tr>
+      <tr><td>2026.03.27</td><td>🇪🇨 厄瓜多尔</td><td><span class="tag tag-purple">Tier 2 (21-50)</span></td><td>1-1 平</td><td>友谊赛</td></tr>
+    </table>
+    <div class="section-note">
+      ⚠️ <strong>对手强度校准：</strong>摩洛哥近5场仅对挪威（Tier 2）和厄瓜多尔（Tier 2）有高对抗检验，其余均为Tier 3-4弱旅。对Tier 2+对手的4-0、5-0大胜参考价值需<strong>打折扣</strong>。2026年3月25日对巴西1-2取胜是重要参考，但当时巴西阵容与本次不同（内马尔在场）。近7场场均失球仅0.57，防守质量极佳。
+    </div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（双方各15-16人）</div>
+
+    <p><strong>🇧🇷 巴西核心16人：</strong></p>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>俱乐部</th><th>年龄</th><th>出场/进球</th><th>近期状态</th></tr>
+      <tr><td><span class="player-name">维尼修斯·儒尼奥尔 Vinícius Jr</span></td><td>LW</td><td>Real Madrid（西甲）</td><td>25</td><td>41/7</td><td><span class="tag tag-green">金球亚军，进攻核心</span></td></tr>
+      <tr><td><span class="player-name">拉菲尼亚 Raphinha</span></td><td>RW</td><td>Barcelona（西甲）</td><td>29</td><td>33/12</td><td><span class="tag tag-green">预选赛最佳射手5球，状态火热</span></td></tr>
+      <tr><td><span class="player-name">马特乌斯·库尼亚 Matheus Cunha</span></td><td>ST</td><td>Manchester United（英超）</td><td>27</td><td>19/4</td><td><span class="tag tag-yellow">顶替内马尔中锋位</span></td></tr>
+      <tr><td><span class="player-name">卢卡斯·帕奎塔 Lucas Paquetá</span></td><td>AM</td><td>Flamengo（巴甲）</td><td>28</td><td>51/11</td><td><span class="tag tag-green">10号位串联核心</span></td></tr>
+      <tr><td><span class="player-name">卡塞米罗 Casemiro (C)</span></td><td>DM</td><td>Manchester United（英超）</td><td>34</td><td>80/9</td><td><span class="tag tag-yellow">防守中场支柱</span></td></tr>
+      <tr><td><span class="player-name">布鲁诺·吉马良斯 Bruno Guimarães</span></td><td>CM</td><td>Newcastle United（英超）</td><td>28</td><td>35/4</td><td><span class="tag tag-green">中场推进器</span></td></tr>
+      <tr><td><span class="player-name">马尔基尼奥斯 Marquinhos (C)</span></td><td>CB</td><td>PSG（法甲）</td><td>31</td><td>99/7</td><td><span class="tag tag-green">防线领袖，欧冠冠军级</span></td></tr>
+      <tr><td><span class="player-name">加布里埃尔·马加良斯 Gabriel</span></td><td>CB</td><td>Arsenal（英超）</td><td>28</td><td>25/1</td><td><span class="tag tag-yellow">欧冠决赛失点后首次出战</span></td></tr>
+      <tr><td><span class="player-name">阿莱士·桑德罗 Alex Sandro</span></td><td>LB</td><td>Flamengo（巴甲）</td><td>35</td><td>38/1</td><td><span class="tag tag-yellow">经验左后卫</span></td></tr>
+      <tr><td><span class="player-name">达尼洛 Danilo</span></td><td>RB</td><td>Flamengo（巴甲）</td><td>34</td><td>65/1</td><td><span class="tag tag-yellow">右后卫首选，韦斯利伤退后更关键</span></td></tr>
+      <tr><td><span class="player-name">阿利松·贝克 Alisson</span></td><td>GK</td><td>Liverpool（英超）</td><td>33</td><td>75/0</td><td><span class="tag tag-green">世界顶级门将，14零封</span></td></tr>
+      <tr><td><span class="player-name">恩德里克 Endrick</span></td><td>ST</td><td>Lyon（法甲）</td><td>19</td><td>14/4</td><td><span class="tag tag-green">新星，可能首发中锋</span></td></tr>
+      <tr><td><span class="player-name">内马尔 Neymar</span></td><td>FW</td><td>Santos（巴甲）</td><td>34</td><td>128/79</td><td><span class="tag tag-red">❌ 小腿二级拉伤，缺阵</span></td></tr>
+      <tr><td><span class="player-name">加布里埃尔·马丁内利 Martinelli</span></td><td>LW</td><td>Arsenal（英超）</td><td>24</td><td>18/4</td><td><span class="tag tag-yellow">边路替补速度武器</span></td></tr>
+      <tr><td><span class="player-name">伊戈尔·蒂亚戈 Igor Thiago</span></td><td>ST</td><td>Brentford（英超）</td><td>24</td><td>2/0</td><td><span class="tag tag-yellow">替补中锋选项</span></td></tr>
+      <tr><td><span class="player-name">埃德森 Éderson</span></td><td>CM</td><td>即将加盟曼联</td><td>26</td><td>—</td><td><span class="tag tag-purple">补招入队，中场深度</span></td></tr>
+    </table>
+    <div class="warn-box">
+      ⚠️ <strong>关键伤病变动：</strong>① <strong>内马尔（34岁，128场79球）小腿二级拉伤缺阵</strong>——这是巴西进攻体系的最大变数；② 右后卫韦斯利大腿伤退出赛事，达尼洛成为唯一正选右后卫；③ 罗德里戈意外落选大名单。安切洛蒂预计启用<strong>库尼亚或恩德里克</strong>顶替中锋位。
+    </div>
+
+    <p style="margin-top:16px;"><strong>🇲🇦 摩洛哥核心15人：</strong></p>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>俱乐部（推测/已知）</th><th>年龄</th><th>状态</th></tr>
+      <tr><td><span class="player-name">阿什拉夫·哈基米 Achraf Hakimi</span></td><td>RB</td><td>PSG（法甲）</td><td>27</td><td><span class="tag tag-green">右路发动机，世界级</span></td></tr>
+      <tr><td><span class="player-name">布拉希姆·迪亚斯 Brahim Díaz</span></td><td>AM/RW</td><td>Real Madrid（西甲）</td><td>26</td><td><span class="tag tag-green">创造力核心</span></td></tr>
+      <tr><td><span class="player-name">亚辛·布努 Yassine Bounou</span></td><td>GK</td><td>Al-Hilal（沙特联）</td><td>35</td><td><span class="tag tag-green">2022英雄门将</span></td></tr>
+      <tr><td><span class="player-name">努赛尔·马兹拉维 Noussair Mazraoui</span></td><td>LB</td><td>—（欧洲联赛）</td><td>28</td><td><span class="tag tag-yellow">肩伤恢复，预计首发</span></td></tr>
+      <tr><td><span class="player-name">索菲扬·阿姆拉巴特 Sofyan Amrabat</span></td><td>DM</td><td>—（欧洲联赛）</td><td>29</td><td><span class="tag tag-green">防守中场铁闸</span></td></tr>
+      <tr><td><span class="player-name">阿泽丁·欧纳希 Azzedine Ounahi</span></td><td>CM</td><td>—（欧洲联赛）</td><td>26</td><td><span class="tag tag-green">2022世界杯亮点</span></td></tr>
+      <tr><td><span class="player-name">比拉尔·埃尔·汉努斯 Bilal El Khannouss</span></td><td>AM</td><td>—（欧洲联赛）</td><td>22</td><td><span class="tag tag-green">新生代创造者</span></td></tr>
+      <tr><td><span class="player-name">尼尔·艾纳维 Neil El Aynaoui</span></td><td>CM</td><td>—（欧洲联赛）</td><td>25</td><td><span class="tag tag-yellow">中场搭档</span></td></tr>
+      <tr><td><span class="player-name">阿尤布·布阿迪 Ayyoub Bouaddi</span></td><td>CM</td><td>—（欧洲联赛）</td><td>18</td><td><span class="tag tag-purple">超新星</span></td></tr>
+      <tr><td><span class="player-name">伊斯梅尔·赛巴里 Ismael Saibari</span></td><td>ST/AM</td><td>—（欧洲联赛）</td><td>25</td><td><span class="tag tag-yellow">预计首发前锋</span></td></tr>
+      <tr><td><span class="player-name">沙迪·里亚德 Chadi Riad</span></td><td>CB</td><td>Crystal Palace（英超）</td><td>22</td><td><span class="tag tag-yellow">顶替阿格尔德</span></td></tr>
+      <tr><td><span class="player-name">伊萨·迪奥普 Issa Diop</span></td><td>CB</td><td>Fulham（英超）</td><td>29</td><td><span class="tag tag-yellow">补招入队</span></td></tr>
+      <tr><td><span class="player-name">纳耶夫·阿格尔德 Nayef Aguerd</span></td><td>CB</td><td>—（欧洲联赛）</td><td>30</td><td><span class="tag tag-red">❌ 缺席本届赛事</span></td></tr>
+      <tr><td><span class="player-name">埃兹·阿布德 Ez Abde</span></td><td>LW</td><td>—（欧洲联赛）</td><td>24</td><td><span class="tag tag-red">❌ 伤疑，出战前景存疑</span></td></tr>
+      <tr><td><span class="player-name">切姆辛·塔尔比 Chemsdine Talbi</span></td><td>FW</td><td>—（欧洲联赛）</td><td>—</td><td><span class="tag tag-yellow">边锋新锐</span></td></tr>
+    </table>
+    <div class="warn-box">
+      ⚠️ <strong>数据缺失项：</strong>① 摩洛哥多数球员的俱乐部归属、出场数、进球数未公开（部分网站付费墙限制）；② 中卫阿格尔德缺席使防线重组，里亚德+迪奥普的组合未经大赛检验；③ 主教练瓦赫比（世界杯前3个月上任）的战术体系稳定性存疑；④ 马兹拉维肩伤恢复后的实战状态不明。
+    </div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG量化）</div>
+
+    <p><strong>🇧🇷 巴西进攻：</strong></p>
+    <div class="xG-bar">
+      <span class="xG-label">xG</span>
+      <div class="xG-track"><div class="xG-fill" style="width:68%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+      <span style="font-weight:700;font-size:13px;">~1.75</span>
+    </div>
+    <ul style="font-size:13px;margin-top:8px;padding-left:18px;">
+      <li>近9场场均2.89球，安切洛蒂上任后近3场热身打入10球</li>
+      <li>维尼修斯+拉菲尼亚双翼是主要进攻来源，对Tier 1对手场均仍达2.0球</li>
+      <li>⚠️ 内马尔缺阵的影响：失去禁区创造力+定位球主罚者+关键传球，帕奎塔需承担更多串联责任</li>
+      <li>库尼亚/恩德里克的中锋位置尚未确定首发</li>
+    </ul>
+
+    <p style="margin-top:12px;"><strong>🇧🇷 巴西防守：</strong></p>
+    <div class="xG-bar">
+      <span class="xG-label">xGA</span>
+      <div class="xG-track"><div class="xG-fill" style="width:35%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+      <span style="font-weight:700;font-size:13px;">~1.0</span>
+    </div>
+    <ul style="font-size:13px;margin-top:8px;padding-left:18px;">
+      <li>近9场场均失1.22球，零封率仅11%——防守非巴西强项</li>
+      <li>马尔基尼奥斯+加布里埃尔中卫组合实力强，但达尼洛35岁高龄边卫是潜在突破口</li>
+      <li>阿利松（33岁，75场，2025/26赛季14零封39场）是最后一道世界级屏障</li>
+    </ul>
+
+    <p style="margin-top:16px;"><strong>🇲🇦 摩洛哥进攻：</strong></p>
+    <div class="xG-bar">
+      <span class="xG-label">xG</span>
+      <div class="xG-track"><div class="xG-fill" style="width:45%;background:linear-gradient(90deg,#c62828,#e53935);"></div></div>
+      <span style="font-weight:700;font-size:13px;">~1.05</span>
+    </div>
+    <ul style="font-size:13px;margin-top:8px;padding-left:18px;">
+      <li>近7场场均2.14球，但对Tier 3-4弱旅刷球明显（马达加斯加4球、布隆迪5球）</li>
+      <li>对Tier 2挪威、厄瓜多尔各仅1球，高强度下进攻效率打折</li>
+      <li>哈基米右路插上+迪亚斯中路渗透为核心进攻路径</li>
+      <li>2026年3月曾2-1胜巴西（友谊赛），心理优势存在</li>
+    </ul>
+
+    <p style="margin-top:12px;"><strong>🇲🇦 摩洛哥防守：</strong></p>
+    <div class="xG-bar">
+      <span class="xG-label">xGA</span>
+      <div class="xG-track"><div class="xG-fill" style="width:20%;background:linear-gradient(90deg,#c62828,#e53935);"></div></div>
+      <span style="font-weight:700;font-size:13px;">~0.55</span>
+    </div>
+    <ul style="font-size:13px;margin-top:8px;padding-left:18px;">
+      <li>近7场场均仅失0.57球，零封率43%，防守质量极佳</li>
+      <li>⚠️ 但防线核心阿格尔德缺阵——这是重大损失</li>
+      <li>里亚德+迪奥普组合未经高强度检验，面对维尼修斯+拉菲尼亚的双翼冲击风险高</li>
+      <li>布努（35岁，2025/26赛季Al-Hilal 26场）是最后一道世界级防线</li>
+    </ul>
+
+    <div class="section-note">
+      <strong>📊 xG区间总结：</strong>预计总xG 2.3-2.8（巴西1.5-1.75 + 摩洛哥0.8-1.05）。小于2.5球概率约54%。巴西xG占比约63%。由于内马尔缺阵+摩洛哥防守纪律性，比赛更大概率走向<strong>低比分胶着</strong>。
+    </div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>指标</th><th>🇧🇷 阿利松·贝克</th><th>🇲🇦 亚辛·布努</th></tr>
+      <tr><td>俱乐部</td><td>Liverpool（英超）</td><td>Al-Hilal（沙特联）</td></tr>
+      <tr><td>2025/26赛季</td><td>39场14零封，失球40</td><td>26场（联赛+亚冠）</td></tr>
+      <tr><td>扑救率</td><td>~73-76%（世界顶级）</td><td>~74-77%（2022世界杯曾封神）</td></tr>
+      <tr><td>PSxG+/-</td><td>正值（精英级，英超验证）</td><td>正值（2022世界杯已验证）</td></tr>
+      <tr><td>一对一能力</td><td>🟢 世界级，欧冠/英超高频验证</td><td>🟢 出色，2022世界杯扑出多粒必进球</td></tr>
+      <tr><td>大赛经验</td><td>🟢 欧冠冠军、美洲杯冠军</td><td>🟢 世界杯四强、非洲杯冠军</td></tr>
+      <tr><td>评价</td><td><span class="tag tag-green">S级门将，极少失误</span></td><td><span class="tag tag-green">A级门将，关键比赛更出色</span></td></tr>
+    </table>
+    <div class="section-note">
+      🧤 <strong>门将对决结论：</strong>阿利松略占优势但差距极小。两位门将均为世界级，这场"门将大战"意味着轻易进球将非常困难。这进一步支撑"小于2.5球"的判断。布努在2022世界杯的表现为其加分，关键扑救能力不逊阿利松。
+    </div>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>指标</th><th>🇧🇷 巴西</th><th>🇲🇦 摩洛哥</th></tr>
+      <tr><td>替补深度</td><td>豪华，马丁内利、恩德里克、伊戈尔·蒂亚戈</td><td>尚可，但攻击线深度不及巴西</td></tr>
+      <tr><td>替补进球效率</td><td>恩德里克（14场4球）、马丁内利（18场4球）均可作为后手</td><td>数据不足</td></tr>
+      <tr><td>替补奇兵候选人</td><td><strong>恩德里克</strong>：19岁皇马新星，替补冲击力强</td><td><strong>苏菲安·拉希米 Soufiane Rahimi</strong>：经验丰富的攻击手</td></tr>
+      <tr><td>换人后变化</td><td>安切洛蒂善用换人，前锋线换人后攻击力不减</td><td>瓦赫比执教时间短，换人效果待验证</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><span style="font-size:18px;">1️⃣</span><strong>维尼修斯 vs 哈基米：</strong>皇马队友内战！世界最佳左边锋 vs 世界最佳右后卫之一。这可能是本届世界杯小组赛最精彩的对位。维尼修斯的盘带突破 vs 哈基米的速度回追将直接决定巴西左路进攻效率。</div>
+    <div class="key-matchup"><span style="font-size:18px;">2️⃣</span><strong>拉菲尼亚 vs 马兹拉维：</strong>巴萨右边锋 vs 刚伤愈的左后卫。马兹拉维肩伤恢复后的对抗能力存疑，这可能是巴西的突破口。</div>
+    <div class="key-matchup"><span style="font-size:18px;">3️⃣</span><strong>迪亚斯 vs 卡塞米罗：</strong>摩洛哥前场创造力 vs 巴西防守中场。34岁的卡塞米罗能否跟上迪亚斯的灵活动作是关键。</div>
+    <div class="key-matchup"><span style="font-size:18px;">4️⃣</span><strong>阿利松 vs 布努：</strong>两位世界级门将的对决。谁先被攻破球门，可能决定比赛走向。</div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th></tr>
+      <tr><td>伤停/停赛</td><td>🇧🇷 内马尔（小腿二级拉伤）、韦斯利（大腿伤）缺阵；🇲🇦 阿格尔德（中卫）缺席、阿布德（边锋）伤疑、马兹拉维肩伤恢复中</td></tr>
+      <tr><td>体能与赛程</td><td>两队均为世界杯首战。巴西6月6日刚踢埃及（2-1），摩洛哥6月7日刚踢挪威（1-1），调整时间均约7天，充足</td></tr>
+      <tr><td>天气/场地</td><td>🌡️ 新泽西6月晚间约18-22°C，湿度适中。大都会人寿球场（NFL巨人队/喷气机队主场）容量82,500，草坪质量世界级</td></tr>
+      <tr><td>大赛心理/逆转因子</td><td>🇧🇷 巴西揭幕战历史惊人——自1930年以来世界杯首战仅输过<strong>1场</strong>。2022年2-0塞尔维亚开门红。安切洛蒂是数十年未有的战术大师。🇲🇦 摩洛哥刚夺非洲杯（2026年初），但主教练三个月前离任（雷格拉吉→瓦赫比），换帅动荡期。摩洛哥以顽强防守著称，落后时韧性强</td></tr>
+      <tr><td>中立场</td><td>美国新泽西，完全中立场。</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div class="prob-bar">
+      <span class="prob-label">🇧🇷 巴西胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:55%;"></div></div>
+      <span class="prob-val">55%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🤝 平局</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:26%;"></div></div>
+      <span class="prob-val">26%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🇲🇦 摩洛哥胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:19%;"></div></div>
+      <span class="prob-val">19%</span>
+    </div>
+    <div style="margin-top:12px;display:flex;align-items:center;gap:8px;">
+      <span style="font-size:13px;font-weight:600;">概率置信度梯级：</span>
+      <span class="confidence conf-high">高（差值≥15%）</span>
+    </div>
+    <div class="section-note">
+      <strong>概率依据：</strong>巴西胜率55%基于：①综合实力和历史底蕴明显占优；②世界杯揭幕战历史仅1负的惊人稳定性；③安切洛蒂战术能力加持；④摩洛哥防线核心阿格尔德缺阵的重大缺口。但内马尔缺阵+摩洛哥2026年3月曾击败巴西+双方世界级门将对决，使得平局概率（26%）不能被低估。摩洛哥19%胜率体现其作为非洲冠军的爆冷潜力。
+    </div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <p style="font-size:22px;font-weight:800;color:#0033A0;">🇧🇷 巴西 1 - 0 🇲🇦 摩洛哥 <span class="score-pred score-main" style="margin-left:12px;">最可能 ~18%</span></p>
+      <div style="margin-top:10px;">
+        <span class="score-pred">1-1 (~16%)</span>
+        <span class="score-pred">2-1 (~11%)</span>
+        <span class="score-pred">2-0 (~9%)</span>
+      </div>
+      <p style="font-size:12px;color:#888;margin-top:8px;">预期xG区间：<strong>巴西 1.5-1.75 | 摩洛哥 0.8-1.05 | 总xG 2.3-2.8</strong></p>
+    </div>
+    <div class="section-note">
+      <strong>比分推演逻辑：</strong>概率矩阵显示1-0（18%）和1-1（16%）是两个最可能比分，而非2-1或大比分。原因：①内马尔缺阵降低巴西禁区创造力；②摩洛哥近7场场均仅失0.57球的铁血防守；③双方世界级门将的存在。最可能1-0：巴西上半场或下半场初段由维尼修斯或拉菲尼亚突破得分，摩洛哥顽强防守但进攻火力不足以扳平。备选1-1：摩洛哥利用定位球或哈基米反击追平，布努关键扑救守住平局。
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p><strong>预测：巴西小胜，比分 1-0，置信度 中高</strong></p>
+      <p style="margin-top:8px;font-size:13px;color:#555;">
+        <strong>预测逻辑：</strong>巴西综合实力和历史底蕴明显占优，世界杯揭幕战仅1负的历史纪录极为惊人。安切洛蒂的战术大师能力使巴西在关键比赛中更稳定。但内马尔缺阵是实质性损失——他的创造力（128场79球）无法被库尼亚或恩德里克完全替代。摩洛哥近7场仅失4球的铁血防守+布努的世界级门线能力，意味着巴西进球不会轻松。这是一场典型的<strong>"1球差距"比赛</strong>：巴西有能力进球，但也可能被摩洛哥零封或追平。
+      </p>
+      <p style="margin-top:8px;font-size:13px;color:#555;">
+        <strong>关键假设：</strong>① 维尼修斯+拉菲尼亚双翼至少有1人能突破摩洛哥防线；② 摩洛哥失去阿格尔德后防线协同下降；③ 哈基米的进攻投入会被巴西左路压制限制；④ 马兹拉维肩伤后对抗能力不足被巴西右路利用。
+      </p>
+      <div class="warn-box" style="margin-top:12px;">
+        <strong>⚠️ 已知数据缺口：</strong><br>
+        1. 摩洛哥多数球员的精确出场数、进球数、WhoScored评分因付费墙限制无法获取<br>
+        2. 两队xG/xGA逐场精确数据因付费墙限制无法获取（依赖多源综合推算）<br>
+        3. 摩洛哥门将布努的2025/26赛季PSxG+/-精确值无法获取<br>
+        4. 马兹拉维肩伤恢复后的实战对抗能力缺乏最新评估<br>
+        5. 瓦赫比接任主教练后仅3个月，战术体系变化程度无法精确评估<br>
+        6. 摩洛哥对Tier 1级别对手（除巴西外）的近期比赛样本量不足
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+
+</div>
+</body>
+</html>
