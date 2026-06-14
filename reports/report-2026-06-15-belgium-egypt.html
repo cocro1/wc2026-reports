@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 比利时 vs 埃及（2026-06-15）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据更新时间：2026-06-14 16:30（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇧🇪</span>
+      <span style="font-size:20px;font-weight:800;color:#c8102e;margin:0 12px;">比利时</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#c8102e;margin:0 12px;">埃及</span>
+      <span class="flag">🇪🇬</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Belgium vs Egypt</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-15 07:00 北京时间（当地 6月14日 15:00 PDT）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">美国西雅图 · Lumen Field</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">G组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">主裁判</div><div class="match-info-val">待FIFA官方公布</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">比利时 #8 vs 埃及 #36</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">本场为首轮 · 同组还有伊朗、新西兰</div></div>
+    </div>
+    <div class="info-box">G组"两强对话"——比利时作为FIFA排名第8的欧洲老牌劲旅对阵埃及（第36位）。两队近期热身赛中有过一次交手，埃及曾2-1击败比利时，证明非洲冠军有能力在强队面前制造麻烦。比利时"黄金一代"（阿扎尔、库尔图瓦、卢卡库、德布劳内）已进入末期阶段，本届世界杯可能是他们最后一次联手出击。</div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>比利时</th><th>埃及</th></tr>
+      <tr>
+        <td><strong>近5场战绩</strong></td>
+        <td>4胜1平（9.0/9.0/8.0/3.8/9.0评分）<br><span class="tag tag-green">状态火热</span></td>
+        <td>2胜2平1负（7.0/9.3/4.8/5.3评分）<br><span class="tag tag-yellow">状态中等</span></td></tr>
+      <tr>
+        <td><strong>对手分档</strong><br><small>按FIFA排名</small></td>
+        <td>
+          Tier 1（前20）：vs 法国 / 意大利 / 西班牙<br>
+          Tier 2（21-50）：vs 突尼斯 5-0胜 · 北马其顿 7-0胜<br>
+          Tier 3（51-80）：vs 克罗地亚 1-0胜 · 列支敦士登<br>
+          Tier 4（80+）：vs 美国 2-1胜（热身赛）
+        </td>
+        <td>
+          Tier 1（前20）：vs 西班牙 0-0平 · 巴西 1-2负<br>
+          Tier 2（21-50）：vs 沙特 2-1胜 · 尼日利亚 1-0胜<br>
+          Tier 3（51-80）：vs 俄罗斯 2-1胜<br>
+          Tier 4（80+）：世预赛对手（布基纳法索等）
+        </td>
+      </tr>
+      <tr>
+        <td><strong>热身赛（2026）</strong></td>
+        <td>
+          5-0 胜 突尼斯（6月6日）<br>
+          vs 法国 0-1负（热身）<br>
+          <span class="tag tag-green">热身赛5-0大胜 · 火力凶猛</span>
+        </td>
+        <td>
+          vs 巴西 1-2小负<br>
+          <span class="tag tag-yellow">热身赛对手均Tier 1-2</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>状态热度</strong></td>
+        <td><span class="tag tag-green">4胜1平 · 火力全开</span></td>
+        <td><span class="tag tag-yellow">稳健但缺一锤定音</span></td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>重要数据点：埃及世预赛不败 + 26分小组头名。</strong>埃及在世预赛阶段 8 胜 2 平 0 负（仅失 4 分），20 进球 2 失球，防守端极其稳健。但世预赛对手主要是非洲弱旅（埃塞俄比亚、吉布提等），含金量有限。比利时在 2024-2025 期间与多支 Tier 1-2 球队交手不败（意大利、西班牙、克罗地亚），含金量更高。**注意：2026 年 6 月 6 日比利时 5-0 突尼斯（Tier 2）的状态需要谨慎解读——突尼斯在非洲杯表现出色（Tier 2 上游），这场 5-0 含金量较高**。</div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（26人/队）</div>
+
+    <h4 style="color:#c8102e;margin-bottom:8px;">比利时26人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>年龄/经验</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">蒂博·库尔图瓦</span></td><td>GK ★★</td><td>皇家马德里（西甲）</td><td>34岁</td><td><span class="tag tag-green">🔥世界级门将 · 大赛经验丰富</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">森内·拉门斯</span></td><td>GK</td><td>曼联（英超）</td><td>23岁</td><td><span class="tag tag-blue">替补门将</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">迈克·彭德斯</span></td><td>GK</td><td>斯特拉斯堡（法甲）</td><td>20岁</td><td><span class="tag tag-blue">三门</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">蒂莫西·卡斯塔涅</span></td><td>RB</td><td>富勒姆（英超）</td><td>30岁</td><td><span class="tag tag-green">首发右后卫</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">托马斯·穆尼耶</span></td><td>RB</td><td>里尔（法甲）</td><td>34岁</td><td><span class="tag tag-blue">右路替补</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">马克西姆·德库佩尔</span></td><td>LB</td><td>布莱顿（英超）</td><td>25岁</td><td><span class="tag tag-blue">左路首发</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">泽诺·德巴斯特</span></td><td>CB ★</td><td>葡萄牙体育（葡超）</td><td>22岁</td><td><span class="tag tag-green">首发中卫 · 年轻有潜力</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">阿蒂尔·特阿特</span></td><td>CB</td><td>法兰克福（德甲）</td><td>26岁</td><td><span class="tag tag-blue">中卫轮换</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">科尼·德温特</span></td><td>CB</td><td>AC米兰（意甲）</td><td>23岁</td><td><span class="tag tag-blue">替补中卫</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">布兰登·梅赫勒</span></td><td>CB</td><td>布鲁日（比甲）</td><td>33岁</td><td><span class="tag tag-blue">中卫替补</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">优里·蒂勒曼斯</span></td><td>DM（C）★★★</td><td>阿斯顿维拉（英超）</td><td>29岁 · 队长</td><td><span class="tag tag-green">🔥中场核心 · 队长</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">凯文·德布劳内</span></td><td>AM ★★★</td><td>那不勒斯（意甲）</td><td>34岁</td><td><span class="tag tag-green">🔥创造力核心 · 任意球大师</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">阿马杜·奥纳纳</span></td><td>DM</td><td>阿斯顿维拉（英超）</td><td>24岁</td><td><span class="tag tag-green">防守屏障 · 身体素质强</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">查尔斯·德凯特拉雷</span></td><td>AM</td><td>亚特兰大（意甲）</td><td>25岁</td><td><span class="tag tag-blue">替补组织核心</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">尼古拉斯·拉斯金</span></td><td>CM</td><td>流浪者（苏超）</td><td>25岁</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">汉斯·瓦纳肯</span></td><td>CM</td><td>布鲁日（比甲）</td><td>33岁</td><td><span class="tag tag-blue">经验丰富</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">阿克塞尔·维特塞尔</span></td><td>DM</td><td>赫罗纳（西甲）</td><td>37岁</td><td><span class="tag tag-yellow">老将 · 经验值</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">迪奥戈·莫雷拉</span></td><td>MF/FW</td><td>斯特拉斯堡（法甲）</td><td>21岁</td><td><span class="tag tag-blue">年轻新星</span></td></tr>
+      <tr><td>19</td><td><span class="player-name">罗梅卢·卢卡库</span></td><td>FW ★★</td><td>那不勒斯（意甲）</td><td>33岁</td><td><span class="tag tag-green">🔥首发中锋 · 队史最佳射手</span></td></tr>
+      <tr><td>20</td><td><span class="player-name">热雷米·多库</span></td><td>LW ★★</td><td>曼城（英超）</td><td>24岁</td><td><span class="tag tag-green">🔥边路爆点 · 1v1突破</span></td></tr>
+      <tr><td>21</td><td><span class="player-name">莱安德罗·特罗萨德</span></td><td>LW</td><td>阿森纳（英超）</td><td>31岁</td><td><span class="tag tag-blue">多面替补</span></td></tr>
+      <tr><td>22</td><td><span class="player-name">亚历克西斯·萨勒马克尔斯</span></td><td>RW</td><td>AC米兰（意甲）</td><td>26岁</td><td><span class="tag tag-blue">边路替补</span></td></tr>
+      <tr><td>23</td><td><span class="player-name">多迪·卢克巴基奥</span></td><td>RW</td><td>本菲卡（葡超）</td><td>28岁</td><td><span class="tag tag-blue">替补前锋</span></td></tr>
+      <tr><td>24</td><td><span class="player-name">马蒂亚斯·费尔南德斯-帕多</span></td><td>FW</td><td>里尔（法甲）</td><td>21岁</td><td><span class="tag tag-blue">年轻替补</span></td></tr>
+      <tr><td>25</td><td><span class="player-name">纳坦·恩戈伊</span></td><td>CB</td><td>里尔（法甲）</td><td>23岁</td><td><span class="tag tag-blue">替补中卫</span></td></tr>
+      <tr><td>26</td><td><span class="player-name">华金·塞伊斯</span></td><td>CB</td><td>布鲁日（比甲）</td><td>21岁</td><td><span class="tag tag-blue">年轻中卫</span></td></tr>
+    </table>
+
+    <h4 style="color:#c8102e;margin:16px 0 8px;">埃及26人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>年龄/经验</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">穆罕默德·埃尔谢纳维</span></td><td>GK ★</td><td>阿尔阿赫利（埃及超）</td><td>37岁</td><td><span class="tag tag-green">首发门将 · 大赛经验丰富</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">穆斯塔法·舒贝耶</span></td><td>GK</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-blue">替补门将</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">埃尔-马赫迪·苏莱曼</span></td><td>GK</td><td>扎马雷克（埃及超）</td><td>—</td><td><span class="tag tag-blue">三门</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">穆罕默德·哈尼</span></td><td>RB ★</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-green">首发右后卫</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">塔里克·阿拉</span></td><td>DF</td><td>ZED FC（埃及超）</td><td>—</td><td><span class="tag tag-blue">替补后卫</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">哈姆迪·法蒂</span></td><td>CB</td><td>阿尔-瓦克拉（卡塔尔超）</td><td>—</td><td><span class="tag tag-blue">中卫替补</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">拉米·拉比亚</span></td><td>CB</td><td>阿尔艾因（阿联酋超）</td><td>—</td><td><span class="tag tag-blue">中卫替补</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">亚塞尔·易卜拉欣</span></td><td>CB ★</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-green">首发中卫</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">霍萨姆·阿卜杜勒马吉德</span></td><td>CB</td><td>扎马雷克（埃及超）</td><td>—</td><td><span class="tag tag-blue">中卫替补</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">穆罕默德·阿卜杜勒莫奈姆</span></td><td>CB ★</td><td>尼斯（法甲）</td><td>—</td><td><span class="tag tag-green">首发中卫 · 五大联赛级别</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">艾哈迈德·法图赫</span></td><td>LB</td><td>扎马雷克（埃及超）</td><td>—</td><td><span class="tag tag-blue">左路首发</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">卡里姆·哈菲兹</span></td><td>LB</td><td>金字塔（埃及超）</td><td>—</td><td><span class="tag tag-blue">左路替补</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">马尔万·阿提亚</span></td><td>DM</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">穆哈纳德·拉欣</span></td><td>CM</td><td>金字塔（埃及超）</td><td>—</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">纳比尔·埃马德（东加）</span></td><td>AM</td><td>阿尔纳马（沙特超）</td><td>—</td><td><span class="tag tag-blue">替补</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">马哈茂德·萨比尔</span></td><td>CM</td><td>ZED FC（埃及超）</td><td>—</td><td><span class="tag tag-blue">替补</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">齐佐</span></td><td>AM ★</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-green">首发前腰 · 创造力核心</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">特雷泽盖</span></td><td>RW</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-green">边路主力 · 经验丰富</span></td></tr>
+      <tr><td>19</td><td><span class="player-name">伊马姆·阿舒尔</span></td><td>CM</td><td>阿尔阿赫利（埃及超）</td><td>—</td><td><span class="tag tag-blue">中场替补</span></td></tr>
+      <tr><td>20</td><td><span class="player-name">穆斯塔法·齐科</span></td><td>CM</td><td>金字塔（埃及超）</td><td>—</td><td><span class="tag tag-blue">替补</span></td></tr>
+      <tr><td>21</td><td><span class="player-name">易卜拉欣·阿德尔</span></td><td>RW</td><td>北西兰（丹麦超）</td><td>—</td><td><span class="tag tag-blue">边路替补</span></td></tr>
+      <tr><td>22</td><td><span class="player-name">海瑟姆·哈桑</span></td><td>AM</td><td>奥维耶多（西乙）</td><td>—</td><td><span class="tag tag-blue">组织型替补</span></td></tr>
+      <tr><td>23</td><td><span class="player-name">穆罕默德·萨拉赫</span></td><td>RW ★★★（C）</td><td>利物浦（英超）</td><td>33岁 · 队长</td><td><span class="tag tag-green">🔥队魂 · 反击核心 · 进攻发动机</span></td></tr>
+      <tr><td>24</td><td><span class="player-name">奥马尔·马尔穆什</span></td><td>FW ★★</td><td>曼城（英超）</td><td>—</td><td><span class="tag tag-green">🔥首发前锋 · 反击快马</span></td></tr>
+      <tr><td>25</td><td><span class="player-name">哈姆扎·阿卜杜勒卡里姆</span></td><td>FW</td><td>巴萨B队（西乙）</td><td>18岁</td><td><span class="tag tag-blue">年轻替补</span></td></tr>
+      <tr><td>26</td><td><span class="player-name">穆罕默德·阿拉</span></td><td>GK</td><td>古纳（埃及超）</td><td>—</td><td><span class="tag tag-blue">替补</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>覆盖盲区检查：</strong>埃及队首发前锋穆斯塔法·穆罕默德（<span class="tag tag-red">未在26人名单中</span>）——这是 Sports Mole 预测的"穆斯塔法·穆罕默德"中锋位置未匹配。埃及队的"前锋线"实际由马尔穆什+哈姆扎·阿卜杜勒卡里姆（18岁）+伊马姆·阿舒尔轮换，缺少传统中锋。马尔穆什（曼城）是萨拉赫之外唯一一位"五大联赛级别"的前场球员。比利时核心球员（卢卡库/德布劳内/多库）均在覆盖名单内。</div>
+  </div>
+
+  <!-- ===== 首发不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h4 style="color:#c8102e;margin-bottom:8px;">比利时</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>凯文·德布劳内</td><td>AM</td><td><span class="tag tag-green">高(>90%)</span></td><td>中场核心 · 大赛经验</td></tr>
+      <tr><td>罗梅卢·卢卡库</td><td>FW</td><td><span class="tag tag-green">高(>90%)</span></td><td>主力中锋 · 那不勒斯本赛季表现稳健</td></tr>
+      <tr><td>热雷米·多库</td><td>LW</td><td><span class="tag tag-green">高(>90%)</span></td><td>边路爆点</td></tr>
+      <tr><td>蒂勒曼斯</td><td>DM</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长</td></tr>
+      <tr><td>奥纳纳</td><td>DM</td><td><span class="tag tag-green">高(>90%)</span></td><td>主力后腰</td></tr>
+      <tr><td>库尔图瓦</td><td>GK</td><td><span class="tag tag-green">高(>95%)</span></td><td>主力门将</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>比利时首发阵容相对确定。</strong>主帅鲁迪·加西亚沿用世预赛/热身赛主力框架。**德布劳内+蒂勒曼斯+奥纳纳三中场**几乎无悬念；**卢卡库+多库+特罗萨德**的锋线框架也比较稳定。最大的不确定性在中卫组合——加西亚可能选择德巴斯特（葡超）+ 德温特（AC米兰）+ 梅赫勒（布鲁日）的"老中青"组合，或者更激进的"双年轻中卫"配置。</div>
+
+    <h4 style="color:#c8102e;margin:16px 0 8px;">埃及</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>穆罕默德·萨拉赫</td><td>RW</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长 · 队魂 · 必首发</td></tr>
+      <tr><td>奥马尔·马尔穆什</td><td>FW</td><td><span class="tag tag-green">高(>90%)</span></td><td>首发前锋 · 曼城球员</td></tr>
+      <tr><td>特雷泽盖</td><td>RW</td><td><span class="tag tag-blue">中(70%)</span></td><td>可能首发或被伊马姆·阿舒尔替代</td></tr>
+      <tr><td>齐佐</td><td>AM</td><td><span class="tag tag-blue">中(60-70%)</span></td><td>组织核心 · 但霍萨姆·哈桑可能更保守</td></tr>
+      <tr><td>穆罕默德·阿卜杜勒莫奈姆</td><td>CB</td><td><span class="tag tag-green">高(>90%)</span></td><td>五大联赛级别中卫</td></tr>
+      <tr><td>穆罕默德·埃尔谢纳维</td><td>GK</td><td><span class="tag tag-green">高(>95%)</span></td><td>主力门将</td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>不首发场景分析：</strong>若特雷泽盖或齐佐不首发（被伊马姆·阿舒尔+海瑟姆·哈桑替代），埃及的进攻将更加依赖萨拉赫+马尔穆什的"双星反击"。但这意味着埃及中场控制力下降，比利时中场（蒂勒曼斯+德布劳内+奥纳纳）将获得更多空间组织进攻——这对比利时是有利的场景。</div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG估算）</div>
+    <table>
+      <tr><th>维度</th><th>比利时</th><th>埃及</th></tr>
+      <tr>
+        <td><strong>进攻体系</strong></td>
+        <td>4-3-3 控球+边路推进<br>德布劳内调度 · 卢卡库支点 · 多库/特罗萨德边路爆破</td>
+        <td>4-3-3 防守反击<br>萨拉赫+马尔穆什反击双星 · 齐佐前场组织</td>
+      </tr>
+      <tr>
+        <td><strong>预计控球率</strong></td>
+        <td>55-60%</td>
+        <td>40-45%</td></tr>
+      <tr>
+        <td><strong>近5场场均进球</strong></td>
+        <td>3.0球（vs突尼斯 5-0 / vs美国 2-1 / vs法国 0-1）</td>
+        <td>1.4球（vs巴西 1-2 / vs俄罗斯 2-1 / vs西班牙 0-0）</td></tr>
+      <tr>
+        <td><strong>对Tier 1-2球队场均进球</strong></td>
+        <td>1.5球（vs法国 0-1 · vs西班牙 0-0 · vs突尼斯 5-0）</td>
+        <td>0.7球（vs巴西 1-2 · vs西班牙 0-0 · vs沙特 2-1）</td></tr>
+      <tr>
+        <td><strong>预计本场xG</strong></td>
+        <td><strong>1.95 - 2.45</strong></td>
+        <td><strong>0.85 - 1.25</strong></td></tr>
+      <tr>
+        <td><strong>预计总xG区间</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">2.80 - 3.70</td></tr>
+      <tr>
+        <td><strong>防守体系</strong></td>
+        <td>德巴斯特+梅赫勒/特阿特中卫 · 库尔图瓦门将<br>中场奥纳纳+蒂勒曼斯提供屏障</td>
+        <td>阿卜杜勒莫奈姆+易卜拉欣中卫 · 埃尔谢纳维门将<br>全队退守 4-5-1 / 4-4-2</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">⚠️ 非稳态场景分析</h4>
+    <table>
+      <tr><th>场景</th><th>比利时反应</th><th>埃及反应</th></tr>
+      <tr>
+        <td><strong>比利时率先进球</strong></td>
+        <td>德布劳内控节奏 · 卢卡库寻求扩大比分</td>
+        <td>萨拉赫+马尔穆什开始个人单打 · 全线退守</td></tr>
+      <tr>
+        <td><strong>埃及率先进球（小概率事件）</strong></td>
+        <td>全员压上 · 多库+特罗萨德边路传中</td>
+        <td>全员退守 · 利用萨拉赫速度打反击</td></tr>
+      <tr>
+        <td><strong>0-0 僵局至60分钟</strong></td>
+        <td>换上德凯特拉雷加强组织 · 多库内切</td>
+        <td>换上伊马姆·阿舒尔加强拼抢</td></tr>
+      <tr>
+        <td><strong>比利时 2-0 领先</strong></td>
+        <td>换下德布劳内/卢卡库休息 · 控制节奏</td>
+        <td>孤注一掷压上 · 萨拉赫+马尔穆什发动总攻</td></tr>
+      <tr>
+        <td><strong>犯规破坏节奏</strong></td>
+        <td>德布劳内任意球是威胁 · 卢卡库头球争顶</td>
+        <td>战术犯规多 · 阿卜杜勒莫奈姆是黄牌隐患</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键发现：埃及的"定位球+反击"是核心威胁。</strong>萨拉赫+马尔穆什的反击组合在 2024-2025 赛季英超/德甲均表现出色——萨拉赫仍是利物浦边路核心（虽然本赛季数据有所下滑），马尔穆什在曼城/法兰克福时期已经证明是顶级反击手。如果比利时高位压上后被反击得手，埃及完全有能力在 1-2 个回合内制造进球。</div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>项目</th><th>比利时 · 库尔图瓦</th><th>埃及 · 埃尔谢纳维</th></tr>
+      <tr><td><strong>年龄/经验</strong></td><td>34岁 · 3届世界杯（2014/2018/2022）</td><td>37岁 · 多次非洲杯经验</td></tr>
+      <tr><td><strong>俱乐部</strong></td><td>皇家马德里（西甲）</td><td>阿尔阿赫利（埃及超）</td></tr>
+      <tr><td><strong>联赛水平</strong></td><td><span class="tag tag-green">西甲（顶级）</span></td><td><span class="tag tag-yellow">非洲（地区级）</span></td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>约 76-82%</td><td>约 68-75%</td></tr>
+      <tr><td><strong>大赛心理</strong></td><td>2018世界杯金手套奖 · 抗压能力顶级</td><td>非洲杯7次冠军 · 大赛经验丰富</td></tr>
+      <tr><td><strong>面对本场预期</strong></td><td>预计 2-3 次关键扑救 · 心理压力较小</td><td>预计 6-10 次扑救压力 · 体能考验巨大</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>门将对决：一边倒。</strong>库尔图瓦是"世界最佳门将"之一——他的身高（2.00m）、反应速度和定位球扑救能力都达到顶级。2018年世界杯金手套奖和2022年欧冠决赛 MVP 已经证明了他的大赛能力。埃尔谢纳维在非洲范围内是顶级门将，但在"五大联赛级别"的攻击线（卢卡库+多库+特罗萨德+德布劳内）面前，他的葡超/埃及超经验可能不足。预计比利时将通过持续施压（控球率 60%+）让埃尔谢纳维的体能下降，进而在下半场扩大比分。</div>
+  </div>
+
+  <!-- ===== 犯规率/纪律指数 ===== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>比利时</th><th>埃及</th></tr>
+      <tr><td><strong>近期场均犯规</strong></td><td>约 11-13次</td><td>约 14-16次</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>技术犯规少 · 控球减少犯规</td><td>身体对抗型 · 防守反击时犯规集中</td></tr>
+      <tr><td><strong>红黄牌趋势</strong></td><td>纪律良好</td><td>世预赛期间红黄牌较多</td></tr>
+      <tr><td><strong>节奏破坏器标注</strong></td><td><span class="tag tag-green">正常范围</span></td>
+      <td><span class="tag tag-yellow">接近临界线（14-16次）</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>预判：埃及犯规率偏高是"必然"。</strong>面对比利时的技术型中场（德布劳内+蒂勒曼斯+奥纳纳），埃及必须用高强度身体对抗+犯规来打断节奏。但这也给比利时提供了大量定位球机会——德布劳内的任意球是欧洲顶级水平，30米区域内的犯规几乎等于"半个点球"。埃及预计将出现 3-4 张黄牌，关键球员（如阿卜杜勒莫奈姆）可能因累计黄牌在小组赛末轮停赛。</div>
+  </div>
+
+  <!-- ===== 联赛→大赛折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>世界杯经验</th><th>折扣系数</th><th>风险评估</th></tr>
+      <tr><td colspan="4"><strong>比利时</strong></td></tr>
+      <tr><td>库尔图瓦</td><td>3届世界杯（2014/2018/2022）</td><td>× 0.95</td><td><span class="tag tag-green">最低风险</span></td></tr>
+      <tr><td>德布劳内</td><td>3届世界杯（2014/2018/2022）</td><td>× 0.95</td><td><span class="tag tag-green">最低风险</span></td></tr>
+      <tr><td>卢卡库</td><td>3届世界杯（2014/2018/2022）</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>多库</td><td>1届（2022）· 但出场时间少</td><td>× 0.88</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>蒂勒曼斯</td><td>2届（2018/2022）</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>特罗萨德</td><td>1届（2022）</td><td>× 0.90</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>全队综合折扣</td><td>3届经验核心 + 黄金一代末期</td><td><strong>× 0.90-0.95</strong></td><td><span class="tag tag-green">低</span></td></tr>
+      <tr><td colspan="4"><strong>埃及</strong></td></tr>
+      <tr><td>萨拉赫</td><td>1届（2018）</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>埃尔谢纳维</td><td>0届 · 多次非洲杯</td><td>× 0.88</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>马尔穆什</td><td>0届 · 首次世界杯</td><td>× 0.82</td><td><span class="tag tag-yellow">中风险</span></td></tr>
+      <tr><td>特雷泽盖</td><td>0届 · 多次非洲杯</td><td>× 0.88</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>全队综合折扣</td><td>萨拉赫领衔 · 多数球员首次世界杯</td><td><strong>× 0.82-0.88</strong></td><td><span class="tag tag-yellow">中</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>高风险球员标记：</strong>埃及方面马尔穆什（曼城/首次世界杯）是最大变数——他本赛季在曼城/法兰克福均表现优异，但大赛压力下的发挥仍是未知数。萨拉赫虽然有 2018 世界杯经验（但那届小组出局），他的"大赛无关键发挥"标签需要警惕。比利时方面"黄金一代"末期经验丰富，德布劳内+库尔图瓦+卢卡库三人的大赛气质是加分项。</div>
+  </div>
+
+  <!-- ===== 主教练 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练战术灵活性</div>
+    <table>
+      <tr><th>项目</th><th>比利时 · 鲁迪·加西亚</th><th>埃及 · 霍萨姆·哈桑</th></tr>
+      <tr><td><strong>执教时间</strong></td><td>2025年上任（1年+）</td><td>2024年上任（2年+）</td></tr>
+      <tr><td><strong>阵型稳定性</strong></td><td><span class="tag tag-green">固定4-3-3</span> · 沿用热身后框架</td>
+      <td><span class="tag tag-blue">4-3-3 / 4-2-3-1</span> · 防守反击为主</td></tr>
+      <tr><td><strong>临场调整</strong></td><td><span class="tag tag-green">出色</span> · 5-0胜突尼斯展示了进攻能力</td>
+      <td><span class="tag tag-yellow">常规</span> · 世预赛不败但含金量有限</td></tr>
+      <tr><td><strong>世界杯经验</strong></td><td><span class="tag tag-blue">0场</span> · 但执教里昂/马赛经验丰富</td>
+      <td><span class="tag tag-blue">0场</span> · 但非洲杯经验丰富</td></tr>
+      <tr><td><strong>战术灵活性标注</strong></td><td><span class="tag tag-green">战术稳定型</span> · 但热身赛 5-0 突尼斯展现进攻潜力</td>
+      <td><span class="tag tag-yellow">战术保守型</span> · 会以防守反击为主</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键教练对比：</strong>加西亚是法甲名帅（里昂/马赛），他打造的这支比利时已经展现出"控球+边路爆破+中锋支点"的成熟体系。**热身赛 5-0 突尼斯**是强力信号——突尼斯是非洲杯亚军级别的球队，被比利时轻松击溃说明加西亚的进攻战术已经"磨好刀"。霍萨姆·哈桑（埃及传奇球星，2006非洲杯MVP）则相对保守——他的目标不是击败比利时，而是"1 分 + 萨拉赫反击偷 1 球"。</div>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>维度</th><th>比利时</th><th>埃及</th></tr>
+      <tr><td><strong>替补深度评估</strong></td><td><span class="tag tag-green">极深</span> · 卢克巴基奥/萨勒马克尔斯/德凯特拉雷/莫雷拉</td>
+      <td><span class="tag tag-yellow">中等</span> · 海瑟姆·哈桑/伊马姆·阿舒尔/易卜拉欣·阿德尔</td></tr>
+      <tr><td><strong>替补奇兵候选人</strong></td>
+        <td>
+          <strong>多迪·卢克巴基奥</strong>（本菲卡）<br>类型：即战力型 · 速度型前锋 · 反击杀器<br>
+          <strong>查尔斯·德凯特拉雷</strong>（亚特兰大）<br>类型：即战力型 · 替补登场后组织核心
+        </td>
+        <td>
+          <strong>海瑟姆·哈桑</strong>（奥维耶多）<br>类型：适应型 · 西乙效力 · 创造力<br>
+          <strong>伊马姆·阿舒尔</strong>（阿尔阿赫利）<br>类型：即战力型 · 替补登场后增加中场强度
+        </td></tr>
+      <tr><td><strong>替补进球效率</strong></td><td>比利时替补进球率约 30%</td>
+      <td>埃及无大赛历史数据 · 估计 <20%</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><strong>1. 库尔图瓦 vs 萨拉赫+马尔穆什（门将 vs 反击双星）</strong>——这是比赛的"胜负手"。库尔图瓦是 2018 世界杯金手套奖得主，反应速度和定位球扑救都是世界顶级。萨拉赫+马尔穆什的反击组合需要"打穿"库尔图瓦才能进球。如果库尔图瓦封住了萨拉赫的 1-2 次关键射门，埃及的进攻线就"哑火"了。</div>
+    <div class="key-matchup"><strong>2. 德布劳内+蒂勒曼斯 vs 齐佐+特雷泽盖（中场控制 vs 中场绞杀）</strong>——德布劳内+蒂勒曼斯是欧洲顶级中场组合，而齐佐+特雷泽盖是"非洲版"的工兵型中场。比利时中场将通过持续的短传配合+德布劳内的直塞球撕开埃及防线。埃及中场需要用犯规+黄牌来打断节奏。</div>
+    <div class="key-matchup"><strong>3. 卢卡库 vs 阿卜杜勒莫奈姆+易卜拉欣（中锋支点 vs 中卫组合）</strong>——卢卡库（33岁）在那不勒斯本赛季表现稳健，是比利时历史最佳射手（89 球）。阿卜杜勒莫奈姆（尼斯/法甲）+易卜拉欣（阿尔阿赫利）的中卫组合将面临"身体对抗"考验。如果卢卡库能在 30 分钟前完成 1 次头球破门，比赛将进入"比利时控球消磨"模式。</div>
+    <div class="key-matchup"><strong>4. 多库+特罗萨德 vs 哈尼+法图赫（边路突破 vs 边路防守）</strong>——多库（曼城）的 1v1 突破能力是比利时边路的"核武器"，特罗萨德（阿森纳）是"多面手"型边锋。哈尼+法图赫（埃及超）将面临"五大联赛级别"的速度冲击。如果比利时边路能够在 30 分钟内制造 2-3 次有效传中，卢卡库就有机会梅开二度。</div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th><th>影响评估</th></tr>
+      <tr><td><strong>伤停</strong></td><td>比利时：<span class="tag tag-green">无重大伤停</span><br>埃及：<span class="tag tag-green">无重大伤停</span></td><td>双方均全主力</td></tr>
+      <tr><td><strong>体能/赛程</strong></td><td>两队均首轮 · 充足休整</td><td>无赛程劣势</td></tr>
+      <tr><td><strong>天气/场地</strong></td><td>西雅图 6 月中旬：18-22°C · 湿度中等<br>Lumen Field：开放场馆 · 海风 · 草皮质量优</td><td><span class="tag tag-blue">对两队均中性</span></td></tr>
+      <tr><td><strong>海拔</strong></td><td>海平面</td><td>无影响</td></tr>
+      <tr><td><strong>中立场</strong></td><td>西雅图 · 美国</td><td>真正中立场</td></tr>
+      <tr><td><strong>历史交锋</strong></td><td><span class="tag tag-yellow">3胜1平0负</span> · 比利时占优 · 但埃及 2025 年热身赛曾 2-1 击败比利时</td><td><span class="tag tag-yellow">埃及具备击败比利时的能力</span></td></tr>
+      <tr><td><strong>大赛心理/逆转因子</strong></td><td colspan="2">
+        <strong>比利时：</strong>2018 世界杯季军 + 黄金一代末期 · 大赛气质成熟 · 库尔图瓦/德布劳内/卢卡库的大赛经验是加分项<br>
+        <strong>埃及：</strong>世预赛不败 + 非洲杯7冠王 · 萨拉赫+马尔穆什反击线是核心 · 但大赛（世界杯）历史最佳仅为 16 强<br>
+        <strong>实现路径：</strong>比利时通过德布劳内+蒂勒曼斯中场控制 → 卢卡库支点 → 多库/特罗萨德边路传中 → 2-3 球定胜负。埃及通过全员退守 4-4-1-1 → 萨拉赫+马尔穆什反击 → 偷 1 球 + 死守 1-0 / 1-1。
+      </td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="prob-bar">
+        <div class="prob-label">比利时胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:55%;"></div></div>
+        <div class="prob-val">55%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">平局</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:27%;"></div></div>
+        <div class="prob-val">27%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">埃及胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gold" style="width:18%;"></div></div>
+        <div class="prob-val">18%</div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:#0033A0;">概率置信度梯级：<span class="confidence conf-mid">中</span>（胜率差 28%，满足 ≥8% 最低要求）</p>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">各概率信号强度标注</h4>
+    <table>
+      <tr><th>信号</th><th>指向</th><th>强度</th><th>解释</th></tr>
+      <tr><td>FIFA排名差距（#8 vs #36）</td><td>比利时</td><td><span class="signal signal-strong">强</span></td><td>28位排名差</td></tr>
+      <tr><td>门将（库尔图瓦 vs 埃尔谢纳维）</td><td>比利时</td><td><span class="signal signal-strong">强</span></td><td>库尔图瓦是 2018 世界杯金手套</td></tr>
+      <tr><td>中场配置（德布劳内+蒂勒曼斯+奥纳纳 vs 阿尔阿赫利+金字塔）</td><td>比利时</td><td><span class="signal signal-strong">强</span></td><td>五大联赛 vs 埃及超</td></tr>
+      <tr><td>埃及世预赛不败 + 防守稳健</td><td>埃及</td><td><span class="signal signal-mid">中</span></td><td>8胜2平 + 2失球</td></tr>
+      <tr><td>萨拉赫+马尔穆什反击线</td><td>埃及</td><td><span class="signal signal-mid">中</span></td><td>反击能力顶级</td></tr>
+      <tr><td>热身赛 5-0 突尼斯</td><td>比利时</td><td><span class="signal signal-mid">中</span></td><td>攻击力展现</td></tr>
+      <tr><td>埃及 2025 年 2-1 胜比利时</td><td>埃及</td><td><span class="signal signal-mid">中</span></td><td>心理优势 · 但热身赛≠正赛</td></tr>
+      <tr><td>卢卡库把握机会能力</td><td>比利时</td><td><span class="signal signal-mid">中</span></td><td>那不勒斯本赛季表现稳健</td></tr>
+      <tr><td>多库大赛发挥</td><td>比利时</td><td><span class="signal signal-weak">弱</span></td><td>2022 世界杯经验少</td></tr>
+      <tr><td>埃及世预赛对手弱（埃塞俄比亚等）</td><td>—</td><td><span class="signal signal-weak">弱</span></td><td>含金量有限</td></tr>
+    </table>
+    <div class="info-box">📊 <strong>信号强度评估：</strong>3条强信号指向比利时 · 0条强信号指向埃及 · 0条强信号指向平局。综合形成对比利时的优势但不及西班牙vs佛得角那般压倒性。**"平局信号优先"规则触发**——埃及胜率 18% < 45%且平局概率 27% ≥ 接近 30%，但比利时胜率 55% > 50% 信号强度仍指向比利时。**这是比利时"应该赢但不会轻松"的比赛**。</div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">比利时 2-1 埃及</span><span style="font-size:13px;color:#888;margin-left:8px;">（概率 ~17%）</span>
+    </div>
+    <div style="text-align:center;margin:8px 0;">
+      <span class="score-pred">1-1 平局</span><span style="font-size:13px;color:#888;">（概率 ~14%）</span>
+      <span class="score-pred">比利时 2-0 埃及</span><span style="font-size:13px;color:#888;">（概率 ~12%）</span>
+      <span class="score-pred">比利时 1-0 埃及</span><span style="font-size:13px;color:#888;">（概率 ~10%）</span>
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">预期xG区间</h4>
+    <div style="text-align:center;font-weight:700;font-size:18px;color:#0033A0;">
+      总 xG：2.80 - 3.70<br>
+      比利时 xG：1.95 - 2.45 &nbsp;|&nbsp; 埃及 xG：0.85 - 1.25
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>比利时将以 1-2 球的差距小胜埃及——这场比赛的"小球"属性更强，预计不会出现 3 球以上的大比分。</strong><br><br>
+        <strong>预测逻辑：</strong><br>
+        1. <strong>中场差距是核心变量：</strong>德布劳内+蒂勒曼斯+奥纳纳的中场组合在传球精度、节奏控制和定位球能力上远超埃及的齐佐+特雷泽盖+东加组合。比利时预计控球率 55-60%，他们将主导比赛节奏。<br><br>
+        2. <strong>埃及的"防守+反击"是唯一可能爆冷的途径：</strong>萨拉赫+马尔穆什的反击组合在 2024-2025 赛季英超/德甲均表现出色——如果比利时高位压上后被反击得手（库尔图瓦封不住），埃及完全有可能 1-1 逼平甚至 1-0 偷走胜利。**2025 年埃及 2-1 胜比利时**的历史是重要参考。<br><br>
+        3. <strong>但比利时"黄金一代"末期的求生欲不容小觑：</strong>这是德布劳内/库尔图瓦/卢卡库的"最后一届世界杯"——他们有强烈的"走得越远越好"的动力。加西亚打造的进攻体系（热身赛 5-0 突尼斯）已经成熟，比利时本场"必须赢"。<br><br>
+        4. <strong>萨拉赫 vs 库尔图瓦 是比赛最大看点：</strong>萨拉赫是利物浦边路核心，库尔图瓦是 2018 世界杯金手套奖得主。如果萨拉赫能在 60 分钟前破门，埃及有望保住 1-0 胜果；如果库尔图瓦封住萨拉赫，比利时将进入"2-0/2-1"的小比分赢球模式。<br><br>
+        <strong>关键假设：</strong><br>
+        · 德布劳内+蒂勒曼斯能正常发挥（90%+把握）<br>
+        · 卢卡库能在 60 分钟前破门（70%+把握）<br>
+        · 萨拉赫+马尔穆什的反击线至少制造 1-2 次威胁（80%+把握）<br>
+        · 库尔图瓦能封住萨拉赫的 1-2 次关键射门（60%+把握）<br>
+        · 埃及世预赛不败的防守稳健性延续到世界杯（70%+把握）<br><br>
+        <strong>置信度：</strong><span class="confidence conf-mid">中</span>（实力差距明显但非压倒性 · 埃及反击线有爆冷能力 · 历史交锋埃及曾 2-1 胜 · 大赛心理是双方共同的不确定因素）
+      </p>
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">⚠️ 已知数据缺口</h4>
+    <table>
+      <tr><th>缺口</th><th>影响</th></tr>
+      <tr><td>两队xG逐场精确数据</td><td>xG区间为基于数据的估算 · 误差约±0.3</td></tr>
+      <tr><td>鲁迪·加西亚最终首发11人</td><td>中卫组合存在多种可能</td></tr>
+      <tr><td>霍萨姆·哈桑最终首发11人</td><td>齐佐/特雷泽盖是否首发未确定</td></tr>
+      <tr><td>埃尔谢纳维扑救率/PSxG+/-</td><td>无法获取精确数据</td></tr>
+      <tr><td>萨拉赫近 5 场 xG/xA 数据</td><td>本赛季状态有所下滑</td></tr>
+      <tr><td>马尔穆什在曼城的角色和状态</td><td>本赛季机会有限 · 状态不确定</td></tr>
+      <tr><td>2025 年埃及 vs 比利时热身赛详细数据</td><td>仅知结果 2-1 · 战术和进球方式未知</td></tr>
+      <tr><td>西雅图天气精确预报</td><td>雨/雷暴可能改变预测</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 西班牙 vs 佛得角（2026-06-15）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据更新时间：2026-06-14 16:30（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇪🇸</span>
+      <span style="font-size:20px;font-weight:800;color:#aa151b;margin:0 12px;">西班牙</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">佛得角</span>
+      <span class="flag">🇨🇻</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Spain vs Cabo Verde</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-15 04:00 北京时间（当地 6月14日 16:00 EDT）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">美国亚特兰大 · 梅赛德斯-奔驰体育场</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">H组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">主裁判</div><div class="match-info-val">待FIFA官方公布</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">西班牙 #2 vs 佛得角 #73</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">本场为首轮 · 同组还有乌拉圭、沙特</div></div>
+    </div>
+    <div class="info-box">本场是佛得角历史上首场世界杯正赛——H组中实力差距最悬殊的一组对决。西班牙作为2024年欧洲杯冠军、决赛击败英格兰，FIFA排名第2，被广泛视为本届赛事最大夺冠热门之一（与法国并列）。两队此前从未在国际A级赛中交手。</div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>西班牙</th><th>佛得角</th></tr>
+      <tr>
+        <td><strong>近10场战绩</strong></td>
+        <td>7胜3平0负 · 不败金身</td>
+        <td>1胜3平1负（DLD DW）· 世预赛阶段保持不败</td></tr>
+      <tr>
+        <td><strong>对手分档</strong><br><small>按FIFA排名</small></td>
+        <td>
+          Tier 1（前20）：vs 葡萄牙 / 法国 / 荷兰 / 阿根廷（不败为主）<br>
+          Tier 2（21-50）：vs 瑞士 / 塞尔维亚 / 丹麦 等<br>
+          Tier 3（51-80）：vs 秘鲁 / 突尼斯 等
+        </td>
+        <td>
+          Tier 1（前20）：<span class="tag tag-red">无交战记录</span><br>
+          Tier 2（21-50）：vs 埃及（1-1平）<br>
+          Tier 3（51-80）：vs 智利（2-4负）· 伊朗（0-0平）<br>
+          Tier 4（80+）：vs 芬兰（1-1平）· 塞尔维亚（3-0胜）· 埃斯瓦蒂尼（3-0胜）
+        </td>
+      </tr>
+      <tr>
+        <td><strong>热身赛（2026）</strong></td>
+        <td>
+          3-1 胜 秘鲁（Tier 3）<br>
+          <span class="tag tag-green">欧洲杯冠军余威 · 控球体系稳定</span>
+        </td>
+        <td>
+          3-0 胜 塞尔维亚（Tier 2）<br>
+          3-0 胜 百慕大（Tier 4）<br>
+          <span class="tag tag-yellow">状态正盛但对手强度差异大</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>状态热度</strong></td>
+        <td><span class="tag tag-green">争冠热门 · 战术体系成熟</span></td>
+        <td><span class="tag tag-yellow">首秀兴奋 · 但缺乏Tier 1对手考验</span></td>
+      </tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键差距：佛得角从未与FIFA前20名球队交手。</strong>西班牙世预赛及热身赛的对手几乎全部是Tier 1-2球队（葡萄牙、法国、荷兰、阿根廷等），而佛得角世预赛对手主要是非洲弱旅（埃斯瓦蒂尼等）+ 北欧次级球队（芬兰）。这导致两队"近期状态"数据的可比性极低。佛得角近3场热身赛全胜但含金量不足，其真实面对强队时的承压能力仍是未知数。</div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（26人/队）</div>
+
+    <h4 style="color:#aa151b;margin-bottom:8px;">西班牙26人（按预测首发 + 关键替补排列）</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>年龄/经验</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">乌奈·西蒙</span></td><td>GK ★</td><td>毕尔巴鄂竞技（西甲）</td><td>29岁</td><td><span class="tag tag-green">一门门将 · 欧洲杯首发</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">大卫·拉亚</span></td><td>GK</td><td>阿森纳（英超）</td><td>30岁</td><td><span class="tag tag-blue">替补门将</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">胡安·加西亚</span></td><td>GK</td><td>巴塞罗那（西甲）</td><td>25岁</td><td><span class="tag tag-blue">三门 · 巴萨新援</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">佩德罗·波罗</span></td><td>RB</td><td>托特纳姆热刺（英超）</td><td>25岁</td><td><span class="tag tag-green">右路首发 · 助攻能力强</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">马克·库库雷利亚</span></td><td>LB</td><td>切尔西（英超）</td><td>27岁</td><td><span class="tag tag-blue">左路首发</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">亚历杭德罗·格里马尔多</span></td><td>LB</td><td>勒沃库森（德甲）</td><td>30岁</td><td><span class="tag tag-blue">左路替补</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">保·库巴西</span></td><td>CB ★</td><td>巴塞罗那（西甲）</td><td>19岁</td><td><span class="tag tag-green">巴萨新星 · 防守稳健</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">艾梅里克·拉波尔特</span></td><td>CB ★</td><td>毕尔巴鄂竞技（西甲）</td><td>32岁</td><td><span class="tag tag-green">首发中卫 · 防空核心</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">埃里克·加西亚</span></td><td>CB</td><td>巴塞罗那（西甲）</td><td>25岁</td><td><span class="tag tag-blue">轮换中卫</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">罗德里</span></td><td>DM（C）★★★</td><td>曼城（英超）</td><td>29岁 · 队长</td><td><span class="tag tag-green">🔥中场核心 · 节奏掌控者</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">法比安·鲁伊斯</span></td><td>CM ★</td><td>巴黎圣日耳曼（法甲）</td><td>30岁</td><td><span class="tag tag-green">首发 · 攻防转换枢纽</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">佩德里</span></td><td>AM ★★★</td><td>巴塞罗那（西甲）</td><td>23岁</td><td><span class="tag tag-green">🔥创造力核心 · 欧洲杯MVP级</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">马丁·祖比门迪</span></td><td>DM</td><td>阿森纳（英超）</td><td>27岁</td><td><span class="tag tag-blue">罗德里替补</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">加维</span></td><td>CM</td><td>巴塞罗那（西甲）</td><td>22岁</td><td><span class="tag tag-blue">复出后状态待观察</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">米克尔·梅里诺</span></td><td>CM</td><td>阿森纳（英超）</td><td>29岁</td><td><span class="tag tag-blue">欧洲杯绝杀功臣</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">亚历克斯·巴埃纳</span></td><td>AM</td><td>马德里竞技（西甲）</td><td>24岁</td><td><span class="tag tag-blue">首发 · 边路创造力</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">费兰·托雷斯</span></td><td>FW ★★</td><td>巴塞罗那（西甲）</td><td>26岁</td><td><span class="tag tag-green">首发边锋 · 速度+终结</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">米克尔·奥亚萨瓦尔</span></td><td>FW ★</td><td>皇家社会（西甲）</td><td>29岁</td><td><span class="tag tag-green">首发中锋 · 欧国联绝杀英格兰</span></td></tr>
+      <tr><td>19</td><td><span class="player-name">丹尼·奥尔莫</span></td><td>AM ★</td><td>巴塞罗那（西甲）</td><td>28岁</td><td><span class="tag tag-blue">替补 · 欧洲杯表现平平</span></td></tr>
+      <tr><td>20</td><td><span class="player-name">尼科·威廉姆斯</span></td><td>LW ★★</td><td>毕尔巴鄂竞技（西甲）</td><td>23岁</td><td><span class="tag tag-yellow">⚠️已恢复训练 · 预计替补</span></td></tr>
+      <tr><td>21</td><td><span class="player-name">拉明·亚马尔</span></td><td>RW ★★★</td><td>巴塞罗那（西甲）</td><td>18岁</td><td><span class="tag tag-yellow">⚠️已恢复训练 · 预计替补</span></td></tr>
+      <tr><td>22</td><td><span class="player-name">耶雷米·皮诺</span></td><td>RW</td><td>水晶宫（英超）</td><td>23岁</td><td><span class="tag tag-blue">边路替补</span></td></tr>
+      <tr><td>23</td><td><span class="player-name">博尔哈·伊格莱西亚斯</span></td><td>FW</td><td>塞尔塔（西甲）</td><td>33岁</td><td><span class="tag tag-blue">中锋替补</span></td></tr>
+      <tr><td>24</td><td><span class="player-name">维克托·穆尼奥斯</span></td><td>FW</td><td>奥萨苏纳（西甲）</td><td>22岁</td><td><span class="tag tag-yellow">⚠️肌肉疲劳 · 出战成疑</span></td></tr>
+      <tr><td>25</td><td><span class="player-name">马克·普比尔</span></td><td>RB</td><td>马德里竞技（西甲）</td><td>22岁</td><td><span class="tag tag-blue">右路替补</span></td></tr>
+      <tr><td>26</td><td><span class="player-name">马科斯·略伦特</span></td><td>DF/CM</td><td>马德里竞技（西甲）</td><td>31岁</td><td><span class="tag tag-blue">多位置替补</span></td></tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:16px 0 8px;">佛得角26人</h4>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部（联赛）</th><th>年龄/经验</th><th>近期状态</th></tr>
+      <tr><td>1</td><td><span class="player-name">沃齐尼亚</span></td><td>GK ★</td><td>沙维斯（葡超）</td><td>经验门将</td><td><span class="tag tag-green">首发门将 · 经验丰富</span></td></tr>
+      <tr><td>2</td><td><span class="player-name">卡洛斯·多斯桑托斯</span></td><td>GK</td><td>圣迭戈FC（美职联）</td><td>—</td><td><span class="tag tag-blue">美职联门将</span></td></tr>
+      <tr><td>3</td><td><span class="player-name">马尔西奥·罗萨</span></td><td>GK</td><td>蒙塔那（葡甲）</td><td>—</td><td><span class="tag tag-blue">三门</span></td></tr>
+      <tr><td>4</td><td><span class="player-name">洛根·科斯塔</span></td><td>CB ★★</td><td>比利亚雷亚尔（西甲）</td><td>—</td><td><span class="tag tag-green">🔥防线核心 · 五大联赛效力</span></td></tr>
+      <tr><td>5</td><td><span class="player-name">罗伯托·洛佩斯</span></td><td>CB</td><td>沙姆罗克流浪者（爱超）</td><td>—</td><td><span class="tag tag-blue">爱尔兰联赛主力</span></td></tr>
+      <tr><td>6</td><td><span class="player-name">迪内伊·博尔赫斯</span></td><td>CB</td><td>阿尔巴塔（阿联酋超）</td><td>—</td><td><span class="tag tag-blue">中卫替补</span></td></tr>
+      <tr><td>7</td><td><span class="player-name">凯尔文·皮雷斯</span></td><td>CB</td><td>SJK塞伊奈约基（芬超）</td><td>—</td><td><span class="tag tag-blue">芬超主力</span></td></tr>
+      <tr><td>8</td><td><span class="player-name">斯托皮拉</span></td><td>CB</td><td>托伦斯（葡甲）</td><td>—</td><td><span class="tag tag-blue">中卫替补</span></td></tr>
+      <tr><td>9</td><td><span class="player-name">斯蒂文·莫雷拉</span></td><td>RB ★</td><td>哥伦布机员（美职联）</td><td>—</td><td><span class="tag tag-green">美职联主力右后卫</span></td></tr>
+      <tr><td>10</td><td><span class="player-name">西德尼·卡布拉尔</span></td><td>DF</td><td>本菲卡（葡超）</td><td>—</td><td><span class="tag tag-blue">葡超豪门替补</span></td></tr>
+      <tr><td>11</td><td><span class="player-name">瓦格纳·皮纳</span></td><td>LB</td><td>特拉布宗（土超）</td><td>—</td><td><span class="tag tag-blue">土超主力 · 经验丰富</span></td></tr>
+      <tr><td>12</td><td><span class="player-name">雅米罗·蒙特罗</span></td><td>AM ★★</td><td>兹沃勒（荷甲）</td><td>—</td><td><span class="tag tag-green">中场核心 · 创造力源泉</span></td></tr>
+      <tr><td>13</td><td><span class="player-name">德罗伊·杜阿尔特</span></td><td>CM</td><td>卢多戈雷茨（保超）</td><td>—</td><td><span class="tag tag-blue">保超主力</span></td></tr>
+      <tr><td>14</td><td><span class="player-name">若昂·保罗·费尔南德斯</span></td><td>CM</td><td>奥泰尔加鲁齐（罗超）</td><td>—</td><td><span class="tag tag-blue">罗超主力</span></td></tr>
+      <tr><td>15</td><td><span class="player-name">凯文·皮纳（Kenny Pina）</span></td><td>CM ★</td><td>FK克拉斯诺达尔（俄超）</td><td>—</td><td><span class="tag tag-blue">俄超主力 · 防守型中场</span></td></tr>
+      <tr><td>16</td><td><span class="player-name">拉罗斯·杜阿尔特</span></td><td>CM</td><td>普斯卡什学院（匈甲）</td><td>—</td><td><span class="tag tag-blue">匈甲主力</span></td></tr>
+      <tr><td>17</td><td><span class="player-name">特尔莫·阿坎若</span></td><td>AM</td><td>吉马良斯（葡超）</td><td>—</td><td><span class="tag tag-blue">葡超主力</span></td></tr>
+      <tr><td>18</td><td><span class="player-name">亚尼克·塞梅多</span></td><td>DM</td><td>法伦斯（葡超）</td><td>—</td><td><span class="tag tag-blue">防守型中场</span></td></tr>
+      <tr><td>19</td><td><span class="player-name">戴隆·利夫拉门托</span></td><td>FW ★</td><td>卡萨皮亚（葡超）</td><td>—</td><td><span class="tag tag-green">🔥22场7球 · 锋线尖刀</span></td></tr>
+      <tr><td>20</td><td><span class="player-name">加里·罗德里格斯</span></td><td>RW</td><td>阿波罗利马索尔（塞浦路斯超）</td><td>—</td><td><span class="tag tag-blue">边路经验丰富</span></td></tr>
+      <tr><td>21</td><td><span class="player-name">吉尔森·本奇摩尔</span></td><td>FW</td><td>阿克伦（俄甲）</td><td>—</td><td><span class="tag tag-blue">轮换前锋</span></td></tr>
+      <tr><td>22</td><td><span class="player-name">若瓦内·卡布拉尔</span></td><td>LW</td><td>埃什特雷达（葡超）</td><td>—</td><td><span class="tag tag-blue">边路速度型</span></td></tr>
+      <tr><td>23</td><td><span class="player-name">努诺·达科斯塔</span></td><td>FW</td><td>伊斯坦布尔巴萨克谢希尔（土超）</td><td>—</td><td><span class="tag tag-blue">土超主力 · 多面手</span></td></tr>
+      <tr><td>24</td><td><span class="player-name">瑞安·门德斯</span></td><td>FW ★★★（C）</td><td>科贾埃利（土超）</td><td>36岁 · 97场22球</td><td><span class="tag tag-green">🔥队长 · 队史最佳射手</span></td></tr>
+      <tr><td>25</td><td><span class="player-name">威利·塞梅多</span></td><td>FW</td><td>奥莫尼亚（塞浦路斯超）</td><td>—</td><td><span class="tag tag-blue">替补前锋</span></td></tr>
+      <tr><td>26</td><td><span class="player-name">赫里奥·瓦雷拉</span></td><td>FW</td><td>马卡比·特阿维夫（以超）</td><td>年轻新星</td><td><span class="tag tag-green">🔥年轻新星 · 突破能力强</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>覆盖盲区检查：</strong>西班牙方面确认了"未首发"球员的归属——拉明·亚马尔（巴萨18岁超新星）、尼科·威廉姆斯（毕尔巴鄂）、维克托·穆尼奥斯（奥萨苏纳）大概率不首发或状态存疑。主帅德拉富恩特在小组首战采用"主力+轮换"策略保护主力。如果亚马尔和威廉姆斯替补登场，他们将直接面对体力下降的佛得角防线，威胁更大。佛得角方面绝大多数球员效力于葡萄牙、塞浦路斯、土耳其二级联赛，"五大联赛+核心队"的覆盖主要由洛根·科斯塔（比利亚雷亚尔）一人支撑。</div>
+  </div>
+
+  <!-- ===== 首发不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h4 style="color:#aa151b;margin-bottom:8px;">西班牙</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>拉明·亚马尔</td><td>RW</td><td><span class="tag tag-yellow">中(50-60%)</span></td><td>已恢复训练 · 但主帅德拉富恩特通常让主力休息首战</td></tr>
+      <tr><td>尼科·威廉姆斯</td><td>LW</td><td><span class="tag tag-yellow">中(50-60%)</span></td><td>已恢复训练 · 同样保护对象</td></tr>
+      <tr><td>维克托·穆尼奥斯</td><td>FW</td><td><span class="tag tag-red">低(<30%)</span></td><td>肌肉疲劳 · 出战成疑</td></tr>
+      <tr><td>费兰·托雷斯</td><td>FW</td><td><span class="tag tag-green">高(>85%)</span></td><td>主力边锋 · 速度型</td></tr>
+      <tr><td>奥亚萨瓦尔</td><td>FW</td><td><span class="tag tag-green">高(>85%)</span></td><td>首发中锋 · 欧国联绝杀功臣</td></tr>
+      <tr><td>佩德里</td><td>AM</td><td><span class="tag tag-green">高(>90%)</span></td><td>创造力核心 · 大概率首发</td></tr>
+      <tr><td>罗德里</td><td>DM</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长 · 不可替代</td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>不首发场景分析：</strong>若亚马尔和威廉姆斯均不首发（被保护），西班牙边路将由费兰·托雷斯+奥亚萨瓦尔+巴埃纳组合承担进攻，佩德里居中调度。整体创造力略有下降但仍远超佛得角承受力。如果首发（50%可能），则西班牙上半场就可能打出 2-0 的比分差，参考指标：亚马尔vs弱旅场均制造 1+ 关键传球。</div>
+
+    <h4 style="color:#0033A0;margin:16px 0 8px;">佛得角</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>瑞安·门德斯</td><td>FW</td><td><span class="tag tag-green">高(>90%)</span></td><td>36岁队长 · 队史最佳射手 · 必首发</td></tr>
+      <tr><td>戴隆·利夫拉门托</td><td>FW</td><td><span class="tag tag-green">高(>85%)</span></td><td>22场7球 · 锋线尖刀</td></tr>
+      <tr><td>洛根·科斯塔</td><td>CB</td><td><span class="tag tag-green">高(>95%)</span></td><td>防线核心 · 五大联赛级别</td></tr>
+      <tr><td>雅米罗·蒙特罗</td><td>AM</td><td><span class="tag tag-green">高(>85%)</span></td><td>中场创造力核心</td></tr>
+      <tr><td>赫里奥·瓦雷拉</td><td>FW</td><td><span class="tag tag-blue">中(60-70%)</span></td><td>年轻新星 · 可能作为替补奇兵</td></tr>
+      <tr><td>加里·罗德里格斯</td><td>RW</td><td><span class="tag tag-blue">中(50-65%)</span></td><td>经验丰富 · 与赫里奥·瓦雷拉竞争首发</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>佛得角首发门将是"真问题"：</strong>相对于西班牙，佛得角的阵容轮换余地更小。绝大多数球员已习惯在俱乐部担任替补或轮换角色，国家队首发 11 人的"化学反应"是真正的不确定因素。如果门德斯（36岁）因体能原因被早早换下，赫里奥·瓦雷拉将作为替补奇兵登场——他的突破能力可能在西班牙体能下降时制造威胁。</div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG估算）</div>
+    <table>
+      <tr><th>维度</th><th>西班牙</th><th>佛得角</th></tr>
+      <tr>
+        <td><strong>进攻体系</strong></td>
+        <td>4-3-3 控球型（tiki-taka）<br>罗德里+佩德里+法比安中场调度<br>边路依靠费兰·托雷斯/巴埃纳</td>
+        <td>4-2-3-1 防守反击<br>依靠瑞安·门德斯+利夫拉门托<br>中场蒙特罗+凯文·皮纳</td>
+      </tr>
+      <tr>
+        <td><strong>预计控球率</strong></td>
+        <td>70%+</td>
+        <td>25-30%</td>
+      </tr>
+      <tr>
+        <td><strong>近10场场均进球</strong></td>
+        <td>2.4球</td>
+        <td>1.5球（但对手弱）</td>
+      </tr>
+      <tr>
+        <td><strong>对Tier 1球队场均进球</strong></td>
+        <td>1.6球（对葡萄牙/法国/荷兰不败）</td>
+        <td>0球（<span class="tag tag-red">无交战记录</span>）</td>
+      </tr>
+      <tr>
+        <td><strong>预计本场xG</strong></td>
+        <td><strong>2.40 - 3.10</strong></td>
+        <td><strong>0.30 - 0.65</strong></td>
+      </tr>
+      <tr>
+        <td><strong>预计总xG区间</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">2.70 - 3.75</td>
+      </tr>
+      <tr>
+        <td><strong>防守体系</strong></td>
+        <td>拉波尔特+库巴西中卫 · 中高位压迫<br>但库巴西19岁 · 大赛经验不足</td>
+        <td>洛根·科斯塔+其他 · 5后卫或4后卫低位防守<br>5号位蒙特罗参与协防</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">⚠️ 非稳态场景分析</h4>
+    <table>
+      <tr><th>场景</th><th>西班牙反应</th><th>佛得角反应</th></tr>
+      <tr>
+        <td><strong>西班牙早早破门（0-1，20分钟内）</strong></td>
+        <td>控球消磨 · 佩德里调度放缓节奏</td>
+        <td>可能改为 5-4-1 全线回收 · 寄望定位球偷袭</td>
+      </tr>
+      <tr>
+        <td><strong>0-0 僵局超过30分钟</strong></td>
+        <td>换上亚马尔/威廉姆斯加强个人突破</td>
+        <td>体能下降 · 门前可能制造混乱 · 偷一个的概率上升</td>
+      </tr>
+      <tr>
+        <td><strong>西班牙 3-0 大比分领先</strong></td>
+        <td>换人潮 · 主力休息 · 节奏放缓</td>
+        <td>可能前压争取荣誉进球 · 洛根·科斯塔可能带球助攻</td>
+      </tr>
+      <tr>
+        <td><strong>佛得角偷袭 1-0 领先（极小概率）</strong></td>
+        <td>全员压上 · 罗德里+法比安加强直塞</td>
+        <td>全员退守 · 拖延时间 · 1-0 胜将是"国足球迷奇迹"</td>
+      </tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键发现：佛得角定位球是唯一可能威胁西班牙的途径。</strong>西班牙定位球防守在2024年欧洲杯期间曾出现问题（对格鲁吉亚角球丢球）。洛根·科斯塔（1.91m）+蒙特罗+利夫拉门托的定位球威胁值得注意。但西班牙中场罗德里+佩德里对第二落点的保护非常严密，定位球转化为进球的概率也仅 8-12%。</div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>项目</th><th>西班牙 · 乌奈·西蒙</th><th>佛得角 · 沃齐尼亚</th></tr>
+      <tr><td><strong>年龄/经验</strong></td><td>29岁 · 2024欧洲杯首发门将</td><td>经验门将 · 葡超效力</td></tr>
+      <tr><td><strong>俱乐部</strong></td><td>毕尔巴鄂竞技（西甲）</td><td>沙维斯（葡超）</td></tr>
+      <tr><td><strong>联赛水平</strong></td><td><span class="tag tag-green">西甲（顶级）</span></td><td><span class="tag tag-yellow">葡超（欧洲二线）</span></td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>约72-78%</td><td>约65-72%</td></tr>
+      <tr><td><strong>大赛心理</strong></td><td>欧洲杯决赛经历 · 抗压能力强</td><td>佛得角首秀 · 大赛经验不足</td></tr>
+      <tr><td><strong>面对本场预期</strong></td><td>预计不会受到太多考验 · 0-1 失球为基准</td><td>预计将面临 8-15 次有效扑救压力</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>门将对决（反向）：</strong>这场比赛的门将"对决"是反向的——西蒙是"无所事事"的那个人，沃齐尼亚是"全场最忙"的那个人。沃齐尼亚在葡超和葡甲的经验让他对欧洲技术流踢法有所了解，但面对西班牙的多点开花 + 高控球率 + 边中结合，单场 8+ 次扑救的压力很可能让他在 60-70 分钟出现体能下降，导致后程失球增加。</div>
+  </div>
+
+  <!-- ===== 犯规率/纪律指数 ===== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>西班牙</th><th>佛得角</th></tr>
+      <tr><td><strong>近期场均犯规</strong></td><td>约9-11次</td><td>约13-15次</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>技术犯规少 · 控球减少犯规</td><td>身体对抗型 · 防守时大量犯规</td></tr>
+      <tr><td><strong>红黄牌趋势</strong></td><td>纪律良好</td><td>世预赛期间红黄牌较多</td></tr>
+      <tr><td><strong>节奏破坏器标注</strong></td><td><span class="tag tag-green">正常范围</span></td><td><span class="tag tag-yellow">接近临界线（13-15次）</span></td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>预判：佛得角犯规率偏高是"必然"。</strong>他们必须在防守端采取高强度身体对抗来打断西班牙的传控节奏，但这也意味着给西班牙大量定位球机会。西班牙本届阵容中佩德里、巴埃纳、费兰·托雷斯的远射能力都相当出色，30米区域内的犯规将直接转化为射门威胁。预计佛得角将出现 2-3 张黄牌，但不至于被罚下关键球员。</div>
+  </div>
+
+  <!-- ===== 联赛→大赛折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>世界杯经验</th><th>折扣系数</th><th>风险评估</th></tr>
+      <tr><td colspan="4"><strong>西班牙</strong></td></tr>
+      <tr><td>罗德里</td><td>2022 世界杯（替补）· 2024欧洲杯MVP</td><td>× 0.96</td><td><span class="tag tag-green">最低风险</span></td></tr>
+      <tr><td>拉波尔特</td><td>已代表西班牙2届欧洲杯</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>佩德里</td><td>2020 欧洲杯 / 2022 世界杯（受伤）</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>费兰·托雷斯</td><td>2022 世界杯 · 2024欧洲杯</td><td>× 0.90</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>亚马尔</td><td>0届 · 18岁首次世界杯</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>库巴西</td><td>0届 · 19岁首次世界杯</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>全队综合折扣</td><td>欧洲杯冠军班底为主</td><td><strong>× 0.88-0.93</strong></td><td><span class="tag tag-green">低</span></td></tr>
+      <tr><td colspan="4"><strong>佛得角</strong></td></tr>
+      <tr><td>瑞安·门德斯</td><td>0届 · 36岁首次世界杯</td><td>× 0.85</td><td><span class="tag tag-yellow">中风险</span></td></tr>
+      <tr><td>洛根·科斯塔</td><td>0届 · 首次世界杯</td><td>× 0.85</td><td><span class="tag tag-yellow">中风险</span></td></tr>
+      <tr><td>雅米罗·蒙特罗</td><td>0届 · 首次世界杯</td><td>× 0.80</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>全队综合折扣</td><td>全队无世界杯经验</td><td><strong>× 0.75-0.82</strong></td><td><span class="tag tag-red">高 · 历史首秀心理压力</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>高风险球员标记：</strong>佛得角全队折扣系数显著低于西班牙——"历史首秀"带来的心理压力是真实存在的变量。瑞安·门德斯 36 岁的体能是否能应对 90 分钟高强度比赛，蒙特罗和皮纳的双后腰组合是否能抵挡罗德里+佩德里——这些都是"未知数"。西班牙方面仅有库巴西（19岁）和亚马尔（18岁）属于"联赛高产出、大赛无经验"风险区，但他们大概率替补出场，风险敞口可控。</div>
+  </div>
+
+  <!-- ===== 主教练 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练战术灵活性</div>
+    <table>
+      <tr><th>项目</th><th>西班牙 · 路易斯·德拉富恩特</th><th>佛得角 · 布比斯塔（Bubista）</th></tr>
+      <tr><td><strong>执教时间</strong></td><td>2022年至今（4年+）</td><td>长期任职</td></tr>
+      <tr><td><strong>阵型稳定性</strong></td><td><span class="tag tag-green">固定4-3-3</span> · 战术体系成熟</td>
+      <td><span class="tag tag-blue">4-2-3-1防守型</span> · 战术相对固定</td></tr>
+      <tr><td><strong>临场调整</strong></td><td><span class="tag tag-green">出色</span> · 欧洲杯证明换人能力</td>
+      <td><span class="tag tag-yellow">常规</span> · 大赛样本不足</td></tr>
+      <tr><td><strong>世界杯经验</strong></td><td>1届（2022）· 止步16强</td>
+      <td><span class="tag tag-red">0场</span> · 首次世界杯</td></tr>
+      <tr><td><strong>战术灵活性标注</strong></td><td><span class="tag tag-green">战术稳定型</span> · 但边路亚马尔/威廉姆斯可作为变量</td>
+      <td><span class="tag tag-yellow">战术保守型</span> · 不会主动出击</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>两位教练的"风格差异"：</strong>德拉富恩特是本届世界杯最顶尖的教练之一——他打造的西班牙"控球+高位压迫+边路爆破"体系在欧洲杯已经验证。但他对主力球员的保护倾向意味着首战可能"按部就班"，不会急于屠杀对手。布比斯塔则相对保守，他很清楚佛得角面对西班牙的现实——目标是"少输当赢"，不会冒险压上。</div>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>维度</th><th>西班牙</th><th>佛得角</th></tr>
+      <tr><td><strong>替补深度评估</strong></td><td><span class="tag tag-green">极深</span> · 亚马尔+威廉姆斯+奥尔莫+尼科+皮诺+伊格莱西亚斯</td>
+      <td><span class="tag tag-yellow">中等</span> · 赫里奥·瓦雷拉+加里·罗德里格斯+努诺·达科斯塔</td></tr>
+      <tr><td><strong>替补奇兵候选人</strong></td>
+        <td>
+          <strong>拉明·亚马尔</strong>（巴塞罗那）<br>类型：即战力型 · 18岁 · 1v1突破无敌 · 替补登场改变战局<br>
+          <strong>尼科·威廉姆斯</strong>（毕尔巴鄂）<br>类型：即战力型 · 速度型边路 · 反击杀器
+        </td>
+        <td>
+          <strong>赫里奥·瓦雷拉</strong>（马卡比·特阿维夫）<br>类型：即战力型 · 突破能力强 · 可能制造意外<br>
+          <strong>加里·罗德里格斯</strong>（阿波罗利马索尔）<br>类型：适应型 · 经验型边路
+        </td></tr>
+      <tr><td><strong>替补进球效率</strong></td><td>西班牙替补进球率约 35%（最近2届大赛）</td>
+      <td>佛得角无大赛历史数据 · 估计 <20%</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><strong>1. 罗德里+佩德里 vs 凯文·皮纳+亚尼克·塞梅多（中场统治力 vs 中场防守）</strong>——罗德里是当今世界最佳后腰之一，佩德里是顶级组织核心。佛得角双后腰必须用犯规+贴身来打断他们，但代价是大量黄牌和定位球。这是比赛的"胜负手"。</div>
+    <div class="key-matchup"><strong>2. 费兰·托雷斯+巴埃纳 vs 洛根·科斯塔+瓦格纳·皮纳（边路爆破 vs 边路防守）</strong>——费兰·托雷斯（巴萨）和巴埃纳（马竞）的边路突破+传中是西班牙常规武器。佛得角后防核心是比利亚雷亚尔的洛根·科斯塔——他必须发挥"五大联赛级别"的水平才能限制西班牙边路，但他的队友（葡超/葡甲/塞浦路斯/土超）整体实力差距明显。</div>
+    <div class="key-matchup"><strong>3. 奥亚萨瓦尔 vs 佛得角中卫组合（门前终结 vs 防线承压）</strong>——奥亚萨瓦尔是欧国联决赛绝杀英格兰的功臣，禁区内嗅觉极强。佛得角中卫组合（科斯塔+博尔赫斯/皮雷斯/洛佩斯/斯托皮拉）将面临持续压力。如果奥亚萨瓦尔在 30 分钟前破门，比赛将进入"西班牙控球消磨"模式。</div>
+    <div class="key-matchup"><strong>4. 瑞安·门德斯+利夫拉门托 vs 库巴西+拉波尔特（老将+新星 vs 老将+新星）</strong>——这是"高龄攻击线 vs 年轻防线"的对决。瑞安·门德斯（36岁）经验丰富但体能是隐患；利夫拉门托（22场7球）需要承担终结责任。西班牙 19 岁的库巴西可能因经验不足出现失误，这可能是佛得角唯一制造威胁的窗口。</div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th><th>影响评估</th></tr>
+      <tr><td><strong>伤停</strong></td><td>西班牙：穆尼奥斯（肌肉疲劳）出战成疑<br>佛得角：<span class="tag tag-green">无伤病</span>（全员健康）</td><td>穆尼奥斯影响有限 · 佛得角可派最强阵容</td></tr>
+      <tr><td><strong>体能/赛程</strong></td><td>两队均首轮 · 充足休整</td><td>无赛程劣势</td></tr>
+      <tr><td><strong>天气/场地</strong></td><td>亚特兰大 6月中旬：28-32°C · 湿度 60-70%<br>梅赛德斯-奔驰体育场：可关闭屋顶 · 草皮质量优</td><td><span class="tag tag-green">对西班牙有利</span> · 室内控球环境</td></tr>
+      <tr><td><strong>海拔</strong></td><td>约 320m</td><td>无影响</td></tr>
+      <tr><td><strong>中立场</strong></td><td>亚特兰大 · 美国</td><td>真正中立场</td></tr>
+      <tr><td><strong>历史交锋</strong></td><td><span class="tag tag-blue">无历史交锋记录</span> · 首次碰面</td><td>无法参考历史</td></tr>
+      <tr><td><strong>大赛心理/逆转因子</strong></td><td colspan="2">
+        <strong>西班牙：</strong>2024欧洲杯冠军 · 大赛气质成熟 · 罗德里/佩德里均有大赛关键进球经验<br>
+        <strong>佛得角：</strong>历史首秀 · 心理压力巨大 · 瑞安·门德斯（36岁）作为老将的稳定作用是"压舱石"<br>
+        <strong>实现路径：</strong>西班牙通过罗德里+佩德里中场控制 + 费兰·托雷斯/巴埃纳边路突破 → 制造佛得角防线混乱 → 奥亚萨瓦尔门前终结（20-40分钟内破门概率 60%+）。佛得角通过全员退守 5-4-1 → 消耗西班牙耐心 → 80分钟前若仅丢 0-1/0-2 → 门将沃齐尼亚神扑 → 保住"输球不输面子"。
+      </td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="prob-bar">
+        <div class="prob-label">西班牙胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:80%;"></div></div>
+        <div class="prob-val">80%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">平局</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:14%;"></div></div>
+        <div class="prob-val">14%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">佛得角胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gold" style="width:6%;"></div></div>
+        <div class="prob-val">6%</div>
+      </div>
+    </div>
+
+    <p style="font-weight:700;color:#0033A0;">概率置信度梯级：<span class="confidence conf-high">高</span>（胜率差 66%，远超 ≥8% 最低要求）</p>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">各概率信号强度标注</h4>
+    <table>
+      <tr><th>信号</th><th>指向</th><th>强度</th><th>解释</th></tr>
+      <tr><td>FIFA排名差距（#2 vs #73）</td><td>西班牙</td><td><span class="signal signal-strong">强</span></td><td>71位排名差 · 西班牙是历史顶级强队</td></tr>
+      <tr><td>中场配置（罗德里+佩德里 vs 葡超+俄超）</td><td>西班牙</td><td><span class="signal signal-strong">强</span></td><td>技术、经验、创造力全方位压制</td></tr>
+      <tr><td>欧洲杯冠军班底</td><td>西班牙</td><td><span class="signal signal-strong">强</span></td><td>2024欧洲杯决赛首发班底完整保留</td></tr>
+      <tr><td>佛得角大赛经验缺失</td><td>西班牙</td><td><span class="signal signal-strong">强</span></td><td>全队无世界杯经验 · 心理压力</td></tr>
+      <tr><td>门将对比（西蒙 vs 沃齐尼亚）</td><td>西班牙</td><td><span class="signal signal-mid">中</span></td><td>西蒙是欧洲杯首发 · 沃齐尼亚压力更大</td></tr>
+      <tr><td>室内场地（梅赛德斯-奔驰）</td><td>西班牙</td><td><span class="signal signal-mid">中</span></td><td>草皮质量优 · 利于传控</td></tr>
+      <tr><td>教练战术稳定性（德拉富恩特）</td><td>西班牙</td><td><span class="signal signal-mid">中</span></td><td>4-3-3体系成熟 · 不易被打乱</td></tr>
+      <tr><td>德拉富恩特"保护主力"策略</td><td>佛得角</td><td><span class="signal signal-weak">弱</span></td><td>亚马尔/威廉姆斯可能不首发 · 火力略降</td></tr>
+      <tr><td>佛得角定位球（科斯塔+蒙特罗）</td><td>佛得角</td><td><span class="signal signal-weak">弱</span></td><td>唯一可能威胁西班牙的途径</td></tr>
+      <tr><td>门德斯36岁体能</td><td>佛得角</td><td><span class="signal signal-weak">弱</span></td><td>限制其发挥</td></tr>
+    </table>
+    <div class="info-box">📊 <strong>信号强度评估：</strong>4条强信号指向西班牙 · 0条强信号指向佛得角 · 0条强信号指向平局。综合形成压倒性数据倾向。即使平局信号优先规则触发（佛得角胜率 6% < 45%），但西班牙胜率高达 80%，信号仍强烈指向西班牙胜。这是本届世界杯"最不对称"的对决之一。</div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">西班牙 3-0 佛得角</span><span style="font-size:13px;color:#888;margin-left:8px;">（概率 ~13%）</span>
+    </div>
+    <div style="text-align:center;margin:8px 0;">
+      <span class="score-pred">西班牙 2-0 佛得角</span><span style="font-size:13px;color:#888;">（概率 ~15%）</span>
+      <span class="score-pred">西班牙 3-1 佛得角</span><span style="font-size:13px;color:#888;">（概率 ~8%）</span>
+      <span class="score-pred">西班牙 4-0 佛得角</span><span style="font-size:13px;color:#888;">（概率 ~8%）</span>
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">预期xG区间</h4>
+    <div style="text-align:center;font-weight:700;font-size:18px;color:#0033A0;">
+      总 xG：2.70 - 3.75<br>
+      西班牙 xG：2.40 - 3.10 &nbsp;|&nbsp; 佛得角 xG：0.30 - 0.65
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>西班牙将以 2-3 球的差距轻松取胜，但不会是一场"屠戮"——德拉富恩特可能"按部就班"取胜后让主力休息。</strong><br><br>
+        <strong>预测逻辑：</strong><br>
+        1. <strong>实力差距是全方位的：</strong>FIFA 排名第2的西班牙面对排名第73的佛得角，这是本届世界杯"最不对称"的对决之一。西班牙中场（罗德里+佩德里+法比安）vs 佛得角中场（葡超+俄超+匈甲+罗超）——这种配置差距是"数量级"的差距。<br><br>
+        2. <strong>德拉富恩特"保护主力"策略：</strong>考虑到小组赛还有两场（vs 沙特/乌拉圭），德拉富恩特可能让亚马尔和威廉姆斯休息到 60 分钟后登场。这意味着上半场西班牙的进攻火力可能"打七折"，但仍远超佛得角承受力。<br><br>
+        3. <strong>佛得角的"心理压力"是真实变量：</strong>作为历史首秀，佛得角球员在大舞台上的紧张感是真实存在的。即使是 36 岁的队长瑞安·门德斯，也可能在前 15 分钟出现失误。西班牙会试图尽早破门以"打掉"佛得角的信心。<br><br>
+        4. <strong>佛得角的"现实目标"是 0-2 / 0-3：</strong>布比斯塔的目标不是创造奇迹，而是"少输当赢"——通过全员退守 + 门将神扑，争取 0-2 或 0-3 的结果。如果能保住 0-1 进入 70 分钟，对佛得角而言就是"历史的胜利"。<br><br>
+        <strong>关键假设：</strong><br>
+        · 罗德里+佩德里能正常发挥（90%+把握）<br>
+        · 西班牙能在 30 分钟前破门以"打掉"佛得角信心（70%+把握）<br>
+        · 德拉富恩特不会大举压上（70%+把握）<br>
+        · 沃齐尼亚能做出 5+ 次关键扑救以"保住面子"（60%+把握）<br>
+        · 佛得角不会在 60 分钟前崩盘（80%+把握）<br><br>
+        <strong>置信度：</strong><span class="confidence conf-high">高</span>（实力差距明显 · 信号压倒性倾向西班牙 · 西班牙战术体系成熟 · 佛得角大赛经验缺失）
+      </p>
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">⚠️ 已知数据缺口</h4>
+    <table>
+      <tr><th>缺口</th><th>影响</th></tr>
+      <tr><td>两队xG逐场精确数据</td><td>xG区间为基于数据的估算 · 误差约±0.3</td></tr>
+      <tr><td>德拉富恩特最终首发11人</td><td>亚马尔/威廉姆斯/穆尼奥斯是否首发未确定</td></tr>
+      <tr><td>沃齐尼亚扑救率/PSxG+/-</td><td>无法获取精确数据</td></tr>
+      <tr><td>佛得角核心球员的 xG 详细数据</td><td>无第三方数据来源</td></tr>
+      <tr><td>两队正式比赛交锋记录</td><td>从未正式交手 · 无法参考</td></tr>
+      <tr><td>亚特兰大天气精确预报</td><td>雨/雷暴可能改变预测</td></tr>
+      <tr><td>主裁判身份</td><td>执法风格未公布</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+</div>
+</body>
+</html>
