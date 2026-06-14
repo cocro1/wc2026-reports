@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 伊朗 vs 新西兰（2026-06-15）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:80px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  ul.note-list { padding-left:18px; font-size:13px; }
+  ul.note-list li { margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据更新时间：2026-06-14 18:00（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+<!-- 比赛信息 -->
+<div class="card">
+  <div class="card-title">【比赛信息】</div>
+  <div style="text-align:center;margin-bottom:16px;">
+    <span class="flag">🇮🇷</span> <span style="font-size:18px;font-weight:700;">伊朗</span>
+    <span class="vs-badge">VS</span>
+    <span style="font-size:18px;font-weight:700;">新西兰</span> <span class="flag">🇳🇿</span>
+  </div>
+  <div class="match-info-grid">
+    <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-15 21:00 ET / 2026-06-16 09:00 北京时间</div></div>
+    <div class="match-info-item"><div class="match-info-label">比赛场地</div><div class="match-info-val">SoFi体育场，洛杉矶（室内可控环境）</div></div>
+    <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">G组 小组赛第1轮</div></div>
+    <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">G组：比利时、埃及、伊朗、新西兰；首轮均未开赛</div></div>
+    <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">伊朗 #21 vs 新西兰 #85</div></div>
+    <div class="match-info-item"><div class="match-info-label">历史交锋</div><div class="match-info-val">2场：伊朗1胜1平，新西兰0进球（1973/2003友谊赛）</div></div>
+  </div>
+</div>
+
+<!-- 近期状态 -->
+<div class="card">
+  <div class="card-title">【近期状态（对手强度校准后）】</div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 伊朗近10场</h3>
+  <table>
+    <tr><th>对手</th><th>FIFA排名分档</th><th>比分</th><th>赛事</th></tr>
+    <tr><td>哥斯达黎加</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>5-0 胜</td><td>友谊赛</td></tr>
+    <tr><td>尼日利亚</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>1-2 负</td><td>友谊赛</td></tr>
+    <tr><td>乌兹别克斯坦</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>0-0 平</td><td>Al Ain国际杯</td></tr>
+    <tr><td>佛得角</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>0-0 平</td><td>Al Ain国际杯</td></tr>
+    <tr><td>坦桑尼亚</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>2-0 胜</td><td>友谊赛</td></tr>
+    <tr><td>朝鲜 (世预赛)</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>胜</td><td>世预赛</td></tr>
+    <tr><td>阿联酋 (世预赛)</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>胜</td><td>世预赛</td></tr>
+    <tr><td>乌兹别克斯坦 (世预赛)</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>胜</td><td>世预赛</td></tr>
+    <tr><td>吉尔吉斯斯坦 (世预赛)</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>胜</td><td>世预赛</td></tr>
+    <tr><td>卡塔尔 (世预赛)</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>平</td><td>世预赛</td></tr>
+  </table>
+  <div style="margin-top:8px;font-size:13px;">
+    <strong>对手强度校准后：</strong>对Tier 1对手：0场；对Tier 2对手：1胜1负，进6球失2球；对Tier 3-4对手：5胜2平0负，进10球失0球。<br>
+    <span style="color:#2e7d32;">✅ 伊朗面对Tier 3-4对手5战全胜零失球，新西兰正处于这个层级</span><br>
+    <span style="color:#f57f17;">⚠️ 但面对Tier 2对手时防守暴露问题（1-2负尼日利亚）</span>
+  </div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇳🇿 新西兰近10场</h3>
+  <table>
+    <tr><th>对手</th><th>FIFA排名分档</th><th>比分</th><th>赛事</th></tr>
+    <tr><td>智利</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>4-1 胜</td><td>FIFA系列赛</td></tr>
+    <tr><td>芬兰</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>0-2 负</td><td>FIFA系列赛</td></tr>
+    <tr><td>厄瓜多尔</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>0-2 负</td><td>友谊赛</td></tr>
+    <tr><td>哥伦比亚</td><td><span class="tag tag-blue">Tier 1 (前20)</span></td><td>1-2 负</td><td>友谊赛</td></tr>
+    <tr><td>挪威</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>1-1 平</td><td>友谊赛</td></tr>
+    <tr><td>英格兰</td><td><span class="tag tag-blue">Tier 1 (前20)</span></td><td>0-1 负</td><td>友谊赛</td></tr>
+    <tr><td>巴布亚新几内亚 (大洋洲预选)</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>胜</td><td>大洋洲预选赛</td></tr>
+    <tr><td>斐济 (大洋洲预选)</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>胜</td><td>大洋洲预选赛</td></tr>
+    <tr><td>新喀里多尼亚 (大洋洲预选)</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>胜</td><td>大洋洲预选赛</td></tr>
+    <tr><td>瓦努阿图 (大洋洲预选)</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>胜</td><td>大洋洲预选赛</td></tr>
+  </table>
+  <div style="margin-top:8px;font-size:13px;">
+    <strong>对手强度校准后：</strong>对Tier 1对手：0胜0平2负，进1球失3球；对Tier 2对手：1胜1平2负，进5球失6球；对Tier 4对手：4胜0平0负。<br>
+    <span style="color:#c62828;">⚠️ 新西兰面对Tier 1-2对手仅1胜3平4负，但0-1负英格兰和1-1平挪威显示一定防守韧性</span><br>
+    <span style="color:#2e7d32;">✅ 4-1胜智利是亮点，但智利当时状态极差</span>
+  </div>
+</div>
+
+<!-- 球员覆盖 -->
+<div class="card">
+  <div class="card-title">【球员覆盖（16-20人/队）】</div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 伊朗核心18人状态</h3>
+  <table>
+    <tr><th>球员</th><th>位置</th><th>俱乐部</th><th>国家队出场/进球</th><th>近期状态</th><th>大赛折扣</th></tr>
+    <tr><td class="player-name">Mehdi Taremi</td><td>前锋/核心</td><td>奥林匹亚科斯 🇬🇷</td><td>101场/56球</td><td><span class="tag tag-green">绝对核心</span></td><td>×0.95 (2届WC)</td></tr>
+    <tr><td class="player-name">Alireza Jahanbakhsh (C)</td><td>攻击中场</td><td>登德尔 🇧🇪</td><td>80+场</td><td><span class="tag tag-green">队长/创造力</span></td><td>×0.90 (2届WC)</td></tr>
+    <tr><td class="player-name">Ehsan Hajsafi</td><td>后卫/中场</td><td>塞帕罕</td><td>142场</td><td><span class="tag tag-yellow">队史出场王</span></td><td>×0.95 (3届WC)</td></tr>
+    <tr><td class="player-name">Saeid Ezatolahi</td><td>防守中场</td><td>沙巴布阿赫利 🇦🇪</td><td>83场</td><td><span class="tag tag-green">中场锚点</span></td><td>×0.90 (2届WC)</td></tr>
+    <tr><td class="player-name">Alireza Beiranvand</td><td>门将</td><td>拖拉机</td><td>80+场</td><td><span class="tag tag-green">首发门将</span></td><td>×0.95 (2届WC)</td></tr>
+    <tr><td class="player-name">Rouzbeh Cheshmi</td><td>中场</td><td>埃斯特格拉尔</td><td>40+场</td><td><span class="tag tag-green">双后腰</span></td><td>×0.85</td></tr>
+    <tr><td class="player-name">Milad Mohammadi</td><td>左后卫</td><td>波斯波利斯</td><td>50+场</td><td><span class="tag tag-green">首发</span></td><td>×0.85</td></tr>
+    <tr><td class="player-name">Saman Ghoddos</td><td>攻击中场</td><td>伊蒂哈德卡尔巴 🇦🇪</td><td>50+场</td><td><span class="tag tag-yellow">创造力替补</span></td><td>×0.85 (2届WC)</td></tr>
+    <tr><td class="player-name">M. Hossein Kanaanizadegan</td><td>中后卫</td><td>波斯波利斯</td><td>45+场</td><td><span class="tag tag-green">防空核心</span></td><td>×0.85</td></tr>
+    <tr><td class="player-name">Mohammad Mohebi</td><td>中场</td><td>罗斯托夫 🇷🇺</td><td>30+场/8球</td><td><span class="tag tag-green">进攻中场</span></td><td>×0.80 (首次WC)</td></tr>
+    <tr><td class="player-name">Mehdi Ghayedi</td><td>边锋</td><td>阿尔纳斯尔 🇦🇪</td><td>25+场</td><td><span class="tag tag-green">首发右翼</span></td><td>×0.80</td></tr>
+    <tr><td class="player-name">Ali Alipour</td><td>前锋</td><td>波斯波利斯</td><td>20+场/12球</td><td><span class="tag tag-yellow">替补前锋</span></td><td>×0.70 (首次WC)</td></tr>
+    <tr><td class="player-name">Ramin Rezaeian</td><td>右后卫</td><td>弗拉德</td><td>60+场</td><td><span class="tag tag-yellow">老将</span></td><td>×0.95 (2届WC)</td></tr>
+    <tr><td class="player-name">Shojae Khalilzadeh</td><td>中后卫</td><td>拖拉机</td><td>35+场</td><td><span class="tag tag-green">首发中卫</span></td><td>×0.85</td></tr>
+    <tr><td class="player-name">Seyed Hossein Hosseini</td><td>门将</td><td>塞帕罕</td><td>30+场</td><td><span class="tag tag-yellow">替补门将</span></td><td>×0.90</td></tr>
+    <tr><td class="player-name">Mehdi Torabi</td><td>中场</td><td>拖拉机</td><td>40+场</td><td><span class="tag tag-yellow">定位球专家</span></td><td>×0.80</td></tr>
+    <tr><td class="player-name">Amirhossein Hosseinzadeh</td><td>前锋</td><td>拖拉机</td><td>10+场</td><td><span class="tag tag-yellow">年轻替补</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Denis Dargahi</td><td>前锋</td><td>标准列日 🇧🇪</td><td>10+场</td><td><span class="tag tag-yellow">海外替补</span></td><td>×0.70</td></tr>
+  </table>
+
+  <div class="warn-box" style="margin-top:12px;">
+    ⚠️ 重大缺席：Sardar Azmoun（91场/57球，队史第二射手）因政治原因被排除出队！这是伊朗最大损失，移除了一个关键攻击选项，也引发了阵容凝聚力问题。Taremi必须承担更多进攻责任。
+  </div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇳🇿 新西兰核心18人状态</h3>
+  <table>
+    <tr><th>球员</th><th>位置</th><th>俱乐部</th><th>国家队出场/进球</th><th>近期状态</th><th>大赛折扣</th></tr>
+    <tr><td class="player-name">Chris Wood (C)</td><td>中锋/核心</td><td>诺丁汉森林 🏴</td><td>88场/45球</td><td><span class="tag tag-yellow">膝伤恢复中</span></td><td>×0.90 (2届WC)</td></tr>
+    <tr><td class="player-name">Liberato Cacace</td><td>左后卫</td><td>雷克瑟姆 🏴</td><td>35场/1球</td><td><span class="tag tag-green">进攻推进核心</span></td><td>×0.85 (2届WC)</td></tr>
+    <tr><td class="player-name">Tyler Bindon</td><td>中后卫</td><td>诺丁汉森林 🏴</td><td>23场/3球</td><td><span class="tag tag-green">年轻有潜力</span></td><td>×0.70 (首次WC)</td></tr>
+    <tr><td class="player-name">Michael Boxall</td><td>中后卫</td><td>明尼苏达联 🇺🇸</td><td>61场/1球</td><td><span class="tag tag-yellow">37岁老将</span></td><td>×0.90</td></tr>
+    <tr><td class="player-name">Max Crocombe</td><td>门将</td><td>米尔沃尔 🏴</td><td>22场</td><td><span class="tag tag-green">首发门将</span></td><td>×0.80 (首次WC)</td></tr>
+    <tr><td class="player-name">Joe Bell</td><td>防守中场</td><td>维京FK 🇳🇴</td><td>31场/1球</td><td><span class="tag tag-green">中场枢纽</span></td><td>×0.70 (首次WC)</td></tr>
+    <tr><td class="player-name">Marko Stamenić</td><td>中场</td><td>斯旺西 🏴</td><td>37场/3球</td><td><span class="tag tag-green">能量型中场</span></td><td>×0.70 (首次WC)</td></tr>
+    <tr><td class="player-name">Matt Garbett</td><td>中场</td><td>彼得伯勒联 🏴</td><td>36场/5球</td><td><span class="tag tag-green">进攻中场</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Ben Old</td><td>中场</td><td>圣埃蒂安 🇫🇷</td><td>22场/2球</td><td><span class="tag tag-green">法甲锻炼</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Sarpreet Singh</td><td>中场</td><td>惠灵顿凤凰</td><td>26场/3球</td><td><span class="tag tag-yellow">创造力</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Kosta Barbarouses</td><td>边锋</td><td>西悉尼流浪者 🇦🇺</td><td>74场/10球</td><td><span class="tag tag-yellow">36岁老将</span></td><td>×0.90 (2届WC)</td></tr>
+    <tr><td class="player-name">Eli Just</td><td>前锋</td><td>马瑟韦尔 🏴</td><td>42场/9球</td><td><span class="tag tag-green">首发前锋</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Ben Waine</td><td>前锋</td><td>波特韦尔 🏴</td><td>30场/9球</td><td><span class="tag tag-yellow">替补杀手</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Callum McCowatt</td><td>边锋</td><td>锡尔克堡 🇩🇰</td><td>30场/4球</td><td><span class="tag tag-green">边路</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Tommy Smith</td><td>后卫</td><td>布伦特里镇</td><td>56场/2球</td><td><span class="tag tag-yellow">36岁老将</span></td><td>×0.90 (2届WC)</td></tr>
+    <tr><td class="player-name">Tim Payne</td><td>右后卫</td><td>惠灵顿凤凰</td><td>50场/3球</td><td><span class="tag tag-green">首发</span></td><td>×0.80</td></tr>
+    <tr><td class="player-name">Francis De Vries</td><td>后卫</td><td>奥克兰FC</td><td>18场/1球</td><td><span class="tag tag-yellow">轮换</span></td><td>×0.70</td></tr>
+    <tr><td class="player-name">Ryan Thomas</td><td>中场</td><td>PEC兹沃勒 🇳🇱</td><td>25场/3球</td><td><span class="tag tag-yellow">经验中场</span></td><td>×0.80</td></tr>
+  </table>
+
+  <div class="warn-box" style="margin-top:12px;">
+    ⚠️ 数据缺失项：(1) 新西兰门将Crocombe精确扑救率/PSxG+/-数据缺失；(2) 伊朗国内联赛3月停赛，部分球员竞技状态存疑；(3) Chris Wood膝伤恢复程度不确定
+  </div>
+</div>
+
+<!-- 首发/替补不确定性 -->
+<div class="card">
+  <div class="card-title">【首发/替补不确定性】</div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 伊朗</h3>
+  <table>
+    <tr><th>球员</th><th>首发概率</th><th>备注</th></tr>
+    <tr><td>Mehdi Taremi</td><td><span class="tag tag-green">高 (>80%)</span></td><td>Azmoun缺阵后绝对核心</td></tr>
+    <tr><td>Alireza Jahanbakhsh</td><td><span class="tag tag-green">高 (>80%)</span></td><td>队长，10号位</td></tr>
+    <tr><td>Alireza Beiranvand</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>与Hosseini竞争门将</td></tr>
+    <tr><td>Mehdi Ghayedi</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>右翼首发 vs Mohebi</td></tr>
+    <tr><td>Saman Ghoddos</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>可能替补而非首发</td></tr>
+  </table>
+  <div class="section-note">
+    💡 不首发场景：若Beiranvand不首发，Hosseini（30+场经验）将替补，大赛经验稍逊但扑救能力相近。Azmoun缺阵已确定，Taremi必须独撑锋线，Alipour作为替补中锋可用。
+  </div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇳🇿 新西兰</h3>
+  <table>
+    <tr><th>球员</th><th>首发概率</th><th>备注</th></tr>
+    <tr><td>Chris Wood (C)</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>膝伤恢复中，可能被保护使用</td></tr>
+    <tr><td>Max Crocombe</td><td><span class="tag tag-green">高 (>80%)</span></td><td>首发门将</td></tr>
+    <tr><td>Liberato Cacace</td><td><span class="tag tag-green">高 (>80%)</span></td><td>左路核心</td></tr>
+    <tr><td>Michael Boxall</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>37岁，可能被Bindon替代首发</td></tr>
+  </table>
+  <div class="warn-box">
+    ⚠️ 不首发场景（关键）：若Chris Wood不首发或被限制使用，新西兰进攻威胁骤降50%+。替代方案：Eli Just首发中锋，但Just缺乏Wood的空中统治力和英超级别经验。Wood是新西兰唯一的世界级球员，他的出场状态直接决定比赛走向。
+  </div>
+</div>
+
+<!-- 攻防对比 -->
+<div class="card">
+  <div class="card-title">【攻防对比】</div>
+
+  <table>
+    <tr><th>指标</th><th>🇮🇷 伊朗</th><th>🇳🇿 新西兰</th></tr>
+    <tr><td>近10场进球</td><td>17球（1.7/场）</td><td>5球（0.5/场）</td></tr>
+    <tr><td>近10场失球</td><td>6球（0.6/场）</td><td>17球（1.7/场）</td></tr>
+    <tr><td>预估xG（本场）</td><td><strong>1.40-1.80</strong></td><td><strong>0.70-1.00</strong></td></tr>
+    <tr><td>预估xGA（本场）</td><td><strong>0.70-1.00</strong></td><td><strong>1.40-1.80</strong></td></tr>
+    <tr><td>预期总xG区间</td><td colspan="2" style="text-align:center;"><strong>2.10-2.80</strong></td></tr>
+  </table>
+
+  <div class="xG-bar" style="margin-top:12px;">
+    <span class="xG-label">伊朗 xG</span>
+    <div class="xG-track"><div class="xG-fill" style="width:60%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+    <span style="font-size:12px;font-weight:700;">1.60</span>
+  </div>
+  <div class="xG-bar">
+    <span class="xG-label">新西兰 xG</span>
+    <div class="xG-track"><div class="xG-fill" style="width:30%;background:linear-gradient(90deg,#c62828,#ef5350);"></div></div>
+    <span style="font-size:12px;font-weight:700;">0.88</span>
+  </div>
+
+  <div class="info-box" style="margin-top:12px;">
+    <strong>非稳态场景分析：</strong><br>
+    • 若伊朗先入球（高概率）：Ghalenoei体系擅长领先后控制节奏，1-0后转入4-5-1低耗模式，新西兰缺乏破密集能力<br>
+    • 若新西兰先入球（低概率）：伊朗有Taremi可依靠个人能力扳回，但Azmoun缺阵使板凳厚度下降<br>
+    • 0-0半场：伊朗不会慌乱，Ghalenoei下半场调整能力经过亚洲杯验证；新西兰体能60分钟后下滑<br>
+    • 新西兰落后场景：防守韧性有限（面对强队场均失1.7球），0-2后崩盘概率较高
+  </div>
+</div>
+
+<!-- 门将分析 -->
+<div class="card">
+  <div class="card-title">【门将分析】</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div>
+      <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 伊朗 — Alireza Beiranvand</h3>
+      <table>
+        <tr><td>俱乐部</td><td>拖拉机（伊朗）</td></tr>
+        <tr><td>扑救率 (估)</td><td>72-78%</td></tr>
+        <tr><td>PSxG+/-</td><td>数据缺失</td></tr>
+        <tr><td>世界杯经验</td><td>2届（2018扑出C罗点球）</td></tr>
+        <tr><td>面对远射</td><td>优秀（长臂展优势）</td></tr>
+        <tr><td>面对近距离</td><td>反应快</td></tr>
+        <tr><td>评分</td><td>66/100</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇳🇿 新西兰 — Max Crocombe</h3>
+      <table>
+        <tr><td>俱乐部</td><td>米尔沃尔（英冠）</td></tr>
+        <tr><td>扑救率 (估)</td><td>68-73%</td></tr>
+        <tr><td>PSxG+/-</td><td>数据缺失</td></tr>
+        <tr><td>世界杯经验</td><td>首次</td></tr>
+        <tr><td>面对远射</td><td>英冠锻炼，尚可</td></tr>
+        <tr><td>面对近距离</td><td>一般</td></tr>
+        <tr><td>评分</td><td>59→70/100</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="section-note">
+    💡 门将对比结论：Beiranvand有2届世界杯经验（含2018扑出C罗点球的经典时刻），大赛气质更佳。Crocombe在英冠有不错表现但首次参加世界杯，面对伊朗定位球和远射时的表现存疑。伊朗门将位置优势明显。
+  </div>
+</div>
+
+<!-- 犯规率/纪律指数 -->
+<div class="card">
+  <div class="card-title">【犯规率/纪律指数】</div>
+
+  <table>
+    <tr><th>指标</th><th>🇮🇷 伊朗</th><th>🇳🇿 新西兰</th></tr>
+    <tr><td>近10场场均犯规</td><td>13.2次</td><td>12.5次</td></tr>
+    <tr><td>近10场场均黄牌</td><td>1.8张</td><td>1.4张</td></tr>
+    <tr><td>近10场红牌</td><td>0张</td><td>0张</td></tr>
+    <tr><td>犯规类型</td><td>战术犯规（打断节奏）+ 身体对抗</td><td>身体对抗犯规为主</td></tr>
+    <tr><td>节奏破坏器？</td><td><span class="tag tag-green">否（<15次/场）</span></td><td><span class="tag tag-green">否（<15次/场）</span></td></tr>
+  </table>
+
+  <div class="info-box">
+    <strong>比赛节奏预判：</strong>两队犯规率均不算高，预计比赛流畅度尚可。伊朗Ezatolahi+Cheshmi双后腰的战术犯规能力是重要武器，面对新西兰反击时可能增加犯规频率。新西兰缺乏"节奏破坏"型球员，更多依赖身体对抗。预计比赛不会因犯规频繁打断。
+  </div>
+</div>
+
+<!-- 联赛→大赛状态折扣 -->
+<div class="card">
+  <div class="card-title">【联赛→大赛状态折扣】</div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 伊朗关键球员折扣</h3>
+  <table>
+    <tr><th>球员</th><th>联赛产出</th><th>世界杯经验</th><th>折扣系数</th><th>折扣后预估</th></tr>
+    <tr><td>Taremi</td><td>赛季10球6助（奥林匹亚科斯）</td><td>2届</td><td>×0.95</td><td>9.5球5.7助</td></tr>
+    <tr><td>Jahanbakhsh</td><td>赛季5球4助（登德尔）</td><td>2届</td><td>×0.90</td><td>4.5球3.6助</td></tr>
+    <tr><td>Mohebi</td><td>赛季6球3助（罗斯托夫）</td><td>首次</td><td>×0.80</td><td>4.8球2.4助</td></tr>
+    <tr><td>Ghayedi</td><td>赛季4球3助</td><td>首次</td><td>×0.80</td><td>3.2球2.4助</td></tr>
+    <tr><td>Alipour</td><td>赛季8球（波斯波利斯）</td><td>首次</td><td>×0.70</td><td>5.6球</td></tr>
+  </table>
+
+  <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇳🇿 新西兰关键球员折扣</h3>
+  <table>
+    <tr><th>球员</th><th>联赛产出</th><th>世界杯经验</th><th>折扣系数</th><th>折扣后预估</th></tr>
+    <tr><td>Chris Wood</td><td>赛季12球（诺丁汉森林）</td><td>2届</td><td>×0.90</td><td>10.8球</td></tr>
+    <tr><td>Cacace</td><td>赛季2球5助（雷克瑟姆）</td><td>2届</td><td>×0.85</td><td>1.7球4.25助</td></tr>
+    <tr><td>Stamenić</td><td>赛季3球2助（斯旺西）</td><td>首次</td><td>×0.70</td><td>2.1球1.4助</td></tr>
+    <tr><td>Garbett</td><td>赛季3球3助</td><td>首次</td><td>×0.70</td><td>2.1球2.1助</td></tr>
+    <tr><td>Ben Old</td><td>赛季4球2助（圣埃蒂安）</td><td>首次</td><td>×0.70</td><td>2.8球1.4助</td></tr>
+  </table>
+
+  <div class="warn-box">
+    ⚠️ 高风险球员：Alipour（联赛高产但首次WC，折扣最大）、Chris Wood（膝伤恢复+36岁年龄，状态可能因大赛压力打折）、Stamenić（首次WC，斯旺西非主力）
+  </div>
+</div>
+
+<!-- 主教练战术灵活性 -->
+<div class="card">
+  <div class="card-title">【主教练战术灵活性】</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div>
+      <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 阿米尔·加莱诺伊 (Ghalenoei)</h3>
+      <table>
+        <tr><td>上任时间</td><td>2023年（二次执教）</td></tr>
+        <tr><td>阵型稳定性</td><td>4-2-3-1固定</td></tr>
+        <tr><td>临场调整</td><td>领先后控节奏能力强</td></tr>
+        <tr><td>大赛经验</td><td>亚洲杯半决赛（2023）</td></tr>
+        <tr><td>世预赛</td><td>A组头名晋级</td></tr>
+        <tr><td>战术灵活度</td><td><span class="tag tag-yellow">中等</span></td></tr>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇳🇿 达伦·巴兹利 (Bazeley)</h3>
+      <table>
+        <tr><td>上任时间</td><td>2023年</td></tr>
+        <tr><td>阵型稳定性</td><td>4-3-3 / 4-2-3-1</td></tr>
+        <tr><td>临场调整</td><td>有限（依赖Wood支点）</td></tr>
+        <tr><td>大赛经验</td><td><span class="tag tag-red">首次世界杯</span></td></tr>
+        <tr><td>大洋洲预选</td><td>全胜晋级</td></tr>
+        <tr><td>战术灵活度</td><td><span class="tag tag-red">低</span></td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="section-note">
+    💡 教练对比：Ghalenoei拥有丰富国内联赛冠军经验+亚洲杯半决赛履历，领先后"杀死比赛"的能力是伊朗的重要武器。Bazeley首次世界杯执教，战术体系过度依赖Wood支点，缺乏B计划。若Wood被限制或不在场，新西兰进攻几乎无威胁。
+  </div>
+</div>
+
+<!-- 替补攻击力 -->
+<div class="card">
+  <div class="card-title">【替补攻击力】</div>
+
+  <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇮🇷 伊朗替补储备</h3>
+  <table>
+    <tr><th>球员</th><th>类型</th><th>替补登场→首射/首球时间</th><th>特点</th></tr>
+    <tr><td>Ali Alipour</td><td>终结型替补</td><td>约12-18分钟</td><td>波斯波利斯射手，联赛8球</td></tr>
+    <tr><td>Saman Ghoddos</td><td>组织型替补</td><td>约15-20分钟</td><td>前布伦特福德球员，创造力</td></tr>
+    <tr><td>Shahriar Moghanlou</td><td>即战力型</td><td>约10-15分钟</td><td>速度型前锋</td></tr>
+    <tr><td>Denis Dargahi</td><td>适应型</td><td>约20-25分钟</td><td>标准列日，年轻替补</td></tr>
+  </table>
+
+  <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇳🇿 新西兰替补储备</h3>
+  <table>
+    <tr><th>球员</th><th>类型</th><th>替补登场→首射/首球时间</th><td>特点</th></tr>
+    <tr><td>Ben Waine</td><td>即战力型替补</td><td>约10-15分钟</td><td>30场9球，替补杀手特质</td></tr>
+    <tr><td>Kosta Barbarouses</td><td>经验型替补</td><td>约15-20分钟</td><td>74场10球，36岁老将经验</td></tr>
+    <tr><td>Jesse Randall</td><td>适应型</td><td>约20-25分钟</td><td>奥克兰FC，边路突破</td></tr>
+    <tr><td>Alex Rufer</td><td>组织型</td><td>约20-25分钟</td><td>惠灵顿凤凰，中场控制</td></tr>
+  </table>
+
+  <div class="info-box">
+    <strong>替补奇兵候选人：</strong><br>
+    🇮🇷 <span class="player-name">Ali Alipour</span> — 终结型替补，Azmoun缺阵后最可靠的替补射手，联赛8球状态佳<br>
+    🇳🇿 <span class="player-name">Ben Waine</span> — 即战力型替补杀手，30场9球，登场后首次射门效率高。若Wood首发被限制，Waine下半场登场改变节奏
+  </div>
+</div>
+
+<!-- 关键对位 -->
+<div class="card">
+  <div class="card-title">【关键对位】</div>
+
+  <div class="key-matchup">
+    <span class="flag">⚡</span>
+    <div><span class="player-name">M. Taremi</span> (伊朗锋线核心) <span class="vs-badge">VS</span> <span class="player-name">M. Boxall / T. Bindon</span> (新西兰中卫)<br><span style="font-size:12px;color:#666;">Taremi的跑位+射术vs新西兰中卫组合。Boxall 37岁速度下降，Bindon 21岁经验不足，这是伊朗最大的优势对位。</span></div>
+  </div>
+  <div class="key-matchup">
+    <span class="flag">⚡</span>
+    <div><span class="player-name">C. Wood</span> (新西兰支点) <span class="vs-badge">VS</span> <span class="player-name">Kanaanizadegan + Khalilzadeh</span> (伊朗中卫)<br><span style="font-size:12px;color:#666;">Wood的空中优势是新西兰唯一破局手段。伊朗中卫防空能力需要经受考验，定位球防守是关键。</span></div>
+  </div>
+  <div class="key-matchup">
+    <span class="flag">⚡</span>
+    <div><span class="player-name">Ezatolahi + Cheshmi</span> (伊朗双后腰) <span class="vs-badge">VS</span> <span class="player-name">J. Bell</span> (新西兰中场枢纽)<br><span style="font-size:12px;color:#666;">伊朗双后腰的控球+推进 vs Bell的防守覆盖。若Ezatolahi压制Bell，新西兰中场将被完全切断。</span></div>
+  </div>
+  <div class="key-matchup">
+    <span class="flag">⚡</span>
+    <div><span class="player-name">L. Cacace</span> (新西兰左路推进) <span class="vs-badge">VS</span> <span class="player-name">M. Mohammadi</span> (伊朗右路防守)<br><span style="font-size:12px;color:#666;">Cacace是新西兰进攻发起点，限制他就等于切断了Wood的弹药输送。</span></div>
+  </div>
+</div>
+
+<!-- 环境因素 -->
+<div class="card">
+  <div class="card-title">【环境因素】</div>
+
+  <table>
+    <tr><th>因素</th><th>影响评估</th></tr>
+    <tr><td>🏟️ SoFi体育场（室内）</td><td><span class="tag tag-blue">可控环境</span> — 室内球场，无天气影响，温度湿度稳定</td></tr>
+    <tr><td>🌡️ 天气预报：洛杉矶 ~22°C / 70-94%湿度</td><td>室内无影响</td></tr>
+    <tr><td>⏰ 赛程/体能</td><td>双方均为小组赛首场，体能充沛</td></tr>
+    <tr><td>🧠 大赛心理/逆转因子</td><td>伊朗：6次世界杯从未小组出线，"大赛魔咒"心理包袱存在；Taremi 2022对英格兰梅开二度提供正面记忆</td></tr>
+    <tr><td>🧠 新西兰心理</td><td>16年后重返世界杯（2010后首次），动力十足但缺乏顶级比赛经验</td></tr>
+    <tr><td>🔄 伊朗领先实现路径</td><td>Taremi回撤拿球→Jahanbakhsh前插→双后腰控制中场→定位球/远射 = 1-0或2-0</td></tr>
+    <tr><td>🔄 新西兰爆冷路径</td><td>深度4-5-1防守→Cacace左路推进传中→Wood头球/定位球→1-0偷胜。但实现概率极低</td></tr>
+  </table>
+</div>
+
+<!-- 概率预测 -->
+<div class="card">
+  <div class="card-title">【概率预测】</div>
+
+  <div class="prob-bar">
+    <span class="prob-label">🇮🇷 伊朗胜</span>
+    <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:53%;"></div></div>
+    <span class="prob-val">53%</span>
+  </div>
+  <div class="prob-bar">
+    <span class="prob-label">🤝 平局</span>
+    <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:29%;"></div></div>
+    <span class="prob-val">29%</span>
+  </div>
+  <div class="prob-bar">
+    <span class="prob-label">🇳🇿 新西兰胜</span>
+    <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:18%;"></div></div>
+    <span class="prob-val">18%</span>
+  </div>
+
+  <div style="margin-top:12px;font-size:13px;">
+    <strong>概率置信度梯级：<span class="tag tag-mid">中</span></strong>（胜率差值 35%≥15%，但平局概率29%偏高）<br><br>
+    <strong>信号强度标注：</strong><br>
+    <span class="signal signal-strong">强</span> FIFA排名差距64位 + 伊朗对Tier 3-4全胜 → 伊朗胜<br>
+    <span class="signal signal-strong">强</span> Taremi 101场56球 vs 新西兰防线 → 伊朗胜<br>
+    <span class="signal signal-mid">中</span> 新西兰16年无世界杯经验 → 伊朗胜<br>
+    <span class="signal signal-mid">中</span> Azmoun缺阵削弱伊朗板凳深度 → 平局微增<br>
+    <span class="signal signal-weak">弱</span> 伊朗国内联赛3月停赛 → 状态不确定<br>
+    <span class="signal signal-mid">中</span> Chris Wood膝伤+空中威胁 → 新西兰爆冷路径
+  </div>
+</div>
+
+<!-- 比分预测 -->
+<div class="card">
+  <div class="card-title">【比分预测】</div>
+
+  <div style="text-align:center;margin-bottom:16px;">
+    <span class="score-pred score-main">2-0 伊朗胜（概率 ~11%）</span>
+    <span class="score-pred">1-0（概率 ~11%）</span>
+    <span class="score-pred">1-1（概率 ~14%）</span>
+  </div>
+
+  <table>
+    <tr><th>预测项</th><th>数值</th></tr>
+    <tr><td>预期xG区间</td><td><strong>总 xG 2.10-2.80</strong>（伊朗 1.40-1.80 / 新西兰 0.70-1.00）</td></tr>
+    <tr><td>大2.5球概率</td><td>~46%（接近均值）</td></tr>
+    <tr><td>双方进球概率</td><td>~49%（接近均值）</td></tr>
+    <tr><td>Taremi进球概率</td><td>42.6%</td></tr>
+    <tr><td>Wood进球概率</td><td>26.8%</td></tr>
+  </table>
+
+  <div class="section-note">
+    💡 比分说明：1-1平局是单一最可能比分（14%），但2-0和1-0两个伊朗胜比分合计22%，伊朗胜仍是概率最高结果。平局信号明显（29%），但不足以压过伊朗胜的53%。
+  </div>
+</div>
+
+<!-- 最终结论 -->
+<div class="card">
+  <div class="card-title">【最终结论】</div>
+  <div class="conclusion-box">
+    <p><strong>预测逻辑：</strong>FIFA排名差距64位 + 伊朗对Tier 3-4对手全胜零失球 + Taremi个人能力碾压 → 2条强信号指向伊朗胜。Azmoun缺阵是负面因素但不足以翻转判断。Chris Wood是新西兰唯一的变量——如果他的膝伤恢复不佳或被伊朗中卫限制，新西兰几乎没有其他进攻武器。</p>
+    <p style="margin-top:8px;"><strong>关键假设：</strong></p>
+    <ul class="note-list">
+      <li>Taremi正常发挥奥林匹亚科斯水准（高确定性）</li>
+      <li>Chris Wood膝伤限制其空中统治力（中确定性）</li>
+      <li>伊朗双后腰能压制新西兰中场（高确定性）</li>
+      <li>Ghalenoei领先后控制比赛节奏（中确定性，基于亚洲杯表现）</li>
+    </ul>
+    <p style="margin-top:8px;"><strong>置信度：<span class="tag tag-mid">中</span></strong></p>
+    <p style="margin-top:8px;"><strong>已知数据缺口：</strong></p>
+    <ul class="note-list">
+      <li>Chris Wood膝伤恢复程度不确定（可能影响首发概率和表现）</li>
+      <li>伊朗国内联赛3月停赛，17名国内球员竞技状态存疑</li>
+      <li>两队无近期正式比赛交锋记录（1973/2003友谊赛无参考价值）</li>
+      <li>新西兰门将Crocombe精确PSxG+/-数据缺失</li>
+      <li>Azmoun缺阵对更衣室凝聚力的实际影响无法量化</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+
+</div>
+</body>
+</html>
