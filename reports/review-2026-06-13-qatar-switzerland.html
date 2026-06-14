@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 卡塔尔 vs 瑞士（2026-06-13）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>卡塔尔 vs 瑞士 · 2026年6月13日 · 复盘时间：2026年6月14日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇶🇦</div>
+        <div class="name">卡塔尔</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">0</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#0033A0;">2</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">置信度：高</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num" style="color:#2e7d32;">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#0033A0;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">平局</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇨🇭</div>
+        <div class="name">瑞士</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中（0-2 → 1-1）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">胜平负命中（瑞士胜预测 → 实际平局）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">大小球判断（预测≤2.5球 → 实际2球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">备选比分覆盖</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>卡塔尔 0-2 瑞士</td><td class="miss-row">卡塔尔 <strong>1-1</strong> 瑞士</td></tr>
+      <tr><td><strong>瑞士胜率</strong></td><td>72%</td><td class="miss-row">瑞士未能取胜，Embolo 17'点球 0-1 领先被 Khoukhi 90+4' 头球绝平</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>18%</td><td class="miss-row">实际发生（低估了4-5倍）</td></tr>
+      <tr><td><strong>卡塔尔胜率</strong></td><td>10%</td><td class="partial-row">卡塔尔未能获胜但扳平</td></tr>
+      <tr><td><strong>进球数趋势</strong></td><td>小于2.5球 66%；卡塔尔零封 69%</td><td class="partial-row">总进球2球（落入≤2.5区间）但卡塔尔破门（69%零封被打破）</td></tr>
+      <tr><td><strong>瑞士 xG 预测</strong></td><td>1.8-2.3</td><td class="miss-row">实际仅 17'点球 + 多次未转化为进球（明显低于预测）</td></tr>
+      <tr><td><strong>卡塔尔 xG 预测</strong></td><td>0.4-0.7</td><td class="partial-row">90+4' Khoukhi 头球远超 xG 预期</td></tr>
+      <tr><td><strong>Embolo 进球</strong></td><td>锋线支点，86/24 国家队数据</td><td class="hit-row"><strong>17'点球破门，预测被验证 ✅</strong></td></tr>
+      <tr><td><strong>阿坎吉压制阿菲夫</strong></td><td>大概率压制阿菲夫发挥</td><td class="miss-row"><strong>阿菲夫 89' 关键助攻制造 Khoukhi 头球</strong></td></tr>
+      <tr><td><strong>瑞士零封卡塔尔</strong></td><td>69%零封率，防守质量极佳</td><td class="miss-row"><strong>补时第4分钟被头球破门，零封失败</strong></td></tr>
+      <tr><td><strong>比赛节奏</strong></td><td>瑞士上半场破僵，控场至终场</td><td class="miss-row"><strong>瑞士未能在领先后扩大，定位球防守在补时崩盘</strong></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>Embolo 锋线支点</td><td>86/24 国家队数据，恩博洛极可能成为首球制造者</td><td>17'点球破门，0-1 领先</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>瑞士 xG 区间占优</td><td>1.8-2.3，远超卡塔尔 0.4-0.7</td><td>瑞士上半场 1-0 领先，数据方向正确</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>扎卡中场组织</td><td>长传调度穿透卡塔尔薄弱中场</td><td>扎卡多次参与进攻组织，2次助攻 Amdouni 机会</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>科贝尔门线能力</td><td>德甲顶级门将，明显优势</td><td>瑞士仅失1球（定位球头球），科贝尔表现稳健</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>瑞士定位球威胁</td><td>阿坎吉（4球）埃尔维迪（3球）空中威胁</td><td>瑞士定位球+角球多次制造威胁</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>恩多耶速度型边锋</td><td>突破型边锋，速度制胜</td><td>多次制造威胁，65'被换下保留体能</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>总进球≤2.5球</td><td>66%概率小比分</td><td>实际2球（卡塔尔1+瑞士1）</td><td>✅</td></tr>
+      <tr class="partial-row"><td>8</td><td>瑞士零封卡塔尔</td><td>69%零封率</td><td>被 90+4' Khoukhi 头球绝平，零封失败</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>9</td><td>瑞士控场型节奏</td><td>"领先易守型球队"</td><td>领先后未能杀死比赛，被补时绝平</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>10</td><td>卡塔尔门将</td><td>阿布纳达/巴尔沙姆大赛经验不足</td><td>阿布纳达多次关键扑救（第2/11/45+1分钟），但禁区犯规送出点球</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>卡塔尔高龄防线回追</td><td>35+岁防线，快速反击回追弱</td><td>上半场承受瑞士进攻但只失1球（点球），下半场守住但补时崩盘</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>瑞士多进球点</td><td>多点开花：恩博洛/阿姆杜尼/恩多耶</td><td>仅 Embolo 进球；阿姆杜尼多次机会未转化</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>13</td><td>比分预测 0-2</td><td>最可能 25%</td><td>实际 1-1，差距 1 球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>瑞士胜 72% 概率</td><td>实力、世预赛、近期状态碾压</td><td>未能取胜，3分变1分</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>平局概率 18%</td><td>低估了大赛首战的不可预测性</td><td>实际发生，<strong>平局概率应为 30-35% 更合理</strong></td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>阿坎吉压制阿菲夫</td><td>阿坎吉站位/对抗压制阿菲夫</td><td>阿菲夫 89' 助攻制造扳平头球，全场最具威胁卡塔尔球员</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>瑞士定位球防守</td><td>未单独分析</td><td>90+4' Khoukhi 头球破门，定位球防守崩盘</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>卡塔尔定位球威胁</td><td>未识别 Homam Ahmed 与胡赫的定位球连线</td><td>实际由 Homam El Amin 传中助攻 Khoukhi 头球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>卡塔尔定位球进攻能力</td><td>未分析定位球进攻（仅在防守中提及胡赫）</td><td>全场最具威胁机会来自定位球（89'阿菲夫助攻被扑，90+4'头球破门）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>VAR 介入</td><td>未预测</td><td>14' VAR 确认点球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>21</td><td>门将禁区内犯规</td><td>未预测门将点球</td><td>12' Freuler 禁区内被犯规，14' 阿布纳达黄牌+点球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>22</td><td>卡塔尔末段反扑</td><td>未识别卡塔尔 "2022 世界杯落后无逆转" 但 4 年后已改变</td><td>实际补时阶段反扑成功，全场最具威胁的 3 次机会全部来自 60' 换人后</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">7</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">5</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">10</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">32%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：胜平负预测完全失败（瑞士胜 72% → 实际平局）</h4>
+    <div class="insight-box">
+      <strong>核心原因：将"实力差距+世预赛数据"过度线性外推，未考虑定位球偶然性 + 末段反扑 + VAR 介入等非线性变量</strong><br><br>
+      72% 的瑞士胜率建立在四个支柱：FIFA 排名差、世预赛 14/2 的统治数据、卡塔尔近 5 场 0 胜的疲软、瑞士全五大联赛班底 vs 卡塔尔本土联赛配置。<strong>但这一逻辑链的每一环都缺失了"非线性因素"的检验：</strong><br>
+      ① <strong>VAR 介入引发点球</strong>：12' Freuler 禁区内被犯规原本是大赛首战常见的"模糊判罚"，VAR 介入直接改判——这不属于任何数据模型能预测的事件；<br>
+      ② <strong>门将禁区犯规</strong>：阿布纳达在 14' 因禁区扑救犯规吃黄牌，<strong>门将的点球失误/被迫送点</strong>在大赛中发生概率高于普通球员，但预测中未单独评估；<br>
+      ③ <strong>补时阶段定位球进球</strong>：当实力较弱方落后 1 球进入补时，<strong>压上进攻导致后防空虚 + 定位球成为主要手段</strong>——这是弱队"以命换分"的标准剧本，但预测的概率分布中完全没有为此场景留出空间。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：未识别卡塔尔的"定位球威胁"作为非稳态变量</h4>
+    <div class="insight-box">
+      <strong>核心原因：分析框架过度依赖"运动战数据"，忽略了定位球在大赛中的非线性放大效应</strong><br><br>
+      原报告在"卡塔尔进攻"模块仅提到"依赖边路传中和定位球"，但没有量化卡塔尔的定位球进攻能力（角球/任意球进球率）。同时在"瑞士防守"模块强调"世预赛 6 场失 2 球"的统治级防守，<strong>但忽略了：</strong><br>
+      ① 卡塔尔后场定位球进攻核心——<strong>胡赫（35岁，125/19，定位球威胁）+ Homam El Amin（唯一留洋球员，传中精准）</strong>——这两人构成了"边路传中→中卫头球"的经典进攻模板；<br>
+      ② <strong>瑞士定位球防守的弱项</strong>：阿坎吉（30岁）+ 埃尔维迪（29岁）+ 维德默（33岁）+ 罗德里格斯（33岁）<strong>后防平均年龄 31 岁</strong>，面对卡塔尔的空中传中并无身高/年龄优势；<br>
+      ③ <strong>补时阶段压上进攻=定位球频次倍增</strong>：当卡塔尔 60' 三换人后换上 Alaa/海多斯等进攻球员，整体阵型压上，被犯规/角球/任意球频次大幅上升——这是"反扑 + 定位球"组合的必然结果。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：低估了"末段反扑"在大赛中的发生概率</h4>
+    <div class="insight-box">
+      <strong>核心原因：将卡塔尔"2022 世界杯三战全败、落后时无逆转记录"作为永久性特征，未识别四年后的阵容/教练/心态变化</strong><br><br>
+      原报告在"环境因素"中明确写道："2022 世界杯作为东道主 3 战全败出局，大赛心理存疑，落后时无逆转记录"。<strong>但这一判断的致命盲区是：</strong><br>
+      ① 教练更换（Felix Sanchez → Lopetegui）：洛佩特吉是欧洲杯/世界杯淘汰赛级别教练，对"如何管理落后局面"有专业方法论；<br>
+      ② 核心球员成长：Afif/Ali/Haydos 三大核心已合作 5+ 年，默契度和经验远比 2022 提升；<br>
+      ③ <strong>2022 vs 2026 的比赛情境完全不同</strong>：2022 卡塔尔作为东道主压力大、首战即失利可推卸给"紧张"，但 2026 是真正的"客场挑战强队"角色，<strong>心理负担反而小，更容易在落后时放手一搏</strong>；<br>
+      ④ 60' 三换人换上 Alaa/Boudiaf/Alaaeldin 三名进攻型球员后，<strong>卡塔尔实际控球和威胁度明显上升</strong>——但这一变化在预测的概率模型中没有对应权重。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：门将分析"全押科贝尔"忽视了阿布纳达的"非常规扑救能力"</h4>
+    <div class="insight-box">
+      <strong>核心原因：门将分析仅对比"扑救率/PSxG+/大赛经验"等显性指标，未分析"扑救关键球"的非线性能力</strong><br><br>
+      原报告详细对比了阿利松/布努/科贝尔等世界级门将的"质量"，但对卡塔尔门将阿布纳达仅写"扑救率无可靠公开数据"。<strong>实际上：</strong><br>
+      ① 阿布纳达在 2'/11'/45+1' 多次关键扑救，避免了瑞士早早杀死比赛；<br>
+      ② <strong>弱队门将的"低 xG 防守"特征</strong>——当对手在禁区外远射或被后卫封堵时，弱队门将面对的射门 xG 本身就低，因此扑救率数据会"看起来还行"；<br>
+      ③ <strong>门将点球失误的不对称性</strong>——阿布纳达 14' 禁区犯规送点，但本应是"门将红牌"的动作仅判黄牌，<strong>这是 VAR 时代的"判罚红利"——门将禁区内犯规的判罚尺度经常比预期宽松</strong>。预测中完全没有分析这一点。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：未考虑"领先后未扩大比分"的风险传导</h4>
+    <div class="insight-box">
+      <strong>核心原因：将"1-0 领先 = 比赛 80% 拿下"作为隐含假设，未分析 1 球领先后的"心理松懈"风险</strong><br><br>
+      原报告将瑞士归为"领先易守型球队"，但这一分类基于 2022 世界杯以来瑞士的"领先即胜"印象。实际比赛显示：<br>
+      ① <strong>瑞士下半场多次错失扩大比分机会</strong>——阿姆杜尼 75' 近门射门险些得手、Embolo 75' 近门射门——这些"打不进"的细节累积产生"未能杀死比赛"的隐患；<br>
+      ② <strong>瑞士 65'/88' 多次换下攻击球员</strong>（Ndoye/Freuler/Rodríguez），换上 Manzambi/Rieder/Jashari 等更偏防守的球员——这进一步压缩了扩大比分的机会；<br>
+      ③ 补时阶段瑞士整体阵型回收 + 体能下降，<strong>为卡塔尔的最后反扑创造了空间</strong>。原报告未识别"领先后换人收缩"会降低球队的"再进球概率"。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="miss-row">
+        <td><strong>瑞士胜</strong></td>
+        <td>72%</td>
+        <td>"实力碾压，世预赛统治级表现"</td>
+        <td>❌ 未发生</td>
+        <td>72% 严重高估。即使 4 条强信号指向瑞士（FIFA 差、世预赛、近期状态、球员配置），也忽略了大赛首战的非线性因素。实际瑞士胜概率应在 50-55%</td>
+      </tr>
+      <tr class="miss-row">
+        <td><strong>平局</strong></td>
+        <td>18%</td>
+        <td>"低概率，瑞士能控场"</td>
+        <td>✅ 实际发生</td>
+        <td>18% 严重低估。大赛首战 + 实力差距 + 定位球变量 → 平局合理概率应为 30-35%</td>
+      </tr>
+      <tr class="partial-row">
+        <td><strong>卡塔尔胜</strong></td>
+        <td>10%</td>
+        <td>"冷门可能性"</td>
+        <td>❌ 未发生（仅扳平）</td>
+        <td>10% 略偏高。卡塔尔近 5 场 0 胜 + 阵容差距 + 10% 胜率反映"完全无爆冷可能"，应低于 5%</td>
+      </tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的核心缺陷</strong>：虽然 72/18/10 的分布基于实力差距看似合理，但<strong>过度依赖"实力 = 胜率"的线性映射</strong>。当 4 条以上强信号指向瑞士胜时，预测模型应保留<strong>非线性场景的"安全边际"</strong>——例如：① 大赛首战的 VAR/点球偶然性（5-8%）；② 弱队定位球破门（5-8%）；③ 末段反扑的 1 球内扳平（10-15%）。更诚实的概率分布应为：瑞士胜 ~52%、平局 ~32%、卡塔尔胜 ~6%、其他场景 ~10%。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>卡塔尔定位球进攻数据（角球/任意球进球率、传中质量）</td><td>完全未识别 90+4' Khoukhi 头球的定位球进攻路径</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>瑞士定位球防守弱项（空中对抗、关键盯人）</td><td>未预见补时定位球崩盘</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>VAR 介入对点球判罚的影响数据</td><td>12' Freuler 禁区内被犯规 + VAR 确认点球完全超出预测框架</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>门将禁区内犯规的判罚尺度历史数据</td><td>阿布纳达 14' 黄牌而非红牌，这是 VAR 时代"判罚红利"</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>卡塔尔"末段反扑"潜力评估（4 年来阵容/心态变化）</td><td>将 2022 三战全败的卡塔尔当作永久性弱队</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>瑞士下半场"领先后扩大比分"历史数据</td><td>未识别 1 球领先后的"未杀死比赛"风险</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>洛佩特吉执教卡塔尔 3 个月的战术变化</td><td>对教练更迭的战术影响缺乏评估</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>卡塔尔 Homam El Amin 的传中质量数据</td><td>唯一留洋球员 = 传中精准度被低估</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>瑞士 65'/88' 多次换下攻击球员的"保守换人"倾向</td><td>未识别雅金的"领先后收缩"习惯</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>补时阶段 6+6 = 12 分钟的体能/战术影响</td><td>未分析补时长度对弱队反扑概率的放大</td><td><span class="badge badge-gray">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：增加"定位球攻防"专项分析模块</h4>
+      <ul>
+        <li>本场 Khoukhi 90+4' 头球来自定位球传中，但卡塔尔的定位球进攻能力在原报告中完全没有量化。</li>
+        <li><strong>操作</strong>：为每场比赛增加"定位球进攻"和"定位球防守"两个独立维度：① 角球/任意球进球率（每场/每 10 场）；② 关键定位球传中球员的精准度；③ 头球争顶成功率（进攻/防守）；④ 后防平均年龄 × 头球能力的相关性。</li>
+        <li><strong>预期效果</strong>：捕捉定位球作为"非线性变量"的重要性，避免将所有进球预测基于运动战。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：引入"大赛首战非线性场景"概率修正</h4>
+      <ul>
+        <li>本场 VAR 介入点球 + 门将禁区内犯规 + 补时定位球，3 个非线性事件都未被预测。</li>
+        <li><strong>操作</strong>：为"大赛首战"设置 5-10% 的非线性场景概率：① VAR 介入导致进球/红牌；② 门将禁区内犯规（黄/红牌 + 点球）；③ 补时 ≥ 6 分钟带来的体能/战术变量；④ 弱队"以命换分"反扑；⑤ 关键定位球/头球破门。</li>
+        <li><strong>预期效果</strong>：在强信号指向一方时，仍保留对极端赛果的"安全边际"，避免概率过度集中。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：建立"末段反扑"独立评估模型</h4>
+      <ul>
+        <li>卡塔尔 2022 三战全败的判断在 2026 已不适用——4 年后阵容/教练/心态已变化。</li>
+        <li><strong>操作</strong>：为每支球队建立"末段反扑指数"：① 落后 1 球时 60-90' 内的进球/扳平率；② 60' 后换人调整的进攻能力（替补攻击手深度）；③ 阵型压上后定位球频次变化；④ 教练管理落后局面的战术历史。</li>
+        <li><strong>预期效果</strong>：避免将"早期世界杯印象"作为永久性特征，识别"4 年变化"带来的反扑潜力。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：门将分析增加"扑救关键球"和"犯规风险"评估</h4>
+      <ul>
+        <li>阿布纳达多次关键扑救（2'/11'/45+1'）+ 14' 禁区内犯规送点，是典型的"低 xG 高波动"门将。</li>
+        <li><strong>操作</strong>：门将分析增加 3 个维度：① "扑救关键球"（近距离一对一/单刀扑救率）；② "禁区内犯规倾向"（场均禁区内犯规数/红黄牌数）；③ "VAR 时代判罚尺度"——门将禁区内犯规的红黄牌概率。</li>
+        <li><strong>预期效果</strong>：识别"低 xG 但高方差"的门将类型，避免将"扑救率"作为唯一评估指标。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：分析"领先后扩大比分"能力，警惕"领先后收缩"风险</h4>
+      <ul>
+        <li>瑞士 1-0 领先后 65'/88' 多次换下攻击球员，未能扩大比分，为补时崩盘埋下伏笔。</li>
+        <li><strong>操作</strong>：为每支球队增加"领先后行为画像"：① 1 球领先后的换人倾向（攻击 vs 防守）；② 70-90' 内扩大比分的进球率；③ "领先后控场"与"领先后保守"分类。</li>
+        <li><strong>预期效果</strong>：避免将"领先 = 80% 拿下"作为隐含假设，识别"领先后未扩大比分"的崩塌风险。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：教练战术分析"管理落后局面"专项</h4>
+      <ul>
+        <li>洛佩特吉作为西班牙系教练，对"如何管理落后局面"有专业方法论——60' 三换人换上 3 名进攻球员是显著信号。</li>
+        <li><strong>操作</strong>：在"教练分析"模块中增加：① 教练过往比赛中"落后时换人倾向"；② 教练管理落后局面的历史成功率（从 0-1/0-2 扳平/逆转）；③ 教练的"防守型"vs"进攻型"标签。</li>
+        <li><strong>预期效果</strong>：识别教练的"逆风局管理"能力，避免仅根据球员配置评估"实力差距"。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：弱队"门将扑救 + 定位球进攻 + 末段反扑"三角组合评估</h4>
+      <ul>
+        <li>本场卡塔尔扳平 = 阿布纳达关键扑救 + 60' 换人 + 90+4' 定位球 = 三个弱队关键能力的组合。</li>
+        <li><strong>操作</strong>：对每场比赛的弱队，建立"门将扑救稳定性 × 定位球进攻威胁 × 末段反扑能力"三角评估，每项 0-10 分。总分 ≥ 20 的弱队应在概率分布中获得额外的"冷门场景权重"。</li>
+        <li><strong>预期效果</strong>：系统化识别"弱队扳平"的标准条件，避免将所有"爆冷可能性"压缩为单一数字。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">8/10</span></td><td>比赛时间、地点、FIFA 排名、近期赛果正确。但 VAR 时代判罚尺度、卡塔尔定位球进攻数据缺失</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>预测瑞士控场+扎卡调度+多点开花基本正确，但未识别"领先后收缩"风险和卡塔尔末段反扑</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>14-16 人/队覆盖较全，Embolo/Zakaka/Akanji 判断准确。但 Khoukhi 定位球威胁、Homam 传中、阿布纳达扑救能力低估</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-red">4/10</span></td><td>xG 区间预测尚可（总进球 2 落入 ≤2.5），但缺少定位球分析、末段反扑、VAR 影响等关键维度</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-red">3/10</span></td><td>72/18/10 的分布严重过度倾向瑞士，<strong>未给非线性场景留出 15-20% 的"安全边际"</strong></td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-red">3/10</span></td><td>0-2 预测与 1-1 实际差距 1 球；备选 0-1/0-3/1-2 均未覆盖 1-1；定位球扳平完全未预见</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>数据缺口明确列出 5 项，但"概率置信度梯级"仅给"高"，未识别"小概率极端场景"的存在</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">8/10</span></td><td>格式规范，分区清晰，对手强度校准等创新框架有前瞻性</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：预测报告在"球员/教练/近期状态"等显性维度上表现优秀</strong>——正确预测了 Embolo 进球、瑞士控场+多点开花、扎卡中场组织、科贝尔门线优势、瑞士定位球威胁、总进球数小。这些命中项证明了显性数据采集框架的扎实。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>但在"非线性变量"维度的缺失是致命的：</strong>
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>VAR 介入点球 + 门将禁区内犯规</strong>：12' Freuler 禁区内被犯规 + 14' 阿布纳达黄牌，<strong>完全超出预测框架</strong>，导致 72% 的瑞士胜率建立在一个未考虑 VAR 时代的概率分布上。</li>
+        <li><strong>定位球作为弱队扳平的关键手段</strong>：90+4' Khoukhi 头球来自定位球传中，但卡塔尔的定位球进攻能力在原报告中完全没有量化。</li>
+        <li><strong>末段反扑与"以命换分"</strong>：60' 洛佩特吉三换人换上 3 名进攻球员是明确的"反扑信号"，<strong>但预测中将卡塔尔 2022 三战全败的印象作为永久性特征</strong>，未识别 4 年后的阵容/教练/心态变化。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：5.0 / 10</strong>（方向正确但概率严重失真。预测"瑞士 0-2 完胜" vs 实际"补时绝平"——就像预测"晴天"vs 实际"突降雷阵雨"。球员分析和总进球数方向正确，但"胜平负"和"比分"两核心维度均失败）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：① 建立"定位球攻防"独立分析维度；② 引入"大赛首战非线性场景"概率修正（VAR/点球/补时/反扑）；③ 重构"末段反扑"评估模型，避免将历史印象作为永久特征；④ 识别"领先后未扩大比分"的崩塌风险；⑤ 教练战术分析增加"逆风局管理"维度。实施以上 7 项建议后，特别是"非线性场景"和"末段反扑"两个维度，将大幅提升对"实力差距被非线性变量抹平"这类赛果的预测能力。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

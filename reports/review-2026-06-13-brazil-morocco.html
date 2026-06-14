@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 巴西 vs 摩洛哥（2026-06-13）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>巴西 vs 摩洛哥 · 2026年6月13日 · 复盘时间：2026年6月14日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇧🇷</div>
+        <div class="name">巴西</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#0033A0;">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">置信度：中高</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num" style="color:#0033A0;">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#2e7d32;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">平局</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇲🇦</div>
+        <div class="name">摩洛哥</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中（1-0 → 1-1）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">胜平负命中（巴西胜 55% → 实际平局）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">大小球判断（≤2.5球 66% → 实际2球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">备选比分覆盖（1-1 16% 命中，但未作为重点）</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>巴西 1-0 摩洛哥（18%）</td><td class="miss-row">巴西 <strong>1-1</strong> 摩洛哥（1-1 命中但非首选）</td></tr>
+      <tr><td><strong>巴西胜率</strong></td><td>55%</td><td class="miss-row">实际未胜，摩洛哥 21' Saibari 先进球，32' Vini 扳平</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>26%</td><td class="partial-row">实际发生，方向正确但概率偏低</td></tr>
+      <tr><td><strong>摩洛哥胜率</strong></td><td>19%</td><td>未胜（仅扳平）</td></tr>
+      <tr><td><strong>进球数趋势</strong></td><td>小于2.5球 54%</td><td class="hit-row">总进球2球（1+1），落入区间 ✅</td></tr>
+      <tr><td><strong>巴西 xG 预测</strong></td><td>1.5-1.75</td><td class="partial-row">1 球，靠近区间下沿</td></tr>
+      <tr><td><strong>摩洛哥 xG 预测</strong></td><td>0.8-1.05</td><td class="hit-row">1 球（Saibari），落入区间 ✅</td></tr>
+      <tr><td><strong>Vini vs Hakimi 对位</strong></td><td>世界级内战，决定巴西左路进攻</td><td class="partial-row">Vini 32' 进球（对位赢家），Hakimi 持续威胁但未助攻</td></tr>
+      <tr><td><strong>Bounou 神勇扑救</strong></td><td>2022 英雄门将，关键扑救能力不逊 Alisson</td><td class="hit-row">多次扑救 Paquetá/Igor Thiago/Raphinha，75'+ 受伤仍坚持完成比赛 ✅</td></tr>
+      <tr><td><strong>摩洛哥反击威胁</strong></td><td>哈基米反击+迪亚斯渗透</td><td class="hit-row">21' Saibari 进球+ 90+7' 差点绝杀（被 Alisson 扑出） ✅</td></tr>
+      <tr><td><strong>门将大战</strong></td><td>双方世界级门将，轻易进球困难</td><td class="hit-row">双方各扑出关键球，进球都来之不易 ✅</td></tr>
+      <tr><td><strong>摩洛哥防线崩盘</strong></td><td>里亚德+迪奥普组合未经高强度检验</td><td class="miss-row">失 1 球但未崩盘，门将神勇+整体纪律性抗住了巴西压力</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>总进球≤2.5球</td><td>54%概率小比分</td><td>实际2球（1+1）</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>门将对决</td><td>双方世界级门将，轻易进球困难</td><td>双方各扑出关键球，进球来之不易</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>Bounou 神勇扑救</td><td>2022 英雄门将，关键扑救能力不逊 Alisson</td><td>多次扑救 Paquetá/Igor Thiago/Raphinha</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>摩洛哥反击威胁</td><td>哈基米反击+迪亚斯渗透</td><td>Saibari 21' 进球+ 90+7' 差点绝杀（被 Alisson 扑出）</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>摩洛哥 xG 区间</td><td>0.8-1.05</td><td>1 球（Saibari），落入区间</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>内马尔缺阵影响</td><td>失去禁区创造力+定位球主罚者+关键传球</td><td>巴西全场运动战 1 球（Vini 个人能力），未能展现绝对压制力</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>Alisson 关键扑救</td><td>世界级门线能力，零封或限制失球</td><td>90+7' 关键扑救 Amaimouni 远射，90+9' 扑 El Aynaoui 射门，1V1 神勇</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>摩洛哥门将分析</td><td>布努关键扑救能力不逊阿利松</td><td>布努受伤仍坚持+多次扑救，74'/80' 比赛因他受伤暂停</td><td>✅</td></tr>
+      <tr class="hit-row"><td>9</td><td>1-1 备选比分</td><td>1-1 16%概率</td><td>实际发生 1-1</td><td>✅</td></tr>
+      <tr class="partial-row"><td>10</td><td>维尼修斯 vs 哈基米对位</td><td>世界级内战，决定巴西左路进攻</td><td>Vini 32' 进球（对位赢家），但 Hakimi 持续威胁，多次制造任意球</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>拉菲尼亚 vs 马兹拉维</td><td>马兹拉维肩伤后对抗能力不足，巴西右路突破口</td><td>拉菲尼亚多次射门但被扑出，马兹拉维基本守住</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>巴西 xG 区间</td><td>1.5-1.75</td><td>实际 1 球，靠近区间下沿</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>13</td><td>巴西揭幕战历史</td><td>自 1930 年以来世界杯首战仅输过 1 场</td><td>本场平局延续了"未输"传统，但未取胜也低于"统治级"预期</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>14</td><td>摩洛哥 2026年3月曾 2-1 胜巴西</td><td>心理优势存在</td><td>实际再次逼平巴西（1-1），心理优势得到验证</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>15</td><td>比分预测 1-0</td><td>最可能 18%</td><td>实际 1-1，差距 1 球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>巴西胜 55% 概率</td><td>实力+历史+安帅战术</td><td>未能取胜，3分变1分</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>摩洛哥胜 19% 概率</td><td>"冷门可能性"</td><td>未胜（仅扳平），19% 偏高</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>摩洛哥防线崩盘</td><td>里亚德+迪奥普未经高强度检验+阿格尔德缺阵</td><td>失 1 球但未崩盘，整体纪律性+布努神勇抗住压力</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>巴西进攻核心 Vini/Raphinha 双翼</td><td>对 Tier 1 对手场均 2 球，突破口</td><td>仅 Vini 1 球，Raphinha 多次射门被布努扑出</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>巴西定位球优势</td><td>内马尔缺阵但定位球由 Raphinha/Guimaraes 主罚</td><td>未通过定位球破门，运动战依赖 Vini 个人能力</td><td>❌</td></tr>
+      <tr class="miss-row"><td>21</td><td>摩洛哥换帅动荡</td><td>瓦赫比三个月前接任，战术稳定性存疑</td><td>实际表现高度纪律性，65'/80'/89' 换人调整明显有章法</td><td>❌</td></tr>
+      <tr class="miss-row"><td>22</td><td>巴西上半场统治</td><td>实力碾压+揭幕战历史，安帅战术</td><td>实际 21' 即 0-1 落后，34'/42' 连吃黄牌，半场未展现统治力</td><td>❌</td></tr>
+      <tr class="miss-row"><td>23</td><td>补时阶段（90+10 巴西角球+ 摩洛哥角球）</td><td>未预测 10 分钟超长补时</td><td>补时 10 分钟，巴西 90+3' 角球+ 摩洛哥 90+10' 角球</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">9</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">5</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">9</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">39%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：概率分布"过度自信"——巴西胜 55% 与实际未胜差距过大</h4>
+    <div class="insight-box">
+      <strong>核心原因：将 4 条强信号（FIFA 排名/揭幕战历史/安帅/球员配置）线性加和得出 55%，未考虑"近期直接交锋"的反向信号</strong><br><br>
+      巴西 55% 胜率基于：FIFA 排名 #3 vs #12、世界杯揭幕战仅 1 负的惊人历史、安切洛蒂战术加持、摩洛哥 2026 年 3 月曾 2-1 胜巴西的"心理优势被忽视"。<strong>关键盲区：</strong><br>
+      ① <strong>近期直接交锋被低估</strong>：2026 年 3 月 25 日巴西 1-2 负于摩洛哥（虽然当时内马尔在场），这是<strong>1 个半月前的最近一次直接对决</strong>，比 FIFA 排名差异更有预测力；<br>
+      ② <strong>内马尔缺阵的影响被低估</strong>：原报告虽提到内马尔缺阵降低禁区创造力，但 55% 的胜率实际上没有充分反映这一缺阵；<br>
+      ③ <strong>摩洛哥世预赛不败+非洲杯冠军</strong>的"强韧性信号"被忽视——这支球队已经证明了自己能对抗 Tier 1 对手。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：未识别"摩洛哥 Bounou 受伤但仍神勇"的非线性事件</h4>
+    <div class="insight-box">
+      <strong>核心原因：门将分析仅比较"赛季数据"和"PSxG+/-"，未考虑"关键比赛中的超水平发挥"</strong><br><br>
+      原报告详细对比了阿利松 vs 布努的赛季数据，结论是"差距极小"。但实际比赛中布努 74'/80' 两次因伤暂停后仍坚持完成比赛+多次扑救 Paquetá/Igor Thiago/Raphinha 的关键射门，<strong>这是 2022 世界杯"封神表现"的延续</strong>。<br><br>
+      更重要的是，<strong>弱队门将的"非线性贡献"在大赛中具有乘数效应</strong>——当 Bounou 扑出必进球时，不仅阻止了 1 个失球，还<strong>极大打击了巴西的进攻信心</strong>，这种心理传导在 xG 模型中无法体现。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三："摩洛哥防线崩盘"假设被实际表现的纪律性完全否定</h4>
+    <div class="insight-box">
+      <strong>核心原因：将"防线核心阿格尔德缺阵"等同于"防线崩盘"，未考虑其他防守球员的代偿能力</strong><br><br>
+      原报告反复强调"里亚德+迪奥普组合未经高强度检验"是巴西的突破口，并预测总进球 2.3-2.8（摩洛哥 xGA 0.55）。但实际比赛中：<br>
+      ① 摩洛哥仅失 1 球（Vini 32' 个人能力），<strong>没有崩盘</strong>；<br>
+      ② <strong>摩洛哥 0 黄牌 vs 巴西 2 黄牌</strong>（Casemiro 34'、Ibanez 42'）——纪律性完全相反；<br>
+      ③ <strong>瓦赫比执教 3 个月但球队战术纪律清晰</strong>：65' 换上 El Mourabet/Talbi，80' 换上 Amaimouni/Salah-Eddine 收缩防守，89' 换上 Rahimi 改打反击——这是<strong>高度有章法的换人</strong>，与原报告"战术体系稳定性存疑"的担忧完全相反。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：未预测补时阶段"超长补时 + 攻防易位"的极性反转</h4>
+    <div class="insight-box">
+      <strong>核心原因：未将"补时长度"和"补时战术"作为独立分析维度</strong><br><br>
+      实际比赛补时下半场<strong>长达 10 分钟</strong>，导致：① 巴西 90+3' 角球（Da. Santos 射正）+ 摩洛哥 90+10' 角球（Hakimi 主罚）；② 摩洛哥 90+7' Amaimouni 远射被 Alisson 扑出 + 90+9' El Aynaoui 禁区外射门偏右——<strong>摩洛哥在补时阶段连续制造 2 次必进球机会</strong>，差点反超。<br><br>
+      原报告未分析：<br>
+      ① <strong>10 分钟补时的体能变化</strong>——当巴西进攻球员体能下降，摩洛哥替补（85' 后换上）的体能优势凸显；<br>
+      ② <strong>换人名额用满后的"被迫压上"</strong>——当 1-1 僵局+临近终场，弱队为求 1 分会压上进攻，<strong>形成对强队球门的连续冲击</strong>；<br>
+      ③ <strong>补时阶段双方门将的关键扑救频率倍增</strong>——Alisson 90+7' 神扑 Amaimouni 是本场最大焦点。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：未将"巴西黄牌累积+被迫换人"作为非稳态变量</h4>
+    <div class="insight-box">
+      <strong>核心原因：将巴西"实力"作为稳态假设，未考虑"黄牌 + 换人"对中场控制力的侵蚀</strong><br><br>
+      实际比赛中 Casemiro 34' 黄牌 + Ibanez 42' 黄牌，导致巴西<strong>半场即被迫双换人</strong>（Danilo 换 Ibanez，Fabinho 换 Casemiro）。<br><br>
+      这两个换人：<br>
+      ① <strong>Fabinho 替换 Casemiro 是防守型对位</strong>，并未提升中场创造力；<br>
+      ② <strong>半场双换人本身就是"失控信号"</strong>——安帅被迫用掉 2 个换人名额，意味着 60' 后的调整空间被压缩；<br>
+      ③ <strong>黄牌累积导致下半场防守动作收敛</strong>，减少了中场拦截强度，为摩洛哥反击创造空间。<br><br>
+      原报告虽然提到 Casemiro 是"防守中场支柱"和"34 岁卡塞米罗能否跟上迪亚斯"是关键对位，但<strong>完全没有分析"黄牌累积+被迫换人"的连锁效应</strong>。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="miss-row">
+        <td><strong>巴西胜</strong></td>
+        <td>55%</td>
+        <td>"实力+历史+安帅"</td>
+        <td>❌ 未发生</td>
+        <td>55% 严重高估。FIFA 差 + 揭幕战历史 + 安帅 + 球员配置 = 4 条强信号指向巴西，但 2026.3 摩洛哥 2-1 巴西的近期直接交锋是强反向信号。实际巴西胜概率应在 42-45%</td>
+      </tr>
+      <tr class="partial-row">
+        <td><strong>平局</strong></td>
+        <td>26%</td>
+        <td>"门将对决+小比分"</td>
+        <td>✅ 实际发生</td>
+        <td>26% 方向正确但偏低。大赛首战 + 门将对决 + 摩洛哥防守纪律 → 平局合理概率应为 32-38%</td>
+      </tr>
+      <tr>
+        <td><strong>摩洛哥胜</strong></td>
+        <td>19%</td>
+        <td>"冷门可能性"</td>
+        <td>❌ 未发生（仅扳平）</td>
+        <td>19% 略偏高。摩洛哥仅 1 次半场领先未转化为胜利，<strong>19% 应低于 12%</strong></td>
+      </tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的核心缺陷</strong>：55/26/19 的分布看似基于 4 条强信号合理，但<strong>忽视了"近期直接交锋"这一最有预测力的数据</strong>。2026 年 3 月 25 日摩洛哥 2-1 巴西（虽然阵容不同）是 1 个半月前的最近一次对决，<strong>其权重应高于 FIFA 排名差异</strong>。同时，<strong>未给非线性场景留出 15-20% 的"安全边际"</strong>（如点球、门将神勇、补时反扑等）。更诚实的概率分布应为：巴西胜 ~44%、平局 ~34%、摩洛哥胜 ~12%、其他场景 ~10%。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>2026.3 摩洛哥 2-1 巴西的近期直接交锋</td><td>最有预测力的数据被低估，作为 4 条强信号的反向信号</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>布努"大赛关键比赛"超水平发挥的历史数据</td><td>未识别 2022 世界杯延续性，1 个失球+多次扑救</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>补时长度对比赛走势的影响数据</td><td>未预见 10 分钟补时导致摩洛哥 2 次必进球机会</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>摩洛哥世预赛不败+非洲杯冠军的"强韧性信号"</td><td>未量化摩洛哥"对 Tier 1 对手的稳定性"</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>黄牌累积导致被迫换人的连锁影响</td><td>半场 2 黄 + 2 换人，巴西下半场创造力被压缩</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>瓦赫比执教 3 个月的战术稳定性</td><td>原报告担忧"战术稳定性存疑"，但实际表现高度纪律性</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>摩洛哥替补攻击手（El Mourabet/Talbi/Rahimi）的能力</td><td>3 替补在 65'/80'/89' 登场后立即改变比赛节奏</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>摩洛哥 0 黄牌 vs 巴西 2 黄牌的纪律性反差</td><td>纪律性完全相反，原报告未分析</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>Alisson 90+7'/90+9' 关键扑救的"门将救主"数据</td><td>门将救主在大赛中频繁发生，但预测未给"门将单人救主"留出场景</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>巴西半场即双换人的"失控信号"</td><td>半场 2 换人是教练非计划性调整，原报告未识别</td><td><span class="badge badge-gray">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：建立"近期直接交锋"独立权重评分</h4>
+      <ul>
+        <li>本场 2026.3 摩洛哥 2-1 巴西是 1 个半月前的最近一次直接交锋，<strong>这一数据的预测力应高于 FIFA 排名差异</strong>。</li>
+        <li><strong>操作</strong>：建立"近 2 年直接交锋"评分：① 同/近阵容的直接交锋结果（最近 1 次权重 ×3，最近 2 次 ×2）；② 直接交锋中的进球模式（谁的进攻更有效）；③ 历史交锋中的"反常态结果"（如强队被弱队击败）的复现概率。</li>
+        <li><strong>预期效果</strong>：避免依赖"通用实力排名"导致对"近期形态反差"的忽视。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：门将分析增加"关键比赛超水平发挥"评估</h4>
+      <ul>
+        <li>布努 2022 世界杯"封神"表现延续到 2026 本场，<strong>门将的"大赛型属性"是 xG 模型无法捕捉的非线性贡献</strong>。</li>
+        <li><strong>操作</strong>：为每位门将增加"大赛型指数"：① 世界杯/欧洲杯关键比赛的扑救率；② PSxG+/- 在淘汰赛 vs 小组赛的变化；③ "持续作战能力"（受伤后能否坚持完成比赛）。</li>
+        <li><strong>预期效果</strong>：识别"大赛型门将"对比赛结果的非线性影响。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：补时长度与补时战术的独立分析</h4>
+      <ul>
+        <li>本场 10 分钟补时导致摩洛哥 2 次必进球机会，<strong>补时阶段攻防易位的风险被完全忽视</strong>。</li>
+        <li><strong>操作</strong>：在"环境因素"模块增加"补时分析"：① 两队场均补时长度历史数据；② 强队领先后"补时阶段被扳平/反超"的历史比率；③ 弱队在补时阶段的反扑能力（"以命换分"模式）。</li>
+        <li><strong>预期效果</strong>：捕捉补时阶段"攻防易位"对比赛结果的影响。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：教练战术分析"早期换人"作为非计划性信号</h4>
+      <ul>
+        <li>巴西半场即 2 黄 + 2 换人是明显的"失控信号"，<strong>教练的"非计划性换人"反映比赛走势偏离预期</strong>。</li>
+        <li><strong>操作</strong>：为每场比赛增加"教练换人画像"：① 教练历史比赛中的"非计划性早期换人"频次；② 黄牌累积对换人决策的影响；③ 教练在落后/领先时的换人倾向（攻击 vs 防守）。</li>
+        <li><strong>预期效果</strong>：将"教练换人"作为比赛走势的实时指标。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：纪律性/犯规率作为独立分析维度</h4>
+      <ul>
+        <li>巴西 2 黄牌 vs 摩洛哥 0 黄牌，<strong>纪律性的完全相反反映两队的心态和战术执行</strong>。</li>
+        <li><strong>操作</strong>：为每支球队增加"纪律指数"：① 近 10 场黄/红牌数；② 不同对手强度下的犯规率；③ 关键比赛中"非必要犯规"（情绪性犯规）的频次。</li>
+        <li><strong>预期效果</strong>：识别"心态失衡"和"战术失控"对比赛的影响。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：概率模型对"近期直接交锋"反向信号给予更高权重</h4>
+      <ul>
+        <li>55/26/19 的概率分布未反映 2026.3 摩洛哥 2-1 巴西的近期直接交锋。</li>
+        <li><strong>操作</strong>：建立"信号加权评分"——FIFA 排名 ×1、近期状态 ×1.5、近期直接交锋 ×2、关键球员状态 ×1.5、教练战术 ×1。当反向信号（如近期直接交锋显示弱队占优）≥1 项时，强队的胜率上限应不超过 50%。</li>
+        <li><strong>预期效果</strong>：概率分布更"诚实"，避免"通用实力排名"压倒"近期直接交锋"。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：弱队"门将 + 纪律性 + 替补"组合评估</h4>
+      <ul>
+        <li>本场摩洛哥扳平 = Bounou 神勇 + 0 黄牌纪律性 + 65'/80'/89' 换人有章法 = 三个弱队关键能力的组合。</li>
+        <li><strong>操作</strong>：对每场比赛的弱队，建立"门将扑救稳定性 × 纪律性 × 替补调整能力 × 反扑能力"四维评估，每项 0-10 分。总分 ≥ 28 的弱队应在概率分布中获得额外的"冷门场景权重"。</li>
+        <li><strong>预期效果</strong>：系统化识别"弱队逼平/爆冷"的标准条件。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">8/10</span></td><td>比赛时间、地点、FIFA 排名、近期赛果、伤停信息基本正确。但 2026.3 直接交锋被低估为"心理优势"而非"反向信号"</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>预测 Vini/Raphinha 双翼、门将大战、低比分胶着基本正确，但未识别"巴西黄牌累积+半场双换人"的失控信号</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>15-16 人/队覆盖较全，Vini/Raphinha/Hakimi/Bounou 判断准确。但布努"大赛型"、摩洛哥替补攻击手（El Mourabet/Talbi/Rahimi）的能力低估</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>xG 区间预测较好（摩洛哥 1.0 落入 0.8-1.05），但缺少补时分析、纪律指数、近期直接交锋加权</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-red">4/10</span></td><td>55/26/19 严重过度倾向巴西，未反映 2026.3 直接交锋的反向信号，未给非线性场景留出 15-20% 的安全边际</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>1-0 预测与 1-1 实际差距 1 球；1-1 16% 命中但非首选；大小球 66% 正确</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>数据缺口列出 6 项，"中高"置信度合理。但未识别"近期直接交锋反向信号"的存在</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">9/10</span></td><td>格式规范，分区清晰，对手强度校准等创新框架有前瞻性</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：预测报告在"门将/小比分/门将对决"等防守维度上表现优秀</strong>——正确预测了总进球≤2.5、布努/阿利松的关键扑救、门将对决、摩洛哥反击威胁、摩洛哥 xG 区间、1-1 备选比分、内马尔缺阵影响、Alisson 关键扑救。这些命中项证明了显性数据采集框架的扎实。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>但在"概率分布"和"非线性变量"维度的偏差仍较显著：</strong>
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>近期直接交锋被低估</strong>：2026.3 摩洛哥 2-1 巴西是 1 个半月前的最近一次直接交锋，<strong>其权重应高于 FIFA 排名差异</strong>，但被原报告作为"心理优势存在"轻描淡写处理。</li>
+        <li><strong>补时长度和补时战术未分析</strong>：10 分钟补时导致摩洛哥 90+7'/90+9' 连续 2 次必进球机会，<strong>补时阶段的攻防易位是大赛常见非线性场景</strong>，但完全超出预测框架。</li>
+        <li><strong>门将"大赛型属性"被低估</strong>：布努 2022 世界杯"封神"延续到 2026 本场，<strong>1 个失球+多次扑救+受伤坚持</strong>= 大赛型门将的非线性贡献。</li>
+        <li><strong>黄牌累积+被迫换人的连锁效应</strong>：巴西半场 2 黄 + 2 换人是"失控信号"，<strong>教练的非计划性早期换人</strong>反映比赛走势偏离预期。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：6.0 / 10</strong>（方向部分正确。预测"巴西 1-0 小胜" vs 实际"1-1 平局"——方向错（应预测平局），但总进球数、门将表现、1-1 备选都覆盖到了。比卡塔尔 vs 瑞士的 5.0 分略好，因为大小球命中、1-1 备选命中、布努/阿利松判断均正确）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：① 建立"近期直接交锋"独立权重评分；② 引入"补时长度与补时战术"独立分析维度；③ 门将分析增加"大赛型属性"评估；④ 教练战术分析增加"早期换人"作为非计划性信号；⑤ 纪律性/犯规率作为独立分析维度。实施以上 7 项建议后，特别是"近期直接交锋"和"补时战术"两个维度，将大幅提升对"实力差距被非线性变量抹平"这类赛果的预测能力。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
