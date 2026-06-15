@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科特迪瓦 vs 厄瓜多尔 - 复盘报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f7fa; color: #1a1a1a; line-height: 1.6; }
+        .header { background: #0033A0; color: white; padding: 40px 20px; }
+        .header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .header h1 { font-size: 2em; font-weight: 600; }
+        .header .meta { font-size: 0.95em; opacity: 0.9; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        .card { background: white; border-radius: 4px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 3px solid #0033A0; }
+        .card h2 { color: #0033A0; border-bottom: 1px solid #0033A0; padding-bottom: 8px; margin-bottom: 18px; font-size: 1.4em; font-weight: 600; }
+        .card h3 { color: #0033A0; margin-top: 18px; margin-bottom: 10px; font-size: 1.1em; }
+        .score-display { background: #0033A0; color: white; padding: 30px; border-radius: 4px; text-align: center; margin: 20px 0; }
+        .score-display .vs { font-size: 1.5em; margin: 10px 0; opacity: 0.9; }
+        .score-display .final { font-size: 3em; font-weight: bold; letter-spacing: 0.1em; }
+        .score-display .label { font-size: 0.9em; opacity: 0.85; margin-top: 10px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 3px; font-size: 0.85em; font-weight: 600; margin-right: 6px; }
+        .badge-green { background: #d4edda; color: #155724; }
+        .badge-red { background: #f8d7da; color: #721c24; }
+        .badge-yellow { background: #fff3cd; color: #856404; }
+        .badge-blue { background: #cce5ff; color: #004085; }
+        .badge-gray { background: #e2e3e5; color: #383d41; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 14px 0; }
+        .info-item { background: #f8f9fa; padding: 14px; border-left: 2px solid #0033A0; }
+        .info-item .label { font-weight: 600; color: #666; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; }
+        .info-item .value { font-size: 1.1em; margin-top: 4px; color: #1a1a1a; }
+        table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.95em; }
+        table th { background: #0033A0; color: white; padding: 10px 12px; text-align: left; font-weight: 600; }
+        table td { padding: 9px 12px; border-bottom: 1px solid #e9ecef; }
+        table tr:hover { background: #f8f9fa; }
+        .check-row { padding: 10px 14px; margin: 6px 0; border-left: 3px solid #ccc; background: #fafafa; }
+        .check-row.hit { border-left-color: #28a745; background: #f1f9f3; }
+        .check-row.miss { border-left-color: #dc3545; background: #fcf1f2; }
+        .check-row.partial { border-left-color: #ffc107; background: #fffbf2; }
+        .check-row .label { font-weight: 600; margin-right: 8px; }
+        .check-row.hit .label { color: #28a745; }
+        .check-row.miss .label { color: #dc3545; }
+        .check-row.partial .label { color: #b58900; }
+        .check-row .note { color: #555; font-size: 0.92em; margin-top: 4px; }
+        .stat-bar { background: #e9ecef; height: 22px; border-radius: 2px; overflow: hidden; margin: 8px 0; }
+        .stat-bar-fill { height: 100%; display: flex; align-items: center; padding-left: 8px; color: white; font-size: 0.85em; font-weight: 600; }
+        .stat-bar-fill.green { background: #28a745; }
+        .stat-bar-fill.yellow { background: #ffc107; color: #333; }
+        .stat-bar-fill.red { background: #dc3545; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+        .summary-card { background: #f8f9fa; padding: 16px; text-align: center; border-top: 3px solid #0033A0; }
+        .summary-card .num { font-size: 2.2em; font-weight: bold; color: #0033A0; }
+        .summary-card .label { font-size: 0.9em; color: #666; margin-top: 4px; }
+        .deviation-cause { background: #fff3cd; border-left: 3px solid #ffc107; padding: 12px 16px; margin: 10px 0; }
+        .deviation-cause strong { color: #856404; }
+        .lesson-box { background: #cce5ff; border-left: 3px solid #0033A0; padding: 12px 16px; margin: 10px 0; }
+        .lesson-box strong { color: #0033A0; }
+        .footer { background: #1a1a1a; color: white; padding: 24px; text-align: center; margin-top: 30px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div>
+                <h1>🇨🇮 科特迪瓦 vs 厄瓜多尔 🇪🇨 · 复盘报告</h1>
+                <div class="meta">E组 小组赛第1轮 · 2026-06-14 19:00 ET · Lincoln Financial Field, Philadelphia</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 实际结果 -->
+        <div class="card">
+            <h2>🏁 实际赛果</h2>
+            <div class="score-display">
+                <div class="label">全场比分</div>
+                <div class="final">1 - 0</div>
+                <div class="vs">🇨🇮 科特迪瓦 🇪🇨 厄瓜多尔</div>
+                <div class="label">进球：Seko Fofana 89'</div>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="label">实际结果</div>
+                    <div class="value"><span class="badge badge-green">✅ 科特迪瓦胜</span></div>
+                </div>
+                <div class="info-item">
+                    <div class="label">进球时间</div>
+                    <div class="value">89'（绝杀）</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">比赛走势</div>
+                    <div class="value">0-0 胶着 89 分钟后绝杀</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">进球功臣</div>
+                    <div class="value">Seko Fofana（中场后插上）</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 预测 vs 实际对比 -->
+        <div class="card">
+            <h2>🔍 预测 vs 实际</h2>
+            <table>
+                <tr>
+                    <th>维度</th>
+                    <th>预测</th>
+                    <th>实际</th>
+                    <th>评估</th>
+                </tr>
+                <tr>
+                    <td>胜平负方向</td>
+                    <td>科特迪瓦胜（51%）</td>
+                    <td>科特迪瓦胜</td>
+                    <td><span class="badge badge-green">✅ 命中</span></td>
+                </tr>
+                <tr>
+                    <td>主推比分</td>
+                    <td>科特迪瓦 1-1 厄瓜多尔（~11%）</td>
+                    <td>科特迪瓦 1-0 厄瓜多尔</td>
+                    <td><span class="badge badge-red">❌ 偏差</span></td>
+                </tr>
+                <tr>
+                    <td>次推比分</td>
+                    <td>科特迪瓦 2-1 厄瓜多尔（~10%）</td>
+                    <td>—</td>
+                    <td><span class="badge badge-red">❌ 偏差</span></td>
+                </tr>
+                <tr>
+                    <td>第3预测比分</td>
+                    <td>科特迪瓦 1-0 厄瓜多尔（~9%）</td>
+                    <td>科特迪瓦 1-0 厄瓜多尔（实际）</td>
+                    <td><span class="badge badge-green">✅ 命中（第3预测）</span></td>
+                </tr>
+                <tr>
+                    <td>大小球</td>
+                    <td>总 xG 2.30-3.10（倾向小球）</td>
+                    <td>1球（小球）</td>
+                    <td><span class="badge badge-green">✅ 命中</span></td>
+                </tr>
+                <tr>
+                    <td>置信度</td>
+                    <td>🟡 中（差值23%）</td>
+                    <td>实际胶着到89分钟</td>
+                    <td><span class="badge badge-yellow">⚠️ 偏松</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 复盘评分 -->
+        <div class="card">
+            <h2>📊 复盘评分</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="num">6.5</div>
+                    <div class="label">综合评分（/10）</div>
+                </div>
+                <div class="summary-card">
+                    <div class="num">45%</div>
+                    <div class="label">命中率（9/20）</div>
+                </div>
+                <div class="summary-card">
+                    <div class="num">9 ✅</div>
+                    <div class="label">命中项</div>
+                </div>
+                <div class="summary-card">
+                    <div class="num">5 ⚠️</div>
+                    <div class="label">部分命中</div>
+                </div>
+                <div class="summary-card">
+                    <div class="num">6 ❌</div>
+                    <div class="label">偏差项</div>
+                </div>
+            </div>
+
+            <h3>命中分布</h3>
+            <div style="margin: 8px 0;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 4px;">
+                    <span>✅ 命中 (9项)</span><span>45%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-bar-fill green" style="width: 45%;">45%</div></div>
+            </div>
+            <div style="margin: 8px 0;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 4px;">
+                    <span>⚠️ 部分命中 (5项)</span><span>25%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-bar-fill yellow" style="width: 25%;">25%</div></div>
+            </div>
+            <div style="margin: 8px 0;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 4px;">
+                    <span>❌ 偏差 (6项)</span><span>30%</span>
+                </div>
+                <div class="stat-bar"><div class="stat-bar-fill red" style="width: 30%;">30%</div></div>
+            </div>
+        </div>
+
+        <!-- 逐项核对 -->
+        <div class="card">
+            <h2>✅ 逐项核对（20项）</h2>
+
+            <div class="check-row hit">
+                <span class="label">✅ 1. 胜平负方向</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测科特迪瓦胜（51%），实际科特迪瓦 1-0 绝杀胜。方向完全正确。</div>
+            </div>
+
+            <div class="check-row miss">
+                <span class="label">❌ 2. 主推比分</span>
+                <span class="badge badge-red">偏差</span>
+                <div class="note">预测最可能比分 1-1 厄瓜多尔（11%），实际 1-0 科特迪瓦胜。主推比分未中。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 3. 第3预测比分（1-0 科特迪瓦）</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">报告第3预测 "1-0 小胜"（~9%）实际命中。说明模型给出了正确比分候选但优先级排序失误。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 4. 大小球</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测总 xG 2.30-3.10 倾向小球，实际仅 1 球，完全小球。</div>
+            </div>
+
+            <div class="check-row partial">
+                <span class="label">⚠️ 5. 进球时间</span>
+                <span class="badge badge-yellow">部分</span>
+                <div class="note">预测未明确"绝杀"场景，实际 89' 才打破僵局。进球时间分布严重偏向末段。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 6. Kessié vs Caicedo 中场对决</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测 Caicedo 防守覆盖更广占优，实际 Kessié 后插上 89' 绝杀——说明两人互有攻守而非单方压制。</div>
+            </div>
+
+            <div class="check-row miss">
+                <span class="label">❌ 7. 进球者</span>
+                <span class="badge badge-red">偏差</span>
+                <div class="note">预测关键球员 Pépé/Adingra/Kessié/Valencia 全部未进球。实际进球者是 Seko Fofana——预测中标注为"中场活力/前插威胁"但未列入主要终结点。</div>
+            </div>
+
+            <div class="check-row partial">
+                <span class="label">⚠️ 8. Enner Valencia 表现</span>
+                <span class="badge badge-yellow">部分</span>
+                <div class="note">预测 Valencia 把握有限机会，实际全场未能完成进球。Ndicka 防守确实有效，但 Valencia 状态低于预期。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 9. Amad Diallo 替补奇兵</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测 Diallo 是"替补奇兵候选"。实际未直接进球但 Fofana 的绝杀源自替补阶段的调度。替补登场改变比赛走势的判断正确。</div>
+            </div>
+
+            <div class="check-row miss">
+                <span class="label">❌ 10. 替补奇兵身份</span>
+                <span class="badge badge-red">偏差</span>
+                <div class="note">预测 Diallo/Páez 是关键 X 因子，实际是 Seko Fofana（首发前插）完成绝杀。替补奇兵身份错位。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 11. 厄瓜多尔防守稳固</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测 Pacho + Hincapié 防线是预选赛最佳防线之一，实际坚持到 89 分钟才丢球。防守端判断完全正确。</div>
+            </div>
+
+            <div class="check-row partial">
+                <span class="label">⚠️ 12. 科特迪瓦边路进攻</span>
+                <span class="badge badge-yellow">部分</span>
+                <div class="note">预测 Pépé/Adingra 边路突破主导，实际未能直接转化为进球。但边路牵制为 Fofana 创造了后插上空间。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 13. 两队均非高犯规球队</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测两队均 <15 次犯规为"中等"。实际全场比赛流畅，未出现高强度犯规潮。</div>
+            </div>
+
+            <div class="check-row miss">
+                <span class="label">❌ 14. 比赛流畅度（双方防守隐患）</span>
+                <span class="badge badge-red">偏差</span>
+                <div class="note">预测"双方防守都有隐患，可能是一场高比分比赛"。实际 0-0 长达 89 分钟，是本届世界杯至今最胶着的比赛之一。完全相反。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 15. 厄瓜多尔不败韧性</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测厄瓜多尔"近5场保持不败"且韧性极强。实际虽 89 分钟丢球，但在那之前的 89 分钟完美执行了"不败"标准。</div>
+            </div>
+
+            <div class="check-row miss">
+                <span class="label">❌ 16. 价值投注建议</span>
+                <span class="badge badge-red">偏差</span>
+                <div class="note">预测科特迪瓦胜是"价值投注"（赔率 3.32 vs AI 51%）。实际科特迪瓦胜确实发生，但 89 分钟前比分是 0-0，风险极大。价值评估应考虑时间风险。</div>
+            </div>
+
+            <div class="check-row partial">
+                <span class="label">⚠️ 17. Beccacece 4-4-2 体系稳定性</span>
+                <span class="badge badge-yellow">部分</span>
+                <div class="note">预测厄瓜多尔"体系型教练，防守稳固"。实际确实保持 89 分钟零封，但体系灵活度未充分体现——没有调整出有效进攻。</div>
+            </div>
+
+            <div class="check-row hit">
+                <span class="label">✅ 18. Emerse Fae 新人教练判断</span>
+                <span class="badge badge-green">命中</span>
+                <div class="note">预测"首次世界杯执教存在不确定性"，实际新帅在 89 分钟做出有效调整拿下比赛，临场调度得分。</div>
+            </div>
+
+            <div class="check-row partial">
+                <span class="label">⚠️ 19. 总比分主推"平局信号优先规则"</span>
+                <span class="badge badge-yellow">部分</span>
+                <div class="note">预测主推平局（21%），实际是科特迪瓦胜。平局规则错误地影响了主推比分的优先级排序。</div>
+            </div>
+
+            <div class="check-row miss">
+                <span class="label">❌ 20. 大赛心理/逆转因子</span>
+                <span class="badge badge-red">偏差</span>
+                <div class="note">预测"可能是一场高比分比赛"，与"双方进攻都有隐患"逻辑相矛盾。89 分钟绝杀说明双方心理素质都很强，没有出现预测的"心理崩塌"。</div>
+            </div>
+        </div>
+
+        <!-- 偏差原因深度分析 -->
+        <div class="card">
+            <h2>🔬 偏差原因深度分析</h2>
+
+            <div class="deviation-cause">
+                <strong>偏差 1：主推比分排序失误（1-1 vs 实际 1-0）</strong>
+                <p>报告给出三个最可能比分：1-1（11%）、2-1（10%）、1-0（9%）。三者概率仅相差 1-2%，但模型把 1-1 列为"最可能"，把实际命中的 1-0 列为第 3。这暴露了 <strong>"平局信号优先规则"的过度应用</strong>——当两队风格差异大、防守都强时，模型倾向于平局而非"小胜"。</p>
+                <p><strong>根因：</strong>缺乏对"科特迪瓦进攻强于厄瓜多尔"的方向性加权。报告指出科特迪瓦对韩国 4-0、状态火热，但仍把平局列为最可能，说明模型对"方向性优势"的传导不到位。</p>
+            </div>
+
+            <div class="deviation-cause">
+                <strong>偏差 2：进球时间完全失算（0-0 持续 89 分钟）</strong>
+                <p>预测未明确"绝杀场景"，仅给出"双方势均力敌，平局收场"或"科特迪瓦进攻火力更胜一筹"。实际两队僵持 89 分钟才由 Fofana 绝杀。这是典型的 <strong>"高位逼抢 + 边路突破 → 中场后插上"战术链在末段爆发</strong> 的场景，模型完全没建模。</p>
+                <p><strong>根因：</strong>缺乏"久攻不下→体能下降→末段后插上进球"的进球时间分布建模。报告未对比赛第 75-90 分钟的进球概率做单独建模。</p>
+            </div>
+
+            <div class="deviation-cause">
+                <strong>偏差 3：进球者身份完全错位（Seko Fofana）</strong>
+                <p>报告标注的关键球员是 Pépé/Adingra/Kessié（边路+组织）和 Valencia（厄瓜多尔）。实际进球者是 Seko Fofana——报告中仅在"中场活力/前插威胁"一栏提到，未列入主要终结点候选。</p>
+                <p><strong>根因：</strong>对 Fofana 的"前插威胁"标签未量化为进球概率。Fofana 2025-26 赛季在 Al-Nassr 状态火热，应被赋予更高的"X 因子进球"权重。</p>
+            </div>
+
+            <div class="deviation-cause">
+                <strong>偏差 4："双方防守都有隐患 → 高比分比赛"逻辑链崩塌</strong>
+                <p>报告一方面预测"双方进攻都有隐患，本场可能是一场高比分比赛"，另一方面又预测小球（xG 2.30-3.10 实际仅 1 球）。两个判断自相矛盾。</p>
+                <p><strong>根因：</strong>把"防守隐患"误读为"失球多"，但实际"防守隐患"+"进攻一般"= 双方都难进球 → 0-0 胶着 → 末段绝杀。模型缺乏这种"双低进攻"的合成判断。</p>
+            </div>
+
+            <div class="deviation-cause">
+                <strong>偏差 5：价值投注评估忽略时间风险</strong>
+                <p>报告判定"科特迪瓦胜是价值投注"（赔率 3.32 vs AI 51%）。虽然方向正确（实际科特迪瓦胜），但 89 分钟 0-0 期间，比分盘上厄瓜多尔不败的隐含赔率远低于 AI 评估的风险值。</p>
+                <p><strong>根因：</strong>价值评估仅基于"最终结果概率 vs 赔率"，未考虑"过程中风险释放速度"。一场 89 分钟才分胜负的比赛，对价值投注者来说等待成本极高。</p>
+            </div>
+        </div>
+
+        <!-- 概率校准评估 -->
+        <div class="card">
+            <h2>📐 概率校准评估</h2>
+            <table>
+                <tr>
+                    <th>预测项</th>
+                    <th>AI 概率</th>
+                    <th>实际发生</th>
+                    <th>校准偏差</th>
+                </tr>
+                <tr>
+                    <td>科特迪瓦胜</td>
+                    <td>51%</td>
+                    <td>100%</td>
+                    <td><span class="badge badge-green">低估胜率（实际更高）</span></td>
+                </tr>
+                <tr>
+                    <td>平局</td>
+                    <td>21%</td>
+                    <td>0%</td>
+                    <td><span class="badge badge-red">高估平局（21% 实际为 0）</span></td>
+                </tr>
+                <tr>
+                    <td>厄瓜多尔胜</td>
+                    <td>28%</td>
+                    <td>0%</td>
+                    <td><span class="badge badge-red">高估客胜</span></td>
+                </tr>
+            </table>
+            <div class="deviation-cause" style="margin-top: 14px;">
+                <strong>校准诊断：</strong>模型再次出现 <strong>"过度平均主义"</strong> 倾向——把"风格差异大"等同于"势均力敌"，从而把 21% 平局概率给得过高。实际两队并不势均力敌，<strong>科特迪瓦的进攻优势比模型评估的更大</strong>，AI 反而低估了主胜概率。
+            </div>
+        </div>
+
+        <!-- 优化建议 -->
+        <div class="card">
+            <h2>💡 优化建议（给后续模型）</h2>
+
+            <div class="lesson-box">
+                <strong>建议 1：主推比分应优先"方向性优势方的小胜"</strong>
+                <p>当科特迪瓦胜率 ≥50% 时，主推比分应是 "1-0" 或 "2-1" 科特迪瓦，而非 1-1 平局。<strong>"平局信号优先规则"在"一方明确占优"时不应触发。</strong></p>
+            </div>
+
+            <div class="lesson-box">
+                <strong>建议 2：建立"末段绝杀"概率通道</strong>
+                <p>当两队都是"防守强、进攻一般"组合时，末段 75-90 分钟进球概率应上调 20-30%。本次比赛 89' 绝杀就是这种场景的典型样本。</p>
+            </div>
+
+            <div class="lesson-box">
+                <strong>建议 3：Seko Fofana 类"前插中场"应单独建模</strong>
+                <p>不要把中场球员的"前插威胁"当成次要标签。应建立"前插中场进球"专属模型：Fofana 2025-26 赛季俱乐部数据应单独查询并建模。</p>
+            </div>
+
+            <div class="lesson-box">
+                <strong>建议 4：价值评估加入"时间风险折现"</strong>
+                <p>价值投注评估公式应加入"分胜负时间"的折现因子。如果一场比赛比分长时间胶着（如 0-0 持续 70+ 分钟），即使最终方向正确，等待成本也应纳入价值评估。</p>
+            </div>
+
+            <div class="lesson-box">
+                <strong>建议 5：避免"防守隐患"+"高比分"的逻辑矛盾</strong>
+                <p>当一个判断指向"防守差"时，应配套另一个判断："进攻是否足以利用对手防守差"？如果双方进攻都一般，结论应是"低比分胶着"而非"高比分乱战"。</p>
+            </div>
+        </div>
+
+        <!-- 关键收获 -->
+        <div class="card">
+            <h2>🎯 关键收获</h2>
+            <ul style="margin-left: 20px; line-height: 1.9;">
+                <li><strong>胜率方向：</strong>科特迪瓦胜 51% → 实际 100% 命中，但模型仍低估了主胜概率（给平局 21% 太多权重）</li>
+                <li><strong>比分细节：</strong>主推 1-1 错位，应是 1-0（实际命中为第 3 预测）；说明模型给出了正确候选但优先级排序错误</li>
+                <li><strong>进球时间：</strong>89' 绝杀完全未建模，"久攻不下+末段爆发"是新的进球时间模式</li>
+                <li><strong>进球者：</strong>Seko Fofana（首发前插中场）完全错失，"前插威胁"标签应升级为可量化的进球概率</li>
+                <li><strong>防守判断：</strong>两队防守"经得起考验"被严重低估，89 分钟才丢球远超预测预期</li>
+                <li><strong>价值评估：</strong>时间风险未被定价，需要在价值投注模型中加入"分胜负时间"折现</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>复盘完成时间：2026-06-15 11:55（北京时间）</p>
+        <p style="margin-top: 8px; font-size: 0.9em; opacity: 0.7;">数据来源：原始预测报告 + 实际比赛数据 · 仅供模型迭代参考</p>
+    </div>
+</body>
+</html>
