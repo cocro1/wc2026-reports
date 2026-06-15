@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 法国 vs 塞内加尔（2026-06-16）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-15 18:00（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇫🇷</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">法国</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#00a651;margin:0 12px;">塞内加尔</span>
+      <span class="flag">🇸🇳</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">France vs Senegal</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-17 03:00 北京时间（当地 6月16日 15:00 ET）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">美国纽约 · MetLife 体育场（82,500座）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">I组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">法国 #1（1877.32分） vs 塞内加尔 #14</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">本场为首轮 · 同组还有伊拉克、挪威</div></div>
+      <div class="match-info-item"><div class="match-info-label">历史交锋</div><div class="match-info-val">仅1次：2002世界杯 塞内加尔 1-0 法国</div></div>
+    </div>
+    <div class="info-box">🔴 <strong>2002年的幽灵：</strong>2002年世界杯揭幕战，作为卫冕冠军的法国0-1不敌塞内加尔——迪乌夫助攻，帕普·布巴·迪奥普破门。那场比赛改变了世界杯历史。24年后，两位当年的亲历者——迪谢兹（法国球员）和蒂亚乌（塞内加尔球员）——分别以主教练身份再度对决。此外，塞内加尔刚刚夺得2025年非洲杯冠军（后被因技术原因取消），全队士气高涨。</div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>法国</th><th>塞内加尔</th></tr>
+      <tr>
+        <td><strong>近5场战绩</strong></td>
+        <td>4胜1负（W-W-W-L-W）</td>
+        <td>4胜1平（W-W-W-W-D）· 不败</td></tr>
+      <tr>
+        <td><strong>具体赛果</strong></td>
+        <td>
+          3-1 北爱尔兰（友谊赛）<br>
+          0-1 科特迪瓦（友谊赛）<br>
+          3-1 哥伦比亚（友谊赛）<br>
+          2-1 巴西（客场友谊赛）<br>
+          3-1 阿塞拜疆（客场世预赛）
+        </td>
+        <td>
+          2-0 秘鲁（友谊赛）<br>
+          1-0 摩洛哥（AFCON决赛，加时）<br>
+          1-0 马里（AFCON 1/4决赛）<br>
+          3-1 苏丹（AFCON 1/8决赛）<br>
+          1-1 民主刚果（AFCON小组赛）
+        </td></tr>
+      <tr>
+        <td><strong>对手分档</strong><br><small>按FIFA排名</small></td>
+        <td>
+          Tier 1（前20）：巴西、哥伦比亚<br>
+          Tier 2（21-50）：科特迪瓦<br>
+          Tier 3-4（50+）：阿塞拜疆、北爱尔兰
+        </td>
+        <td>
+          Tier 1（前20）：摩洛哥<br>
+          Tier 2（21-50）：秘鲁、马里、民主刚果<br>
+          Tier 4（80+）：苏丹
+        </td></tr>
+      <tr>
+        <td><strong>xG球队评分</strong></td>
+        <td>8.2/10（强队）</td>
+        <td>6.3/10（良好球队）</td></tr>
+      <tr>
+        <td><strong>xG状态分</strong></td>
+        <td>5.7/10</td>
+        <td>5.0/10</td></tr>
+      <tr>
+        <td><strong>xG运气值</strong></td>
+        <td>-1%（轻微不走运）</td>
+        <td>+9%（轻微走运）</td></tr>
+      <tr>
+        <td><strong>xG可预测性</strong></td>
+        <td>76%</td>
+        <td>80%</td></tr>
+      <tr>
+        <td><strong>状态热度</strong></td>
+        <td><span class="tag tag-green">争冠热门 · 友谊赛含金量高</span></td>
+        <td><span class="tag tag-yellow">AFCON冠军气势 · 但含金量折扣</span></td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键差距：对手强度的"量级"差异。</strong>法国近5场包含客场2-1击败巴西、3-1击败哥伦比亚——这是Tier 1级别的友谊赛。塞内加尔近5场包含AFCON决赛1-0击败摩洛哥（Tier 1），但其余对手（秘鲁、马里、苏丹）整体强度低于法国的对手。法国1-0负于科特迪瓦是"冷门"但不影响整体评价——法国在友谊赛中仍展现了顶级实力。</div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（18人/队）</div>
+
+    <h4 style="color:#0033A0;margin-bottom:8px;">🇫🇷 法国18人（按预测首发 + 关键替补排列）</h4>
+    <div class="player-grid">
+      <div class="player-card"><span class="name">1. 迈尼昂</span><br><span class="meta">GK · AC米兰 · 世界前5门将</span></div>
+      <div class="player-card"><span class="name">2. 孔德</span><br><span class="meta">RB · 巴塞罗那 · 防守稳固</span></div>
+      <div class="player-card"><span class="name">3. 萨利巴</span><br><span class="meta">CB ★ · 阿森纳 · 顶级中卫 · 已获准出场</span></div>
+      <div class="player-card"><span class="name">4. 于帕梅卡诺</span><br><span class="meta">CB · 拜仁慕尼黑 · 身体对抗强</span></div>
+      <div class="player-card"><span class="name">5. 特奥·埃尔南德斯</span><br><span class="meta">LB · AC米兰 · 进攻威胁</span></div>
+      <div class="player-card"><span class="name">6. 楚阿梅尼</span><br><span class="meta">DM ★★ · 皇家马德里 · 中场引擎</span></div>
+      <div class="player-card"><span class="name">7. 卡马文加</span><br><span class="meta">DM · 皇家马德里 · 全能B2B</span></div>
+      <div class="player-card"><span class="name">8. 登贝莱</span><br><span class="meta">RW ★★ · 巴黎圣日耳曼 · 欧洲最稳定边锋</span></div>
+      <div class="player-card"><span class="name">9. 奥利塞</span><br><span class="meta">AM ★ · 拜仁慕尼黑 · 热身赛帽子戏法</span></div>
+      <div class="player-card"><span class="name">10. 姆巴佩（C）</span><br><span class="meta">LW ★★★ · 皇家马德里 · 队长 · 球场灵魂</span></div>
+      <div class="player-card"><span class="name">11. 图拉姆 / 科洛·穆阿尼</span><br><span class="meta">ST · 国际米兰 / 巴黎圣日耳曼</span></div>
+      <div class="player-card"><span class="name">12. 多纳苏马</span><br><span class="meta">AM/FW · 巴黎圣日耳曼 · 年轻攻击手</span></div>
+      <div class="player-card"><span class="name">13. 科内特</span><br><span class="meta">CB · 利物浦 · 中卫深度</span></div>
+      <div class="player-card"><span class="name">14. 拉比奥</span><br><span class="meta">CM · 马赛 · 中场经验</span></div>
+      <div class="player-card"><span class="name">15. 扎伊尔-埃梅里</span><br><span class="meta">CM · 巴黎圣日耳曼 · 年轻中场</span></div>
+      <div class="player-card"><span class="name">16. 巴尔科拉</span><br><span class="meta">LW · 巴黎圣日耳曼 · 边锋选项</span></div>
+      <div class="player-card"><span class="name">17. 克洛斯</span><br><span class="meta">RB · 马赛 · 右后卫深度</span></div>
+      <div class="player-card"><span class="name">18. 科洛·穆阿尼</span><br><span class="meta">FW · 巴黎圣日耳曼 · 中锋选项</span></div>
+    </div>
+
+    <h4 style="color:#00a651;margin:16px 0 8px;">🇸🇳 塞内加尔18人</h4>
+    <div class="player-grid">
+      <div class="player-card"><span class="name">1. 爱德华·门迪</span><br><span class="meta">GK · 吉达国民 · 欧冠冠军门将</span></div>
+      <div class="player-card"><span class="name">2. 萨巴利</span><br><span class="meta">RB · 皇家贝蒂斯 · 西甲主力</span></div>
+      <div class="player-card"><span class="name">3. 库利巴利（C）</span><br><span class="meta">CB ★★ · 利雅得新月 · 34岁 · 防守领袖</span></div>
+      <div class="player-card"><span class="name">4. 阿卜杜·迪亚洛</span><br><span class="meta">CB · 多哈阿拉伯 · 前巴黎圣日耳曼</span></div>
+      <div class="player-card"><span class="name">5. 雅各布斯</span><br><span class="meta">LB · 科莫 · 意甲经验</span></div>
+      <div class="player-card"><span class="name">6. 帕普·马塔尔·萨尔</span><br><span class="meta">CM · 托特纳姆热刺 · 年轻活力</span></div>
+      <div class="player-card"><span class="name">7. 伊德里萨·盖耶</span><br><span class="meta">DM ★ · 埃弗顿 · 防守型后腰</span></div>
+      <div class="player-card"><span class="name">8. 帕普·盖耶</span><br><span class="meta">CM · 马赛 · 推进型中场</span></div>
+      <div class="player-card"><span class="name">9. 伊斯梅拉·萨尔</span><br><span class="meta">RW ★ · 水晶宫 · 速度+终结</span></div>
+      <div class="player-card"><span class="name">10. 尼古拉斯·杰克逊</span><br><span class="meta">ST · 拜仁慕尼黑（切尔西外租）· 23岁</span></div>
+      <div class="player-card"><span class="name">11. 萨迪奥·马内</span><br><span class="meta">LW ★★ · 利雅得胜利 · 34岁 · 精神领袖</span></div>
+      <div class="player-card"><span class="name">12. 克雷潘·迪亚塔</span><br><span class="meta">RW/WB · 摩纳哥 · 边路威胁</span></div>
+      <div class="player-card"><span class="name">13. 布拉耶·迪亚</span><br><span class="meta">FW · 萨勒尼塔纳/拉齐奥 · 前锋选项</span></div>
+      <div class="player-card"><span class="name">14. 阿卜杜拉耶·迪亚洛</span><br><span class="meta">CB · 多哈阿拉伯 · 后防深度</span></div>
+      <div class="player-card"><span class="name">15. 哈比卜·迪亚洛</span><br><span class="meta">FW · 利雅得青年 · 前锋选项</span></div>
+      <div class="player-card"><span class="name">16. 福代·巴洛-图雷</span><br><span class="meta">LB · AC米兰 · 左后卫选项</span></div>
+      <div class="player-card"><span class="name">17. 伊利曼·恩迪亚耶</span><br><span class="meta">FW · 埃弗顿 · 创造型前锋</span></div>
+      <div class="player-card"><span class="name">18. 拉明·卡马拉</span><br><span class="meta">CM · 摩纳哥 · 年轻中场</span></div>
+    </div>
+    <div class="warn-box">⚠️ <strong>覆盖盲区检查：</strong>法国方面确认萨利巴已获准出场，登贝莱已恢复训练——主力阵容基本完整。多纳苏马和扎伊尔-埃梅里是世界杯首秀球员，大赛经验不足。塞内加尔方面马内（34岁）和库利巴利（34岁）的年龄是关键变量，尼古拉斯·杰克逊从切尔西外租拜仁慕尼黑后的状态存在不确定性。塞内加尔全队无重大伤病，可派最强阵容。</div>
+  </div>
+
+  <!-- ===== 首发不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h4 style="color:#0033A0;margin-bottom:8px;">法国</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>姆巴佩</td><td>LW（C）</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长 · 不可替代</td></tr>
+      <tr><td>萨利巴</td><td>CB</td><td><span class="tag tag-green">高(>90%)</span></td><td>已获准出场 · 迪谢兹信赖的中卫</td></tr>
+      <tr><td>楚阿梅尼</td><td>DM</td><td><span class="tag tag-green">高(>90%)</span></td><td>中场引擎 · 首发锁定</td></tr>
+      <tr><td>登贝莱</td><td>RW</td><td><span class="tag tag-green">高(>85%)</span></td><td>已恢复训练 · 欧洲最稳定边锋</td></tr>
+      <tr><td>奥利塞</td><td>AM</td><td><span class="tag tag-green">高(>80%)</span></td><td>热身赛帽子戏法 · 状态正佳</td></tr>
+      <tr><td>图拉姆 vs 科洛·穆阿尼</td><td>ST</td><td><span class="tag tag-yellow">中(50-60%)</span></td><td>迪谢兹在两人间轮换 · 热身赛两人均有出场</td></tr>
+      <tr><td>卡马文加</td><td>DM</td><td><span class="tag tag-green">高(>85%)</span></td><td>B2B中场 · 首发锁定</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>不首发场景分析：</strong>如果图拉姆和科洛·穆阿尼的轮换影响前场支点作用，迪谢兹可能选择让姆巴佩回撤到伪9号位，奥利塞和登贝莱分居两翼。但更可能的情况是保持4-2-3-1阵型，由其中一人担任正印中锋。法国前场火力的"最低配置"仍然是世界级的。</div>
+
+    <h4 style="color:#00a651;margin:16px 0 8px;">塞内加尔</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>马内</td><td>LW</td><td><span class="tag tag-green">高(>95%)</span></td><td>精神领袖 · AFCON英雄 · 必首发</td></tr>
+      <tr><td>库利巴利</td><td>CB（C）</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长 · 防守核心</td></tr>
+      <tr><td>爱德华·门迪</td><td>GK</td><td><span class="tag tag-green">高(>95%)</span></td><td>欧冠冠军门将 · 一门</td></tr>
+      <tr><td>伊德里萨·盖耶</td><td>DM</td><td><span class="tag tag-green">高(>90%)</span></td><td>防守型后腰 · 首发锁定</td></tr>
+      <tr><td>伊斯梅拉·萨尔</td><td>RW</td><td><span class="tag tag-green">高(>85%)</span></td><td>速度+终结 · 边路威胁</td></tr>
+      <tr><td>尼古拉斯·杰克逊</td><td>ST</td><td><span class="tag tag-green">高(>80%)</span></td><td>23岁 · 拜仁外租 · 对秘鲁进球</td></tr>
+      <tr><td>迪亚塔 vs 恩迪亚耶</td><td>边路替补</td><td><span class="tag tag-blue">中(50-65%)</span></td><td>两人竞争替补登场名额</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>塞内加尔首发不确定性较低：</strong>蒂亚乌大概率沿用AFCON夺冠阵容，4-3-3阵型固定。唯一的变数是马内（34岁）能否在闷热天气中坚持90分钟——如果体能下降，克雷潘·迪亚塔可能替补登场提供边路活力。</div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG估算）</div>
+    <table>
+      <tr><th>维度</th><th>法国</th><th>塞内加尔</th></tr>
+      <tr>
+        <td><strong>进攻体系</strong></td>
+        <td>4-2-3-1 控球+快攻<br>姆巴佩+登贝莱+奥利塞前场三叉戟<br>楚阿梅尼+卡马文加双后腰驱动</td>
+        <td>4-3-3 高位逼抢+快速转换<br>马内+伊斯梅拉·萨尔+杰克逊<br>盖耶+帕普·盖耶中场屏障</td></tr>
+      <tr>
+        <td><strong>预计控球率</strong></td>
+        <td>60-65%</td>
+        <td>35-40%</td></tr>
+      <tr>
+        <td><strong>近5场场均进球</strong></td>
+        <td>2.4球</td>
+        <td>1.6球</td></tr>
+      <tr>
+        <td><strong>预计本场xG</strong></td>
+        <td><strong>1.80 - 2.50</strong></td>
+        <td><strong>0.50 - 0.90</strong></td></tr>
+      <tr>
+        <td><strong>预计总xG区间</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">2.30 - 3.15</td>
+      </tr>
+      <tr>
+        <td><strong>xG预测比分</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">法国 2.2 - 1.0 塞内加尔</td>
+      </tr>
+      <tr>
+        <td><strong>防守体系</strong></td>
+        <td>萨利巴+于帕梅卡诺中卫<br>孔德+特奥双翼卫提供宽度<br>楚阿梅尼+卡马文加双后腰保护</td>
+        <td>库利巴利+阿卜杜·迪亚洛中卫<br>雅各布斯左路 · 萨巴利右路<br>伊德里萨·盖耶中场屏障</td></tr>
+    </table>
+
+    <h4 style="color:#c62828;margin:12px 0 8px;">⚠️ 非稳态场景分析</h4>
+    <table>
+      <tr><th>场景</th><th>法国反应</th><th>塞内加尔反应</th></tr>
+      <tr>
+        <td><strong>法国早早破门（0-1，25分钟内）</strong></td>
+        <td>控制球权 · 姆巴佩反击威胁增加<br>塞内加尔被迫打开防线</td>
+        <td>被迫压上寻找进球 · 空间增大 → 姆巴佩和登贝莱将获得更多反击空间</td></tr>
+      <tr>
+        <td><strong>0-0 僵局至半场</strong></td>
+        <td>压力增加 · "2002幽灵"浮现<br>迪谢兹可能提前换上巴尔科拉/多纳苏马</td>
+        <td>信心增长 · 2002年记忆浮现<br>塞内加尔开始相信自己能重演奇迹</td></tr>
+      <tr>
+        <td><strong>塞内加尔先进球（极低概率）</strong></td>
+        <td>全面压上 · 姆巴佩+登贝莱+奥利塞全力进攻<br>楚阿梅尼前插增加进攻点</td>
+        <td>全员退守 · 停大巴 · 库利巴利+门迪全力防守</td></tr>
+      <tr>
+        <td><strong>法国2-0领先</strong></td>
+        <td>进入比赛管理模式 · 换上拉比奥等经验球员控制节奏</td>
+        <td>可能抓住机会攻入安慰球<br>马内/伊斯梅拉·萨尔利用反击机会</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>关键发现：0-0半场是最危险的场景。</strong>如果法国上半场未能破门，"2002幽灵"将开始影响比赛——塞内加尔球员会想起他们的前辈如何在世界杯揭幕战击败法国。迪谢兹作为当年亲历者（他是法国队球员），深知这种心理压力。法国需要在30分钟前破门以"打掉"塞内加尔的信心。</div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>项目</th><th>法国 · 迈尼昂</th><th>塞内加尔 · 爱德华·门迪</th></tr>
+      <tr><td><strong>年龄/经验</strong></td><td>30岁 · 世界杯+欧洲杯经验</td><td>33岁 · 欧冠冠军（切尔西2021）</td></tr>
+      <tr><td><strong>俱乐部</strong></td><td>AC米兰（意甲）</td><td>吉达国民（沙特超）</td></tr>
+      <tr><td><strong>联赛水平</strong></td><td><span class="tag tag-green">意甲（顶级）</span></td><td><span class="tag tag-yellow">沙特超（非欧洲联赛）</span></td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>约72-78%</td><td>约68-74%（精确PSxG+/-不可用）</td></tr>
+      <tr><td><strong>大赛心理</strong></td><td>世界杯经验 · 抗压能力强</td><td>欧冠冠军+AFCON冠军 · 大赛经验丰富</td></tr>
+      <tr><td><strong>面对本场预期</strong></td><td>预计将面临3-5次有效射门 · 压力可控</td><td>预计将面临8-12次有效射门 · 压力较大</td></tr>
+    </table>
+    <div class="info-box">⚠️ <strong>门将对决：</strong>门迪曾随切尔西赢得欧冠冠军（2021年），大赛心理素质过硬。但他在沙特超的竞技水平是否与巅峰期匹配是疑问。迈尼昂在AC米兰保持了顶级水准，是世界前5门将之一。本场门迪将面临姆巴佩、登贝莱、奥利塞的轮番冲击——预计需要做出6+次关键扑救。</div>
+  </div>
+
+  <!-- ===== 犯规率/纪律指数 ===== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>法国</th><th>塞内加尔</th></tr>
+      <tr><td><strong>近期场均犯规</strong></td><td>约11次（低）</td><td>约13次（中偏高）</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>战术犯规为主 · 控球减少身体接触</td><td>身体对抗型 · 高位逼抢带来大量犯规</td></tr>
+      <tr><td><strong>红黄牌趋势</strong></td><td>纪律良好</td><td>AFCON期间黄牌较多但无红牌</td></tr>
+      <tr><td><strong>节奏破坏器标注</strong></td><td><span class="tag tag-green">正常范围（11次 < 15次阈值）</span></td><td><span class="tag tag-yellow">正常偏高水平（13次 < 15次阈值）</span></td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>预判：</strong>两队均未达到"节奏破坏器"标准（15+次/场），比赛节奏预计较为流畅。塞内加尔的高位逼抢将带来中偏高犯规率，但不会严重影响比赛流畅度。法国的战术犯规更多是中场的节奏控制型犯规。</div>
+  </div>
+
+  <!-- ===== 联赛→大赛折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>世界杯经验</th><th>折扣系数</th><th>风险评估</th></tr>
+      <tr><td colspan="4"><strong>法国</strong></td></tr>
+      <tr><td>姆巴佩</td><td>2018冠军+2022亚军 · 队长</td><td>× 0.95</td><td><span class="tag tag-green">最低风险</span></td></tr>
+      <tr><td>萨利巴</td><td>2022世界杯 · 阿森纳主力</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>楚阿梅尼</td><td>2022世界杯 · 皇马主力</td><td>× 0.93</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>卡马文加</td><td>2022世界杯（替补）</td><td>× 0.90</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>多纳苏马</td><td>0届 · 首次世界杯</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>扎伊尔-埃梅里</td><td>0届 · 首次世界杯</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>全队综合折扣</td><td>以2022世界杯班底为主</td><td><strong>× 0.92</strong></td><td><span class="tag tag-green">低</span></td></tr>
+      <tr><td colspan="4"><strong>塞内加尔</strong></td></tr>
+      <tr><td>马内</td><td>1届（2022）· 利物浦传奇</td><td>× 0.90</td><td><span class="tag tag-yellow">中风险（34岁体能）</span></td></tr>
+      <tr><td>库利巴利</td><td>1届（2022）· 切尔西/那不勒斯</td><td>× 0.92</td><td><span class="tag tag-yellow">中风险（34岁）</span></td></tr>
+      <tr><td>伊德里萨·盖耶</td><td>1届（2022）· 埃弗顿</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>爱德华·门迪</td><td>1届（2022）· 欧冠冠军</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>尼古拉斯·杰克逊</td><td>0届 · 首次世界杯</td><td>× 0.80</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>全队综合折扣</td><td>多名老将+首次世界杯球员</td><td><strong>× 0.88</strong></td><td><span class="tag tag-yellow">中</span></td></tr>
+    </table>
+    <div class="warn-box">⚠️ <strong>风险标记：</strong>法国全队综合折扣×0.92高于塞内加尔的×0.88，这反映了法国拥有更多大赛经验球员。但塞内加尔的"老将+首秀球员"组合也值得关注——马内（34岁）、库利巴利（34岁）的体能限制与杰克逊（23岁，首次世界杯）的紧张感是双重变量。法国方面仅有多纳苏马和扎伊尔-埃梅里属于"大赛无经验"风险区，但他们是替补球员，风险敞口较小。</div>
+  </div>
+
+  <!-- ===== 主教练 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练战术灵活性</div>
+    <table>
+      <tr><th>项目</th><th>法国 · 迪迪埃·迪谢兹</th><th>塞内加尔 · 帕普·蒂亚乌</th></tr>
+      <tr><td><strong>执教时间</strong></td><td>2012年至今（14年+）</td><td>近年接手 · AFCON冠军教练</td></tr>
+      <tr><td><strong>阵型稳定性</strong></td><td><span class="tag tag-green">固定4-2-3-1/4-3-3</span> · 战术体系成熟</td>
+      <td><span class="tag tag-blue">固定4-3-3</span> · 高位逼抢+快速转换</td></tr>
+      <tr><td><strong>临场调整</strong></td><td><span class="tag tag-green">出色</span> · 2022决赛逆转证明换人能力</td>
+      <td><span class="tag tag-yellow">常规</span> · 大赛样本有限</td></tr>
+      <tr><td><strong>世界杯经验</strong></td><td>3届（2018冠军、2022亚军）· <span class="tag tag-green">极其丰富</span></td>
+      <td><span class="tag tag-red">0场</span> · 首次世界杯作为主教练</td></tr>
+      <tr><td><strong>历史渊源</strong></td><td>1998年作为球员赢得世界杯<br>2002年作为球员亲历败给塞内加尔</td><td>2002年作为球员击败法国<br>AFCON 2025冠军教练</td></tr>
+      <tr><td><strong>战术灵活性标注</strong></td><td><span class="tag tag-green">战术稳定+灵活调整型</span></td>
+      <td><span class="tag tag-yellow">战术激进型</span> · 高位逼抢有风险</td></tr>
+    </table>
+    <div class="section-note">⚠️ <strong>教练对决的历史意义：</strong>迪谢兹和蒂亚乌是2002年那场"地震级冷门"的亲历者——迪谢兹是法国队球员，蒂亚乌是塞内加尔队球员。24年后两人以主教练身份再度碰面，这赋予了本场比赛独特的"宿命感"。迪谢兹的世界杯经验（3届，1冠军1亚军）远超蒂亚乌（0场），这是法国的巨大优势。但蒂亚乌的高位逼抢战术如果成功打乱法国节奏，可能制造混乱。</div>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>维度</th><th>法国</th><th>塞内加尔</th></tr>
+      <tr><td><strong>替补深度评估</strong></td><td><span class="tag tag-green">极深</span> · 多纳苏马+巴尔科拉+科洛·穆阿尼+拉比奥+科内特</td>
+      <td><span class="tag tag-yellow">中等</span> · 迪亚塔+迪亚+恩迪亚耶+阿卜杜拉耶·迪亚洛</td></tr>
+      <tr><td><strong>替补奇兵候选人</strong></td>
+        <td>
+          <strong>多纳苏马</strong>（巴黎圣日耳曼）<br>类型：即战力型 · 年轻突破手 · 替补改变节奏<br>
+          <strong>巴尔科拉</strong>（巴黎圣日耳曼）<br>类型：速度型边锋 · 反击杀器
+        </td>
+        <td>
+          <strong>克雷潘·迪亚塔</strong>（摩纳哥）<br>类型：速度+突破 · 边路威胁<br>
+          <strong>伊利曼·恩迪亚耶</strong>（埃弗顿）<br>类型：创造型前锋 · 可能制造意外
+        </td></tr>
+      <tr><td><strong>替补进球效率</strong></td><td>法国替补进球率约35%（近期比赛）</td>
+      <td>塞内加尔无世界杯历史数据 · 估计 <25%</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><strong>1. 姆巴佩 vs 库利巴利（速度 vs 经验）</strong>——姆巴佩是世界最快的前锋之一，库利巴利（34岁）虽然经验丰富，但在速度上处于绝对劣势。如果库利巴利一对一防守姆巴佩，法国队长很可能通过加速甩开他。塞内加尔需要依靠伊德里萨·盖耶和中场的协防来弥补库利巴利的速度劣势。</div>
+    <div class="key-matchup"><strong>2. 楚阿梅尼/卡马文加 vs 盖耶/帕普·盖耶（中场争夺战）</strong>——皇马双后腰楚阿梅尼+卡马文加是世界上最贵的中场组合之一。塞内加尔的盖耶兄弟（伊德里萨+帕普）需要用身体对抗+犯规来打断法国的中场控制。这是比赛的"胜负手"——谁控制中场，谁就控制比赛。</div>
+    <div class="key-matchup"><strong>3. 马内 vs 孔德（老将 vs 稳健后卫）</strong>——马内（34岁）虽然不在巅峰，但他的经验和球商仍然是世界级的。孔德（巴塞罗那）是法甲/西甲级别的顶级右后卫，速度和防守意识俱佳。马内能否用经验制造威胁，是塞内加尔进攻端的关键变量。</div>
+    <div class="key-matchup"><strong>4. 登贝莱/奥利塞 vs 阿卜杜·迪亚洛（创意过载）</strong>——登贝莱（欧洲最稳定边锋）和奥利塞（热身赛帽子戏法）将在右路对阿卜杜·迪亚洛（前巴黎圣日耳曼球员）形成"创意过载"。迪亚洛需要面对两个世界级创造者的轮番冲击，这可能是塞内加尔防线最大的弱点。</div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th><th>影响评估</th></tr>
+      <tr><td><strong>伤停</strong></td><td>法国：萨利巴已获准出场 · 登贝莱已恢复 · <span class="tag tag-green">无重大缺席</span><br>塞内加尔：<span class="tag tag-green">全员健康 · 完整阵容</span></td><td>两队均无重大伤病 · 可派最强阵容</td></tr>
+      <tr><td><strong>体能/赛程</strong></td><td>两队均首轮 · 充足休整</td><td>无赛程劣势</td></tr>
+      <tr><td><strong>天气/场地</strong></td><td>6月中旬新泽西：24-29°C · 闷热潮湿 · 可能有午后阵雨<br>MetLife体育场：82,500座 · 海拔接近海平面</td><td><span class="tag tag-yellow">对两队均有影响</span> · 闷热天气对马内/库利巴利（34岁）消耗更大</td></tr>
+      <tr><td><strong>海拔</strong></td><td>海平面</td><td>无影响</td></tr>
+      <tr><td><strong>中立场</strong></td><td>美国纽约 · MetLife体育场</td><td>真正中立场 · 法国可能因旅美华人/法裔观众略占人气优势</td></tr>
+      <tr><td><strong>历史交锋</strong></td><td>仅1次：2002世界杯 塞内加尔 1-0 法国（首尔）</td><td><span class="tag tag-yellow">"2002幽灵"心理因素</span></td></tr>
+      <tr><td><strong>大赛心理/逆转因子</strong></td><td colspan="2">
+        <strong>法国：</strong>2022决赛从0-2扳到2-3 · 展现强大韧性 · 但2002年的记忆是阴影<br>
+        <strong>塞内加尔：</strong>2002年1-0击败法国是国家队历史上最伟大的胜利 · AFCON 2025冠军提振士气<br>
+        <strong>实现路径：</strong>法国通过楚阿梅尼+卡马文加中场控制 + 姆巴佩+登贝莱边路突破 → 撕开塞内加尔防线 → 奥利塞门前终结（30分钟内破门概率 55%+）。塞内加尔通过高位逼抢制造混乱 → 马内/伊斯梅拉·萨尔反击 → 门迪力保城门 → 如果0-0坚持到60分钟，"2002幽灵"开始发酵。
+      </td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="prob-bar">
+        <div class="prob-label">法国胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:63%;"></div></div>
+        <div class="prob-val">63%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">平局</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:22%;"></div></div>
+        <div class="prob-val">22%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label">塞内加尔胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:15%;"></div></div>
+        <div class="prob-val">15%</div>
+      </div>
+    </div>
+
+    <h4 style="color:#0033A0;margin:8px 0;">Pinnacle 赔率隐含概率</h4>
+    <table>
+      <tr><th>选项</th><th>赔率</th><th>隐含概率</th></tr>
+      <tr><td>法国胜</td><td>1.48</td><td>~64%</td></tr>
+      <tr><td>平局</td><td>4.49</td><td>~21%</td></tr>
+      <tr><td>塞内加尔胜</td><td>7.20</td><td>~15%</td></tr>
+      <tr><td>Over 2.5</td><td>1.98</td><td>~49%</td></tr>
+      <tr><td>Under 2.5</td><td>1.91</td><td>~51%</td></tr>
+      <tr><td>双方进球 Yes</td><td>2.10</td><td>~45%</td></tr>
+      <tr><td>双方进球 No</td><td>1.70</td><td>~55%</td></tr>
+    </table>
+
+    <p style="font-weight:700;color:#0033A0;margin-top:12px;">概率置信度梯级：<span class="confidence conf-high">高</span>（胜率差 41%，远超 ≥8% 最低要求）</p>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">各概率信号强度标注</h4>
+    <table>
+      <tr><th>信号</th><th>指向</th><th>强度</th><th>解释</th></tr>
+      <tr><td>FIFA排名差距（#1 vs #14）</td><td>法国</td><td><span class="signal signal-strong">强</span></td><td>13位排名差 · 法国是世界第一 · 1877.32分</td></tr>
+      <tr><td>阵容深度（五大联赛全覆盖）</td><td>法国</td><td><span class="signal signal-strong">强</span></td><td>皇马+巴萨+拜仁+阿森纳+AC米兰+巴黎</td></tr>
+      <tr><td>近期状态（W-W-W-L-W vs W-W-W-W-D）</td><td>法国</td><td><span class="signal signal-strong">强</span></td><td>含金量更高 · 击败巴西/哥伦比亚</td></tr>
+      <tr><td>中场质量（皇马双后腰 vs 埃弗顿+马赛）</td><td>法国</td><td><span class="signal signal-strong">强</span></td><td>楚阿梅尼+卡马文加 vs 盖耶兄弟 · 数量级差距</td></tr>
+      <tr><td>主教练经验（3届世界杯 vs 0届）</td><td>法国</td><td><span class="signal signal-strong">强</span></td><td>迪谢兹：1冠军+1亚军 · 蒂亚乌：首次</td></tr>
+      <tr><td>2002年历史心理因素</td><td>塞内加尔</td><td><span class="signal signal-strong">强</span></td><td>塞内加尔1-0击败法国 · "2002幽灵" · 马内作为精神领袖的激励</td></tr>
+      <tr><td>AFCON冠军士气</td><td>塞内加尔</td><td><span class="signal signal-mid">中</span></td><td>2025年非洲杯冠军 · 但冠军头衔因技术原因被取消</td></tr>
+      <tr><td>门将对决（迈尼昂 vs 门迪）</td><td>法国</td><td><span class="signal signal-mid">中</span></td><td>门迪欧冠冠军但沙特超水平存疑</td></tr>
+      <tr><td>闷热天气影响</td><td>塞内加尔</td><td><span class="signal signal-weak">弱</span></td><td>马内/库利巴利34岁在闷热天气中消耗更大</td></tr>
+    </table>
+    <div class="info-box">📊 <strong>信号强度评估：</strong>5条强信号指向法国 · 1条强信号指向塞内加尔（2002心理因素）· 0条强信号指向平局。塞内加尔的2002心理因素是唯一"强信号"，但法国在实力、阵容深度、状态、中场、教练经验五个维度上均占据强信号优势。综合形成明确的法国倾向，但塞内加尔的"历史幽灵"让15%的爆冷概率不可忽视。</div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">法国 2-1 塞内加尔</span><span style="font-size:13px;color:#888;margin-left:8px;">（概率 ~14%）</span>
+    </div>
+    <div style="text-align:center;margin:8px 0;">
+      <span class="score-pred">法国 2-0 塞内加尔</span><span style="font-size:13px;color:#888;">（概率 ~12%）</span>
+      <span class="score-pred">法国 3-1 塞内加尔</span><span style="font-size:13px;color:#888;">（概率 ~9%）</span>
+      <span class="score-pred">1-1 平局</span><span style="font-size:13px;color:#888;">（概率 ~10%）</span>
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">预期xG区间</h4>
+    <div style="text-align:center;font-weight:700;font-size:18px;color:#0033A0;">
+      总 xG：2.30 - 3.15<br>
+      法国 xG：1.80 - 2.50 &nbsp;|&nbsp; 塞内加尔 xG：0.50 - 0.90
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>法国将以1-2球优势取胜，但塞内加尔有能力制造麻烦——预计比分 2-1，双方都有进球。</strong><br><br>
+        <strong>预测逻辑：</strong><br>
+        1. <strong>实力差距是全方位但可控的：</strong>法国FIFA排名第1，拥有姆巴佩、登贝莱、奥利塞等世界级攻击手，中场由皇马双后腰楚阿梅尼+卡马文加驱动。塞内加尔虽然排名第14，但马内（34岁）和库利巴利（34岁）的年龄限制了整体竞争力。法国预计控球率60-65%，xG 1.80-2.50。<br><br>
+        2. <strong>姆巴佩 vs 库利巴利是最大不对位：</strong>库利巴利（34岁）面对姆巴佩的加速突破将处于绝对劣势。法国的进攻将主要集中在左路——姆巴佩+特奥·埃尔南德斯的配合将是塞内加尔最大的防守考验。预计姆巴佩至少制造1次直接威胁。<br><br>
+        3. <strong>塞内加尔的"2002幽灵"是真实变量：</strong>2002年世界杯揭幕战，塞内加尔1-0击败法国——24年后两位亲历者以主教练身份再度碰面。如果法国上半场未能破门，"2002幽灵"将开始影响比赛。迪谢兹需要在前30分钟内取得进球以"打掉"塞内加尔的信心。<br><br>
+        4. <strong>塞内加尔有能力攻入安慰球：</strong>马内+伊斯梅拉·萨尔的反击组合有足够的速度和经验利用法国压上后的空档。爱德华·门迪的欧冠冠军级扑救也可能帮助塞内加尔保住1-1的比分直到60-70分钟。预计双方都有进球（概率~45%）。<br><br>
+        5. <strong>闷热天气的影响：</strong>24-29°C的闷热天气将对两队老将造成额外消耗。马内和库利巴利（均为34岁）可能在70分钟后出现体能下降，但塞内加尔替补深度足以进行针对性换人。<br><br>
+        <strong>关键假设：</strong><br>
+        · 姆巴佩能正常发挥（95%+把握）<br>
+        · 法国能在30分钟前破门以消除"2002幽灵"（55%把握）<br>
+        · 库利巴利能在一对一中限制姆巴佩至少前45分钟（60%把握）<br>
+        · 马内在闷热天气中坚持70分钟以上（65%把握）<br>
+        · 双方都有进球（45%把握）<br><br>
+        <strong>置信度：</strong><span class="confidence conf-high">高</span>（5条强信号指向法国 · 阵容深度碾压 · 中场质量差距明显 · 但塞内加尔的2002心理因素让爆冷概率不可忽视）
+      </p>
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">⚠️ 已知数据缺口</h4>
+    <table>
+      <tr><th>缺口</th><th>影响</th></tr>
+      <tr><td>塞内加尔门将门迪精确PSxG+/-</td><td>扑救能力区间为估算值</td></tr>
+      <tr><td>球员级xG逐场精确数据</td><td>xG区间为基于球队数据的估算 · 误差约±0.3</td></tr>
+      <tr><td>尼古拉斯·杰克逊拜仁外租期状态</td><td>从切尔西外租拜仁后的具体表现数据不完整</td></tr>
+      <tr><td>马内34岁在夏季闷热天气中的体能</td><td>能否坚持全场存在不确定性</td></tr>
+      <tr><td>迪谢兹最终首发11人</td><td>图拉姆/科洛·穆阿尼轮换未确定 · 中锋位置存在变数</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+</div>
+</body>
+</html>

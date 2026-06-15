@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿根廷 vs 阿尔及利亚 — 2026世界杯 J组 第1轮 预测报告</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; } .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; } .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; } .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; } .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; } .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; } .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1><span class="flag">&#x1f1e6;&#x1f1f7;</span> 阿根廷 vs 阿尔及利亚 <span class="flag">&#x1f1e9;&#x1f1ff;</span></h1>
+  <p>数据驱动 &middot; 多维度分析</p>
+  <p style="font-size:11px; margin-top:4px;">数据更新时间：2026-06-15 18:00（北京时间）</p>
+</div>
+
+<a href="../index.html" class="back-link">&larr; 返回赛事列表</a>
+
+<div class="container">
+
+  <!-- ====== 1. 比赛信息 ====== -->
+  <div class="card">
+    <div class="card-title">比赛信息</div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">赛事</div>
+        <div class="match-info-val">2026 世界杯 J组 第1轮</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">时间</div>
+        <div class="match-info-val">2026年6月16日 21:00 ET（北京时间 6月17日 09:00）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">场地</div>
+        <div class="match-info-val">GEHA Field at Arrowhead Stadium, Kansas City, MO</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">容量</div>
+        <div class="match-info-val">76,416</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">同组对手</div>
+        <div class="match-info-val">奥地利、约旦</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">FIFA 排名</div>
+        <div class="match-info-val">阿根廷 #2（卫冕冠军） vs 阿尔及利亚 ~#30</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 2. xG 数据 ====== -->
+  <div class="card">
+    <div class="card-title">xG 数据分析 <span class="tag tag-blue">xgscore.io</span></div>
+    <table>
+      <tr><th>指标</th><th>阿根廷 &#x1f1e6;&#x1f1f7;</th><th>阿尔及利亚 &#x1f1e9;&#x1f1ff;</th></tr>
+      <tr><td>球队评级</td><td><span class="tag tag-green">8.7/10 强队</span></td><td><span class="tag tag-yellow">5.3/10 中等</span></td></tr>
+      <tr><td>状态评分</td><td><span class="tag tag-red">4.2/10 状态低迷!</span></td><td><span class="tag tag-green">6.1/10 状态良好</span></td></tr>
+      <tr><td>xG 幸运度</td><td>+8%（略幸运）</td><td>+15%（较幸运）</td></tr>
+      <tr><td>xG 可预测性</td><td>73%</td><td><span class="tag tag-purple">94% 极高!</span></td></tr>
+      <tr><td>预期比分 (xG)</td><td colspan="2" style="text-align:center;font-weight:700;font-size:15px;">1.5 — 0.8</td></tr>
+    </table>
+    <div class="section-note">
+      <strong>关键发现：</strong>阿根廷状态评分仅 4.2/10（冰岛爆冷反映在数据中），而阿尔及利亚状态评分 6.1/10 反而更好。阿尔及利亚可预测性高达 94%，说明踢法非常稳定。
+    </div>
+  </div>
+
+  <!-- ====== 3. 赔率分析 ====== -->
+  <div class="card">
+    <div class="card-title">博彩赔率 <span class="tag tag-blue">Pinnacle</span></div>
+    <table>
+      <tr><th>结果</th><th>赔率</th><th>隐含概率</th></tr>
+      <tr><td>阿根廷胜</td><td>1.40</td><td>~67%</td></tr>
+      <tr><td>平局</td><td>4.57</td><td>~21%</td></tr>
+      <tr><td>阿尔及利亚胜</td><td>9.30</td><td>~11%</td></tr>
+    </table>
+    <table style="margin-top:12px;">
+      <tr><th>大小球</th><th>赔率</th><th>两队都进球</th><th>赔率</th></tr>
+      <tr><td>大 2.5</td><td>2.01</td><td>是</td><td>2.31</td></tr>
+      <tr><td>小 2.5</td><td>1.88</td><td>否</td><td>1.58</td></tr>
+    </table>
+    <div class="section-note">
+      <strong>解读：</strong>市场强烈看好阿根廷，但平局 4.57 赔率暗示 21% 的平局概率不容忽视。小 2.5 略微被看好（1.88），与预期低比分一致。
+    </div>
+  </div>
+
+  <!-- ====== 4. 阿根廷近期战绩 ====== -->
+  <div class="card">
+    <div class="card-title">阿根廷近期战绩 <span class="flag">&#x1f1e6;&#x1f1f7;</span> <span class="tag tag-red">状态: 4.2/10</span></div>
+    <table>
+      <tr><th>#</th><th>对手</th><th>比分</th><th>赛事</th><th>评级</th><th>对手档次</th></tr>
+      <tr>
+        <td>1</td>
+        <td>冰岛</td>
+        <td><span class="tag tag-red">0-1 负</span></td>
+        <td>友谊赛</td>
+        <td>0.3</td>
+        <td><span class="tag tag-red">Tier 3</span> 爆冷!</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>洪都拉斯</td>
+        <td><span class="tag tag-green">6-0 胜</span></td>
+        <td>友谊赛</td>
+        <td>6.5</td>
+        <td><span class="tag tag-purple">Tier 4</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>赞比亚</td>
+        <td><span class="tag tag-green">5-0 胜</span></td>
+        <td>友谊赛</td>
+        <td>6.1</td>
+        <td><span class="tag tag-purple">Tier 4</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>毛里塔尼亚</td>
+        <td><span class="tag tag-green">2-1 胜</span></td>
+        <td>友谊赛</td>
+        <td>1.8</td>
+        <td><span class="tag tag-purple">Tier 4</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>安哥拉</td>
+        <td><span class="tag tag-green">2-0 胜</span></td>
+        <td>友谊赛</td>
+        <td>4.6</td>
+        <td><span class="tag tag-yellow">Tier 3</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>委内瑞拉（客场）</td>
+        <td><span class="tag tag-green">1-0 胜</span></td>
+        <td>世预赛</td>
+        <td>—</td>
+        <td><span class="tag tag-yellow">Tier 3</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>波多黎各</td>
+        <td><span class="tag tag-green">6-0 胜</span></td>
+        <td>友谊赛</td>
+        <td>—</td>
+        <td><span class="tag tag-purple">Tier 4</span></td>
+      </tr>
+    </table>
+    <div class="warn-box">
+      <strong>&#9888; 警示：</strong>最近一场 0-1 负于冰岛（Tier 3）是巨大冷门。阿根廷对低级别对手持续刷大比分（5-0、6-0），但面对有组织的防守时（毛里塔尼亚 2-1、冰岛 0-1）表现挣扎。总体对手档次偏低，Tier 4 为主。
+    </div>
+  </div>
+
+  <!-- ====== 5. 阿尔及利亚近期战绩 ====== -->
+  <div class="card">
+    <div class="card-title">阿尔及利亚近期战绩 <span class="flag">&#x1f1e9;&#x1f1ff;</span> <span class="tag tag-green">状态: 6.1/10</span></div>
+    <table>
+      <tr><th>#</th><th>对手</th><th>比分</th><th>赛事</th><th>评级</th><th>对手档次</th></tr>
+      <tr>
+        <td>1</td>
+        <td>玻利维亚</td>
+        <td><span class="tag tag-green">胜</span></td>
+        <td>友谊赛</td>
+        <td>—</td>
+        <td><span class="tag tag-yellow">Tier 3</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>荷兰</td>
+        <td><span class="tag tag-green">2-1 胜</span></td>
+        <td>友谊赛</td>
+        <td><span class="tag tag-purple">7.2 极佳!</span></td>
+        <td><span class="tag tag-green">Tier 1</span> 重大胜利!</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>乌拉圭</td>
+        <td><span class="tag tag-yellow">0-0 平</span></td>
+        <td>友谊赛</td>
+        <td>5.0</td>
+        <td><span class="tag tag-green">Tier 1</span> 逼平强敌!</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>危地马拉</td>
+        <td><span class="tag tag-green">7-0 胜</span></td>
+        <td>友谊赛</td>
+        <td><span class="tag tag-purple">9.7 完美!</span></td>
+        <td><span class="tag tag-purple">Tier 4</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>尼日利亚</td>
+        <td><span class="tag tag-red">0-2 负</span></td>
+        <td>AFCON 2025 QF</td>
+        <td>0.8</td>
+        <td><span class="tag tag-blue">Tier 2</span></td>
+      </tr>
+    </table>
+    <div class="info-box">
+      <strong>&#9889; 亮点：</strong>阿尔及利亚展现了极强的巨人杀手属性——2-1 击败荷兰（Tier 1）、0-0 逼平乌拉圭（Tier 1）。7-0 血洗危地马拉获 9.7 完美评级。这些数据远超一支 FIFA #30 球队的预期水准。
+    </div>
+  </div>
+
+  <!-- ====== 6. 阿根廷预测首发 ====== -->
+  <div class="card">
+    <div class="card-title">阿根廷预测首发 <span class="flag">&#x1f1e6;&#x1f1f7;</span> <span class="tag tag-blue">4-3-3</span></div>
+    <div class="player-grid">
+      <div class="player-card"><span class="name">Emiliano Martínez</span><br><span class="meta">GK · Aston Villa · 世界杯英雄 · 扑点专家</span></div>
+      <div class="player-card"><span class="name">Nahuel Molina</span><br><span class="meta">RB · Atlético Madrid</span></div>
+      <div class="player-card"><span class="name">Cristian Romero</span><br><span class="meta">CB · Tottenham · 侵略性领袖</span></div>
+      <div class="player-card"><span class="name">Nicolás Otamendi</span><br><span class="meta">CB · Benfica · 38岁老将 &times;0.85</span></div>
+      <div class="player-card"><span class="name">Nicolás Tagliafico</span><br><span class="meta">LB · Lyon</span></div>
+      <div class="player-card"><span class="name">Rodrigo De Paul</span><br><span class="meta">CM · Atlético Madrid · "发动机"</span></div>
+      <div class="player-card"><span class="name">Enzo Fernández</span><br><span class="meta">CM · Chelsea · 深度组织者</span></div>
+      <div class="player-card"><span class="name">Alexis Mac Allister</span><br><span class="meta">CM · Liverpool · 全能创造者</span></div>
+      <div class="player-card"><span class="name"><strong>Lionel Messi (C)</strong></span><br><span class="meta">RW · Inter Miami · GOAT · 最后一届WC &times;0.95</span></div>
+      <div class="player-card"><span class="name">Lautaro Martínez</span><br><span class="meta">ST · Inter Milan · Scaloni时代头号射手</span></div>
+      <div class="player-card"><span class="name">Julián Álvarez</span><br><span class="meta">LW · Atlético Madrid · 动态前锋</span></div>
+    </div>
+    <div class="section-note">
+      <strong>折扣说明：</strong>卫冕冠军核心团队折扣 &times;0.92-0.95。Otamendi 38岁 &times;0.85。Messi 最后一届世界杯 &times;0.95（经验丰富但体能需管理）。Garnacho &times;0.75（首次世界杯）。
+    </div>
+  </div>
+
+  <!-- ====== 7. 阿根廷关键球员 ====== -->
+  <div class="card">
+    <div class="card-title">阿根廷关键球员</div>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部</th><th>备注</th></tr>
+      <tr><td>1</td><td><span class="player-name">Lionel Messi (C)</span></td><td>RW</td><td>Inter Miami</td><td>GOAT · 2022世界杯冠军 · 最后一届 &times;0.95</td></tr>
+      <tr><td>2</td><td><span class="player-name">Emiliano Martínez</span></td><td>GK</td><td>Aston Villa</td><td>2022世界杯金手套 · 扑点王</td></tr>
+      <tr><td>3</td><td><span class="player-name">Lautaro Martínez</span></td><td>ST</td><td>Inter Milan</td><td>Scaloni时代队内最佳射手</td></tr>
+      <tr><td>4</td><td><span class="player-name">Julián Álvarez</span></td><td>FW</td><td>Atlético Madrid</td><td>2022世界杯打入4球</td></tr>
+      <tr><td>5</td><td><span class="player-name">Enzo Fernández</span></td><td>CM</td><td>Chelsea</td><td>2022世界杯最佳年轻球员</td></tr>
+      <tr><td>6</td><td><span class="player-name">Alexis Mac Allister</span></td><td>CM</td><td>Liverpool</td><td>创造性8号位</td></tr>
+      <tr><td>7</td><td><span class="player-name">Rodrigo De Paul</span></td><td>CM</td><td>Atlético Madrid</td><td>"Messi的保镖"</td></tr>
+      <tr><td>8</td><td><span class="player-name">Cristian Romero</span></td><td>CB</td><td>Tottenham</td><td>侵略性中后卫</td></tr>
+      <tr><td>9</td><td><span class="player-name">Nicolás Otamendi</span></td><td>CB</td><td>Benfica</td><td>38岁 &times;0.85 老将折扣</td></tr>
+      <tr><td>10</td><td><span class="player-name">Nahuel Molina</span></td><td>RB</td><td>Atlético Madrid</td><td>—</td></tr>
+      <tr><td>11</td><td><span class="player-name">Nicolás Tagliafico</span></td><td>LB</td><td>Lyon</td><td>—</td></tr>
+      <tr><td>12</td><td><span class="player-name">Nicolás González</span></td><td>LW</td><td>Juventus/Fiorentina</td><td>边锋选项</td></tr>
+      <tr><td>13</td><td><span class="player-name">Leandro Paredes</span></td><td>CM</td><td>Roma</td><td>深度组织者</td></tr>
+      <tr><td>14</td><td><span class="player-name">Gonzalo Montiel</span></td><td>RB</td><td>Sevilla/Nottingham</td><td>世界杯决赛点球功臣</td></tr>
+      <tr><td>15</td><td><span class="player-name">Lisandro Martínez</span></td><td>CB</td><td>Man United</td><td>中卫替补 · 伤病倾向</td></tr>
+      <tr><td>16</td><td><span class="player-name">Exequiel Palacios</span></td><td>CM</td><td>Bayer Leverkusen</td><td>中场轮换</td></tr>
+      <tr><td>17</td><td><span class="player-name">Alejandro Garnacho</span></td><td>LW</td><td>Man United</td><td>年轻边锋 &times;0.75（首次世界杯）</td></tr>
+      <tr><td>18</td><td><span class="player-name">Paulo Dybala</span></td><td>FW</td><td>Roma</td><td>超级替补攻击手</td></tr>
+    </table>
+  </div>
+
+  <!-- ====== 8. 阿尔及利亚预测首发 ====== -->
+  <div class="card">
+    <div class="card-title">阿尔及利亚预测首发 <span class="flag">&#x1f1e9;&#x1f1ff;</span> <span class="tag tag-blue">4-3-3</span></div>
+    <div class="player-grid">
+      <div class="player-card"><span class="name">Alexandre Oukidja</span><br><span class="meta">GK · Metz</span></div>
+      <div class="player-card"><span class="name">Youcef Atal</span><br><span class="meta">RB · Adana Demirspor/Nice · 进攻型边卫</span></div>
+      <div class="player-card"><span class="name">Aïssa Mandi</span><br><span class="meta">CB · Lille/Villarreal · 90+场经验</span></div>
+      <div class="player-card"><span class="name">Djamel Benlamri</span><br><span class="meta">CB · 老将后卫</span></div>
+      <div class="player-card"><span class="name">Ramy Bensebaini</span><br><span class="meta">LB · Borussia Dortmund · BVB主力</span></div>
+      <div class="player-card"><span class="name">Houssem Aouar</span><br><span class="meta">CM · Al-Ittihad · 前里昂球星 · 创造力</span></div>
+      <div class="player-card"><span class="name">Ismaël Bennacer</span><br><span class="meta">CM · AC Milan · 精英推进者 · 伤病存疑</span></div>
+      <div class="player-card"><span class="name">Ramiz Zerrouki</span><br><span class="meta">DM · Feyenoord · 防守型中场</span></div>
+      <div class="player-card"><span class="name"><strong>Riyad Mahrez (C)</strong></span><br><span class="meta">RW · Al-Ahli · 100+场 · 盘带大师 &times;0.90</span></div>
+      <div class="player-card"><span class="name">Islam Slimani / Bounedjah</span><br><span class="meta">ST · 历史最佳射手 / AFCON 2019英雄</span></div>
+      <div class="player-card"><span class="name">Farès Chaïbi</span><br><span class="meta">LW · Eintracht Frankfurt · 7G 11A德甲 &times;0.80</span></div>
+    </div>
+    <div class="section-note">
+      <strong>折扣说明：</strong>混编阵容，团队折扣 &times;0.85-0.88。Mahrez &times;0.90（世界杯老将）、Bensebaini &times;0.90、Chaïbi &times;0.80（首次世界杯）、Amoura &times;0.80（首次世界杯）。
+    </div>
+  </div>
+
+  <!-- ====== 9. 阿尔及利亚关键球员 ====== -->
+  <div class="card">
+    <div class="card-title">阿尔及利亚关键球员</div>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部</th><th>备注</th></tr>
+      <tr><td>1</td><td><span class="player-name">Riyad Mahrez (C)</span></td><td>RW</td><td>Al-Ahli</td><td>队长 · 100+场 · 英超传奇 &times;0.90</td></tr>
+      <tr><td>2</td><td><span class="player-name">Farès Chaïbi</span></td><td>LW</td><td>Frankfurt</td><td>德甲 7球11助 · 速度型 &times;0.80</td></tr>
+      <tr><td>3</td><td><span class="player-name">Houssem Aouar</span></td><td>CM</td><td>Al-Ittihad</td><td>创造核心 · 前法国U21</td></tr>
+      <tr><td>4</td><td><span class="player-name">Ismaël Bennacer</span></td><td>CM</td><td>AC Milan</td><td>健康时精英级别 · 伤病隐患</td></tr>
+      <tr><td>5</td><td><span class="player-name">Ramy Bensebaini</span></td><td>LB</td><td>Dortmund</td><td>定位球威胁 · BVB首发 &times;0.90</td></tr>
+      <tr><td>6</td><td><span class="player-name">Mohamed Amoura</span></td><td>FW</td><td>Wolfsburg/Union SG</td><td>快马前锋 · 非洲足球先生候选</td></tr>
+      <tr><td>7</td><td><span class="player-name">Amine Gouiri</span></td><td>FW</td><td>Marseille</td><td>聪明跑位 · 终结能力强</td></tr>
+      <tr><td>8</td><td><span class="player-name">Ramiz Zerrouki</span></td><td>DM</td><td>Feyenoord</td><td>防守型中场屏障</td></tr>
+      <tr><td>9</td><td><span class="player-name">Aïssa Mandi</span></td><td>CB</td><td>Lille</td><td>90+场国家队经验</td></tr>
+      <tr><td>10</td><td><span class="player-name">Youcef Atal</span></td><td>RB</td><td>Adana Demirspor</td><td>—</td></tr>
+      <tr><td>11</td><td><span class="player-name">Djamel Benlamri</span></td><td>CB</td><td>—</td><td>老将</td></tr>
+      <tr><td>12</td><td><span class="player-name">Islam Slimani</span></td><td>ST</td><td>—</td><td>历史最佳射手 · 超级替补</td></tr>
+      <tr><td>13</td><td><span class="player-name">Baghdad Bounedjah</span></td><td>ST</td><td>Al-Sadd</td><td>AFCON 2019 决赛进球者</td></tr>
+      <tr><td>14</td><td><span class="player-name">Saïd Benrahma</span></td><td>LW</td><td>Lyon/West Ham</td><td>创造性边锋</td></tr>
+      <tr><td>15</td><td><span class="player-name">Rayan Aït-Nouri</span></td><td>LB</td><td>Wolves</td><td>年轻左后卫</td></tr>
+      <tr><td>16</td><td><span class="player-name">Nabil Bentaleb</span></td><td>CM</td><td>Lille</td><td>经验型中场</td></tr>
+      <tr><td>17</td><td><span class="player-name">Alexandre Oukidja</span></td><td>GK</td><td>Metz</td><td>门将选项</td></tr>
+      <tr><td>18</td><td><span class="player-name">Adem Zorgane</span></td><td>CM</td><td>Charleroi</td><td>年轻中场</td></tr>
+    </table>
+  </div>
+
+  <!-- ====== 10. 教练分析 ====== -->
+  <div class="card">
+    <div class="card-title">教练对比</div>
+    <table>
+      <tr><th style="width:25%;">指标</th><th>Lionel Scaloni &#x1f1e6;&#x1f1f7;</th><th>Vladimir Petković &#x1f1e9;&#x1f1ff;</th></tr>
+      <tr>
+        <td>国籍</td>
+        <td>阿根廷</td>
+        <td>瑞士/波黑</td>
+      </tr>
+      <tr>
+        <td>执教荣誉</td>
+        <td><span class="tag tag-green">2022世界杯冠军</span> · 美洲杯2021&2024</td>
+        <td>曾率瑞士晋级 Euro 2020 八强（点球淘汰法国!）</td>
+      </tr>
+      <tr>
+        <td>战术体系</td>
+        <td>灵活 4-3-3 / 4-4-2 / 3-5-2</td>
+        <td>4-3-3 或 4-5-1 防守反击</td>
+      </tr>
+      <tr>
+        <td>风格特点</td>
+        <td>临场调整出色 · 世界级</td>
+        <td>纪律严明 · 组织有序</td>
+      </tr>
+      <tr>
+        <td>世界杯经验</td>
+        <td><span class="tag tag-green">1届 · 夺冠</span></td>
+        <td>带瑞士出战过世界杯 · 首次带阿尔及利亚</td>
+      </tr>
+      <tr>
+        <td>评级</td>
+        <td><span class="tag tag-green">世界级</span></td>
+        <td><span class="tag tag-blue">经验丰富</span></td>
+      </tr>
+    </table>
+    <div class="section-note">
+      <strong>关键点：</strong>Petković 有大场面经验——他带瑞士在 Euro 2020 点球淘汰法国，证明他懂得如何击败强队。Scaloni 虽然战绩辉煌，但冰岛爆冷说明阿根廷并非不可战胜。
+    </div>
+  </div>
+
+  <!-- ====== 11. 历史交锋 ====== -->
+  <div class="card">
+    <div class="card-title">历史交锋</div>
+    <table>
+      <tr><th>日期</th><th>赛事</th><th>比分</th><th>备注</th></tr>
+      <tr>
+        <td>2007年</td>
+        <td>友谊赛</td>
+        <td><span class="score-pred score-main">阿根廷 4-3 阿尔及利亚</span></td>
+        <td>Messi 在 Camp Nou 进球 · 唯一一次交手</td>
+      </tr>
+    </table>
+    <div class="section-note">
+      两队仅有过一次交锋，距今已近 20 年，参考价值有限。当时的 4-3 说明比赛较为开放。
+    </div>
+  </div>
+
+  <!-- ====== 12. 关键对位 ====== -->
+  <div class="card">
+    <div class="card-title">关键对位</div>
+    <div class="key-matchup">
+      <span class="flag">&#x1f1e6;&#x1f1f7;</span>
+      <div style="flex:1;"><strong>1. Messi vs 阿尔及利亚低位防守</strong><br><span style="font-size:12px;color:#666;">Messi 能否破解深度防守阵型？阿尔及利亚的防线组织将是最大考验。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">&#x1f1e9;&#x1f1ff;</span>
+      <div style="flex:1;"><strong>2. Chaïbi 的速度 vs Molina</strong><br><span style="font-size:12px;color:#666;">Chaïbi 是阿尔及利亚最有威胁的攻击武器，Molina 的防守将面临考验。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">&#x1f1e6;&#x1f1f7;</span><span class="flag">&#x1f1e9;&#x1f1ff;</span>
+      <div style="flex:1;"><strong>3. Mahrez 的创造力 vs Tagliafico</strong><br><span style="font-size:12px;color:#666;">两大老将的正面对决，Mahrez 的盘带 vs Tagliafico 的防守纪律。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">&#x1f1e6;&#x1f1f7;</span>
+      <div style="flex:1;"><strong>4. Lautaro vs Mandi/Benlamri</strong><br><span style="font-size:12px;color:#666;">禁区内的身体对抗。Lautaro 在斯卡洛尼体系下得分能力强，阿尔及利亚中卫经验丰富但速度存疑。</span></div>
+    </div>
+  </div>
+
+  <!-- ====== 13. 伤停情况 ====== -->
+  <div class="card">
+    <div class="card-title">伤停信息</div>
+    <table>
+      <tr><th>球队</th><th>球员</th><th>状态</th></tr>
+      <tr>
+        <td><span class="flag">&#x1f1e6;&#x1f1f7;</span> 阿根廷</td>
+        <td>全队</td>
+        <td><span class="tag tag-green">无重大伤停</span> · 全员可出战</td>
+      </tr>
+      <tr>
+        <td><span class="flag">&#x1f1e9;&#x1f1ff;</span> 阿尔及利亚</td>
+        <td>Ismaël Bennacer</td>
+        <td><span class="tag tag-yellow">健康状况存疑</span> · AC米兰球员有伤病史</td>
+      </tr>
+    </table>
+    <div class="section-note">
+      Bennacer 的出场状态是阿尔及利亚中场的最大变数——健康时他是精英级别的推进者，缺席将严重削弱中场控制力。
+    </div>
+  </div>
+
+  <!-- ====== 14. 犯规与替补 ====== -->
+  <div class="card">
+    <div class="card-title">犯规数据 &amp; 替补火力</div>
+    <div class="match-info-grid" style="margin-bottom:16px;">
+      <div class="match-info-item">
+        <div class="match-info-label">阿根廷平均犯规</div>
+        <div class="match-info-val">~10次/场 <span class="tag tag-green">偏低</span></div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">阿尔及利亚平均犯规</div>
+        <div class="match-info-val">~12次/场 <span class="tag tag-yellow">中等</span></div>
+      </div>
+    </div>
+    <table>
+      <tr><th>球队</th><th>替补席深度</th><th>评级</th></tr>
+      <tr>
+        <td><span class="flag">&#x1f1e6;&#x1f1f7;</span> 阿根廷</td>
+        <td>Dybala · Garnacho · Paredes · Palacios · Lisandro Martínez · Montiel</td>
+        <td><span class="tag tag-green">世界级替补席</span></td>
+      </tr>
+      <tr>
+        <td><span class="flag">&#x1f1e9;&#x1f1ff;</span> 阿尔及利亚</td>
+        <td>Slimani（支点超级替补）· Gouiri · Benrahma · Bentaleb</td>
+        <td><span class="tag tag-yellow">不错但非精英深度</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ====== 15. 场地天气 ====== -->
+  <div class="card">
+    <div class="card-title">场地与天气</div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">球场</div>
+        <div class="match-info-val">Arrowhead Stadium, Kansas City</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">海拔</div>
+        <div class="match-info-val">277m（海平面级别）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">6月气温</div>
+        <div class="match-info-val">25-32°C · 潮湿</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">场地性质</div>
+        <div class="match-info-val">中立场地</div>
+      </div>
+    </div>
+    <div class="info-box">
+      预计现场阿根廷侨民将占主导，气氛偏向阿根廷。潮湿天气对两队体能都是考验，但阿根廷技术型打法受天气影响小于非洲风格。
+    </div>
+  </div>
+
+  <!-- ====== 16. 心理因素 ====== -->
+  <div class="card">
+    <div class="card-title">心理分析</div>
+    <table>
+      <tr><th>球队</th><th>心理状态</th></tr>
+      <tr>
+        <td><span class="flag">&#x1f1e6;&#x1f1f7;</span> 阿根廷</td>
+        <td>卫冕冠军压力巨大 · Messi 最后一舞 · 期望值极高 · 冰岛爆冷可能留下心理阴影</td>
+      </tr>
+      <tr>
+        <td><span class="flag">&#x1f1e9;&#x1f1ff;</span> 阿尔及利亚</td>
+        <td>弱者定位舒适 · Petković 有击败过强队的历史（Euro 2020 淘汰法国） · 逼平乌拉圭证明韧性强</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ====== 17. xG 细分布局 ====== -->
+  <div class="card">
+    <div class="card-title">xG 细分预测</div>
+    <table>
+      <tr><th>项目</th><th>数值</th></tr>
+      <tr><td>总 xG 区间</td><td>2.00 — 3.00</td></tr>
+      <tr><td>阿根廷 xG</td><td>1.40 — 2.10</td></tr>
+      <tr><td>阿尔及利亚 xG</td><td>0.60 — 1.10</td></tr>
+      <tr><td>阿根廷状态评分</td><td><span class="tag tag-red">4.2/10 偏低</span> — 需关注</td></tr>
+      <tr><td>阿尔及利亚可预测性</td><td><span class="tag tag-purple">94% 极高</span> — 踢法异常稳定</td></tr>
+    </table>
+  </div>
+
+  <!-- ====== 18. 非稳态情景 ====== -->
+  <div class="card">
+    <div class="card-title">非稳态情景推演</div>
+    <table>
+      <tr><th>情景</th><th>描述</th><th>概率</th></tr>
+      <tr>
+        <td><span class="tag tag-blue">阿根廷早进球（&lt;30分钟）</span></td>
+        <td>阿根廷掌控比赛节奏，阿尔及利亚被迫开放阵型→反击威胁增加。Messi 可以更早被换下保存体力。</td>
+        <td>约35%</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-yellow">0-0 进入半场</span></td>
+        <td>阿尔及利亚信心增强（他们曾0-0逼平乌拉圭）。Messi 可能产生挫败感。阿根廷需在下半场寻找破局。</td>
+        <td>约30%</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-red">阿尔及利亚率先进球</span></td>
+        <td>阿根廷全力反扑。阿尔及利亚的防守能力已在对阵乌拉圭时得到验证。最大的冷门触发条件。</td>
+        <td>约15%</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-green">阿根廷 2-0</span></td>
+        <td>比赛管理阶段开始，Messi 提前被换下保护体能。最理想的剧本。</td>
+        <td>约20%</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ====== 19. 综合预测 ====== -->
+  <div class="card">
+    <div class="card-title">综合预测 <span class="flag">&#x1f1e6;&#x1f1f7;</span> <span class="vs-badge">VS</span> <span class="flag">&#x1f1e9;&#x1f1ff;</span></div>
+
+    <table>
+      <tr><th>结果</th><th>概率</th></tr>
+      <tr><td><strong>阿根廷 胜</strong></td><td style="font-weight:700;color:#0033A0;">65%</td></tr>
+      <tr><td><strong>平局</strong></td><td style="font-weight:700;color:#f57f17;">23%</td></tr>
+      <tr><td><strong>阿尔及利亚 胜</strong></td><td style="font-weight:700;color:#c62828;">12%</td></tr>
+    </table>
+
+    <div style="margin:16px 0;">
+      <div class="prob-bar">
+        <span class="prob-label">阿根廷胜</span>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:65%;"></div></div>
+        <span class="prob-val">65%</span>
+      </div>
+      <div class="prob-bar">
+        <span class="prob-label">平局</span>
+        <div class="prob-track"><div class="prob-fill prob-fill-gold" style="width:23%;"></div></div>
+        <span class="prob-val">23%</span>
+      </div>
+      <div class="prob-bar">
+        <span class="prob-label">阿尔及利亚</span>
+        <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:12%;"></div></div>
+        <span class="prob-val">12%</span>
+      </div>
+    </div>
+
+    <div class="conclusion-box">
+      <p style="font-size:15px; font-weight:700; color:#0033A0; margin-bottom:8px;">预测结论：阿根廷 2-0 阿尔及利亚</p>
+      <p style="font-size:14px; color:#333;">置信度：<span class="confidence conf-mid">中等</span></p>
+      <p style="font-size:13px; color:#555; margin-top:6px;">胜率差值 42%，信号强度一般。</p>
+      <p style="font-size:13px; color:#555; margin-top:6px; line-height:1.6;">
+        <strong>信号分析：</strong><br>
+        <span class="signal signal-strong">强</span> 阿根廷信号 &times;4：FIFA排名#2、阵容质量、Messi因子、教练（Scaloni）<br>
+        <span class="signal signal-mid">中</span> 平局信号 &times;2：阿尔及利亚可预测性94%、曾0-0逼平乌拉圭
+      </p>
+    </div>
+
+    <p style="font-size:14px; font-weight:700; color:#0033A0; margin-top:16px;">比分概率分布：</p>
+    <div style="margin-top:8px;">
+      <span class="score-pred score-main">2-0 阿根廷 (~13%)</span>
+      <span class="score-pred">2-1 阿根廷 (~11%)</span>
+      <span class="score-pred">1-0 阿根廷 (~10%)</span>
+      <span class="score-pred">1-1 平局 (~12%)</span>
+    </div>
+
+    <div class="section-note" style="margin-top:16px;">
+      <strong>⚠ 核心矛盾：</strong>阿根廷纸面实力碾压，但近期状态（4.2/10）远逊于阿尔及利亚（6.1/10）。阿尔及利亚逼平乌拉圭、击败荷兰的战绩显示他们完全有能力与强队抗衡。平局概率（23%）高于一般预想，值得在投注中考虑。
+    </div>
+  </div>
+
+  <!-- ====== 20. 数据缺口 ====== -->
+  <div class="card">
+    <div class="card-title">数据缺口与不确定性</div>
+    <table>
+      <tr><th>#</th><th>缺口</th><th>影响</th></tr>
+      <tr><td>1</td><td>Bennacer 健康状况</td><td>若缺席，阿尔及利亚中场控制力大幅下降</td></tr>
+      <tr><td>2</td><td>Messi 38岁在 MLS 的状态 vs 世界杯强度</td><td>关键变量——世界杯强度远超 MLS</td></tr>
+      <tr><td>3</td><td>阿尔及利亚门将数据</td><td>门将不确定性增加预测偏差</td></tr>
+      <tr><td>4</td><td>Petković 的 Messi 防守战术</td><td>阿尔及利亚的战术布置未知，参考 Petković 过往面对强队的纪律性</td></tr>
+      <tr><td>5</td><td>阿根廷冰岛爆冷的原因</td><td>是偶然失误还是系统性漏洞？这直接影响对阿根廷的评估</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>
