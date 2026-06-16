@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 乌兹别克斯坦 vs 哥伦比亚（2026-06-17）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-16 18:00（北京时间）</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- 比赛信息 -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇺🇿</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">乌兹别克斯坦</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#e65100;margin:0 12px;">哥伦比亚</span>
+      <span class="flag">🇨🇴</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Uzbekistan vs Colombia</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-18 10:00 北京时间（当地 6月17日 20:00 CT）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">墨西哥城 · 阿兹特克体育场（87,000座 · 海拔2,240m）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛阶段</div><div class="match-info-val">K组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA排名</div><div class="match-info-val">乌兹别克斯坦 #58 vs 哥伦比亚 #13</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组形势</div><div class="match-info-val">首场小组赛 · 同组还有葡萄牙、刚果民主共和国</div></div>
+      <div class="match-info-item"><div class="match-info-label">历史交锋</div><div class="match-info-val">无正式比赛交锋记录</div></div>
+    </div>
+    <div class="info-box">🏟️ <strong>海拔因子：</strong>阿兹特克体育场海拔2,240m，是本届世界杯最高海拔场地。高海拔导致空气稀薄、球速加快、体能消耗加速。两队均无高原作战习惯，但墨西哥球迷为主场营造的氛围将成为第三因素。</div>
+    <div class="info-box">🇺🇿 <strong>历史时刻：</strong>这是乌兹别克斯坦独立以来首次参加世界杯正赛，中亚足球的里程碑。队长肖穆罗多夫（92场44球）将领衔出战。主教练卡纳瓦罗——2006年世界杯冠军队长——以教练身份重返世界杯舞台。</div>
+  </div>
+
+  <!-- 近期状态 -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>乌兹别克斯坦</th><th>哥伦比亚</th></tr>
+      <tr><td><strong>近5场战绩</strong></td><td>1胜2平2负（W-D-D-L-L）</td><td>3胜2负（W-W-L-L-W）</td></tr>
+      <tr><td><strong>具体赛果</strong></td>
+        <td>
+          3-1 加蓬（FIFA系列赛）<span class="tag tag-green">Tier4</span><br>
+          0-0 委内瑞拉（FIFA系列赛）<span class="tag tag-yellow">Tier3</span><br>
+          2-2 中国（友谊赛）<span class="tag tag-yellow">Tier3</span><br>
+          0-2 加拿大（友谊赛）<span class="tag tag-blue">Tier2</span><br>
+          1-2 荷兰（友谊赛）<span class="tag tag-blue">Tier1</span>
+        </td>
+        <td>
+          2-0 约旦（友谊赛）<span class="tag tag-yellow">Tier3</span><br>
+          3-1 哥斯达黎加（友谊赛）<span class="tag tag-yellow">Tier3</span><br>
+          1-3 法国（友谊赛）<span class="tag tag-blue">Tier1</span><br>
+          1-2 克罗地亚（友谊赛）<span class="tag tag-blue">Tier1</span><br>
+          3-0 澳大利亚（友谊赛）<span class="tag tag-green">Tier4</span>
+        </td>
+      </tr>
+      <tr><td><strong>vs Tier1-2</strong></td><td>0胜0平2负 · 进1球失4球</td><td>0胜0平2负 · 进2球失5球</td></tr>
+      <tr><td><strong>vs Tier3-4</strong></td><td>1胜2平0负 · 进5球失3球</td><td>2胜0平0负 · 进5球失1球</td></tr>
+      <tr><td><strong>xGscore球队评分</strong></td><td>3.5（POOR）</td><td>7.1（GOOD）</td></tr>
+      <tr><td><strong>xGscore状态评分</strong></td><td>5.0（STABLE）</td><td>5.4（STABLE）</td></tr>
+    </table>
+    <div class="section-note">⚠️ 对手强度校准关键发现：乌兹别克斯坦面对Tier1-2对手时全败且仅进1球，但世预赛4场仅失2球说明其防守纪律性在同级对手中出色。哥伦比亚虽也败给Tier1（法国、克罗地亚），但胜率对低档对手碾压。</div>
+  </div>
+
+  <!-- 球员覆盖 -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（16-20人/队）</div>
+    <p style="font-size:13px;font-weight:600;color:#0033A0;margin-bottom:8px;">🇺🇿 乌兹别克斯坦 核心18人</p>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">Eldor Shomurodov ©</div><div class="meta">FW · İstanbul Başakşehir · 92场/44球 · 队长灵魂</div></div>
+      <div class="player-card"><div class="name">Abdukodir Khusanov</div><div class="meta">DF · 曼城 · 22岁 · 防线核心 · 唯一五大联赛球员</div></div>
+      <div class="player-card"><div class="name">Abbosbek Fayzullaev</div><div class="meta">MF · İstanbul Başakşehir · 22岁 · 创造型中场</div></div>
+      <div class="player-card"><div class="name">Jaloliddin Masharipov</div><div class="meta">MF · Esteghlal · 32岁 · 经验丰富的组织者</div></div>
+      <div class="player-card"><div class="name">Oston Urunov</div><div class="meta">MF · Persepolis · 25岁 · 边路突击手</div></div>
+      <div class="player-card"><div class="name">Odiljon Hamrobekov</div><div class="meta">MF · Tractor · 30岁 · 中场屏障</div></div>
+      <div class="player-card"><div class="name">Rustam Ashurmatov</div><div class="meta">DF · Esteghlal · 29岁 · 中卫搭档</div></div>
+      <div class="player-card"><div class="name">Khojiakbar Alijonov</div><div class="meta">DF · Pakhtakor · 29岁 · 右后卫</div></div>
+      <div class="player-card"><div class="name">Sherzod Nasrullaev</div><div class="meta">DF · Nasaf · 27岁 · 后防轮换</div></div>
+      <div class="player-card"><div class="name">Igor Sergeev</div><div class="meta">FW · Persepolis · 33岁 · 替补杀手</div></div>
+      <div class="player-card"><div class="name">Dostonbek Khamdamov</div><div class="meta">MF · Pakhtakor · 29岁 · 替补创造力</div></div>
+      <div class="player-card"><div class="name">Akmal Mozgovoy</div><div class="meta">MF · Pakhtakor · 27岁 · 中场替补</div></div>
+      <div class="player-card"><div class="name">Utkir Yusupov</div><div class="meta">GK · Navbahor · 35岁 · 首发门将</div></div>
+      <div class="player-card"><div class="name">Farrukh Sayfiev</div><div class="meta">DF · Neftchi · 35岁 · 老将中卫</div></div>
+      <div class="player-card"><div class="name">Otabek Shukurov</div><div class="meta">MF · Baniyas · 29岁 · 中场工兵</div></div>
+      <div class="player-card"><div class="name">Jamshid Iskanderov</div><div class="meta">MF · Neftchi · 32岁 · 经验替补</div></div>
+      <div class="player-card"><div class="name">Azizbek Amonov</div><div class="meta">FW · Bukhara · 28岁 · 前锋替补</div></div>
+      <div class="player-card"><div class="name">Umar Eshmurodov</div><div class="meta">DF · Nasaf · 33岁 · 后防替补</div></div>
+    </div>
+    <p style="font-size:13px;font-weight:600;color:#e65100;margin:16px 0 8px;">🇨🇴 哥伦比亚 核心18人</p>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">James Rodríguez ©</div><div class="meta">MF · Minnesota United · 126场/31球 · 2014世界杯金靴 · 创造力心脏</div></div>
+      <div class="player-card"><div class="name">Luis Díaz</div><div class="meta">FW · 拜仁慕尼黑 · 74场/22球 · 左路爆点 · 预选赛7球</div></div>
+      <div class="player-card"><div class="name">Davinson Sánchez</div><div class="meta">DF · Galatasaray · 29岁 · 防线领袖</div></div>
+      <div class="player-card"><div class="name">Jhon Lucumí</div><div class="meta">DF · Bologna · 27岁 · 出球中卫</div></div>
+      <div class="player-card"><div class="name">Daniel Muñoz</div><div class="meta">DF · Crystal Palace · 30岁 · 攻击型右后卫</div></div>
+      <div class="player-card"><div class="name">Jefferson Lerma</div><div class="meta">MF · Crystal Palace · 31岁 · 中场绞肉机</div></div>
+      <div class="player-card"><div class="name">Richard Ríos</div><div class="meta">MF · 本菲卡 · 25岁 · B2B中场</div></div>
+      <div class="player-card"><div class="name">Jhon Arias</div><div class="meta">MF · Palmeiras · 28岁 · 右路创造者</div></div>
+      <div class="player-card"><div class="name">Johan Mojica</div><div class="meta">DF · 马洛卡 · 33岁 · 经验左后卫</div></div>
+      <div class="player-card"><div class="name">David Ospina</div><div class="meta">GK · Atlético Nacional · 37岁 · 129场 · 传奇门将</div></div>
+      <div class="player-card"><div class="name">Jhon Córdoba</div><div class="meta">FW · 克拉斯诺达尔 · 33岁 · 支点中锋</div></div>
+      <div class="player-card"><div class="name">Cucho Hernández</div><div class="meta">FW · 皇家贝蒂斯 · 27岁 · 替补杀手</div></div>
+      <div class="player-card"><div class="name">Jorge Carrascal</div><div class="meta">MF · 弗拉门戈 · 28岁 · 替补创造力</div></div>
+      <div class="player-card"><div class="name">Juan Fernando Quintero</div><div class="meta">MF · 河床 · 33岁 · 大赛经验 · 定位球专家</div></div>
+      <div class="player-card"><div class="name">Yerry Mina</div><div class="meta">DF · 卡利亚里 · 31岁 · 空中霸权 · 定位球威胁</div></div>
+      <div class="player-card"><div class="name">Willer Ditta</div><div class="meta">DF · 蓝十字 · 28岁 · 后防替补</div></div>
+      <div class="player-card"><div class="name">Kevin Castaño</div><div class="meta">MF · 河床 · 25岁 · 中场替补</div></div>
+      <div class="player-card"><div class="name">Luis Suárez</div><div class="meta">FW · 葡萄牙体育 · 28岁 · 前锋轮换</div></div>
+    </div>
+    <div class="warn-box">⚠️ 覆盖盲区检查：乌兹别克斯坦仅1名五大联赛球员（Khusanov），其余多来自中亚/中东联赛，球员赛季数据可获取性低。哥伦比亚Quintero和Mina的近期出场时间需要确认。</div>
+  </div>
+
+  <!-- 首发/替补不确定性 -->
+  <div class="card">
+    <div class="card-title">🔄 首发/替补不确定性</div>
+    <table>
+      <tr><th>球队</th><th>球员</th><th>首发概率</th><th>说明</th></tr>
+      <tr><td>🇺🇿</td><td>Igor Sergeev (33岁FW)</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>年龄偏大，卡纳瓦罗可能选择更年轻的Amonov作为替补杀手</td></tr>
+      <tr><td>🇺🇿</td><td>Farrukh Sayfiev (35岁DF)</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>经验丰富但速度下降，面对Diaz的冲击可能被保护</td></tr>
+      <tr><td>🇨🇴</td><td>Juan F. Quintero (33岁MF)</td><td><span class="tag tag-red">低 (&lt;50%)</span></td><td>体能不足以首发，定位球替补角色更合适</td></tr>
+      <tr><td>🇨🇴</td><td>Yerry Mina (31岁DF)</td><td><span class="tag tag-red">低 (&lt;50%)</span></td><td>伤病历史，Sánchez-Lucumí更可能是首发搭档</td></tr>
+    </table>
+    <div class="section-note">⚠️ Quintero不首发场景：哥伦比亚中场由James+Lerma+Ríos组成，Quintero作为60分钟后替补登场改变节奏的选择更为合理。若Quintero首发，中场防守硬度将下降。</div>
+  </div>
+
+  <!-- 攻防对比 -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG）</div>
+    <table>
+      <tr><th>指标</th><th>🇺🇿 乌兹别克斯坦</th><th>🇨🇴 哥伦比亚</th></tr>
+      <tr><td><strong>近10场场均xG</strong></td><td>1.05</td><td>1.65</td></tr>
+      <tr><td><strong>近10场场均xGA</strong></td><td>0.95</td><td>1.15</td></tr>
+      <tr><td><strong>世预赛/预选赛进球</strong></td><td>4场进6球</td><td>CONMEBOL直接出线</td></tr>
+      <tr><td><strong>世预赛/预选赛失球</strong></td><td>4场仅失2球</td><td>含6-3胜委内瑞拉</td></tr>
+      <tr><td><strong>预计本场xG区间</strong></td><td>0.70 - 1.20</td><td>1.50 - 2.20</td></tr>
+    </table>
+    <div style="margin:12px 0;">
+      <div class="xG-bar"><span class="xG-label">🇺🇿 xG</span><div class="xG-track"><div class="xG-fill" style="width:37%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div><span style="font-size:12px;font-weight:600;">0.95</span></div>
+      <div class="xG-bar"><span class="xG-label">🇨🇴 xG</span><div class="xG-track"><div class="xG-fill" style="width:65%;background:linear-gradient(90deg,#e65100,#ff8a50);"></div></div><span style="font-size:12px;font-weight:600;">1.65</span></div>
+    </div>
+    <div class="section-note">⚠️ 非稳态场景分析：<br>· <strong>哥伦比亚先入球（0-1）</strong>：乌兹别克斯坦被迫压出，后防空间暴露，Diaz速度优势最大化，可能扩大比分<br>· <strong>乌兹别克斯坦先入球（1-0）</strong>：5后卫低位防守+犯规破坏节奏，哥伦比亚攻坚能力将受考验，但James的定位球和Diaz的突破仍是破局手段<br>· <strong>犯规破坏节奏后</strong>：乌兹别克场均13-16次犯规，若比分领先可能增至18+次，比赛走向低比分泥潭</div>
+  </div>
+
+  <!-- 门将分析 -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>指标</th><th>🇺🇿 Utkir Yusupov</th><th>🇨🇴 David Ospina</th></tr>
+      <tr><td><strong>年龄/俱乐部</strong></td><td>35岁 · Navbahor（乌兹超）</td><td>37岁 · Atlético Nacional（哥伦比亚）</td></tr>
+      <tr><td><strong>国家队出场</strong></td><td>~40场</td><td>129场（队史最多）</td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>~68-72%</td><td>~72-76%</td></tr>
+      <tr><td><strong>大赛经验</strong></td><td>0场世界杯</td><td>3届世界杯（2014/2018/2022）</td></tr>
+      <tr><td><strong>PSxG+/-（估算）</strong></td><td>数据缺失</td><td>+1.5至+3.0（正值为超额扑救）</td></tr>
+    </table>
+    <div class="section-note">⚠️ Ospina虽回到哥伦比亚联赛，但129场国家队经验不可替代。2018年世界杯对英格兰的点球大战英雄。Yusupov缺乏顶级联赛和大赛经验，面对Diaz和James的射门将是重大考验。</div>
+  </div>
+
+  <!-- 犯规率/纪律指数 -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>🇺🇿 乌兹别克斯坦</th><th>🇨🇴 哥伦比亚</th></tr>
+      <tr><td><strong>场均犯规（近10场）</strong></td><td>~13-16次</td><td>~11-14次</td></tr>
+      <tr><td><strong>场均黄牌</strong></td><td>~1.8张</td><td>~1.5张</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>战术犯规为主（中断节奏）</td><td>技术犯规与战术犯规混合</td></tr>
+    </table>
+    <div class="info-box">⚡ 节奏预判：乌兹别克斯坦若比分落后不会大幅增加犯规（因为需要控球追分），但若比分领先或平局，将使用战术犯规打断哥伦比亚的进攻节奏。哥伦比亚风格更倾向于技术对抗而非犯规破坏。</div>
+  </div>
+
+  <!-- 联赛→大赛状态折扣 -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>联赛产出</th><th>大赛经验</th><th>折扣系数</th></tr>
+      <tr><td>🇺🇿 Shomurodov (92场44球)</td><td>土超中游主力</td><td>0场世界杯</td><td>×0.80</td></tr>
+      <tr><td>🇺🇿 Khusanov (曼城)</td><td>英超轮换</td><td>0场世界杯</td><td>×0.75</td></tr>
+      <tr><td>🇺🇿 Fayzullaev</td><td>土超主力</td><td>0场世界杯</td><td>×0.75</td></tr>
+      <tr><td>🇨🇴 James Rodríguez</td><td>MLS</td><td>3届世界杯 · 金靴</td><td>×0.95</td></tr>
+      <tr><td>🇨🇴 Luis Díaz (拜仁)</td><td>德甲主力</td><td>1届世界杯</td><td>×0.90</td></tr>
+      <tr><td>🇨🇴 Ospina</td><td>哥伦比亚联赛</td><td>3届世界杯</td><td>×0.92</td></tr>
+    </table>
+    <div class="warn-box">⚠️ 高风险标注：乌兹别克斯坦全队0世界杯经验，是本届赛事中大赛经验最匮乏的球队之一。联赛数据打折幅度最大（×0.75-0.80），特别是Khusanov虽在曼城但世界杯赛场是完全不同的心理压力等级。</div>
+  </div>
+
+  <!-- 主教练综合能力评估 -->
+  <div class="card">
+    <div class="card-title">👔 主教练综合能力评估（V4升级）</div>
+    <p style="font-size:13px;font-weight:600;color:#0033A0;margin-bottom:8px;">🇺🇿 乌兹别克斯坦 — 法比奥·卡纳瓦罗</p>
+    <table>
+      <tr><th>评估维度</th><th>评分</th><th>说明</th></tr>
+      <tr><td>战术哲学与风格</td><td>6/10</td><td>防守优先，但体系不够成熟；偏好4-3-3但灵活性不足</td></tr>
+      <tr><td>大赛履历与胜率</td><td>3/10</td><td>首次执教世界杯；此前执教广州、利雅得胜利均未达预期</td></tr>
+      <tr><td>临场决策能力</td><td>5/10</td><td>换人偏保守，缺乏世界级比赛调整经验</td></tr>
+      <tr><td>危机管理能力</td><td>5/10</td><td>落后时缺乏明确B计划</td></tr>
+      <tr><td>更衣室管控</td><td>6/10</td><td>2006世界杯冠军队长的个人威望尚可</td></tr>
+      <tr><td>对手研究能力</td><td>5/10</td><td>对哥伦比亚这种级别的对手研究深度存疑</td></tr>
+      <tr><td>大赛压力应对</td><td>4/10</td><td>作为教练从未经历过世界杯级别压力</td></tr>
+      <tr><td>战术灵活性</td><td>5/10</td><td>以4-3-3为主，变化不多</td></tr>
+    </table>
+    <p style="font-size:13px;margin:8px 0;">综合等级：<span class="tag tag-orange">C+（4.9/10）</span></p>
+
+    <p style="font-size:13px;font-weight:600;color:#e65100;margin:16px 0 8px;">🇨🇴 哥伦比亚 — 内斯托尔·洛伦佐</p>
+    <table>
+      <tr><th>评估维度</th><th>评分</th><th>说明</th></tr>
+      <tr><td>战术哲学与风格</td><td>7/10</td><td>平衡进攻与防守，4-3-3体系成熟</td></tr>
+      <tr><td>大赛履历与胜率</td><td>6/10</td><td>2024美洲杯亚军，世预赛直接出线</td></tr>
+      <tr><td>临场决策能力</td><td>7/10</td><td>换人时机较好，半场调整有效</td></tr>
+      <tr><td>危机管理能力</td><td>6/10</td><td>落后时调整尚可但非顶级</td></tr>
+      <tr><td>更衣室管控</td><td>7/10</td><td>James回归并担任队长说明管理到位</td></tr>
+      <tr><td>对手研究能力</td><td>7/10</td><td>对弱旅针对性布置有效</td></tr>
+      <tr><td>大赛压力应对</td><td>6/10</td><td>美洲杯决赛失利暴露抗压不足</td></tr>
+      <tr><td>战术灵活性</td><td>6/10</td><td>以4-3-3为核，偶有变化</td></tr>
+    </table>
+    <p style="font-size:13px;margin:8px 0;">综合等级：<span class="tag tag-blue">B（6.5/10）</span></p>
+
+    <div class="section-note">⚖️ 教练博弈分析：<br>· <strong>战术风格相克</strong>：洛伦佐的进攻型4-3-3 vs 卡纳瓦罗的防守型4-3-3——攻防对抗型<br>· <strong>教练博弈胜负</strong>：洛伦佐更可能占据上风，因为哥伦比亚的个人能力允许其执行多种战术方案<br>· <strong>等级差</strong>：B vs C+ = 差1.5级，概率偏向洛伦佐 ±2-3%<br>· <strong>灵活型教练标注</strong>：洛伦佐灵活性6/10，不保留额外空间</div>
+  </div>
+
+  <!-- 替补攻击力 -->
+  <div class="card">
+    <div class="card-title">🔋 替补攻击力</div>
+    <table>
+      <tr><th>指标</th><th>🇺🇿 乌兹别克斯坦</th><th>🇨🇴 哥伦比亚</th></tr>
+      <tr><td><strong>替补进球/出场比</strong></td><td>低（替补深度有限）</td><td>中等（Cucho、Carrascal可改变节奏）</td></tr>
+      <tr><td><strong>替补杀手</strong></td><td>Igor Sergeev（33岁老将，世预赛替补进球经验）</td><td>Cucho Hernández（贝蒂斯，即战力型）</td></tr>
+      <tr><td><strong>替补类型</strong></td><td>终结型为主</td><td>组织型（Quintero/Portilla）+ 终结型（Cucho/Gómez）</td></tr>
+      <tr><td><strong>替补登场→首次射门</strong></td><td>~15分钟（适应型）</td><td>~8分钟（即战力型）</td></tr>
+    </table>
+    <div class="info-box">💡 替补奇兵候选人：<br>· 🇺🇿 <strong>Dostonbek Khamdamov</strong>（Pakhtakor）— 适应型替补，登场后需10-15分钟融入<br>· 🇨🇴 <strong>Cucho Hernández</strong>（皇家贝蒂斯）— 即战力型，登场后8分钟内完成首次射门</div>
+  </div>
+
+  <!-- 关键对位 -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup"><strong>Luis Díaz 🇨🇴 vs Abdukodir Khusanov 🇺🇿</strong> — 拜仁飞翼 vs 曼城后卫。Diaz的速度和盘带vs Khusanov的身体素质和位置感。这是全场最关键的一对一。Khusanov的速度能否跟上Diaz是决定性因素。</div>
+    <div class="key-matchup"><strong>James Rodríguez 🇨🇴 vs Odiljon Hamrobekov 🇺🇿</strong> — 大师 vs 工兵。James的传球视野vs Hamrobekov的破坏能力。若James获得空间，哥伦比亚的进攻将如鱼得水。</div>
+    <div class="key-matchup"><strong>Eldor Shomurodov 🇺🇿 vs Davinson Sánchez 🇨🇴</strong> — 队长vs防线领袖。Shomurodov需要赢得空中对抗和持球转身来为乌兹别克创造机会。</div>
+  </div>
+
+  <!-- 环境因素 -->
+  <div class="card">
+    <div class="card-title">🌡️ 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>影响</th></tr>
+      <tr><td><strong>海拔2,240m</strong></td><td>⚠️ 阿兹特克体育场是本届世界杯最高海拔场地。空气稀薄导致球速加快（远射威胁增大）、体能消耗加速（70分钟后可能出现抽筋）。两队均无高原作战习惯</td></tr>
+      <tr><td><strong>天气预测</strong></td><td>6月墨西哥城雨季，比赛日可能有阵雨。湿滑场地利于技术型球队哥伦比亚</td></tr>
+      <tr><td><strong>观众因素</strong></td><td>87,000座阿兹特克——墨西哥球迷天然支持拉美兄弟哥伦比亚，氛围对哥伦比亚有利</td></tr>
+      <tr><td><strong>大赛心理</strong></td><td>乌兹别克斯坦：首场世界杯→巨大的心理压力+肾上腺素；哥伦比亚：重返世界杯→证明自己的渴望</td></tr>
+    </table>
+    <div class="info-box">🔄 <strong>逆转因子分析：</strong>乌兹别克斯坦世预赛4场仅失2球，但从未在世界杯级别的落后场景中比赛过。"实现路径"预判：若落后，乌兹别克可能通过犯规破坏节奏+定位球（Shomurodov空中优势）偷一个。但0-2落后后的心理崩溃风险极高。</div>
+  </div>
+
+  <!-- 教练视角 -->
+  <div class="card">
+    <div class="card-title">🧠 教练视角：小组出线形势推演（V4新增）</div>
+
+    <p style="font-size:14px;font-weight:700;color:#0033A0;margin:12px 0 8px;">🔄 我是乌兹别克斯坦主教练——法比奥·卡纳瓦罗</p>
+    <div style="background:#f8fafd;border-radius:8px;padding:14px;font-size:13px;">
+      <p><strong>小组形势判断：</strong>K组实力排序——葡萄牙 > 哥伦比亚 > 刚果民主共和国 ≈ 我们。我们是第四档，但不是来当配角的。</p>
+      <p><strong>本场战略目标：</strong><span class="tag tag-red">少输当赢</span>——面对哥伦比亚，净胜球比拿分更现实。0-1或0-2都是可接受的结果，绝不能大比分崩盘。</p>
+      <p><strong>出线路径规划：</strong></p>
+      <ul style="margin:4px 0 4px 18px;">
+        <li>最优路径：本场0-1小负 + 击败DR Congo + 逼平葡萄牙 = 4分争第三</li>
+        <li>现实路径：本场0-2负 + 击败DR Congo = 3分，需其他组第三对比</li>
+        <li>最坏场景：本场大比分负（0-3+）→ 心理崩溃 → 后两场全负</li>
+      </ul>
+      <p><strong>针对性策略：</strong>对哥伦比亚——低位防守+犯规破坏节奏+定位球偷袭。Diaz在左路拿球时必须双人夹击。</p>
+      <p><strong>教练的B计划：</strong>如果0-1落后且60分钟后，我不会全力压上——保净胜球比冒险追平更重要。Sergeev在75分钟登场作为定位球支点。</p>
+    </div>
+
+    <p style="font-size:14px;font-weight:700;color:#e65100;margin:16px 0 8px;">🔄 我是哥伦比亚主教练——内斯托尔·洛伦佐</p>
+    <div style="background:#f8fafd;border-radius:8px;padding:14px;font-size:13px;">
+      <p><strong>小组形势判断：</strong>K组我们仅次于葡萄牙，与葡萄牙的比赛决定小组第一。本场必须全取3分+净胜球。</p>
+      <p><strong>本场战略目标：</strong><span class="tag tag-green">必须赢</span>——3分刚需，且需要净胜球在与葡萄牙比较时占据优势。</p>
+      <p><strong>出线路径规划：</strong></p>
+      <ul style="margin:4px 0 4px 18px;">
+        <li>最优路径：3胜9分 → 小组第一出线</li>
+        <li>现实路径：本场胜 + 逼平葡萄牙 + 击败DR Congo = 7分</li>
+        <li>稳健路径：本场胜 + 负于葡萄牙 + 击败DR Congo = 6分小组第二</li>
+      </ul>
+      <p><strong>针对性策略：</strong>从第一分钟就施压——乌兹别克首次世界杯，心理脆弱。Diaz左路冲击+James直塞球。60分钟后用Quintero换下Lerma增加创造力。</p>
+      <p><strong>教练的B计划：</strong>如果0-0僵持到60分钟，Quintero登场打双10号位，Cucho替换Córdoba增加禁区人数。</p>
+    </div>
+
+    <p style="font-size:14px;font-weight:700;color:#888;margin:16px 0 8px;">🔄 同组另外两支球队（简化版）</p>
+    <div style="background:#f8fafd;border-radius:8px;padding:14px;font-size:13px;">
+      <p><strong>🇵🇹 葡萄牙：</strong>小组绝对热门，目标9分。对哥伦比亚是争夺小组第一的关键战。本场可轮换部分主力。</p>
+      <p><strong>🇨🇩 刚果民主共和国：</strong>52年后重返世界杯，面对乌兹别克斯坦是"6分战"。若本场哥伦比亚击败乌兹别克，DR Congo对乌兹别克的比赛将决定谁能争第三。</p>
+    </div>
+
+    <div class="section-note">⚖️ 教练博弈全景：同组教练等级排序——Martínez(B+) > Lorenzo(B) > Desabre(C+) > Cannavaro(C+)。卡纳瓦罗的大赛执教经验是同组最弱的，这在对阵Lorenzo时可能被放大。</div>
+  </div>
+
+  <!-- 概率预测 -->
+  <div class="card">
+    <div class="card-title">📈 概率预测</div>
+    <div class="prob-bar">
+      <span class="prob-label">🇺🇿 胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:10%;"></div></div>
+      <span class="prob-val">10%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">平局</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:18%;"></div></div>
+      <span class="prob-val">18%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🇨🇴 胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:72%;"></div></div>
+      <span class="prob-val">72%</span>
+    </div>
+    <p style="margin-top:12px;font-size:13px;">
+      <span class="confidence conf-high">置信度：高</span>
+      <span style="margin-left:8px;font-size:12px;color:#888;">（差值≥15%）</span>
+    </p>
+    <table style="margin-top:12px;">
+      <tr><th>信号</th><th>方向</th><th>强度</th></tr>
+      <tr><td>球队评级差 (7.1 vs 3.5)</td><td>→ 哥伦比亚</td><td><span class="signal signal-strong">强</span></td></tr>
+      <tr><td>xG预测差 (1.7 vs 1.0)</td><td>→ 哥伦比亚</td><td><span class="signal signal-strong">强</span></td></tr>
+      <tr><td>赔率差 (1.38 vs 9.50)</td><td>→ 哥伦比亚</td><td><span class="signal signal-strong">强</span></td></tr>
+      <tr><td>世界杯经验 (7次 vs 0次)</td><td>→ 哥伦比亚</td><td><span class="signal signal-strong">强</span></td></tr>
+      <tr><td>乌兹别克防守纪律 (世预赛2失球)</td><td>→ 乌兹别克</td><td><span class="signal signal-mid">中</span></td></tr>
+      <tr><td>海拔2,240m未知因素</td><td>↔ 中性</td><td><span class="signal signal-weak">弱</span></td></tr>
+    </table>
+    <div class="info-box">📊 ≥3条强信号指向哥伦比亚（评级差+xG差+赔率差+经验差），胜率应≥55%，实际给予72%因信号高度一致。</div>
+  </div>
+
+  <!-- 比分预测 -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">哥伦比亚 2-0 乌兹别克斯坦</span>
+      <span style="font-size:12px;color:#888;">（概率 ~14%）</span>
+    </div>
+    <div>
+      <span class="score-pred">哥伦比亚 1-0</span><span style="font-size:12px;color:#888;">（~12%）</span>
+      <span class="score-pred">哥伦比亚 2-1</span><span style="font-size:12px;color:#888;">（~10%）</span>
+    </div>
+    <p style="margin-top:12px;font-size:13px;"><strong>预期xG区间：</strong>总xG 2.20 - 3.40（哥伦比亚 1.50-2.20 / 乌兹别克 0.70-1.20）</p>
+    <div class="section-note">💡 进球时段分布预判：哥伦比亚60%的进球可能来自上半场（利用乌兹别克开场紧张期），Diaz左路突破+James直塞为主要进攻手段。乌兹别克的进球（如有）最可能来自定位球（Shomurodov空中优势）。</div>
+  </div>
+
+  <!-- 最终结论 -->
+  <div class="card">
+    <div class="card-title">🏁 最终结论</div>
+    <div class="conclusion-box">
+      <p><strong>预测逻辑：</strong>哥伦比亚在阵容质量（7.1 vs 3.5）、世界杯经验（7次 vs 0次）、个人能力（Diaz/James vs Shomurodov/Khusanov）和教练水平（B vs C+）四个维度全面占优。4条强信号一致指向哥伦比亚获胜。</p>
+      <p style="margin-top:8px;"><strong>关键假设：</strong>①乌兹别克斯坦首次世界杯的心理压力不会导致崩溃性失误；②海拔2,240m对双方影响大致相当；③James的MLS状态不足以大幅削弱其创造力。</p>
+      <p style="margin-top:8px;"><strong>置信度：</strong><span class="confidence conf-high">高</span>——数据信号高度一致，差值显著</p>
+      <p style="margin-top:8px;"><strong>已知数据缺口：</strong></p>
+      <ul style="margin:4px 0 4px 18px;font-size:12.5px;">
+        <li>Yusupov精确PSxG+/-数据缺失（乌兹超联赛数据覆盖低）</li>
+        <li>乌兹别克斯坦大部分球员的俱乐部赛季数据难以获取</li>
+        <li>海拔2,240m对两队体能的具体影响缺乏量化数据</li>
+        <li>乌兹别克斯坦在阿兹特克的训练适应情况未知</li>
+        <li>James在MLS的竞技状态与欧洲联赛的差距无法精确校准</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>

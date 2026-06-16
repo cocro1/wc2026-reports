@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 加纳 vs 巴拿马（2026-06-17）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+  ul.note-list { padding-left:18px; font-size:13px; }
+  ul.note-list li { margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-16 18:00</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇬🇭</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">加纳</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">巴拿马</span>
+      <span class="flag">🇵🇦</span>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">赛事</div><div class="match-info-val">2026 世界杯 L组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">时间</div><div class="match-info-val">2026-06-17 19:00 ET / 2026-06-18 07:00 北京时间</div></div>
+      <div class="match-info-item"><div class="match-info-label">场地</div><div class="match-info-val">BMO Field，多伦多（45,736座）</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组对手</div><div class="match-info-val">英格兰、克罗地亚</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA 排名</div><div class="match-info-val">加纳 #74 vs 巴拿马 #33</div></div>
+      <div class="match-info-item"><div class="match-info-label">历史交锋</div><div class="match-info-val">从未交手 — 首次碰面</div></div>
+    </div>
+    <div class="section-note">
+      💡 <strong>6分之战：</strong>L组由英格兰、克罗地亚两强领跑，加纳与巴拿马实力接近，此役输家极大概率告别淘汰赛。Toronto拥有大量加纳侨民，预计加纳将享有准主场氛围。
+    </div>
+  </div>
+
+  <!-- ===== 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 加纳近5场（L-L-L-L-D）</h3>
+    <table>
+      <tr><th>对手</th><th>FIFA分档</th><th>比分</th><th>赛事</th><th>评分</th></tr>
+      <tr><td>威尔士</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>1-1 平</td><td>友谊赛</td><td>4.6</td></tr>
+      <tr><td>墨西哥</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>1-2 负</td><td>友谊赛</td><td>3.4</td></tr>
+      <tr><td>德国</td><td><span class="tag tag-blue">Tier 1 (前20)</span></td><td>1-2 负</td><td>友谊赛</td><td>4.0</td></tr>
+      <tr><td>奥地利</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>1-5 负</td><td>友谊赛</td><td>1.6</td></tr>
+      <tr><td>韩国</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>0-1 负</td><td>友谊赛</td><td>5.3</td></tr>
+    </table>
+    <div style="margin-top:8px;font-size:13px;">
+      <strong>对手强度校准后：</strong>对Tier 1-2对手（4场）：0胜0平4负，进3球失10球；对Tier 3-4（1场）：1平。<br>
+      <span style="color:#c62828;">⚠️ 友谊赛战绩惨淡：4连败包括1-5惨败奥地利、1-2输德国，防线松散</span><br>
+      <span style="color:#2e7d32;">✅ 世预赛表现强劲：8胜1负晋级，阵容深度足够但士气问题严重</span>
+    </div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇵🇦 巴拿马近5场（D-W-L-W-D）</h3>
+    <table>
+      <tr><th>对手</th><th>FIFA分档</th><th>比分</th><th>赛事</th><th>评分</th></tr>
+      <tr><td>波黑</td><td><span class="tag tag-yellow">Tier 2 (21-50)</span></td><td>1-1 平</td><td>友谊赛</td><td>5.0</td></tr>
+      <tr><td>多米尼加共和国</td><td><span class="tag tag-red">Tier 4 (80+)</span></td><td>3-0 胜</td><td>金杯赛</td><td>5.3</td></tr>
+      <tr><td>巴西</td><td><span class="tag tag-blue">Tier 1 (前20)</span></td><td>0-2 负</td><td>友谊赛</td><td>4.0</td></tr>
+      <tr><td>南非</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>2-1 胜</td><td>友谊赛（开普敦）</td><td>8.0</td></tr>
+      <tr><td>南非</td><td><span class="tag tag-orange">Tier 3 (51-80)</span></td><td>0-0 平</td><td>友谊赛</td><td>3.6</td></tr>
+    </table>
+    <div style="margin-top:8px;font-size:13px;">
+      <strong>对手强度校准后：</strong>对Tier 1（1场）：0胜0平1负；对Tier 2（1场）：1平；对Tier 3-4（3场）：1胜2平0负，进5球失1球。<br>
+      <span style="color:#2e7d32;">✅ 在开普敦2-1击败南非（队史首次在非洲大陆取胜），组织纪律性出色</span><br>
+      <span style="color:#2e7d32;">✅ CONCACAF世预赛小组赛阶段未失一球晋级</span><br>
+      <span style="color:#f57f17;">⚠️ 面对巴西这种级别对手时进攻乏力（0-2完败）</span>
+    </div>
+  </div>
+
+  <!-- ===== 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（18人/队）</div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 加纳核心18人状态</h3>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>俱乐部</th><th>出场/进球</th><th>状态</th><th>大赛折扣</th></tr>
+      <tr><td class="player-name">Thomas Partey</td><td>防守中场</td><td>比利亚雷亚尔 🇪🇸</td><td>60+场</td><td><span class="tag tag-green">中场核心</span></td><td>×0.90 (3届WC)</td></tr>
+      <tr><td class="player-name">Iñaki Williams</td><td>前锋/边锋</td><td>毕尔巴鄂竞技 🇪🇸</td><td>100+场</td><td><span class="tag tag-green">前场多面手</span></td><td>×0.95 (2届WC)</td></tr>
+      <tr><td class="player-name">Jordan Ayew (C)</td><td>前锋/边锋</td><td>莱斯特城 🏴</td><td>110+场</td><td><span class="tag tag-green">队长/经验</span></td><td>×0.90 (3届WC)</td></tr>
+      <tr><td class="player-name">Antoine Semenyo</td><td>中锋</td><td>曼城 🏴</td><td>赛季15 PL进球</td><td><span class="tag tag-green">英超新核心</span></td><td>×0.85 (首次WC)</td></tr>
+      <tr><td class="player-name">Ernest Nuamah</td><td>边锋</td><td>里昂 🇫🇷</td><td>20+场</td><td><span class="tag tag-yellow">潜力新星</span></td><td>×0.75 (首次WC)</td></tr>
+      <tr><td class="player-name">Kamaldeen Sulemana</td><td>边锋</td><td>亚特兰大 🇮🇹</td><td>25+场</td><td><span class="tag tag-yellow">边路速度</span></td><td>×0.75</td></tr>
+      <tr><td class="player-name">Abdul Fatawu Issahaku</td><td>攻击中场</td><td>莱斯特城 🏴</td><td>15+场</td><td><span class="tag tag-yellow">创造力</span></td><td>×0.75 (首次WC)</td></tr>
+      <tr><td class="player-name">Christopher Bonsu Baah</td><td>边锋</td><td>Al Qadisiah 🇸🇦</td><td>10+场</td><td><span class="tag tag-yellow">年轻突击手</span></td><td>×0.70 (首次WC)</td></tr>
+      <tr><td class="player-name">Elisha Owusu</td><td>防守中场</td><td>欧塞尔 🇫🇷</td><td>30+场</td><td><span class="tag tag-green">双后腰搭档</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Kwasi Sibo</td><td>防守中场</td><td>奥维多 🇪🇸</td><td>15+场</td><td><span class="tag tag-yellow">中场工兵</span></td><td>×0.75 (首次WC)</td></tr>
+      <tr><td class="player-name">Augustine Boakye</td><td>攻击中场</td><td>圣埃蒂安 🇫🇷</td><td>20+场</td><td><span class="tag tag-yellow">法国联赛</span></td><td>×0.70</td></tr>
+      <tr><td class="player-name">Abdul Mumin</td><td>中后卫</td><td>巴列卡诺 🇪🇸</td><td>20+场</td><td><span class="tag tag-green">后防中坚</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Gideon Mensah</td><td>左后卫</td><td>欧塞尔 🇫🇷</td><td>20+场</td><td><span class="tag tag-green">左路首发</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Baba Rahman</td><td>左后卫</td><td>PAOK 🇬🇷</td><td>50+场</td><td><span class="tag tag-yellow">经验丰富</span></td><td>×0.85 (2届WC)</td></tr>
+      <tr><td class="player-name">Alidu Seidu</td><td>右后卫</td><td>雷恩 🇫🇷</td><td>15+场</td><td><span class="tag tag-yellow">法甲锻炼</span></td><td>×0.75</td></tr>
+      <tr><td class="player-name">Lawrence Ati-Zigi</td><td>门将</td><td>圣加仑 🇨🇭</td><td>40+场</td><td><span class="tag tag-green">首发门将</span></td><td>×0.85</td></tr>
+      <tr><td class="player-name">Benjamin Asare</td><td>门将</td><td>Hearts of Oak</td><td>30+场</td><td><span class="tag tag-yellow">本土老将</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Joseph Anang</td><td>门将</td><td>St Patrick's</td><td>15+场</td><td><span class="tag tag-yellow">替补</span></td><td>×0.70</td></tr>
+    </table>
+
+    <div class="warn-box" style="margin-top:12px;">
+      ⚠️ 重大缺席：<span class="player-name">Mohammed Kudus</span>（西汉姆联，22场/8球，最佳攻击手）因股四头肌伤无缘本届世界杯！这对加纳攻击线是毁灭性打击。Kudusu兼具创造+终结双重属性，无人能完全替代。
+    </div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇵🇦 巴拿马核心18人状态</h3>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>俱乐部</th><th>出场/进球</th><th>状态</th><th>大赛折扣</th></tr>
+      <tr><td class="player-name">Aníbal Godoy (C)</td><td>防守中场</td><td>San Diego FC 🇺🇸</td><td>150+场</td><td><span class="tag tag-green">队长/出场王</span></td><td>×0.90 (3届WC)</td></tr>
+      <tr><td class="player-name">Adalberto Carrasquilla</td><td>中场</td><td>UNAM 🇲🇽</td><td>50+场</td><td><span class="tag tag-green">2023金杯赛MVP</span></td><td>×0.85</td></tr>
+      <tr><td class="player-name">Amir Murillo</td><td>右后卫</td><td>贝西克塔斯 🇹🇷</td><td>80+场</td><td><span class="tag tag-green">后防核心</span></td><td>×0.90 (2届WC)</td></tr>
+      <tr><td class="player-name">José Córdoba</td><td>中后卫</td><td>诺维奇 🏴</td><td>25+场</td><td><span class="tag tag-green">空霸</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">César Blackman</td><td>右后卫</td><td>斯洛万布拉迪 🇸🇰</td><td>30+场</td><td><span class="tag tag-yellow">稳定轮换</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Andrés Andrade</td><td>左后卫</td><td>LASK 🇦🇹</td><td>30+场</td><td><span class="tag tag-yellow">左路推进</span></td><td>×0.80</td></td></tr>
+      <tr><td class="player-name">Éric Davis</td><td>左后卫</td><td>Plaza Amador</td><td>100+场</td><td><span class="tag tag-green">经验丰富</span></td><td>×0.90 (2届WC)</td></tr>
+      <tr><td class="player-name">Fidel Escobar</td><td>中后卫</td><td>Saprissa</td><td>70+场</td><td><span class="tag tag-green">后防老将</span></td><td>×0.85 (2届WC)</td></tr>
+      <tr><td class="player-name">Roderick Miller</td><td>中后卫</td><td>Turan Tovuz 🇦🇿</td><td>50+场</td><td><span class="tag tag-yellow">经验丰富</span></td><td>×0.85</td></tr>
+      <tr><td class="player-name">Yoel Bárcenas</td><td>边锋</td><td>无合同（自由球员）</td><td>90+场/15球</td><td><span class="tag tag-yellow">状态不确定</span></td><td>×0.70</td></tr>
+      <tr><td class="player-name">José Luis Rodríguez</td><td>边锋</td><td>Juárez 🇲🇽</td><td>30+场</td><td><span class="tag tag-yellow">边路突击</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">César Yanis</td><td>边锋</td><td>Cobresal 🇨🇱</td><td>50+场</td><td><span class="tag tag-yellow">南美联赛</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Cristian Martínez</td><td>中场</td><td>Ironi Kiryat Shmona 🇮🇱</td><td>40+场</td><td><span class="tag tag-yellow">中场工兵</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">Carlos Harvey</td><td>防守中场</td><td>明尼苏达联 🇺🇸</td><td>20+场</td><td><span class="tag tag-yellow">MLS锻炼</span></td><td>×0.75</td></tr>
+      <tr><td class="player-name">Ismael Díaz</td><td>前锋</td><td>莱昂 🇲🇽</td><td>30+场/8球</td><td><span class="tag tag-green">首发前锋</span></td><td>×0.80</td></tr>
+      <tr><td class="player-name">José Fajardo</td><td>中锋</td><td>U. Católica 🇨🇱</td><td>50+场/12球</td><td><span class="tag tag-green">禁区杀手</span></td><td>×0.85</td></tr>
+      <tr><td class="player-name">Tomás Rodríguez</td><td>前锋</td><td>Saprissa</td><td>25+场</td><td><span class="tag tag-yellow">年轻替补</span></td><td>×0.75</td></tr>
+      <tr><td class="player-name">Luis Mejía</td><td>门将</td><td>Nacional</td><td>90+场</td><td><span class="tag tag-green">首发门将</span></td><td>×0.85 (2届WC)</td></tr>
+    </table>
+
+    <div class="warn-box" style="margin-top:12px;">
+      ⚠️ 数据缺失项：(1) 加纳新教练Queiroz仅有2个月磨合期，战术默契度无法量化；(2) Bárcenas自由球员身份，赛前训练状况不明；(3) 巴拿马官方阵容未公开细化到位置细则；(4) 巴拿马门将Mejía俱乐部比赛数据缺失
+    </div>
+  </div>
+
+  <!-- ===== 首发/替补不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 加纳</h3>
+    <table>
+      <tr><th>球员</th><th>首发概率</th><th>备注</th></tr>
+      <tr><td>Antoine Semenyo</td><td><span class="tag tag-green">高 (>80%)</span></td><td>Kudus缺阵后必须首发，曼城新核心</td></tr>
+      <tr><td>Thomas Partey</td><td><span class="tag tag-green">高 (>80%)</span></td><td>中场节拍器不可或缺</td></tr>
+      <tr><td>Iñaki Williams</td><td><span class="tag tag-green">高 (>80%)</span></td><td>首发边锋/前锋</td></tr>
+      <tr><td>Jordan Ayew (C)</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>34岁老将，可能首发也可能替补</td></tr>
+      <tr><td>Ati-Zigi</td><td><span class="tag tag-green">高 (>80%)</span></td><td>首发门将</td></tr>
+      <tr><td>Abdul Mumin</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>与Seidu竞争首发中卫</td></tr>
+    </table>
+    <div class="section-note">
+      💡 不首发场景：若Ayew被替补（保留体能），Williams可能出任中锋，让Nuaham首发边路。但无论谁首发，Kudus的创造力无可替代，加纳中场组织和最后一传将明显下降。
+    </div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇵🇦 巴拿马</h3>
+    <table>
+      <tr><th>球员</th><th>首发概率</th><th>备注</th></tr>
+      <tr><td>Aníbal Godoy (C)</td><td><span class="tag tag-green">高 (>80%)</span></td><td>队长，中场屏障</td></tr>
+      <tr><td>Adalberto Carrasquilla</td><td><span class="tag tag-green">高 (>80%)</span></td><td>金杯MVP，组织核心</td></tr>
+      <tr><td>Luis Mejía</td><td><span class="tag tag-green">高 (>80%)</span></td><td>首发门将</td></tr>
+      <tr><td>José Fajardo</td><td><span class="tag tag-yellow">中 (50-80%)</span></td><td>中锋位置竞争Díaz</td></tr>
+      <tr><td>Yoel Bárcenas</td><td><span class="tag tag-red">低 (<50%)</span></td><td>自由球员状态存疑，可能替补</td></tr>
+    </table>
+    <div class="warn-box">
+      ⚠️ 不首发场景：若Fajardo被Díaz替代首发，巴拿马反击速度提升但空中优势下降。Bárcenas状态不稳定可能直接落选首发，巴拿马右路进攻受影响但防守反击体系不变。
+    </div>
+  </div>
+
+  <!-- ===== 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG估算）</div>
+
+    <table>
+      <tr><th>指标</th><th>🇬🇭 加纳</th><th>🇵🇦 巴拿马</th></tr>
+      <tr><td>近5场进球</td><td>4球（0.8/场）</td><td>6球（1.2/场）</td></tr>
+      <tr><td>近5场失球</td><td>11球（2.2/场）</td><td>4球（0.8/场）</td></tr>
+      <tr><td>球队评级（XGscore）</td><td>3.4/10 <span class="tag tag-red">POOR</span></td><td>4.1/10 <span class="tag tag-orange">WEAK</span></td></tr>
+      <tr><td>状态评分</td><td>4.1/10 <span class="tag tag-red">POOR</span></td><td>5.1/10 <span class="tag tag-yellow">STABLE</span></td></tr>
+      <tr><td>预估xG（本场）</td><td><strong>1.00-1.50</strong></td><td><strong>0.90-1.40</strong></td></tr>
+      <tr><td>预估xGA（本场）</td><td><strong>0.90-1.40</strong></td><td><strong>1.00-1.50</strong></td></tr>
+      <tr><td>预期总xG区间</td><td colspan="2" style="text-align:center;"><strong>1.90-2.90</strong></td></tr>
+    </table>
+
+    <div class="xG-bar" style="margin-top:12px;">
+      <span class="xG-label">加纳 xG</span>
+      <div class="xG-track"><div class="xG-fill" style="width:45%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+      <span style="font-size:12px;font-weight:700;">1.3</span>
+    </div>
+    <div class="xG-bar">
+      <span class="xG-label">巴拿马 xG</span>
+      <div class="xG-track"><div class="xG-fill" style="width:42%;background:linear-gradient(90deg,#c62828,#ef5350);"></div></div>
+      <span style="font-size:12px;font-weight:700;">1.2</span>
+    </div>
+
+    <div class="info-box" style="margin-top:12px;">
+      <strong>非稳态场景分析：</strong><br>
+      • 若加纳先入球（中等概率）：Queiroz的防反体系+Williams速度可以保住领先，但缺少Kudus的控球可能后段被反扑<br>
+      • 若巴拿马先入球（中等概率）：Christiansen擅长低位防守+反击，加纳必须冒险压上暴露后防<br>
+      • 0-0半场：两队都倾向稳守，加纳需要Semenyo个人能力打破僵局；巴拿马反击效率是关键<br>
+      • 加纳落后场景：Queiroz仅有2个月执教，落后时战术调整能力存疑，Kudus缺阵使追分能力下降
+    </div>
+  </div>
+
+  <!-- ===== 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 加纳 — Lawrence Ati-Zigi</h3>
+        <table>
+          <tr><td>俱乐部</td><td>圣加仑（瑞士超）</td></tr>
+          <tr><td>扑救率（估）</td><td>65-72%</td></tr>
+          <tr><td>PSxG+/-</td><td>数据缺失</td></tr>
+          <tr><td>世界杯经验</td><td>1届（2022）</td></tr>
+          <tr><td>面对远射</td><td>位置感尚可</td></tr>
+          <tr><td>面对近距离</td><td>反应一般</td></tr>
+          <tr><td>评分</td><td>61/100</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇵🇦 巴拿马 — Luis Mejía</h3>
+        <table>
+          <tr><td>俱乐部</td><td>Nacional（巴拿马）</td></tr>
+          <tr><td>扑救率（估）</td><td>68-74%</td></tr>
+          <tr><td>PSxG+/-</td><td>数据缺失</td></tr>
+          <tr><td>世界杯经验</td><td>2届（2018替补，2022主力）</td></tr>
+          <tr><td>面对远射</td><td>经验丰富</td></tr>
+          <tr><td>面对近距离</td><td>扑救扎实</td></tr>
+          <tr><td>评分</td><td>64→70/100</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="section-note">
+      💡 门将对比结论：Mejía拥有2届世界杯经验，2022对阵法国的稳健表现证明大赛气质；Ati-Zigi在瑞士联赛有稳定出场但缺乏高强度国际比赛经验。两人都不是世界级，但Mejía的大赛稳定性更优，巴拿马在门将位置略占优势。
+    </div>
+  </div>
+
+  <!-- ===== 犯规率/纪律指数 ===== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+
+    <table>
+      <tr><th>指标</th><th>🇬🇭 加纳</th><th>🇵🇦 巴拿马</th></tr>
+      <tr><td>近5场场均犯规</td><td>14.8次</td><td>13.2次</td></tr>
+      <tr><td>近5场场均黄牌</td><td>2.0张</td><td>1.6张</td></tr>
+      <tr><td>近5场红牌</td><td>0张</td><td>0张</td></tr>
+      <tr><td>犯规类型</td><td>中前场逼抢犯规+边路犯规</td><td>防守型犯规+位置感犯规</td></tr>
+      <tr><td>节奏破坏器？</td><td><span class="tag tag-yellow">中（14-15次/场）</span></td><td><span class="tag tag-green">否（<14次/场）</span></td></tr>
+    </table>
+
+    <div class="info-box">
+      <strong>比赛节奏预判：</strong>两队犯规率都不算极端，但加纳在落后或进攻受挫时犯规率会上升（Ayew和Williams等老将情绪化倾向）。巴拿马纪律性更强，Christiansen体系强调位置防守而非犯规。预计比赛会有适度中断，但不至于支离破碎。
+    </div>
+  </div>
+
+  <!-- ===== 联赛→大赛状态折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣</div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 加纳关键球员折扣</h3>
+    <table>
+      <tr><th>球员</th><th>联赛产出</th><th>世界杯经验</th><th>折扣系数</th><th>折扣后预估</th></tr>
+      <tr><td>Thomas Partey</td><td>赛季4球3助（比利亚雷亚尔）</td><td>3届</td><td>×0.90</td><td>3.6球2.7助</td></tr>
+      <tr><td>Semenyo</td><td>赛季15 PL进球（曼城）</td><td>首次</td><td>×0.80</td><td>12球</td></tr>
+      <tr><td>Iñaki Williams</td><td>赛季6球4助（毕尔巴鄂）</td><td>2届</td><td>×0.90</td><td>5.4球3.6助</td></tr>
+      <tr><td>Ayew</td><td>赛季3球2助（莱斯特城）</td><td>3届</td><td>×0.85</td><td>2.6球1.7助</td></tr>
+      <tr><td>Nuamah</td><td>赛季4球3助（里昂）</td><td>首次</td><td>×0.70</td><td>2.8球2.1助</td></tr>
+    </table>
+
+    <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇵🇦 巴拿马关键球员折扣</h3>
+    <table>
+      <tr><th>球员</th><th>联赛产出</th><th>世界杯经验</th><th>折扣系数</th><th>折扣后预估</th></tr>
+      <tr><td>Godoy</td><td>赛季2球3助（San Diego FC）</td><td>3届</td><td>×0.90</td><td>1.8球2.7助</td></tr>
+      <tr><td>Carrasquilla</td><td>赛季5球4助（UNAM）</td><td>首次</td><td>×0.80</td><td>4球3.2助</td></tr>
+      <tr><td>Fajardo</td><td>赛季9球（U. Católica）</td><td>首次</td><td>×0.80</td><td>7.2球</td></tr>
+      <tr><td>Murillo</td><td>赛季1球3助（贝西克塔斯）</td><td>2届</td><td>×0.90</td><td>0.9球2.7助</td></tr>
+      <tr><td>Díaz</td><td>赛季8球（莱昂）</td><td>首次</td><td>×0.80</td><td>6.4球</td></tr>
+    </table>
+
+    <div class="warn-box">
+      ⚠️ 高风险球员：Ayew（34岁+3届WC经验丰富但体能下降）、Semenyo（首次WC+曼城新位置适应期）、Bárcenas（自由球员状态无法保证）、Williams（2届WC老将但状态下滑）
+    </div>
+  </div>
+
+  <!-- ===== 主教练战术灵活性 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练战术灵活性</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div>
+        <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 Carlos Queiroz（葡萄牙，73岁）</h3>
+        <table>
+          <tr><td>上任时间</td><td>2026年4月（仅2个月）</td></tr>
+          <tr><td>阵型稳定性</td><td>4-2-3-1 / 4-3-3</td></tr>
+          <tr><td>临场调整</td><td>经验丰富但缺默契</td></tr>
+          <tr><td>大赛经验</td><td><span class="tag tag-blue">5届WC（顶级）</span></td></tr>
+          <tr><td>世预赛</td><td>仅完成友谊赛磨合</td></tr>
+          <tr><td>战术灵活度</td><td><span class="tag tag-yellow">中等（受时间限制）</span></td></tr>
+          <tr><td>综合评分</td><td>B（6.4/10）</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇵🇦 Thomas Christiansen（丹麦-西班牙）</h3>
+        <table>
+          <tr><td>上任时间</td><td>2020年（6年）</td></tr>
+          <tr><td>阵型稳定性</td><td>4-1-4-1 / 4-4-2（低位防守）</td></tr>
+          <tr><td>临场调整</td><td>稳守反击体系成熟</td></tr>
+          <tr><td>大赛经验</td><td><span class="tag tag-yellow">2届WC（2018/2022）</span></td></tr>
+          <tr><td>世预赛</td><td>CONCACAF小组赛0失球</td></tr>
+          <tr><td>战术灵活度</td><td><span class="tag tag-yellow">中等（体系固定）</span></td></tr>
+          <tr><td>综合评分</td><td>B-（6.0/10）但有效凝聚力+</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="section-note">
+      💡 教练对比：Queiroz的个人执教能力毋庸置疑（5届WC经历），但仅有2个月与球队磨合，战术执行和更衣室影响力都大打折扣。Christiansen的执教深度不及Queiroz，但6年体系建设和球员默契是巨大优势。巴拿马的"6年红利"可能在这种高强度比赛里抵消Queiroz的经验优势。
+    </div>
+  </div>
+
+  <!-- ===== 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+
+    <h3 style="font-size:14px;color:#0033A0;margin-bottom:8px;">🇬🇭 加纳替补储备</h3>
+    <table>
+      <tr><th>球员</th><th>类型</th><th>替补登场→首射/首球时间</th><th>特点</th></tr>
+      <tr><td>Ernest Nuamah</td><td>突击型替补</td><td>约10-15分钟</td><td>里昂新星，速度+盘带</td></tr>
+      <tr><td>Kamaldeen Sulemana</td><td>速度型替补</td><td>约8-12分钟</td><td>亚特兰大边路</td></tr>
+      <tr><td>Abdul Fatawu Issahaku</td><td>组织型替补</td><td>约15-20分钟</td><td>莱斯特城，创造力</td></tr>
+      <tr><td>Jordan Ayew (C)</td><td>经验型替补</td><td>约12-18分钟</td><td>110+场老将，大心脏</td></tr>
+      <tr><td>Brandon Thomas-Asante</td><td>终结型替补</td><td>约15-20分钟</td><td>英冠考文垂射手</td></tr>
+    </table>
+
+    <h3 style="font-size:14px;color:#0033A0;margin:16px 0 8px;">🇵🇦 巴拿马替补储备</h3>
+    <table>
+      <tr><th>球员</th><th>类型</th><th>替补登场→首射/首球时间</th><th>特点</th></tr>
+      <tr><td>Yoel Bárcenas</td><td>经验型替补</td><td>约10-15分钟</td><td>90+场国脚，但状态存疑</td></tr>
+      <tr><td>Ismael Díaz</td><td>终结型替补</td><td>约12-18分钟</td><td>莱昂主力，禁区嗅觉</td></tr>
+      <tr><td>Alberto Quintero</td><td>控球型</td><td>约15-20分钟</td><td>38岁老将，技术细腻</td></tr>
+      <tr><td>Cecilio Waterman</td><td>中锋替补</td><td>约15-20分钟</td><td>35岁老将，定位球</td></tr>
+    </table>
+
+    <div class="info-box">
+      <strong>替补奇兵候选人：</strong><br>
+      🇬🇭 <span class="player-name">Ernest Nuamah</span> — 里昂边锋，速度优势明显。Kudus缺阵后他是最具创造力的替补，60分钟后登场可能改变比赛节奏<br>
+      🇵🇦 <span class="player-name">Yoel Bárcenas</span> — 巴拿马最具经验的边路球员，若首发状态未达预期，替补登场可能激发反击威胁
+    </div>
+  </div>
+
+  <!-- ===== 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+
+    <div class="key-matchup">
+      <span class="flag">⚡</span>
+      <div><span class="player-name">Antoine Semenyo</span>（加纳曼城新核） <span class="vs-badge">VS</span> <span class="player-name">José Córdoba + Fidel Escobar</span>（巴拿马中卫组合）<br><span style="font-size:12px;color:#666;">Semenyo的英超节奏+身体素质vs巴拿马老将中卫。Semenyo是加纳本场最大进攻威胁，但巴拿马中卫配合多年有一定默契。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">⚡</span>
+      <div><span class="player-name">Thomas Partey</span>（加纳中场节拍器） <span class="vs-badge">VS</span> <span class="player-name">Aníbal Godoy (C)</span>（巴拿马队长）<br><span style="font-size:12px;color:#666;">Partey的组织和推进 vs Godoy的拦截+位置感。这是中场控制权的关键争夺，决定加纳能否创造足够机会。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">⚡</span>
+      <div><span class="player-name">Iñaki Williams</span>（加纳边路） <span class="vs-badge">VS</span> <span class="player-name">Amir Murillo</span>（贝西克塔斯右后卫）<br><span style="font-size:12px;color:#666;">Williams速度vs Murillo经验。Murillo在土超豪门磨炼多年，是巴拿马最稳定后卫之一，Williams难以轻松突破。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">⚡</span>
+      <div><span class="player-name">Adalberto Carrasquilla</span>（巴拿马金杯MVP） <span class="vs-badge">VS</span> <span class="player-name">Elisha Owusu</span>（加纳防守中场）<br><span style="font-size:12px;color:#666;">Carrasquilla的创造+组织 vs Owusu的覆盖。若Carrasquilla能从容出球，巴拿马反击将极具威胁。</span></div>
+    </div>
+  </div>
+
+  <!-- ===== 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+
+    <table>
+      <tr><th>因素</th><th>影响评估</th></tr>
+      <tr><td>🏟️ BMO Field, Toronto</td><td><span class="tag tag-blue">加纳侨民主场优势</span> — 多伦多有大量加纳裔社区，预计看台60%支持加纳</td></tr>
+      <tr><td>🌡️ 6月中旬多伦多</td><td>~22°C / 可能有阵雨</td></tr>
+      <tr><td>⏰ 赛程/体能</td><td>双方小组赛首场，体能充沛；但部分球员从季末联赛直接进入，状态调整期</td></tr>
+      <tr><td>🧠 加纳心理</td><td>Queiroz新帅+Kudus缺阵+友谊赛4连败+2022世界杯被乌拉圭淘汰阴影，集体信心脆弱</td></tr>
+      <tr><td>🧠 巴拿马心理</td><td>第二次世界杯之旅（2018首次），Christiansen稳定军心，球员对战术体系高度熟悉，失误率低</td></tr>
+      <tr><td>🔄 加纳胜出路径</td><td>Semenyo/Williams个人能力破门+Queiroz防守反击体系+定位球利用身高优势</td></tr>
+      <tr><td>🔄 巴拿马爆冷路径</td><td>深度4-4-2防守→Carrasquilla长传打身后→Fajardo/Díaz终结。但1v1能力有限</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+
+    <div class="prob-bar">
+      <span class="prob-label">🇬🇭 加纳胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:30%;"></div></div>
+      <span class="prob-val">30%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🤝 平局</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:36%;"></div></div>
+      <span class="prob-val">36%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🇵🇦 巴拿马胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:34%;"></div></div>
+      <span class="prob-val">34%</span>
+    </div>
+
+    <div style="margin-top:12px;font-size:13px;">
+      <strong>概率置信度梯级：<span class="tag tag-yellow">低</span></strong>（三方概率极接近，差值仅6%，任何结果都合理）<br><br>
+      <strong>信号强度标注：</strong><br>
+      <span class="signal signal-weak">弱</span> FIFA排名加纳#74 vs 巴拿马#33，名义上巴拿马占优 → 巴拿马胜<br>
+      <span class="signal signal-strong">强</span> 加纳友谊赛4连败1-5惨败奥地利，新教练Kudus缺阵 → 平局或巴拿马胜<br>
+      <span class="signal signal-strong">强</span> 巴拿马CONCACAF小组赛0失球+Christiansen 6年体系 → 平局/巴拿马胜<br>
+      <span class="signal signal-mid">中</span> 加纳Semenyo/Williams/Partey个人能力更强 → 加纳胜/平局<br>
+      <span class="signal signal-strong">强</span> 多伦多加纳侨民主场氛围 → 加纳微加<br>
+      <span class="signal signal-weak">弱</span> 6分之战双方都不愿输 → 双方都更倾向防守 → 平局最高
+    </div>
+  </div>
+
+  <!-- ===== 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="score-pred score-main">1-1 平局（概率 ~12%）</span>
+      <span class="score-pred">1-0 巴拿马胜（概率 ~9%）</span>
+      <span class="score-pred">1-0 加纳胜（概率 ~9%）</span>
+    </div>
+
+    <table>
+      <tr><th>预测项</th><th>数值</th></tr>
+      <tr><td>预期xG区间</td><td><strong>总 xG 1.90-2.90</strong>（加纳 1.00-1.50 / 巴拿马 0.90-1.40）</td></tr>
+      <tr><td>大2.5球概率</td><td>~38%（低比分比赛）</td></tr>
+      <tr><td>双方进球概率</td><td>~55%（略高于均值）</td></tr>
+      <tr><td>Semenyo进球概率</td><td>28%</td></tr>
+      <tr><td>Fajardo/Díaz进球概率</td><td>22%</td></tr>
+      <tr><td>0-0概率</td><td>~14%</td></tr>
+      <tr><td>加纳任意时刻进球概率</td><td>66%</td></tr>
+      <tr><td>巴拿马任意时刻进球概率</td><td>70%</td></tr>
+    </table>
+
+    <div class="section-note">
+      💡 比分说明：1-1是单一最可能比分（~12%），反映比赛胶着特征。平局ROI高达63%，是本届小组赛第一轮中价值最高的平局选项之一。次热门是0-0（~14%）和两个1-0（各~9%）。任何超过1球的胜负都不太可能。加纳需要Semenyo的超水平发挥才能打破僵局，巴拿马则可能依靠Fajardo一次反击偷胜。
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p><strong>预测逻辑：</strong>这是一场经典的"反差对决"——FIFA排名加纳低41位，但场上表现却更差（友谊赛4连败+Kudus缺阵+新教练磨合期），而巴拿马虽然排名高，但组织纪律和战术默契度是真正的优势项。三方概率极接近（30/36/34），任何结果都合理，平局略占优是综合判断：<strong>6分之战双方都不愿冒险输球</strong>，加纳有主场氛围，巴拿马有体系稳定性。</p>
+      <p style="margin-top:8px;"><strong>关键假设：</strong></p>
+      <ul class="note-list">
+        <li>Queiroz仅有2个月磨合期，战术执行力打折（高确定性）</li>
+        <li>巴拿马延续CONCACAF世预赛0失球的防守纪律（高确定性）</li>
+        <li>加纳Semenyo和Williams能在反击中创造1次得分机会（中确定性）</li>
+        <li>巴拿马Fajardo或Díaz能在定位球/反击中把握1次机会（中确定性）</li>
+        <li>多伦多主场氛围至少提供+3%的加纳概率加成（中确定性）</li>
+      </ul>
+      <p style="margin-top:8px;"><strong>L组形势评估：</strong>英格兰 &gt; 克罗地亚 &gt; 巴拿马 ≈ 加纳。L组前两名几乎锁定英克两队，第三名争夺在加巴之间，本场极可能决定谁带走1分。本场平局对双方都"可接受"，对加纳尤其如此（毕竟下轮要面对英格兰/克罗地亚）。</p>
+      <p style="margin-top:8px;"><strong>置信度：<span class="confidence conf-low">低</span></strong> — 三方概率差值仅6%，是小组赛首轮最不可预测的比赛之一</p>
+      <p style="margin-top:8px;"><strong>已知数据缺口：</strong></p>
+      <ul class="note-list">
+        <li>Queiroz执教加纳仅2个月，战术默契度无法量化</li>
+        <li>Bárcenas自由球员状态不明</li>
+        <li>两队历史从未交手，无任何参考样本</li>
+        <li>巴拿马门将Mejía俱乐部比赛详细数据缺失</li>
+        <li>加纳Semenyo在曼城更多打边路，国家队中锋位置适应度未知</li>
+        <li>Kudus缺阵对加纳中场创造力的实际影响无法精确量化</li>
+      </ul>
+    </div>
+  </div>
+
+<div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+
+</div>
+</body>
+</html>

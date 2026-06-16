@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 葡萄牙 vs 刚果民主共和国（2026-06-17）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-fill-gold { background:linear-gradient(90deg,#e6a817,#ffd54f); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-16 18:00</p>
+</div>
+
+<a href="../index.html" class="back-link">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ====== 1. 比赛信息 ====== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇵🇹</span>
+      <span style="font-size:20px;font-weight:800;color:#0033A0;margin:0 12px;">葡萄牙</span>
+      <span class="vs-badge">VS</span>
+      <span style="font-size:20px;font-weight:800;color:#ce1126;margin:0 12px;">刚果民主共和国</span>
+      <span class="flag">🇨🇩</span>
+      <p style="font-size:12px;color:#888;margin-top:4px;">Portugal vs DR Congo</p>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item"><div class="match-info-label">赛事</div><div class="match-info-val">2026 世界杯 K组 小组赛第1轮</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛时间</div><div class="match-info-val">2026-06-17 13:00 ET（北京时间 6月18日 01:00）</div></div>
+      <div class="match-info-item"><div class="match-info-label">比赛地点</div><div class="match-info-val">NRG Stadium, Houston, TX（72,220座）</div></div>
+      <div class="match-info-item"><div class="match-info-label">FIFA 排名</div><div class="match-info-val">葡萄牙 #6 vs 刚果民主共和国 #57</div></div>
+      <div class="match-info-item"><div class="match-info-label">同组对手</div><div class="match-info-val">K组：葡萄牙、刚果民主共和国、乌兹别克斯坦、哥伦比亚</div></div>
+      <div class="match-info-item"><div class="match-info-label">历史交锋</div><div class="match-info-val">无历史交锋记录</div></div>
+    </div>
+    <div class="info-box">
+      🇨🇩 <strong>历史性时刻：</strong>刚果民主共和国时隔52年重返世界杯舞台——上一次以"扎伊尔"身份参赛还是1974年。全队26名球员均为首次参加世界杯。葡萄牙方面，C罗将以第6届世界杯出场创造历史纪录（226场国家队出场，143球）。
+    </div>
+  </div>
+
+  <!-- ====== 2. 近期状态（对手强度校准后） ====== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+    <table>
+      <tr><th>维度</th><th>🇵🇹 葡萄牙</th><th>🇨🇩 刚果民主共和国</th></tr>
+      <tr>
+        <td><strong>近5场战绩</strong></td>
+        <td>4胜1平（W-W-W-D-W）· 不败</td>
+        <td>3胜1平1负（D-W-W-W-L）</td>
+      </tr>
+      <tr>
+        <td><strong>具体赛果</strong></td>
+        <td>
+          胜 尼日利亚（友谊赛）<br>
+          胜 智利（友谊赛）<br>
+          胜 美国（友谊赛）<br>
+          平 墨西哥（友谊赛）<br>
+          胜 亚美尼亚（友谊赛）
+        </td>
+        <td>
+          平 丹麦 7.2（友谊赛）<br>
+          胜 牙买加 7.0（友谊赛）<br>
+          胜 百慕大（友谊赛）<br>
+          胜 百慕大（友谊赛）<br>
+          负 阿尔及利亚 2.7（友谊赛）
+        </td>
+      </tr>
+      <tr>
+        <td><strong>对手分档</strong></td>
+        <td>
+          Tier 1（前20）：智利<br>
+          Tier 2（21-50）：尼日利亚、美国、墨西哥<br>
+          Tier 3-4（50+）：亚美尼亚
+        </td>
+        <td>
+          Tier 1（前20）：丹麦<br>
+          Tier 2-3（21-50）：阿尔及利亚、牙买加<br>
+          Tier 4-5（80+）：百慕大×2
+        </td>
+      </tr>
+      <tr>
+        <td><strong>球队评级</strong></td>
+        <td><span class="tag tag-green">8.6/10 强队</span></td>
+        <td><span class="tag tag-red">3.5/10 弱队</span></td>
+      </tr>
+      <tr>
+        <td><strong>状态评分</strong></td>
+        <td><span class="tag tag-green">5.6/10 良好</span></td>
+        <td><span class="tag tag-green">6.3/10 良好</span></td>
+      </tr>
+      <tr>
+        <td><strong>综合赛事评级</strong></td>
+        <td>最近5场综合评分 9.2/10</td>
+        <td>最近5场含丹麦7.2、阿尔及利亚2.7</td>
+      </tr>
+    </table>
+    <div class="section-note">
+      ⚠️ <strong>关键解读：</strong>葡萄牙近期状态极佳（4W-1D，综合评分9.2），且对手分档含金量明显高于刚果民主共和国（包含Tier 1智利、Tier 2尼日利亚/美国/墨西哥）。刚果民主共和国虽然状态评分6.3略高于葡萄牙的5.6，但其近5场对手包括两支Tier 4-5球队（百慕大×2），含金量较低。不过，刚果民主共和国0-0逼平丹麦（评级7.2）显示其具备面对强队时的防守韧性。
+    </div>
+  </div>
+
+  <!-- ====== 3. 球员覆盖（20人/队） ====== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（20人/队）</div>
+
+    <h4 style="color:#0033A0;margin-bottom:8px;">🇵🇹 葡萄牙20人（按阵容排列）</h4>
+    <div class="player-grid">
+      <div class="player-card"><span class="name">1. Diogo Costa</span><br><span class="meta">GK ★ · Porto · 26岁 · 一门</span></div>
+      <div class="player-card"><span class="name">2. João Cancelo</span><br><span class="meta">RB · Barcelona/loan from Al-Hilal · 32岁 · 进攻型边卫</span></div>
+      <div class="player-card"><span class="name">3. Rúben Dias ★★</span><br><span class="meta">CB · Man City · 29岁 · 后防领袖</span></div>
+      <div class="player-card"><span class="name">4. Gonçalo Inácio</span><br><span class="meta">CB · Sporting CP · 24岁 · 左脚中卫</span></div>
+      <div class="player-card"><span class="name">5. Nuno Mendes ★</span><br><span class="meta">LB · PSG · 23岁 · 速度型左后卫</span></div>
+      <div class="player-card"><span class="name">6. Bruno Fernandes ★★★</span><br><span class="meta">AM · Man United · 31岁 · 创造核心 · 世界级</span></div>
+      <div class="player-card"><span class="name">7. Bernardo Silva ★★</span><br><span class="meta">CM/RW · Man City · 31岁 · 技术大师</span></div>
+      <div class="player-card"><span class="name">8. Vitinha ★</span><br><span class="meta">CM · PSG · 26岁 · 控球组织者</span></div>
+      <div class="player-card"><span class="name">9. João Neves</span><br><span class="meta">CM · PSG · 21岁 · 新星 · 首次世界杯</span></div>
+      <div class="player-card"><span class="name">10. Rafael Leão ★★</span><br><span class="meta">LW · AC Milan · 27岁 · 边路爆破手</span></div>
+      <div class="player-card"><span class="name">11. Cristiano Ronaldo (C) ★★★</span><br><span class="meta">ST · Al-Nassr · 41岁 · 226场/143球 · 第6届WC · ×0.95</span></div>
+      <div class="player-card"><span class="name">12. José Sá</span><br><span class="meta">GK · Wolves · 33岁 · 二门</span></div>
+      <div class="player-card"><span class="name">13. Diogo Dalot</span><br><span class="meta">RB/LB · Man United · 27岁 · 双能卫</span></div>
+      <div class="player-card"><span class="name">14. Renato Veiga</span><br><span class="meta">CB/DM · Villarreal · 22岁 · 首次世界杯</span></div>
+      <div class="player-card"><span class="name">15. Rúben Neves</span><br><span class="meta">DM · Al-Hilal · 29岁 · 深度组织者</span></div>
+      <div class="player-card"><span class="name">16. João Félix</span><br><span class="meta">FW · Al-Nassr · 26岁 · 技术型前锋</span></div>
+      <div class="player-card"><span class="name">17. Pedro Neto</span><br><span class="meta">RW · Chelsea · 26岁 · 速度突破</span></div>
+      <div class="player-card"><span class="name">18. Gonçalo Ramos</span><br><span class="meta">ST · PSG · 24岁 · 中锋选项</span></div>
+      <div class="player-card"><span class="name">19. Francisco Trincão</span><br><span class="meta">RW · Sporting CP · 26岁 · 边路选择</span></div>
+      <div class="player-card"><span class="name">20. Matheus Nunes</span><br><span class="meta">CM · Man City · 27岁 · B2B中场</span></div>
+    </div>
+
+    <h4 style="color:#ce1126;margin:16px 0 8px;">🇨🇩 刚果民主共和国20人</h4>
+    <div class="player-grid">
+      <div class="player-card"><span class="name">1. Lionel Mpasi</span><br><span class="meta">GK · Le Havre · 31岁 · 一门</span></div>
+      <div class="player-card"><span class="name">2. Aaron Wan-Bissaka ★</span><br><span class="meta">RB · West Ham · 28岁 · 前曼联 · 防守专家</span></div>
+      <div class="player-card"><span class="name">3. Chancel Mbemba (C) ★★</span><br><span class="meta">CB · Lille · 31岁 · 队长 · 后防领袖</span></div>
+      <div class="player-card"><span class="name">4. Axel Tuanzebe</span><br><span class="meta">CB · Burnley · 28岁 · 前曼联青训</span></div>
+      <div class="player-card"><span class="name">5. Arthur Masuaku</span><br><span class="meta">LB · Lens · 32岁 · 左路防守</span></div>
+      <div class="player-card"><span class="name">6. Charles Pickel</span><br><span class="meta">DM · Espanyol · 28岁 · 防守型中场</span></div>
+      <div class="player-card"><span class="name">7. Edo Kayembe</span><br><span class="meta">CM · Watford · 27岁 · 中场推进</span></div>
+      <div class="player-card"><span class="name">8. Meschak Elia ★</span><br><span class="meta">RM · Alanyaspor · 28岁 · 边路突破</span></div>
+      <div class="player-card"><span class="name">9. Gaël Kakuta</span><br><span class="meta">AM · AEL Limassol · 34岁 · 前切尔西 · 创造点</span></div>
+      <div class="player-card"><span class="name">10. Yoane Wissa ★</span><br><span class="meta">LW · Newcastle · 29岁 · 英超攻击手</span></div>
+      <div class="player-card"><span class="name">11. Cédric Bakambu ★</span><br><span class="meta">ST · Real Betis · 35岁 · 经验前锋</span></div>
+      <div class="player-card"><span class="name">12. Timothy Fayulu</span><br><span class="meta">GK · FC Noah (Armenia) · 26岁 · 二门</span></div>
+      <div class="player-card"><span class="name">13. Dylan Batubinsika</span><br><span class="meta">CB · AEL Limassol · 30岁 · 中卫深度</span></div>
+      <div class="player-card"><span class="name">14. Samuel Moutoussamy</span><br><span class="meta">CM · Atromitos · 29岁 · 中场轮换</span></div>
+      <div class="player-card"><span class="name">15. Noah Sadiki</span><br><span class="meta">DM · Sunderland · 21岁 · 首次世界杯</span></div>
+      <div class="player-card"><span class="name">16. Théo Bongonda</span><br><span class="meta">RW · Spartak Moscow · 30岁 · 边路威胁</span></div>
+      <div class="player-card"><span class="name">17. Fiston Mayele</span><br><span class="meta">ST · Pyramids FC · 31岁 · 前锋选项</span></div>
+      <div class="player-card"><span class="name">18. Simon Banza</span><br><span class="meta">ST · Al-Jazira · 29岁 · 前锋选项</span></div>
+      <div class="player-card"><span class="name">19. Ngal'ayel Mukau</span><br><span class="meta">CM · Lille · 21岁 · 首次世界杯</span></div>
+      <div class="player-card"><span class="name">20. Nathanaël Mbuku</span><br><span class="meta">RW · Montpellier · 24岁 · 首次世界杯</span></div>
+    </div>
+
+    <div class="warn-box">
+      ⚠️ <strong>覆盖盲区检查：</strong>葡萄牙阵容深度世界级——Man City ×3（Rúben Dias, Bernardo Silva, Matheus Nunes）、PSG ×3（Nuno Mendes, Vitinha, João Neves, Gonçalo Ramos）、Man United ×2（Bruno Fernandes, Diogo Dalot）。刚果民主共和国全部26人首次参加世界杯——0世界杯经验。核心球员分散在五大联赛边缘和二级联赛，球员档次差距为5.1/10。
+    </div>
+  </div>
+
+  <!-- ====== 4. 首发/替补不确定性 ====== -->
+  <div class="card">
+    <div class="card-title">🔍 首发/替补不确定性</div>
+
+    <h4 style="color:#0033A0;margin-bottom:8px;">🇵🇹 葡萄牙</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>Cristiano Ronaldo (C)</td><td>ST</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长 · 精神领袖 · 第6届世界杯 · 不可替代</td></tr>
+      <tr><td>Bruno Fernandes</td><td>AM</td><td><span class="tag tag-green">高(>95%)</span></td><td>创造核心 · 世界级攻击中场</td></tr>
+      <tr><td>Rúben Dias</td><td>CB</td><td><span class="tag tag-green">高(>95%)</span></td><td>后防领袖 · Man City主力</td></tr>
+      <tr><td>Bernardo Silva</td><td>RW/CM</td><td><span class="tag tag-green">高(>90%)</span></td><td>技术大师 · 位置灵活</td></tr>
+      <tr><td>João Cancelo</td><td>RB</td><td><span class="tag tag-green">高(>90%)</span></td><td>进攻型边卫 · 传中利器</td></tr>
+      <tr><td>Nuno Mendes</td><td>LB</td><td><span class="tag tag-green">高(>85%)</span></td><td>速度型左后卫 · PSG主力</td></tr>
+      <tr><td>Rafael Leão vs Pedro Neto</td><td>LW</td><td><span class="tag tag-yellow">中(60-70%)</span></td><td>Martínez在边锋位置轮换 · Leão首发概率略高</td></tr>
+      <tr><td>Gonçalo Inácio vs 其他中卫</td><td>CB</td><td><span class="tag tag-yellow">中(60-70%)</span></td><td>主力中卫搭档Dias的选择 · Veiga/Tomás Araújo竞争</td></tr>
+    </table>
+    <div class="info-box">
+      ⚠️ <strong>不首发场景分析：</strong>如果Rafael Leão未首发，Pedro Neto将在左路扮演速度突破角色。中场组合方面，Martínez可能选择Vitinha+João Neves的PSG双核，也可能派上Rúben Neves作为防守型后腰提供屏障。阵容深度足以应对任何轮换需求。
+    </div>
+
+    <h4 style="color:#ce1126;margin:16px 0 8px;">🇨🇩 刚果民主共和国</h4>
+    <table>
+      <tr><th>球员</th><th>位置</th><th>首发概率</th><th>不确定原因</th></tr>
+      <tr><td>Chancel Mbemba (C)</td><td>CB</td><td><span class="tag tag-green">高(>95%)</span></td><td>队长 · 后防核心 · 不可替代</td></tr>
+      <tr><td>Yoane Wissa</td><td>FW</td><td><span class="tag tag-green">高(>90%)</span></td><td>英超攻击手 · 最具威胁球员</td></tr>
+      <tr><td>Aaron Wan-Bissaka</td><td>RB</td><td><span class="tag tag-green">高(>90%)</span></td><td>前曼联防守专家 · 对位Leão</td></tr>
+      <tr><td>Cédric Bakambu</td><td>ST</td><td><span class="tag tag-green">高(>85%)</span></td><td>最有经验的前锋 · 35岁</td></tr>
+      <tr><td>Charles Pickel</td><td>DM</td><td><span class="tag tag-green">高(>85%)</span></td><td>防守型中场 · 破坏节奏</td></tr>
+      <tr><td>Gaël Kakuta</td><td>AM</td><td><span class="tag tag-yellow">中(65-75%)</span></td><td>34岁老将 · 出场时间管理 · Sadiki可替代</td></tr>
+      <tr><td>Meschak Elia vs Théo Bongonda</td><td>RM</td><td><span class="tag tag-blue">中(50-65%)</span></td><td>两人竞争右路首发</td></tr>
+    </table>
+    <div class="info-box">
+      ⚠️ <strong>刚果民主共和国首发不确定性较低：</strong>Desabre大概率沿用4-5-1防守反击阵型，核心框架（Mbemba、Wan-Bissaka、Pickel、Wissa、Bakambu）基本锁定。主要变数在中场创造力——34岁的Kakuta能否坚持90分钟是疑问，年轻球员Noah Sadiki（21岁）可能在下半场亮相。
+    </div>
+  </div>
+
+  <!-- ====== 5. 攻防对比（含xG/xGA） ====== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比（含xG/xGA）</div>
+    <table>
+      <tr><th>维度</th><th>🇵🇹 葡萄牙</th><th>🇨🇩 刚果民主共和国</th></tr>
+      <tr>
+        <td><strong>进攻体系</strong></td>
+        <td>4-3-3 控球+渗透进攻<br>Bruno Fernandes组织创造端<br>Bernardo Silva右路技术控制<br>Rafael Leão左路速度爆破<br>CR7禁区终结</td>
+        <td>4-5-1 低位防守+快速反击<br>Wissa左路突破作为主要进攻通道<br>Bakambu单箭头支点<br>中后场堆人限制对手空间</td>
+      </tr>
+      <tr>
+        <td><strong>预计控球率</strong></td>
+        <td>62-68%</td>
+        <td>32-38%</td>
+      </tr>
+      <tr>
+        <td><strong>近5场场均进球</strong></td>
+        <td>约2.2球</td>
+        <td>约1.4球（含两场百慕大）</td>
+      </tr>
+      <tr>
+        <td><strong>预计本场 xG</strong></td>
+        <td><strong>2.40 - 3.20</strong></td>
+        <td><strong>0.50 - 1.00</strong></td>
+      </tr>
+      <tr>
+        <td><strong>预计总 xG 区间</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">2.90 - 4.10</td>
+      </tr>
+      <tr>
+        <td><strong>xG 预测比分</strong></td>
+        <td colspan="2" style="text-align:center;font-size:16px;font-weight:700;color:#0033A0;">葡萄牙 2.1 - 1.1 刚果民主共和国</td>
+      </tr>
+      <tr>
+        <td><strong>防守体系</strong></td>
+        <td>Rúben Dias统领后防<br>Inácio提供左脚出球能力<br>Nuno Mendes+João Cancelo双进攻边卫<br>Vitinha/João Neves中场控制</td>
+        <td>Mbemba+Tuanzebe中卫搭档<br>Wan-Bissaka右路防守对位Leão<br>Pickel中场扫荡<br>全队收缩阵型</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">xG 细分可视化</h4>
+    <div class="xG-bar">
+      <span class="xG-label" style="color:#0033A0;">葡萄牙</span>
+      <div class="xG-track"><div class="xG-fill" style="width:72%;background:linear-gradient(90deg,#0033A0,#4a7fe8);height:100%;border-radius:8px;"></div></div>
+      <span style="font-weight:700;font-size:14px;">2.40 - 3.20</span>
+    </div>
+    <div class="xG-bar">
+      <span class="xG-label" style="color:#ce1126;">刚果</span>
+      <div class="xG-track"><div class="xG-fill" style="width:21%;background:linear-gradient(90deg,#ce1126,#ef5350);height:100%;border-radius:8px;"></div></div>
+      <span style="font-weight:700;font-size:14px;">0.50 - 1.00</span>
+    </div>
+
+    <h4 style="color:#c62828;margin:12px 0 8px;">⚠️ 非稳态场景分析</h4>
+    <table>
+      <tr><th>场景</th><th>葡萄牙反应</th><th>刚果民主共和国反应</th></tr>
+      <tr>
+        <td><strong>葡萄牙早早破门（<30分钟）</strong></td>
+        <td>控制球权 · 节奏管理 · 可能提前换下CR7保护体能<br>刚果被迫打开防线 → 葡萄牙反击空间增大</td>
+        <td>被迫压上寻找进球 · 防线暴露<br>反击威胁反而增加（Wissa速度）</td>
+      </tr>
+      <tr>
+        <td><strong>0-0 僵局至半场</strong></td>
+        <td>压力累积 · 急躁情绪可能出现<br>CR7必须打满全场 · 下半场强度提升</td>
+        <td>信心暴涨 · 参考逼平丹麦（7.2）经验<br>全队收缩防守更加坚决</td>
+      </tr>
+      <tr>
+        <td><strong>刚果先进球（极低概率）</strong></td>
+        <td>全面压上进攻 · Bruno+Bernardo组织狂攻<br>所有进攻球员投入 · 可能换上Ramos+Félix</td>
+        <td>全员退守 · 摆大巴 · Mbemba+Pickel全力防守<br>争取历史性爆冷</td>
+      </tr>
+      <tr>
+        <td><strong>葡萄牙 2-0 领先</strong></td>
+        <td>进入管理模式 · CR7可能被换下保存体力<br>替补球员获得出场机会</td>
+        <td>可能抓住反击机会攻入安慰球<br>Wan-Bissaka的长传或定位球是得分机会</td>
+      </tr>
+    </table>
+    <div class="section-note">
+      ⚠️ <strong>关键发现：</strong>0-0半场是最危险的场景——刚果民主共和国曾在对阵丹麦时展现防守韧性（7.2评级）。如果葡萄牙上半场无法破门，刚果的防守信心将随每分钟累积。参考墨西哥vs葡萄牙的平局，刚果有能力在低位防守中制造麻烦。
+    </div>
+  </div>
+
+  <!-- ====== 6. 门将分析 ====== -->
+  <div class="card">
+    <div class="card-title">🧤 门将分析</div>
+    <table>
+      <tr><th>项目</th><th>🇵🇹 Diogo Costa</th><th>🇨🇩 Lionel Mpasi</th></tr>
+      <tr><td><strong>年龄/经验</strong></td><td>26岁 · Porto主力 · 欧洲杯+世界杯经验</td><td>31岁 · Le Havre（法乙）· 0世界杯经验</td></tr>
+      <tr><td><strong>俱乐部</strong></td><td>Porto（葡超）</td><td>Le Havre（法乙）</td></tr>
+      <tr><td><strong>联赛水平</strong></td><td><span class="tag tag-green">葡超（欧洲二档顶级）</span></td><td><span class="tag tag-yellow">法乙（欧洲三级联赛）</span></td></tr>
+      <tr><td><strong>扑救率（估算）</strong></td><td>约73-78%</td><td>约65-72%（精确PSxG+/-不可用）</td></tr>
+      <tr><td><strong>大赛心理</strong></td><td>欧冠淘汰赛经验 · 关键扑救能力<br>2022世界杯首发经验</td><td>无大赛经验 · 52年世界杯空白<br>面对世界级攻击手的压力未知</td></tr>
+      <tr><td><strong>面对本场预期</strong></td><td>预计面对3-5次有效射门 · 压力可控</td><td>预计面对10-15次有效射门 · 巨大压力</td></tr>
+    </table>
+    <div class="info-box">
+      ⚠️ <strong>门将对决：</strong>这是本场最大不对位之一。Diogo Costa是葡超顶级门将，有欧冠和世界杯经验。Mpasi效力于法乙Le Havre，将面对CR7、Bruno Fernandes、Bernardo Silva、Rafael Leão等世界级攻击线的冲击。Mpasi预计需要做出6+次关键扑救才能帮助球队保持希望。刚果二门Timothy Fayulu（FC Noah/Armenia）和三门Matthieu Epolo（Standard Liège, 21岁）的出场可能性较低。
+    </div>
+  </div>
+
+  <!-- ====== 7. 犯规率/纪律指数 ====== -->
+  <div class="card">
+    <div class="card-title">🟨 犯规率/纪律指数</div>
+    <table>
+      <tr><th>指标</th><th>🇵🇹 葡萄牙</th><th>🇨🇩 刚果民主共和国</th></tr>
+      <tr><td><strong>近期场均犯规</strong></td><td>约10-12次（低）</td><td>约13-16次（中偏高）</td></tr>
+      <tr><td><strong>犯规类型</strong></td><td>战术犯规为主 · 控球减少身体接触</td><td>身体对抗型 · 防守时被迫犯规较多</td></tr>
+      <tr><td><strong>红黄牌趋势</strong></td><td>纪律良好 · 控球优势减少犯规需求</td><td>面对强队时犯规率上升 · 需注意累积黄牌</td></tr>
+      <tr><td><strong>节奏破坏器标注</strong></td><td><span class="tag tag-green">正常范围（10-12次 < 15次阈值）</span></td><td><span class="tag tag-yellow">接近阈值（13-16次可能 ≥ 15次阈值）</span></td></tr>
+    </table>
+    <div class="section-note">
+      ⚠️ <strong>预判：</strong>刚果民主共和国面对实力碾压的葡萄牙，犯规率可能升至节奏破坏器水平（15+次/场）。尤其在中场Pickel和Kayembe的防守对抗中，对Bruno Fernandes和Bernardo Silva的战术犯规将频繁出现。葡萄牙的犯规主要集中在阻止刚果快速反击时。预计裁判将出示3-5张黄牌，主要集中在刚果一方。
+    </div>
+  </div>
+
+  <!-- ====== 8. 联赛 → 大赛状态折扣 ====== -->
+  <div class="card">
+    <div class="card-title">📉 联赛 → 大赛状态折扣</div>
+    <table>
+      <tr><th>球员</th><th>世界杯经验</th><th>折扣系数</th><th>风险评估</th></tr>
+      <tr><td colspan="4"><strong>🇵🇹 葡萄牙</strong></td></tr>
+      <tr><td>Cristiano Ronaldo</td><td>6届（2006-2026）· 历史纪录</td><td>× 0.95</td><td><span class="tag tag-green">最低风险</span></td></tr>
+      <tr><td>Bruno Fernandes</td><td>2届（2018, 2022）· Man United核心</td><td>× 0.94</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>Bernardo Silva</td><td>2届（2018, 2022）· Man City核心</td><td>× 0.94</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>Rúben Dias</td><td>2届（2018, 2022）· Man City主力</td><td>× 0.93</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>João Cancelo</td><td>1届（2022）· 多次欧冠淘汰赛</td><td>× 0.92</td><td><span class="tag tag-green">低风险</span></td></tr>
+      <tr><td>João Neves</td><td>0届 · 首次世界杯 · 21岁</td><td>× 0.78</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>Renato Veiga</td><td>0届 · 首次世界杯 · 22岁</td><td>× 0.75</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td><strong>全队综合折扣</strong></td><td>以多届世界杯班底为主</td><td><strong>× 0.91</strong></td><td><span class="tag tag-green">低</span></td></tr>
+      <tr><td colspan="4"><strong>🇨🇩 刚果民主共和国</strong></td></tr>
+      <tr><td>Chancel Mbemba (C)</td><td>0届 · 首次世界杯 · 31岁</td><td>× 0.82</td><td><span class="tag tag-red">高风险（全队首次）</span></td></tr>
+      <tr><td>Aaron Wan-Bissaka</td><td>0届 · 首次世界杯 · 28岁</td><td>× 0.80</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>Yoane Wissa</td><td>0届 · 首次世界杯 · 29岁</td><td>× 0.80</td><td><span class="tag tag-red">高风险</span></td></tr>
+      <tr><td>Cédric Bakambu</td><td>0届 · 首次世界杯 · 35岁</td><td>× 0.82</td><td><span class="tag tag-red">高风险（年龄）</span></td></tr>
+      <tr><td>Gaël Kakuta</td><td>0届 · 首次世界杯 · 34岁</td><td>× 0.80</td><td><span class="tag tag-red">高风险（年龄+无经验）</span></td></tr>
+      <tr><td>Noah Sadiki</td><td>0届 · 首次世界杯 · 21岁</td><td>× 0.70</td><td><span class="tag tag-red">极高风险</span></td></tr>
+      <tr><td><strong>全队综合折扣</strong></td><td>全部26人首次世界杯</td><td><strong>× 0.80</strong></td><td><span class="tag tag-red">高</span></td></tr>
+    </table>
+    <div class="warn-box">
+      ⚠️ <strong>历史性风险：</strong>刚果民主共和国全队综合折扣 ×0.80，远低于葡萄牙的 ×0.91。这是"52年世界杯荒"的直接后果——全队26人无任何世界杯经验。Mbemba、Wissa、Wan-Bissaka等球员在俱乐部层面有高水平经验，但世界杯舞台的心理压力完全不同。葡萄牙方面仅有数名年轻球员（João Neves、Renato Veiga等）属于首次世界杯，核心阵容经验丰富。
+    </div>
+  </div>
+
+  <!-- ====== 9. 主教练综合能力评估（V4升级 - 8维度评分） ====== -->
+  <div class="card">
+    <div class="card-title">👔 主教练综合能力评估（V4升级 · 8维度评分）</div>
+    <table>
+      <tr><th style="width:20%;">维度</th><th>🇵🇹 Roberto Martínez</th><th>🇨🇩 Sébastien Desabre</th></tr>
+      <tr><td><strong>国籍</strong></td><td>西班牙</td><td>法国</td></tr>
+      <tr><td><strong>执教时间</strong></td><td>2023年至今 · 前比利时主帅（2016-2022）</td><td>2022年至今 · 带队晋级世界杯</td></tr>
+      <tr>
+        <td><strong>1. 战术哲学</strong></td>
+        <td><span class="tag tag-green">7/10</span><br>明确的4-3-3体系 · 注重边路进攻<br>善于利用CR7的禁区能力 · 战术理念成熟</td>
+        <td><span class="tag tag-yellow">5/10</span><br>倾向于实用主义4-5-1 · 防守优先<br>战术风格偏向保守</td>
+      </tr>
+      <tr>
+        <td><strong>2. 大赛成绩</strong></td>
+        <td><span class="tag tag-yellow">6/10</span><br>带比利时2018世界杯季军 · 2022世界杯小组出局（1胜1平1负）<br>带葡萄牙初期稳定但未经历大赛检验</td>
+        <td><span class="tag tag-red">4/10</span><br>首次带队世界杯 · 此前在非洲杯中取得一定成绩<br>无淘汰赛经验</td>
+      </tr>
+      <tr>
+        <td><strong>3. 临场决策</strong></td>
+        <td><span class="tag tag-yellow">6/10</span><br>换人时机总体合理 · 偶有争议<br>2022世界杯对比利时的调整不够及时</td>
+        <td><span class="tag tag-yellow">5/10</span><br>样本量不足 · 面对强队时的应对能力强<br>参考对阵丹麦的战术布置（获得7.2评分）</td>
+      </tr>
+      <tr>
+        <td><strong>4. 危机管理</strong></td>
+        <td><span class="tag tag-yellow">6/10</span><br>处理比利时更衣室矛盾经验 · 葡萄牙过渡期稳定<br>但2022世界杯更衣室矛盾引争议</td>
+        <td><span class="tag tag-yellow">5/10</span><br>带领弱势球队有一定经验<br>世界杯级别的危机管理能力未知</td>
+      </tr>
+      <tr>
+        <td><strong>5. 更衣室掌控</strong></td>
+        <td><span class="tag tag-green">7/10</span><br>与CR7关系良好 · 葡萄牙更衣室相对和谐<br>经验丰富的球员管理者</td>
+        <td><span class="tag tag-yellow">6/10</span><br>得到核心球员（Mbemba等）支持<br>球队凝聚力在晋级过程中体现</td>
+      </tr>
+      <tr>
+        <td><strong>6. 对手研究</strong></td>
+        <td><span class="tag tag-green">7/10</span><br>善于分析对手弱点 · 针对性战术布置<br>葡萄牙近期大比分胜利体现赛前准备充分</td>
+        <td><span class="tag tag-yellow">5/10</span><br>对阵丹麦的成功（7.2分）体现赛前布置能力<br>但对阵阿尔及利亚的失利（2.7分）显示波动</td>
+      </tr>
+      <tr>
+        <td><strong>7. 大赛压力</strong></td>
+        <td><span class="tag tag-yellow">6/10</span><br>2018季军证明大场面能力<br>2022世界杯压力下表现（带比利时出局）存疑</td>
+        <td><span class="tag tag-red">4/10</span><br>世界杯舞台压力前所未有 · 52年期待的全部重量<br>首次世界杯主教练的心理考验</td>
+      </tr>
+      <tr>
+        <td><strong>8. 战术灵活性</strong></td>
+        <td><span class="tag tag-yellow">6/10</span><br>可在4-3-3与3-4-3间切换<br>Plan B相对有限但足够应对大多数情况</td>
+        <td><span class="tag tag-yellow">5/10</span><br>主要依赖4-5-1防守反击<br>变化空间有限 · 替补席深度不足限制灵活性</td>
+      </tr>
+      <tr>
+        <td><strong>综合评分</strong></td>
+        <td><span class="tag tag-blue">B+ · 6.3/10</span></td>
+        <td><span class="tag tag-yellow">C+ · 4.9/10</span></td>
+      </tr>
+    </table>
+    <div class="section-note">
+      ⚠️ <strong>教练对决分析：</strong>Martínez的综合评价（6.3/10）显著高于Desabre（4.9/10），差距主要体现在大赛经验、战术哲学和对手研究三个维度。Martínez带比利时获得2018世界杯季军的履历赋予他大赛信任。Desabre虽然带领刚果实现了52年来的世界杯突破，但世界杯级别赛事的压力和战术复杂性将是他面临的巨大考验。参考Desabre对阵丹麦的7.2分表现，他懂得如何组织防守应对强队，但有对阵阿尔及利亚时只获2.7分的反面案例——表现波动大。
+    </div>
+  </div>
+
+  <!-- ====== 10. 替补攻击力 ====== -->
+  <div class="card">
+    <div class="card-title">🔄 替补攻击力</div>
+    <table>
+      <tr><th>维度</th><th>🇵🇹 葡萄牙</th><th>🇨🇩 刚果民主共和国</th></tr>
+      <tr>
+        <td><strong>替补深度评估</strong></td>
+        <td><span class="tag tag-green">世界级深度</span><br>João Félix + Pedro Neto + Gonçalo Ramos + Diogo Dalot + Rúben Neves + Matheus Nunes + Francisco Trincão + Francisco Conceição</td>
+        <td><span class="tag tag-yellow">有限深度</span><br>Théo Bongonda + Fiston Mayele + Simon Banza + Samuel Moutoussamy + Noah Sadiki</td>
+      </tr>
+      <tr>
+        <td><strong>替补奇兵候选人</strong></td>
+        <td>
+          <strong>João Félix</strong>（Al-Nassr）<br>类型：技术型前锋 · 可以在60-70分钟出场制造差异<br><br>
+          <strong>Gonçalo Ramos</strong>（PSG）<br>类型：支点中锋 · 若CR70分钟下场直接替代<br><br>
+          <strong>Pedro Neto</strong>（Chelsea）<br>类型：速度型边锋 · 反击杀器
+        </td>
+        <td>
+          <strong>Théo Bongonda</strong>（Spartak Moscow）<br>类型：边路威胁 · 替补出场提供速度<br><br>
+          <strong>Fiston Mayele</strong>（Pyramids FC）<br>类型：体力充沛前锋 · 冲击葡萄牙后防
+        </td>
+      </tr>
+      <tr>
+        <td><strong>替补进球效率</strong></td>
+        <td>约30-35%（近期比赛替补进球率高）</td>
+        <td>无世界杯历史数据 · 估计<20%</td>
+      </tr>
+    </table>
+    <div class="info-box">
+      📊 <strong>替补攻击力差距：</strong>葡萄牙替补席质量超过刚果的首发阵容——Félix（Al-Nassr）、Ramos（PSG）、Neto（Chelsea）、Matheus Nunes（Man City）均为五大联赛水准。刚果替补席主要在俄超、埃及联赛和英冠，攻击力降级明显。若比分胶着至60分钟，葡萄牙的替补深度将形成碾压。
+    </div>
+  </div>
+
+  <!-- ====== 11. 关键对位 ====== -->
+  <div class="card">
+    <div class="card-title">🎯 关键对位</div>
+    <div class="key-matchup">
+      <span class="flag">🇵🇹</span>
+      <div style="flex:1;"><strong>1. CR7 vs Mbemba（传奇 vs 零经验）</strong><br><span style="font-size:12px;color:#666;">C罗第六届世界杯（226场/143球）vs 刚果队长首次世界杯。Mbemba在俱乐部层面有实力但从未面对世界杯级别的持续性进攻压力。C罗的经验和禁区内的嗅觉将在定位球中形成巨大威胁。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">🇵🇹</span><span class="flag">🇨🇩</span>
+      <div style="flex:1;"><strong>2. Rafael Leão vs Aaron Wan-Bissaka（速度 vs 防守专长）</strong><br><span style="font-size:12px;color:#666;">本场最具观赏性的对位。Leão是意甲最具爆破力的边锋之一，Wan-Bissaka是英超公认的1v1防守专家（前曼联主力）。Wan-Bissaka能否限制Leão的突破，将直接影响葡萄牙左路进攻效率。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">🇵🇹</span>
+      <div style="flex:1;"><strong>3. Bruno Fernandes vs Charles Pickel（创造核心 vs 破坏者）</strong><br><span style="font-size:12px;color:#666;">Bruno是葡萄牙进攻的"总开关"——世界级传球、远射和定位球。Pickel的任务是在Bruno接球时施加身体压迫，切断他与CR7和Bernardo Silva的联系。如果Pickel能成功限制Bruno，葡萄牙的进攻创造力将大幅下降。</span></div>
+    </div>
+    <div class="key-matchup">
+      <span class="flag">🇨🇩</span>
+      <div style="flex:1;"><strong>4. Yoane Wissa vs João Cancelo（刚果唯一突破口 vs 进攻型边卫）</strong><br><span style="font-size:12px;color:#666;">Wissa是刚果最有威胁的进攻武器（英超Newcastle攻击手），他将利用Cancelo前插后留下的空间发起反击。Cancelo的进攻倾向是刚果反击的天然机会——这是刚果最可能创造得分的对位。</span></div>
+    </div>
+  </div>
+
+  <!-- ====== 12. 环境因素 ====== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>因素</th><th>详情</th><th>影响评估</th></tr>
+      <tr>
+        <td><strong>伤停</strong></td>
+        <td>葡萄牙：<span class="tag tag-green">全员健康 · 完整阵容</span><br>刚果民主共和国：<span class="tag tag-green">无重大伤停 · 全队可用</span></td>
+        <td>两队均无重大伤病 · 可派最强阵容</td>
+      </tr>
+      <tr>
+        <td><strong>体能/赛程</strong></td>
+        <td>两队均首轮 · 充足休整</td>
+        <td>无赛程劣势</td>
+      </tr>
+      <tr>
+        <td><strong>天气/场地</strong></td>
+        <td>6月中旬休斯顿：28-35°C · 炎热潮湿<br>NRG体育馆：72,220座 · 可闭合顶棚</td>
+        <td><span class="tag tag-yellow">对两队均有影响</span> · 炎热天气消耗体能<br>NRG可闭合顶棚可能缓解极端天气</td>
+      </tr>
+      <tr>
+        <td><strong>海拔</strong></td>
+        <td>海平面（休斯顿海拔约13m）</td>
+        <td>无影响</td>
+      </tr>
+      <tr>
+        <td><strong>中立场</strong></td>
+        <td>美国休斯顿 · NRG体育馆</td>
+        <td>真正中立场 · 预计葡萄牙因更大人气基础获更多支持</td>
+      </tr>
+      <tr>
+        <td><strong>历史交锋</strong></td>
+        <td colspan="2">两队无历史交锋记录</td>
+      </tr>
+      <tr>
+        <td><strong>大赛心理/逆转因子</strong></td>
+        <td colspan="2">
+          <strong>葡萄牙：</strong>CR7最后一届世界杯的动力 · 2016欧洲杯冠军 · 2022世界杯八强 · Martínez需要证明自己<br>
+          <strong>刚果民主共和国：</strong>52年等待 · 全队首次世界杯 · "弱者"心态可能带来意想不到的韧性<br>
+          <strong>实现路径：</strong>葡萄牙通过中场控制（Bruno+Bernardo+Vitinha）→ 边路突破（Leão/Neto）→ CR7禁区终结。刚果通过密集防守限制空间 → Wissa反击+定位球（Mbemba头球）→ 争取0-0坚持到60分钟制造心理压力。
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ====== 13. 教练视角：小组出线形势推演（V4新增） ====== -->
+  <div class="card">
+    <div class="card-title">🏆 教练视角：K组 小组出线形势推演（V4新增）</div>
+
+    <div class="info-box" style="margin-bottom:16px;">
+      <strong>K组 四队实力排序：</strong>葡萄牙 > 哥伦比亚 > 刚果民主共和国 > 乌兹别克斯坦
+    </div>
+
+    <table>
+      <tr><th>球队 (FIFA排名)</th><th>实力评估</th><th>出线目标</th><th>首轮形势</th></tr>
+      <tr>
+        <td><strong>🇵🇹 葡萄牙 (#6)</strong></td>
+        <td><span class="tag tag-green">小组最强</span><br>世界级阵容 · 夺冠外围热门<br>目标9分全胜出线</td>
+        <td>小组第1 · 3场全胜</td>
+        <td>首轮对刚果 · 必须取胜且争取净胜球<br>若大胜则奠定小组基调 · 若小胜和平局将增加后两轮压力</td>
+      </tr>
+      <tr>
+        <td><strong>🇨🇴 哥伦比亚 (~#10-15)</strong></td>
+        <td><span class="tag tag-blue">小组第二热门</span><br>南美强队 · 可挑战葡萄牙<br>技术型打法 · 大赛韧性</td>
+        <td>挑战小组第1或稳保第2</td>
+        <td>首轮对乌兹别克斯坦 · 同样必须取胜<br>若净胜球不如葡萄牙则需在与葡萄牙直接对话中争取不败</td>
+      </tr>
+      <tr>
+        <td><strong>🇨🇩 刚果民主共和国 (#57)</strong></td>
+        <td><span class="tag tag-yellow">竞争小组第3</span><br>52年回归 · 0世界杯经验<br>防守型球队 · 爆冷潜力</td>
+        <td>避免小组垫底 · 争取1-2分</td>
+        <td>首轮对葡萄牙 · 理想结果是0-0或1-1<br>保分目标：从乌兹别克斯坦身上抢3分 · 对哥伦比亚争取平局</td>
+      </tr>
+      <tr>
+        <td><strong>🇺🇿 乌兹别克斯坦 (~#60-70)</strong></td>
+        <td><span class="tag tag-purple">小组弱旅</span><br>首次世界杯 · 防守结构可用<br>亚洲球队对南美和欧洲球队差距明显</td>
+        <td>积累经验 · 争取1分</td>
+        <td>首轮对哥伦比亚 · 被动局面 · 目标少输<br>关键场次：对刚果的第2轮可能是唯一拿分机会</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:16px 0 8px;">Martínez的3场比赛策略推演</h4>
+    <table>
+      <tr><th>比赛轮次</th><th>对手</th><th>目标</th><th>策略</th></tr>
+      <tr>
+        <td><strong>第1轮</strong></td>
+        <td>vs 刚果民主共和国</td>
+        <td><span class="tag tag-green">必胜 · 净胜球积累</span></td>
+        <td>全力进攻 · 争取在60分钟前解决战斗 · CR7控制在70-75分钟 · 替补获得时间</td>
+      </tr>
+      <tr>
+        <td><strong>第2轮</strong></td>
+        <td>vs 乌兹别克斯坦</td>
+        <td><span class="tag tag-green">必胜 · 继续大胜</span></td>
+        <td>若首轮大胜刚果，可能让CR7休息或只出场60分钟 · 轮换阵容仍足以取胜</td>
+      </tr>
+      <tr>
+        <td><strong>第3轮</strong></td>
+        <td>vs 哥伦比亚</td>
+        <td><span class="tag tag-blue">保平争胜</span></td>
+        <td>若前两场全胜，此战可平局确保小组第1 · 若首轮翻车则为生死战 · 全主力出战</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#ce1126;margin:16px 0 8px;">Desabre的3场比赛策略推演</h4>
+    <table>
+      <tr><th>比赛轮次</th><th>对手</th><th>目标</th><th>策略</th></tr>
+      <tr>
+        <td><strong>第1轮</strong></td>
+        <td>vs 葡萄牙</td>
+        <td><span class="tag tag-yellow">保分 · 争平局</span></td>
+        <td>摆大巴 · 全力防守 · 目标0-0坚持到半场 · 定位球+反击偷袭 · 梅西对阵丹麦的模板</td>
+      </tr>
+      <tr>
+        <td><strong>第2轮</strong></td>
+        <td>vs 乌兹别克斯坦</td>
+        <td><span class="tag tag-green">必胜场次</span></td>
+        <td>这是刚果唯一可能赢球的比赛 · 必须全力进攻 · 如果输球将面临小组0分出局</td>
+      </tr>
+      <tr>
+        <td><strong>第3轮</strong></td>
+        <td>vs 哥伦比亚</td>
+        <td><span class="tag tag-yellow">争取平局</span></td>
+        <td>哥伦比亚实力强于刚果 · 但如果前两场拿到3分（胜乌兹别克），此战心态从容</td>
+      </tr>
+    </table>
+
+    <div class="section-note">
+      ⚠️ <strong>小组出线情景模拟：</strong>最可能情景——葡萄牙9分出线（3连胜）、哥伦比亚6分（胜乌兹别克+胜刚果、负葡萄牙）、刚果民主共和国3分（胜乌兹别克、负葡萄牙/哥伦比亚）、乌兹别克斯坦0分。但如果刚果在"必胜场次"对阵乌兹别克斯坦时落败，可能0分出局。乌兹别克斯坦也有可能在刚果身上拿到首胜。
+    </div>
+  </div>
+
+  <!-- ====== 14. 概率预测 ====== -->
+  <div class="card">
+    <div class="card-title">📊 概率预测</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="prob-bar">
+        <div class="prob-label" style="color:#0033A0;font-weight:700;">葡萄牙胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:73%;"></div></div>
+        <div class="prob-val">73%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label" style="font-weight:700;">平局</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-gold" style="width:17%;"></div></div>
+        <div class="prob-val">17%</div>
+      </div>
+      <div class="prob-bar">
+        <div class="prob-label" style="color:#ce1126;font-weight:700;">刚果胜</div>
+        <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:10%;"></div></div>
+        <div class="prob-val">10%</div>
+      </div>
+    </div>
+
+    <h4 style="color:#0033A0;margin:8px 0;">Pinnacle 赔率隐含概率</h4>
+    <table>
+      <tr><th>选项</th><th>赔率</th><th>隐含概率</th></tr>
+      <tr><td>葡萄牙胜</td><td>1.28-1.33</td><td>~75-78%</td></tr>
+      <tr><td>平局</td><td>5.80</td><td>~16-17%</td></tr>
+      <tr><td>刚果民主共和国胜</td><td>11.0-11.7</td><td>~8-9%</td></tr>
+      <tr><td>Over 2.5</td><td>~1.75</td><td>~55%</td></tr>
+      <tr><td>Under 2.5</td><td>~2.00</td><td>~48%</td></tr>
+      <tr><td>双方进球 Yes</td><td>~2.50</td><td>~38%</td></tr>
+      <tr><td>双方进球 No</td><td>~1.50</td><td>~64%</td></tr>
+    </table>
+
+    <p style="font-weight:700;color:#0033A0;margin-top:12px;">概率置信度梯级：<span class="confidence conf-high">高</span>（胜率差 63%，远超 ≥8% 最低要求）</p>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">各概率信号强度标注</h4>
+    <table>
+      <tr><th>信号</th><th>指向</th><th>强度</th><th>解释</th></tr>
+      <tr><td>FIFA排名差距（#6 vs #57）</td><td>葡萄牙</td><td><span class="signal signal-strong">强</span></td><td>51位排名差 · 数量级差距</td></tr>
+      <tr><td>球队评级（8.6 vs 3.5）</td><td>葡萄牙</td><td><span class="signal signal-strong">强</span></td><td>5.1/10 评分差 · 实力差距巨大</td></tr>
+      <tr><td>阵容深度（五大联赛全覆盖 vs 二级联赛）</td><td>葡萄牙</td><td><span class="signal signal-strong">强</span></td><td>Man City×3 + PSG×4 + Man United×2 vs 分散在低级别联赛</td></tr>
+      <tr><td>世界杯经验（多届 vs 0届全队）</td><td>葡萄牙</td><td><span class="signal signal-strong">强</span></td><td>CR7第6届 · 多名2届球员 vs 全队26人首次</td></tr>
+      <tr><td>联赛→大赛折扣（×0.91 vs ×0.80）</td><td>葡萄牙</td><td><span class="signal signal-strong">强</span></td><td>刚果0世界杯经验导致大幅折扣</td></tr>
+      <tr><td>主教练评分（6.3 vs 4.9）</td><td>葡萄牙</td><td><span class="signal signal-strong">强</span></td><td>Martínez 2018世界杯季军经验</td></tr>
+      <tr><td>刚果vs丹麦平局（7.2评级）</td><td>刚果/平局</td><td><span class="signal signal-mid">中</span></td><td>证明刚果有能力防守强队</td></tr>
+      <tr><td>刚果状态评分（6.3 vs 5.6）</td><td>刚果</td><td><span class="signal signal-mid">中</span></td><td>刚果近期状态略优于葡萄牙 · 但对手含金量低</td></tr>
+      <tr><td>休斯顿高温天气</td><td>平局</td><td><span class="signal signal-weak">弱</span></td><td>炎热天气可能减慢节奏 · 对刚果防守有利</td></tr>
+      <tr><td>52年世界杯荒的情绪加成</td><td>刚果</td><td><span class="signal signal-weak">弱</span></td><td>"回归之战"的心理加成可能有短暂效果</td></tr>
+    </table>
+    <div class="info-box">
+      📊 <strong>信号强度评估：</strong>6条强信号全部指向葡萄牙 · 0条强信号指向刚果 · 0条强信号指向平局。2条中信号涉及刚果防守韧性，但不足以改变整体判断。信号清晰度极高——这是本届世界杯小组赛中实力差距最大的比赛之一。
+    </div>
+  </div>
+
+  <!-- ====== 15. 比分预测 ====== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="text-align:center;margin:16px 0;">
+      <span class="score-pred score-main">葡萄牙 3-0 刚果民主共和国</span><span style="font-size:13px;color:#888;margin-left:8px;">（概率 ~15%）</span>
+    </div>
+    <div style="text-align:center;margin:8px 0;">
+      <span class="score-pred">葡萄牙 2-0 刚果民主共和国</span><span style="font-size:13px;color:#888;">（概率 ~13%）</span>
+      <span class="score-pred">葡萄牙 2-1 刚果民主共和国</span><span style="font-size:13px;color:#888;">（概率 ~10%）</span>
+      <span class="score-pred">葡萄牙 4-0 刚果民主共和国</span><span style="font-size:13px;color:#888;">（概率 ~7%）</span>
+      <span class="score-pred">1-1 平局</span><span style="font-size:13px;color:#888;">（概率 ~6%）</span>
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">预期 xG 区间</h4>
+    <div style="text-align:center;font-weight:700;font-size:18px;color:#0033A0;">
+      总 xG：2.90 - 4.10<br>
+      葡萄牙 xG：2.40 - 3.20 &nbsp;|&nbsp; 刚果民主共和国 xG：0.50 - 1.00
+    </div>
+
+    <h4 style="color:#0033A0;margin:12px 0 8px;">进球时间分布预测</h4>
+    <table>
+      <tr><th>时段</th><th>葡萄牙进球概率</th><th>刚果进球概率</th></tr>
+      <tr><td>0-15分钟</td><td><span class="tag tag-yellow">中等（约25%）</span><br>葡萄牙开场压迫 · 创造机会</td><td><span class="tag tag-red">极低（<5%）</span></td></tr>
+      <tr><td>15-45分钟</td><td><span class="tag tag-green">高（约45%）</span><br>葡萄牙节奏控制 · 持续进攻</td><td><span class="tag tag-red">低（<10%）</span></td></tr>
+      <tr><td>45-60分钟</td><td><span class="tag tag-green">高（约40%）</span><br>下半场前15分钟是进球黄金期</td><td><span class="tag tag-red">低（10-15%）</span><br>反击机会增多</td></tr>
+      <tr><td>60-90分钟</td><td><span class="tag tag-yellow">中等（约30%）</span><br>若未锁定胜局则狂攻 · 替补冲击</td><td><span class="tag tag-yellow">中等（15-20%）</span><br>葡萄牙压上后反击空间</td></tr>
+    </table>
+  </div>
+
+  <!-- ====== 16. 最终结论 ====== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>葡萄牙将以2-3球优势轻松取胜，刚果民主共和国很难攻破葡萄牙球门——预计比分 3-0，葡萄牙零封。</strong><br><br>
+        <strong>预测逻辑：</strong><br>
+        1. <strong>实力差距是数量级的：</strong>葡萄牙FIFA排名#6，球队评级8.6/10，拥有CR7（第6届世界杯）、Bruno Fernandes、Bernardo Silva、Rúben Dias等世界级球员。刚果民主共和国FIFA排名#57，球队评级3.5/10，全队26人均为首次参加世界杯，52年来首次出现在世界杯赛场。5.1/10的评分差是本届世界杯小组赛中最悬殊的对决之一。<br><br>
+        2. <strong>经验差距无法弥补：</strong>葡萄牙综合大赛折扣×0.91（多名2-6届世界杯球员），刚果折扣×0.80（全部26人首次世界杯）。刚果上一次参加世界杯时（1974年的扎伊尔），全队0胜0进球——52年后的回归面对的将是完全不同的世界杯竞技级别。<br><br>
+        3. <strong>进攻火力的碾压性优势：</strong>葡萄牙预计xG 2.40-3.20，刚果预计xG 0.50-1.00。CR7的禁区终结+Bruno的创造+Leão/Neto的速度突破+Bernardo的技术控制——刚果的门将Mpasi（法乙Le Havre）将面对职业生涯最艰难的比赛。预计葡萄牙将创造15+次射门机会。<br><br>
+        4. <strong>刚果的防守韧性是唯一变数：</strong>对阵丹麦的7.2评级平局证明Desabre有组织防守应对强队的能力。Mbemba+Wan-Bissaka+Tuanzebe的后防线有一定英超/法甲经验。如果刚果能坚持0-0到半场，比赛走势可能改变——但葡萄牙近期的对手含金量（智利、尼日利亚、美国、墨西哥）远超刚果的对阵记录。<br><br>
+        5. <strong>Martínez的小组策略：</strong>葡萄牙必须以大胜开局累积净胜球，因为同组的哥伦比亚可能在净胜球上与葡萄牙竞争小组第1。Martinéz将要求球队全力进攻争取3+进球。首轮大胜也将让CR7在第2轮（vs乌兹别克斯坦）获得更多休息时间。<br><br>
+        <strong>关键假设：</strong><br>
+        · CR7能正常发挥并至少创造1次直接威胁（95%+把握）<br>
+        · 葡萄牙能在30-45分钟内取得首个进球（80%把握）<br>
+        · 刚果能坚持0-0至半场（25%把握）<br>
+        · Wan-Bissaka能有效限制Leão的边路突破（55%把握）<br>
+        · 刚果通过反击或定位球获得进球（25-30%把握）<br>
+        · Mpasi做出6+次关键扑救（40%把握）<br><br>
+        <strong>置信度：</strong><span class="confidence conf-high">高</span>（6条强信号全部指向葡萄牙 · 实力/经验/阵容/教练全方位碾压 · 刚果仅有的2条中信号涉及防守韧性但不足以改变结论）
+      </p>
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 8px;">⚠️ 已知数据缺口</h4>
+    <table>
+      <tr><th>缺口</th><th>影响</th></tr>
+      <tr><td>刚果门将Mpasi的精确PSxG+/-</td><td>法乙数据有限 · 扑救能力区间为估算值 · 误差约±5%</td></tr>
+      <tr><td>球员级xG逐场精确数据</td><td>xG区间为基于球队数据的估算 · 误差约±0.3</td></tr>
+      <tr><td>Martínez最终首发11人</td><td>Leão vs Neto首发不确定 · LW位置存在变数</td></tr>
+      <tr><td>CR7 41岁在高温中的体能极限</td><td>休斯顿35°C+ · 能否打满全场是疑问</td></tr>
+      <tr><td>刚果52年世界杯荒的心理影响</td><td>是"激励"还是"紧张"——首次世界杯的心理反应不可预测</td></tr>
+      <tr><td>NRG体育馆是否闭合顶棚及对比赛的影响</td><td>闭合顶棚将改变温度/湿度条件</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-d">报告数据仅供参考，不构成投注建议</div>
+</div>
+</body>
+</html>
