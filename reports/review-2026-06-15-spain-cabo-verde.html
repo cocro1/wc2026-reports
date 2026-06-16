@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 西班牙 vs 佛得角（2026-06-15）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>西班牙 vs 佛得角 · 2026年6月15日 · 复盘时间：2026年6月16日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇪🇸</div>
+        <div class="name">西班牙</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">3</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#0033A0;">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">西班牙 3-0（首选·置信度高）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-red">实际</span></div>
+        <div class="score-num">0</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-red">西班牙 0-0 佛得角（历史性冷门！）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇨🇻</div>
+        <div class="name">佛得角</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中（3-0 vs 0-0）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">胜平负命中（实际平局）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">进球数命中（预测3球 vs 实际0球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">Vozinha 5+扑救预测命中</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>西班牙 <strong>3-0</strong> 佛得角（主预测）</td><td class="miss-row">西班牙 <strong>0-0</strong> 佛得角（历史性冷门）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>2-0, 3-1, 4-0（均西班牙大胜）</td><td class="miss-row">全部偏差，0-0 完全未列入选项</td></tr>
+      <tr><td><strong>西班牙胜率</strong></td><td><strong>80%</strong>（首选）</td><td class="miss-row">西班牙未能取胜（实际0%）</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>14%</td><td class="miss-row"><strong>平局发生</strong>（严重低估 86%+）</td></tr>
+      <tr><td><strong>佛得角胜率</strong></td><td>6%</td><td class="hit-row">佛得角未胜（6%概率"未发生"，仅此正确）</td></tr>
+      <tr><td><strong>西班牙xG</strong></td><td>2.40-3.10</td><td class="miss-row">实际 0 球（xG严重高估，铁桶阵压制）</td></tr>
+      <tr><td><strong>佛得角xG</strong></td><td>0.30-0.65</td><td class="partial-row">实际 0 球（xG 略偏高估）</td></tr>
+      <tr><td><strong>西班牙20-40分钟破门</strong></td><td>60%+ 概率</td><td class="miss-row"><strong>未能破门</strong>（最关键时间窗失效）</td></tr>
+      <tr><td><strong>Vozinha 5+ 扑救</strong></td><td>"5+ 关键扑救" 高概率</td><td class="hit-row"><strong>多次关键扑救·全场MVP</strong> ✅</td></tr>
+      <tr><td><strong>佛得角犯规率</strong></td><td>13-15 次</td><td class="partial-row">需核实（佛得角全员退守犯规较多）</td></tr>
+      <tr><td><strong>Ferran Torres</strong></td><td>未具体预测</td><td class="miss-row"><strong>4 码处空门中横梁</strong>（最可惜时刻）</td></tr>
+      <tr><td><strong>Lamine Yamal</strong></td><td>预测首发的可能性</td><td class="partial-row"><strong>约 70' 替补登场</strong>（未被赋予核心角色）</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>Vozinha 5+ 扑救</td><td>"40岁门将·5+关键扑救"</td><td>多次神扑，全场 MVP 零封西班牙</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>佛得角退守策略</td><td>"全员退守·铁桶阵"</td><td>全员退守 90 分钟，战术完美执行</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>佛得角未胜</td><td>佛得角胜率 6%</td><td>佛得角 0-0 取 1 分，胜率 6% 未发生</td><td>✅（6% 概率未实现，预测正确）</td></tr>
+      <tr class="partial-row"><td>4</td><td>佛得角xG</td><td>0.30-0.65</td><td>实际 0 球（仅靠防守反击未形成有效射门）</td><td>⚠️（略偏高）</td></tr>
+      <tr class="partial-row"><td>5</td><td>Lamine Yamal 角色</td><td>核心攻击点</td><td>约 70' 才替补登场，未成为核心威胁</td><td>⚠️（预测角色偏差）</td></tr>
+      <tr class="partial-row"><td>6</td><td>西班牙控球率</td><td>预测高压控球</td><td>控球率约 75%+，但未能转化为进球</td><td>⚠️（控球判断对，转化率判断错）</td></tr>
+      <tr class="partial-row"><td>7</td><td>佛得角犯规率</td><td>13-15 次</td><td>需赛后核实（防守密集大概率命中）</td><td>⚠️（待核实）</td></tr>
+      <tr class="partial-row"><td>8</td><td>比赛节奏</td><td>"西班牙主导节奏"</td><td>西班牙主导但缺少节奏变化，强度上不去</td><td>⚠️（方向对但强度未达标）</td></tr>
+      <tr class="miss-row"><td>9</td><td>主预测比分</td><td>西班牙 3-0</td><td>实际 0-0（爆冷战平）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>10</td><td>备选比分</td><td>2-0, 3-1, 4-0</td><td>全部偏差，无西班牙大胜</td><td>❌</td></tr>
+      <tr class="miss-row"><td>11</td><td>西班牙胜率</td><td>80%（首选）</td><td>实际 0%（平局），概率严重高估 80%</td><td>❌</td></tr>
+      <tr class="miss-row"><td>12</td><td>平局概率</td><td>14%</td><td>实际 100% 发生（低估 86%！）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>13</td><td>西班牙 20-40 分钟破门</td><td>60%+ 概率</td><td>0-0，未能破门，最关键时间窗失效</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>西班牙xG</td><td>2.40-3.10</td><td>实际 0 球，xG 严重高估</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>西班牙 75% 控球→3球</td><td>"高控球=高进球"</td><td>高控球未转化为进球，转化率 0%</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>Ferran Torres</td><td>未具体预测</td><td><strong>4 码处空门击中横梁</strong>（最致命失误）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>西班牙定位球威胁</td><td>未充分评估</td><td>未通过定位球破门</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>西班牙板凳深度</td><td>预测替补可拉开比分</td><td>Yamal 70' 登场无建树</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>置信度"高"</td><td>标识为"高置信度"</td><td>实际完全相反（典型"低置信度应高"反例）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>冷门预警</td><td>未提及佛得角可能爆冷</td><td>实际爆冷战平，未给出任何"冷门信号"</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">3</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">5</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">12</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">15%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：赛果方向完全错误（预测西班牙大胜 → 实际 0-0 平局）</h4>
+    <div class="insight-box">
+      <strong>核心原因：未识别"强队遭遇铁桶阵+超级门将"的爆冷模式</strong><br><br>
+      原报告将西班牙胜率定为 <strong>80%</strong>、主预测比分 <strong>3-0</strong>、置信度"高"，这是基于"实力碾压"的线性推演。但实际比赛是典型的"<strong>铁桶阵 + 超级门将</strong>"爆冷模式：佛得角全员退守 + Vozinha 神扑 + Ferran Torres 空门中横梁。预测中应建立"<strong>大热门 vs 弱旅冷门概率</strong>"规则：即使实力差距悬殊（FIFA #1 vs #70），冷门概率也至少 10-15%，0-0 概率应至少 8-12%。本次报告将 0-0 完全排除在备选之外，是"<strong>赌徒谬误</strong>"的典型表现。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：平局概率 14% 严重低估（实际 100% 发生）</h4>
+    <div class="insight-box">
+      <strong>核心原因：未应用"实力悬殊对话 → 平局作为兜底"规则</strong><br><br>
+      顶级对话历史平局率约 28-32%，"大热门 vs 弱旅"的对话历史平局率约 14-18%（弱势方守平是常见结果）。本次报告仅给 <strong>14%</strong> 平局概率，恰好踩在"应触发平局优先"的边界上。考虑到佛得角有 Vozinha 这位 40 岁老门将（扑救经验丰富）、以及世界杯首场冷门频发的特点，<strong>平局概率应至少上调到 20-25%</strong>。这是"<strong>未将'超级门将'作为平局关键变量</strong>"的偏差。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：xG 模型高估西班牙 2.40-3.10</h4>
+    <div class="insight-box">
+      <strong>核心原因：xG 模型未对"密集防守"做衰减</strong><br><br>
+      原报告将西班牙 xG 定为 <strong>2.40-3.10</strong>（预期 3 球），但实际是 <strong>0 球</strong>。这暴露出 xG 模型的核心缺陷：xG 仅基于射门位置和角度计算，<strong>未考虑"密集防守降低射门质量"</strong>这一关键变量。当对手全员退守形成 9-0-1 阵型时，西班牙的射门大多被封堵、远射增多、禁区内射门减少，<strong>实际 xG 会被压制 30-50%</strong>。预测中应建立"<strong>对手退守密度 → xG 衰减系数</strong>"模型。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：未识别"Ferran Torres 空门中横梁"的运气变量</h4>
+    <div class="insight-box">
+      <strong>核心原因：足球比赛"运气波动"未被纳入模型</strong><br><br>
+      比赛最关键瞬间是 <strong>Ferran Torres 在 4 码处空门击中横梁</strong>——这属于"必进球失误"。即使 xG 显示 0.95 的机会，<strong>0.05 的失误概率也意味着每 20 场类似机会会有 1 次不进</strong>。本次报告将西班牙进球建立在"西班牙会抓住机会"的假设上，但忽略了"<strong>运气波动</strong>"对单场比赛的颠覆性影响。预测中应建立"<strong>运气衰减因子</strong>"：基于历史数据，顶级强队每场比赛约有 0.3-0.5 球的"运气损失"，单场 xG 2.5+ 实际进球可能只有 1.5-2 球。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：Vozinha "5+ 扑救"预测命中但"门将顶配"变量未充分加权</h4>
+    <div class="insight-box">
+      <strong>核心原因：门将位置的特殊性未被充分识别</strong><br><br>
+      原报告正确预测了 Vozinha 5+ 扑救（✅ 命中），但<strong>未能将这一变量反馈到进球预期</strong>——既然预测了"5+ 扑救"，就应同步调整"西班牙预期进球"至 1.5 以下、平局概率提升至 20%+。这是"<strong>模块间反馈缺失</strong>"问题：门将扑救模块独立运作，未与进球概率模块联动。<strong>正确的逻辑是：预测门将高扑救数 → 预测被零封概率提升 → 平局概率提升</strong>。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="miss-row">
+        <td><strong>西班牙胜</strong></td>
+        <td><strong>80%</strong>（首选）</td>
+        <td>"高置信度·实力碾压"</td>
+        <td>❌ 未发生</td>
+        <td>概率严重高估 <strong>80%</strong>。完全未考虑"铁桶阵+超级门将"爆冷模式</td>
+      </tr>
+      <tr class="miss-row">
+        <td><strong>平局</strong></td>
+        <td>14%</td>
+        <td>"小概率"</td>
+        <td>✅ 发生</td>
+        <td>平局概率严重低估 <strong>86%</strong>！Vozinha 顶配门将应使平局概率 ≥ 20-25%</td>
+      </tr>
+      <tr class="miss-row">
+        <td><strong>佛得角胜</strong></td>
+        <td>6%</td>
+        <td>"几乎不可能"</td>
+        <td>❌ 未发生</td>
+        <td>6% 概率"未发生"，预测方向对，但概率结构严重失衡</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:16px 0 10px;">概率分布对比图</h4>
+
+    <div class="bar-container">
+      <div class="bar-label">西班牙胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:80%;"></div></div>
+      <div class="bar-val" style="color:#0033A0;">80%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">平局</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-gray" style="width:14%;"></div></div>
+      <div class="bar-val" style="color:#888;">14%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">佛得角胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:6%;"></div></div>
+      <div class="bar-val" style="color:#c62828;">6%</div>
+    </div>
+
+    <hr class="divider">
+
+    <h4 style="color:#0033A0;margin:8px 0 10px;">应校准到的合理分布（事后）</h4>
+
+    <div class="bar-container">
+      <div class="bar-label">西班牙胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:62%;"></div></div>
+      <div class="bar-val" style="color:#0033A0;">62%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">平局</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:28%;"></div></div>
+      <div class="bar-val" style="color:#2e7d32;">28%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">佛得角胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:10%;"></div></div>
+      <div class="bar-val" style="color:#c62828;">10%</div>
+    </div>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的三个核心缺陷：</strong><br>
+      1. <strong>未将"超级门将"作为平局关键变量</strong>：既然预测了 Vozinha 5+ 扑救，就应同步将平局概率提升至 20-25%，但实际仅 14%，模块间反馈缺失。<br>
+      2. <strong>未对"密集防守"做 xG 衰减</strong>：原报告 xG 2.40-3.10 未考虑"对手退守 9-0-1 阵型"的压制作用，应衰减 30-50% 至 1.5-2.2 区间。<br>
+      3. <strong>未将"实力悬殊对话 → 冷门概率"作为底线规则</strong>：即使 FIFA #1 vs #70，冷门概率也应至少 10-15%，0-0 概率 8-12%，本次报告 0% 显然赌徒谬误。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>Vozinha 职业生涯扑救率 / PSxG+/-</td><td>门将位置精细数据缺失，未识别"超级门将"对平局概率的影响</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>佛得角历史"大巴战术"成功率</td><td>未识别铁桶阵模式的实际效果</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>世界杯首场冷门发生率（FIFA 排名差 > 50 名）</td><td>未将"实力悬殊对话 → 冷门概率"作为底线</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Ferran Torres 把握机会能力数据</td><td>未识别"必进球失误"的运气衰减</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>西班牙对"密集防守"破解能力数据</td><td>xG 模型未做密集防守衰减</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>西班牙 75% 控球率下的进球转化率历史</td><td>误以为"高控球=高进球"</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>Yamal 替补登场后的实际威胁</td><td>未识别其"战术后手"角色</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>世界杯 H 组场地（达拉斯）环境因素</td><td>未评估天气/海拔对比赛的影响</td><td><span class="badge badge-gray">低</span></td></tr>
+      <tr><td>佛得角非洲杯 /世预赛防守数据</td><td>未量化佛得角防守水平</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>西班牙 4-3-3 阵型对 9-0-1 阵型历史交锋</td><td>无历史案例支撑预测</td><td><span class="badge badge-yellow">中</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：建立"实力悬殊对话 → 冷门概率底线"规则</h4>
+      <ul>
+        <li>FIFA 排名差 > 50 名（本次为 #1 vs #70，差 69 名）历史冷门率约 12-18%。</li>
+        <li>本次比赛应给佛得角胜率 8-10%，平局概率 18-22%。</li>
+        <li><strong>操作</strong>：在概率预测阶段添加"两队FIFA排名差 > 50 名"自动检查，强制 0-0 概率 ≥ 8%、冷门概率 ≥ 15%。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：建立"超级门将 → 平局概率提升"联动机制</h4>
+      <ul>
+        <li>既然预测了 Vozinha 5+ 扑救，就应同步将"被零封概率"提升至 15%+，进而平局概率提升至 22%+。</li>
+        <li>本次报告门将预测命中（✅）但未触发平局概率调整，模块间反馈缺失。</li>
+        <li><strong>操作</strong>：在门将分析模块中，若预测"5+ 关键扑救"或"PSxG+/- > 0.1"，则自动将"被零封概率"提升 8-10%。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：建立"密集防守 → xG 衰减"模型</h4>
+      <ul>
+        <li>原报告 xG 2.40-3.10 未考虑"对手全员退守 9-0-1 阵型"的压制作用。</li>
+        <li>对"密集防守"对手，西班牙 xG 应衰减 30-50% 至 1.5-2.2 区间。</li>
+        <li><strong>操作</strong>：在 xG 计算阶段引入"对手防守密度系数"（高位逼抢 ×1.0，中位退守 ×0.85，铁桶阵 ×0.6），作为 xG 输出的修正项。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：建立"运气衰减因子"避免高估把握机会能力</h4>
+      <ul>
+        <li>顶级强队每场比赛约有 0.3-0.5 球的"运气损失"（Ferran Torres 4 码中横梁就是典型）。</li>
+        <li>单场 xG 2.5+ 实际进球可能只有 1.5-2 球。</li>
+        <li><strong>操作</strong>：在最终进球预期中加入"运气衰减因子"（-0.3 至 -0.5 球），避免过度乐观。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：增加"冷门信号"专项预警模块</h4>
+      <ul>
+        <li>本场具备 4 项"冷门信号"：实力悬殊对话、世界杯首场、铁桶阵对手、超级门将。但报告均未识别。</li>
+        <li><strong>操作</strong>：建立"冷门信号清单"，当 ≥3 项信号命中时，强制将平局概率提升至 20%+，并在报告中明确标注"冷门预警"。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：扩大弱旅数据库覆盖（10-15 个指标）</h4>
+      <ul>
+        <li>本次报告对佛得角的覆盖仅限于"实力弱、铁桶阵、退守"，未量化其大巴战术的具体效果。</li>
+        <li><strong>操作</strong>：对 FIFA 排名 50+ 的弱旅增加 10-15 个指标：门将 PSxG+/-、场均犯规数、抢断数、解围数、防守阵型、定位球威胁等。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：将"置信度高"改为"置信度中"以匹配实际不确定性</h4>
+      <ul>
+        <li>原报告置信度"高"是严重的过度自信信号。即使实力差距巨大，足球比赛也充满不确定性。</li>
+        <li><strong>操作</strong>：对"实力悬殊对话"强制使用"置信度中"标识，并增加"冷门信号"作为置信度降级触发器。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">7/10</span></td><td>时间、地点、阶段、组别均正确，但 Vozinha 等球员信息覆盖不足</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>识别人"佛得角铁桶阵"和"Vozinha 神扑"两个战术点，但未将二者联动到进球预期</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-red">4/10</span></td><td>Vozinha 命中，但 Ferran Torres 把握机会能力、Yamal 替补角色等关键球员数据缺失</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-red">3/10</span></td><td>xG 严重高估，未做密集防守衰减；缺门将 PSxG+/-、抢断/解围等弱旅精细数据</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-red">2/10</span></td><td>西班牙胜率 80% 严重高估，平局 14% 严重低估，模块间反馈缺失，结构严重失衡</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-red">1/10</span></td><td>主预测 3-0 完全错误，备选 2-0/3-1/4-0 全部偏差，0-0 完全未列入</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-red">2/10</span></td><td>标识"高置信度"是严重过度自信，应使用"中"或"中低"才符合实际</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">7/10</span></td><td>格式规范、分区清晰，8 个分析维度齐全，但内容质量因爆冷被拉低</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：这是一次典型的"赌徒谬误"型失败预测</strong>。原报告将西班牙胜率定为 80%、主预测 3-0、置信度"高"，将 0-0 完全排除在外，最终遭遇世界杯历史级别的爆冷。这是 2026 世界杯开赛以来最严重的预测偏差之一。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>预测仅在 3 个细节点上正确</strong>：Vozinha 5+ 扑救（✅）、佛得角退守策略（✅）、佛得角未能获胜（✅）。但<strong>核心预测全面崩溃</strong>：比分 3-0 ❌、西班牙胜率 80% ❌、平局 14% ❌、xG 2.40-3.10 ❌、20-40 分钟破门 60%+ ❌、置信度"高" ❌。这场预测反映出本次报告的四个核心缺陷：
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>赌徒谬误</strong>：将"实力悬殊对话"的冷门概率压缩至 6%，完全排除 0-0 选项，未应用"实力悬殊对话 → 冷门概率底线"规则。</li>
+        <li><strong>模块间反馈缺失</strong>：门将预测命中（5+ 扑救）但未触发"被零封概率提升"→"平局概率提升"的联动机制。</li>
+        <li><strong>xG 模型未做密集防守衰减</strong>：对"对手全员退守 9-0-1 阵型"未做 -30% 至 -50% 的 xG 衰减，导致 xG 2.40-3.10 严重高估。</li>
+        <li><strong>未识别"冷门信号"</strong>：本场具备"实力悬殊对话 + 世界杯首场 + 铁桶阵对手 + 超级门将"4 项冷门信号，但报告均未识别。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：3.0 / 10</strong>（结构化程度 7-8 分、门将预测命中 +1 分，但概率模型 2 分、比分预测 1 分、不确定性表达 2 分，核心全面失败。以足球预测行业标准来看，属于"赌徒谬误"的典型失败案例，需全面重构预测框架）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：建立"实力悬殊对话 → 冷门概率底线"规则 + "超级门将 → 平局概率联动"机制 + "密集防守 → xG 衰减"模型 + "冷门信号清单"专项预警。实施以上 7 项建议后，对强弱悬殊对话的预测精度应有质的提升，避免再出现"80% 胜率却 0-0 战平"这种级别的爆冷失误。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 瑞典 vs 突尼斯（2026-06-15）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .score-compare { background:#f0f4ff; border-radius:12px; padding:16px 24px; margin-top:16px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>瑞典 vs 突尼斯 · 2026年6月15日 · F组小组赛 · 复盘时间：2026年6月16日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== Card 1: 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇸🇪</div>
+        <div class="name">瑞典</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#0033A0;">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">瑞典 2-1（首选·置信度高）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num">5</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">瑞典 5-1 突尼斯（大胜！）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇹🇳</div>
+        <div class="name">突尼斯</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">赛果方向命中（瑞典胜）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中（2-1 vs 5-1，差3球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">进球数命中（预测3球 vs 实际6球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">Gyökeres+Isak锋线搭档命中</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>瑞典 <strong>2-1</strong> 突尼斯（主预测）</td><td class="miss-row">瑞典 <strong>5-1</strong> 突尼斯（大胜！差3球）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>1-0, 2-0</td><td class="miss-row">全部偏差，实际远超预测上限</td></tr>
+      <tr><td><strong>瑞典胜率</strong></td><td><strong>50%</strong></td><td class="hit-row">瑞典取得胜利，方向正确 ✅</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>28%</td><td class="partial-row">未发生，28%为合理保守估计</td></tr>
+      <tr><td><strong>突尼斯胜率</strong></td><td>22%</td><td class="partial-row">突尼斯未胜（22%偏高但未发生）</td></tr>
+      <tr><td><strong>瑞典xG</strong></td><td>1.60-2.00</td><td class="partial-row">实际 xG 1.25（预测略有高估，但实际打入5球远超xG，效率极高）</td></tr>
+      <tr><td><strong>突尼斯xG</strong></td><td>0.80-1.20</td><td class="miss-row">实际 xG 0.20（严重高估，突尼斯进攻远弱于预期）</td></tr>
+      <tr><td><strong>Gyökeres+Isak锋线</strong></td><td>锋线搭档核心威胁</td><td class="hit-row"><strong>两人互助攻，同时进球</strong> ✅</td></tr>
+      <tr><td><strong>突尼斯防守纪律性</strong></td><td>"防守纪律性强"</td><td class="miss-row"><strong>被打穿5球</strong>，防守崩溃 ❌</td></tr>
+      <tr><td><strong>AI模型与市场一致</strong></td><td>模型与赔率方向一致</td><td class="hit-row">方向一致（瑞典胜），但幅度严重低估</td></tr>
+      <tr><td><strong>置信度"高"</strong></td><td>标识为"高置信度"</td><td class="partial-row">方向正确但比分/进球严重偏差，置信度应下调</td></tr>
+      <tr><td><strong>Ayari梅开二度</strong></td><td>未具体预测</td><td class="miss-row"><strong>7分钟首开纪录 + 90+6分钟绝杀</strong>（梅开二度）</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== Card 2: 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>赛果方向</td><td>"瑞典胜"</td><td>瑞典 5-1 大胜，方向完全正确</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>Gyökeres+Isak锋线搭档</td><td>"双核锋线，核心威胁"</td><td>两人互助攻，Isak进球+Gyökeres进球，G→I助+I→G助</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>AI模型与市场一致</td><td>"模型方向与赔率一致"</td><td>瑞典胜方向一致，市场赔率同样指向瑞典</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>Isak个人进球</td><td>"Isak为进攻核心"</td><td>30分钟进球（Gyökeres助攻），并助攻Gyökeres</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>突尼斯进球</td><td>突尼斯1球（包含在2-1预测中）</td><td>Rekik 43分钟进球，实际1球</td><td>✅</td></tr>
+      <tr class="partial-row"><td>6</td><td>瑞典xG</td><td>1.60-2.00</td><td>实际 xG 1.25（略有高估但接近，实际进球5球远超xG）</td><td>⚠️（xG略估偏高，但实际进球效率极佳）</td></tr>
+      <tr class="partial-row"><td>7</td><td>平局概率28%</td><td>28%平局</td><td>未发生，但28%为合理保守估计</td><td>⚠️（合理偏高但无伤大雅）</td></tr>
+      <tr class="partial-row"><td>8</td><td>半场比分接近</td><td>预测全场2-1</td><td>半场实际 2-1（半场恰好等于预测全场比分）</td><td>⚠️（半场准确，全场偏差）</td></tr>
+      <tr class="partial-row"><td>9</td><td>瑞典防守</td><td>未具体量化但整体判断稳固</td><td>仅失1球，防守端表现符合预期</td><td>⚠️（隐性命中）</td></tr>
+      <tr class="partial-row"><td>10</td><td>置信度标识</td><td>"高置信度"</td><td>方向正确但比分/进球数偏差远大于置信度允许范围</td><td>⚠️（方向对但数值偏差大）</td></tr>
+      <tr class="miss-row"><td>11</td><td>主预测比分</td><td>瑞典 2-1</td><td>实际 5-1，差3球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>12</td><td>备选比分</td><td>1-0, 2-0</td><td>全部偏差，实际远超所有备选</td><td>❌</td></tr>
+      <tr class="miss-row"><td>13</td><td>瑞典进球数</td><td>预测2球</td><td>实际5球，低估3球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>突尼斯防守纪律性</td><td>"防守纪律性强·难以渗透"</td><td>被打穿5球，防守完全崩溃</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>突尼斯xG</td><td>0.80-1.20</td><td>实际 xG 0.20，严重高估突尼斯进攻能力</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>总进球数</td><td>预测3球（2-1）</td><td>实际6球，低估100%</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>Ayari梅开二度</td><td>未具体预测</td><td>7'首开纪录 + 90+6'绝杀，全场最佳之一</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>Svanberg进球</td><td>未提及</td><td>87分钟进球（4-1），未预测的中场球员破门</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>瑞典进攻火力</td><td>适中（1.60-2.00 xG，2球预期）</td><td>惊人火力5球，远超一切预期</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>突尼斯进攻能力</td><td>0.80-1.20 xG，具备一定威胁</td><td>xG 0.20，几乎无有效进攻</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">5</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">5</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">10</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">25%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== Card 3: 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：比分严重偏差（预测2-1 → 实际5-1，差3球）</h4>
+    <div class="insight-box">
+      <strong>核心原因：瑞典进攻效率远超xG模型上限，未识别"碾压式进攻"可能性</strong><br><br>
+      原报告将瑞典 xG 定为 <strong>1.60-2.00</strong>、预期进球2球、主预测2-1，但实际瑞典打入 <strong>5球</strong>（xG仅1.25）。这意味着瑞典的<strong>进球转化率高达400%</strong>（5球/1.25 xG），远超正常范围（通常1.0-1.5倍）。预测模型未考虑"对手防守崩溃 → 进球井喷"的连锁反应场景——突尼斯防线一旦被打穿第一球，后续快速崩盘。这是典型的<strong>"线性推演"偏差</strong>：假设双方实力稳定输出，未考虑单场比赛强度不平衡的极端情况。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：突尼斯防守纪律性预测完全失败（预测"难以渗透"→ 被打穿5球）</h4>
+    <div class="insight-box">
+      <strong>核心原因：过度依赖"突尼斯防守纪律性"的刻板印象，未审视近期实际防守数据</strong><br><br>
+      原报告将突尼斯防守纪律性作为关键预测变量，但实际突尼斯防线在瑞典锋线面前<strong>完全失灵</strong>。Ayari 仅用 <strong>7分钟</strong> 即破门，半场丢2球，全场丢5球。这一偏差说明预测模型对"防守纪律性"这一变量的权重过高，且<strong>未建立"防守纪律性 vs 对手锋线质量"的对抗评估机制</strong>。突尼斯在非洲区的防守纪律性在面对欧洲顶级锋线（Gyökeres+Isak）时失效，是典型的"<strong>跨大洲竞争力不可简单平移</strong>"的案例。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：突尼斯xG严重高估（0.80-1.20 → 实际0.20）</h4>
+    <div class="insight-box">
+      <strong>核心原因：突尼斯进攻能力被高估6倍，xG模型缺乏"对手防守压制"修正</strong><br><br>
+      原报告将突尼斯 xG 定为 <strong>0.80-1.20</strong>，预期突尼斯打入1球，实际仅 <strong>0.20</strong>。这意味着预测高估了突尼斯进攻能力 <strong>4-6倍</strong>。突尼斯在面对瑞典高位防守和身体对抗时几乎无法组织有效进攻，唯一的进球（Rekik 43'）带有一定运气成分。预测模型未对"<strong>对手防守强度 → 弱旅xG衰减</strong>"做修正——突尼斯在非洲区面对较弱对手时的xG不应直接平移至面对欧洲强队的场景。
+    </div>
+
+    <h4 style="color:#f57f17;margin:16px 0 10px;">偏差四：总进球数严重低估（预测3球 → 实际6球，低估100%）</h4>
+    <div class="insight-box">
+      <strong>核心原因："平衡型比赛"假设主导预测，未预测"大球"场景</strong><br><br>
+      原报告主预测 <strong>2-1</strong>（总3球），备选 <strong>1-0、2-0</strong>，所有备选均在2球以下，完全没有4+进球的场景。而实际比赛打出了 <strong>6球</strong> 的大球比分。这是"<strong>anchor bias（锚定偏差）</strong>"的典型表现——预测锚定在"低比分均衡"的场景，未给予"一边倒大胜"足够概率。瑞典在F组实力明显超群，预测应至少保留"3球净胜"（如3-0、4-1）作为备选。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：Ayari/Svanberg等角色球员爆发未被预测</h4>
+    <div class="insight-box">
+      <strong>核心原因：仅聚焦双核锋线，忽略中场球员的破门能力</strong><br><br>
+      原报告正确聚焦了 <strong>Gyökeres+Isak</strong> 双核锋线（✅），但完全未提及 <strong>Ayari</strong>、<strong>Svanberg</strong> 等中场球员。Ayari <strong>梅开二度</strong>（7' + 90+6'），Svanberg <strong>87分钟进球</strong>，两人合计贡献3球，占瑞典总进球的 <strong>60%</strong>。预测模型存在"<strong>明星球员聚焦偏差</strong>"——过度集中于明星锋线而忽略中场梯队，未评估对手防线对明星球员的针对性布防可能为中场创造更多空间。
+    </div>
+  </div>
+
+  <!-- ===== Card 4: 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型校准质量：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="hit-row">
+        <td><strong>瑞典胜</strong></td>
+        <td><strong>50%</strong></td>
+        <td>"略优，未形成碾压预期"</td>
+        <td>✅ 发生（5-1大胜）</td>
+        <td>方向正确，但概率偏低——5-1的比分说明瑞典胜率应至少 60-65%</td>
+      </tr>
+      <tr class="partial-row">
+        <td><strong>平局</strong></td>
+        <td>28%</td>
+        <td>"不可忽视的选项"</td>
+        <td>❌ 未发生</td>
+        <td>28%为合理保守估计，未发生属正常范畴</td>
+      </tr>
+      <tr class="partial-row">
+        <td><strong>突尼斯胜</strong></td>
+        <td>22%</td>
+        <td>"有明显爆冷可能"</td>
+        <td>❌ 未发生</td>
+        <td>22%偏高（实际0.20 xG说明突尼斯胜率应约 10-12%）</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:16px 0 10px;">概率分布对比图（预测 vs 实际）</h4>
+
+    <div style="font-size:13px;color:#888;margin-bottom:8px;">预测概率分布：</div>
+    <div class="bar-container">
+      <div class="bar-label">瑞典胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:50%;"></div></div>
+      <div class="bar-val" style="color:#0033A0;">50%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">平局</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-gray" style="width:28%;"></div></div>
+      <div class="bar-val" style="color:#888;">28%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">突尼斯胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:22%;"></div></div>
+      <div class="bar-val" style="color:#c62828;">22%</div>
+    </div>
+
+    <hr class="divider">
+
+    <h4 style="color:#0033A0;margin:8px 0 10px;">应校准到的合理分布（事后）</h4>
+
+    <div class="bar-container">
+      <div class="bar-label">瑞典胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:62%;"></div></div>
+      <div class="bar-val" style="color:#0033A0;">62%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">平局</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:24%;"></div></div>
+      <div class="bar-val" style="color:#2e7d32;">24%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">突尼斯胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:14%;"></div></div>
+      <div class="bar-val" style="color:#c62828;">14%</div>
+    </div>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的两个主要问题：</strong><br>
+      1. <strong>瑞典胜率偏低（50% → 应约62%）</strong>：实际5-1的大比分显示瑞典实力明显高出突尼斯一档。作为F组出线热门，瑞典对突尼斯的真实胜率应接近60-65%。50%的估计过于保守，将过多概率分配给平局和突尼斯。<br>
+      2. <strong>突尼斯胜率偏高（22% → 应约14%）</strong>：突尼斯全场仅0.20 xG，说明其对瑞典的进攻威胁很小。22%的胜率源自对"防守纪律性"的过度信任，高估了突尼斯从强队身上拿分的可能性。预测时未对"弱旅胜率"设上限检查。
+    </div>
+  </div>
+
+  <!-- ===== Card 5: 数据缺失 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>突尼斯近期面对欧洲球队的防守数据</td><td>"防守纪律性"评估仅基于非洲区比赛，未对欧洲高强度对手做校验</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>瑞典xG-实际进球转化率（效率分析）</td><td>未识别瑞典的高效转化能力——xG 1.25打入5球（400%转化率）</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>突尼斯面对高位压迫的xG衰减数据</td><td>xG 0.80-1.20严重高估，突尼斯面对欧洲防守xG仅0.20</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Ayari/Svanberg等中场球员射门数据</td><td>仅聚焦双核锋线，忽略中场进球能力（3球/5球来自中场）</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>瑞典队4+进球比赛发生率（2024-2026）</td><td>未覆盖"大球"场景，所有备选均为2球以下</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>跨大洲竞争力不可平移的历史案例</td><td>突尼斯vs非洲队数据未做跨洲折扣，直接平移至对欧洲队</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>突尼斯防守被欧洲球队打穿的历史频率</td><td>未识别"防线崩盘风险"，被打穿5球</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>瑞典半场/全场进球分布模式</td><td>未识别瑞典45分钟内可打入≥2球的能力</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>比赛场地/天气对进攻方有利程度</td><td>未评估外部环境对进球数的影响</td><td><span class="badge badge-gray">低</span></td></tr>
+      <tr><td>突尼斯世界杯小组赛首场历史战绩</td><td>无法参考突尼斯首场表现的历史模式</td><td><span class="badge badge-gray">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== Card 6: 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：引入"跨大洲竞争力打折"机制</h4>
+      <ul>
+        <li>突尼斯在非洲区的防守纪律性和进攻数据<strong>不能直接平移</strong>至面对欧洲强队的场景。</li>
+        <li>对来自亚/非/中北美地区的球队数据，应基于对手大洲强度做 <strong>0.5-0.8</strong> 的打折系数。</li>
+        <li><strong>操作</strong>：建立"跨洲竞争力折扣表"，对非洲/亚洲球队面对欧洲球队时 xG/防守数据自动打折20-50%。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：建立"进球转化率（xG→实际）"专项分析模块</h4>
+      <ul>
+        <li>瑞典本场 xG 仅1.25却打入5球（400%转化率），说明其拥有极高的xG转化效率。</li>
+        <li>若预测时能识别瑞典近期的转化率趋势（如2024-2025赛季场均转化率1.5倍xG），可上调预期进球。</li>
+        <li><strong>操作</strong>：在进球预期中引入"转化率系数"（基于最近10场比赛的xG/进球比），作为进球预测的修正项。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三：扩大比分范围，覆盖"大球"场景</h4>
+      <ul>
+        <li>原报告备选比分 1-0、2-0 均为2球以内，未覆盖任何3+球场景。瑞典作为F组强队，应有"3-0、4-1"等级别的备选。</li>
+        <li>对于实力差距明显的小组赛（如瑞典 vs 突尼斯），应至少保留 <strong>1个"3球净胜"备选</strong>。</li>
+        <li><strong>操作</strong>：在比分备选生成阶段添加"净胜球 ≥ 3 备选强制检查"——当实力差距超过阈值时，自动添加至少一个3+球备选。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：建立"防守纪律性 vs 对手锋线质量"对抗评估</h4>
+      <ul>
+        <li>突尼斯"防守纪律性"在本场完全失效——面对 Gyökeres+Isak 的顶级锋线组合，非洲防线不堪一击。</li>
+        <li>不应将"防守纪律性"作为孤立变量，而应对比"对手锋线资质"来评估防线是否能承受。</li>
+        <li><strong>操作</strong>：创建"防守-进攻质量对抗矩阵"：防守方 F（非洲中游防线）vs 进攻方 A（欧洲顶级锋线）→ 预测防线崩盘概率 ≥ 40%。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：增加中场球员进球能力评估</h4>
+      <ul>
+        <li>Ayari 梅开二度 + Svanberg 进球，合计3球（占60%）来自中场，完全未被预测。</li>
+        <li>当对手对明星锋线做针对性布防时，中场球员常获得更多射门空间。</li>
+        <li><strong>操作</strong>：在球员分析模块中增加"中场球员射门/进球数据"，并基于对手防守策略评估中场破门概率。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：降低过分依赖"防守纪律性"刻板印象的权重</h4>
+      <ul>
+        <li>原报告将"突尼斯防守纪律性"作为关键预测变量，但这是基于历史刻板印象而非近期数据的判断。</li>
+        <li>应使用突尼斯近期（2025-2026）实际防守数据（场均失球、被射门数、被射正数、xGA）替代定性判断。</li>
+        <li><strong>操作</strong>：用定量防守指标（xGA/90、场均被射正、面对强队失球数）完全替代"防守纪律性"定性标签。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：将置信度与比分/进球预测精度挂钩</h4>
+      <ul>
+        <li>本场方向正确（✅），但比分差3球、进球数低估100%，说明"高置信度"需要更严格的触发条件。</li>
+        <li>置信度应由"赛果方向+比分范围+进球范围"三重因素共同决定，而非仅看方向。</li>
+        <li><strong>操作</strong>：引入"置信度得分"模型 = 方向准确度(40%) + 比分接近度(30%) + 进球数准确度(30%)，低于阈值则强制降级。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Card 7: 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">8/10</span></td><td>时间、地点、组别均正确，球员名单覆盖核心双星</td></tr>
+      <tr><td><strong>赛果方向判断</strong></td><td><span class="badge badge-green">8/10</span></td><td>准确判断瑞典胜，方向完全正确，与市场赔率一致</td></tr>
+      <tr><td><strong>关键球员预测</strong></td><td><span class="badge badge-green">7/10</span></td><td>Gyökeres+Isak锋线搭档精准命中（互助攻），但 Ayari/Svanberg 等未覆盖</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>识别人"突尼斯防守纪律性"但严重高估，瑞典进攻模式被低估</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-red">3/10</span></td><td>主预测2-1差3球，备选1-0/2-0全部偏差，无大球场景覆盖</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>xG 1.60-2.00接近实际1.25（不错），但突尼斯xG 0.80-1.20严重高估</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-yellow">6/10</span></td><td>瑞典胜50%方向正确但偏低，突尼斯22%偏高；整体结构基本合理</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">7/10</span></td><td>格式规范、分区清晰，分析维度齐全，覆盖双核锋线、防守纪律性、赔率一致性</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== Card 8: 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：方向正确但幅度严重低估的"方向型成功"预测</strong>。原报告准确判断了瑞典胜（✅）、精准识别了 Gyökeres+Isak 锋线搭档（✅）、与AI模型和市场赔率方向一致（✅），是6月15日5场比赛中<strong>预测方向最正确的一场</strong>。但在比分精度、进球数和防守评估方面存在显著偏差——主预测2-1与实际5-1差3球、瑞典进攻火力被严重低估、突尼斯防守纪律性预期完全落空。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>预测在5个核心点上完全正确</strong>：赛果方向（✅）、Gyökeres+Isak锋线搭档（✅）、Isak个人进球（✅）、AI模型与赔率一致（✅）、突尼斯进球数（✅）。<strong>但4个关键领域偏差明显</strong>：比分差距（❌，差3球）、瑞典进球数（❌，预测2球 vs 实际5球）、突尼斯防守评估（❌，被打穿5球）、突尼斯xG（❌，0.80-1.20 vs 实际0.20）。这场预测反映出以下核心问题：
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>锚定偏差</strong>：比分预测锚定在"低比分均衡"场景（1-0、2-0、2-1），完全未覆盖"大球"（3+球）场景，是"线性推演"的典型表现。</li>
+        <li><strong>跨大洲数据不可平移</strong>：将突尼斯在非洲区的数据（防守纪律性、xG 0.80-1.20）直接平移至面对欧洲强队的场景，未做"竞争力折价"，导致对双方攻防的评估严重失准。</li>
+        <li><strong>明星球员聚焦偏差</strong>：过度集中于 Gyökeres+Isak，忽略了 Ayari、Svanberg 等中场球员的进球能力，而这正是瑞典大胜的关键。</li>
+        <li><strong>概率分配偏保守</strong>：瑞典胜率50%方向正确但偏低，突尼斯胜率22%偏高，概率结构偏向"均衡竞争"而低估了"实力碾压"。</li>
+        <li><strong>xG模型缺乏转化率修正</strong>：瑞典实际xG仅1.25但打入5球（400%转化率），说明预测时未考虑瑞典的高效转化能力。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：6.5 / 10</strong>（赛果方向正确 +2分，Gyökeres+Isak锋线精准命中 +1.5分，突尼斯进球数命中 +0.5分，概率基本合理 +0.5分，xG瑞典预测接近 +0.5分，结构清晰 +0.5分；但比分差3球 -1分，备选全部失效 -0.5分，突尼斯防守评估失误 -0.5分，进球数低估100% -0.5分，突尼斯xG高估 -0.5分，中场球员未覆盖 -0.5分，无大球场景 -0.5分）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#0033A0;">
+        <strong>核心改进方向</strong>：引入"跨大洲竞争力打折"机制 + 建立"进球转化率"专项分析 + 扩大比分范围覆盖"大球"场景 + 增加中场球员进球能力评估 + 用定量防守指标替代"防守纪律性"定性标签。实施以上7项建议后，对欧洲 vs 非洲的对决预测精度应有显著提升，避免再出现"方向正确但幅度严重低估"的情况。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

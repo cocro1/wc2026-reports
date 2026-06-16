@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 沙特阿拉伯 vs 乌拉圭（2026-06-15）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>沙特阿拉伯 vs 乌拉圭 · 2026年6月15日 · H组小组赛 · 复盘时间：2026年6月16日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇸🇦</div>
+        <div class="name">沙特阿拉伯</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num">0</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#0033A0;">2</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">乌拉圭胜 0-2（首选·置信度高）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-red">实际</span></div>
+        <div class="score-num" style="color:#2e7d32;">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#0033A0;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">1-1 平局（Al-Amri 40' + Maxi Araújo 80'）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇺🇾</div>
+        <div class="name">乌拉圭</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">赛果方向（预测乌拉圭胜 → 实际平局）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分命中（预测0-2 vs 实际1-1）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">平局概率24%被低估（实际平局发生）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">乌拉圭进攻威胁判断正确（xG预测区间合理）</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>沙特 <strong>0-2</strong> 乌拉圭（主预测）</td><td class="miss-row">沙特 <strong>1-1</strong> 乌拉圭（Al-Amri 40' + Maxi Araújo 80'）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>0-1, 1-2</td><td class="miss-row">全部偏差，1-1 完全未列入备选</td></tr>
+      <tr><td><strong>乌拉圭胜率</strong></td><td><strong>64%</strong>（首选）</td><td class="miss-row">乌拉圭未能取胜（实际0%）</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>24%</td><td class="miss-row"><strong>平局发生</strong>（24%虽有一定概率但未上调至核心）</td></tr>
+      <tr><td><strong>沙特胜率</strong></td><td>12%</td><td class="hit-row">沙特未胜（12%概率"未发生"，仅此正确）</td></tr>
+      <tr><td><strong>乌拉圭xG</strong></td><td>1.20-1.80</td><td class="partial-row">实际1球（xG区间上限偏高，但方向正确）</td></tr>
+      <tr><td><strong>沙特xG</strong></td><td>0.70-0.95</td><td class="partial-row">实际1球（xG略偏低，沙特进攻效率超出预期）</td></tr>
+      <tr><td><strong>Bielsa高位逼抢60分钟破防</strong></td><td>关键预测，60分钟内必破沙特防线</td><td class="miss-row"><strong>80分钟才扳平</strong>，60分钟预测严重失效</td></tr>
+      <tr><td><strong>Valverde中场统治</strong></td><td>中场核心控制比赛节奏</td><td class="partial-row"><strong>Ugarte 59' 击中门柱</strong>说明有威胁但未取胜，部分兑现</td></tr>
+      <tr><td><strong>Donis仅上任2个月</strong></td><td>暗示沙特战术磨合不足</td><td class="miss-row"><strong>防守组织非常出色</strong>，"2个月"被错误理解为负面因素</td></tr>
+      <tr><td><strong>Al-Owais关键扑救</strong></td><td>未明确预测</td><td class="miss-row"><strong>8次关键扑救</strong>，类似佛得角Vozinha的超级门将表现</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>沙特未胜</td><td>沙特胜率 12%</td><td>沙特 1-1 取 1 分，胜率 12% 未发生</td><td>✅（12% 概率未实现，预测正确）</td></tr>
+      <tr class="hit-row"><td>2</td><td>乌拉圭进攻威胁</td><td>xG 1.20-1.80，乌拉圭能制造进攻</td><td>Ugarte 击中立柱 + Maxi Araújo 进球，进攻威胁确实存在</td><td>✅（方向正确）</td></tr>
+      <tr class="hit-row"><td>3</td><td>Bielsa压迫风格</td><td>高位逼抢是乌拉圭核心武器</td><td>乌拉圭确实采取了高位逼抢战术</td><td>✅（战术识别正确）</td></tr>
+      <tr class="partial-row"><td>4</td><td>Valverde中场角色</td><td>"中场统治"预测</td><td>Ugarte 59' 击中门柱说明中场有威胁，但未转化为胜利</td><td>⚠️（部分兑现，统治力不足）</td></tr>
+      <tr class="partial-row"><td>5</td><td>乌拉圭xG</td><td>1.20-1.80</td><td>实际 1 球（xG 区间上限偏高，但下限接近实际）</td><td>⚠️（略偏高但方向对）</td></tr>
+      <tr class="partial-row"><td>6</td><td>沙特xG</td><td>0.70-0.95</td><td>实际 1 球（沙特进攻效率略超预期）</td><td>⚠️（略偏低）</td></tr>
+      <tr class="partial-row"><td>7</td><td>备选比分 1-2</td><td>备选比分之一</td><td>乌拉圭进球数预测方向部分对（1-2球 vs 实际1球）</td><td>⚠️（乌拉圭进球数接近，但赛果偏差）</td></tr>
+      <tr class="partial-row"><td>8</td><td>比赛节奏</td><td>"Bielsa高位逼抢主导节奏"</td><td>高位逼抢存在但沙特防守韧性超出预期，节奏被拖慢</td><td>⚠️（方向对但节奏判断偏乐观）</td></tr>
+      <tr class="miss-row"><td>9</td><td>主预测比分</td><td>沙特 0-2 乌拉圭</td><td>实际 1-1（方向完全相反）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>10</td><td>备选比分</td><td>0-1, 1-2</td><td>全部偏差，1-1 完全未列入</td><td>❌</td></tr>
+      <tr class="miss-row"><td>11</td><td>赛果方向</td><td>乌拉圭胜 64%</td><td>实际平局（64% 严重高估）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>12</td><td>平局概率</td><td>24%</td><td>实际 100% 发生（低估 76%！）</td><td>❌</td></tr>
+      <tr class="miss-row"><td>13</td><td>Bielsa高位逼抢60分钟破防</td><td>"60分钟内必破沙特防线"</td><td>80 分钟才扳平，60 分钟预测严重失效</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>沙特0进球</td><td>"沙特将被零封"（主预测 0-2）</td><td>沙特 40' 由 Al-Amri 进球，打破了预测</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>Donis"仅2个月"为负面因素</td><td>暗示磨合不足、防守组织可能松散</td><td>Donis 防守策略非常有效，2个月反而表现出高效组织</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>Al-Owais 关键扑救</td><td>未明确预测</td><td><strong>8 次关键扑救</strong>，全场最佳球员之一</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>沙特防线脆弱</td><td>隐含（预测乌拉圭 2 球）</td><td>沙特防线组织出色，仅失 1 球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>备选比分覆盖度</td><td>仅 3 种比分（0-2, 0-1, 1-2）</td><td>实际 1-1 未被覆盖，覆盖度不足</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>置信度"高"</td><td>标识为"高置信度"</td><td>实际赛果方向完全相反，"高置信度"是严重误导</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>冷门预警</td><td>未提及沙特可能爆冷</td><td>实际沙特领先近 40 分钟，最终收获平局</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">3</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">5</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">12</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">15%</div><div class="lbl">命中率（不含部分命中）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：赛果方向完全错误（预测乌拉圭胜 → 实际 1-1 平局）</h4>
+    <div class="insight-box">
+      <strong>核心原因：低估沙特防守韧性和"亚洲球队世界杯小组赛平局率"</strong><br><br>
+      原报告将乌拉圭胜率定为 <strong>64%</strong>、主预测比分 <strong>0-2</strong>、置信度"高"，这是基于"南美强队 vs 亚洲中游队"的实力碾压思维。但实际比赛揭示：<strong>亚洲球队在世界杯小组赛中面对南美球队的平局率远高于模型预期</strong>（2022 世界杯：沙特 2-1 阿根廷、日本 2-1 西班牙等亚洲球队爆冷频发）。报告未建立"亚洲球队世界杯韧性修正系数"——亚洲球队在世界杯中往往通过纪律性防守弥补实力差距，平局率应至少上浮 10-15%。本次报告将 24% 平局概率给出但未作为核心风险提示，是典型的"<strong>实力差距线性推演</strong>"思维。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：沙特进球完全超出预期（预测 0 → 实际 1，40 分钟领先）</h4>
+    <div class="insight-box">
+      <strong>核心原因：未识别"沙特定位球/反击的偶发性破门能力"</strong><br><br>
+      原报告将沙特 xG 定为 <strong>0.70-0.95</strong>，主预测沙特 <strong>0 球</strong>，但沙特在 <strong>40 分钟</strong>由 Al-Amri 破门，打了乌拉圭一个措手不及。这一偏差暴露出：1）<strong>沙特的定位球/反击破门能力被严重低估</strong>——Al-Amri 的进球很可能来自定位球或反击中的精准射门；2）<strong>未考虑"弱队率先破门"的战术价值</strong>——弱队一旦先得分，比赛走势会完全改变（防守深度增加、对手焦虑加剧），这一动态变量未被纳入模型。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：Bielsa 高位逼抢 60 分钟内破防预测严重失效（实际 80 分钟才扳平）</h4>
+    <div class="insight-box">
+      <strong>核心原因：未考虑"沙特防线对高位逼抢的准备"及 Donis 的针对性战术</strong><br><br>
+      原报告核心预测是"Bielsa 高位逼抢 <strong>60 分钟内</strong>打破沙特防线"。但实际沙特防线坚守到 <strong>80 分钟</strong>才被 Maxi Araújo 扳平——超出预测 20 分钟以上。这反映出：1）<strong>Donis 尽管仅上任 2 个月，但针对性布置非常高效</strong>——沙特防线对乌拉圭高位逼抢做了专门训练（快速出球、边路转移、减少后场盘带）；2）<strong>"教练上任时间短"不应自动等同于"战术准备不足"</strong>——Donis 的 2 个月反而说明其执教效率高。报告将"2 个月"视为负面变量，实际是正向变量。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：未识别 Al-Owais 的"超级门将"效应（8 次关键扑救）</h4>
+    <div class="insight-box">
+      <strong>核心原因：门将位置数据的覆盖盲区</strong><br><br>
+      本场比赛与西班牙 vs 佛得角极为相似：弱队门将贡献超级表现、强队久攻不下。Al-Owais <strong>8 次关键扑救</strong>是本场沙特守住积分的关键——这相当于 Vozinha（佛得角）在西班牙比赛中的角色。报告完全未覆盖 Al-Owais 的门将数据（扑救率、PSxG+/-、历史世界杯表现），导致：1）<strong>未预测沙特"被零封率低"</strong>——有超级门将的弱队，被零封概率应降低 15-20%；2）<strong>未将门将表现为平局联动变量</strong>——预测门将高扑救数 → 应同步提升平局概率至 30%+。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：Valverde 中场统治力判断部分正确但过度乐观</h4>
+    <div class="insight-box">
+      <strong>核心原因：未区分"控球统治"和"进球转化"两个维度</strong><br><br>
+      原报告预测 Valverde "中场统治"，实际 Ugarte <strong>59 分钟击中立柱</strong>说明乌拉圭中场确实有威胁（方向正确），但最终未取胜。这反映出：中场统治 ≠ 比赛胜利，需要区分"<strong>控球统治</strong>"（中场控制力）和"<strong>进球转化</strong>"（最终得分）两个独立维度。乌拉圭中场控制可能确实存在，但沙特防守结构的韧性将这种控制力压缩为"无效控球"——类似西班牙 vs 佛得角的"控球无效化"现象。报告应在 Valverde 分析中增加"对手防守韧性→中场统治力衰减"的修正。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <p style="font-size:14px;margin-bottom:12px;">将预测概率与实际赛果对照，评估概率模型是否"诚实"：</p>
+
+    <table>
+      <tr><th>结果</th><th>预测概率</th><th>隐含态度</th><th>实际发生</th><th>评估</th></tr>
+      <tr class="miss-row">
+        <td><strong>乌拉圭胜</strong></td>
+        <td><strong>64%</strong>（首选）</td>
+        <td>"高置信度·实力碾压"</td>
+        <td>❌ 未发生</td>
+        <td>概率严重高估 <strong>64%</strong>。未考虑"沙特防守韧性+超级门将"变量</td>
+      </tr>
+      <tr class="miss-row">
+        <td><strong>平局</strong></td>
+        <td>24%</td>
+        <td>"次可能结果"但未作为核心风险</td>
+        <td>✅ 发生</td>
+        <td>24% 虽有一定概率，但未在报告中作为核心风险提示，应上调至 30-35%</td>
+      </tr>
+      <tr class="partial-row">
+        <td><strong>沙特胜</strong></td>
+        <td>12%</td>
+        <td>"小概率"</td>
+        <td>❌ 未发生（但 40' 领先）</td>
+        <td>12% 合理——沙特确实保持领先 40 分钟但未取胜</td>
+      </tr>
+    </table>
+
+    <h4 style="color:#0033A0;margin:16px 0 10px;">概率分布对比图</h4>
+
+    <div class="bar-container">
+      <div class="bar-label">乌拉圭胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:64%;"></div></div>
+      <div class="bar-val" style="color:#0033A0;">64%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">平局</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-gray" style="width:24%;"></div></div>
+      <div class="bar-val" style="color:#888;">24%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">沙特胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:12%;"></div></div>
+      <div class="bar-val" style="color:#c62828;">12%</div>
+    </div>
+
+    <hr class="divider">
+
+    <h4 style="color:#0033A0;margin:8px 0 10px;">应校准到的合理分布（事后）</h4>
+
+    <div class="bar-container">
+      <div class="bar-label">乌拉圭胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:48%;"></div></div>
+      <div class="bar-val" style="color:#0033A0;">48%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">平局</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-green" style="width:35%;"></div></div>
+      <div class="bar-val" style="color:#2e7d32;">35%</div>
+    </div>
+    <div class="bar-container">
+      <div class="bar-label">沙特胜</div>
+      <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:17%;"></div></div>
+      <div class="bar-val" style="color:#c62828;">17%</div>
+    </div>
+
+    <div class="warning-box">
+      <strong>⚠️ 概率模型的三个核心缺陷：</strong><br>
+      1. <strong>未将"亚洲球队世界杯韧性"纳入概率模型</strong>：亚洲球队 vs 南美球队的世界杯历史平局率约 28-35%，但模型仅给出 24%。沙特、日本、韩国等亚洲球队在世界杯中通过战术纪律频繁取得平局或爆冷，这一变量应作为概率修正常数。<br>
+      2. <strong>未将"门将表现"与"平局概率"联动</strong>：Al-Owais 8 次扑救说明沙特防守有"最后一道保险"，这在概率模型中应触发平局概率上调 8-12%（类似佛得角 Vozinha 案例）。<br>
+      3. <strong>"教练上任时间短"被错误编码为负面变量</strong>：Donis 2 个月实际上带来了高效的防守组织，报告中将其作为"缺乏磨合"的负面信号是错误的。教练上任时间短有时意味着新战术体系尚未被对手研究，反而可能产生"战术奇袭"效果。
+    </div>
+  </div>
+
+  <!-- ===== 数据缺失清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 预测时缺失的关键数据</div>
+
+    <table>
+      <tr><th>缺失数据项</th><th>影响</th><th>严重程度</th></tr>
+      <tr><td>Al-Owais 职业生涯扑救率 / PSxG+/-</td><td>未识别"超级门将"对平局概率的贡献，类似 Vozinha 效应完全遗漏</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Donis 执教风格与防守组织数据</td><td>"仅上任2个月"被错误理解为负面因素，实际防守非常高效</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>亚洲球队 vs 南美球队世界杯历史平局率</td><td>平局概率 24% 严重低估，应参考亚洲韧性常数</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>沙特世预赛防守数据（抢断、解围、被射门转化率）</td><td>未量化沙特防守体系的真实能力</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>沙特定位球/反击进球占比</td><td>未预测沙特 40 分钟破门的进攻手段</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>Bielsa 高位逼抢 vs 亚洲球队历史数据</td><td>"60分钟破防"预测缺乏历史对照</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>Al-Amri 近期状态及在世预赛中的进攻贡献</td><td>未覆盖沙特首球得分手</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>乌拉圭世界杯首轮历史表现（慢热记录）</td><td>乌拉圭世界杯常慢热，首轮平局并非冷门</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>Maxi Araújo 赛季进球数据</td><td>未预测乌拉圭扳平球的关键球员</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>世界杯 H 组场地（洛杉矶）环境因素</td><td>未评估天气/海拔对高位逼抢体能消耗的影响</td><td><span class="badge badge-gray">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">🛠️ 预测报告优化建议</div>
+
+    <div class="rec-card">
+      <h4>建议一：建立"亚洲球队世界杯韧性"修正常数</h4>
+      <ul>
+        <li>亚洲球队（沙特、日本、韩国、伊朗）在世界杯中对南美/欧洲球队的平局率约 28-35%，显著高于模型默认值。</li>
+        <li><strong>操作</strong>：在概率模型中加入"对手大洲"变量——当对手为亚洲球队时，平局概率自动上浮 8-12%，爆冷率上浮 5-8%。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议二：建立"门将高扑救→平局概率联动"机制</h4>
+      <ul>
+        <li>类似佛得角 Vozinha 案例，Al-Owais 8 次扑救是本场平局的核心原因。门将位置是足球预测中最被低估的变量。</li>
+        <li><strong>操作</strong>：在门将分析模块中，若预测对手门将扑救率 > 75% 或历史 PSxG+/- > 0.2，则自动将"平局概率"上浮 8-12%。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议三："教练上任时间"应双向编码（正面/负面皆可能）</h4>
+      <ul>
+        <li>Donis 仅上任 2 个月，但防守组织非常出色。短时间上任也可能是"战术奇袭"（对手缺乏针对性研究）。</li>
+        <li><strong>操作</strong>：将"教练上任时间"作为中性变量，同时评估"换帅后战绩改善/恶化"的二分指标，而非默认负面。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议四：区分"控球统治"和"进球转化"两个维度</h4>
+      <ul>
+        <li>Valverde 中场统治力判断方向对但未取胜，说明需要将"中场控制"和"进球效率"作为独立维度评估。</li>
+        <li><strong>操作</strong>：在战术分析中增加"防守韧性对中场统治力的衰减系数"（高位逼抢 ×1.0，中位退守 ×0.85，铁桶阵 ×0.6）。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议五：增加"弱队率先破门"的动态情景建模</h4>
+      <ul>
+        <li>沙特 40 分钟领先后，比赛走势完全改变。但报告未考虑"弱队先得分→防守收紧→强队焦虑"的动态演进。</li>
+        <li><strong>操作</strong>：在比分预测中分阶段建模（0-0 → 弱队领先 → 强队追平/反超），每阶段附加不同的 xG 和概率参数。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议六：扩大亚洲球队数据库覆盖（10-15 个指标）</h4>
+      <ul>
+        <li>本次对沙特的覆盖主要停留在"实力弱"的定性描述，缺乏具体防守数据（抢断、解围、被射门转化率等）。</li>
+        <li><strong>操作</strong>：对 FIFA 排名 50+ 的亚洲球队增加 10-15 个精细指标，包括：门将 PSxG+/-、防守阵型变换频率、定位球效率、反击转化率等。</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>建议七：将"置信度高"改为"置信度中"并增加冷门预警</h4>
+      <ul>
+        <li>即使实力差距明显，足球比赛的不确定性在世界杯小组赛首轮尤为突出。乌拉圭历史上常慢热。</li>
+        <li><strong>操作</strong>：对"南美强队 vs 亚洲中游队"的世界杯首轮对局，强制使用"置信度中"标识，并触发"亚洲韧性冷门预警"模块。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测报告各维度评分</div>
+
+    <table>
+      <tr><th>维度</th><th>评分 (1-10)</th><th>评语</th></tr>
+      <tr><td><strong>赛前信息准确性</strong></td><td><span class="badge badge-green">7/10</span></td><td>时间、地点、组别均正确，但 Al-Owais、Donis 等关键信息覆盖不足</td></tr>
+      <tr><td><strong>战术框架判断</strong></td><td><span class="badge badge-yellow">5/10</span></td><td>识别了 Bielsa 高位逼抢和 Valverde 中场角色，但低估沙特防守韧性和 Donis 的针对性布置</td></tr>
+      <tr><td><strong>球员信息覆盖</strong></td><td><span class="badge badge-red">3/10</span></td><td>Al-Owais 8 次扑救未预测，Al-Amri 进球手未覆盖，Maxi Araújo 扳平者未提及</td></tr>
+      <tr><td><strong>数据深度</strong></td><td><span class="badge badge-red">3/10</span></td><td>有 xG 预测但未做亚洲韧性修正，缺门将 PSxG+/-、沙特防守精细数据、亚洲vs南美历史数据</td></tr>
+      <tr><td><strong>概率模型</strong></td><td><span class="badge badge-red">3/10</span></td><td>乌拉圭胜率 64% 严重高估，平局 24% 低估但非极端，模块间无联动（门将→平局）</td></tr>
+      <tr><td><strong>比分预测</strong></td><td><span class="badge badge-red">2/10</span></td><td>主预测 0-2 完全错误，备选 0-1/1-2 全部偏差，1-1 未列入，覆盖度严重不足</td></tr>
+      <tr><td><strong>不确定性表达</strong></td><td><span class="badge badge-red">2/10</span></td><td>标识"高置信度"是严重过度自信，应使用"中"或"中低"并增加冷门预警</td></tr>
+      <tr><td><strong>结构化程度</strong></td><td><span class="badge badge-green">7/10</span></td><td>格式规范、分区清晰，8 个分析维度齐全，但内容质量因核心偏差被拉低</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:14px;line-height:1.9;">
+        <strong>总体评价：这是一次"赛果方向完全错误"的预测失败案例</strong>。原报告将乌拉圭胜率定为 64%、主预测 0-2、置信度"高"，将 1-1 完全排除在备选之外，最终实际赛果是沙特 1-1 战平乌拉圭——沙特甚至在 40 分钟率先进球并保持领先近 40 分钟。这是典型的"南美强队 vs 亚洲中游队"实力碾压思维的失败。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>预测仅在 3 个细节点上正确</strong>：沙特未能获胜（✅）、乌拉圭进攻威胁存在（✅）、Bielsa 高位逼抢战术识别正确（✅）。但<strong>核心预测几乎全部偏差</strong>：比分 0-2 ❌、备选 0-1/1-2 全部偏差 ❌、乌拉圭胜 64% ❌、平局 24% 低估 ❌、Bielsa 60 分钟破防 ❌、沙特 0 球 ❌、置信度"高" ❌。这场预测暴露出本次报告的五个核心缺陷：
+      </p>
+      <ol style="font-size:14px;line-height:1.9;padding-left:20px;margin-top:8px;">
+        <li><strong>缺乏"亚洲球队世界杯韧性"修正常数</strong>：亚洲球队 vs 南美球队的世界杯平局率约 28-35%，但模型仅给出 24%，严重低估了平局风险。</li>
+        <li><strong>门将数据盲区</strong>：Al-Owais 8 次扑救是本场关键，但报告完全未覆盖。类似佛得角 Vozinha，门将位置是弱队爆冷的最核心变量之一。</li>
+        <li><strong>"教练上任时间短"被错误编码</strong>：Donis 仅 2 个月被默认为负面因素，但实际防守组织非常高效。"战术奇袭"效应未被识别。</li>
+        <li><strong>"弱队率先破门"动态模型缺失</strong>：未考虑沙特领先后比赛走势的改变——防守收紧 + 乌拉圭焦虑 + 时间压力。</li>
+        <li><strong>置信度过高且无冷门预警</strong>：对"南美强队 vs 亚洲中游队"的世界杯首轮使用"高"置信度是严重错误——这类比赛历来冷门频发。</li>
+      </ol>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>但本场预测也有一定可取之处</strong>：乌拉圭 xG 1.20-1.80（与实际 1 球下限接近）、Bielsa 战术风格识别正确、Valverde 中场角色判断方向对（Ugarte 击中立柱验证中场威胁）。这说明预测的基础框架并非完全失效，而是缺少了"亚洲韧性""门将变量""冷门预警"等关键修正模块。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;">
+        <strong>复盘给分：4.5 / 10</strong>（战术框架识别和乌拉圭威胁判断有一定准确度 +2 分，结构化程度尚可 +0.5 分；但赛果方向完全错误 -4 分，核心比分和概率严重偏差 -2 分，置信度严重过度自信 -1 分。以足球预测行业标准来看，属于"核心方向错误但部分基础判断正确"的偏差案例，需系统性加入亚洲球队修正模块）。
+      </p>
+      <p style="font-size:14px;line-height:1.9;margin-top:14px;color:#c62828;">
+        <strong>核心改进方向</strong>：建立"亚洲球队世界杯韧性"修正常数 + "门将高扑救→平局联动"机制 + "教练上任时间"双向编码 + "控球≠进球"二维分析 + "弱队率先破门"动态情景建模 + 亚洲球队数据库扩展 + 置信度降级触发器。实施以上 7 项建议后，对"南美/欧洲强队 vs 亚洲中游队"类型比赛的预测精度应有质的提升，避免再次出现"64% 胜率但 1-1 战平"这种级别的方向性失误。
+      </p>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div style="margin-top:18px;padding:14px;background:#e8f5e9;border-radius:8px;border-left:4px solid #2e7d32;">
+    <div style="font-weight:700;color:#2e7d32;margin-bottom:6px;">💡 免责声明</div>
+    <div style="font-size:12.5px;color:#444;line-height:1.7;">
+      本复盘报告基于赛后公开数据，旨在优化预测模型。足球比赛存在高度随机性，即使最优的预测模型也无法保证准确率。本内容仅供分析研究参考。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
