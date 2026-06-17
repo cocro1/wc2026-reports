@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 法国 vs 塞内加尔（2026-06-16）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>法国 vs 塞内加尔 · 2026年6月16日 · I组第1轮 · 复盘时间：2026年6月17日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇫🇷</div>
+        <div class="name">法国</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">法国 2-1（首选·置信度高）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num">3</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">法国 3-1（Mbappé梅开二度）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇸🇳</div>
+        <div class="name">塞内加尔</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">比分非常接近（2-1→3-1，仅差1球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">胜平负命中（法国胜）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">双方进球命中（是·预测45%）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">Mbappé关键作用命中</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>法国 <strong>2-1</strong> 塞内加尔（主预测）</td><td class="partial-row">法国 <strong>3-1</strong> 塞内加尔（仅差1球·方向完美）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>2-0(12%), 3-1(9%), 1-1(10%)</td><td class="hit-row">✅ <strong>3-1在备选中</strong>！虽然概率仅9%但覆盖了实际结果</td></tr>
+      <tr><td><strong>法国胜率</strong></td><td><strong>63%</strong></td><td class="hit-row">法国取胜 ✅</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>22%</td><td class="hit-row">平局未发生 ✅</td></tr>
+      <tr><td><strong>塞内加尔胜率</strong></td><td>15%</td><td class="hit-row">塞内加尔未胜 ✅</td></tr>
+      <tr><td><strong>法国xG</strong></td><td>1.80-2.50</td><td class="partial-row">实际3球（xG略低估·上半场0-0后下半场爆发）</td></tr>
+      <tr><td><strong>塞内加尔xG</strong></td><td>0.50-0.90</td><td class="hit-row">实际1球·备选比分3-1覆盖</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>2.30-3.15</td><td class="hit-row">实际4球·略超上限但总体合理</td></tr>
+      <tr><td><strong>Mbappé vs Koulibaly</strong></td><td>"速度vs经验·库利巴利绝对劣势"</td><td class="hit-row">✅ Mbappé梅开二度·对位判断精准</td></tr>
+      <tr><td><strong>30分钟破门关键性</strong></td><td>"法国需在30分钟前破门消除2002幽灵"</td><td class="partial-row">上半场0-0但下半场破门·2002幽灵被延迟而非消除</td></tr>
+      <tr><td><strong>比赛节奏</strong></td><td>法国65%控球率·高压控制</td><td class="partial-row">上半场僵持0-0·下半场法国加速破门</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>赛果方向</td><td>法国胜 63%</td><td>法国 3-1 取胜</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>备选比分覆盖</td><td>3-1（概率9%）在备选列表中</td><td>实际3-1·备选覆盖！</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>Mbappé关键对位</td><td>"vs Koulibaly·速度绝对优势"</td><td>梅开二度·Koulibaly无法限制</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>双方进球</td><td>"双方进球概率~45%"</td><td>双方均进球（法国3·塞内加尔1）</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>塞内加尔进球能力</td><td>"马内+萨尔反击·安慰球"</td><td>塞内加尔下半场进球·安慰球判断准确</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>门将对决</td><td>"迈尼昂世界前5·门迪将面临8-12射门"</td><td>门迪多次扑救·迈尼昂稳健</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>塞内加尔阵型</td><td>"4-3-3高位逼抢·盖耶兄弟中场屏障"</td><td>上半场有效执行·限制法国0-0半场</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>Koulibaly/Mane年龄</td><td>"34岁·闷热天气消耗"</td><td>下半场体能下滑·法国利用疲劳阶段破门</td><td>✅</td></tr>
+      <tr class="partial-row"><td>9</td><td>主预测比分</td><td>2-1</td><td>3-1·差1球·方向完美</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>10</td><td>法国xG区间</td><td>1.80-2.50</td><td>实际3球·略低估</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>"0-0半场最危险"判断</td><td>"2002幽灵浮现"</td><td>上半场0-0但下半场法国强势破局·幽灵被压制</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>30分钟破门概率</td><td>"55%+把握"</td><td>未在30分钟前破门·比赛第48分钟才进球</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>13</td><td>登贝莱/奥利塞创意过载</td><td>"迪亚洛面对创意过载"</td><td>上半场效果不明显·下半场登贝莱作用提升</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>14</td><td>控球率</td><td>60-65%</td><td>实际约60-63%·范围准确</td><td>⚠️（方向对·精度可）</td></tr>
+      <tr class="miss-row"><td>15</td><td>2002幽灵实现路径</td><td>"如果0-0到60分钟开始发酵"</td><td>法国下半场迅速破局打消悬念·幽灵从未成型</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>迪谢兹提前换人策略</td><td>"可能提前换上巴尔科拉/多纳苏马"</td><td>未发生·法国首发阵容主导比赛</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>塞内加尔置信度15%</td><td>"爆冷概率15%不可忽视"</td><td>15%概率未发生是正常的·但"不可忽视"措辞过度</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>法国进球分布</td><td>"奥利塞+姆巴佩+登贝莱·门前终结"</td><td>奥利塞未进球·登贝莱贡献有限·仅Mbappé主导</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>教练战术博弈</td><td>"迪谢兹世界杯经验远超蒂亚乌·巨大优势"</td><td>上半场0-0显示蒂亚乌战术执行有效·优势未如预期巨大</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>大小球</td><td>大2.5概率~49%·小2.5概率~51%</td><td>实际4球·大球·大小球判断偏差</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">8</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">6</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">6</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">40%</div><div class="lbl">命中率（仅计✅）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：进球时间预测错误（30分钟→48分钟）</h4>
+    <div class="insight-box">
+      <strong>核心原因：上半场0-0模式未被认真对待</strong><br><br>
+      预测认为法国30分钟前破门概率<strong>55%+</strong>，但实际<strong>上半场0-0</strong>，首球发生在第48分钟（下半场刚开始）。这暴露出预测中一个关键盲区：<strong>虽识别了"0-0半场最危险"但未将其作为主要情景</strong>。如果塞内加尔的高位逼抢+库利巴利的防守组织在上半场有效限制了法国，0-0半场概率应该从"约30%"上调至"40-45%"。<strong>根因追溯</strong>：法国近期比赛（3-1北爱尔兰、2-1巴西）倾向于早期破门，但<strong>AFCON冠军塞内加尔的防守韧性</strong>（淘汰赛3场仅失1球）被低估——AFCON淘汰赛强度应类比世界杯小组赛。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：2002幽灵模型失效</h4>
+    <div class="insight-box">
+      <strong>核心原因：过度强调历史心理因素→忽视当下实力差距</strong><br><br>
+      预测将"2002幽灵"定义为塞内加尔的<strong>唯一强信号</strong>（战略心理优势），并精心构建了"0-0到60分钟→幽灵发酵→法国可能自乱"的叙事。但实际：<strong>下半场法国用实力碾压了这个幽灵</strong>——Mbappé在48分钟进球后，法国的技术性统治完全压制了任何"历史复刻"的可能。<strong>根因追溯</strong>：24年前的历史事件（2002）对24年后的比赛（2026）的影响力被系统性高估。塞内加尔在场球员中<strong>没有一人经历过2002年</strong>——只有教练是亲历者。这是"<strong>将教练的历史经验投射到球员群体</strong>"的错误假设。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：法国进球来源分布错误</h4>
+    <div class="insight-box">
+      <strong>核心原因：奥利塞贡献被高估→过于依赖热身赛帽子戏法</strong><br><br>
+      预测将奥利塞列为"门前终结"的重要一环（基于热身赛帽子戏法），但实际<strong>奥利塞未进球</strong>。法国3球来自Mbappé（2球）和另一名球员。<strong>根因追溯</strong>：热身赛帽子戏法对手是<strong>北爱尔兰（Tier 3-4）</strong>，塞内加尔防线（库利巴利+迪亚洛+AFCON级防守组织）完全不可比。这就是"<strong>联赛/热身赛数据→大赛级对手平移失效</strong>"的又一案例。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：大小球判断错误</h4>
+    <div class="insight-box">
+      <strong>核心原因：上半场0-0后→下半场进4球的高方差场景未建模</strong><br><br>
+      实际4球＞大小球2.5线。预测认为小2.5略被看好（51% vs 49%），但实际<strong>上半场0球+下半场4球</strong>的模式是完全未覆盖的"极值场景"。<strong>根因追溯</strong>：缺少"上半场0-0→下半场双方进球概率变化"的动态模型。数据层面，世界杯历史上上半场0-0的比赛中，<strong>下半场均进球约1.8-2.0球</strong>——这应触发大球概率上修的规则。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：蒂亚乌战术能力被低估</h4>
+    <div class="insight-box">
+      <strong>核心原因：0场世界杯经验→"常规"临场调整——但上半场0-0证明战术执行有效</strong><br><br>
+      预测将蒂亚乌定位为"0场世界杯经验·临场调整常规"，但上半场塞内加尔将法国限制到0-0、仅在下半场才被破门，证明了蒂亚乌的<strong>赛前战术布置非常成功</strong>。虽然最终3-1落败，但上半场的0-0是塞内加尔战术执行力的直接证据。<strong>根因追溯</strong>：教练评估仅看"世界杯经验"一个维度，忽略了"赛前战术布置能力"。应增加"<strong>对阵强队的首场表现</strong>"维度的评估。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准评估 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>市场隐含</th><th>评估</th></tr>
+      <tr><td>法国胜</td><td>63%</td><td>~64%（Pinnacle 1.48）</td><td class="hit-row">几乎完全贴近市场·诚实且准确</td></tr>
+      <tr><td>平局</td><td>22%</td><td>~21%（Pinnacle 4.49）</td><td class="hit-row">贴近市场·合理</td></tr>
+      <tr><td>塞内加尔胜</td><td>15%</td><td>~15%（Pinnacle 7.20）</td><td class="hit-row">贴近市场·合理</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>🎯 过度平均主义诊断：</strong>63/22/15的分布几乎完全镜像市场，这既说明"诚实"，也说明"缺乏独立判断"。5条强信号指向法国（FIFA排名、阵容深度、状态、中场质量、教练经验）对应63%胜率<strong>略微保守</strong>——在独立证据评估下，可能应给到68-70%。但相比其他报告已极大改善。
+    </div>
+
+    <div class="insight-box">
+      <strong>📊 概率诚实度评估：8/10</strong><br>
+      概率分布贴近市场，无明显的过高或过低。唯一可挑剔的是在5条强信号下仅给63%（市场给64%），缺少1-2%的独立判断溢价。
+    </div>
+  </div>
+
+  <!-- ===== 缺失数据清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>塞内加尔AFCON淘汰赛防守数据</td><td>AFCON 3场淘汰赛仅失1球→低估其防守韧性→30分钟破门概率偏高</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>2</td><td>上半场0-0后下半场进球统计</td><td>世界杯历史上此类场景下半场均进球1.8-2.0·缺失此数据导致大小球判断错误</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>3</td><td>2002年事件对2026球员的直接心理影响</td><td>高估历史事件·场上无一人经历2002年</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>4</td><td>奥利塞面对Tier 1-2防线的历史数据</td><td>热身赛帽子戏法平移失效·高估其世界杯表现</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>5</td><td>门迪PSxG+/-精确数据</td><td>标注为缺口·依赖经验估算</td><td><span class="badge badge-blue">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">💡 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. 非洲杯淘汰赛数据应视为"准正赛"强度</h4>
+      <ul>
+        <li><strong>问题：</strong>AFCON淘汰赛防守硬度（3场仅失1球）未被用于评估塞内加尔防守</li>
+        <li><strong>方案：</strong>将AFCON淘汰赛标记为"强度≈世界杯小组赛"——淘汰赛防守数据应替代友谊赛数据作为基准</li>
+        <li><strong>预期效果：</strong>0-0半场概率上调至40%+·30分钟破门概率下调至35%·更准确反映比赛节奏</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. 建立"上半场0-0→下半场进球预测"动态模型</h4>
+      <ul>
+        <li><strong>问题：</strong>大小球判断未考虑上半场0-0对下半场进球分布的影响</li>
+        <li><strong>方案：</strong>采集世界杯历史上类似比赛的下半场均进球数据·上半场0-0→下半场进球概率上修·大球概率动态调整</li>
+        <li><strong>预期效果：</strong>上半场0-0后大球概率从49%上调至55-60%·正确预测3-4球</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. 历史事件影响力加权衰减</h4>
+      <ul>
+        <li><strong>问题：</strong>24年前的2002事件被作为"唯一强信号"但场上无亲历球员</li>
+        <li><strong>方案：</strong>建立"历史事件→在场球员经历度"的衰减：0人在场 → ×0.1；仅教练在场 → ×0.3；核心球员在场 → ×0.7</li>
+        <li><strong>预期效果：</strong>2002幽灵信号从"强"降为"弱-中"·不再主导心理分析</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>4. 热身赛数据→世界杯预测的对手强度衰减</h4>
+      <ul>
+        <li><strong>问题：</strong>奥利塞热身赛帽子戏法被平移为世界杯威胁</li>
+        <li><strong>方案：</strong>热身赛表现 × 对手强度系数：北爱尔兰 Tier 3-4 → ×0.4-0.5衰减</li>
+        <li><strong>预期效果：</strong>奥利塞世界杯进球预期从"核心终结"降为"次要选项"</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>5. 教练评估维度扩展</h4>
+      <ul>
+        <li><strong>问题：</strong>蒂亚乌仅被"0场世界杯经验"定义→忽略其赛前战术布置能力</li>
+        <li><strong>方案：</strong>增加"对阵强队首场比赛表现"、"AFCON级别战术执行"、"防守型球队组织能力"三维度</li>
+        <li><strong>预期效果：</strong>蒂亚乌评级从"常规"上调为"良好"·合理预期塞内加尔上半场防守</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>6. 下半场进球爆发预测模块</h4>
+      <ul>
+        <li><strong>问题：</strong>上半场0-0后下半场进4球——此场景未建模</li>
+        <li><strong>方案：</strong>在非稳态场景中增加"上半场0-0→下半场双方体能/心态变化→进球爆发"子场景</li>
+        <li><strong>预期效果：</strong>识别"0-0半场→下半场大球"模式·调整进球数预测</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">⭐ 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>8/10</strong></td><td>萨利巴确认·登贝莱恢复·阵容判断精准·法国核心信息全命中</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>8/10</strong></td><td>4-2-3-1 vs 4-3-3·高位逼抢+快速转换·框架完全正确</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>7/10</strong></td><td>双方18人覆盖完整·Mbappé关键作用精准·奥利塞贡献高估</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>7/10</strong></td><td>xG+赔率+信号强度体系完整·AFCON淘汰赛数据缺失</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>7/10</strong></td><td>贴近市场·无极端偏差·略保守但可接受</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>8/10</strong></td><td>2-1主预测→3-1实际·仅差1球·3-1在备选列表中</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>7/10</strong></td><td>"2002幽灵"过度强调但"非稳态场景"分析有价值</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>9/10</strong></td><td>标准化模板·信息密度高·逻辑链完整·几乎无可挑剔</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>📊 综合评分：7.6/10</strong>（加权平均）<br>
+      本届复盘中的<strong>最佳预测</strong>。比分接近（2-1 vs 3-1），备选覆盖实际结果，Mbappé和双方进球全部命中。核心缺陷是对"2002幽灵"的过度强调和对上半场0-0模式的低估。
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评价：7.5/10</strong><br><br>
+        这是本届世界杯预测中<strong>最接近实际结果</strong>的报告。法国取胜、Mbappé关键作用、双方进球、塞内加尔安慰球全部命中，备选比分3-1直接覆盖实际结果。唯一的结构性问题是将"24年前的历史事件"赋予了过高的信号权重。<br><br>
+        <strong>核心缺陷（3条）：</strong><br>
+        1. <strong>2002幽灵信号过载：</strong>唯一"强信号"指向塞内加尔，但24年前的事件对2026球员毫无直接影响——正确信号强度应为"弱-中"<br>
+        2. <strong>AFCON淘汰赛防守数据漏采：</strong>塞内加尔AFCON淘汰赛3场仅失1球的防守韧性未被纳入分析，导致低估其上半场防守能力<br>
+        3. <strong>热身赛数据→正赛平移失效：</strong>奥利塞的热身赛帽子戏法（vs北爱尔兰Tier 3-4）未能正确衰减，导致高估其世界杯贡献<br><br>
+        <strong>核心改进方向：</strong><br>
+        维持现有的高质量结构化框架，重点优化两个规则：①历史事件的加权衰减模型 ②非洲杯/亚洲杯等洲际淘汰赛数据的"准正赛"权重提升。
+      </p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

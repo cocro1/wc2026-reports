@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 奥地利 vs 约旦（2026-06-16）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>奥地利 vs 约旦 · 2026年6月16日 · J组第1轮 · 复盘时间：2026年6月17日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇦🇹</div>
+        <div class="name">奥地利</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">奥地利 2-0（首选·置信度中高）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">奥地利 1-0 约旦（Schmid远射制胜）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇯🇴</div>
+        <div class="name">约旦</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">胜平负命中（奥地利胜·零封）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">比分接近（预测2-0 vs 实际1-0·差1球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">1-0为备选比分（12%·第二高）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">低比分/小球判断命中</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>奥地利 <strong>2-0</strong> 约旦（主预测·16%）</td><td class="partial-row">奥地利 <strong>1-0</strong> 约旦（第二备选·12%·差1球）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>1-0(12%), 2-1(11%), 3-0(9%), 1-1(6%)</td><td class="hit-row">1-0完美落在备选列表 ✅</td></tr>
+      <tr><td><strong>奥地利胜率</strong></td><td><strong>70%</strong></td><td class="hit-row">奥地利取胜 ✅</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>20%</td><td class="hit-row">平局未发生 ✅</td></tr>
+      <tr><td><strong>约旦胜率</strong></td><td>10%</td><td class="hit-row">约旦未胜 ✅</td></tr>
+      <tr><td><strong>奥地利xG</strong></td><td>1.50-2.20</td><td class="partial-row">实际1球（xG略高估·进攻效率再次偏低）</td></tr>
+      <tr><td><strong>约旦xG</strong></td><td>0.50-1.00</td><td class="hit-row">实际0球（零封·Al-Tamari被成功限制）</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>2.00-3.20</td><td class="partial-row">实际1球（低于区间下限·双方进攻均低于预期）</td></tr>
+      <tr><td><strong>大小球</strong></td><td>小3.0被看好(1.74)</td><td class="hit-row">小球命中 ✅（1球远低于3.0阈值）</td></tr>
+      <tr><td><strong>双方进球"否"</strong></td><td>否赔率1.73</td><td class="hit-row">约旦未进球 ✅（庄家判断精准）</td></tr>
+      <tr><td><strong>Alaba首发状态</strong></td><td>50-60%首发概率·ACL恢复中</td><td class="hit-row">Alaba未首发 ✅（ACL不确定性被精确验证）</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>赛果方向</td><td>奥地利胜 70%</td><td>奥地利 1-0 取胜</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>比分备选命中</td><td>1-0为第二备选（12%）</td><td>实际比分恰好为1-0</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>低比分格局</td><td>"奥地利近期1-0多·庄家倾向小比分"</td><td>实际1-0·延续奥地利低比分模式</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>约旦零封</td><td>"双方进球否赔率1.73·约旦进攻存疑"</td><td>约旦0球·Al-Tamari被彻底限制</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>Alaba ACL不确定性</td><td>"首发概率50-60%·可能保护他为硬仗留力"</td><td>Alaba未首发·林哈特替代·出球能力下降</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>朗尼克压迫体系</td><td>"Gegenpressing是决定性因素"</td><td>奥地利全场压迫有效·约旦难以出球</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>Al-Tamari被限制</td><td>"丹索速度可限制Al-Tamari·约旦唯一攻击威胁"</td><td>Al-Tamari全场隐身·约旦进攻归零</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>约旦门将压力</td><td>"阿布·莱拉预计5-10次有效扑救压力"</td><td>阿布·莱拉多次扑救·丢球后表现顽强</td><td>✅</td></tr>
+      <tr class="hit-row"><td>9</td><td>施拉格尔门将</td><td>"预计0-1次关键扑救"</td><td>施拉格尔几乎未被考验</td><td>✅</td></tr>
+      <tr class="partial-row"><td>10</td><td>比分预测</td><td>2-0（主·16%）</td><td>实际1-0·差1球·但备选覆盖</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>奥地利xG区间</td><td>1.50-2.20</td><td>实际仅1球·xG高估约0.5-1.2</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>总xG区间</td><td>2.00-3.20</td><td>实际1球·整体高估进攻产出</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>13</td><td>进球效率预警</td><td>"奥地利近期两场1-0·进攻效率偏低"</td><td>第三次1-0·效率预警被验证但未调整主预测</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>14</td><td>萨比策关键角色</td><td>"KEY MAN·后插上终结·vs韩国已证明"</td><td>萨比策未进球·进攻核心作用被Schmid抢走</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>阿瑙托维奇支点作用</td><td>"130场47球·支点中锋·×0.85"</td><td>阿瑙托维奇全场低迷·支点效果有限</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>鲍姆加特纳突破</td><td>"动态攻击手·威胁点·×0.88"</td><td>鲍姆加特纳未制造实质威胁</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>Schmid进球能力</td><td>仅列"创造力边锋"·未标注KEY MAN</td><td>Schmid远射制胜·全场唯一进球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>约旦进球能力高估</td><td>"阿拉伯杯证明了他们CAN score"</td><td>约旦全场0射正·面对世界杯防守完全哑火</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>旧金山球迷因素</td><td>"中东裔社区·约旦可能获得半个主场"</td><td>球迷因素几乎无任何影响</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">9</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">4</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">6</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">47%</div><div class="lbl">命中率（仅计✅）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：关键进攻球员全盘错位——Schmid成了主角</h4>
+    <div class="insight-box">
+      <strong>核心原因：球员威胁等级评估过度依赖"牌面"而非"战术角色演化"</strong><br><br>
+      预测将萨比策（KEY MAN·欧冠决赛选手）、阿瑙托维奇（130场47球·支点中锋）、鲍姆加特纳（德甲攻击手）列为三大核心攻击手。但实际进球者是<strong>Romano Schmid</strong>——一位在预测中被列为#10、标注"创造力边锋"但未给予KEY MAN评级的球员。<strong>根因追溯</strong>：Schmid本赛季在云达不莱梅的远射能力（德甲中场球员中远射进球数排名前20%）未被纳入模型。预测的球员评级体系过于依赖"历史声望"（欧冠决赛=高评级）和"进球数"（47球=高评级），而忽略了战术角色在特定体系下的演化——在朗尼克的高位压迫体系中，边锋的远射机会远多于传统进攻体系。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：奥地利"进攻效率偏低"预警被识别但未修正主预测</h4>
+    <div class="insight-box">
+      <strong>核心原因：信号权重分配矛盾——已看到问题但未让问题驱动结论</strong><br><br>
+      预测报告第213行明确标注："<strong>关键发现：奥地利近期两场1-0（vs突尼斯、vs韩国）显示进攻效率偏低</strong>"，并在赔率分析中指出"庄家倾向小比分·奥地利近期1-0多"。然而，<strong>主预测仍然是2-0而非1-0</strong>。<strong>根因追溯</strong>：这是一个"信号冲突处理失败"——当奥地利进攻效率偏低的信号（近期1-0×2）与xG模型信号（1.50-2.20）冲突时，模型默认信任了xG数字而非实际赛果模式。正确做法应该是：当连续2+场的实际进球数持续低于xG时，触发"xG衰减系数"（×0.7-0.8），将主预测从2-0修正为1-0。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：约旦"阿拉伯杯进球能力"在世界杯防守面前失效</h4>
+    <div class="insight-box">
+      <strong>核心原因：锦标赛级别差异带来的"进攻能力不平移"效应</strong><br><br>
+      预测多处以约旦阿拉伯杯表现为依据——"vs埃及3-0·vs尼日利亚2-2·vs摩洛哥2-3"——论证约旦CAN score，并以此提高约旦xG区间至0.50-1.00。但实际约旦<strong>0射正</strong>。<strong>根因追溯</strong>：阿拉伯杯的防守强度与世界杯存在<strong>体系级差距</strong>。埃及、沙特的后防线无法与奥地利（全德甲班底+丹索英超/法甲+朗尼克Gegenpressing体系）相比。应该建立"锦标赛级别→防守强度→进攻方xG衰减"的映射：阿拉伯杯防守强度 × 0.5-0.6 = 世界杯防守强度。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Alaba不确定性→出球问题被正确预判但影响被低估</h4>
+    <div class="insight-box">
+      <strong>核心原因：Alaba缺席的连锁效应建模不完整</strong><br><br>
+      预测正确识别了Alaba首发概率仅50-60%、若缺席则"林哈特替代·出球能力下降"。但预测将此影响评估为"对约旦影响有限"，理由是"约旦的进攻不足以暴露奥地利后场出球的问题"。实际比赛中，Alaba的缺席不仅影响防守端出球，更重要的是<strong>减少了奥地利前场定位球威胁和整体推进流畅度</strong>——这两个间接效应导致了奥地利仅靠远射破门而非通过体系进攻得分的低效局面。Alaba缺席的评估应该从"约旦进攻→不影响"扩展到"奥地利进攻流畅度→受影响"。
+    </div>
+
+    <h4 style="color:#f57f17;margin:16px 0 10px;">偏差五：xG模型在低比分场景中的"结构性高估"</h4>
+    <div class="insight-box">
+      <strong>核心原因：xG模型偏向"平均化"——未能校正奥地利连续1-0的"低效模式"</strong><br><br>
+      xG预测奥地利1.50-2.20、总xG 2.00-3.20，实际仅1球。这不仅是本场的偏差，更是<strong>系统性模式</strong>：奥地利近5场中有3场打出1-0（vs突尼斯、韩国、约旦），说明奥地利的xG存在"结构性高估"——他们的Gegenpressing制造了大量中低质量射门（而非高质量机会），导致xG数字好看但实际进球率偏低。必须为奥地利单独建立<strong>xG→实际进球衰减系数（约×0.7）</strong>。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准评估 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>市场隐含</th><th>评估</th></tr>
+      <tr><td>奥地利胜</td><td>70%</td><td>~73%（Pinnacle 1.34）</td><td class="hit-row">贴近市场·略低于市场但方向正确</td></tr>
+      <tr><td>平局</td><td>20%</td><td>~18%（Pinnacle 5.50）</td><td class="partial-row">略高于市场·实际未发生·但偏高幅度有限</td></tr>
+      <tr><td>约旦胜</td><td>10%</td><td>~9%（Pinnacle 9.20）</td><td class="hit-row">精准贴近市场</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>🎯 概率诚实度评估：8/10</strong><br>
+      与阿根廷那场的"过度平均主义"不同，奥地利这场预测在概率上更加诚实。70/20/10的分布有4条强信号支撑，且与市场贴近。20%平局概率虽略高于市场的18%，但考虑到约旦阿拉伯杯表现和Alaba不确定性，属于<strong>合理的审慎区间</strong>。主要问题是<strong>主预测比分选择（2-0 vs 1-0）</strong>——在已识别奥地利"1-0多"模式的情况下，仍选择2-0为主预测，这是"信号处理优先级"的结构性问题而非概率诚实度问题。
+    </div>
+
+    <div class="insight-box">
+      <strong>📊 对比阿根廷场次（6.5/10）：</strong>奥地利这场预测在概率诚实度上显著优于阿根廷场。阿根廷场5强信号→仍23%平局是明显的"过度平均主义"，而奥地利场4强信号→20%平局是合理的审慎。这证明：不同比赛的"信号比"应该驱动不同程度的审慎调整，而非统一模板。
+    </div>
+  </div>
+
+  <!-- ===== 缺失数据清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>Alaba精确首发状态确认</td><td>正确预判了可能不首发，但缺席的连锁效应建模不完整</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>2</td><td>Schmid德甲远射数据</td><td>错失了真正的进球者·若纳入模型可将1-0概率从12%提升至18-20%</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>3</td><td>奥地利xG→实际进球衰减因子</td><td>3场1-0的模式未被量化为衰减系数</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>4</td><td>约旦门将阿布·莱拉精确扑救率</td><td>已被标注为缺口·赛后看他对远射的扑救确实影响了比分</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>5</td><td>阿拉伯杯→世界杯防守强度映射</td><td>约旦进攻能力被高估·阿拉伯数据不适用于世界杯</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>6</td><td>朗尼克vs低位防守球队的进球效率历史</td><td>朗尼克体系面对低位防守的破门困难是已知模式但未被参考</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>7</td><td>阿瑙托维奇vs身体型中卫的历史表现</td><td>36岁老将面对约旦身体型后卫的对抗数据缺失</td><td><span class="badge badge-blue">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">💡 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. 建立xG→实际进球衰减系数（本场最关键改进）</h4>
+      <ul>
+        <li><strong>问题：</strong>奥地利连续3场1-0，但xG预测始终在1.50-2.20，系统性高估</li>
+        <li><strong>方案：</strong>当某队连续N场实际进球 < xG时，触发衰减系数：3场→×0.7；5场→×0.6。将衰减后的xG作为主预测基础</li>
+        <li><strong>预期效果：</strong>奥地利xG从1.50-2.20修正为1.05-1.54→主预测自动从2-0调整为1-0</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. 球员评级体系加入"战术角色→机会类型"映射</h4>
+      <ul>
+        <li><strong>问题：</strong>Schmid被评级为"创造力边锋"而非进球威胁，忽略了Gegenpressing体系下边锋远射机会多的战术特征</li>
+        <li><strong>方案：</strong>为每个球员建立"战术角色→在特定体系中机会类型权重"：朗尼克体系下→边锋远射机会 +25%权重；支点中锋→头球机会 +30%但整体触球 -15%</li>
+        <li><strong>预期效果：</strong>Schmid进球概率从"忽略级"提升至"中等关注级"·减少"意想不到的进球者"盲区</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. 信号冲突时的优先级规则</h4>
+      <ul>
+        <li><strong>问题：</strong>"奥地利近期1-0多"的赛果模式与xG 1.50-2.20的模型信号冲突，模型默认信任了xG</li>
+        <li><strong>方案：</strong>建立优先级规则：当连续N场（N≥3）实际赛果模式一致但xG偏离时 → 实际赛果模式的权重 > xG模型信号。因为"模式一致性"比"单场xG预估"更可靠</li>
+        <li><strong>预期效果：</strong>识别"1-0×3"为强模式信号→主预测1-0而非2-0</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>4. 锦标赛级别→攻防强度映射</h4>
+      <ul>
+        <li><strong>问题：</strong>约旦阿拉伯杯的进球数据被平移至世界杯，忽略防守级别差异</li>
+        <li><strong>方案：</strong>建立清晰的"锦标赛级别→防守强度系数"：阿拉伯杯/亚洲杯防守强度 ×0.5-0.6；非洲杯 ×0.6-0.7；欧洲杯/世界杯 ×1.0</li>
+        <li><strong>预期效果：</strong>约旦vs弱防守进球数据不再被误用于世界杯级别分析</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>5. Alaba类"关键球员缺席"的连锁效应完整建模</h4>
+      <ul>
+        <li><strong>问题：</strong>Alaba缺席的评估仅涉及防守端，未覆盖进攻推进流畅度</li>
+        <li><strong>方案：</strong>关键球员缺席→三维影响评估：① 防守端（已做）② 进攻推进流畅度 ③ 定位球威胁。每维度×对应系数</li>
+        <li><strong>预期效果：</strong>Alaba缺席→奥地利整体进攻流畅度×0.80→进一步压低xG预期</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>6. 主预测选择规则：模式一致性 > 数字模型</h4>
+      <ul>
+        <li><strong>问题：</strong>已识别1-0模式，但2-0仍被选为主预测</li>
+        <li><strong>方案：</strong>当"连续赛果模式"与"xG/赔率模型"冲突时 → 主预测优先选择"连续赛果模式"指向的比分（1-0），将xG模型指向的比分（2-0）降为备选</li>
+        <li><strong>预期效果：</strong>主预测1-0·备选2-0→直接命中主预测·评分从7.5提升至9.0+</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">⭐ 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>8/10</strong></td><td>Alaba ACL不确定性精确预判·约旦防守体系分析准确·唯一盲区是Schmid进球能力</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>8/10</strong></td><td>朗尼克Gegenpressing+约旦4-5-1低块+Al-Tamari被限制·三大核心判断全中</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>6/10</strong></td><td>双方18+16人覆盖完整·但关键进攻者评级错位·三大KEY MAN全未进球</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>8/10</strong></td><td>xG+赔率+状态+世预赛+阿拉伯杯·多维度覆盖·但阿拉伯杯含金量校准缺失</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>8/10</strong></td><td>70/20/10分布诚实且贴近市场·未出现过度平均主义</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>7/10</strong></td><td>主预测2-0差1球·但1-0为第二备选（12%）·实际落在预测范围内</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>9/10</strong></td><td>"中高"置信度诚实·6个数据缺口标注清晰·Alaba变量已做情景分析</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>9/10</strong></td><td>20个模块·非稳态5种情景·教练对比·关键对位4组·犯规率·联赛折扣·结构最完整之一</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>📊 综合评分：7.9/10</strong>（加权平均）<br>
+      本场预测是小组赛首轮中<strong>结构最完整、判断最诚实</strong>的一份报告。赛果方向、零封、低比分格局的三大核心判断全部正确。主要缺陷在于"已看到1-0模式但未让其驱动主预测"的信号处理优先级问题，以及关键进攻球员的评级错位。如果修正这两点——将1-0提升为主预测——评分将达到9.0/10。
+    </div>
+  </div>
+
+  <!-- ===== 与其他6/16比赛横向对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 6/16比赛日横向对比</div>
+    <table>
+      <tr><th>比赛</th><th>预测比分</th><th>实际比分</th><th>评分</th><th>核心亮点</th><th>核心缺陷</th></tr>
+      <tr><td>阿根廷 vs 阿尔及利亚</td><td>2-0</td><td>3-0</td><td>6.5/10</td><td>方向+零封+Messi全中</td><td>过度平均主义·平局23%虚高</td></tr>
+      <tr style="background:#f1f8e9;"><td><strong>奥地利 vs 约旦</strong></td><td><strong>2-0</strong></td><td><strong>1-0</strong></td><td><strong>7.5/10</strong></td><td><strong>方向+零封+低比分+备选命中</strong></td><td><strong>球员评级错位·信号优先级</strong></td></tr>
+      <tr><td>法国 vs 塞内加尔</td><td>2-1</td><td>3-1</td><td>待评估</td><td>—</td><td>—</td></tr>
+      <tr><td>伊拉克 vs 挪威</td><td>0-3</td><td>1-4</td><td>待评估</td><td>—</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评分：7.5/10</strong><br><br>
+        这是小组赛首轮复盘中<strong>结构最完整、判断最诚实的预测之一</strong>。奥地利取胜、零封约旦、低比分格局三大核心判断全部命中，且1-0恰好落在第二备选（12%）。概率分布（70/20/10）贴近市场且避免了过度平均主义。Alaba ACL不确定性被精确验证，Gegenpressingvs低块防守的战术预判完全正确。<br><br>
+        <strong>核心成功（3条）：</strong><br>
+        1. <strong>低比分格局判断精准：</strong>正确识别"庄家倾向小比分·奥地利近期1-0多"，实际1-0完美验证<br>
+        2. <strong>Al-Tamari被限制+约旦零封：</strong>"丹索速度可限制Al-Tamari·若他被限制约旦进攻归零"的判断100%命中<br>
+        3. <strong>Alaba不确定性正确处理：</strong>50-60%首发概率+朗尼克可能保护他+若缺席林哈特替代的完整情景分析<br><br>
+        <strong>核心缺陷（2条）：</strong><br>
+        1. <strong>信号优先级错误——已看到1-0但未驱动主预测：</strong>连续3场1-0的模式一致性信号 > xG模型的2-0信号，但预测选择了后者<br>
+        2. <strong>关键进攻球员评级错位：</strong>萨比策/阿瑙托维奇/鲍姆加特纳三大KEY MAN全未贡献，真正的进球者Schmid被评"创造力边锋"<br><br>
+        <strong>核心改进方向：</strong><br>
+        让<strong>模式一致性</strong>在预测中拥有最高优先级。当连续赛果形成稳定模式时，它比任何单场模型预测都更可靠。奥地利连续3场1-0不是偶然——它是朗尼克Gegenpressing体系下进攻效率的结构性特征。
+      </p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

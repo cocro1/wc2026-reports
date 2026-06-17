@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 阿根廷 vs 阿尔及利亚（2026-06-16）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>阿根廷 vs 阿尔及利亚 · 2026年6月16日 · J组第1轮 · 复盘时间：2026年6月17日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇦🇷</div>
+        <div class="name">阿根廷</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">阿根廷 2-0（首选·置信度中等）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num">3</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">阿根廷 3-0 阿尔及利亚（Messi帽子戏法）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇩🇿</div>
+        <div class="name">阿尔及利亚</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">比分接近（预测2-0 vs 实际3-0）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">胜平负命中（阿根廷胜·零封）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">进球数部分命中（预测2球 vs 3球）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">Messi 关键球员预测命中</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>阿根廷 <strong>2-0</strong> 阿尔及利亚（主预测）</td><td class="partial-row">阿根廷 <strong>3-0</strong> 阿尔及利亚（1球偏差）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>2-1(11%), 1-0(10%), 1-1(12%)</td><td class="partial-row">3-0 未在备选列表中，但方向正确</td></tr>
+      <tr><td><strong>阿根廷胜率</strong></td><td><strong>65%</strong></td><td class="hit-row">阿根廷取胜 ✅（方向正确）</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>23%</td><td class="hit-row">平局未发生 ✅</td></tr>
+      <tr><td><strong>阿尔及利亚胜率</strong></td><td>12%</td><td class="hit-row">阿尔及利亚未胜 ✅</td></tr>
+      <tr><td><strong>阿根廷xG</strong></td><td>1.40-2.10</td><td class="partial-row">实际3球（xG略低估，Messi超预期）</td></tr>
+      <tr><td><strong>阿尔及利亚xG</strong></td><td>0.60-1.10</td><td class="hit-row">实际0球（零封，xG范围合理）</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>2.00-3.00</td><td class="partial-row">实际3球（落在区间上沿，略超预期）</td></tr>
+      <tr><td><strong>大小球</strong></td><td>小2.5被看好(1.88)</td><td class="miss-row">实际大2.5（3球突破阈值）</td></tr>
+      <tr><td><strong>Messi因子</strong></td><td>"GOAT·最后一届×0.95"</td><td class="hit-row">✅ 帽子戏法·追平Klose纪录·核心作用超出预期</td></tr>
+      <tr><td><strong>阿尔及利亚零封能力</strong></td><td>状态6.1/10+94%可预测性</td><td class="miss-row">❌ 未零封，防线被Messi完全击穿</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>赛果方向</td><td>阿根廷胜 65%</td><td>阿根廷 3-0 取胜</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>Messi关键作用</td><td>"GOAT·最后一届·×0.95"</td><td>帽子戏法（17',60',76'）·追平Klose</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>阿根廷零封</td><td>阿尔及利亚xG 0.60-1.10</td><td>阿根廷零封·Emiliano Martínez几乎未受考验</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>阿尔及利亚门将</td><td>"门将不确定性增加预测偏差"</td><td>Luca Zidane失误导致第二球（补射脱手）</td><td>✅（不确定性被验证）</td></tr>
+      <tr class="hit-row"><td>5</td><td>Bennacer伤病影响</td><td>"若缺席，中场控制力大幅下降"</td><td>阿尔及利亚中场完全失控，阿根廷半场107次传球vs阿尔及利亚41次</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>De Paul关键角色</td><td>"Messi的保镖"·首发CM</td><td>De Paul助攻第一球（直塞穿透防线）</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>Mac Allister参与</td><td>"全能创造者"·首发CM</td><td>远射造成门将脱手→Messi补射第二球</td><td>✅</td></tr>
+      <tr class="partial-row"><td>8</td><td>比分预测</td><td>2-0（主）·2-1·1-0·1-1</td><td>实际3-0，差1球，方向对但幅度保守</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>9</td><td>阿根廷xG区间</td><td>1.40-2.10</td><td>实际3球，xG区间略低</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>10</td><td>总进球数</td><td>小2.5倾向于低比分</td><td>大2.5（3球），方向对但低估幅度</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>Messi折扣×0.95</td><td>"最后一届需体能管理"</td><td>Messi 200场国家队出场反而超水平发挥</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>Otamendi×0.85</td><td>"38岁老将折扣"</td><td>Otamendi下半场替补登场稳固防守</td><td>⚠️（年龄折扣过度）</td></tr>
+      <tr class="partial-row"><td>13</td><td>Scaloni换人策略</td><td>"Messi可更早被换下保存体力"</td><td>Messi 76分钟后换下·时间管理符合预测</td><td>⚠️（时间点吻合但背景不同）</td></tr>
+      <tr class="miss-row"><td>14</td><td>阿尔及利亚状态优势</td><td>"状态6.1/10优于阿根廷4.2/10"</td><td>阿尔及利亚完全被压制·状态评分误导</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>阿尔及利亚巨人杀手属性</td><td>"2-1荷兰·0-0乌拉圭·有能力抗衡强队"</td><td>本场毫无抵抗力·巨人杀手属性未能展现</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>平局概率23%</td><td>"阿尔及利亚可预测性94%→踢法稳定"</td><td>平局从未接近·概率严重高估</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>Chaïbi速度威胁</td><td>"Chaïbi vs Molina最关键对位"</td><td>Chaïbi仅一次越位进球无效·威胁远低于预期</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>天气影响</td><td>"潮湿天气对两队体能考验·偏向阿根廷技术型打法"</td><td>比赛几乎未受天气影响·预测过度关注此变量</td><td>❌</td></tr>
+      <tr class="miss-row"><td>19</td><td>阿尔及利亚Mahrez关键作用</td><td>"盘带大师·队长·×0.90"</td><td>Mahrez仅下半场替补登场15分钟·远低于预期角色</td><td>❌</td></tr>
+      <tr class="miss-row"><td>20</td><td>信心评级"中等"</td><td>核心矛盾：实力碾压vs状态低迷</td><td>实际完全一边倒·"中等"信心过度保守</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">7</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">6</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">7</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">35%</div><div class="lbl">命中率（仅计✅）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：过度相信阿尔及利亚的状态评分（6.1/10→完全失效）</h4>
+    <div class="insight-box">
+      <strong>核心原因：对手强度校准不足 + 友谊赛含金量折扣缺失</strong><br><br>
+      阿尔及利亚赛前状态评分 <strong>6.1/10</strong>（高于阿根廷的4.2/10），数据来源是击败荷兰、逼平乌拉圭、7-0危地马拉。但这些比赛的<strong>对手强度校准存在严重缺陷</strong>：荷兰和乌拉圭均是友谊赛（投入度存疑），7-0危地马拉是Tier 4对手（完全不可比）。<strong>根因追溯</strong>：xG评分系统未对"友谊赛vs正式比赛"、"强队投入度"做加权调整，导致阿尔及利亚状态虚高。当阿根廷用<strong>正式比赛强度</strong>出战时，阿尔及利亚的"友谊赛水平"完全不够看。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：平局概率23%严重高估→实际从未接近平局</h4>
+    <div class="insight-box">
+      <strong>核心原因："过度平均主义"倾向 + 信号强度误判</strong><br><br>
+      预测给平局 <strong>23%</strong> 的概率，理由是"阿尔及利亚可预测性94% → 踢法稳定"和"0-0逼平乌拉圭"。但这两个信号<strong>权重被严重高估</strong>："可预测性94%"仅意味着阿尔及利亚发挥稳定——<strong>稳定地弱</strong>并不等于能逼平强队；"0-0乌拉圭"是<strong>单场样本</strong>，不能作为平局概率依据。<strong>根因追溯</strong>：模型在强信号（5条指向阿根廷）vs弱信号（2条指向平局）的加权中，给弱信号分配了过高的权重，这是"过度平均主义"的典型表现。正确做法应是：当强信号·5 vs 弱信号·2时，平局概率应压缩到10-14%。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：Messi因子被系统性低估</h4>
+    <div class="insight-box">
+      <strong>核心原因：×0.95折扣基于"最后一届+MLS"假设→被"200场里程碑+世界杯纪录追逐"反噬</strong><br><br>
+      预测给Messi <strong>×0.95</strong> 折扣，理由是"最后一届世界杯需体能管理"和"MLS非顶级联赛"。但实际是：Messi第<strong>200场国家队出场</strong>的里程碑效应、追平Klose的<strong>世界杯进球纪录驱动力</strong>、以及"可能是最后一场世界杯比赛"带来的<strong>超级专注力</strong>，全部被模型漏掉。<strong>根因追溯</strong>：折扣模型中缺失"里程碑驱动力"维度——球员在职业生涯关键节点的表现往往超越平时的数据。Messi本场3球恰好证明：<strong>超级巨星在大赛中的"额外发挥"不能被线性折扣</strong>。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Mahrez首发假设完全错误→仅替补15分钟</h4>
+    <div class="insight-box">
+      <strong>核心原因：首发阵容确认缺失 + 未采集Petković战术选择数据</strong><br><br>
+      预测假设Mahrez（队长·100+场·×0.90）首发出场并扮演关键角色，但实际Mahrez仅在<strong>76分钟后替补登场</strong>。这意味着Petković采用了<strong>完全不同的战术思路</strong>——不让34岁老将首发，而是用年轻阵容开场，Mahrez作为后手。预测报告的重大盲区：<strong>未分析Petković在面对卫冕冠军时可能采用的"战略性雪藏"战术</strong>。如果赛前采集了Petković在Euro 2020对阵法国的轮换思路，应该能预判Mahrez可能不首发。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：Chaïbi威胁被高估→竞技层面的线性推演</h4>
+    <div class="insight-box">
+      <strong>核心原因：德甲7球11助→"数据平移"失效</strong><br><br>
+      Chaïbi在德甲的数据（7G 11A）让预测将其列为"最危险攻击武器"，但实际Chaïbi仅一次越位进球被吹，整体威胁远低于预期。<strong>根因追溯</strong>：<strong>德甲数据→世界杯表现的"平移假设"是错误的</strong>。Chaïbi在德甲面对的后卫级别（德甲中下游球队）与世界冠军阿根廷的后防线（Romero + Otamendi/Martínez）存在<strong>数量级差距</strong>。预测需要建立"数据来源联赛→对手防守级别"的加权利差模型。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准评估 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>市场隐含</th><th>评估</th></tr>
+      <tr><td>阿根廷胜</td><td>65%</td><td>~67%（Pinnacle 1.40）</td><td class="hit-row">贴近市场·合理但略保守</td></tr>
+      <tr><td>平局</td><td>23%</td><td>~21%（Pinnacle 4.57）</td><td class="partial-row">略高于市场·实际未发生·偏高</td></tr>
+      <tr><td>阿尔及利亚胜</td><td>12%</td><td>~11%（Pinnacle 9.30）</td><td class="hit-row">贴近市场·合理</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>🎯 过度平均主义诊断：</strong>预测的 65/23/12 分布虽贴近市场，但市场本身在"强vs弱"场景下倾向于<strong>给弱队过高概率</strong>（博彩公司的"平衡赌注"行为）。5条强信号全部指向阿根廷的背景下，<strong>平局23%仍然偏高</strong>——正确分布应接近 72/16/12。预测确实存在"过度平均主义"：为了看起来"审慎全面"，在明确优势证据下不敢给出更极端的概率分布。
+    </div>
+
+    <div class="insight-box">
+      <strong>📊 概率诚实度评估：6/10</strong><br>
+      概率分布在形式上合理（与市场接近），但在<strong>实质性判断</strong>上不够诚实——当阿根廷的5条强信号vs阿尔及利亚的0条强信号时，23%平局概率更多是"为了看起来不偏颇"而非基于证据的诚实判断。
+    </div>
+  </div>
+
+  <!-- ===== 缺失数据清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>Mahrez首发状态确认</td><td>预测核心对位之一完全失效·错判阿尔及利亚进攻体系</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>2</td><td>Messi第200场里程碑效应</td><td>低估Messi发挥·折扣系数反向</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>3</td><td>Petković首发战术倾向</td><td>无法预判Mahrez替补·错判阿尔及利亚战术</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>4</td><td>阿尔及利亚友谊赛含金量校准</td><td>状态评分虚高·过度相信荷兰/乌拉圭战绩</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>5</td><td>友谊赛vs正式比赛强度差</td><td>阿尔及利亚6.1状态分在正式比赛中大幅缩水</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>6</td><td>阿根廷冰岛冷门的根本原因</td><td>被标注为"数据缺口"但未做深度分析→导致赛后误判阿根廷状态</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>7</td><td>Chaïbi vs顶级防线历史表现</td><td>德甲数据平移失效→高估其威胁</td><td><span class="badge badge-blue">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">💡 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. 建立友谊赛含金量折扣体系</h4>
+      <ul>
+        <li><strong>问题：</strong>阿尔及利亚击败荷兰(友谊赛)被评为核心信号，但荷兰友谊赛投入度远低于正赛</li>
+        <li><strong>方案：</strong>对友谊赛战绩建立"含金量折扣"：Tier 1对手友谊赛胜 → ×0.6权重；Tier 1对手正赛胜 → ×1.0权重；大胜Tier 4对手 → ×0.2权重</li>
+        <li><strong>预期效果：</strong>阿尔及利亚状态评分从6.1降至合理范围3.5-4.0，避免"巨人杀手"标签</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. 增加"里程碑驱动力"维度</h4>
+      <ul>
+        <li><strong>问题：</strong>Messi折扣×0.95被"200场里程碑"完全反噬</li>
+        <li><strong>方案：</strong>为关键球员建立"里程碑加成因子"：国家队200场→×1.05-1.10；世界杯进球纪录接近→×1.05；可能是最后一场世界杯→×1.02。叠加在折扣系数之上</li>
+        <li><strong>预期效果：</strong>Messi综合系数从×0.95修正为×1.02-1.08，正确反映其超常发挥可能</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. 首发阵容赛前确认机制</h4>
+      <ul>
+        <li><strong>问题：</strong>Mahrez未首发（替补15分钟）导致关键对位完全失效</li>
+        <li><strong>方案：</strong>比赛前1-2小时设置"首发确认检查点"，从官方渠道采集首发名单，更新关键对位和战术判断</li>
+        <li><strong>预期效果：</strong>赛前1小时识别Mahrez替补→调整阿尔及利亚进攻体系评估→降低平局概率</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>4. 反过度平均主义规则</h4>
+      <ul>
+        <li><strong>问题：</strong>5条强信号→阿根廷 vs 0条强信号→阿尔及利亚，仍给23%平局概率</li>
+        <li><strong>方案：</strong>建立"信号比→概率压缩"规则：强信号比≥5:0时，劣势方平局概率≤15%；强信号比≥4:1时≤18%。平局概率不能因为"审慎"而虚高</li>
+        <li><strong>预期效果：</strong>类似比赛的平局概率从23%压缩到12-15%，与"明明占优不敢说"告别</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>5. 联赛数据→对手防守级别加权利差模型</h4>
+      <ul>
+        <li><strong>问题：</strong>Chaïbi德甲7G 11A被平移为"最危险攻击武器"</li>
+        <li><strong>方案：</strong>建立"数据来源联赛→本场防守方级别"的衰减系数：德甲中下游数据 vs Tier 1国际防线 → ×0.5-0.6衰减</li>
+        <li><strong>预期效果：</strong>Chaïbi实际威胁评估下降40%，不再被列为"最危险武器"</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>6. 教练战术倾向数据库</h4>
+      <ul>
+        <li><strong>问题：</strong>完全未预判Petković可能雪藏Mahrez</li>
+        <li><strong>方案：</strong>建立教练"对阵强队时的战术倾向"档案：Petković在Euro 2020对阵法国的轮换策略 → 可能在本场复制→ 触发"关键球员可能不首发"预警</li>
+        <li><strong>预期效果：</strong>识别Mahrez替补可能性≥40% → 提前调整对位分析</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>7. 友谊赛vs正赛强度差量化</h4>
+      <ul>
+        <li><strong>问题：</strong>未区分友谊赛和正赛的竞技强度差异</li>
+        <li><strong>方案：</strong>基于历史数据建立：正赛进球率/防守强度 vs 友谊赛的比值。世界杯正赛防守强度 > 友谊赛防守强度 ×1.3-1.5</li>
+        <li><strong>预期效果：</strong>系统性地降低友谊赛数据的权重，避免"友谊赛战士"现象误导预测</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">⭐ 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>5/10</strong></td><td>Bennacer伤病+Messi因子基本准确；但Mahrez首发假设完全错误，阿尔及利亚状态严重高估</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>7/10</strong></td><td>阿根廷4-3-3+Messi核心体系判断正确；阿尔及利亚防守反击预判合理但巨人杀手属性虚高</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>7/10</strong></td><td>双方各18人覆盖完整；De Paul、Mac Allister贡献被正确识别；但Messi折扣方向错误</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>6/10</strong></td><td>xG数据+m战绩+赔率分析较全面；但友谊赛含金量校准缺失、联赛→大赛平移假设未验证</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>5/10</strong></td><td>65/23/12分布贴近市场但存在过度平均主义；5强信号vs 0弱信号应更极端</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>6/10</strong></td><td>2-0预测方向正确但差1球；备选比分未覆盖3-0；大小球判断错误（小→实际大）</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>7/10</strong></td><td>"核心矛盾"部分清晰表达了不确定性；"中等"置信度诚实但事后看可提升</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>8/10</strong></td><td>20个模块结构完整；数据缺口标注清晰；非稳态情景分析为亮点</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>📊 综合评分：6.4/10</strong>（加权平均）<br>
+      方向正确的预测——赛果方向、零封判断、关键球员全部命中。主要缺陷在于对阿尔及利亚能力的系统性高估和对弱势信号赋予过高权重。
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评价：6.5/10</strong><br><br>
+        这是一份<strong>"方向正确但细节保守"</strong>的预测。阿根廷取胜、零封、Messi关键作用的判断全部命中，但在幅度上系统性低估了统治力（2-0→3-0）、高估了阿尔及利亚的抵抗力（平局23%→从未接近）。<br><br>
+        <strong>核心缺陷（3条）：</strong><br>
+        1. <strong>友谊赛含金量校准缺失：</strong>阿尔及利亚击败荷兰/逼平乌拉圭的"巨人杀手"标签建立在含金量不足的友谊赛上，导致其能力被系统性高估<br>
+        2. <strong>过度平均主义：</strong>5条强信号指向阿根廷vs 0条反向强信号，仍在平局上给23%概率——这不是审慎，而是不敢下判断<br>
+        3. <strong>Messi折扣方向错误：</strong>×0.95的"体能管理"折扣被200场里程碑+纪录追逐反噬，应反向给予里程碑加成<br><br>
+        <strong>核心改进方向：</strong><br>
+        从"全面但不锐利"走向"证据驱动的诚实表达"——当数据明确倾向一方时，应该勇敢给出更极端的概率分布，而非为了看起来审慎而稀释信号强度。
+      </p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
