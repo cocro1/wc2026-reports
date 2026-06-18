@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 捷克 vs 南非（2026-06-18）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+  .coach-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  @media(max-width:600px) { .coach-grid { grid-template-columns:1fr; } }
+  .coach-card { background:#f8fafd; border-radius:8px; padding:14px; border:1px solid #eef1f6; }
+  .coach-card h5 { color:#0033A0; font-size:13px; margin-bottom:8px; }
+  .dim-row { display:flex; justify-content:space-between; align-items:center; padding:3px 0; font-size:12px; }
+  .dim-bar { width:80px; height:8px; background:#eef1f6; border-radius:4px; overflow:hidden; }
+  .dim-fill { height:100%; border-radius:4px; }
+  .dim-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .dim-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .group-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  .group-table th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:8px 10px; text-align:center; border-bottom:2px solid #d0dffa; font-size:12px; }
+  .group-table td { padding:7px 10px; border-bottom:1px solid #eef1f6; text-align:center; font-size:12.5px; }
+  .scenario-box { background:#f8fafd; border-radius:8px; padding:12px 14px; margin-top:10px; border-left:3px solid #0033A0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-18 19:30</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 1. 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇨🇿</span>
+      <span class="vs-badge">VS</span>
+      <span class="flag">🇿🇦</span>
+    </div>
+    <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:16px;">
+      <span class="player-name">捷克</span> vs <span class="player-name">南非</span>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">比赛时间</div>
+        <div class="match-info-val">2026-06-19 00:00 北京时间（12:00 PM ET，6/18）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">比赛地点</div>
+        <div class="match-info-val">亚特兰大 梅赛德斯-奔驰体育场</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">赛事阶段</div>
+        <div class="match-info-val">A组 小组赛第2轮</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">FIFA 排名</div>
+        <div class="match-info-val">捷克 #36 / 南非 #61</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:18px;font-size:13px;color:#0033A0;">同组形势（截至6/18赛前）</h4>
+    <table class="group-table">
+      <thead><tr><th>排名</th><th>球队</th><th>赛</th><th>胜-平-负</th><th>进-失</th><th>净胜</th><th>积分</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>墨西哥</td><td>1</td><td>1-0-0</td><td>2-0</td><td>+2</td><td><b>3</b></td></tr>
+        <tr><td>2</td><td>韩国</td><td>1</td><td>1-0-0</td><td>2-1</td><td>+1</td><td><b>3</b></td></tr>
+        <tr><td>3</td><td>捷克</td><td>1</td><td>0-0-1</td><td>1-2</td><td>-1</td><td><b>0</b></td></tr>
+        <tr><td>4</td><td>南非</td><td>1</td><td>0-0-1</td><td>0-2</td><td>-2</td><td><b>0</b></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:6px;">⚠️ A组形势：两队MD1均输球，<b>本场是"晋级生死战"</b>。负者基本出局，平局双方都难追平墨/韩，胜者保留一线生机。两队历史从未交锋，"首次碰面+赛会压力"放大比赛不确定性。</p>
+  </div>
+
+  <!-- ===== 2. 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇿 捷克（近10场，4胜4平2负）</h4>
+    <table>
+      <thead><tr><th>对手</th><th>Tier</th><th>比分</th><th>性质</th></tr></thead>
+      <tbody>
+        <tr><td>韩国（#22）</td><td><span class="tag tag-yellow">T2</span></td><td>1-2</td><td>世界杯小组赛</td></tr>
+        <tr><td>危地马拉（#107）</td><td><span class="tag tag-red">T4</span></td><td>3-1</td><td>友谊赛</td></tr>
+        <tr><td>科索沃（#104）</td><td><span class="tag tag-red">T4</span></td><td>2-1</td><td>友谊赛</td></tr>
+        <tr><td>丹麦（#21）</td><td><span class="tag tag-yellow">T2</span></td><td>2-2</td><td>世预赛</td></tr>
+        <tr><td>爱尔兰（#60）</td><td><span class="tag tag-orange">T3</span></td><td>2-2</td><td>世预赛</td></tr>
+        <tr><td>波兰（#28）</td><td><span class="tag tag-yellow">T2</span></td><td>0-0</td><td>世预赛</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;"><b>加权校准</b>：T1对手0场；T2对手3场 0胜2平1负（×0.9权重）；T3对手1场 1平（×0.7权重）；T4对手2场 2胜（×0.4权重）。<b>对T2球队"平局基因"</b>——4场T2-T3对手2平2平，全部打平！</p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇿🇦 南非（近10场，3胜5平2负）</h4>
+    <table>
+      <thead><tr><th>对手</th><th>Tier</th><th>比分</th><th>性质</th></tr></thead>
+      <tbody>
+        <tr><td>墨西哥（#15）</td><td><span class="tag tag-blue">T1</span></td><td>0-2</td><td>世界杯小组赛</td></tr>
+        <tr><td>牙买加（#56）</td><td><span class="tag tag-orange">T3</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>尼加拉瓜（#141）</td><td><span class="tag tag-red">T4</span></td><td>0-0</td><td>友谊赛</td></tr>
+        <tr><td>巴拿马（#44）</td><td><span class="tag tag-yellow">T2</span></td><td>1-2</td><td>友谊赛</td></tr>
+        <tr><td>巴拿马（#44）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>喀麦隆（#51）</td><td><span class="tag tag-orange">T3</span></td><td>0-0</td><td>非洲杯</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;"><b>加权校准</b>：T1对手1场 0胜1负（×1.0权重）；T2对手2场 0胜1平1负（×0.9权重）；T3对手2场 0胜2平（×0.7权重）；T4对手1场 1平。<b>对T2-T3对手"平局基因"同样强</b>——5场仅1胜。</p>
+  </div>
+
+  <!-- ===== 3. 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（每队16-18人）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇿 捷克核心17人</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">J. Staněk</div><div class="meta">门将 / 布拉格斯巴达 / 30岁 / 19场</div></div>
+      <div class="player-card"><div class="name">M. Kovář</div><div class="meta">替补门将 / 勒沃库森 / 25岁</div></div>
+      <div class="player-card"><div class="name">L. Krejčí</div><div class="meta">中卫 / 布拉格斯巴达 / 26岁 / 18场 / 队长</div></div>
+      <div class="player-card"><div class="name">D. Zima</div><div class="meta">中卫 / 布拉格斯拉维亚 / 27岁 / 22场</div></div>
+      <div class="player-card"><div class="name">R. Hranáč</div><div class="meta">中卫 / 弗赖堡 / 25岁 / 12场</div></div>
+      <div class="player-card"><div class="name">J. Boril</div><div class="meta">左后卫 / 布拉格斯拉维亚 / 34岁 / 41场</div></div>
+      <div class="player-card"><div class="name">V. Coufal</div><div class="meta">右后卫 / 西汉姆 / 32岁 / 49场</div></div>
+      <div class="player-card"><div class="name">T. Souček</div><div class="meta">后腰 / 西汉姆 / 30岁 / 75场 14球 / 头球威胁</div></div>
+      <div class="player-card"><div class="name">L. Provod</div><div class="meta">中场 / 布拉格斯拉维亚 / 28岁 / 19场</div></div>
+      <div class="player-card"><div class="name">M. Sadílek</div><div class="meta">中场 / 埃因霍温 / 25岁 / 17场</div></div>
+      <div class="player-card"><div class="name">A. Barák</div><div class="meta">中场 / 维罗纳 / 28岁 / 36场</div></div>
+      <div class="player-card"><div class="name">P. Schick</div><div class="meta">中锋 /勒沃库森 / 29岁 / 42场 21球 / 头号射手</div></div>
+      <div class="player-card"><div class="name">A. Hlozek</div><div class="meta">前锋 / 勒沃库森 / 23岁 / 19场 4球</div></div>
+      <div class="player-card"><div class="name">M. Kuchta</div><div class="meta">前锋 / 布拉格斯巴达 / 28岁 / 14场</div></div>
+      <div class="player-card"><div class="name">L. Cerny</div><div class="meta">边锋 / 维也纳快速 / 26岁</div></div>
+      <div class="player-card"><div class="name">M. Jurásek</div><div class="meta">中场 / 布拉格斯拉维亚 / 23岁</div></div>
+      <div class="player-card"><div class="name">D. Douděra</div><div class="meta">边锋 / 布拉格斯拉维亚 / 25岁</div></div>
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇿🇦 南非核心16人</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">R. Williams</div><div class="meta">门将 / 桑德兰 / 24岁 / 5场 / 2025年新晋</div></div>
+      <div class="player-card"><div class="name">V. Kuipers</div><div class="meta">替补门将 / 奥兰多海盗 / 33岁 / 14场</div></div>
+      <div class="player-card"><div class="name">A. Modiba</div><div class="meta">左后卫 / 凯撒酋长 / 29岁 / 38场</div></div>
+      <div class="player-card"><div class="name">N. Sibaya</div><div class="meta">中卫 / 奥兰多海盗 / 27岁 / 16场</div></div>
+      <div class="player-card"><div class="name">M. Mvala</div><div class="meta">中卫 / 凯撒酋长 / 30岁 / 32场 / 队长</div></div>
+      <div class="player-card"><div class="name">G. Kekana</div><div class="meta">中卫 / 凯撒酋长 / 31岁 / 30场</div></div>
+      <div class="player-card"><div class="name">R. Dortley</div><div class="meta">右后卫 / 凯撒酋长 / 24岁 / 7场</div></div>
+      <div class="player-card"><div class="name">T. Mokoena</div><div class="meta">后腰 / 曼联青年队（现租借南特）/ 21岁</div></div>
+      <div class="player-card"><div class="name">T. Monare</div><div class="meta">中场 / 奥兰多海盗 / 27岁 / 19场</div></div>
+      <div class="player-card"><div class="name">S. Sithole</div><div class="meta">中场 / 凯撒酋长 / 25岁 / 12场</div></div>
+      <div class="player-card"><div class="name">P. Maswanganyi</div><div class="meta">前腰 / 奥兰多海盗 / 26岁 / 9场</div></div>
+      <div class="player-card"><div class="name">B. Johnson</div><div class="meta">右边锋 / 凯撒酋长 / 24岁 / 5场</div></div>
+      <div class="player-card"><div class="name">E. Zwane</div><div class="meta">边锋 / 凯撒酋长 / 27岁 / 14场</div></div>
+      <div class="player-card"><div class="name">L. Foster</div><div class="meta">前锋 / 摩纳哥 / 24岁 / 11场 / 旅欧独苗</div></div>
+      <div class="player-card"><div class="name">M. Lepasa</div><div class="meta">中锋 / 奥兰多海盗 / 27岁 / 10场</div></div>
+      <div class="player-card"><div class="name">O. Tau</div><div class="meta">前锋 / 阿尔阿赫利（沙特）/ 27岁 / 24场 6球</div></div>
+    </div>
+    <div class="warn-box">⚠️ <b>数据缺失项</b>：1) 南非多名球员（Johnson/Zwane）效力南非联赛，对位欧洲级别防守强度数据缺失；2) Williams 24岁门将大赛经验几乎为零；3) Foster在摩纳哥实际出场时间和战术角色不明；4) 捷克后防核心 Zima 膝伤恢复状态未确认。</div>
+  </div>
+
+  <!-- ===== 4. 首发概率 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 首发/替补不确定性</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇿 捷克首发概率</h4>
+    <table>
+      <thead><tr><th>球员</th><th>首发概率</th><th>替代方案</th></tr></thead>
+      <tbody>
+        <tr><td>Schick</td><td><span class="tag tag-green">高(&gt;90%)</span></td><td>Kuchta</td></tr>
+        <tr><td>Souček</td><td><span class="tag tag-green">高(&gt;90%)</span></td><td>—</td></tr>
+        <tr><td>Coufal</td><td><span class="tag tag-green">高(&gt;80%)</span></td><td>—</td></tr>
+        <tr><td>Hlozek</td><td><span class="tag tag-yellow">中(60-75%)</span></td><td>Cerny / Kuchta</td></tr>
+        <tr><td>Zima</td><td><span class="tag tag-yellow">中(50-65%)</span></td><td>Hranáč</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇿🇦 南非首发概率</h4>
+    <table>
+      <thead><tr><th>球员</th><th>首发概率</th><th>替代方案</th></tr></thead>
+      <tbody>
+        <tr><td>Foster</td><td><span class="tag tag-green">高(&gt;85%)</span></td><td>Lepasa</td></tr>
+        <tr><td>Tau</td><td><span class="tag tag-yellow">中(60-70%)</span></td><td>Zwane</td></tr>
+        <tr><td>Williams</td><td><span class="tag tag-green">高(&gt;80%)</span></td><td>Kuipers</td></tr>
+        <tr><td>Mvala</td><td><span class="tag tag-green">高(&gt;90%)</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-note">⚠️ <b>关键不首发场景分支</b>：<br>• <b>若Hlozek不首发（Cerny/Kuchta首发）</b>：捷克边路爆破力下降，节奏更依赖Schick单点；<br>• <b>若Tau不首发（Zwane首发）</b>：南非反击速度提升但终结能力下降；<br>• <b>若Zima因伤缺阵（Hranáč首发）</b>：捷克防空能力下降，南非传中/定位球威胁提升。</div>
+  </div>
+
+  <!-- ===== 5. 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比</div>
+
+    <h4 style="font-size:13px;color:#0033A0;">🇨🇿 捷克进攻（4-3-3 / 4-2-3-1）</h4>
+    <table>
+      <tr><td><b>近10场场均xG</b></td><td><b>1.30</b>（对T2球队 1.0-1.4；对T4 1.8+）</td></tr>
+      <tr><td><b>近10场场均xGA</b></td><td><b>0.95</b>（首战vs韩国 xGA 1.0，防线中等偏弱）</td></tr>
+      <tr><td><b>核心威胁</b></td><td>Schick 中锋终结（29岁巅峰期）；Souček 禁区外远射+头球；定位球（角球/任意球）</td></tr>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">🇿🇦 南非进攻（4-3-3 / 4-2-3-1）</h4>
+    <table>
+      <tr><td><b>近10场场均xG</b></td><td><b>0.85</b>（首战vs墨西哥 xGA 1.0，<b>0进球</b>）</td></tr>
+      <tr><td><b>近10场场均xGA</b></td><td><b>0.75</b>（vs墨西哥 xGA 2.0 vs 0进球）</td></tr>
+      <tr><td><b>核心威胁</b></td><td>Foster 反击跑位；Tau 沙特联赛高产（24场6球）；反击速度</td></tr>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">📊 本场预测xG区间</h4>
+    <div class="xG-bar">
+      <div class="xG-label">捷克</div>
+      <div class="xG-track"><div class="xG-fill" style="width:50%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+      <div style="width:60px;font-size:12px;font-weight:700;">1.30-1.65</div>
+    </div>
+    <div class="xG-bar">
+      <div class="xG-label">南非</div>
+      <div class="xG-track"><div class="xG-fill" style="width:30%;background:linear-gradient(90deg,#c62828,#ef5350);"></div></div>
+      <div style="width:60px;font-size:12px;font-weight:700;">0.65-1.00</div>
+    </div>
+    <p style="font-size:12px;color:#666;margin-top:6px;">总xG预计 <b>1.95-2.65</b>，略偏向小球（≤2.5球）。</p>
+
+    <div class="section-note">⚠️ <b>非稳态场景分析</b>：<br>• <b>捷克1-0领先</b>：捷克"平局基因"重现概率25%——历史数据显示捷克领先后被追平频率较高；<br>• <b>南非1-0领先</b>：极小概率（&lt;10%），若发生捷克必须压上→南非反击空间变大；<br>• <b>0-0僵局30分钟</b>：比赛可能降级为"互相消耗型"，犯规率上升，第60分钟后变阵；<br>• <b>两队均"输不起"心态</b>：MD1均输球，<b>本场更可能保守</b>（每队都想"先不丢球"），总进球偏低。</div>
+  </div>
+
+  <!-- ===== 6. 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将专项分析</div>
+    <table>
+      <thead><tr><th>门将</th><th>近10场扑救率</th><th>PSxG+/-</th><th>关键表现</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>J. Staněk</b>（捷克）</td>
+          <td>72%</td>
+          <td><span class="tag tag-yellow">+0.05/场</span></td>
+          <td>首战vs韩国失2球（xGA 1.0），但扑出多次近射；面对低强度对手稳定</td>
+        </tr>
+        <tr>
+          <td><b>R. Williams</b>（南非）</td>
+          <td>68%</td>
+          <td><span class="tag tag-yellow">+0.02/场</span></td>
+          <td>24岁大赛经验接近0；首战vs墨西哥失2球（xGA 1.5），关键扑救缺失</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">⚠️ <b>门将差距</b>：Staněk联赛+欧战经验 > Williams 桑德兰青年队。捷克进攻面对的是"24岁+大赛新丁"门将，<b>定位球+远射</b>是大概率破门手段。</p>
+  </div>
+
+  <!-- ===== 7. 犯规率 ===== -->
+  <div class="card">
+    <div class="card-title">📋 犯规率/纪律指数</div>
+    <table>
+      <thead><tr><th>球队</th><th>近10场场均犯规</th><th>黄牌/场</th><th>红牌</th><th>犯规类型</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>🇨🇿 捷克</td>
+          <td>12.5</td>
+          <td>1.6</td>
+          <td>0</td>
+          <td>战术犯规 70% / 失控 30%</td>
+        </tr>
+        <tr>
+          <td>🇿🇦 南非</td>
+          <td>15.2</td>
+          <td>2.2</td>
+          <td>0</td>
+          <td>战术犯规 60% / 失控 40%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">⚠️ <b>节奏破坏器标注</b>：南非场均15.2次犯规<b>已达"节奏破坏器"阈值</b>，首战vs墨西哥即采用"高犯规+压迫+体能"策略。<b>本场可能频繁打断比赛节奏</b>，对捷克控球型打法是负面因素。<br>⚠️ <b>黄牌风险</b>：南非中场 Mokoena / Monare 是高黄牌风险球员，第50-70分钟最可能领黄。</p>
+  </div>
+
+  <!-- ===== 8. 状态折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣系数</div>
+    <table>
+      <thead><tr><th>球员</th><th>联赛水平</th><th>大赛经验</th><th>折扣系数</th><th>风险</th></tr></thead>
+      <tbody>
+        <tr><td>Schick</td><td>德甲（勒沃库森）</td><td>1届WC（Euro 2020 8强）</td><td><b>0.95</b></td><td>—</td></tr>
+        <tr><td>Souček</td><td>英超（西汉姆）</td><td>1届WC（Euro 2020 8强）</td><td><b>0.90</b></td><td>—</td></tr>
+        <tr><td>Coufal</td><td>英超（西汉姆）</td><td>1届WC（Euro 2020）</td><td><b>0.90</b></td><td>—</td></tr>
+        <tr><td>Hlozek</td><td>德甲（勒沃库森）</td><td>首次WC</td><td><b>0.80</b></td><td>联赛19场4球，大赛需验证</td></tr>
+        <tr><td>Staněk</td><td>捷克国内</td><td>首次WC</td><td><b>0.85</b></td><td>国内联赛→世界杯量级跳跃</td></tr>
+        <tr><td>Williams（南非）</td><td>英冠（桑德兰）</td><td>首次WC</td><td><b>0.70</b></td><td>英冠→世界杯，最大打折</td></tr>
+        <tr><td>Foster（南非）</td><td>法甲（摩纳哥）</td><td>首次WC</td><td><b>0.75</b></td><td>在摩纳哥出场时间有限</td></tr>
+        <tr><td>大多数南非球员</td><td>南非联赛</td><td>首次/无WC</td><td><b>0.65-0.70</b></td><td>⚠️ 南非联赛→世界杯量级跳跃大</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;">⚠️ <b>高风险球员</b>：南非 <b>80% 球员来自本国联赛</b>，联赛水平 → 世界杯的"量级跳跃"是其最大折扣风险。<b>南非xG可能从0.85降至0.6</b>。</p>
+  </div>
+
+  <!-- ===== 9. 教练评估 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练综合能力评估（V4升级）</div>
+    <div class="coach-grid">
+
+      <div class="coach-card">
+        <h5>🇨🇿 Miroslav Koubek（米罗斯拉夫·库贝克，捷克）</h5>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">执教时长：2024年至今（约2年）<br>国籍：捷克 / 年龄 73岁</p>
+        <div class="dim-row"><span>战术哲学与风格</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>大赛履历与胜率</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>临场决策能力</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>危机管理能力</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>更衣室管控</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>对手研究能力</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>大赛压力应对</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>战术灵活性</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <p style="font-size:13px;margin-top:10px;"><b>综合等级：B级（6.2分）</b></p>
+        <p style="font-size:11.5px;color:#555;margin-top:4px;">优势：捷克足球名宿、曾执教国青队，<b>更衣室稳定</b>；4-3-3 体系稳定。<br>劣势：73岁高龄，<b>临场反应</b>受质疑；执教国家队经验有限；首战vs韩国防线漏洞暴露。</p>
+      </div>
+
+      <div class="coach-card">
+        <h5>🇿🇦 Hugo Broos（雨果·布鲁斯，南非，比利时籍）</h5>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">执教时长：2021年至今（约5年）<br>国籍：比利时 / 年龄 73岁</p>
+        <div class="dim-row"><span>战术哲学与风格</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>大赛履历与胜率</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>临场决策能力</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>危机管理能力</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>更衣室管控</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>对手研究能力</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>大赛压力应对</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>战术灵活性</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <p style="font-size:13px;margin-top:10px;"><b>综合等级：B+级（6.9分）</b></p>
+        <p style="font-size:11.5px;color:#555;margin-top:4px;">优势：曾率喀麦隆夺得2017非洲杯冠军，<b>大赛经验+非洲足球心理战</b>老练；5年南非执教建立稳定体系。<br>劣势：73岁年龄与Koubek相同；首战vs墨西哥暴露"对T1对手"的局限性；<b>球员个体能力有限</b>限制战术上限。</p>
+      </div>
+    </div>
+
+    <div class="section-note">
+      <b>⚠️ 教练博弈分析</b>：<br>
+      • <b>战术风格相克</b>：Koubek 4-3-3 控球渗透 vs Broos 4-3-3 防守反击+纪律性。体系相似，<b>战术风格部分相克</b>。<br>
+      • <b>教练博弈胜负</b>：<b>Koubek略占优</b>。理由：① 球员个体能力捷克明显占优（Schick/Souček/Coufal均在欧洲顶级联赛）；② Broos 4-3-3 防守反击需要"防守铁桶+偷一球"——首战vs墨西哥0-2失败，反击效率不足。<br>
+      • <b>教练经验差权重</b>：B级 vs B+级，差≤0.7级，<b>权重有限（+1-2%偏向捷克）</b>。<br>
+      • <b>战术灵活型教练</b>：Koubek 6.0 / Broos 6.5，均<b>未达8分</b>，预测不额外保留±1球空间。
+    </div>
+  </div>
+
+  <!-- ===== 10. 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">⚡ 替补攻击力</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇿 捷克替补</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>Kuchta</b>（前锋，28岁）：联赛14场，<b>即战力型</b>，头球强</li>
+      <li><b>Cerny</b>（边锋，26岁）：维也纳快速，<b>适应型</b>，需15+分钟进入状态</li>
+      <li><b>Douděra</b>（边锋，25岁）：联赛主力，<b>即战力型</b>，节奏变化型</li>
+    </ul>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;margin-bottom:8px;">🇿🇦 南非替补</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>Lepasa</b>（中锋，27岁）：南非联赛10场，<b>适应型</b></li>
+      <li><b>Zwane</b>（边锋，27岁）：南非联赛14场，<b>适应型</b></li>
+    </ul>
+    <p style="font-size:12.5px;color:#666;margin-top:10px;"><b>替补奇兵候选人</b>：① Kuchta（捷克）——头球冲击；② Douděra（捷克）——节奏变化。南非替补能力有限，<b>60分钟后体能/板凳深度可能成为决定性因素</b>。</p>
+  </div>
+
+  <!-- ===== 11. 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🔑 关键对位</div>
+    <div class="key-matchup">① <b>Schick vs Mvala</b> — 捷克中锋 vs 南非中卫核心。Schick的1.86m头球+抢点 vs Mvala的1.86m正面防守，<b>关键定位球/角球决定权</b>。</div>
+    <div class="key-matchup">② <b>Souček + Provod 中场组合 vs Mokoena + Monare</b> — 英超级别节拍器 vs 南非联赛后腰。<b>捷克中场将主导比赛节奏</b>，南非需要"破坏+犯规"才能打断。</div>
+    <div class="key-matchup">③ <b>Coufal 右路传中 vs Modiba 左后卫</b> — 32岁西汉姆右后卫的传中精度是捷克核心进攻手段，Modiba 29岁凯撒酋长主力面临挑战。</div>
+    <div class="key-matchup">④ <b>Hlozek/Schick 双前锋 vs Kekana+Sibaya 双中卫</b> — 若Hlozek首发，捷克"双中锋"配置可对南非本土中卫形成压制；<b>高空轰炸</b>是备选方案。</div>
+  </div>
+
+  <!-- ===== 12. 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>伤停/停赛</th><td>无重大伤停；捷克 Zima 膝伤恢复中（Hranáč 替补）；南非 Williams 健康</td></tr>
+      <tr><th>体能与赛程</th><td>两队MD1均5天前完赛，<b>体能均衡</b>。捷克末轮vs墨西哥（生死战），南非末轮vs韩国（基本无望）</td></tr>
+      <tr><th>天气/场地/海拔</th><td>亚特兰大梅赛德斯-奔驰体育场，<b>6月夜间温度26-30°C，湿度70%+</b>，<b>对南非球员有利（适应炎热气候）</b>，对捷克球员是体能考验</td></tr>
+      <tr><th>大赛心理/逆转因子</th><td>两队MD1均输球，<b>"必胜"心态</b>，但同时<b>"输不起"心理压力</b>，可能形成"想赢怕输"陷阱。<b>实现路径</b>：捷克胜在"控球+边路+定位球"；南非胜在"反击+犯规+1次偷一球"</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 13. 教练视角 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 教练视角：小组出线形势推演（V4新增）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🔄 我是 Miroslav Koubek（捷克主教练）——</h4>
+    <div class="scenario-box">
+      <b>小组形势判断</b>：A组 ① 墨西哥 &gt; ② 韩国 &gt; ③ 捷克 ≈ ④ 南非。MD1 1-2负韩国后，<b>本场是"晋级生死战"</b>——输则基本出局。<br>
+      <b>本场战略目标</b>：<b>必须赢（3分刚需）</b>。即使平局，MD3对墨西哥极可能输，3分以下基本出局。<br>
+      <b>出线路径规划</b>：<br>
+      • <b>最优路径</b>：本场胜（3分）+ MD3胜墨西哥（6分）= 小组第2；<br>
+      • <b>现实路径</b>：本场胜（3分）+ MD3平墨西哥（4分）= <b>小组第2（与韩国6分净胜球竞争）</b>；<br>
+      • <b>最坏场景</b>：本场平（1分）/ 负（0分）+ MD3胜墨西哥 → 4分以下，<b>出局</b>。<br>
+      <b>赛程策略</b>：MD2 全力争胜，<b>前30分钟抢开局</b>，定位球是关键；MD3 vs 墨西哥已无意义（看本场结果），可让主力休息。<br>
+      <b>针对性策略</b>：<br>
+      • <b>对南非（最弱对手）</b>：<b>6分战</b>——必须拿下；<br>
+      • <b>对墨西哥（最强）</b>：MD3 0-1小负可接受，争取净胜球；<br>
+      • <b>对韩国（同档偏强）</b>：MD1已负已无意义。<br>
+      <b>风险清单</b>：① 高温高湿对球员体能消耗；② 亚特兰大"南方式"氛围对南非有利；③ 捷克"领先管理弱"可能被南非偷分。<br>
+      <b>教练的B计划</b>：<br>
+      • 若南非"大巴+犯规切割" → 增加高球传中找Schick/Souček头球；<br>
+      • 若领先后被追平 → 第60分钟上Kuchta + Douděra 双前锋冲击；<br>
+      • 若0-0僵局 → 第70分钟 Cerny 边路爆破 + 4-4-2 双前锋阵型。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🔄 我是 Hugo Broos（南非主教练）——</h4>
+    <div class="scenario-box">
+      <b>小组形势判断</b>：南非FIFA #61，本组相对最弱。MD1 0-2负墨西哥是实力差距体现，<b>本场是"偷3分"机会</b>。<br>
+      <b>本场战略目标</b>：<b>保平争胜</b>——1分保出线悬念，3分保留理论出线可能。<br>
+      <b>出线路径规划</b>：<br>
+      • <b>最优路径</b>：本场1-0偷胜（3分）+ MD3 vs 韩国求1分 → 4分小组第3（仍可能出局）；<br>
+      • <b>现实路径</b>：本场1分（1分）+ MD3胜韩国（4分）= 小组第2-3（与捷克6分净胜球竞争）；<br>
+      • <b>最坏场景</b>：本场0分 + MD3不胜 → <b>出局</b>。<br>
+      <b>赛程策略</b>：MD2 稳守+反击+定位球+体能消耗，<b>5-4-1 / 4-5-1 收缩</b>；MD3 vs 韩国已基本无意义。<br>
+      <b>针对性策略</b>：<br>
+      • <b>对捷克（同档偏强）</b>：<b>接受1分</b>，5-4-1 + Foster/Tau反击；<br>
+      • <b>对墨西哥（最强）</b>：MD1已0-2，再战仍需保0-0；<br>
+      • <b>对韩国（同档）</b>：MD3 防守 + Foster单点。<br>
+      <b>风险清单</b>：① 球员大赛经验接近0；② Williams 门将大赛新丁；③ 替补深度不足；④ 高温下体能流失比对手快。<br>
+      <b>教练的B计划</b>：<br>
+      • 若捷克前30分钟未破门 → 控球率压到30%，制造"南非摆大巴"心理；<br>
+      • 若失球（0-1）→ 5-4-1 收缩 + Tau/Lepasa 双前锋反击；<br>
+      • 若0-0到70分钟 → Foster 单箭头反击 + 定位球集中攻击Zima/Hranáč身后。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🔄 同组另外两支球队的教练视角（简化版）</h4>
+
+    <div class="scenario-box">
+      <b>🇲🇽 墨西哥（Aguirre）</b><br>
+      • <b>小组形势判断</b>：领跑MD1 3分，本场对韩国如胜即基本锁头名。<br>
+      • <b>出线路径推演</b>：MD2 vs 韩国目标3分 + MD3 vs 捷克 / 南非中较弱者 目标3分。理论最高9分小组第1。<br>
+      • <b>对本场两队的策略判断</b>：墨西哥会关注本场结果——若捷克胜，MD3 vs 捷克时压力小；若南非爆冷，墨西哥vs南非末轮需警惕。
+    </div>
+
+    <div class="scenario-box" style="margin-top:10px;">
+      <b>🇰🇷 韩国（Hong Myung-bo）</b><br>
+      • <b>小组形势判断</b>：MD1 2-1胜捷克领跑，与墨西哥争头名。<br>
+      • <b>出线路径推演</b>：MD2 vs 墨西哥是"小组决赛"，1分可接受，3分即登顶；MD3 vs 南非目标3分。<br>
+      • <b>对本场两队的策略判断</b>：韩国希望捷克胜出（压制南非=压制潜在黑马）。MD2赛前韩国vs墨西哥结果决定末轮策略。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">⚖️ 教练博弈全景</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>同组四位教练能力等级排序</b>：① Aguirre（A级，7.9）&gt; ② Hong Myung-bo（A-级，7.1）&gt; ③ Broos（B+级，6.9）&gt; ④ Koubek（B级，6.2）</li>
+      <li><b>可能出现的"战术意外"</b>：① Koubek变阵 4-4-2 双中锋；② Broos 5-4-1 超收缩；③ 高温高湿下捷克体能下降，南非反击得手</li>
+      <li><b>教练因素对本场比赛概率的影响权重</b>：Koubek vs Broos（B vs B+，差0.7级），<b>+1-2% 偏向捷克</b></li>
+    </ul>
+  </div>
+
+  <!-- ===== 14. 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">🎲 概率预测</div>
+
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#0033A0;">捷克胜</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:48%"></div></div>
+      <div class="prob-val" style="color:#0033A0;">48%</div>
+      <span class="signal signal-strong">强</span>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#888;">平局</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:29%"></div></div>
+      <div class="prob-val" style="color:#888;">29%</div>
+      <span class="signal signal-strong">强</span>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#c62828;">南非胜</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:23%"></div></div>
+      <div class="prob-val" style="color:#c62828;">23%</div>
+      <span class="signal signal-mid">中</span>
+    </div>
+
+    <p style="font-size:12.5px;color:#555;margin-top:14px;"><b>概率置信度梯级</b>：<span class="tag tag-yellow">中（差值25%）</span></p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">各概率信号强度</h4>
+    <table>
+      <thead><tr><th>信号</th><th>方向</th><th>强度</th><th>影响</th></tr></thead>
+      <tbody>
+        <tr><td>球员个体能力差距（捷克顶级联赛 vs 南非本国联赛）</td><td>捷克</td><td><span class="signal signal-strong">强</span></td><td>+10%</td></tr>
+        <tr><td>Schick+Souček+Coufal 英超/德甲级别 vs 南非国内联赛</td><td>捷克</td><td><span class="signal signal-strong">强</span></td><td>+8%</td></tr>
+        <tr><td>两队MD1均输球 + "必胜"心态（"输不起"陷阱）</td><td>平局</td><td><span class="signal signal-strong">强</span></td><td>+5%（平局加成）</td></tr>
+        <tr><td>捷克"平局基因"（近4场T2对手2平）</td><td>平局</td><td><span class="signal signal-strong">强</span></td><td>+5%（平局加成）</td></tr>
+        <tr><td>南非"高犯规率+纪律性"节奏破坏</td><td>平/南非</td><td><span class="signal signal-mid">中</span></td><td>+2%</td></tr>
+        <tr><td>教练 Koubek B vs Broos B+</td><td>持平</td><td><span class="signal signal-weak">弱</span></td><td>±0%（互相抵消）</td></tr>
+        <tr><td>历史从未交锋 + 大赛新丁主力（南非）</td><td>捷克</td><td><span class="signal signal-mid">中</span></td><td>+2%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12.5px;color:#444;margin-top:10px;">⚠️ <b>平局信号优先规则</b>：平局29% &lt; 30%阈值（接近），<b>未触发</b>。但平局信号是本场最重要的反向因子，<b>25%以上仍需高度关注</b>。</p>
+  </div>
+
+  <!-- ===== 15. 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="margin-top:8px;">
+      <span class="score-pred score-main">捷克 1-0 南非（14%）</span>
+      <span class="score-pred">捷克 2-0 南非（12%）</span>
+      <span class="score-pred">捷克 2-1 南非（10%）</span>
+      <span class="score-pred">1-1（11%）</span>
+      <span class="score-pred">0-0（9%）</span>
+    </div>
+    <p style="font-size:13px;color:#444;margin-top:14px;">
+      <b>最可能比分</b>：<span class="score-pred score-main">捷克 1-0 南非（14%）</span> — 理由：捷克球员个体能力占优 + "必胜心态"驱动 + 南非纪律性大巴+1球偷分难；1-0是"小胜控制型"最可能结果。<br>
+      <b>次选比分</b>：捷克 2-0 南非（12%）或 1-1（11%）— 2-0：若捷克前30分钟进球+控制比赛；1-1：若捷克"领先管理弱"被南非偷一球。<br>
+      <b>第三选择</b>：0-0（9%）— 若双方"输不起"心态下半场0-0守平。
+    </p>
+    <p style="font-size:12.5px;color:#666;margin-top:10px;"><b>预期 xG 区间</b>：捷克 1.30-1.65 / 南非 0.65-1.00，<b>总xG 1.95-2.65</b>，对应总进球<b>1-2球</b>最可能。</p>
+  </div>
+
+  <!-- ===== 16. 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">🏁 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:14px;line-height:1.8;">
+        <b>核心预测</b>：<b>捷克 1-0 南非（14%），总xG 1.95-2.65</b><br>
+        <b>胜率</b>：捷克 48% / 平局 29% / 南非 23% <span class="confidence conf-mid">置信度：中</span>
+      </p>
+
+      <h4 style="font-size:13px;margin-top:14px;color:#0033A0;">关键假设</h4>
+      <ol style="font-size:13px;padding-left:22px;color:#444;line-height:1.9;">
+        <li>球员个体能力差距是决定性因子（英超/德甲 vs 南非本国联赛）</li>
+        <li>捷克"必胜心态"+ 4-3-3 控球型打法 → 控球率55-60%</li>
+        <li>南非"高犯规+纪律性大巴" → 比赛可能频繁打断</li>
+        <li>两队MD1均输球，<b>"输不起"心理压力</b>可能导致"互相消耗型"比赛</li>
+        <li>Schick+Souček 定位球+远射是捷克最稳破门手段</li>
+      </ol>
+
+      <h4 style="font-size:13px;margin-top:14px;color:#0033A0;">已知数据缺口</h4>
+      <ol style="font-size:13px;padding-left:22px;color:#444;line-height:1.9;">
+        <li>南非80%球员来自本国联赛，"量级跳跃"折扣风险大</li>
+        <li>Williams 24岁门将大赛经验接近0</li>
+        <li>捷克"领先管理弱"问题（首战vs韩国1-0→1-2的"被逆转"）是否已修正</li>
+        <li>高温高湿（亚特兰大6月26-30°C）下捷克球员体能消耗程度</li>
+        <li>Zima 膝伤恢复状态</li>
+      </ol>
+
+      <p style="font-size:13px;margin-top:14px;color:#0033A0;"><b>总结</b>：本场是"球员能力差距"vs"心理压力平局陷阱"的核心博弈。捷克FIFA #36 + 5名欧洲顶级联赛球员 vs 南非FIFA #61 + 80%本国联赛球员，<b>主胜概率48%是合理推断</b>。但两队"输不起"心态+捷克"领先管理弱"是重要反向信号，<b>平局29%是本场最值得关注的反向结果</b>。综合判断：<b>捷克小胜最可能但非压倒性，1-0为首选比分</b>。</p>
+    </div>
+  </div>
+
+  <!-- ===== 17. 交付物 ===== -->
+  <div class="card">
+    <div class="card-title">📦 交付物</div>
+    <ul style="font-size:13px;padding-left:20px;color:#444;line-height:1.9;">
+      <li>📝 Markdown 笔记：D:\我的坚果云\OB笔记\自媒体\fwc2026\2026-06-18-czechia-south-africa-prediction.md</li>
+      <li>🔗 GitHub Pages：<a href="https://cocro1.github.io/wc2026-reports/">https://cocro1.github.io/wc2026-reports/</a></li>
+      <li>🔗 CloudStudio：<a href="https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work">https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 巴西 vs 海地（2026-06-19）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+  .coach-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  @media(max-width:600px) { .coach-grid { grid-template-columns:1fr; } }
+  .coach-card { background:#f8fafd; border-radius:8px; padding:14px; border:1px solid #eef1f6; }
+  .coach-card h5 { color:#0033A0; font-size:13px; margin-bottom:8px; }
+  .dim-row { display:flex; justify-content:space-between; align-items:center; padding:3px 0; font-size:12px; }
+  .dim-bar { width:80px; height:8px; background:#eef1f6; border-radius:4px; overflow:hidden; }
+  .dim-fill { height:100%; border-radius:4px; }
+  .dim-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .group-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  .group-table th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:8px 10px; text-align:center; border-bottom:2px solid #d0dffa; font-size:12px; }
+  .group-table td { padding:7px 10px; border-bottom:1px solid #eef1f6; text-align:center; font-size:12.5px; }
+  .scenario-box { background:#f8fafd; border-radius:8px; padding:12px 14px; margin-top:10px; border-left:3px solid #0033A0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-18 19:30</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇧🇷</span>
+      <span class="vs-badge">VS</span>
+      <span class="flag">🇭🇹</span>
+    </div>
+    <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:16px;">
+      <span style="color:#0033A0;">巴西</span> vs <span style="color:#c62828;">海地</span>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">比赛阶段</div>
+        <div class="match-info-val">C组 小组赛第2轮</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">开球时间</div>
+        <div class="match-info-val">2026-06-19 19:00 ET（北京时间 06-20 07:00）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">比赛场地</div>
+        <div class="match-info-val">迈阿密 硬石体育场（容量 65,000）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">主裁判</div>
+        <div class="match-info-val">待 FIFA 公布</div>
+      </div>
+    </div>
+    <div class="section-note">
+      <strong>🏟️ 背景：</strong>巴西 FIFA 排名第 5，海地排名第 87。本场是 C 组第一档 vs 第四档的实力悬殊对决。海地在迈阿密有大量侨民（约 70 万），预计 2-3 万海地球迷到场。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 核心预测</div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+      <div>
+        <div style="font-size:13px;color:#666;">最可能比分</div>
+        <div style="font-size:22px;font-weight:800;color:#0033A0;margin-top:4px;">巴西 3 - 0 海地 <span class="confidence conf-high">高</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:12px;color:#666;">该具体比分概率</div>
+        <div style="font-size:18px;font-weight:700;color:#0033A0;margin-top:2px;">~15%</div>
+      </div>
+    </div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin:14px 0 8px;">📊 胜平负概率分布</h4>
+    <div class="prob-bar">
+      <span class="prob-label">🇧🇷 巴西胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:88%;"></div></div>
+      <span class="prob-val">88%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">⚪ 平局</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:8%;"></div></div>
+      <span class="prob-val">8%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🇭🇹 海地胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:4%;"></div></div>
+      <span class="prob-val">4%</span>
+    </div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin:18px 0 8px;">⚽ 其他可能比分</h4>
+    <div>
+      <span class="score-pred">3-0</span>
+      <span class="score-pred">2-0</span>
+      <span class="score-pred">4-0</span>
+      <span class="score-pred">3-1</span>
+      <span class="score-pred">4-1</span>
+      <span class="score-pred">5-0</span>
+    </div>
+    <div class="section-note">
+      预测最可能区间：巴西 2-4 球 vs 海地 0-1 球。总进球预期 2.8-4.2 球，比分差 ≥2 球概率约 75%。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📈 xG 预期进球模型</div>
+    <table>
+      <thead>
+        <tr><th>球队</th><th>基础 xG</th><th>对手强度调整</th><th>门将表现调整</th><th>最终 xG 区间</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="player-name">🇧🇷 巴西</span></td>
+          <td>3.20</td>
+          <td>+0.50（vs Tier 4 防守）</td>
+          <td>+0.20（海地门将经验不足）</td>
+          <td><strong>3.50 - 4.20</strong></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">🇭🇹 海地</span></td>
+          <td>0.45</td>
+          <td>+0.05（vs Tier 1 防守）</td>
+          <td>-0.10（反击乏力）</td>
+          <td><strong>0.30 - 0.60</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="section-note">
+      <strong>📊 xG 解读：</strong>巴西 xG 优势 3.0+ 球，是本轮最悬殊的对决。海地本届首次参加世界杯，球员大多在低级别联赛或半职业效力，xG 累积 0.5 球已属上限。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">👥 阵容与关键球员</div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin-bottom:8px;">🇧🇷 巴西（预计首发 4-2-3-1）</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">Alisson</div><div class="meta">门将 · 利物浦</div></div>
+      <div class="player-card"><div class="name">Vanderson</div><div class="meta">右后卫 · 摩纳哥</div></div>
+      <div class="player-card"><div class="name">Marquinhos</div><div class="meta">中卫 · 巴黎 · 队长</div></div>
+      <div class="player-card"><div class="name">Gabriel</div><div class="meta">中卫 · 阿森纳</div></div>
+      <div class="player-card"><div class="name">Wendell</div><div class="meta">左后卫 · 波尔图</div></div>
+      <div class="player-card"><div class="name">Bruno Guimarães</div><div class="meta">中场 · 纽卡斯尔</div></div>
+      <div class="player-card"><div class="name">Casemiro</div><div class="meta">中场 · 曼联</div></div>
+      <div class="player-card"><div class="name">Rodrygo</div><div class="meta">边锋 · 皇马</div></div>
+      <div class="player-card"><div class="name">Vinícius Jr.</div><div class="meta">边锋 · 皇马</div></div>
+      <div class="player-card"><div class="name">Raphinha</div><div class="meta">前腰 · 巴萨</div></div>
+      <div class="player-card"><div class="name">Endrick</div><div class="meta">前锋 · 皇马</div></div>
+    </div>
+    <div class="section-note">
+      <strong>进攻三叉戟：</strong>Rodrygo + Vini Jr. + Endrick 总市场价值 4.5 亿欧元，进攻能力碾压级。但 Ancelotti 倾向控球而非反击，可能影响进球数。Casemiro 在曼联的下滑是否影响中场是变量。
+    </div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin:18px 0 8px;">🇭🇹 海地（预计首发 5-4-1 大巴）</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">Placide</div><div class="meta">门将 · 巴黎 FC（法乙）</div></div>
+      <div class="player-card"><div class="name">Archer</div><div class="meta">中卫 · 自由身</div></div>
+      <div class="player-card"><div class="name">Jérôme</div><div class="meta">中卫 · 自由身</div></div>
+      <div class="player-card"><div class="name">Saint-Louis</div><div class="meta">中场 · 业余联赛</div></div>
+      <div class="player-card"><div class="name">Adé</div><div class="meta">前锋 · 阿尔马尼（罗马尼亚）</div></div>
+      <div class="player-card"><div class="name">Pierrot</div><div class="meta">前锋 · 业余联赛</div></div>
+      <div class="player-card"><div class="name">Nazon</div><div class="meta">边锋 · 业余联赛</div></div>
+      <div class="player-card"><div class="name">Geffrard</div><div class="meta">中场 · 梅斯预备队</div></div>
+    </div>
+    <div class="section-note">
+      <strong>⚠️ 阵容深度：</strong>海地 26 人名单中 18 人效力于低级别联赛（业余/法乙/罗马尼亚），仅 Placide 和 Adé 算职业球员。预计 60 分钟后体能崩溃。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🧤 门将专项分析</div>
+    <table>
+      <thead>
+        <tr><th>门将</th><th>球队</th><th>PSxG+/-</th><th>扑救率</th><th>大赛经验</th><th>关键判读</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="player-name">Alisson</span></td>
+          <td>🇧🇷 巴西</td>
+          <td>+0.18</td>
+          <td>78%</td>
+          <td>3届大赛</td>
+          <td>世界级门将，但本场预计无太多扑救机会</td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Placide</span></td>
+          <td>🇭🇹 海地</td>
+          <td>-0.20</td>
+          <td>62%</td>
+          <td>首次大赛</td>
+          <td>法乙级别门将，预计要面对 15+ 次射正</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📊 战术风格匹配</div>
+    <table>
+      <thead>
+        <tr><th>维度</th><th>🇧🇷 巴西</th><th>🇭🇹 海地</th><th>对比</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>战术体系</td><td>4-2-3-1 控球压迫</td><td>5-4-1 全员死守</td><td>完全不对等</td></tr>
+        <tr><td>控球率预期</td><td>75-82%</td><td>18-25%</td><td>巴西绝对主导</td></tr>
+        <tr><td>高位逼抢</td><td>中高（6/10）</td><td>极低（2/10）</td><td>巴西主动</td></tr>
+        <tr><td>定位球威胁</td><td>高（Marquinhos 头球）</td><td>低（缺乏身高）</td><td>巴西碾压</td></tr>
+        <tr><td>犯规率（场均）</td><td>9.5 次</td><td>15.0 次</td><td>海地将频繁犯规</td></tr>
+        <tr><td>板凳深度</td><td>极深（替补仍是国脚级）</td><td>极浅（替补=半职业）</td><td>巴西碾压</td></tr>
+      </tbody>
+    </table>
+    <div class="section-note">
+      <strong>🎯 关键对抗：</strong>巴西边路 Vini Jr./Rodrygo 速度 vs 海地 5 后卫密集防守。预计 60 分钟内巴西可制造 8-12 次射门机会。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ 纪律与心理</div>
+    <table>
+      <thead>
+        <tr><th>维度</th><th>🇧🇷 巴西</th><th>🇭🇹 海地</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>纪律指数（黄/场均）</td><td>1.5</td><td>2.4</td></tr>
+        <tr><td>得牌概率（≥1红）</td><td>6%</td><td>18%</td></tr>
+        <tr><td>大赛心理压力</td><td>中（夺冠热门自我施压）</td><td>高（首次世界杯激动紧张）</td></tr>
+        <tr><td>逆转/绝杀能力</td><td>极高（进攻三叉戟）</td><td>极低（无火力点）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎓 主教练综合能力评估（V4 升级）</div>
+    <div class="coach-grid">
+      <div class="coach-card">
+        <h5>🇧🇷 Carlo Ancelotti（巴西）</h5>
+        <div class="dim-row"><span>战术哲学</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:95%;"></div></div><span>9.5/10</span></div>
+        <div class="dim-row"><span>大赛履历</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:95%;"></div></div><span>9.5/10</span></div>
+        <div class="dim-row"><span>临场决策</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:90%;"></div></div><span>9/10</span></div>
+        <div class="dim-row"><span>危机管理</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:85%;"></div></div><span>8.5/10</span></div>
+        <div class="dim-row"><span>更衣室管控</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%;"></div></div><span>8/10</span></div>
+        <div class="dim-row"><span>对手研究</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:85%;"></div></div><span>8.5/10</span></div>
+        <div class="dim-row"><span>压力应对</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%;"></div></div><span>8/10</span></div>
+        <div class="dim-row"><span>体系成熟度</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%;"></div></div><span>7.5/10</span></div>
+        <div style="margin-top:8px;font-size:12px;"><strong>综合评级：S 级（86.0/100）</strong> · 5 大联赛冠军教头，本届临时接手巴西（仅 4 个月）。</div>
+      </div>
+      <div class="coach-card">
+        <h5>🇭🇹 Sébastien Migne（海地）</h5>
+        <div class="dim-row"><span>战术哲学</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:55%;"></div></div><span>5.5/10</span></div>
+        <div class="dim-row"><span>大赛履历</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:50%;"></div></div><span>5/10</span></div>
+        <div class="dim-row"><span>临场决策</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:55%;"></div></div><span>5.5/10</span></div>
+        <div class="dim-row"><span>危机管理</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%;"></div></div><span>6/10</span></div>
+        <div class="dim-row"><span>更衣室管控</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%;"></div></div><span>6.5/10</span></div>
+        <div class="dim-row"><span>对手研究</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:50%;"></div></div><span>5/10</span></div>
+        <div class="dim-row"><span>压力应对</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:55%;"></div></div><span>5.5/10</span></div>
+        <div class="dim-row"><span>体系成熟度</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:50%;"></div></div><span>5/10</span></div>
+        <div style="margin-top:8px;font-size:12px;"><strong>综合评级：B- 级（54.0/100）</strong> · 法国籍教练，曾带肯尼亚/科特迪瓦，海地资源极其有限。</div>
+      </div>
+    </div>
+    <div class="section-note">
+      <strong>教练博弈：</strong>S 级 Ancelotti vs B- 级 Migne，等级差 +3 档（最大），预测概率微调巴西 +5%。Ancelotti 本场将大量使用替补+演练战术。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌍 场地与环境因子</div>
+    <table>
+      <thead>
+        <tr><th>因子</th><th>影响</th><th>概率调整</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>硬石体育场（开放+人工草）</td><td>中性偏巴西</td><td>🇧🇷 +1%</td></tr>
+        <tr><td>海拔 2m（海平面）</td><td>无影响</td><td>0%</td></tr>
+        <tr><td>温度 ~30°C（6月迈阿密）</td><td>高温耗体力</td><td>🇧🇷 +2%（替补深）</td></tr>
+        <tr><td>3-4 万海地侨民球迷</td><td>海地精神加成</td><td>🇭🇹 +1%</td></tr>
+        <tr><td>Ancelotti 战术轮换</td><td>巴西可能未全力</td><td>-2%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔄 教练视角：小组出线形势推演（V4 新增）</div>
+
+    <div class="scenario-box">
+      <h5 style="color:#0033A0;font-size:13px;margin-bottom:8px;">🇧🇷 Ancelotti 视角</h5>
+      <p style="font-size:13px;">"这是我接手巴西后的第一场世界杯，我需要用 3 分给球队信心。考虑到 4 天后还有对摩洛哥的硬仗，本场会合理分配主力体能。Vinícius 和 Rodrygo 首发打开局面，60 分钟后换 Estêvão 和 Martinelli 保持冲击。Casemiro 出场 60 分钟保留状态。预测 3-0 或 4-0 大胜，3 分锁定小组头名主动权。"</p>
+    </div>
+
+    <div class="scenario-box">
+      <h5 style="color:#0033A0;font-size:13px;margin-bottom:8px;">🇭🇹 Migne 视角</h5>
+      <p style="font-size:13px;">"我们清楚这是实力悬殊的比赛，全队 11 人要回到禁区前 30 米密集防守。Placide 必须有职业生涯最佳表现。希望上半场不丢球，下半场靠定位球和反击偷一个。3 分是奢望，但 0-2 或 0-3 输给巴西是可接受的结果。最后对摩洛哥全力一搏。"</p>
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin:14px 0 8px;">📊 C组形势推演</h4>
+    <table class="group-table">
+      <thead>
+        <tr><th>球队</th><th>第1轮预期</th><th>本场胜/平/负</th><th>末轮</th><th>出线概率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>巴西</strong></td><td>vs 苏格兰（胜）</td><td>胜（88%）</td><td>vs 摩洛哥</td><td>91%</td></tr>
+        <tr><td>海地</td><td>vs 摩洛哥（负）</td><td>负（88%）</td><td>vs 苏格兰</td><td>12%</td></tr>
+      </tbody>
+    </table>
+    <div class="section-note">
+      C组形势预测：巴西若两连胜则锁定小组第一；海地两连败则提前出局，末轮对苏格兰为荣誉战。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔑 关键对位与胜负手</div>
+    <div class="key-matchup"><strong>1.</strong> Vinícius Jr.（🇧🇷）vs Archer（🇭🇹） — 边路碾压</div>
+    <div class="key-matchup"><strong>2.</strong> Rodrygo（🇧🇷）vs Jérôme（🇭🇹） — 创造 vs 死守</div>
+    <div class="key-matchup"><strong>3.</strong> Endrick（🇧🇷）vs Placide（🇭🇹） — 终结 vs 门将</div>
+    <div class="key-matchup"><strong>4.</strong> Bruno Guimarães（🇧🇷）vs Geffrard（🇭🇹） — 中场控制</div>
+    <div class="key-matchup"><strong>5.</strong> Ancelotti 战术轮换 vs Migne 大巴阵 — 阵容深度差</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌡️ 风险评估</div>
+    <table>
+      <thead><tr><th>风险</th><th>概率</th><th>影响</th></tr></thead>
+      <tbody>
+        <tr><td>巴西"轻敌"或战术轮换</td><td>25%</td><td>进球数减少（2-0 或 3-0）</td></tr>
+        <tr><td>海地"摆大巴"成功</td><td>10%</td><td>上半场闷平</td></tr>
+        <tr><td>海地球迷爆冷助威</td><td>15%</td><td>海地 1-0 偷分（极小）</td></tr>
+        <tr><td>Casemiro/Vinícius 受伤</td><td>8%</td><td>Ancelotti 提前换人</td></tr>
+        <tr><td>高温+雷暴</td><td>10%</td><td>节奏变慢</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏁 综合结论与建议</div>
+    <div class="conclusion-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:10px;">📌 核心判断</h4>
+      <p style="font-size:13.5px;line-height:1.8;">
+        <strong>1. 实力极度悬殊</strong>：FIFA 排名第 5 vs 87，球员效力联赛级别相差 4-5 档，巴西进攻三叉戟 4.5 亿欧元。
+      </p>
+      <p style="font-size:13.5px;line-height:1.8;margin-top:6px;">
+        <strong>2. Ancelotti 战术轮换</strong>：考虑 4 天后对摩洛哥硬仗，巴西可能不会全力进攻，60 分钟后换替补。
+      </p>
+      <p style="font-size:13.5px;line-height:1.8;margin-top:6px;">
+        <strong>3. 海地资源极限</strong>：阵容深度仅 11 人可勉强支撑 60 分钟，60 分钟后崩盘概率 75%。
+      </p>
+      <p style="font-size:13.5px;line-height:1.8;margin-top:6px;">
+        <strong>4. 教练博弈</strong>：S 级 vs B- 级，等级差 3 档是本届最大，巴西战术灵活性碾压。
+      </p>
+      <h4 style="color:#0033A0;font-size:15px;margin:14px 0 10px;">🎯 最终预测</h4>
+      <p style="font-size:14px;line-height:1.8;background:white;padding:14px;border-radius:8px;border-left:4px solid #0033A0;">
+        <strong>巴西 3-0 海地（概率 15%）/ 2-0（13%）/ 4-0（12%）/ 4-1（8%）/ 3-1（7%）</strong><br>
+        综合胜率：<strong style="color:#0033A0;">巴西 88% · 平局 8% · 海地 4%</strong>，<span class="confidence conf-high">置信度 高</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="card" style="background:#f0f4ff;border:1px solid #b0c4f5;">
+    <div class="card-title">📚 数据来源</div>
+    <ul style="font-size:12.5px;color:#444;line-height:1.9;padding-left:20px;">
+      <li>XGscore.io · Opta Sports 数据</li>
+      <li>WorldCupWiki · 巴西vs海地完整预测</li>
+      <li>ESPN FC · 球员状态追踪</li>
+      <li>Transfermarkt · 球员市场价值</li>
+      <li>FIFA.com · 世界杯官方数据</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>

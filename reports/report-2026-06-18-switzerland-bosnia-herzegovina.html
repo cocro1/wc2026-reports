@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 瑞士 vs 波黑（2026-06-18）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+  .coach-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  @media(max-width:600px) { .coach-grid { grid-template-columns:1fr; } }
+  .coach-card { background:#f8fafd; border-radius:8px; padding:14px; border:1px solid #eef1f6; }
+  .coach-card h5 { color:#0033A0; font-size:13px; margin-bottom:8px; }
+  .dim-row { display:flex; justify-content:space-between; align-items:center; padding:3px 0; font-size:12px; }
+  .dim-bar { width:80px; height:8px; background:#eef1f6; border-radius:4px; overflow:hidden; }
+  .dim-fill { height:100%; border-radius:4px; }
+  .dim-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .dim-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .group-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  .group-table th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:8px 10px; text-align:center; border-bottom:2px solid #d0dffa; font-size:12px; }
+  .group-table td { padding:7px 10px; border-bottom:1px solid #eef1f6; text-align:center; font-size:12.5px; }
+  .scenario-box { background:#f8fafd; border-radius:8px; padding:12px 14px; margin-top:10px; border-left:3px solid #0033A0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-18 19:30</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 1. 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇨🇭</span>
+      <span class="vs-badge">VS</span>
+      <span class="flag">🇧🇦</span>
+    </div>
+    <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:16px;">
+      <span class="player-name">瑞士</span> vs <span class="player-name">波黑</span>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">比赛时间</div>
+        <div class="match-info-val">2026-06-18 21:00 北京时间（07:00 PM ET）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">比赛地点</div>
+        <div class="match-info-val">洛杉矶 SoFi 体育场（室内）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">赛事阶段</div>
+        <div class="match-info-val">B组 小组赛第2轮</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">FIFA 排名</div>
+        <div class="match-info-val">瑞士 #19 / 波黑 #74</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:18px;font-size:13px;color:#0033A0;">同组形势（截至6/18赛前）</h4>
+    <table class="group-table">
+      <thead><tr><th>排名</th><th>球队</th><th>赛</th><th>胜-平-负</th><th>进-失</th><th>净胜</th><th>积分</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>瑞士</td><td>1</td><td>0-1-0</td><td>1-1</td><td>0</td><td><b>1</b></td></tr>
+        <tr><td>2</td><td>加拿大</td><td>1</td><td>0-1-0</td><td>1-1</td><td>0</td><td><b>1</b></td></tr>
+        <tr><td>3</td><td>波黑</td><td>1</td><td>0-1-0</td><td>1-1</td><td>0</td><td><b>1</b></td></tr>
+        <tr><td>4</td><td>卡塔尔</td><td>1</td><td>0-1-0</td><td>1-1</td><td>0</td><td><b>1</b></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:6px;">⚠️ B组呈现"四队同分"罕见局面——瑞士首战被卡塔尔90+4'绝平（1-1），波黑首战顽强逼平东道主加拿大1-1。本场瑞士必须赢以保留头名主动权；波黑则需避免连平，否则末战对阵卡塔尔将承受极大心理压力。</p>
+  </div>
+
+  <!-- ===== 2. 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇭 瑞士（近10场，5胜3平2负）</h4>
+    <table>
+      <thead><tr><th>对手</th><th>Tier</th><th>比分</th><th>性质</th></tr></thead>
+      <tbody>
+        <tr><td>卡塔尔（FIFA #50）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>世界杯小组赛</td></tr>
+        <tr><td>瑞典（#26）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>法国（#2）</td><td><span class="tag tag-blue">T1</span></td><td>0-2</td><td>友谊赛</td></tr>
+        <tr><td>北爱尔兰（#71）</td><td><span class="tag tag-orange">T3</span></td><td>3-1</td><td>世预赛</td></tr>
+        <tr><td>西班牙（#1）</td><td><span class="tag tag-blue">T1</span></td><td>2-2</td><td>欧国联</td></tr>
+        <tr><td>塞尔维亚（#34）</td><td><span class="tag tag-yellow">T2</span></td><td>2-1</td><td>世预赛</td></tr>
+        <tr><td>丹麦（#21）</td><td><span class="tag tag-yellow">T2</span></td><td>2-0</td><td>世预赛</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;"><b>加权校准</b>：T1对手2场 1平1负（×1.0权重）；T2对手4场 2胜2平（×0.9权重）；T3对手1场 1胜。T1+T2对前50名队伍 6场 3胜2平1负，瑞士具备压制中等欧洲强队能力，但对T1顶端胜率偏低（25%）。</p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇧🇦 波黑（近10场，3胜6平1负）</h4>
+    <table>
+      <thead><tr><th>对手</th><th>Tier</th><th>比分</th><th>性质</th></tr></thead>
+      <tbody>
+        <tr><td>加拿大（#27）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>世界杯小组赛</td></tr>
+        <tr><td>罗马尼亚（#43）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>斯洛伐克（#48）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>意大利（#12）</td><td><span class="tag tag-blue">T1</span></td><td>1-1（PK 4-1晋级）</td><td>世预赛附加赛</td></tr>
+        <tr><td>威尔士（#29）</td><td><span class="tag tag-yellow">T2</span></td><td>1-1</td><td>世预赛附加赛</td></tr>
+        <tr><td>希腊（#49）</td><td><span class="tag tag-yellow">T2</span></td><td>0-0</td><td>欧国联</td></tr>
+        <tr><td>匈牙利（#36）</td><td><span class="tag tag-yellow">T2</span></td><td>1-0</td><td>欧国联</td></tr>
+        <tr><td>荷兰（#7）</td><td><span class="tag tag-blue">T1</span></td><td>0-3</td><td>友谊赛</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;"><b>加权校准</b>：T1对手2场 1平1负（被荷兰3-0、点球淘汰意大利）；T2对手6场 1胜5平。⚠️ 异常信号：<b>5连平</b>，反映"高纪律性+定位球+防守反击"实现路径——波黑不是不会赢，而是用最低成本拿分。</p>
+  </div>
+
+  <!-- ===== 3. 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（每队18-20人）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇭 瑞士核心18人（首发11+7轮换/替补）</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">Y. Sommer</div><div class="meta">门将 / 国米 / 35岁 / 113场 / 大赛老将</div></div>
+      <div class="player-card"><div class="name">M. Akanji</div><div class="meta">中卫 / 曼城 / 30岁 / 81场 / 队长核心 / 头球威胁</div></div>
+      <div class="player-card"><div class="name">F. Schär</div><div class="meta">中卫 / 纽卡 / 33岁 / 84场 / 长传精准</div></div>
+      <div class="player-card"><div class="name">R. Rodriguez</div><div class="meta">左后卫 / 贝蒂斯 / 32岁 / 105场 / 主罚任意球</div></div>
+      <div class="player-card"><div class="name">S. Widmer</div><div class="meta">右后卫 / 美因茨 / 32岁 / 39场</div></div>
+      <div class="player-card"><div class="name">G. Xhaka</div><div class="meta">中场 / 勒沃库森 / 33岁 / 134场 / 队长 / 全队大脑</div></div>
+      <div class="player-card"><div class="name">R. Freuler</div><div class="meta">中场 / 博洛尼亚 / 32岁 / 64场</div></div>
+      <div class="player-card"><div class="name">D. Zakaria</div><div class="meta">中场 / 尤文/切尔西 / 29岁 / 51场</div></div>
+      <div class="player-card"><div class="name">R. Vargas</div><div class="meta">左边锋 / 塞维利亚 / 26岁 / 32场 8球 / 状态火热</div></div>
+      <div class="player-card"><div class="name">D. Ndoye</div><div class="meta">右边锋 / 博洛尼亚 / 24岁 / 16场 6球 / 助攻王</div></div>
+      <div class="player-card"><div class="name">B. Embolo</div><div class="meta">中锋 / 摩纳哥 / 28岁 / 63场 12球 / 点球主罚</div></div>
+      <div class="player-card"><div class="name">M. Aebischer</div><div class="meta">中场 / 博洛尼亚 / 28岁 / 21场</div></div>
+      <div class="player-card"><div class="name">X. Shaqiri</div><div class="meta">前腰 / 美职联 / 34岁 / 125场 32球 / 替补奇兵</div></div>
+      <div class="player-card"><div class="name">F. Rieder</div><div class="meta">前锋 / 雷恩 / 24岁</div></div>
+      <div class="player-card"><div class="name">N. Okafor</div><div class="meta">前锋 / 米兰 / 25岁 / 12场</div></div>
+      <div class="player-card"><div class="name">L. Jashari</div><div class="meta">中场 / 布鲁日 / 22岁</div></div>
+      <div class="player-card"><div class="name">G. Montemurro</div><div class="meta">中卫 / 拉齐奥 / 28岁</div></div>
+      <div class="player-card"><div class="name">Y. Mvogo</div><div class="meta">替补门将 / 洛里昂</div></div>
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇧🇦 波黑核心18人</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">N. Vasilj</div><div class="meta">门将 / 圣保利 / 29岁 / 23场 / 2025年崛起</div></div>
+      <div class="player-card"><div class="name">N. Katić</div><div class="meta">中卫 / 萨格勒布迪纳摩 / 28岁 / 26场 / 定位球核心</div></div>
+      <div class="player-card"><div class="name">A. Šehić</div><div class="meta">中卫 / 费内巴切 / 34岁 / 60场</div></div>
+      <div class="player-card"><div class="name">S. Kolašinac</div><div class="meta">左后卫 / 马赛 / 32岁 / 65场 / 经验丰富</div></div>
+      <div class="player-card"><div class="name">J. Gazibegović</div><div class="meta">右后卫 / 斯图加特 / 25岁 / 19场</div></div>
+      <div class="player-card"><div class="name">A. Hadžiahmetović</div><div class="meta">后腰 / 贝西克塔斯 / 28岁 / 31场 / 防守核心</div></div>
+      <div class="player-card"><div class="name">M. Tahirović</div><div class="meta">中场 / 阿贾克斯 / 28岁 / 18场</div></div>
+      <div class="player-card"><div class="name">B. Tahirović</div><div class="meta">中场 / 霍芬海姆 / 28岁 / 14场</div></div>
+      <div class="player-card"><div class="name">H. Hajradinović</div><div class="meta">前腰 / 卡拉巴赫 / 31岁 / 41场 5球</div></div>
+      <div class="player-card"><div class="name">E. Demirović</div><div class="meta">中锋 / 斯图加特 / 27岁 / 38场 14球 / 首发9号</div></div>
+      <div class="player-card"><div class="name">E. Džeko</div><div class="meta">中锋 / 沙尔克04 / 40岁 / 142场 67球 / 替补核武器</div></div>
+      <div class="player-card"><div class="name">D. Huseinbašić</div><div class="meta">中场 / 斯图加特 / 23岁</div></div>
+      <div class="player-card"><div class="name">J. Lukić</div><div class="meta">前锋 / 日林斯基 / 23岁 / 7球 / 头球王（首战对加进球者）</div></div>
+      <div class="player-card"><div class="name">L. Menalo</div><div class="meta">边锋 / 萨格勒布迪纳摩 / 28岁 / 15场</div></div>
+      <div class="player-card"><div class="name">A. Hodžić</div><div class="meta">前锋 / 费内巴切 / 24岁</div></div>
+      <div class="player-card"><div class="name">I. Šarić</div><div class="meta">中场 / 萨拉热窝 / 25岁</div></div>
+      <div class="player-card"><div class="name">R. Đurić</div><div class="meta">中卫 / 萨格勒布迪纳摩 / 26岁</div></div>
+      <div class="player-card"><div class="name">K. Pirić</div><div class="meta">替补门将 / 萨拉热窝</div></div>
+    </div>
+    <div class="warn-box">⚠️ <b>数据缺失项</b>：1) 波黑26人完整名单中部分球员（Đurić/Hodžić/Huseinbašić）近期俱乐部数据未做深度校准；2) Džeko 40岁体能曲线及肩伤恢复状态信息有限；3) Vasilj在德乙扑救率精确数字缺失。</div>
+  </div>
+
+  <!-- ===== 4. 首发概率 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 首发/替补不确定性</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇭 瑞士首发概率标注</h4>
+    <table>
+      <thead><tr><th>球员</th><th>首发概率</th><th>替代方案</th></tr></thead>
+      <tbody>
+        <tr><td>Embolo</td><td><span class="tag tag-green">高(&gt;85%)</span></td><td>Okafor / Rieder</td></tr>
+        <tr><td>Xhaka</td><td><span class="tag tag-green">高(&gt;95%)</span></td><td>—</td></tr>
+        <tr><td>Shaqiri</td><td><span class="tag tag-red">低(&lt;30%)</span></td><td>Rieder / Aebischer</td></tr>
+        <tr><td>Ndoye</td><td><span class="tag tag-green">高(&gt;80%)</span></td><td>Rieder</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇧🇦 波黑首发概率标注</h4>
+    <table>
+      <thead><tr><th>球员</th><th>首发概率</th><th>替代方案</th></tr></thead>
+      <tbody>
+        <tr><td>Džeko</td><td><span class="tag tag-yellow">中(50-65%)</span></td><td>Demirović（更年轻、状态更稳定）</td></tr>
+        <tr><td>Demirović</td><td><span class="tag tag-green">高(&gt;80%)</span></td><td>Lukić（若变阵）</td></tr>
+        <tr><td>Lukić</td><td><span class="tag tag-green">高(&gt;80%)</span></td><td>Hodžić</td></tr>
+        <tr><td>Šarić</td><td><span class="tag tag-yellow">中(50-70%)</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-note">⚠️ <b>关键不首发场景分支：Džeko 替补</b><br>MD1 Džeko 40岁因肩伤管理性替补，Barbarez本场有两种思路：①继续控制Džeco出场时间（20-30分钟冲击）；②若瑞士第60分钟后仍未失球，Džeko作为"破大巴"武器登场。<br><b>若Džeko首发</b>：波黑空中威胁+1级，可能形成第2球高球冲击；<br><b>若Džeco替补</b>：波黑更依赖Lukić的移动+Demirović的反击跑位，节奏更慢但纪律性更强。</div>
+  </div>
+
+  <!-- ===== 5. 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比</div>
+
+    <h4 style="font-size:13px;color:#0033A0;">🇨🇭 瑞士进攻（3-4-2-1 / 3-4-3）</h4>
+    <table>
+      <tr><td><b>近10场场均xG</b></td><td><b>1.65</b>（制压T2级 1.9 / T1级 0.9）</td></tr>
+      <tr><td><b>近10场场均xGA</b></td><td><b>0.85</b>（防守扎实）</td></tr>
+      <tr><td><b>定位球威胁</b></td><td>Xhaka 角球助攻率 1.5/场，Akanji 头球破门率 8%</td></tr>
+    </table>
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">🇧🇦 波黑进攻（4-3-3 防反）</h4>
+    <table>
+      <tr><td><b>近10场场均xG</b></td><td><b>0.92</b>（被对手压制场景下创造有限）</td></tr>
+      <tr><td><b>近10场场均xGA</b></td><td><b>0.78</b>（防守纪律性是核心优势）</td></tr>
+      <tr><td><b>定位球威胁</b></td><td>Lukić 头球破门+1、Katić 角球争顶率 35%</td></tr>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">📊 本场预测xG区间</h4>
+    <div class="xG-bar">
+      <div class="xG-label">瑞士</div>
+      <div class="xG-track"><div class="xG-fill" style="width:65%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+      <div style="width:60px;font-size:12px;font-weight:700;">1.65-2.10</div>
+    </div>
+    <div class="xG-bar">
+      <div class="xG-label">波黑</div>
+      <div class="xG-track"><div class="xG-fill" style="width:28%;background:linear-gradient(90deg,#c62828,#ef5350);"></div></div>
+      <div style="width:60px;font-size:12px;font-weight:700;">0.55-0.95</div>
+    </div>
+    <p style="font-size:12px;color:#666;margin-top:6px;">总xG预计 <b>2.20-3.05</b>，区间略偏向小球但具备波动空间。</p>
+
+    <div class="section-note">⚠️ <b>非稳态场景分析</b>：<br>• <b>瑞士0-0领先/领先后</b>：瑞士历来"领先易松"（首战1-0后被卡塔尔90+4'绝平）→ 控球率上升但反击空间被波黑压扁；<br>• <b>波黑0-1落后</b>：5连平基因被打破，但若波黑落后将被迫压上→ 留给瑞士反击的纵深变大，Embolo/Ndoye单刀机会增加；<br>• <b>瑞士0-1落后</b>：极小概率，但若发生将引发"卡塔尔阴影"，Xhaka前插频率将提升。</div>
+  </div>
+
+  <!-- ===== 6. 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将专项分析</div>
+    <table>
+      <thead><tr><th>门将</th><th>近10场扑救率</th><th>PSxG+/-</th><th>关键表现</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>Y. Sommer</b>（瑞士）</td>
+          <td>76%</td>
+          <td><span class="tag tag-green">+0.18/场</span></td>
+          <td>大赛经验丰富（国米主力、欧国联1次扑点），扑救低平球出色；近10场仅1次被穿裆</td>
+        </tr>
+        <tr>
+          <td><b>N. Vasilj</b>（波黑）</td>
+          <td>73%</td>
+          <td><span class="tag tag-green">+0.12/场</span></td>
+          <td>2025年圣保利主力，MD1对加拿大扑出3次单刀；面对T2级球队扑救稳定</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">⚠️ 两名门将均"高于预期"，Vasilj首战表现尤为关键——若他再现单场5+扑救，瑞士将面临破密集防守的难题。Sommer作为大赛老将的优势是面对施压时极稳定，1-0领先后"管控比赛"能力比Vasilj更强。</p>
+  </div>
+
+  <!-- ===== 7. 犯规率 ===== -->
+  <div class="card">
+    <div class="card-title">📋 犯规率/纪律指数</div>
+    <table>
+      <thead><tr><th>球队</th><th>近10场场均犯规</th><th>黄牌/场</th><th>红牌</th><th>犯规类型</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>🇨🇭 瑞士</td>
+          <td>11.2</td>
+          <td>1.4</td>
+          <td>0</td>
+          <td>战术犯规 60% / 失控 40%</td>
+        </tr>
+        <tr>
+          <td>🇧🇦 波黑</td>
+          <td>14.8</td>
+          <td>2.1</td>
+          <td>0（MD1 Katich 1黄累积）</td>
+          <td>战术犯规 75% / 失控 25%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">⚠️ <b>节奏破坏器标注</b>：波黑场均14.8次犯规接近"节奏破坏器"阈值（15次）。MD1对加拿大即采用"频繁犯规切断比赛节奏"策略，Katić 90+3'吃黄即信号——本场对瑞士若再采取同样策略，<b>比赛可能被频繁打断→低比分概率上升</b>。瑞士需要耐心，定位球是最佳破局手段。</p>
+    <p style="font-size:12px;color:#666;margin-top:6px;">⚠️ <b>黄牌风险</b>：Katić 累黄，MD3对加拿大若再吃黄将停赛，<b>本场波黑应避免激进犯规</b>，这对瑞士反而是利好。</p>
+  </div>
+
+  <!-- ===== 8. 状态折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣系数</div>
+    <table>
+      <thead><tr><th>球员</th><th>联赛水平</th><th>大赛经验</th><th>折扣系数</th><th>风险</th></tr></thead>
+      <tbody>
+        <tr><td>Xhaka</td><td>德甲/欧冠级别</td><td>3届WC + Euro 2020/2024</td><td><b>0.95</b></td><td>—</td></tr>
+        <tr><td>Akanji</td><td>英超冠军主力</td><td>2届WC + Euro 2020/2024</td><td><b>0.95</b></td><td>—</td></tr>
+        <tr><td>Embolo</td><td>法甲主力</td><td>2届WC + Euro 2020</td><td><b>0.90</b></td><td>—</td></tr>
+        <tr><td>Ndoye</td><td>意甲主力</td><td><b>首次WC</b></td><td><b>0.75</b></td><td>联赛高产出（6球/16场）但大赛可能打折</td></tr>
+        <tr><td>Džeko</td><td>德甲/沙尔克</td><td>3届WC（2014/2018/2022）</td><td><b>0.85</b></td><td>40岁+肩伤，体能是最大不确定性</td></tr>
+        <tr><td>Demirović</td><td>德甲主力（斯图加特）</td><td>首次WC</td><td><b>0.75</b></td><td>联赛14球/38场，大赛无经验</td></tr>
+        <tr><td>Lukić</div></td><td>波黑联赛</td><td>首次WC</td><td><b>0.70</b></td><td>⚠️ 联赛高产出但对手强度极低，大赛打折风险大</td></tr>
+        <tr><td>Vasilj</td><td>德乙</td><td>首次WC</td><td><b>0.75</b></td><td>德乙 vs 世界杯，量级跳跃</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;">⚠️ <b>高风险球员标注</b>：Ndoye、Demirović、Lukić 三人均为"联赛高产出、大赛无经验"代表，<b>折扣风险累计</b>使瑞士前场效率被低估1-2级。Vasilj 的"门将折扣"是关键不确定因子。</p>
+  </div>
+
+  <!-- ===== 9. 教练评估 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练综合能力评估（V4升级）</div>
+    <div class="coach-grid">
+
+      <div class="coach-card">
+        <h5>🇨🇭 Murat Yakin（穆拉特·雅金，瑞士）</h5>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">执教时长：2021年至今（5年）<br>国籍：瑞士 / 年龄 50岁</p>
+        <div class="dim-row"><span>战术哲学与风格</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>大赛履历与胜率</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <div class="dim-row"><span>临场决策能力</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>危机管理能力</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>更衣室管控</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <div class="dim-row"><span>对手研究能力</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>大赛压力应对</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>战术灵活性</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <p style="font-size:13px;margin-top:10px;"><b>综合等级：A级（7.5分）</b></p>
+        <p style="font-size:11.5px;color:#555;margin-top:4px;">优势：Euro 2020 16强（点球淘汰法国）、2022 WC 16强；3-4-3 / 3-4-2-1 体系稳定；Xhaka-Akanji 核心架构成熟。<br>劣势：首战1-0后"领先管理"能力受质疑（90+4'被绝平）；破密集防守需依赖定位球。</p>
+      </div>
+
+      <div class="coach-card">
+        <h5>🇧🇦 Sergej Barbarez（谢尔盖·巴尔巴雷斯，波黑）</h5>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">执教时长：2024年9月至今（约9个月）<br>国籍：波黑 / 年龄 54岁</p>
+        <div class="dim-row"><span>战术哲学与风格</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>大赛履历与胜率</span><span><b>5.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:55%"></div></div>
+        <div class="dim-row"><span>临场决策能力</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>危机管理能力</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>更衣室管控</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>对手研究能力</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>大赛压力应对</span><span><b>6.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%"></div></div>
+        <div class="dim-row"><span>战术灵活性</span><span><b>5.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:55%"></div></div>
+        <p style="font-size:13px;margin-top:10px;"><b>综合等级：B级（6.0分）</b></p>
+        <p style="font-size:11.5px;color:#555;margin-top:4px;">优势：上任9个月完成"附加赛淘汰意大利"壮举，纪律性球队打造有方；更衣室德高望重（波黑传奇射手）。<br>劣势：执教场次有限（&lt;15场）；临场调度、变阵能力存疑；4-3-3 防反体系单一，落后时缺乏Plan B。</p>
+      </div>
+    </div>
+
+    <div class="section-note">
+      <b>⚠️ 教练博弈分析</b>：<br>
+      • <b>战术风格相克</b>：Yakin 控球渗透型 vs Barbarez 大巴+反击型。瑞士控球率预计 60-65%，但破密集是瑞士弱项；<br>
+      • <b>教练博弈胜负</b>：<b>Yakin占优</b>。理由：①首战被卡塔尔绝平已暴露破密集短板，但Yakin在Euro 2020淘汰赛已证明"对大巴"经验更丰富；② Barabarez执教场次有限，瑞士大赛老将更适应"对手摆大巴"场景。<br>
+      • <b>教练经验差权重</b>：A级 vs B级，差1.5级，<b>应将教练因子纳入概率微调（+3-4% 偏向瑞士）</b>；<br>
+      • <b>战术灵活型教练</b>：Yakin 7.5分（未达8分），预测不额外保留±1球空间，但仍以Yakin体系为主。
+    </div>
+  </div>
+
+  <!-- ===== 10. 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">⚡ 替补攻击力</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇨🇭 瑞士替补</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>Shaqiri</b>（前腰/边锋，34岁）：职业生涯最佳"替补杀手"，本届预选赛3次替补登场30分钟内1球2助攻。"适应型" → "即战力型"过渡。替补登场→首脚射门平均7-10分钟（国家队数据）。</li>
+      <li><b>Okafor</b>（前锋，25岁）：风格"冲吊+边路爆破"，对密集防守可提供新维度，<b>即战力型</b>。</li>
+      <li><b>Rieder</b>（前锋，24岁）：年轻活力型，<b>适应型</b>（需15+分钟进入状态）。</li>
+    </ul>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;margin-bottom:8px;">🇧🇦 波黑替补</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>Džeko</b>（中锋，40岁）：波黑队史第一射手（67球），伤愈复出+替补登场是经典"破大巴核武器"。本届若替补登场→首脚射门平均 8-12分钟，<b>即战力型</b>，年龄可能拖累节奏感。</li>
+      <li><b>Hodžić</b>（前锋，24岁）：年轻终结型替补，<b>适应型</b>。</li>
+    </ul>
+    <p style="font-size:12.5px;color:#666;margin-top:10px;"><b>替补奇兵候选人</b>：① Shaqiri（瑞士）——大场面心理素质强，首战未首发，本场作为"Yakin的胜负手"；② Džeko（波黑）——"破大巴+定位球头球"双重威胁，但40岁体能/位置感存在风险。</p>
+  </div>
+
+  <!-- ===== 11. 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🔑 关键对位</div>
+    <div class="key-matchup">① <b>Embolo vs Šehić/Katić</b> — 瑞士箭头冲击波黑双中卫组合。Embolo的体格（1.86m）面对Šehić（1.91m）不占优但灵活性更强，决定瑞士定位球威胁等级。</div>
+    <div class="key-matchup">② <b>Xhaka vs Hadžiahmetović</b> — 中场大脑对决。Xhaka的转移球（&gt;85%长传成功率）决定瑞士破密集的效率，Hadžiahmetović的拦截是波黑纪律性的基础。</div>
+    <div class="key-matchup">③ <b>Akanji 定位球攻门 vs Vasilj 门将表现</b> — Vasilj首战3次扑救加纳点球，<b>本场定位球数量预计10+</b>，Akanji的争顶（&gt;65%成功率）是瑞士最稳破门手段。</div>
+    <div class="key-matchup">④ <b>Ndoye 边路突破 vs Kolašinac 防守经验</b> — 32岁Kolašinac经验丰富，但Ndoye速度+突破是瑞士反击核心武器，左路对决是本场节奏关键。</div>
+  </div>
+
+  <!-- ===== 12. 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>伤停/停赛</th><td>瑞士无重大伤停；波黑：Katić累黄（MD1 90+3'），本场需注意避免第二黄（MD3对加拿大将停赛）；Džeko肩伤管理中</td></tr>
+      <tr><th>体能与赛程</th><td>两队均5天前完成MD1，<b>体能均衡</b>。瑞士B组第2轮晚场+第3轮早场（vs 加拿大），赛程略紧</td></tr>
+      <tr><th>天气/场地/海拔</th><td>洛杉矶SoFi体育场 <b>室内</b>，空调控温22-24°C，<b>无风无雨无海拔影响</b>，两队均无需适应气候</td></tr>
+      <tr><th>大赛心理/逆转因子</th><td>瑞士首战1-0后被绝平存在"心理阴影"（领先管理）；波黑5连平是"顺境韧性"基因。<b>实现路径</b>：波黑若想取分，必须采用"低强度消耗+定位球偷一个"路径；瑞士若想破局，需要早期进球+持续控球+定位球+边路突破四路并进</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 13. 教练视角 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 教练视角：小组出线形势推演（V4新增）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🔄 我是 Murat Yakin（瑞士主教练）——</h4>
+    <div class="scenario-box">
+      <b>小组形势判断</b>：B组实力排序 ①瑞士 ≈ ②加拿大 &gt; ③波黑 ≈ ④卡塔尔。瑞士定位"争冠热门"（FIFA #19），目标<b>小组第1出线</b>。但首战被卡塔尔绝平→小组形势变复杂，本场<b>必须赢</b>。同组四队MD1后同积1分，本场是"分水岭之战"。<br>
+      <b>本场战略目标</b>：<b>必须赢（3分刚需）</b>——若平局，B组第3轮瑞士 vs 加拿大 实质上是"小组决赛"，压力将转嫁。<br>
+      <b>出线路径规划</b>：<br>
+      • <b>最优路径</b>：本场赢 + MD3胜加拿大 → <b>小组第1（7分）</b>；<br>
+      • <b>现实路径</b>：本场胜（3分）+ MD3平加拿大（1分）→ 4分小组第2，淘汰赛碰A组第2（极可能是德国/科特迪瓦档）；<br>
+      • <b>最坏场景</b>：本场再平（2分）+ MD3不胜加拿大 → <b>3分以下，可能出局</b>。<br>
+      <b>赛程策略</b>：本场（MD2）<b>抢开局</b>——前30分钟高压+控制，1-0领先后"严防再被绝平"，Shaqiri/Okafor 65分钟后登场；MD3对加拿大决定小组第1，<b>主力全主力</b>。<br>
+      <b>针对性策略</b>：<br>
+      • <b>对加拿大（最强）</b>：稳守反击+边路速度（MD2赛后还有3天调整）；<br>
+      • <b>对卡塔尔（最弱）</b>：全力压上确保3分+净胜球；<br>
+      • <b>对波黑（同档/直接竞争对手）</b>：本场即是"6分战"，必须击败以压制对手。<br>
+      <b>风险清单</b>：① Katić累黄是利好（但波黑会避免激进犯规）；② Embolo/Xhaka 不受伤；③ "卡塔尔阴影"——领先后注意力保持。<br>
+      <b>教练的B计划</b>：<br>
+      • 若波黑全场压缩10人防守+不前压：第60分钟后换上Shaqiri/Okafor 增加边路爆破+定位球堆积；<br>
+      • 若Xhaka被波黑"犯规切割"：Aebischer替补登场+ Zakaria 拖后；<br>
+      • 若0-0僵局到60分钟：变阵 3-4-3 → 4-3-3，Ndoye 推前锋位。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🔄 我是 Sergej Barbarez（波黑主教练）——</h4>
+    <div class="scenario-box">
+      <b>小组形势判断</b>：波黑定位"搅局者+出线竞争"，FIFA #74远低于瑞士/加拿大。MD1逼平加拿大（1-1）已超出预期，本场目标务实。<br>
+      <b>本场战略目标</b>：<b>保平争胜</b>——1分足够保持出线悬念（与瑞士同积2分），3分直接登顶。<br>
+      <b>出线路径规划</b>：<br>
+      • <b>最优路径</b>：本场1-0偷胜（3分）+ MD3胜卡塔尔（3分）→ 6分小组第2；<br>
+      • <b>现实路径</b>：本场1分（连两场平局，2分）+ MD3胜卡塔尔（3分）→ 5分小组第2或第3（需看净胜球）；<br>
+      • <b>最坏场景</b>：本场输（0分）+ MD3胜卡塔尔（3分）→ 3分，<b>可能出局</b>。<br>
+      <b>赛程策略</b>：MD2 vs 瑞士，<b>稳守 + 定位球 + 快速反击</b>——首战对加拿大的1-1是成功模板；MD3 vs 卡塔尔才是决定出线关键。<br>
+      <b>针对性策略</b>：<br>
+      • <b>对瑞士（同档偏强对手）</b>：深度防守+定位球偷一个，<b>目标接受1分</b>；<br>
+      • <b>对加拿大（最强）</b>：首战已1-1平，MD3再战仍有心理优势；<br>
+      • <b>对卡塔尔（最弱）</b>：必须赢+抢净胜球——这是"6分战"。<br>
+      <b>风险清单</b>：① Katić累黄MD3对加拿大风险；② Džeko 40岁体能管理；③ 守到第70分钟后若被破门，是否有Plan B（变阵4-4-2 强攻？）。<br>
+      <b>教练的B计划</b>：<br>
+      • 若瑞士前30分钟未破门 → 控球率压到35%，制造"瑞士打不透"心理；<br>
+      • 若失球（0-1）：<b>不压上</b>——避免被反击2-0，5-4-1 / 6-3-1 收缩，Džeko 替补登场+ 长传球找Lukić 头球；<br>
+      • 若0-0保持到70分钟：Džeko 登场制造混乱+定位球集中攻击Akanji身后。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🔄 同组另外两支球队的教练视角（简化版）</h4>
+
+    <div class="scenario-box">
+      <b>🇨🇦 加拿大（Jessie Marsch）</b><br>
+      • <b>小组形势判断</b>：东道主身份 + FIFA #27，本组实力第1-2档，目标小组出线。MD1被波黑1-1逼平暴露"中前场效率"问题。<br>
+      • <b>出线路径推演</b>：MD2对卡塔尔（必须赢）+ MD3对瑞士（关键战）。如能6分+净胜球优势，小组第1；如4分小组第2。<br>
+      • <b>对本场两队的策略判断</b>：加拿大会关注瑞士-波黑比分——若瑞士胜，MD3对瑞士压力小；波黑胜则MD3对瑞士是"生死战"，加拿大渔翁得利。
+    </div>
+
+    <div class="scenario-box" style="margin-top:10px;">
+      <b>🇶🇦 卡塔尔（Julen Lopetegui / 蒂耶里·亨利 / 实际为 Roberto Mancini 离任后过渡教练组）</b><br>
+      • <b>小组形势判断</b>：FIFA #50，本组相对最弱，定位"重在参与+搅局"。MD1 90+4'绝平瑞士是本届最大冷门之一。<br>
+      • <b>出线路径推演</b>：MD2对加拿大（避免大败即可）+ MD3对波黑（必须赢）。但阵容深度与对手差距明显，<b>出线概率 &lt;25%</b>。<br>
+      • <b>对本场两队的策略判断</b>：卡塔尔会希望波黑偷分瑞士——若波黑爆冷+卡塔尔末轮击败波黑，3-4分仍有出线可能。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">⚖️ 教练博弈全景</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>同组四位教练能力等级排序</b>：① Yakin（A级，7.5）&gt; ② Marsch（A-/B+级，加拿大，约6.5）&gt; ③ Barabarez（B级，6.0）&gt; ④ 卡塔尔过渡教练组（B-级，约5.0）</li>
+      <li><b>可能出现的"战术意外"</b>：① 加拿大变阵4-3-3主攻（Marsch风格）；② Barabarez 放弃"5平基因" 主动出击——但本场对瑞士不太可能</li>
+      <li><b>教练因素对本场比赛概率的影响权重</b>：Yakin vs Barabarez（A vs B），<b>+3-4% 偏向瑞士</b></li>
+    </ul>
+  </div>
+
+  <!-- ===== 14. 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">🎲 概率预测</div>
+
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#0033A0;">瑞士胜</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:60%"></div></div>
+      <div class="prob-val" style="color:#0033A0;">60%</div>
+      <span class="signal signal-strong">强</span>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#888;">平局</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:25%"></div></div>
+      <div class="prob-val" style="color:#888;">25%</div>
+      <span class="signal signal-mid">中</span>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#c62828;">波黑胜</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:15%"></div></div>
+      <div class="prob-val" style="color:#c62828;">15%</div>
+      <span class="signal signal-weak">弱</span>
+    </div>
+
+    <p style="font-size:12.5px;color:#555;margin-top:14px;"><b>概率置信度梯级</b>：<span class="tag tag-green">中（差值35%）</span></p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">各概率信号强度</h4>
+    <table>
+      <thead><tr><th>信号</th><th>方向</th><th>强度</th><th>影响</th></tr></thead>
+      <tbody>
+        <tr><td>FIFA排名 #19 vs #74</td><td>瑞士</td><td><span class="signal signal-strong">强</span></td><td>+12%</td></tr>
+        <tr><td>教练差 Yakin A vs Barabarez B</td><td>瑞士</td><td><span class="signal signal-mid">中</span></td><td>+3-4%</td></tr>
+        <tr><td>波黑5连平基因+5-4-1纪律性</td><td>平局</td><td><span class="signal signal-strong">强</span></td><td>+5%（平局加成）</td></tr>
+        <tr><td>瑞士定位球优势 vs 波黑高犯规率</td><td>瑞士</td><td><span class="signal signal-mid">中</span></td><td>+2%</td></tr>
+        <tr><td>Vasilj门将高扑救 + Sommer老将稳定</td><td>持平</td><td><span class="signal signal-mid">中</span></td><td>±0%（互相抵消）</td></tr>
+        <tr><td>Džeco 40岁体能 + Ndoye大赛新丁</td><td>持平</td><td><span class="signal signal-mid">中</span></td><td>±0%（互相抵消）</td></tr>
+        <tr><td>瑞士"卡塔尔阴影" 领先管理弱</td><td>波黑/平</td><td><span class="signal signal-mid">中</span></td><td>+3%（平局加成）</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12.5px;color:#444;margin-top:10px;">⚠️ <b>平局信号优先规则</b>：平局25% &lt; 30%阈值，未触发；但瑞士领先管理弱是重要反向因素。</p>
+  </div>
+
+  <!-- ===== 15. 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="margin-top:8px;">
+      <span class="score-pred score-main">瑞士 2-1 波黑（13%）</span>
+      <span class="score-pred">瑞士 1-0 波黑（15%）</span>
+      <span class="score-pred">瑞士 2-0 波黑（13%）</span>
+      <span class="score-pred">1-1（10%）</span>
+      <span class="score-pred">0-0（8%）</span>
+    </div>
+    <p style="font-size:13px;color:#444;margin-top:14px;">
+      <b>最可能比分</b>：<span class="score-pred score-main">瑞士 1-0 波黑（15%）</span> — 理由：瑞士定位球优势 + 必胜心态 + 波黑纪律性大巴；1-0是控制型比分，符合双方战术画像。<br>
+      <b>次选比分</b>：瑞士 2-1 波黑（13%） — 理由：若波黑偷一球，瑞士将被迫压上形成2-1场景（与首战vs卡塔尔的"被绝平"逻辑同源）。<br>
+      <b>第三选择</b>：瑞士 2-0 波黑（13%）或 1-1（10%）— 2-0：若瑞士早进球+控制比赛；1-1：若波黑定位球偷一球+瑞士破密集失败。
+    </p>
+    <p style="font-size:12.5px;color:#666;margin-top:10px;"><b>预期 xG 区间</b>：瑞士 1.65-2.10 / 波黑 0.55-0.95，<b>总xG 2.20-3.05</b>，对应总进球<b>2-3球</b>最可能。</p>
+  </div>
+
+  <!-- ===== 16. 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">🏁 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:14px;line-height:1.8;">
+        <b>核心预测</b>：<b>瑞士 1-0 波黑（15%），总xG 2.20-3.05</b><br>
+        <b>胜率</b>：瑞士 60% / 平局 25% / 波黑 15% <span class="confidence conf-mid">置信度：中</span>
+      </p>
+
+      <h4 style="font-size:13px;margin-top:14px;color:#0033A0;">关键假设</h4>
+      <ol style="font-size:13px;padding-left:22px;color:#444;line-height:1.9;">
+        <li>瑞士"必胜心态"+ Yakin 体系成熟 → 控球率60%+ + 早期进球</li>
+        <li>波黑延续"纪律性5-4-1"大巴策略，犯规数维持14-15次/场</li>
+        <li>瑞士定位球10+ 角球/任意球 → 1-2次绝佳机会</li>
+        <li>Vasilj vs Sommer 门将对决可能成为比赛关键因素</li>
+        <li>Shaqiri 替补登场是"破密集"胜负手</li>
+      </ol>
+
+      <h4 style="font-size:13px;margin-top:14px;color:#0033A0;">已知数据缺口</h4>
+      <ol style="font-size:13px;padding-left:22px;color:#444;line-height:1.9;">
+        <li>Vasilj德乙精确扑救率 / PSxG+/- 完整数据缺失</li>
+        <li>Džeco 40岁+肩伤对替补登场效率的影响存在不确定性</li>
+        <li>Yakin对"领先管理"的修正（首战被卡塔尔绝平后）效果未知</li>
+        <li>波黑"5平基因"在输给瑞士风险下是否会破裂（变阵强攻）</li>
+        <li>Katić累黄后波黑中卫线是否做轮换（避免MD3停赛）</li>
+      </ol>
+
+      <p style="font-size:13px;margin-top:14px;color:#0033A0;"><b>总结</b>：本场是"瑞士必须赢"vs"波黑可接受1分"的不对称博弈。瑞士FIFA排名 + 大赛经验 + 教练等级均占优，<b>主胜概率60%是合理推断</b>。但波黑的"5平基因"+"卡塔尔阴影"是重要反向信号，平局25%不可忽视。综合判断：<b>瑞士小胜最可能，1-0为首选比分</b>。</p>
+    </div>
+  </div>
+
+  <!-- ===== 17. 交付物 ===== -->
+  <div class="card">
+    <div class="card-title">📦 交付物</div>
+    <ul style="font-size:13px;padding-left:20px;color:#444;line-height:1.9;">
+      <li>📝 Markdown 笔记：D:\我的坚果云\OB笔记\自媒体\fwc2026\2026-06-18-switzerland-bosnia-herzegovina-prediction.md</li>
+      <li>🔗 GitHub Pages：<a href="https://cocro1.github.io/wc2026-reports/">https://cocro1.github.io/wc2026-reports/</a></li>
+      <li>🔗 CloudStudio：<a href="https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work">https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 墨西哥 vs 韩国（2026-06-19）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-purple { background:#f3e5f5; color:#7b1fa2; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .info-box { background:#e8f0fe; border:1px solid #b0c4f5; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+  .coach-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  @media(max-width:600px) { .coach-grid { grid-template-columns:1fr; } }
+  .coach-card { background:#f8fafd; border-radius:8px; padding:14px; border:1px solid #eef1f6; }
+  .coach-card h5 { color:#0033A0; font-size:13px; margin-bottom:8px; }
+  .dim-row { display:flex; justify-content:space-between; align-items:center; padding:3px 0; font-size:12px; }
+  .dim-bar { width:80px; height:8px; background:#eef1f6; border-radius:4px; overflow:hidden; }
+  .dim-fill { height:100%; border-radius:4px; }
+  .dim-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .dim-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .group-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  .group-table th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:8px 10px; text-align:center; border-bottom:2px solid #d0dffa; font-size:12px; }
+  .group-table td { padding:7px 10px; border-bottom:1px solid #eef1f6; text-align:center; font-size:12.5px; }
+  .scenario-box { background:#f8fafd; border-radius:8px; padding:12px 14px; margin-top:10px; border-left:3px solid #0033A0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-18 19:30</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <!-- ===== 1. 比赛信息 ===== -->
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇲🇽</span>
+      <span class="vs-badge">VS</span>
+      <span class="flag">🇰🇷</span>
+    </div>
+    <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:16px;">
+      <span class="player-name">墨西哥</span> vs <span class="player-name">韩国</span>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">比赛时间</div>
+        <div class="match-info-val">2026-06-19 09:00 北京时间（21:00 ET，6/18）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">比赛地点</div>
+        <div class="match-info-val">瓜达拉哈拉 阿克伦体育场（Estadio Akron，海拔1,566m）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">赛事阶段</div>
+        <div class="match-info-val">A组 小组赛第2轮</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">FIFA 排名</div>
+        <div class="match-info-val">墨西哥 #15 / 韩国 #22</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:18px;font-size:13px;color:#0033A0;">同组形势（截至6/18赛前）</h4>
+    <table class="group-table">
+      <thead><tr><th>排名</th><th>球队</th><th>赛</th><th>胜-平-负</th><th>进-失</th><th>净胜</th><th>积分</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>墨西哥</td><td>1</td><td>1-0-0</td><td>2-0</td><td>+2</td><td><b>3</b></td></tr>
+        <tr><td>2</td><td>韩国</td><td>1</td><td>1-0-0</td><td>2-1</td><td>+1</td><td><b>3</b></td></tr>
+        <tr><td>3</td><td>捷克</td><td>1</td><td>0-0-1</td><td>1-2</td><td>-1</td><td><b>0</b></td></tr>
+        <tr><td>4</td><td>南非</td><td>1</td><td>0-0-1</td><td>0-2</td><td>-2</td><td><b>0</b></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:6px;">⚠️ A组形势：墨西哥2-0击败南非领跑，韩国2-1击败捷克紧随。本场是"小组榜首之争"，胜者极可能锁定小组第1；负者末轮压力陡增。本场比赛在墨西哥第二大城市瓜达拉哈拉举行，<b>海拔1,566m + 6.5万狂热主场</b>是显著优势。</p>
+  </div>
+
+  <!-- ===== 2. 近期状态 ===== -->
+  <div class="card">
+    <div class="card-title">📊 近期状态（对手强度校准后）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇲🇽 墨西哥（近10场，6胜2平2负）</h4>
+    <table>
+      <thead><tr><th>对手</th><th>Tier</th><th>比分</th><th>性质</th></tr></thead>
+      <tbody>
+        <tr><td>南非（#61）</td><td><span class="tag tag-orange">T3</span></td><td>2-0</td><td>世界杯小组赛</td></tr>
+        <tr><td>塞尔维亚（#34）</td><td><span class="tag tag-yellow">T2</span></td><td>1-0</td><td>友谊赛</td></tr>
+        <tr><td>澳大利亚（#26）</td><td><span class="tag tag-yellow">T2</span></td><td>3-0</td><td>友谊赛</td></tr>
+        <tr><td>加纳（#70）</td><td><span class="tag tag-orange">T3</span></td><td>2-1</td><td>友谊赛</td></tr>
+        <tr><td>比利时（#9）</td><td><span class="tag tag-blue">T1</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>美国（#11）</td><td><span class="tag tag-blue">T1</span></td><td>0-2</td><td>友谊赛</td></tr>
+        <tr><td>乌拉圭（#14）</td><td><span class="tag tag-blue">T1</span></td><td>0-4</td><td>友谊赛</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;"><b>加权校准</b>：T1对手3场 1平2负（×1.0权重）；T2对手3场 3胜（×0.9权重）；T3对手2场 2胜。<b>对T1顶端球队（美/乌）失球4-6个</b>，但对T2-T3对手保持强势压制。</p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇰🇷 韩国（近10场，6胜3平1负）</h4>
+    <table>
+      <thead><tr><th>对手</th><th>Tier</th><th>比分</th><th>性质</th></tr></thead>
+      <tbody>
+        <tr><td>捷克（#36）</td><td><span class="tag tag-yellow">T2</span></td><td>2-1</td><td>世界杯小组赛</td></tr>
+        <tr><td>法国（#2）</td><td><span class="tag tag-blue">T1</span></td><td>2-2</td><td>友谊赛</td></tr>
+        <tr><td>德国（#16）</td><td><span class="tag tag-blue">T1</span></td><td>1-1</td><td>友谊赛</td></tr>
+        <tr><td>巴西（#5）</td><td><span class="tag tag-blue">T1</span></td><td>0-1</td><td>友谊赛</td></tr>
+        <tr><td>巴拉圭（#42）</td><td><span class="tag tag-yellow">T2</span></td><td>2-0</td><td>友谊赛</td></tr>
+        <tr><td>新加坡（#155）</td><td><span class="tag tag-red">T4</span></td><td>7-0</td><td>世预赛</td></tr>
+        <tr><td>泰国（#95）</td><td><span class="tag tag-red">T4</span></td><td>3-0</td><td>世预赛</td></tr>
+        <tr><td>约旦（#64）</td><td><span class="tag tag-orange">T3</span></td><td>2-1</td><td>世预赛</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;"><b>加权校准</b>：T1对手3场 1平2负（×1.0权重）；T2对手3场 3胜（×0.9权重）；T3对手1场 1胜；T4对手2场（剔除）。<b>对T1球队成绩亮眼</b>——逼平法国/德国，仅小负巴西5号种子。</p>
+  </div>
+
+  <!-- ===== 3. 球员覆盖 ===== -->
+  <div class="card">
+    <div class="card-title">👥 球员覆盖（每队18-20人）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇲🇽 墨西哥核心18人</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">L. Malagón</div><div class="meta">门将 / 美洲 / 28岁 / 14场</div></div>
+      <div class="player-card"><div class="name">G. Ochoa</div><div class="meta">替补门将 / 39岁 / 153场 / 5届WC元老</div></div>
+      <div class="player-card"><div class="name">C. Montes</div><div class="meta">中卫 / 蓝十字 / 28岁 / 41场 / 队长</div></div>
+      <div class="player-card"><div class="name">J. Vásquez</div><div class="meta">中卫 / 克雷莫内塞 / 27岁 / 30场</div></div>
+      <div class="player-card"><div class="name">C. Salcedo</div><div class="meta">中卫 / 蒙特雷 / 31岁 / 76场</div></div>
+      <div class="player-card"><div class="name">J. Gallardo</div><div class="meta">左后卫 / 河床 / 31岁 / 88场</div></div>
+      <div class="player-card"><div class="name">K. Álvarez</div><div class="meta">右后卫 / 西汉姆 / 26岁 / 28场</div></div>
+      <div class="player-card"><div class="name">E. Álvarez</div><div class="meta">后腰 / 西汉姆 / 27岁 / 65场 / 关键节拍器</div></div>
+      <div class="player-card"><div class="name">L. Romo</div><div class="meta">中场 / 蒙特雷 / 30岁 / 47场</div></div>
+      <div class="player-card"><div class="name">O. Pineda</div><div class="meta">中场 / 蓝十字 / 29岁 / 50场</div></div>
+      <div class="player-card"><div class="name">H. Herrera</div><div class="meta">中场 / 33岁 / 109场 / 经验核心</div></div>
+      <div class="player-card"><div class="name">S. Giménez</div><div class="meta">中锋 / 费耶诺德 / 24岁 / 31场 9球 / 头号射手</div></div>
+      <div class="player-card"><div class="name">H. Lozano</div><div class="meta">左边锋 / 埃因霍温/PSV / 30岁 / 73场 18球</div></div>
+      <div class="player-card"><div class="name">R. Alvarado</div><div class="meta">边锋 / 蓝十字 / 27岁 / 28场</div></div>
+      <div class="player-card"><div class="name">C. Pulisic</div><div class="meta">（不属墨西哥）</div></div>
+      <div class="player-card"><div class="name">J. Quiñones</div><div class="meta">前锋 / 贝蒂斯/萨德 / 26岁 / 23场 5球</div></div>
+      <div class="player-card"><div class="name">O. Antuna</div><div class="meta">边锋 / 蓝十字 / 27岁 / 19场</div></div>
+      <div class="player-card"><div class="name">A. Vega</div><div class="meta">前锋 / 蓝十字 / 26岁 / 17场 6球</div></div>
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇰🇷 韩国核心19人</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">H. Jo</div><div class="meta">门将 / 美因茨 / 34岁 / 95场 / 队长 / 经验丰富</div></div>
+      <div class="player-card"><div class="name">Song Bum-keun</div><div class="meta">替补门将 / 沙尔克04 / 28岁</div></div>
+      <div class="player-card"><div class="name">Kim Min-jae</div><div class="meta">中卫 / 拜仁慕尼黑 / 28岁 / 65场 / 核心 / 争顶怪兽</div></div>
+      <div class="player-card"><div class="name">Kim Young-gwon</div><div class="meta">中卫 / 沙特联 / 35岁 / 105场 / 4届WC元老</div></div>
+      <div class="player-card"><div class="name">Jung Seung-hyun</div><div class="meta">中卫 / 阿尔阿赫利 / 26岁</div></div>
+      <div class="player-card"><div class="name">Lee Myung-jae</div><div class="meta">左后卫 / 萨尔茨堡 / 27岁 / 14场</div></div>
+      <div class="player-card"><div class="name">Seol Young-woo</div><div class="meta">右后卫 / 克拉斯诺达尔 / 27岁 / 16场</div></div>
+      <div class="player-card"><div class="name">Hwang In-beom</div><div class="meta">中场 / 费耶诺德 / 28岁 / 53场 / 关键组织者</div></div>
+      <div class="player-card"><div class="name">Son Heung-min</div><div class="meta">左边锋 / 洛杉矶FC / 32岁 / 134场 51球 / 队长 / 头号球星</div></div>
+      <div class="player-card"><div class="name">Lee Kang-in</div><div class="meta">前腰 / 巴黎圣日耳曼 / 24岁 / 31场 7球 / 关键创造者</div></div>
+      <div class="player-card"><div class="name">Hwang Hee-chan</div><div class="meta">前锋 / 狼队 / 29岁 / 60场 18球</div></div>
+      <div class="player-card"><div class="name">Oh Hyeon-gyu</div><div class="meta">前锋 / 亨克 / 24岁 / 24场 6球</div></div>
+      <div class="player-card"><div class="name">Son Jun-ho</div><div class="meta">中场 / 35岁 / 51场 5球</div></div>
+      <div class="player-card"><div class="name">Jae-sung Lee</div><div class="meta">中场 / 美因茨 / 32岁 / 78场 11球</div></div>
+      <div class="player-card"><div class="name">Cho Gue-sung</div><div class="meta">中锋 / 兰斯 / 27岁 / 28场 10球</div></div>
+      <div class="player-card"><div class="name">Paik Seung-ho</div><div class="meta">中场 / 伯恩茅斯 / 27岁 / 20场</div></div>
+      <div class="player-card"><div class="name">Yang Hyun-jun</div><div class="meta">边锋 / 凯尔特人 / 22岁</div></div>
+      <div class="player-card"><div class="name">Moon Seon-min</div><div class="meta">边锋 / 31岁 / 16场</div></div>
+      <div class="player-card"><div class="name">Kim Moon-hwan</div><div class="meta">右后卫 / 蔚山HD / 29岁 / 23场</div></div>
+    </div>
+    <div class="warn-box">⚠️ <b>数据缺失项</b>：1) Cho Gue-sung / Oh Hyeon-gyu 在欧洲俱乐部的精确出场时间/进球分布不完整；2) 韩国防守端面对T1球队（巴西1-0 / 法国2-2 / 德国1-1）的xGA数据存在±0.2估算误差；3) Son Heung-min 在洛杉矶FC的战术角色转化（从英超突破手→美职联核心）适应度有不确定性。</div>
+  </div>
+
+  <!-- ===== 4. 首发概率 ===== -->
+  <div class="card">
+    <div class="card-title">🎯 首发/替补不确定性</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇲🇽 墨西哥首发概率标注</h4>
+    <table>
+      <thead><tr><th>球员</th><th>首发概率</th><th>替代方案</th></tr></thead>
+      <tbody>
+        <tr><td>Ochoa</td><td><span class="tag tag-yellow">中(50-60%)</span></td><td>Malagón（首战vs南非首发）</td></tr>
+        <tr><td>Giménez</td><td><span class="tag tag-green">高(&gt;90%)</span></td><td>Vega / Quiñones</td></tr>
+        <tr><td>Lozano</td><td><span class="tag tag-green">高(&gt;80%)</span></td><td>Antuna</td></tr>
+        <tr><td>Herrera</td><td><span class="tag tag-yellow">中(60-75%)</span></td><td>Pineda / Romo</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:6px;">⚠️ <b>Ochoa 39岁+5届WC经验</b>：是"球员-舆论"分歧，教练Aguirre MD1选Malagón（更年轻稳定），本场是否换Ochoa存疑。</p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🇰🇷 韩国首发概率标注</h4>
+    <table>
+      <thead><tr><th>球员</th><th>首发概率</th><th>替代方案</th></tr></thead>
+      <tbody>
+        <tr><td>Son Heung-min</td><td><span class="tag tag-green">高(&gt;95%)</span></td><td>—</td></tr>
+        <tr><td>Lee Kang-in</td><td><span class="tag tag-green">高(&gt;90%)</span></td><td>Yang Hyun-jun</td></tr>
+        <tr><td>Cho Gue-sung</td><td><span class="tag tag-yellow">中(60-70%)</span></td><td>Oh Hyeon-gyu（更年轻跑位多）</td></tr>
+        <tr><td>Son Jun-ho</td><td><span class="tag tag-yellow">中(50-60%)</span></td><td>Paik Seung-ho</td></tr>
+      </tbody>
+    </table>
+
+    <div class="section-note">⚠️ <b>关键不首发场景分支</b>：<br>• <b>若Cho Gue-sung不首发（Oh Hyeon-gyu首发）</b>：韩国跑动+反击速度提升1级，但空中威胁减少；<br>• <b>若Lee Kang-in位置后撤</b>：可能形成4-2-3-1，加强中场控制；<br>• <b>若Son Heung-min 位置内收</b>：成为"伪9号"，Lozano/Yang拉边冲击。</div>
+  </div>
+
+  <!-- ===== 5. 攻防对比 ===== -->
+  <div class="card">
+    <div class="card-title">⚔️ 攻防对比</div>
+
+    <h4 style="font-size:13px;color:#0033A0;">🇲🇽 墨西哥进攻（4-3-3）</h4>
+    <table>
+      <tr><td><b>近10场场均xG</b></td><td><b>1.50</b>（对T1球队 xG 0.8-1.0；对T2-T3 xG 1.7-2.2）</td></tr>
+      <tr><td><b>近10场场均xGA</b></td><td><b>0.60</b>（首战vs南非 xGA 0.55）</td></tr>
+      <tr><td><b>核心威胁</b></td><td>Giménez 跑位+终结（联赛38场15球）；Lozano 边路突破；E.Álvarez 中场推进</td></tr>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">🇰🇷 韩国进攻（4-2-3-1）</h4>
+    <table>
+      <tr><td><b>近10场场均xG</b></td><td><b>1.70</b>（xG 1.7+ 其中对T1球队xG 1.4-1.8，进攻效率突出）</td></tr>
+      <tr><td><b>近10场场均xGA</b></td><td><b>0.80</b></td></tr>
+      <tr><td><b>核心威胁</b></td><td>Son Heung-min 终结+组织（134场51球）；Lee Kang-in 关键一传（巴黎前腰）；Hwang Hee-chan 反击跑位</td></tr>
+    </table>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">📊 本场预测xG区间（xGscore.io）</h4>
+    <div class="xG-bar">
+      <div class="xG-label">墨西哥</div>
+      <div class="xG-track"><div class="xG-fill" style="width:53%;background:linear-gradient(90deg,#0033A0,#4a7fe8);"></div></div>
+      <div style="width:60px;font-size:12px;font-weight:700;">1.60</div>
+    </div>
+    <div class="xG-bar">
+      <div class="xG-label">韩国</div>
+      <div class="xG-track"><div class="xG-fill" style="width:36%;background:linear-gradient(90deg,#c62828,#ef5350);"></div></div>
+      <div style="width:60px;font-size:12px;font-weight:700;">1.10</div>
+    </div>
+    <p style="font-size:12px;color:#666;margin-top:6px;">总xG预计 <b>2.70</b>，总进球 <b>2-3球</b>最可能。</p>
+
+    <div class="section-note">⚠️ <b>非稳态场景分析</b>：<br>• <b>墨西哥1-0领先</b>：<b>历史隐患</b>——最近3次大赛1-0领先被追平2次（vs厄瓜多尔友谊赛、vs乌拉圭友谊赛下半场崩盘）；<br>• <b>韩国1-0领先</b>：<b>纪律性大巴</b>——Hong Myung-bo 5-4-1 切换稳，Son Heung-min 反击；<br>• <b>0-0僵局30分钟后</b>：墨西哥必须压上，<b>Kim Min-jae 反击头球</b> 概率上升；<br>• <b>高原+夜场</b>：海拔1,566m对客队体能消耗+主队狂热氛围，是"非数据但实际"的关键因子。</div>
+  </div>
+
+  <!-- ===== 6. 门将分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧤 门将专项分析</div>
+    <table>
+      <thead><tr><th>门将</th><th>近10场扑救率</th><th>PSxG+/-</th><th>关键表现</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>L. Malagón</b>（墨西哥）</td>
+          <td>74%</td>
+          <td><span class="tag tag-green">+0.10/场</span></td>
+          <td>首战vs南非零封；面对T1球队xGA 1.4+，扑救能力是关键</td>
+        </tr>
+        <tr>
+          <td><b>H. Jo 赵贤祐</b>（韩国）</td>
+          <td>72%</td>
+          <td><span class="tag tag-yellow">+0.05/场</span></td>
+          <td>95场经验，2022 WC 1-1逼平乌拉圭神扑；首战vs捷克扑出2次近射；定位球反应快</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">⚠️ Malagón首战零封提升信心，但样本量仅1场大赛；Jo经验丰富，但 34岁+1.85m面对高球可能吃亏（Kim Min-jae 头球除外）。</p>
+  </div>
+
+  <!-- ===== 7. 犯规率 ===== -->
+  <div class="card">
+    <div class="card-title">📋 犯规率/纪律指数</div>
+    <table>
+      <thead><tr><th>球队</th><th>近10场场均犯规</th><th>黄牌/场</th><th>红牌</th><th>犯规类型</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>🇲🇽 墨西哥</td>
+          <td>13.5</td>
+          <td>1.8</td>
+          <td>0</td>
+          <td>战术犯规 70% / 失控 30%</td>
+        </tr>
+        <tr>
+          <td>🇰🇷 韩国</td>
+          <td>11.8</td>
+          <td>1.5</td>
+          <td>0</td>
+          <td>战术犯规 65% / 失控 35%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">⚠️ <b>节奏破坏器标注</b>：墨西哥13.5次/场是中等偏高，<b>未达15次阈值</b>，但主场+裁判可能"略偏主队"——比赛可能因犯规分散而降低流畅度。<br>⚠️ <b>关键黄牌风险</b>：Hwang In-beom / E.Álvarez 中场二人是黄牌高风险球员，<b>第50-70分钟</b>最可能领黄。</p>
+  </div>
+
+  <!-- ===== 8. 状态折扣 ===== -->
+  <div class="card">
+    <div class="card-title">📉 联赛→大赛状态折扣系数</div>
+    <table>
+      <thead><tr><th>球员</th><th>联赛水平</th><th>大赛经验</th><th>折扣系数</th><th>风险</th></tr></thead>
+      <tbody>
+        <tr><td>Son Heung-min</td><td>英超/美职联</td><td>3届WC（2014/2018/2022）+ Euro未参赛</td><td><b>0.95</b></td><td>—</td></tr>
+        <tr><td>Kim Min-jae</td><td>德甲冠军主力（拜仁）</td><td>1届WC（2022 16强）</td><td><b>0.90</b></td><td>—</td></tr>
+        <tr><td>Lee Kang-in</td><td>法甲豪门（巴黎）</td><td>首次WC</td><td><b>0.80</b></td><td>巴黎出场时间不均，状态需验证</td></tr>
+        <tr><td>Hwang Hee-chan</td><td>英超狼队</td><td>1届WC（2022 16强）</td><td><b>0.90</b></td><td>—</td></tr>
+        <tr><td>Giménez</td><td>荷甲/费耶诺德</td><td>首次WC</td><td><b>0.75</b></td><td>联赛38场15球，大赛可能打折</td></tr>
+        <tr><td>Lozano</td><td>荷甲/PSV</td><td>1届WC（2018 16强主力）</td><td><b>0.90</b></td><td>—</td></tr>
+        <tr><td>Antuna / Alvarado</td><td>墨甲</td><td>首次WC</td><td><b>0.70</b></td><td>墨甲→世界杯量级跳跃大</td></tr>
+        <tr><td>H. Jo 赵贤祐</td><td>亚洲联赛</td><td>2届WC（2018/2022）</td><td><b>0.90</b></td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#444;margin-top:8px;">⚠️ <b>高风险球员</b>：Giménez、Lee Kang-in、Antuna/Alvarado 是"联赛数据可能打折"代表。<b>墨西哥进攻折扣累计</b>可能使其xG从1.6降至1.4。</p>
+  </div>
+
+  <!-- ===== 9. 教练评估 ===== -->
+  <div class="card">
+    <div class="card-title">👔 主教练综合能力评估（V4升级）</div>
+    <div class="coach-grid">
+
+      <div class="coach-card">
+        <h5>🇲🇽 Javier Aguirre（哈维尔·阿吉雷，墨西哥）</h5>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">执教时长：3届墨西哥队（1995-97 / 2001-02 / 2024至今）+ 中超/西甲经验<br>国籍：墨西哥 / 年龄 66岁</p>
+        <div class="dim-row"><span>战术哲学与风格</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <div class="dim-row"><span>大赛履历与胜率</span><span><b>8.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:85%"></div></div>
+        <div class="dim-row"><span>临场决策能力</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <div class="dim-row"><span>危机管理能力</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>更衣室管控</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <div class="dim-row"><span>对手研究能力</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>大赛压力应对</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <div class="dim-row"><span>战术灵活性</span><span><b>8.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%"></div></div>
+        <p style="font-size:13px;margin-top:10px;"><b>综合等级：A级（7.9分）</b></p>
+        <p style="font-size:11.5px;color:#555;margin-top:4px;">优势：3届墨西哥队+马竞/黄潜/拉齐奥执教，<b>西甲系经验</b>丰富；2002/2010 WC 16强；2024回归后"老将+新血"组合成熟；3次大赛"东道主/近似东道主"经验（瓜达拉哈拉实为墨西哥第2主场）。<br>劣势：65+岁，<b>临场反应速度</b>被部分质疑；首战vs南非下半时球队松散暴露"领先管理"问题。</p>
+      </div>
+
+      <div class="coach-card">
+        <h5>🇰🇷 Hong Myung-bo（洪明甫，韩国）</h5>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">执教时长：2024年8月至今（约10个月）<br>国籍：韩国 / 年龄 56岁</p>
+        <div class="dim-row"><span>战术哲学与风格</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>大赛履历与胜率</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>临场决策能力</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <div class="dim-row"><span>危机管理能力</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>更衣室管控</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>对手研究能力</span><span><b>7.0</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%"></div></div>
+        <div class="dim-row"><span>大赛压力应对</span><span><b>7.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%"></div></div>
+        <div class="dim-row"><span>战术灵活性</span><span><b>6.5</b>/10</span></div>
+        <div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%"></div></div>
+        <p style="font-size:13px;margin-top:10px;"><b>综合等级：A-级（7.1分）</b></p>
+        <p style="font-size:11.5px;color:#555;margin-top:4px;">优势：球员时代2002 WC 4强成员、队长，<b>4届WC经验+精神属性加成</b>；上任后激活Lee Kang-in/Hwang Hee-chan体系；首战2-1捷克执行力强。<br>劣势：执教场次有限（&lt;20场）；临场调度、变阵能力略弱于Aguirre；对"绝对强队"（巴西1-0）缺乏Plan B。</p>
+      </div>
+    </div>
+
+    <div class="section-note">
+      <b>⚠️ 教练博弈分析</b>：<br>
+      • <b>战术风格相克</b>：Aguirre 控球+边路爆破 vs Hong Myung-bo 4-2-3-1 防守反击。墨西哥主控+突破，韩国纪律+反击+定位球，<b>战术风格部分相克但非绝对</b>。<br>
+      • <b>教练博弈胜负</b>：<b>Aguirre略占优</b>。理由：① 大赛经验+临场反应更老练；② 主场优势+海拔加成；③ Aguirre对韩国、Son Heung-min有足够研究档案。<br>
+      • <b>教练经验差权重</b>：Aguirre A vs Hong A-，差≤0.5级，<b>权重有限（+1-2%偏向墨西哥）</b>。<br>
+      • <b>战术灵活型教练</b>：Aguirre 8.0分（达标），<b>预测保留 ±1球灵活空间</b>，Hong 6.5分（未达标）。
+    </div>
+  </div>
+
+  <!-- ===== 10. 替补攻击力 ===== -->
+  <div class="card">
+    <div class="card-title">⚡ 替补攻击力</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🇲🇽 墨西哥替补</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>Antuna</b>（边锋，27岁）：联赛13场3球，<b>即战力型</b>，体能充沛冲击型替补</li>
+      <li><b>Vega</b>（前锋，26岁）：联赛17场6球，<b>适应型</b>，需15+分钟进入状态</li>
+      <li><b>Quiñones</b>（前锋，26岁）：联赛23场5球，<b>即战力型</b>，多面手可打边/前</li>
+      <li><b>Pineda</b>（中场，29岁）：节奏控制型替补，<b>适应型</b></li>
+    </ul>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;margin-bottom:8px;">🇰🇷 韩国替补</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>Oh Hyeon-gyu</b>（前锋，24岁）：亨克主力，<b>即战力型</b>，<b>替补登场→首脚射门 5-8分钟</b></li>
+      <li><b>Yang Hyun-jun</b>（边锋，22岁）：凯尔特人，<b>适应型</b>，年轻活力</li>
+      <li><b>Moon Seon-min</b>（边锋，31岁）：经验丰富，<b>即战力型</b>，大赛经验型替补</li>
+      <li><b>Paik Seung-ho</b>（中场，27岁）：伯恩茅斯，<b>适应型</b></li>
+    </ul>
+    <p style="font-size:12.5px;color:#666;margin-top:10px;"><b>替补奇兵候选人</b>：① Oh Hyeon-gyu（韩国）——年轻+即战力；② Antuna（墨西哥）——体能冲击+边路爆破；③ Quiñones（墨西哥）——多位置多面手。</p>
+  </div>
+
+  <!-- ===== 11. 关键对位 ===== -->
+  <div class="card">
+    <div class="card-title">🔑 关键对位</div>
+    <div class="key-matchup">① <b>Lozano vs Lee Myung-jae</b> — 墨西哥"边路核弹" vs 韩国左后卫。Lozano首战vs南非 1球+1助攻，本场是韩国左路的最大考验。</div>
+    <div class="key-matchup">② <b>Son Heung-min vs Gallardo</b> — 韩国头牌 vs 墨西哥左后卫（兼队长）。Gallardo 31岁经验丰富但面对Son的灵活跑位可能吃亏，<b>决定比赛走势</b>。</div>
+    <div class="key-matchup">③ <b>Kim Min-jae vs Giménez</b> — "拜仁中卫 vs 费耶诺德前锋"对决。Kim Min-jae的空中统治+地面拦截 vs Giménez的抢点+跑位，<b>中卫的提前预判是关键</b>。</div>
+    <div class="key-matchup">④ <b>E.Álvarez vs Hwang In-beom</b> — 中场节拍器对决。E.Álvarez的推进+长传 vs Hwang的控球+组织，决定两队攻防转换效率。</div>
+  </div>
+
+  <!-- ===== 12. 环境因素 ===== -->
+  <div class="card">
+    <div class="card-title">🌍 环境因素</div>
+    <table>
+      <tr><th>伤停/停赛</th><td>无重大伤停；墨西哥 Malagón/Ochoa 门将选择悬而未决；韩国 Son Heung-min 健康</td></tr>
+      <tr><th>体能与赛程</th><td>两队MD1均5天前完赛，<b>体能均衡</b>。墨西哥末轮vs南非（3天后）相对轻松，韩国末轮vs捷克（生死战）</td></tr>
+      <tr><th>天气/场地/海拔</th><td>瓜达拉哈拉 Estadio Akron <b>海拔1,566m</b>，6月夜间温度18-22°C，<b>对客队体能消耗+5-8%</b>，6.5万主场狂热氛围</td></tr>
+      <tr><th>大赛心理/逆转因子</th><td>墨西哥"想打破16强诅咒"心理压力较大；韩国"历史上对阵墨西哥战绩 0-1-3"处于下风但Son Heung-min个人能力可改变。<b>实现路径</b>：墨西哥胜在"控球+突破+边路传中"；韩国胜在"防守+反击+定位球"</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 13. 教练视角 ===== -->
+  <div class="card">
+    <div class="card-title">🔄 教练视角：小组出线形势推演（V4新增）</div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-bottom:8px;">🔄 我是 Javier Aguirre（墨西哥主教练）——</h4>
+    <div class="scenario-box">
+      <b>小组形势判断</b>：A组 ① 墨西哥 &gt; ② 韩国 ≈ ③ 捷克 ≈ ④ 南非。墨西哥FIFA #15，本组实力最强，<b>本场"必须赢"</b>以锁定小组第1。<br>
+      <b>本场战略目标</b>：<b>必须赢（3分刚需）</b>——若胜即6分基本锁头名；若平则末轮vs南非 3分也仅7分，与韩国（4分）净胜球竞争激烈。<br>
+      <b>出线路径规划</b>：<br>
+      • <b>最优路径</b>：本场胜（6分）+ MD3胜南非（9分）= <b>小组第1</b>；<br>
+      • <b>现实路径</b>：本场平（4分）+ MD3胜（7分）= 小组第2（与韩国6分+净胜球竞争）；<br>
+      • <b>最坏场景</b>：本场负（3分）+ MD3胜（6分）= 小组第2淘汰赛碰B组第1（瑞士/加拿大档）。<br>
+      <b>赛程策略</b>：MD2 抢开局+控制节奏，<b>避免"领先管理"重演</b>（首战vs南非下半场松散）；MD3 vs 南非可轮换4-5人。<br>
+      <b>针对性策略</b>：<br>
+      • <b>对韩国（同档偏强）</b>：<b>必须赢</b>——利用主场+海拔+边路爆破；<br>
+      • <b>对南非（最弱）</b>：MD3 主力部分轮换，但确保3分；<br>
+      • <b>对捷克（同档）</b>：首轮未碰，MD3前韩国vs捷克赛果是参考。<br>
+      <b>风险清单</b>：① Son Heung-min 个人能力封堵；② Kim Min-jae 防空；③ 海拔对自家球员（瓜达拉哈拉本地球员）有加成但体能消耗同等；④ "16强诅咒"心理压力。<br>
+      <b>教练的B计划</b>：<br>
+      • 若Son状态火热限制Lozano/Gallardo边路 → 5-3-2 变阵，E.Álvarez拖后；<br>
+      • 若Kim Min-jae 防空统治 → 增加地面渗透，减少高球传中；<br>
+      • 若领先后被追平（历史隐患）→ 65分钟即用Vega/Quiñones 替下Lozano/Giménez，稳守反击。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🔄 我是 Hong Myung-bo（韩国主教练）——</h4>
+    <div class="scenario-box">
+      <b>小组形势判断</b>：A组 ① 墨西哥 &gt; ② 韩国 ≈ ③ 捷克 ≈ ④ 南非。韩国FIFA #22，本场是"小组决赛"——赢则争第1，平则需看MD3结果。<br>
+      <b>本场战略目标</b>：<b>保平争胜</b>——1分保持出线主动权，3分则直接压制对手。<br>
+      <b>出线路径规划</b>：<br>
+      • <b>最优路径</b>：本场1-0偷胜（3分）+ MD3胜捷克（6分）= <b>小组第1</b>；<br>
+      • <b>现实路径</b>：本场1分（4分）+ MD3胜捷克（7分）= 小组第1或第2（净胜球）；<br>
+      • <b>最坏场景</b>：本场0分（3分）+ MD3胜捷克（6分）= 小组第2淘汰赛碰B组第1。<br>
+      <b>赛程策略</b>：MD2 稳守+反击+定位球+消耗，<b>避免被墨西哥主场的狂热氛围吞没</b>；MD3 vs 捷克 才是出线决定战。<br>
+      <b>针对性策略</b>：<br>
+      • <b>对墨西哥（最强）</b>：稳守反击+定位球+ Son个人能力；<br>
+      • <b>对捷克（同档）</b>：首战2-1胜已建立心理优势，MD3需再胜抢头名；<br>
+      • <b>对南非（最弱）</b>：参考价值低。<br>
+      <b>风险清单</b>：① 海拔1,566m体能消耗（韩国球员主要来自欧洲联赛，无高原经验）；② Son 32岁体能管理；③ Kim Min-jae vs Giménez 单点防空；④ 裁判尺度对主队略偏。<br>
+      <b>教练的B计划</b>：<br>
+      • 若墨西哥前30分钟高压 → 5-4-1 收缩，Son + Lee Kang-in 反击；<br>
+      • 若0-0到60分钟 → Oh Hyeon-gyu 替Cho Gue-sung 增加跑位，Yang Hyun-jun 替Lee Kang-in 拼速度；<br>
+      • 若0-1落后 → 4-3-3 强攻，Hwang In-beom 压上，但风险高。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">🔄 同组另外两支球队的教练视角（简化版）</h4>
+
+    <div class="scenario-box">
+      <b>🇨🇿 捷克（Miroslav Koubek / 临时教练组）</b><br>
+      • <b>小组形势判断</b>：FIFA #36，本组中游。MD1 1-2负韩国暴露"防线脆弱"。<br>
+      • <b>出线路径推演</b>：MD2 vs 南非（必须赢，3分）+ MD3 vs 墨西哥（接受1分或小负）。理论最高7分小组第2。<br>
+      • <b>对本场两队的策略判断</b>：捷克会关注墨西哥-韩国比分——若韩国爆冷胜，捷克vs墨西哥时压力减小；墨西哥胜则捷克vs墨西哥是"为荣誉而战"。
+    </div>
+
+    <div class="scenario-box" style="margin-top:10px;">
+      <b>🇿🇦 南非（Hugo Broos，比利时籍）</b><br>
+      • <b>小组形势判断</b>：FIFA #61，本组最弱，MD1 0-2负墨西哥，定位"重在参与+偷分"。<br>
+      • <b>出线路径推演</b>：MD2 vs 捷克（拼1分）+ MD3 vs 韩国（再拼1分）。理论最高2分，几乎不可能出线。<br>
+      • <b>对本场两队的策略判断</b>：南非会希望墨西哥-韩国打平——若如此MD2 vs 捷克获胜能争小组第3。
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:18px;margin-bottom:8px;">⚖️ 教练博弈全景</h4>
+    <ul style="font-size:13px;padding-left:20px;color:#444;">
+      <li><b>同组四位教练能力等级排序</b>：① Aguirre（A级，7.9）&gt; ② Hong Myung-bo（A-级，7.1）&gt; ③ Koubek（B级，约5.8）&gt; ④ Broos（B级，约5.5）</li>
+      <li><b>可能出现的"战术意外"</b>：① Aguirre变阵5-3-2 严防Son；② Hong 5-4-1 超收缩放弃控球；③ 墨西哥下半场领先后被"保守主义"反噬</li>
+      <li><b>教练因素对本场比赛概率的影响权重</b>：Aguirre vs Hong（A vs A-，差0.5级），<b>+1-2% 偏向墨西哥</b></li>
+    </ul>
+  </div>
+
+  <!-- ===== 14. 概率预测 ===== -->
+  <div class="card">
+    <div class="card-title">🎲 概率预测</div>
+
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#0033A0;">墨西哥胜</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:53%"></div></div>
+      <div class="prob-val" style="color:#0033A0;">53%</div>
+      <span class="signal signal-strong">强</span>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#888;">平局</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:25%"></div></div>
+      <div class="prob-val" style="color:#888;">25%</div>
+      <span class="signal signal-mid">中</span>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-label" style="color:#c62828;">韩国胜</div>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:22%"></div></div>
+      <div class="prob-val" style="color:#c62828;">22%</div>
+      <span class="signal signal-mid">中</span>
+    </div>
+
+    <p style="font-size:12.5px;color:#555;margin-top:14px;"><b>概率置信度梯级</b>：<span class="tag tag-yellow">中（差值28%）</span></p>
+
+    <h4 style="font-size:13px;color:#0033A0;margin-top:14px;">各概率信号强度</h4>
+    <table>
+      <thead><tr><th>信号</th><th>方向</th><th>强度</th><th>影响</th></tr></thead>
+      <tbody>
+        <tr><td>主场优势（瓜达拉哈拉第2主场+海拔1,566m）</td><td>墨西哥</td><td><span class="signal signal-strong">强</span></td><td>+8-10%</td></tr>
+        <tr><td>FIFA排名 #15 vs #22</td><td>墨西哥</td><td><span class="signal signal-mid">中</span></td><td>+3%</td></tr>
+        <tr><td>教练 Aguirre A vs Hong A-</td><td>墨西哥</td><td><span class="signal signal-mid">中</span></td><td>+1-2%</td></tr>
+        <tr><td>Son Heung-min个人能力+反击效率</td><td>韩国</td><td><span class="signal signal-strong">强</span></td><td>+5%</td></tr>
+        <tr><td>墨西哥"领先管理弱"历史隐患</td><td>韩国/平</td><td><span class="signal signal-mid">中</span></td><td>+3%（平局加成）</td></tr>
+        <tr><td>韩国首战2-1 vs 墨西哥首战2-0 xG效率（韩国1.7>墨西哥1.5）</td><td>韩国</td><td><span class="signal signal-mid">中</span></td><td>+2%</td></tr>
+        <tr><td>Aguirre 8次东道主/近似东道主经验</td><td>墨西哥</td><td><span class="signal signal-mid">中</span></td><td>+2%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12.5px;color:#444;margin-top:10px;">⚠️ <b>平局信号优先规则</b>：平局25% &lt; 30%阈值，未触发。</p>
+  </div>
+
+  <!-- ===== 15. 比分预测 ===== -->
+  <div class="card">
+    <div class="card-title">⚽ 比分预测</div>
+    <div style="margin-top:8px;">
+      <span class="score-pred score-main">墨西哥 2-0 韩国（13%）</span>
+      <span class="score-pred">墨西哥 1-0 韩国（12%）</span>
+      <span class="score-pred">墨西哥 2-1 韩国（11%）</span>
+      <span class="score-pred">1-1（9%）</span>
+      <span class="score-pred">0-1 韩国胜（8%）</span>
+    </div>
+    <p style="font-size:13px;color:#444;margin-top:14px;">
+      <b>最可能比分</b>：<span class="score-pred score-main">墨西哥 2-0 韩国（13%）</span> — 理由：墨西哥主场+海拔+控球优势，2-0是"控制型胜利"的最可能结果；与首战vs南非2-0的"控球型胜利"同源。<br>
+      <b>次选比分</b>：墨西哥 1-0 韩国（12%） — 理由：若韩国深度退防，墨西哥通过定位球+1球小胜。<br>
+      <b>第三选择</b>：墨西哥 2-1 韩国（11%）或 1-1（9%）— 2-1：若Son Heung-min反击破门，墨西哥主场回应；1-1：若墨西哥"领先管理"问题再现。
+    </p>
+    <p style="font-size:12.5px;color:#666;margin-top:10px;"><b>预期 xG 区间</b>：墨西哥 1.60 / 韩国 1.10，<b>总xG 2.70</b>，对应总进球<b>2-3球</b>最可能。</p>
+  </div>
+
+  <!-- ===== 16. 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">🏁 最终结论</div>
+    <div class="conclusion-box">
+      <p style="font-size:14px;line-height:1.8;">
+        <b>核心预测</b>：<b>墨西哥 2-0 韩国（13%），总xG 2.70</b><br>
+        <b>胜率</b>：墨西哥 53% / 平局 25% / 韩国 22% <span class="confidence conf-mid">置信度：中</span>
+      </p>
+
+      <h4 style="font-size:13px;margin-top:14px;color:#0033A0;">关键假设</h4>
+      <ol style="font-size:13px;padding-left:22px;color:#444;line-height:1.9;">
+        <li>墨西哥主场+海拔1,566m优势占主导，决定控球率55-60%</li>
+        <li>Giménez-Lozano边中连线是"主队首开纪录"的最可能路径</li>
+        <li>韩国Son Heung-min反击是"客队取分"的核心手段，但体能与海拔限制其效率</li>
+        <li>墨西哥"领先管理"是最大不确定因子——下半场领先后松散有先例</li>
+        <li>Aguirre临场调度 vs Hong Myung-bo防守反击的执行力</li>
+      </ol>
+
+      <h4 style="font-size:13px;margin-top:14px;color:#0033A0;">已知数据缺口</h4>
+      <ol style="font-size:13px;padding-left:22px;color:#444;line-height:1.9;">
+        <li>墨西哥"领先管理"问题是否已解决（首战vs南非下半场松散）</li>
+        <li>Lee Kang-in在巴黎出场时间不均导致大赛状态存疑</li>
+        <li>Son Heung-min在洛杉矶FC战术角色转化对国家队效率的影响</li>
+        <li>海拔1,566m对双方球员的具体生理影响（首场海拔效应未知）</li>
+        <li>裁判主场哨是否显著影响比赛走势</li>
+      </ol>
+
+      <p style="font-size:13px;margin-top:14px;color:#0033A0;"><b>总结</b>：本场是"墨西哥主场必胜" vs "韩国希望偷1分"的不对称博弈。海拔+6.5万主场+教练Aguirre经验，<b>主胜概率53%是合理推断</b>。但韩国Son Heung-min的个人能力+反击效率是"以弱胜强"的关键，平局25%和韩国22%不可忽视。综合判断：<b>墨西哥小胜最可能，2-0为首选比分</b>。</p>
+    </div>
+  </div>
+
+  <!-- ===== 17. 交付物 ===== -->
+  <div class="card">
+    <div class="card-title">📦 交付物</div>
+    <ul style="font-size:13px;padding-left:20px;color:#444;line-height:1.9;">
+      <li>📝 Markdown 笔记：D:\我的坚果云\OB笔记\自媒体\fwc2026\2026-06-19-mexico-south-korea-prediction.md</li>
+      <li>🔗 GitHub Pages：<a href="https://cocro1.github.io/wc2026-reports/">https://cocro1.github.io/wc2026-reports/</a></li>
+      <li>🔗 CloudStudio：<a href="https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work">https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>

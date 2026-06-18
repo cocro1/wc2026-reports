@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026世界杯预测报告 · 土耳其 vs 巴拉圭（2026-06-19）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
+  .header { background:linear-gradient(135deg,#0033A0 0%,#1a4fc4 100%); color:white; padding:32px 24px 28px; text-align:center; }
+  .header h1 { font-size:20px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:12px; opacity:0.8; margin-top:6px; }
+  .back-link { display:inline-block; margin:16px 24px 0; font-size:13px; color:#0033A0; text-decoration:none; font-weight:600; }
+  .back-link:hover { text-decoration:underline; }
+  .container { max-width:820px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:4px; font-weight:600; }
+  .tag-blue { background:#e8f0fe; color:#0033A0; }
+  .tag-green { background:#e8f5e9; color:#2e7d32; }
+  .tag-red { background:#fde8e8; color:#c62828; }
+  .tag-yellow { background:#fff8e1; color:#f57f17; }
+  .tag-orange { background:#fff3e0; color:#e65100; }
+  .prob-bar { display:flex; align-items:center; gap:10px; margin:8px 0; }
+  .prob-label { width:60px; font-size:13px; font-weight:600; text-align:right; }
+  .prob-track { flex:1; height:20px; background:#eef1f6; border-radius:10px; overflow:hidden; }
+  .prob-fill { height:100%; border-radius:10px; }
+  .prob-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .prob-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .prob-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .prob-val { width:44px; font-size:13px; font-weight:700; }
+  .score-pred { display:inline-block; background:#f0f4ff; border:1.5px solid #b0c4f5; border-radius:8px; padding:6px 16px; margin:4px 8px 4px 0; font-size:15px; font-weight:700; color:#0033A0; }
+  .score-main { background:#0033A0; color:white; border-color:#0033A0; }
+  .flag { font-size:20px; }
+  .match-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:600px) { .match-info-grid { grid-template-columns:1fr; } }
+  .match-info-item { background:#f8fafd; border-radius:8px; padding:12px 14px; }
+  .match-info-label { font-size:11px; color:#888; text-transform:uppercase; letter-spacing:0.5px; }
+  .match-info-val { font-size:14px; font-weight:600; color:#1a1a2e; margin-top:2px; }
+  .section-note { background:#fffbea; border-left:4px solid #f5a623; padding:10px 14px; font-size:12.5px; color:#6b4c00; border-radius:0 6px 6px 0; margin-top:12px; }
+  .conclusion-box { background:linear-gradient(135deg,#f0f4ff 0%,#e8f0fe 100%); border:1.5px solid #b0c4f5; border-radius:10px; padding:20px; margin-top:8px; }
+  .confidence { display:inline-block; padding:3px 12px; border-radius:20px; font-size:12px; font-weight:700; margin-left:8px; }
+  .conf-mid { background:#fff3e0; color:#e65100; }
+  .conf-low { background:#fde8e8; color:#c62828; }
+  .conf-high { background:#e8f5e9; color:#2e7d32; }
+  .player-name { font-weight:600; color:#0033A0; }
+  .vs-badge { display:inline-block; background:#0033A0; color:white; font-weight:800; font-size:14px; padding:4px 12px; border-radius:4px; letter-spacing:1px; }
+  .warn-box { background:#fff5f5; border:1px solid #ffcdd2; border-radius:8px; padding:14px; margin-top:12px; font-size:12.5px; color:#c62828; }
+  .key-matchup { display:flex; align-items:center; gap:8px; padding:8px 12px; background:#f8fafd; border-radius:8px; margin-bottom:8px; border-left:3px solid #0033A0; }
+  .xG-bar { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .xG-label { font-size:12px; font-weight:600; width:50px; text-align:right; }
+  .xG-track { flex:1; height:16px; background:#eef1f6; border-radius:8px; overflow:hidden; }
+  .xG-fill { height:100%; border-radius:8px; }
+  .footer-d { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
+  .signal { display:inline-block; padding:1px 8px; border-radius:10px; font-size:10px; font-weight:700; margin-right:4px; }
+  .signal-strong { background:#e8f5e9; color:#2e7d32; }
+  .signal-mid { background:#fff8e1; color:#f57f17; }
+  .signal-weak { background:#fde8e8; color:#c62828; }
+  .player-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  @media(max-width:600px) { .player-grid { grid-template-columns:1fr; } }
+  .player-card { background:#f8fafd; border-radius:6px; padding:8px 10px; font-size:12px; border:1px solid #eef1f6; }
+  .player-card .name { font-weight:700; color:#0033A0; }
+  .player-card .meta { font-size:10.5px; color:#666; }
+  .coach-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  @media(max-width:600px) { .coach-grid { grid-template-columns:1fr; } }
+  .coach-card { background:#f8fafd; border-radius:8px; padding:14px; border:1px solid #eef1f6; }
+  .coach-card h5 { color:#0033A0; font-size:13px; margin-bottom:8px; }
+  .dim-row { display:flex; justify-content:space-between; align-items:center; padding:3px 0; font-size:12px; }
+  .dim-bar { width:80px; height:8px; background:#eef1f6; border-radius:4px; overflow:hidden; }
+  .dim-fill { height:100%; border-radius:4px; }
+  .dim-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .group-table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  .group-table th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:8px 10px; text-align:center; border-bottom:2px solid #d0dffa; font-size:12px; }
+  .group-table td { padding:7px 10px; border-bottom:1px solid #eef1f6; text-align:center; font-size:12.5px; }
+  .scenario-box { background:#f8fafd; border-radius:8px; padding:12px 14px; margin-top:10px; border-left:3px solid #0033A0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏆 2026 FIFA 世界杯 · 赛果预测报告</h1>
+  <p>数据驱动 · 多维度分析</p>
+  <p>数据更新时间：2026-06-18 19:30</p>
+</div>
+
+<a class="back-link" href="../index.html">← 返回首页（所有报告）</a>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">📋 比赛信息</div>
+    <div style="text-align:center;margin-bottom:16px;">
+      <span class="flag">🇹🇷</span>
+      <span class="vs-badge">VS</span>
+      <span class="flag">🇵🇾</span>
+    </div>
+    <div style="text-align:center;font-size:18px;font-weight:700;margin-bottom:16px;">
+      <span style="color:#0033A0;">土耳其</span> vs <span style="color:#c62828;">巴拉圭</span>
+    </div>
+    <div class="match-info-grid">
+      <div class="match-info-item">
+        <div class="match-info-label">比赛阶段</div>
+        <div class="match-info-val">D组 小组赛第2轮</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">开球时间</div>
+        <div class="match-info-val">2026-06-19 22:00 ET（北京时间 06-20 10:00）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">比赛场地</div>
+        <div class="match-info-val">堪萨斯城 箭头体育场（容量 76,000）</div>
+      </div>
+      <div class="match-info-item">
+        <div class="match-info-label">主裁判</div>
+        <div class="match-info-val">待 FIFA 公布</div>
+      </div>
+    </div>
+    <div class="section-note">
+      <strong>🏟️ 焦点战：</strong>土耳其 FIFA 排名第 42，巴拉圭排名第 56。本场是 D 组第二档 vs 第三档对决，预计两队都会踢得相对保守，平局信号显著。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 核心预测</div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+      <div>
+        <div style="font-size:13px;color:#666;">最可能比分</div>
+        <div style="font-size:22px;font-weight:800;color:#0033A0;margin-top:4px;">土耳其 1 - 1 巴拉圭 <span class="confidence conf-mid">中</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:12px;color:#666;">该具体比分概率</div>
+        <div style="font-size:18px;font-weight:700;color:#0033A0;margin-top:2px;">~13%</div>
+      </div>
+    </div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin:14px 0 8px;">📊 胜平负概率分布</h4>
+    <div class="prob-bar">
+      <span class="prob-label">🇹🇷 土耳其胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-blue" style="width:40%;"></div></div>
+      <span class="prob-val">40%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">⚪ 平局</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-gray" style="width:34%;"></div></div>
+      <span class="prob-val">34%</span>
+    </div>
+    <div class="prob-bar">
+      <span class="prob-label">🇵🇾 巴拉圭胜</span>
+      <div class="prob-track"><div class="prob-fill prob-fill-red" style="width:26%;"></div></div>
+      <span class="prob-val">26%</span>
+    </div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin:18px 0 8px;">⚽ 其他可能比分</h4>
+    <div>
+      <span class="score-pred">1-1</span>
+      <span class="score-pred">1-0</span>
+      <span class="score-pred">0-0</span>
+      <span class="score-pred">2-1</span>
+      <span class="score-pred">2-0</span>
+      <span class="score-pred">1-2</span>
+    </div>
+    <div class="section-note">
+      <strong>⚠️ 平局信号优先：</strong>本场平局概率 34% ≥ 30% 阈值，且土耳其胜率 40% < 45% 临界线，预测首选平局（1-1）。总进球预期 1.8-2.5 球，比分差 ≤1 球概率约 80%。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📈 xG 预期进球模型</div>
+    <table>
+      <thead>
+        <tr><th>球队</th><th>基础 xG</th><th>对手强度调整</th><th>门将表现调整</th><th>最终 xG 区间</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="player-name">🇹🇷 土耳其</span></td>
+          <td>1.45</td>
+          <td>+0.05（vs Tier 3）</td>
+          <td>+0.05（Çalhanoğlu 创造力）</td>
+          <td><strong>1.20 - 1.65</strong></td>
+        </tr>
+        <tr>
+          <td><span class="player-name">🇵🇾 巴拉圭</span></td>
+          <td>1.15</td>
+          <td>+0.10（vs Tier 2 防守）</td>
+          <td>-0.05（进攻乏力）</td>
+          <td><strong>0.90 - 1.35</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="section-note">
+      <strong>📊 xG 解读：</strong>土耳其 xG 优势约 0.3 球，但巴拉圭防守反击体系 xG 转化率高。两队综合实力接近，符合"平局信号"。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">👥 阵容与关键球员</div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin-bottom:8px;">🇹🇷 土耳其（预计首发 4-2-3-1）</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">Çakir</div><div class="meta">门将 · 加拉塔萨雷</div></div>
+      <div class="player-card"><div class="name">Çelik</div><div class="meta">右后卫 · 罗马</div></div>
+      <div class="player-card"><div class="name">Bardakcı</div><div class="meta">中卫 · 加拉塔萨雷</div></div>
+      <div class="player-card"><div class="name">Demiral</div><div class="meta">中卫 · 沙特联</div></div>
+      <div class="player-card"><div class="name">Kadroğlu</div><div class="meta">左后卫 · 费内巴切</div></div>
+      <div class="player-card"><div class="name">Çalhanoğlu</div><div class="meta">中场 · 国米 · 核心</div></div>
+      <div class="player-card"><div class="name">Özcan</div><div class="meta">中场 · 拜仁</div></div>
+      <div class="player-card"><div class="name">Yıldız</div><div class="meta">边锋 · 尤文</div></div>
+      <div class="player-card"><div class="name">Güler</div><div class="meta">前腰 · 皇马</div></div>
+      <div class="player-card"><div class="name">Aktürkoğlu</div><div class="meta">边锋 · 本菲卡</div></div>
+      <div class="player-card"><div class="name">Yılmaz</div><div class="meta">前锋 · 沙特联 · 队长</div></div>
+    </div>
+    <div class="section-note">
+      <strong>核心三叉戟：</strong>Çalhanoğlu（国米核心）+ Güler（皇马天才）+ Yıldız（尤文新星）是本届土耳其最大亮点，预选赛 8 战 18 球。
+    </div>
+
+    <h4 style="font-size:13.5px;color:#0033A0;margin:18px 0 8px;">🇵🇾 巴拉圭（预计首发 4-4-2 防守反击）</h4>
+    <div class="player-grid">
+      <div class="player-card"><div class="name">Silva</div><div class="meta">门将 · 自由身（曾效力南安普顿）</div></div>
+      <div class="player-card"><div class="name">Espinoza</div><div class="meta">右后卫 · 河床</div></div>
+      <div class="player-card"><div class="name">Balbuena</div><div class="meta">中卫 · 科林蒂安</div></div>
+      <div class="player-card"><div class="name">Alderete</div><div class="meta">中卫 · 赫塔费</div></div>
+      <div class="player-card"><div class="name">Arzamendia</div><div class="meta">左后卫 · 河床</div></div>
+      <div class="player-card"><div class="name">Almirón</div><div class="meta">中场 · 纽卡斯尔</div></div>
+      <div class="player-card"><div class="name">Gomes</div><div class="meta">中场 · 博卡青年</div></div>
+      <div class="player-card"><div class="name">Enciso</div><div class="meta">中场 · 布莱顿</div></div>
+      <div class="player-card"><div class="name">Sanabria</div><div class="meta">前锋 · 都灵</div></div>
+      <div class="player-card"><div class="name">González</div><div class="meta">前锋 · 自由身</div></div>
+    </div>
+    <div class="section-note">
+      <strong>核心依赖：</strong>Almirón 是巴拉圭的"马拉多纳式"核心，纽卡斯尔赛季表现出色（4 球 5 助攻）。Sanabria 终结能力有限（场均 0.4 球），整体火力不足。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🧤 门将专项分析</div>
+    <table>
+      <thead>
+        <tr><th>门将</th><th>球队</th><th>PSxG+/-</th><th>扑救率</th><th>大赛经验</th><th>关键判读</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="player-name">Çakir</span></td>
+          <td>🇹🇷 土耳其</td>
+          <td>+0.08</td>
+          <td>73%</td>
+          <td>2届大赛</td>
+          <td>加拉塔萨雷主力，但大赛失误率偏高</td>
+        </tr>
+        <tr>
+          <td><span class="player-name">Silva</span></td>
+          <td>🇵🇾 巴拉圭</td>
+          <td>-0.05</td>
+          <td>68%</td>
+          <td>3届大赛</td>
+          <td>经验老到但状态下滑，可能被替补 Fernández 顶替</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📊 战术风格匹配</div>
+    <table>
+      <thead>
+        <tr><th>维度</th><th>🇹🇷 土耳其</th><th>🇵🇾 巴拉圭</th><th>对比</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>战术体系</td><td>4-2-3-1 控球进攻</td><td>4-4-2 防守反击</td><td>风格互克</td></tr>
+        <tr><td>控球率预期</td><td>55-60%</td><td>40-45%</td><td>土耳其主导</td></tr>
+        <tr><td>高位逼抢</td><td>中高（6/10）</td><td>中低（4/10）</td><td>土耳其主动</td></tr>
+        <tr><td>定位球威胁</td><td>中（Demiral 头球）</td><td>中（Balbuena 头球）</td><td>五五开</td></tr>
+        <tr><td>犯规率（场均）</td><td>11.5 次</td><td>14.0 次</td><td>巴拉圭将频繁犯规</td></tr>
+        <tr><td>反击速度</td><td>中（Yıldız 突击）</td><td>高（Almirón 突击）</td><td>巴拉圭反击更锐</td></tr>
+      </tbody>
+    </table>
+    <div class="section-note">
+      <strong>🎯 关键对抗：</strong>Çalhanoğlu 的长传调度 vs 巴拉圭密集防守。Almirón 的反击是巴拉圭最大威胁。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ 纪律与心理</div>
+    <table>
+      <thead>
+        <tr><th>维度</th><th>🇹🇷 土耳其</th><th>🇵🇾 巴拉圭</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>纪律指数（黄/场均）</td><td>1.7</td><td>2.2</td></tr>
+        <tr><td>得牌概率（≥1红）</td><td>8%</td><td>14%</td></tr>
+        <tr><td>大赛心理压力</td><td>中（2002 季军阴影，渴望复兴）</td><td>中（连续 5 届世界杯经验丰富）</td></tr>
+        <tr><td>逆转/绝杀能力</td><td>中（Yılmaz 经验丰富）</td><td>中低（进攻乏力）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎓 主教练综合能力评估（V4 升级）</div>
+    <div class="coach-grid">
+      <div class="coach-card">
+        <h5>🇹🇷 Vincenzo Montella（意大利籍，土耳其）</h5>
+        <div class="dim-row"><span>战术哲学</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:80%;"></div></div><span>8/10</span></div>
+        <div class="dim-row"><span>大赛履历</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%;"></div></div><span>6/10</span></div>
+        <div class="dim-row"><span>临场决策</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%;"></div></div><span>7.5/10</span></div>
+        <div class="dim-row"><span>危机管理</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%;"></div></div><span>7/10</span></div>
+        <div class="dim-row"><span>更衣室管控</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%;"></div></div><span>7.5/10</span></div>
+        <div class="dim-row"><span>对手研究</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:75%;"></div></div><span>7.5/10</span></div>
+        <div class="dim-row"><span>压力应对</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%;"></div></div><span>7/10</span></div>
+        <div class="dim-row"><span>体系成熟度</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:70%;"></div></div><span>7/10</span></div>
+        <div style="margin-top:8px;font-size:12px;"><strong>综合评级：B+ 级（71.5/100）</strong> · 意大利籍教头，1.5 年任期激活土耳其青年军。</div>
+      </div>
+      <div class="coach-card">
+        <h5>🇵🇾 Alfaro Barros（巴拉圭）</h5>
+        <div class="dim-row"><span>战术哲学</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%;"></div></div><span>6.5/10</span></div>
+        <div class="dim-row"><span>大赛履历</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%;"></div></div><span>6/10</span></div>
+        <div class="dim-row"><span>临场决策</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%;"></div></div><span>6/10</span></div>
+        <div class="dim-row"><span>危机管理</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%;"></div></div><span>6.5/10</span></div>
+        <div class="dim-row"><span>更衣室管控</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%;"></div></div><span>6.5/10</span></div>
+        <div class="dim-row"><span>对手研究</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%;"></div></div><span>6/10</span></div>
+        <div class="dim-row"><span>压力应对</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:65%;"></div></div><span>6.5/10</span></div>
+        <div class="dim-row"><span>体系成熟度</span><div class="dim-bar"><div class="dim-fill dim-fill-blue" style="width:60%;"></div></div><span>6/10</span></div>
+        <div style="margin-top:8px;font-size:12px;"><strong>综合评级：B- 级（61.0/100）</strong> · 本土教练，专注防守反击体系。</div>
+      </div>
+    </div>
+    <div class="section-note">
+      <strong>教练博弈：</strong>B+ 级 Montella vs B- 级 Barros，等级差 +1 档，预测概率微调土耳其 +2%。Montella 倾向控球进攻，但面对密集防守时临场调整是关键。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌍 场地与环境因子</div>
+    <table>
+      <thead>
+        <tr><th>因子</th><th>影响</th><th>概率调整</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>箭头体育场（开放）</td><td>中性</td><td>0%</td></tr>
+        <tr><td>海拔 265m</td><td>轻微影响</td><td>0%</td></tr>
+        <tr><td>温度 ~28°C（6月堪萨斯）</td><td>高温耗体力</td><td>平局 +1%</td></tr>
+        <tr><td>无明显主客倾向</td><td>中性</td><td>0%</td></tr>
+        <tr><td>赛程：第2场两队均需拼</td><td>可能偏保守</td><td>平局 +2%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔄 教练视角：小组出线形势推演（V4 新增）</div>
+
+    <div class="scenario-box">
+      <h5 style="color:#0033A0;font-size:13px;margin-bottom:8px;">🇹🇷 Montella 视角</h5>
+      <p style="font-size:13px;">"首战我们必须拿分。巴拉圭是典型的南美防守反击球队，密集防守会非常难破。Çalhanoğlu 和 Güler 需要在前场创造空间，Yıldız 边路突击是关键。一分可接受，但我想要 3 分。如果上半场闷平，下半场我可能换上 Yılmaz 高中锋冲击。预测 1-1 平局或 1-0 小胜。"</p>
+    </div>
+
+    <div class="scenario-box">
+      <h5 style="color:#0033A0;font-size:13px;margin-bottom:8px;">🇵🇾 Barros 视角</h5>
+      <p style="font-size:13px;">"土耳其有 Çalhanoğlu 和 Güler 这样的技术型球员，我们的控球能力不如对手。必须用 4-4-2 收缩防守，让出控球率，靠 Almirón 的反击打身后。定位球是重要得分手段。1 分是现实目标，0-0 或 1-1 平局都完全可以接受。如果能偷一个 1-0 就完美了。"</p>
+    </div>
+
+    <h4 style="font-size:13px;color:#0033A0;margin:14px 0 8px;">📊 D组形势推演</h4>
+    <table class="group-table">
+      <thead>
+        <tr><th>球队</th><th>第1轮预期</th><th>本场胜/平/负</th><th>末轮</th><th>出线概率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>土耳其</strong></td><td>vs 巴拉圭</td><td>胜/平（74%）</td><td>vs 欧洲区附加赛胜者</td><td>52%</td></tr>
+        <tr><td><strong>巴拉圭</strong></td><td>vs 土耳其</td><td>平/负（60%）</td><td>vs 美国</td><td>26%</td></tr>
+      </tbody>
+    </table>
+    <div class="section-note">
+      D组形势预测：美国+澳大利亚为小组前二种子，土耳其与巴拉圭争夺附加赛胜者之外的出线机会。本场平局对两队都可接受。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔑 关键对位与胜负手</div>
+    <div class="key-matchup"><strong>1.</strong> Çalhanoğlu（🇹🇷）vs Gomes（🇵🇾） — 组织核心对决</div>
+    <div class="key-matchup"><strong>2.</strong> Yıldız（🇹🇷）vs Espinoza（🇵🇾） — 边路突击</div>
+    <div class="key-matchup"><strong>3.</strong> Almirón（🇵🇾）vs Demiral（🇹🇷） — 反击 vs 防空</div>
+    <div class="key-matchup"><strong>4.</strong> Yılmaz（🇹🇷）vs Balbuena（🇵🇾） — 高中锋争顶</div>
+    <div class="key-matchup"><strong>5.</strong> Montella 控球 vs Barros 大巴阵 — 进攻多样性 vs 死守</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🌡️ 风险评估</div>
+    <table>
+      <thead><tr><th>风险</th><th>概率</th><th>影响</th></tr></thead>
+      <tbody>
+        <tr><td>Çalhanoğlu 受伤提前下场</td><td>10%</td><td>土耳其进攻瘫痪</td></tr>
+        <tr><td>Yıldız 突击超水平</td><td>22%</td><td>土耳其可能 2-0+ 大胜</td></tr>
+        <tr><td>Almirón 单场爆发</td><td>15%</td><td>巴拉圭可能 1-0 偷分</td></tr>
+        <tr><td>高温+雷暴</td><td>10%</td><td>节奏变慢，0-0 概率上升</td></tr>
+        <tr><td>主裁判罚尺度收紧</td><td>12%</td><td>巴拉圭核心被限制</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏁 综合结论与建议</div>
+    <div class="conclusion-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:10px;">📌 核心判断</h4>
+      <p style="font-size:13.5px;line-height:1.8;">
+        <strong>1. 实力接近</strong>：FIFA 排名 42 vs 56，球员效力联赛级别接近（土耳其略优）。
+      </p>
+      <p style="font-size:13.5px;line-height:1.8;margin-top:6px;">
+        <strong>2. 风格互克</strong>：土耳其控球进攻 vs 巴拉圭密集防守，进攻效率被压制。
+      </p>
+      <p style="font-size:13.5px;line-height:1.8;margin-top:6px;">
+        <strong>3. 平局信号强</strong>：双方都有"1 分就够"的动机，比赛节奏偏慢，定位球和反击是主旋律。
+      </p>
+      <p style="font-size:13.5px;line-height:1.8;margin-top:6px;">
+        <strong>4. 教练博弈</strong>：B+ 级 Montella 控球 vs B- 级 Barros 大巴阵，但后者战术纪律强。
+      </p>
+      <h4 style="color:#0033A0;font-size:15px;margin:14px 0 10px;">🎯 最终预测</h4>
+      <p style="font-size:14px;line-height:1.8;background:white;padding:14px;border-radius:8px;border-left:4px solid #0033A0;">
+        <strong>土耳其 1-1 巴拉圭（概率 13%）/ 1-0（11%）/ 0-0（10%）/ 2-1（9%）/ 2-0（8%）</strong><br>
+        综合胜率：<strong style="color:#0033A0;">土耳其 40% · 平局 34% · 巴拉圭 26%</strong>，<span class="confidence conf-mid">置信度 中</span>（首选平局）
+      </p>
+    </div>
+  </div>
+
+  <div class="card" style="background:#f0f4ff;border:1px solid #b0c4f5;">
+    <div class="card-title">📚 数据来源</div>
+    <ul style="font-size:12.5px;color:#444;line-height:1.9;padding-left:20px;">
+      <li>XGscore.io · Opta Sports 数据</li>
+      <li>WorldCupWiki · 土耳其vs巴拉圭完整预测</li>
+      <li>ESPN FC · 球员状态追踪</li>
+      <li>Transfermarkt · 球员市场价值</li>
+      <li>FIFA.com · 世界杯官方数据</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer-d">
+  报告数据仅供参考，不构成投注建议
+</div>
+
+</body>
+</html>
