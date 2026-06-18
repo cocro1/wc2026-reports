@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 英格兰 vs 克罗地亚（2026-06-17）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>英格兰 vs 克罗地亚 · 2026年6月17日 · D组第1轮 · AT&T Stadium 达拉斯 · 复盘时间：2026年6月18日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+        <div class="name">英格兰</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">英格兰 2-1（首选·置信度中等）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num" style="color:#2e7d32;">4</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">2</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-yellow">英格兰 4-2（方向正确·幅度低估）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇭🇷</div>
+        <div class="name">克罗地亚</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">胜平负命中（英格兰胜）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">双方进球命中</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#f57f17;">⚠️</div>
+        <div class="lbl">比分幅度低估（2-1→4-2）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">总进球数严重低估（3→6）</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>英格兰 <strong>2-1</strong> 克罗地亚（首选~12%）</td><td class="partial-row">英格兰 <strong>4-2</strong> 克罗地亚·方向正确但幅度低估</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>1-0(8%), 2-0(8%), 3-1(7%), 1-1(10%)</td><td class="miss-row">4-2不在备选中·差2球</td></tr>
+      <tr><td><strong>英格兰胜率</strong></td><td><strong>52%</strong></td><td class="partial-row">英格兰取胜·但52%在4-2的结果下偏低</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>26%</td><td class="hit-row">平局未发生 ✅</td></tr>
+      <tr><td><strong>克罗地亚胜率</strong></td><td>22%</td><td class="hit-row">克罗地亚未胜 ✅</td></tr>
+      <tr><td><strong>英格兰xG</strong></td><td>1.70-2.40</td><td class="miss-row">实际4球·远超区间上限</td></tr>
+      <tr><td><strong>克罗地亚xG</strong></td><td>0.60-1.10</td><td class="miss-row">实际2球·远超区间上限</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>2.30-3.50</td><td class="miss-row">实际6球·远超区间上限</td></tr>
+      <tr><td><strong>Kane关键作用</strong></td><td>"Kane为最关键球员"</td><td class="hit-row">✅ Kane 12'pen+42'双球·关键作用命中</td></tr>
+      <tr><td><strong>双方进球</strong></td><td>概率~45%</td><td class="hit-row">✅ 双方均进球（英格兰4·克罗地亚2）</td></tr>
+      <tr><td><strong>Bellingham贡献</strong></td><td>"Bellingham中场创意核心"</td><td class="hit-row">✅ Bellingham 47'进球·核心贡献命中</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>赛果方向</td><td>英格兰胜52%</td><td>英格兰4-2取胜</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>Kane关键作用</td><td>"最关键球员"</td><td>Kane 12'pen+42'双球</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>Bellingham核心</td><td>"中场创意核心"</td><td>Bellingham 47'进球·创意+终结</td><td>✅</td></tr>
+      <tr class="hit-row"><td>4</td><td>双方进球</td><td>概率~45%</td><td>双方均进球·英格兰4克罗地亚2</td><td>✅</td></tr>
+      <tr class="hit-row"><td>5</td><td>克罗地亚反击能力</td><td>"克罗地亚反击可制造1球威胁"</td><td>Baturina 36'+Musa 45+5'·反击2球</td><td>✅</td></tr>
+      <tr class="hit-row"><td>6</td><td>英格兰控球优势</td><td>"英格兰控球主导"</td><td>英格兰控球占优·阵地+反击均有效</td><td>✅</td></tr>
+      <tr class="hit-row"><td>7</td><td>平局概率26%</td><td>平局未发生</td><td>平局未发生·概率合理</td><td>✅</td></tr>
+      <tr class="hit-row"><td>8</td><td>克罗地亚胜率22%</td><td>"克罗地亚胜率22%"</td><td>克罗地亚未胜·概率合理</td><td>✅</td></tr>
+      <tr class="partial-row"><td>9</td><td>首选比分</td><td>2-1英格兰</td><td>4-2英格兰·方向正确但差3球</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>10</td><td>英格兰胜率幅度</td><td>52%</td><td>4-2的结果暗示胜率应更高（60-65%）</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>11</td><td>英格兰进攻深度</td><td>"Kane+Bellingham+Saka"</td><td>Rashford 85'进球·深度超预期</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>12</td><td>克罗地亚进球</td><td>xG 0.60-1.10·安慰球1个</td><td>实际2球·非安慰球·有威胁的反击</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>13</td><td>总进球数</td><td>约3球（2-1首选）</td><td>6球·严重低估</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>英格兰xG区间</td><td>1.70-2.40</td><td>实际4球·远超上限</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>克罗地亚xG区间</td><td>0.60-1.10</td><td>实际2球·远超上限</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>大小球</td><td>约3球·大2.5概率约50%</td><td>6球·大球场景严重低估</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>比赛节奏</td><td>"英格兰控制节奏"</td><td>实际节奏极快·双方交替进球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>总xG区间</td><td>2.30-3.50</td><td>实际约4.5-5.5·远超上限</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">8</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">4</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">6</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">44%</div><div class="lbl">命中率（仅计✅）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：总进球数严重低估——6球vs预测3球</h4>
+    <div class="insight-box">
+      <strong>核心原因：双方进攻效率均被低估·缺少"高进球场景"建模</strong><br><br>
+      预测总进球约3（2-1首选），实际<strong>6球</strong>——差3球。英格兰进4球（Kane双球+Bellingham+Rashford），克罗地亚进2球（Baturina+Musa）。这暴露了两个建模盲区：<strong>①英格兰进攻火力低估</strong>——Kane罚球12'破僵+42'再进，Bellingham 47'跟进，Rashford 85'收尾，说明英格兰的进攻层次远超预测；<strong>②克罗地亚反击效率低估</strong>——预测xG 0.60-1.10暗示仅1球安慰球，但实际克罗地亚2球且非安慰球。<strong>根因追溯</strong>：缺少"双方进攻效率同时超预期"的高进球场景建模——这在历史上约占10-15%的比赛。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：英格兰进攻火力低估——xG 1.70-2.40→实际4球</h4>
+    <div class="insight-box">
+      <strong>核心原因：Kane罚球破门→比赛开放化→英格兰进攻加速</strong><br><br>
+      Kane 12分钟罚球破门是<strong>关键转折点</strong>——它迫使克罗地亚放弃低位防守转向开放比赛，而开放比赛正好释放了英格兰的进攻火力（Bellingham 47'·Rashford 85'）。预测未建模"<strong>早期破僵→比赛开放→进攻加速</strong>"的链式反应。<strong>根因追溯</strong>：英格兰的进攻评估基于"控球+阵地进攻"框架，但12分钟罚球后比赛变为<strong>"开放攻防转换"</strong>——这恰好是英格兰（Kane+Bellingham+Rashford速度）最擅长的模式。应增加"早期破僵→进攻效率上修"的动态规则。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：克罗地亚进攻能力低估——xG 0.60-1.10→实际2球</h4>
+    <div class="insight-box">
+      <strong>核心原因：克罗地亚反击效率在开放比赛中被释放</strong><br><br>
+      预测将克罗地亚进攻定位为"0.60-1.10 xG·安慰球级"，但实际克罗地亚进<strong>2球</strong>——Baturina 36'和Musa 45+5'。这两个进球不是安慰球而是<strong>有质量的反击进球</strong>，说明在开放比赛中克罗地亚的中场（Baturina技术级+Musa速度级）可以制造真实威胁。<strong>根因追溯</strong>：克罗地亚的进攻评估基于"低位防守+被动反击"框架，但英格兰12分钟破僵后比赛开放化，克罗地亚获得了<strong>更多反击空间</strong>——Baturina和Musa在这种空间下的效率远高于低位防守模式。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：英格兰胜率52%偏低——4-2结果暗示应60-65%</h4>
+    <div class="insight-box">
+      <strong>核心原因：过度平均主义倾向——在方向信号一致时概率偏保守</strong><br><br>
+      52%的英格兰胜率在4-2的结果下显得偏保守。英格兰拥有5条方向信号（FIFA排名、阵容质量、进攻火力、主场效应、教练稳定性），52%胜率仅略高于50/50——这接近<strong>过度平均主义</strong>的边缘。<strong>根因追溯</strong>：52%的胜率意味着模型认为平局（26%）和克罗地亚胜（22%）合计48%——这个"非英格兰胜概率"在4-2结果下偏高。合理的独立评估应给英格兰60-65%胜率。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：比赛节奏预测错误——"控制节奏"vs实际"快速攻防转换"</h4>
+    <div class="insight-box">
+      <strong>核心原因：12分钟罚球改变了比赛形态→节奏预测基于错误前提</strong><br><br>
+      预测认为英格兰将"控制节奏·控球主导阵地进攻"，但Kane 12分钟罚球使比赛从<strong>控球阵地模式</strong>转为<strong>开放攻防转换模式</strong>。开放模式下双方交替进球（12'→36'→42'→45+5'→47'→85'），节奏远快于预测。<strong>根因追溯</strong>：节奏预测未考虑"早期破僵→比赛形态切换"的动态变化。应建模"<strong>前15分钟进球→比赛开放概率上修→总进球数上修</strong>"的链式规则。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准评估 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>合理范围</th><th>评估</th></tr>
+      <tr><td>英格兰胜</td><td>52%</td><td>60-65%</td><td class="partial-row">方向正确但偏低8-13个百分点·略保守</td></tr>
+      <tr><td>平局</td><td>26%</td><td>22-25%</td><td class="hit-row">范围合理·略高1-4个百分点</td></tr>
+      <tr><td>克罗地亚胜</td><td>22%</td><td>13-18%</td><td class="miss-row">偏高4-9个百分点·克罗地亚2球但最终落败</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>🎯 过度平均主义诊断：</strong>52/26/22的分布接近50/25/25的"默认分布"——在5条方向信号一致指向英格兰时，52%胜率仅略高于50%，这属于<strong>轻度过度平均主义</strong>。克罗地亚22%胜率偏高（合理值13-18%），说明模型对克罗地亚的实际竞争力过度乐观。但整体偏差远小于加纳vs巴拿马和葡萄牙vs刚果的案例。
+    </div>
+
+    <div class="insight-box">
+      <strong>📊 概率诚实度评估：6/10</strong><br>
+      方向正确（英格兰胜），概率分布基本合理但偏保守。52%胜率在4-2的结果下偏低8-13个百分点。克罗地亚22%胜率偏高4-9个百分点。属于<strong>轻度过度平均主义</strong>而非严重偏差。
+    </div>
+  </div>
+
+  <!-- ===== 缺失数据清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>"早期破僵→比赛开放→进攻加速"链式规则</td><td>Kane 12'罚球→比赛开放→英格兰进攻加速→4球。此链式反应未建模</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>2</td><td>英格兰在开放攻防转换模式下的进攻效率</td><td>阵地进攻xG评估低估了开放模式下的效率</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>3</td><td>克罗地亚在开放比赛中的反击效率数据</td><td>克罗地亚反击2球·开放模式下效率远高于低位模式</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>4</td><td>"高进球场景"（双方进攻均超预期）概率建模</td><td>6球比赛约占10-15%但预测完全未覆盖此场景</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>5</td><td>Rashford作为替补进攻选项的评估</td><td>Rashford 85'进球·替补深度未被充分评估</td><td><span class="badge badge-blue">低</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">💡 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. "早期破僵→比赛开放→进攻加速"链式规则</h4>
+      <ul>
+        <li><strong>问题：</strong>Kane 12'罚球→比赛开放→英格兰进攻4球·此链式反应未建模</li>
+        <li><strong>方案：</strong>建立"前15分钟进球→比赛开放概率上修→总进球数上修"规则：前15分钟进球 → 总进球预测+1.5-2.0球</li>
+        <li><strong>预期效果：</strong>识别"早期破僵→大球"模式·总进球预测从3上调至5-6</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. 区分"阵地进攻"和"开放攻防转换"模式下的xG</h4>
+      <ul>
+        <li><strong>问题：</strong>英格兰xG基于阵地进攻评估→实际在开放模式下进4球</li>
+        <li><strong>方案：</strong>为进攻强队建立两种xG：阵地模式（控球+渗透）和开放模式（攻防转换+速度）。开放模式xG = 阵地模式 × 1.5-2.0</li>
+        <li><strong>预期效果：</strong>英格兰开放模式xG从1.70-2.40上调至2.55-4.80·覆盖4球场景</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. "高进球场景"概率建模</h4>
+      <ul>
+        <li><strong>问题：</strong>6球比赛未在备选比分中覆盖·总进球完全低估</li>
+        <li><strong>方案：</strong>增加"双方进攻均超预期"场景：概率约10-15%。当双方均有Tier 1联赛核心进攻球员时，6+球比赛概率至少5-8%</li>
+        <li><strong>预期效果：</strong>4-2和3-2等高进球比分进入备选列表·总进球分布更合理</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>4. 弱队"开放模式下反击效率上修"规则</h4>
+      <ul>
+        <li><strong>问题：</strong>克罗地亚xG 0.60-1.10基于低位防守模式→实际开放模式下进2球</li>
+        <li><strong>方案：</strong>当比赛因早期进球变为开放模式时，弱队反击xG × 1.5-2.0上修。开放空间下的反击效率远高于低位防守模式</li>
+        <li><strong>预期效果：</strong>克罗地亚开放模式xG从0.60-1.10上调至0.90-2.20·覆盖2球场景</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>5. 方向信号一致性→胜率上修规则</h4>
+      <ul>
+        <li><strong>问题：</strong>5条信号指向英格兰但胜率仅52%·轻度过度平均主义</li>
+        <li><strong>方案：</strong>当≥4条方向信号一致时，胜率至少55%。每条信号贡献2-3个百分点溢价</li>
+        <li><strong>预期效果：</strong>英格兰胜率从52%上调至58-65%·更准确反映方向性信号</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>6. 替补进攻深度评估模块</h4>
+      <ul>
+        <li><strong>问题：</strong>Rashford 85'进球·替补深度未被充分评估</li>
+        <li><strong>方案：</strong>为进攻强队增加"替补进攻选项"评估：Rashford/Grealish/Foden级替补 → 总进攻威胁+15-20%</li>
+        <li><strong>预期效果：</strong>英格兰替补进球概率从0上调至10-15%·更完整覆盖进攻来源</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">⭐ 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>8/10</strong></td><td>Kane/Bellingham/Saka覆盖完整·克罗地亚核心球员识别准确</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>6/10</strong></td><td>英格兰控球+阵地进攻框架正确·但开放攻防转换模式未建模</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>8/10</strong></td><td>双方核心球员覆盖完整·Kane/Bellingham/Baturina命中·Rashford替补低估</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>6/10</strong></td><td>xG+赔率+信号完整·但"开放模式xG"和"高进球场景"缺失</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>6/10</strong></td><td>方向正确·52%略保守但非严重偏差·轻度过度平均主义</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>5/10</strong></td><td>2-1首选方向正确但差3球·4-2不在备选·总进球严重低估</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>6/10</strong></td><td>方向性不确定性表达尚可·但6球高方差场景未覆盖</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>9/10</strong></td><td>模板完整·信息密度高·逻辑链清晰·仅缺少动态模式切换</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>📊 综合评分：6.5/10</strong>（加权平均）<br>
+      方向正确的预测，但<strong>幅度严重低估</strong>。胜平负、Kane、Bellingham、双方进球、克罗地亚反击全部命中，但总进球数（3→6）和比分（2-1→4-2）偏差大。核心问题是缺少"早期破僵→比赛开放→进攻加速"的链式动态模型。
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评价：6.5/10</strong><br><br>
+        这是<strong>方向正确但幅度低估</strong>的预测。英格兰胜、Kane关键作用、Bellingham核心贡献、双方进球、克罗地亚反击威胁全部命中——方向性判断质量高。但总进球数（3→6）和比分（2-1→4-2）的偏差暴露了<strong>动态模式切换缺失</strong>：Kane 12分钟罚球使比赛从"控球阵地模式"转为"开放攻防转换模式"，而预测仅建模了前者。<br><br>
+        <strong>核心缺陷（3条）：</strong><br>
+        1. <strong>缺少"早期破僵→进攻加速"链式规则：</strong>Kane 12'罚球→比赛开放→英格兰进攻4球→总进球6。此链式反应完全未建模<br>
+        2. <strong>未区分阵地进攻和开放攻防转换模式：</strong>英格兰xG 1.70-2.40基于阵地模式评估→实际开放模式下4球·低估2倍<br>
+        3. <strong>"高进球场景"概率未建模：</strong>6球比赛约占10-15%但预测完全未覆盖·4-2不在备选比分中<br><br>
+        <strong>核心改进方向：</strong><br>
+        建立"早期破僵→比赛开放→进攻加速"链式规则和"阵地vs开放模式"双xG评估体系，确保高进球场景被覆盖。
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:24px 0;color:#888;font-size:12px;">
+    报告数据仅供参考，不构成投注建议
+  </div>
+
+</div>
+</body>
+</html>

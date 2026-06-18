@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 葡萄牙 vs 刚果民主共和国（2026-06-17）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>葡萄牙 vs 刚果民主共和国 · 2026年6月17日 · L组第1轮 · NRG Stadium 休斯顿 · 复盘时间：2026年6月18日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== 核心对比 ===== -->
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇵🇹</div>
+        <div class="name">葡萄牙</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#2e7d32;">3</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">葡萄牙 3-0（首选·置信度高）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-red">实际</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#c62828;">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-red">1-1 平局（历史性冷门）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇨🇩</div>
+        <div class="name">刚果民主共和国</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">比分严重偏差（3-0→1-1）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">胜平负未命中（73%葡胜→实际平）</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#2e7d32;">✅</div>
+        <div class="lbl">刚果进球在xG范围内</div>
+      </div>
+      <div class="summary-item">
+        <div class="val" style="color:#c62828;">❌</div>
+        <div class="lbl">葡萄牙进攻完全失效</div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>葡萄牙 <strong>3-0</strong> 刚果（首选~15%）</td><td class="miss-row">1-1 平局·方向完全偏差</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>2-0(11%), 4-0(8%), 1-0(7%), 1-1(10%)</td><td class="hit-row">✅ <strong>1-1在备选中</strong>！概率10%但覆盖实际结果</td></tr>
+      <tr><td><strong>葡萄牙胜率</strong></td><td><strong>73%</strong></td><td class="miss-row">葡萄牙未胜·概率严重过高</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>17%</td><td class="miss-row">实际平局·17%远低于合理值</td></tr>
+      <tr><td><strong>刚果胜率</strong></td><td>10%</td><td class="partial-row">刚果未胜·10%未发生合理但过低</td></tr>
+      <tr><td><strong>葡萄牙xG</strong></td><td>2.40-3.20</td><td class="miss-row">实际仅1球·远低于区间下限</td></tr>
+      <tr><td><strong>刚果xG</strong></td><td>0.50-1.00</td><td class="hit-row">实际1球·Wissa进球·在区间上限</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>2.90-4.20</td><td class="miss-row">实际2球·远低于区间下限</td></tr>
+      <tr><td><strong>葡萄牙进攻</strong></td><td>"高压控球+多点终结"</td><td class="miss-row">葡萄牙仅进1球·进攻完全失效</td></tr>
+      <tr><td><strong>刚果防守</strong></td><td>"将承受8-12射门·被动防守"</td><td class="partial-row">刚果防守远超预期·成功限制葡萄牙</td></tr>
+      <tr><td><strong>Wissa威胁</strong></td><td>未重点标注</td><td class="miss-row">Wissa破门得分·关键球员识别遗漏</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 逐项核对 ===== -->
+  <div class="card">
+    <div class="card-title">🔬 逐项命中/偏差分析</div>
+
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>备选比分覆盖</td><td>1-1（概率10%）在备选列表</td><td>实际1-1·备选覆盖！</td><td>✅</td></tr>
+      <tr class="hit-row"><td>2</td><td>刚果xG上限</td><td>0.50-1.00·上限为1球</td><td>Wissa进球·刚果实际1球在范围上限</td><td>✅</td></tr>
+      <tr class="hit-row"><td>3</td><td>刚果进球可能性</td><td>"刚果可能通过反击进球"</td><td>Wissa反击破门·刚果进球方式验证</td><td>✅</td></tr>
+      <tr class="partial-row"><td>4</td><td>刚果胜率10%</td><td>"爆冷概率10%不可忽视"</td><td>刚果未胜但平局·10%未发生合理</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>5</td><td>葡萄牙控球优势</td><td>"高压控球+阵地进攻"</td><td>葡萄牙控球占优但转化极低</td><td>⚠️</td></tr>
+      <tr class="partial-row"><td>6</td><td>刚果反击路径</td><td>"反击+定位球"</td><td>Wissa进球来自反击·路径正确</td><td>⚠️</td></tr>
+      <tr class="miss-row"><td>7</td><td>赛果方向</td><td>葡萄牙胜73%</td><td>1-1平局·方向完全错误</td><td>❌</td></tr>
+      <tr class="miss-row"><td>8</td><td>首选比分</td><td>3-0葡萄牙</td><td>1-1平局·偏差巨大</td><td>❌</td></tr>
+      <tr class="miss-row"><td>9</td><td>葡萄牙胜率73%</td><td>历史最高之一</td><td>葡萄牙未胜·概率严重过高</td><td>❌</td></tr>
+      <tr class="miss-row"><td>10</td><td>平局概率17%</td><td>过低</td><td>实际平局·17%远低于合理值25-30%</td><td>❌</td></tr>
+      <tr class="miss-row"><td>11</td><td>葡萄牙xG区间</td><td>2.40-3.20</td><td>仅1球·远低于下限</td><td>❌</td></tr>
+      <tr class="miss-row"><td>12</td><td>总进球数</td><td>约3球（3-0首选）</td><td>仅2球·差1球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>13</td><td>葡萄牙多点终结</td><td>"莱奥+费尔南德斯+若塔"</td><td>仅1球·终结完全失败</td><td>❌</td></tr>
+      <tr class="miss-row"><td>14</td><td>刚果被动防守</td><td>"承受8-12射门·被动"</td><td>刚果防守远超预期·有效限制葡萄牙</td><td>❌</td></tr>
+      <tr class="miss-row"><td>15</td><td>大小球</td><td>大2.5概率高</td><td>2球·小球</td><td>❌</td></tr>
+      <tr class="miss-row"><td>16</td><td>葡萄牙零失球预期</td><td>"刚果进攻威胁极低"</td><td>刚果进球·葡萄牙防线被突破</td><td>❌</td></tr>
+      <tr class="miss-row"><td>17</td><td>总xG区间</td><td>2.90-4.20</td><td>约2.0·远低于下限</td><td>❌</td></tr>
+      <tr class="miss-row"><td>18</td><td>Wissa威胁识别</td><td>未重点标注</td><td>Wissa破门·关键球员遗漏</td><td>❌</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">3</div><div class="lbl">✅ 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">3</div><div class="lbl">⚠️ 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">12</div><div class="lbl">❌ 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">17%</div><div class="lbl">命中率（仅计✅）</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 偏差原因分析 ===== -->
+  <div class="card">
+    <div class="card-title">🧠 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：葡萄牙胜率73%严重过高——名气溢价掩盖实力差距</h4>
+    <div class="insight-box">
+      <strong>核心原因：过度依赖球队"品牌价值"而非当前阵容+对手实力</strong><br><br>
+      73%胜率是本届世界杯预测中的<strong>最高值之一</strong>，但实际结果1-1彻底否定了这一评估。葡萄牙拥有C罗的品牌遗产、欧洲杯2024冠军的光环，但<strong>2026年葡萄牙的实际阵容质量和大赛表现</strong>需要独立评估。刚果民主共和国虽FIFA排名较低，但拥有Wissa（布伦特福德英超级）、巴坎布（中超→比甲级）等有质量的球员。<strong>根因追溯</strong>：73%的胜率不是基于"当前阵容vs当前对手"的独立评估，而是基于<strong>"葡萄牙品牌+刚果品牌"的名气差</strong>——这是典型的"<strong>品牌溢价偏差</strong>"。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：平局概率17%过低——强队vs有质量弱队的平局率被系统性低估</h4>
+    <div class="insight-box">
+      <strong>核心原因：将"名气差"等同于"实力差"→忽略刚果的实际竞争力</strong><br><br>
+      世界杯历史上，<strong>强队vs有质量弱队的平局率约为25-30%</strong>。刚果拥有Wissa（英超稳定首发级）、巴坎布（经验级射手）、以及非洲杯级别的防守组织——这不是"10%胜率+17%平局率"级别的球队。<strong>根因追溯</strong>：模型将刚果的整体实力压缩到"10+17=27%的非葡胜概率"，但刚果的实际竞争力应给予<strong>25-30%的平局概率+15-20%的非零胜率</strong>。Wissa的存在本身就应触发"刚果进攻威胁>最低预期"的信号。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：葡萄牙xG 2.40-3.20区间过度乐观</h4>
+    <div class="insight-box">
+      <strong>核心原因：热身赛/预选赛进攻数据→正赛防守强度衰减不足</strong><br><br>
+      葡萄牙xG区间2.40-3.20意味着模型预期葡萄牙<strong>至少创造2.4个预期进球</strong>，但实际仅1球。1-1的比分说明葡萄牙的进攻<strong>在刚果的有序防守下完全失效</strong>——阵地进攻无法渗透，反击空间被压缩。<strong>根因追溯</strong>：葡萄牙在热身赛和预选赛中面对Tier 3-4级别防线时的进攻效率，不能平移到面对<strong>非洲杯级别的刚果防线</strong>。刚果的防守组织（AFCON淘汰赛级）远高于预选赛Tier 3-4防线。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Wissa威胁识别遗漏——关键球员未被标注</h4>
+    <div class="insight-box">
+      <strong>核心原因：球员识别偏向知名球员→忽视"英超级但不知名"的威胁</strong><br><br>
+      Wissa在布伦特福德是<strong>稳定首发级球员</strong>（2024-25赛季英超20+场），但在预测报告中未被标注为刚果的关键威胁来源。Wissa的进球（1-1的关键进球）来自反击——这验证了刚果"反击可制造威胁"的判断，但<strong>具体球员识别失败</strong>。<strong>根因追溯</strong>：球员识别模块偏向"知名球员"（巴坎布有名但实力已下降），忽视了"英超级但不知名"的Wissa。应建立规则：<strong>当弱队拥有Tier 1联赛首发级球员时，该球员应自动进入关键威胁标注</strong>。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差五：刚果防守韧性严重低估</h4>
+    <div class="insight-box">
+      <strong>核心原因："被动承受8-12射门"的假设→刚果实际组织了有效防守</strong><br><br>
+      预测将刚果定位为"被动防守·承受8-12射门"，但实际刚果<strong>有效限制了葡萄牙的射门质量和数量</strong>——葡萄牙仅进1球说明刚果的防守远超"被动承受"的预期。<strong>根因追溯</strong>：刚果在非洲杯正赛中的防守表现（AFCON级防守组织）未被纳入评估。非洲杯淘汰赛的防守强度应被视为"≈世界杯小组赛"级别的基准数据。
+    </div>
+  </div>
+
+  <!-- ===== 概率校准评估 ===== -->
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>合理范围</th><th>评估</th></tr>
+      <tr><td>葡萄牙胜</td><td>73%</td><td>55-65%</td><td class="miss-row">严重高估8-18个百分点·品牌溢价偏差</td></tr>
+      <tr><td>平局</td><td>17%</td><td>25-30%</td><td class="miss-row">严重低估8-13个百分点</td></tr>
+      <tr><td>刚果胜</td><td>10%</td><td>10-15%</td><td class="partial-row">范围合理但偏低·刚果未胜是正常的</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>🎯 品牌溢价偏差诊断：</strong>73/17/10的分布是<strong>典型的"强队品牌溢价"</strong>——葡萄牙的名气（C罗遗产、欧洲杯冠军）使胜率被推至73%，但实际阵容在2026年世界杯正赛中的表现远不及品牌暗示的实力。刚果拥有Wissa（英超级）却被给予仅10%胜率+17%平局率，这相当于将刚果的实力压缩到了<strong>"名气差"</strong>而非<strong>"实力差"</strong>的水平。合理的分布应为55-65/25-30/10-15。
+    </div>
+
+    <div class="insight-box">
+      <strong>📊 概率诚实度评估：3/10</strong><br>
+      概率分布严重偏离合理范围。73%的葡萄牙胜率包含了约8-18个百分点的<strong>品牌溢价</strong>，17%的平局率被名气差压制到远低于合理水平。这是"<strong>名气=实力</strong>"假设的直接后果。
+    </div>
+  </div>
+
+  <!-- ===== 缺失数据清单 ===== -->
+  <div class="card">
+    <div class="card-title">📋 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>刚果AFCON淘汰赛防守数据</td><td>低估刚果防守韧性→葡萄牙xG过高→胜率过高</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>2</td><td>Wissa英超数据（布伦特福德首发级）</td><td>关键进球者未标注→球员识别遗漏→刚果进攻威胁低估</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>3</td><td>葡萄牙2025-26赛季阵地进攻vs有序防守的效率</td><td>高估葡萄牙阵地进攻→xG区间过高</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>4</td><td>强队vs有质量弱队的世界杯历史平局率</td><td>平局概率17%远低于历史均值25-30%</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>5</td><td>刚果球员Tier 1联赛分布</td><td>刚果实际拥有英超级球员→整体实力低估</td><td><span class="badge badge-yellow">中</span></td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 优化建议 ===== -->
+  <div class="card">
+    <div class="card-title">💡 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. "品牌溢价偏差"校准规则</h4>
+      <ul>
+        <li><strong>问题：</strong>73%的葡萄牙胜率包含了8-18个百分点的名气溢价</li>
+        <li><strong>方案：</strong>建立"品牌溢价衰减"：球队品牌知名度与实际阵容质量的差距应被量化。C罗不在阵容时，葡萄牙品牌溢价应×0.6衰减</li>
+        <li><strong>预期效果：</strong>葡萄牙胜率从73%下调至55-65%·更贴近当前阵容实际水平</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. "Tier 1联赛首发级球员→自动威胁标注"规则</h4>
+      <ul>
+        <li><strong>问题：</strong>Wissa（英超布伦特福德稳定首发）未被标注为刚果关键威胁</li>
+        <li><strong>方案：</strong>当弱队拥有Tier 1联赛首发级球员时，该球员自动进入"关键威胁标注"。英超20+场/西甲15+场/德甲20+场 → 自动标注</li>
+        <li><strong>预期效果：</strong>Wissa类球员不再被遗漏·刚果进攻威胁评估上调</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. 强队vs有质量弱队→平局概率上修规则</h4>
+      <ul>
+        <li><strong>问题：</strong>17%平局率远低于世界杯历史均值25-30%</li>
+        <li><strong>方案：</strong>当弱队拥有≥2名Tier 1联赛球员时，平局概率至少25%。历史基准：强队vs有质量弱队的平局率均值约28%</li>
+        <li><strong>预期效果：</strong>平局概率从17%上调至25-30%·刚果平局概率更合理</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>4. 非洲杯正赛数据→"准世界杯"权重</h4>
+      <ul>
+        <li><strong>问题：</strong>刚果AFCON防守数据未纳入评估→防守韧性严重低估</li>
+        <li><strong>方案：</strong>AFCON淘汰赛防守数据视为"≈世界杯小组赛"强度。淘汰赛防守数据替代预选赛数据作为基准</li>
+        <li><strong>预期效果：</strong>刚果防守评级上调·葡萄牙xG区间下修·胜率下修</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>5. 热身赛进攻→正赛防守衰减（强队方向）</h4>
+      <ul>
+        <li><strong>问题：</strong>葡萄牙热身赛进攻效率直接平移→xG 2.40-3.20→实际仅1球</li>
+        <li><strong>方案：</strong>强队热身赛进攻数据vs Tier 3-4防线 × 0.5-0.6衰减。正赛中面对Tier 1-2级别防守组织时，xG需大幅下修</li>
+        <li><strong>预期效果：</strong>葡萄牙xG区间从2.40-3.20下调至1.20-1.80·更贴近实际</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>6. 弱队"被动防守"假设→"有序防守"区分</h4>
+      <ul>
+        <li><strong>问题：</strong>"承受8-12射门·被动"假设忽略了刚果的有序防守组织</li>
+        <li><strong>方案：</strong>区分"被动防守"（无组织·依赖个人）和"有序防守"（AFCON级战术组织）。有AFCON淘汰赛经验的弱队默认为"有序防守"</li>
+        <li><strong>预期效果：</strong>刚果防守评级从"被动"上调至"有序"·葡萄牙射门质量和数量预期下修</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 各维度评分 ===== -->
+  <div class="card">
+    <div class="card-title">⭐ 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>4/10</strong></td><td>葡萄牙阵容覆盖尚可·刚果球员信息极度稀疏·Wissa遗漏</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>4/10</strong></td><td>刚果防守战术完全低估·葡萄牙进攻失效未建模</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>3/10</strong></td><td>进球者Wissa不在覆盖范围·刚果关键球员严重遗漏</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>3/10</strong></td><td>刚果数据极度稀疏·AFCON数据未采集·防守评估缺失</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>2/10</strong></td><td>73/17/10分布包含严重品牌溢价偏差·平局率过低</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>3/10</strong></td><td>3-0首选完全偏差·但1-1在备选（10%概率）·覆盖但概率过低</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>3/10</strong></td><td>73%胜率暗示高确定性但实际平局→不确定性表达严重不足</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>7/10</strong></td><td>模板完整·信号体系存在·但信号未转化为合理概率</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>📊 综合评分：3.5/10</strong>（加权平均）<br>
+      本届复盘中的<strong>最差预测</strong>。73%的葡萄牙胜率包含了严重的品牌溢价偏差，17%的平局率远低于历史基准，Wissa进球者未在覆盖范围。唯一亮点是1-1在备选列表中（概率10%）和刚果xG上限命中。这是一份<strong>被名气差而非实力差主导</strong>的预测。
+    </div>
+  </div>
+
+  <!-- ===== 最终结论 ===== -->
+  <div class="card">
+    <div class="card-title">📝 最终结论</div>
+
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评价：3.5/10</strong><br><br>
+        这是本届世界杯预测中<strong>品牌溢价偏差最严重</strong>的报告。73%的葡萄牙胜率不是基于当前阵容vs当前对手的实力评估，而是基于"葡萄牙品牌+刚果品牌"的名气差——实际1-1的结果证明刚果的竞争力远超10%胜率+17%平局率所暗示的水平。<br><br>
+        <strong>核心缺陷（3条）：</strong><br>
+        1. <strong>品牌溢价偏差导致胜率73%：</strong>将"名气差"等同于"实力差"——葡萄牙的品牌溢价（C罗遗产、欧洲杯冠军光环）使胜率虚高8-18个百分点<br>
+        2. <strong>平局率17%远低于历史基准：</strong>强队vs有质量弱队的世界杯历史平局率约25-30%——刚果拥有Wissa（英超级）却被压缩至仅17%<br>
+        3. <strong>关键球员Wissa识别遗漏：</strong>进球者Wissa（布伦特福德英超稳定首发级）未被标注为刚果关键威胁——球员识别偏向知名球员而忽视Tier 1联赛但不知名的球员<br><br>
+        <strong>核心改进方向：</strong><br>
+        建立"品牌溢价衰减"规则和"Tier 1联赛首发级→自动威胁标注"规则，确保概率分布基于当前阵容实力而非品牌名气差。在弱队拥有≥2名Tier 1联赛球员时，平局概率至少25%。
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:24px 0;color:#888;font-size:12px;">
+    报告数据仅供参考，不构成投注建议
+  </div>
+
+</div>
+</body>
+</html>
