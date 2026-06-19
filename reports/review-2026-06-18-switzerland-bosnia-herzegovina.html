@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 瑞士 vs 波黑（2026-06-18）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>&#128269; 2026 世界杯预测复盘报告</h1>
+  <p>瑞士 vs 波黑 · 2026年6月18日 · B组第2轮 · 复盘时间：2026年6月19日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">&#128202; 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">&#127464;&#127469;</div>
+        <div class="name">瑞士</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">瑞士 1-0（首选·15%）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num" style="color:#0033A0;">4</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">瑞士 4-1 波黑（末段23分钟5球狂潮）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">&#127463;&#127466;</div>
+        <div class="name">波黑</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">&#9989;</div><div class="lbl">胜平负命中（瑞士胜）</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">&#10060;</div><div class="lbl">比分严重偏差（预测1-0 vs 实际4-1）</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">&#10060;</div><div class="lbl">大小球严重低估（预测小球·实际5球）</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">&#10060;</div><div class="lbl">波黑"5平基因"被碾压（4-1惨败）</div></div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>瑞士 <strong>1-0</strong> 波黑（首选·15%）</td><td class="miss-row">瑞士 <strong>4-1</strong> 波黑（差3球·方向对但幅度灾难性低估）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>2-1(13%), 2-0(13%), 1-1(10%), 0-0(8%)</td><td class="miss-row">4-1不在任何备选列表中</td></tr>
+      <tr><td><strong>瑞士胜率</strong></td><td><strong>60%</strong></td><td class="hit-row">瑞士取胜 &#9989;</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>25%</td><td class="hit-row">平局未发生 &#9989;</td></tr>
+      <tr><td><strong>波黑胜率</strong></td><td>15%</td><td class="hit-row">波黑未胜 &#9989;</td></tr>
+      <tr><td><strong>瑞士xG</strong></td><td>1.65-2.10</td><td class="miss-row">实际4球（xG严重低估·差2+球）</td></tr>
+      <tr><td><strong>波黑xG</strong></td><td>0.55-0.95</td><td class="hit-row">实际1球（进球数在区间上沿）</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>2.20-3.05</td><td class="miss-row">实际5球（远超上限·低估近2球）</td></tr>
+      <tr><td><strong>波黑"纪律性大巴"</strong></td><td>"5-4-1收缩+犯规切割"</td><td class="miss-row">红牌+崩溃·大巴在红牌后彻底瓦解</td></tr>
+      <tr><td><strong>卡塔尔阴影/领先管理</strong></td><td>"瑞士1-0领先后可能再现领先管理弱"</td><td class="partial-row">瑞士末段狂攻4球·完全相反的剧情</td></tr>
+      <tr><td><strong>波黑高犯规率</strong></td><td>"场均14.8次·接近节奏破坏器阈值"</td><td class="partial-row">犯规仍在但红牌改变了比赛·战略犯规变成了灾难</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128300; 逐项命中/偏差分析</div>
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>赛果方向</td><td>瑞士胜 60%</td><td>瑞士 4-1 取胜</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>2</td><td>波黑进攻有限</td><td>xG 0.55-0.95</td><td>波黑仅1球（落在区间上沿）</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>3</td><td>Xhaka核心角色</td><td>"全队大脑·转移球>85%长传成功率"</td><td>Xhaka中场主导·多次威胁传球</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>4</td><td>Embolo首发</td><td>"高(>85%)"</td><td>Embolo首发 &#9989;</td><td>&#9989;</td></tr>
+      <tr class="partial-row"><td>5</td><td>波黑犯规率</td><td>"场均14.8次·战术犯规75%"</td><td>波黑犯规+红牌·犯规战术代价惨重</td><td>&#9888;</td></tr>
+      <tr class="partial-row"><td>6</td><td>瑞士定位球威胁</td><td>"Akanji头球+Aebischer角球"</td><td>定位球贡献但非主要得分手段</td><td>&#9888;</td></tr>
+      <tr class="partial-row"><td>7</td><td>Yakin体系成熟</td><td>"3-4-2-1/3-4-3稳定"</td><td>体系成功·但爆发性远超预期</td><td>&#9888;</td></tr>
+      <tr class="miss-row"><td>8</td><td>比分预测</td><td>1-0首选·2-1/2-0备选</td><td>4-1·所有预测比分均严重低估</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>9</td><td>瑞士xG区间</td><td>1.65-2.10</td><td>实际4球·系统性低估进攻产出</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>10</td><td>总进球/大小球</td><td>"总xG 2.20-3.05·2-3球最可能"</td><td>5球·大小球判断完全错误</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>11</td><td>波黑"5平基因"</td><td>"+5%平局加成·纪律性核心优势"</td><td>平局基因被红牌彻底打碎</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>12</td><td>Vasilj门将表现</td><td>"首战扑出3次单刀·+0.12 PSxG+"</td><td>面对瑞士狂攻无力回天</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>13</td><td>瑞士"领先管理弱"</td><td>"卡塔尔阴影·1-0后可能被追平"</td><td>完全相反·瑞士末段狂攻4球</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>14</td><td>比赛节奏预测</td><td>"犯规切割·低比分"</td><td>红牌后开放性·高比分</td><td>&#10060;</td></tr>
+      <tr class="miss-row"><td>15</td><td>Ndoye大赛新丁</td><td>"折扣系数0.75·联赛→大赛打折"</td><td>Ndoye表现活跃·折扣判断过度消极</td><td>&#10060;</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">4</div><div class="lbl">&#9989; 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">3</div><div class="lbl">&#9888; 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">8</div><div class="lbl">&#10060; 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">27%</div><div class="lbl">命中率（仅计&#9989;）</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#129504; 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一："纪律性大巴"叙事被红牌事件彻底摧毁 — 这是本场最大的认知错误</h4>
+    <div class="insight-box">
+      <strong>核心原因：将波黑"5连平基因"当作结构性特征，而忽略了纪律性的脆性</strong><br><br>
+      预测的核心叙事是"波黑5-4-1大巴+犯规切割+纪律性=低比分"。这一逻辑在红牌之前可能成立，但<strong>当Katic或任一防守核心吃到红牌后，波黑的"纪律性"叙事瞬间崩塌</strong>——10人波黑的防守体系无法维持，瑞士利用人数优势打出4-1碾压式比分。<strong>根因追溯</strong>：预测识别了波黑"犯规率高"（14.8次）和"Katic累黄风险"，并将其标记为"节奏破坏器"，但<strong>未对此做情景分析</strong>——"如果波黑吃红牌，比分会如何？" 正确做法应该包含：红牌情景 → 波黑防守体系崩溃 → 比分可能扩大至3-0或4-1。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：瑞士xG结构性低估 — 对B组实力差距的认知不足</h4>
+    <div class="insight-box">
+      <strong>核心原因：将瑞士vs卡塔尔的"1-0被绝平"经验过度外推至vs波黑</strong><br><br>
+      预测参考了瑞士首战vs卡塔尔1-1（90+4'绝平）的"领先管理弱"题材，将瑞士的进攻产出预期压抑在1.65-2.10的低位。但<strong>卡塔尔≠波黑</strong>——波黑在红牌后的防守崩溃给瑞士提供了远超预期的得分窗口。<strong>根因追溯</strong>：xG模型的"锚定效应"——瑞士首战的低进球数（1球）成为了后续预测的隐性锚点。应该建立"10人对手→xG放大系数（×1.5-2.0）"的情景分支。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三："5连平基因"权重过度 — 模式外推的经典错误</h4>
+    <div class="insight-box">
+      <strong>核心原因：将历史赛果模式当作未来必然规律</strong><br><br>
+      波黑近10场7平（含5连平）被预测解读为"平局基因"，并以此为依据给予+5%平局加成。但波黑的平局大多发生在<strong>对阵T2-T3级别对手</strong>（罗马尼亚、斯洛伐克、威尔士），而瑞士是<strong>T1-T2级别</strong>的球队。<strong>根因追溯</strong>：平局基因的统计未按对手级别分层——波黑vs T1球队的实际胜率几乎为零（荷兰0-3），平局基因在面对真正强队时可能根本不存在。应建立：平局基因 × 对手Tier衰减系数（T1×0.3; T2×0.7; T3×1.0）。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Vasilj"门将英雄"叙事 — 被高估的扑救能力</h4>
+    <div class="insight-box">
+      <strong>核心原因：MD1对加拿大的3次扑救单刀被过度解读为"系统性优势"</strong><br><br>
+      预测将Vasilj首战3次扑救加拿大描述为"超级门将"信号，并判定Vasilj vs Sommer互相抵消。但面对瑞士更有组织的进攻体系（Xhaka调度+Embolo/Ndoye多维度威胁），Vasilj的扑救能力在红牌后的人少场景中完全失效。<strong>根因追溯</strong>："门将扑救率的对手依赖"——Vasilj 73%扑救率主要来自加拿大/罗马尼亚级别对手，面对瑞士T1级别的进攻体系缺乏对应数据。应建立：门将扑救率 × 对手进攻Tier衰减（T1×0.75; T2×0.85）。
+    </div>
+
+    <h4 style="color:#f57f17;margin:16px 0 10px;">偏差五：比赛的"开放性转折"完全未被建模 — 23分钟5球狂潮</h4>
+    <div class="insight-box">
+      <strong>核心原因：预测框架缺乏"红牌触发→比赛开放性急增"的情景分析</strong><br><br>
+      赛前预测中唯一接近这个方向的分析是"若波黑0-1落后将被迫压上→瑞士反击空间变大"，但这远不及"红牌+10人→防守体系崩塌+瑞士末段23分钟进4球"的实际烈度。<strong>根因追溯</strong>：需要在每个预测中强制加入"极端事件分支"——红牌/关键球员伤退/点球送分/乌龙球——这些事件虽然单次概率低（5-10%），但一旦发生就会完全改变比分形态。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128200; 概率校准评估</div>
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>评估</th></tr>
+      <tr><td>瑞士胜</td><td>60%</td><td class="hit-row">方向正确·60%胜率合理·但1-0 vs 4-1的幅度差距巨大</td></tr>
+      <tr><td>平局</td><td>25%</td><td class="miss-row">"5连平基因"被过度加权·实际平局从未接近发生</td></tr>
+      <tr><td>波黑胜</td><td>15%</td><td class="hit-row">15%合理·波黑确实未胜</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>&#127919; 概率诚实度评估：5/10</strong><br>
+      赛果方向（瑞士胜）正确，但<strong>概率分布的"形态"完全错误</strong>。预测暗示的是一场"焦灼的1-0/2-1"比赛，而实际是一场"红牌后的4-1碾压"。60%胜率虽正确，但"如何胜出"的叙事从"控球渗透+定位球偷一个"变成了"红牌触发+末段狂潮"。这种"路径错误"虽然不改变胜平负判断，但严重影响了对比赛本质的理解。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128203; 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>红牌情景下波黑防守体系的崩溃模式</td><td>缺失红牌分支·无法预判4-1大比分</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>2</td><td>波黑vs T1对手的平局基因有效性</td><td>平局基因被无衰减应用于vs瑞士·严重高估</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>3</td><td>Vasilj扑救率的对手强度校准</td><td>门将被高估·互相抵消判断错误</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>4</td><td>瑞士xG模型的"首战锚定"偏差</td><td>瑞士首战1球成为xG低锚·系统性低估</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>5</td><td>10人对手→进攻方xG放大系数</td><td>缺少人数优势对进攻产出的影响建模</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>6</td><td>Katic具体黄牌触发概率</td><td>已标注累黄风险但未量化红牌概率</td><td><span class="badge badge-yellow">中</span></td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128161; 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. 强制加入"红牌/关键球员伤退"情景分支（本场最关键改进）</h4>
+      <ul>
+        <li><strong>问题：</strong>波黑"纪律性大巴"叙事在红牌后彻底失效，但预测中无红牌分支</li>
+        <li><strong>方案：</strong>每场高犯规率球队（场均犯规≥14次）的预测必须包含"红牌情景→比分修正"：防守方红牌→对手xG ×1.5-2.0→比分扩大1-3球</li>
+        <li><strong>预期效果：</strong>若纳入红牌情景分析→预测中会出现"若波黑吃红牌→瑞士可能3-0/4-1取胜"的警示</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. 平局基因按对手Tier分层衰减</h4>
+      <ul>
+        <li><strong>问题：</strong>波黑5连平的平局基因全部基于T2-T3对手，面对T1-T2的瑞士不应获得同等权重</li>
+        <li><strong>方案：</strong>平局基因权重 × 对手Tier衰减系数：T1对手 ×0.3; T2 ×0.7; T3 ×1.0</li>
+        <li><strong>预期效果：</strong>波黑vs瑞士的平局加成从5%降至1.5-3.5%</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. xG模型加入"首战锚定效应"修正</h4>
+      <ul>
+        <li><strong>问题：</strong>瑞士首战1球成为后续xG的低锚·系统性低估</li>
+        <li><strong>方案：</strong>当首战进球数明显偏离球队历史均值时→第二轮xG采用"历史均值 vs 首战值"的加权平均（历史0.6 + 首战0.4）</li>
+        <li><strong>预期效果：</strong>瑞士xG从1.65-2.10提升至2.00-2.80·更接近实际4球</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>4. 犯规率高的球队→加入纪律性崩塌风险分析</h4>
+      <ul>
+        <li><strong>问题：</strong>识别了波黑"高犯规率+累黄风险"但未分析"犯规→黄牌→红牌→比分失控"的连锁路径</li>
+        <li><strong>方案：</strong>对场均黄牌≥2.0的球队加入"黄牌累积→红牌风险→比分失控"的完整因果链分析</li>
+        <li><strong>预期效果：</strong>波黑场会被标记"中度红牌风险·若发生→比分可能失控至3球以上差距"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#11088; 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>5/10</strong></td><td>基本球员信息正确·但比赛叙事完全错误</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>4/10</strong></td><td>"纪律性大巴"框架在红牌后失效·未预判崩塌</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>6/10</strong></td><td>双方18人覆盖完整·但Vasilj/Ndoye 折扣系数过度保守</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>5/10</strong></td><td>多维度覆盖但关键的红牌/极端分支完全缺失</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>5/10</strong></td><td>60/25/15方向正确但形态错误·25%平局虚高</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>3/10</strong></td><td>所有预测比分均严重偏离·1-0/2-1 vs 4-1</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>6/10</strong></td><td>标注了5个数据缺口·但红牌情景缺席</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>7/10</strong></td><td>17个模块完整·但关键的红牌情景未建模</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>&#128202; 综合评分：5.0/10</strong>（加权平均）<br>
+      胜平负方向正确（瑞士胜），但<strong>比赛的形态判断完全错误</strong>。预测描绘的是一场"焦灼的定位球决胜"比赛，实际是一场"红牌后的末段狂潮"。核心问题在于：将波黑的"5连平基因"当作面对强队也适用的属性——而实际上一张红牌就让这个叙事彻底瓦解。这场比赛是"缺少极端情景分支分析"的典型案例。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128221; 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评分：5.0/10</strong><br><br>
+        方向正确但"如何取胜"的路径完全错误。最大的认知陷阱是将<strong>波黑的"5连平基因"不加衰减地应用于vs瑞士的场景</strong>——波黑的平局基因来自T2-T3对手的消耗战，面对瑞士T1级别的防守压力在面对红牌后的崩溃时毫无意义。<br><br>
+        <strong>核心成功（1条）：</strong><br>
+        1. <strong>赛果方向判断正确：</strong>瑞士胜60%合理<br><br>
+        <strong>核心缺陷（3条）：</strong><br>
+        1. <strong>比分严重偏差：</strong>1-0/2-1预测 vs 4-1实际·差3+球<br>
+        2. <strong>红牌情景缺失：</strong>高犯规率球队的"纪律性崩塌"风险未建模<br>
+        3. <strong>"5连平基因"无衰减：</strong>vs T1-T2球队的平局基因完全不适用<br><br>
+        <strong>核心改进方向：</strong><br>
+        高犯规率球队必须加入<strong>"红牌触发→防守崩塌→比分开放"</strong>的情景分支分析。
+      </p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 捷克 vs 南非（2026-06-18）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .bar-container { display:flex; align-items:center; gap:10px; margin:6px 0; }
+  .bar-label { width:70px; font-size:13px; font-weight:600; text-align:right; }
+  .bar-track { flex:1; height:18px; background:#eef1f6; border-radius:9px; overflow:hidden; }
+  .bar-fill { height:100%; border-radius:9px; }
+  .bar-fill-blue { background:linear-gradient(90deg,#0033A0,#4a7fe8); }
+  .bar-fill-green { background:linear-gradient(90deg,#2e7d32,#66bb6a); }
+  .bar-fill-red { background:linear-gradient(90deg,#c62828,#ef5350); }
+  .bar-fill-gray { background:linear-gradient(90deg,#888,#bbb); }
+  .bar-val { width:45px; font-size:13px; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>&#128269; 2026 世界杯预测复盘报告</h1>
+  <p>捷克 vs 南非 · 2026年6月18日 · A组第2轮 · 复盘时间：2026年6月19日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">&#128202; 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">&#127464;&#127479;</div>
+        <div class="name">捷克</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#c62828;">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">0</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">捷克 1-0（首选·14%）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-green">实际</span></div>
+        <div class="score-num">1</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-green">捷克 1-1 南非（Mokoena点球绝平）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">&#127487;&#127462;</div>
+        <div class="name">南非</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item"><div class="val" style="color:#c62828;">&#10060;</div><div class="lbl">胜平负未命中（预测捷克胜·实际平局）</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">&#9888;</div><div class="lbl">1-1在备选（11% #4）·但未上升为主预测</div></div>
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">&#9989;</div><div class="lbl">总进球预测准确（1-2球·实际2球）</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">&#10060;</div><div class="lbl">平局信号被"未触发"规则压制</div></div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>捷克 <strong>1-0</strong> 南非（首选·14%）</td><td class="partial-row">捷克 <strong>1-1</strong> 南非（差1球·备选#4·11%）</td></tr>
+      <tr><td><strong>备选比分</strong></td><td>2-0(12%), 2-1(10%), 1-1(11%), 0-0(9%)</td><td class="hit-row">实际1-1在备选列表中 &#9989;（#4位置）</td></tr>
+      <tr><td><strong>捷克胜率</strong></td><td><strong>48%</strong></td><td class="miss-row">捷克未取胜 &#10060;</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>29%</td><td class="hit-row">平局发生 &#9989;（29%正确但被压制）</td></tr>
+      <tr><td><strong>南非胜率</strong></td><td>23%</td><td class="hit-row">南非未胜 &#9989;</td></tr>
+      <tr><td><strong>捷克xG</strong></td><td>1.30-1.65</td><td class="hit-row">实际1球（接近区间下限·基本准确）</td></tr>
+      <tr><td><strong>南非xG</strong></td><td>0.65-1.00</td><td class="hit-row">实际1球（在区间上沿·点球推高了进球）</td></tr>
+      <tr><td><strong>总xG区间</strong></td><td>1.95-2.65</td><td class="hit-row">实际2球（在区间内）</td></tr>
+      <tr><td><strong>平局信号优先规则</strong></td><td>"平局29%<30%·未触发"</td><td class="miss-row">实际平局·规则阈值设置过高</td></tr>
+      <tr><td><strong>南非犯规率</strong></td><td>"15.2次·节奏破坏器"</td><td class="partial-row">犯规存在但未阻止捷克进球</td></tr>
+      <tr><td><strong>高温高湿影响</strong></td><td>"对南非有利·捷克体能考验"</td><td class="partial-row">Mokoena末段点球·体能可能是因素</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128300; 逐项命中/偏差分析</div>
+    <table>
+      <tr><th>#</th><th>预测项</th><th>预测内容</th><th>实际</th><th>判定</th></tr>
+      <tr class="hit-row"><td>1</td><td>总xG区间</td><td>"1.95-2.65·对应1-2球"</td><td>实际2球（精准预测）</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>2</td><td>1-1备选覆盖</td><td>1-1位列#4备选（11%）</td><td>实际1-1·备选覆盖成功</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>3</td><td>Schick关键威胁</td><td>"中锋终结·头号射手"</td><td>Sadílek进球·Schick参与进攻</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>4</td><td>南非防守韧性</td><td>"纪律性大巴+犯规切割"</td><td>南非顽强防守·点球绝平</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>5</td><td>平局概率合理</td><td>29%（接近30%阈值）</td><td>平局实际发生·29%预判准确</td><td>&#9989;</td></tr>
+      <tr class="hit-row"><td>6</td><td>Souček头球+远射</td><td>"定位球+远射核心威胁"</td><td>捷克进攻通过中路·Souček活跃</td><td>&#9989;</td></tr>
+      <tr class="partial-row"><td>7</td><td>比分首选</td><td>捷克 1-0（14%）</td><td>实际1-1·差南非的一球</td><td>&#9888;</td></tr>
+      <tr class="partial-row"><td>8</td><td>捷克xG</td><td>1.30-1.65</td><td>实际1球（接近下限·略有高估）</td><td>&#9888;</td></tr>
+      <tr class="partial-row"><td>9</td><td>南非xG</td><td>0.65-1.00</td><td>实际1球（点球xG约0.8·基本在区间）</td><td>&#9888;</td></tr>
+      <tr class="missing-row"><td>10</td><td>赛果方向</td><td>捷克胜 48%</td><td>平局·胜平负判断错误</td><td>&#10060;</td></tr>
+      <tr class="missing-row"><td>11</td><td>平局信号规则</td><td>"29%<30%·未触发"</td><td>平局实际发生·规则阻碍了正确判断</td><td>&#10060;</td></tr>
+      <tr class="missing-row"><td>12</td><td>捷克"领先管理弱"</td><td>首战vs韩国1-0→1-2</td><td>捷克领先被追平·模式重复</td><td>&#10060;</td></tr>
+      <tr class="missing-row"><td>13</td><td>Mokoena进球能力</td><td>标注为后腰·未标注进球威胁</td><td>Mokoena点球绝平</td><td>&#10060;</td></tr>
+      <tr class="missing-row"><td>14</td><td>Sadílek角色</td><td>标注为中场·未标注KEY MAN</td><td>Sadílek进球（捷克唯一进球者）</td><td>&#10060;</td></tr>
+      <tr class="missing-row"><td>15</td><td>Williams门将表现</td><td>"24岁大赛新丁·68%扑救率"</td><td>Williams救险多次·远优于预期</td><td>&#10060;</td></tr>
+    </table>
+
+    <div class="summary-grid" style="margin-top:14px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">6</div><div class="lbl">&#9989; 命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">3</div><div class="lbl">&#9888; 部分命中</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">6</div><div class="lbl">&#10060; 偏差</div></div>
+      <div class="summary-item"><div class="val" style="color:#0033A0;">40%</div><div class="lbl">命中率（仅计&#9989;）</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#129504; 偏差原因深度分析</div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差一：平局信号被"30%阈值"扼杀 — 本场最核心的规则错误</h4>
+    <div class="insight-box">
+      <strong>核心原因：机械化的阈值规则压制了正确的概率判断</strong><br><br>
+      预测在概率部分明确写道："平局信号优先规则：平局29% < 30%阈值（接近），<strong>未触发</strong>。但平局信号是本场最重要的反向因子，<strong>25%以上仍需高度关注</strong>。"——这段自述几乎是"自我预言"：预测本身已经识别了平局风险的高概率（29%），但被一个机械化的"30%阈值"规则阻止了表达。预测将所有"平局基因"信号计入文本——"两队MD1均输球·想赢怕输陷阱·捷克领先管理弱"——但在选择主预测时，这些信号被48%>29%的简单数字比较压制。<strong>根因追溯</strong>："平局信号优先规则"的30%阈值需要改为动态阈值：当平局概率≥25%且胜方概率<50%时 → 平局自动提升为主选。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差二：南非"80%本土联赛球员"折扣被Williams逆天发挥打破</h4>
+    <div class="insight-box">
+      <strong>核心原因：对大赛新丁的负面预期在特定案例中完全失效</strong><br><br>
+      预测将Williams标注为"24岁大赛经验接近0·英冠→世界杯量级跳跃·折扣系数0.70"，预期他将成为捷克远射+定位球的突破口。但实际Williams多次关键扑救，包括几次近距离射门，表现远超预期。<strong>根因追溯</strong>：大赛新丁也有"超常发挥"的正向概率——在某些高压场景下，年轻门将反而因为"无历史包袱"而发挥更好。应为"首次WC门将"加入向上波动区间（±15%扑救率）。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差三：捷克"领先管理弱"模式被验证但未驱动预测修正</h4>
+    <div class="insight-box">
+      <strong>核心原因：已识别的模式未被赋予决策权重</strong><br><br>
+      预测明确记录了"捷克领先管理弱（首战vs韩国1-0→1-2被逆转）"和"两队均输不起·想赢怕输陷阱"，这两条信号都指向"捷克领先后可能被追平→平局结果"。实际比赛印证了这一模式——捷克先进球（Sadílek），然后Mokoena点球绝平。<strong>根因追溯</strong>：这类似于奥地利场的"已看到1-0模式但未驱动主预测"问题——信号冲突时的优先级规则仍需修正。
+    </div>
+
+    <h4 style="color:#c62828;margin:16px 0 10px;">偏差四：Sadílek和Mokoena的进球能力漏判</h4>
+    <div class="insight-box">
+      <strong>核心原因：球员威胁评级仍过度依赖牌面和位置标签</strong><br><br>
+      Sadílek被标注为"中场/埃因霍温/17场"，Mokoena被标注为"后腰/曼联青年队·租借南特/21岁"——两人均未标注进球威胁。但Sadílek打入捷克唯一进球，Mokoena罚入绝平点球。<strong>根因追溯</strong>：埃因霍温中场在世界杯级别的后插上得分能力、以及后腰在大赛中承担点球主罚权的可能性，均未被量化。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128200; 概率校准评估</div>
+    <table>
+      <tr><th>指标</th><th>预测值</th><th>评估</th></tr>
+      <tr><td>捷克胜</td><td>48%</td><td class="miss-row">未发生·48%给了错误方向</td></tr>
+      <tr><td>平局</td><td>29%</td><td class="hit-row">平局发生·29%被规则压制未成为主判断</td></tr>
+      <tr><td>南非胜</td><td>23%</td><td class="hit-row">南非未胜·23%合理</td></tr>
+    </table>
+
+    <div class="warning-box">
+      <strong>&#127919; 概率诚实度评估：7/10</strong><br>
+      本场的<strong>概率数字本身是诚实的</strong>——29%平局准确反映了平局的高概率，且与最终结果一致。问题不在于数字，而在于<strong>数字到决策的转换规则</strong>。48/29/23的分布已经提示"平局风险很高"，但30%阈值和"捷克胜>平局"的简单比较压制了这一信息。<strong>核心问题：阈值规则应该动态化</strong>——当胜方概率<50%且平局≥25%时，平局应自动升级。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128203; 缺失数据清单</div>
+    <table>
+      <tr><th>#</th><th>缺失项</th><th>对预测的影响</th><th>严重程度</th></tr>
+      <tr><td>1</td><td>南非球员联赛→世界杯的向上波动可能</td><td>Williams被严重低估·大赛新丁也有超常发挥</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>2</td><td>Sadílek世界杯后插上得分能力</td><td>埃因霍温中场进攻数据缺失·进球者未被预期</td><td><span class="badge badge-yellow">中</span></td></tr>
+      <tr><td>3</td><td>Mokoena点球主罚权</td><td>南非点球主罚球员未标注</td><td><span class="badge badge-blue">低</span></td></tr>
+      <tr><td>4</td><td>捷克连续两场"领先→被追平"的模式频率</td><td>模式重复性未被量化为预测修正因子</td><td><span class="badge badge-red">高</span></td></tr>
+      <tr><td>5</td><td>亚特兰大高温高湿对捷克球员的实际影响</td><td>体能消耗可能间接导致末段防守松懈</td><td><span class="badge badge-yellow">中</span></td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128161; 优化建议</div>
+
+    <div class="rec-card">
+      <h4>1. 平局信号优先规则改为动态阈值（本场最关键改进）</h4>
+      <ul>
+        <li><strong>问题：</strong>29%平局因<30%阈值被压制·但数字本身是准确的</li>
+        <li><strong>方案：</strong>动态阈值规则：当胜方概率<50%且平局≥25% → 平局自动升级→主预测从"一方胜"改为"平局"</li>
+        <li><strong>预期效果：</strong>本场48/29/23触发动态规则→主预测自动从1-0改为1-1</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>2. 大赛新丁的"双向波动"模型</h4>
+      <ul>
+        <li><strong>问题：</strong>Williams仅被赋予负面折扣（0.70）·忽略了发挥超常的可能</li>
+        <li><strong>方案：</strong>首次WC球员建立双向区间：下限×0.70；上限×1.15。总影响=区间平均±方向判断</li>
+        <li><strong>预期效果：</strong>Williams不被单纯视为"防守漏洞"·保留"可能表现超常"的叙事空间</li>
+      </ul>
+    </div>
+
+    <div class="rec-card">
+      <h4>3. 历史模式重复性的强制权重</h4>
+      <ul>
+        <li><strong>问题：</strong>捷克连续两场"领先→被追平"模式被识别但未驱动决策</li>
+        <li><strong>方案：</strong>当某模式连续2+场重复→强制纳入主预测修正：模式权重 ×1.5+ 加到平局概率</li>
+        <li><strong>预期效果：</strong>捷克平局概率从29%提升至35-38%→触发平局优先</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#11088; 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="40%">维度</th><th width="15%">评分</th><th>评语</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td><strong>6/10</strong></td><td>基本信息正确·但关键球员（Sadílek/Mokoena）被低估</td></tr>
+      <tr><td>2. 战术框架判断</td><td><strong>6/10</strong></td><td>"纪律性大巴+想赢怕输"框架合理·方向偏捷克</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td><strong>5/10</strong></td><td>16-17人覆盖·但进球者均未标注威胁</td></tr>
+      <tr><td>4. 数据深度</td><td><strong>6/10</strong></td><td>xG/犯规/气温多维度·但动态阈值缺失</td></tr>
+      <tr><td>5. 概率模型</td><td><strong>7/10</strong></td><td>29%平局数字诚实·问题在于决策转换</td></tr>
+      <tr><td>6. 比分预测</td><td><strong>5/10</strong></td><td>备选覆盖1-1·但未提升为主预测</td></tr>
+      <tr><td>7. 不确定性表达</td><td><strong>6/10</strong></td><td>标注"平局是最重要反向因子"但未行动</td></tr>
+      <tr><td>8. 结构化程度</td><td><strong>7/10</strong></td><td>17个模块·结构完整</td></tr>
+    </table>
+
+    <div class="insight-box" style="margin-top:16px;">
+      <strong>&#128202; 综合评分：5.5/10</strong>（加权平均）<br>
+      这是一场<strong>"数字正确、决策错误"</strong>的典型案例。29%平局概率本身准确、1-1在备选列表中、总xG区间精准——但<strong>机械化的30%阈值规则阻止了正确的决策</strong>。如果阈值改为动态（胜方<50%+平局≥25%→自动升级），这场预测将从5.5跃升至8.0+。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">&#128221; 最终结论</div>
+    <div class="insight-box">
+      <p style="font-size:15px;line-height:1.8;">
+        <strong>总体评分：5.5/10</strong><br><br>
+        这场预测的<strong>数据基础是好的</strong>——29%平局概率恰当、总xG区间精准、1-1在备选覆盖中。唯一的问题是<strong>"30%阈值"的机械化规则</strong>将29%平局压制为"未触发"，导致主预测从正确的1-1变成了错误的1-0捷克胜。<br><br>
+        <strong>核心成功（2条）：</strong><br>
+        1. <strong>平局概率29%准确：</strong>数字本身预判了平局高风险<br>
+        2. <strong>总xG区间精准：</strong>1.95-2.65→实际2球·大小球判断命中<br><br>
+        <strong>核心缺陷（1条·致命级）：</strong><br>
+        1. <strong>阈值规则扼杀了正确判断：</strong>29%平局被30%阈值卡住→主预测错误<br><br>
+        <strong>核心改进方向：</strong><br>
+        <strong>平局信号优先规则改为动态阈值：</strong>胜方概率<50%且平局≥25% → 平局自动升级为主预测。
+      </p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
