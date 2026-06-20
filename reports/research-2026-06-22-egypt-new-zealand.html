@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赛前数据研究报告 · 埃及 vs 新西兰（2026-06-22）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#C8102E,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:920px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#1a4fc4; border-left:4px solid #1a4fc4; padding-left:12px; margin-bottom:16px; }
+  .card-title.egypt { color:#C8102E; border-color:#C8102E; }
+  .card-title.nz { color:#012169; border-color:#012169; }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin:12px 0; }
+  th { background:#f0f4ff; color:#1a4fc4; font-weight:600; padding:8px 10px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:7px 10px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  tr:nth-child(even) { background:#fafbff; }
+  .pos-gk { background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:700; }
+  .pos-df { background:#e3f2fd; color:#1565c0; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:700; }
+  .pos-mf { background:#fff8e1; color:#f57f17; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:700; }
+  .pos-fw { background:#fce4ec; color:#c62828; padding:2px 8px; border-radius:4px; font-size:11px; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#1a4fc4; }
+  .badge-gray { background:#eee; color:#666; }
+  .stat-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:14px 0; }
+  .stat-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .stat-item .val { font-size:24px; font-weight:900; color:#1a4fc4; }
+  .stat-item .lbl { font-size:11px; color:#888; margin-top:2px; }
+  .stat-item.egypt .val { color:#C8102E; }
+  .stat-item.nz .val { color:#012169; }
+  .vs-table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  .vs-table th { background:#1a1a2e; color:white; padding:10px; text-align:center; }
+  .vs-table th:first-child { text-align:left; padding-left:16px; }
+  .vs-table td { padding:8px 10px; text-align:center; border-bottom:1px solid #eef1f6; }
+  .vs-table td:first-child { text-align:left; font-weight:600; padding-left:16px; }
+  .vs-table .egypt-col { color:#C8102E; font-weight:700; }
+  .vs-table .nz-col { color:#012169; font-weight:700; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#1a4fc4; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .divider { border:none; border-top:1px solid #e0e6f0; margin:18px 0; }
+  .form-row { display:flex; gap:4px; align-items:center; }
+  .form-w { width:24px; height:24px; border-radius:4px; background:#2e7d32; color:white; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; }
+  .form-d { width:24px; height:24px; border-radius:4px; background:#f57f17; color:white; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; }
+  .form-l { width:24px; height:24px; border-radius:4px; background:#c62828; color:white; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; }
+  .source-list { font-size:12px; color:#666; margin-top:16px; }
+  .source-list li { margin-bottom:4px; }
+  @media(max-width:600px){ .stat-grid { grid-template-columns:1fr; } table { font-size:12px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯 G组第2轮 · 赛前数据研究报告</h1>
+  <p>埃及 vs 新西兰 · 2026年6月22日 09:00（北京时间）· 温哥华 BC Place · 数据截止：2026-06-20</p>
+</div>
+
+<div class="container">
+
+  <!-- ===== G组积分榜 ===== -->
+  <div class="card">
+    <div class="card-title">G组积分榜（第1轮后）</div>
+    <table>
+      <tr><th>排名</th><th>球队</th><th>场</th><th>胜</th><th>平</th><th>负</th><th>进球</th><th>失球</th><th>净胜球</th><th>积分</th></tr>
+      <tr><td>1</td><td>新西兰</td><td>1</td><td>0</td><td>1</td><td>0</td><td>2</td><td>2</td><td>0</td><td>1</td></tr>
+      <tr><td>2</td><td>伊朗</td><td>1</td><td>0</td><td>1</td><td>0</td><td>2</td><td>2</td><td>0</td><td>1</td></tr>
+      <tr><td>3</td><td>比利时</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+      <tr><td>4</td><td>埃及</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:8px;">四队同积1分，新西兰和伊朗凭进球数优势排名前二。本轮埃及vs新西兰、比利时vs伊朗。</p>
+  </div>
+
+  <!-- ===== 历史交锋 ===== -->
+  <div class="card">
+    <div class="card-title">历史交锋记录（H2H）</div>
+    <table>
+      <tr><th>日期</th><th>赛事</th><th>比分</th><th>场地</th></tr>
+      <tr><td>1999-07-10</td><td>国际友谊赛</td><td>埃及 1-1 新西兰</td><td>埃及</td></tr>
+      <tr><td>1999-07-15</td><td>国际友谊赛</td><td>埃及 1-0 新西兰</td><td>埃及</td></tr>
+      <tr><td>2024-03-22</td><td>FIFA Series</td><td>埃及 1-0 新西兰</td><td>埃及新行政首都</td></tr>
+    </table>
+    <div class="stat-grid">
+      <div class="stat-item egypt"><div class="val">2</div><div class="lbl">埃及胜</div></div>
+      <div class="stat-item"><div class="val">1</div><div class="lbl">平局</div></div>
+      <div class="stat-item nz"><div class="val">0</div><div class="lbl">新西兰胜</div></div>
+    </div>
+    <p style="font-size:13px;color:#444;">总进球：埃及3 - 新西兰1 | 场均1.33球 | 世界杯从未交锋，本场为首次大赛相遇</p>
+    <p style="font-size:13px;color:#444;">最近一次：2024年3月埃及1-0小胜，主场作战。新西兰从未攻破埃及大门（3场仅进1球）。</p>
+  </div>
+
+  <!-- ===== 埃及阵容 ===== -->
+  <div class="card">
+    <div class="card-title egypt">埃及国家队 26人大名单（FIFA排名：第28-29位）</div>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部</th><th>联赛</th><th>备注</th></tr>
+      <tr><td>1</td><td>Mohamed El Shenawy</td><td><span class="pos-gk">GK</span></td><td>Al Ahly</td><td>埃及超</td><td>37岁，国家队主力门将，2018世界杯主力</td></tr>
+      <tr><td>23</td><td>Mostafa Shobeir</td><td><span class="pos-gk">GK</span></td><td>Al Ahly</td><td>埃及超</td><td>vs比利时首发门将（评分6.9）</td></tr>
+      <tr><td>26</td><td>Mohamed Alaa</td><td><span class="pos-gk">GK</span></td><td>El Gouna/Ittihad</td><td>埃及超</td><td>第三门将</td></tr>
+      <tr><td>16</td><td>El-Mahdi Soliman</td><td><span class="pos-gk">GK</span></td><td>Al Ittihad</td><td>埃及超</td><td>第四门将</td></tr>
+      <tr><td>3</td><td>Mohamed Hany</td><td><span class="pos-df">DF</span></td><td>Al Ahly</td><td>埃及超</td><td>右后卫，vs比利时乌龙球</td></tr>
+      <tr><td>5</td><td>Ramy Rabia</td><td><span class="pos-df">DF</span></td><td>Al Ain</td><td>阿联酋</td><td>中后卫，vs比利时替补登场</td></tr>
+      <tr><td>2</td><td>Yasser Ibrahim</td><td><span class="pos-df">DF</span></td><td>Al Ahly</td><td>埃及超</td><td>中后卫，vs比利时首发</td></tr>
+      <tr><td>4</td><td>Hossam Abdelmaguid</td><td><span class="pos-df">DF</span></td><td>Zamalek</td><td>埃及超</td><td>中后卫替补</td></tr>
+      <tr><td>-</td><td>Mohamed Abdelmonem</td><td><span class="pos-df">DF</span></td><td>OGC Nice</td><td>法甲 Ligue 1</td><td>旅欧中后卫，因伤缺席首战？</td></tr>
+      <tr><td>13</td><td>Ahmed Fattouh</td><td><span class="pos-df">DF</span></td><td>Zamalek</td><td>埃及超</td><td>左后卫</td></tr>
+      <tr><td>-</td><td>Karim Hafez</td><td><span class="pos-df">DF</span></td><td>Pyramids FC</td><td>埃及超</td><td>左后卫/中后卫，vs比利时替补</td></tr>
+      <tr><td>-</td><td>Tarek Alaa</td><td><span class="pos-df">DF</span></td><td>ZED FC</td><td>埃及超</td><td>后卫替补</td></tr>
+      <tr><td>14</td><td>Hamdi Fathi</td><td><span class="pos-mf">MF</span></td><td>Al-Wakrah</td><td>卡塔尔星联赛</td><td>防守中场，vs比利时首发（89'被换下）</td></tr>
+      <tr><td>19</td><td>Marwan Attia</td><td><span class="pos-mf">MF</span></td><td>Al Ahly</td><td>埃及超</td><td>中场，vs比利时首发（13'黄牌）</td></tr>
+      <tr><td>17</td><td>Mohanad Lasheen</td><td><span class="pos-mf">MF</span></td><td>Pyramids FC</td><td>埃及超</td><td>中场，vs比利时首发</td></tr>
+      <tr><td>8</td><td>Emam Ashour</td><td><span class="pos-mf">MF</span></td><td>Al Ahly</td><td>埃及超</td><td>攻击中场，vs比利时进球（19'），评分7.9全场最佳</td></tr>
+      <tr><td>11</td><td>Mostafa Ziko</td><td><span class="pos-mf">MF</span></td><td>Pyramids FC</td><td>埃及超</td><td>中场，vs比利时首发（76'被换下）</td></tr>
+      <tr><td>-</td><td>Nabil Emad Dunga</td><td><span class="pos-mf">MF</span></td><td>Al-Najma</td><td>巴林超</td><td>防守中场</td></tr>
+      <tr><td>-</td><td>Mahmoud Saber</td><td><span class="pos-mf">MF</span></td><td>ZED FC</td><td>埃及超</td><td>中场</td></tr>
+      <tr><td>-</td><td>Ibrahim Adel</td><td><span class="pos-mf">MF</span></td><td>FC Nordsjelland</td><td>丹麦超</td><td>旅欧中场/边锋</td></tr>
+      <tr><td>-</td><td>Haitham Hassan</td><td><span class="pos-mf">MF</span></td><td>Real Oviedo</td><td>西乙</td><td>旅欧中场</td></tr>
+      <tr><td>10</td><td>Mohamed Salah (C)</td><td><span class="pos-fw">FW</span></td><td>Liverpool</td><td>英超 Premier League</td><td>34岁队长，67球距哈桑纪录仅差2球，vs比利时助攻（76'被换下）</td></tr>
+      <tr><td>22</td><td>Omar Marmoush</td><td><span class="pos-fw">FW</span></td><td>Manchester City</td><td>英超 Premier League</td><td>主力前锋，英超豪门级别</td></tr>
+      <tr><td>-</td><td>Ahmed Sayed Zizo</td><td><span class="pos-fw">FW</span></td><td>Al Ahly</td><td>埃及超</td><td>边锋/前锋</td></tr>
+      <tr><td>-</td><td>Mahmoud Trezeguet</td><td><span class="pos-fw">FW</span></td><td>Al Ahly</td><td>埃及超</td><td>边锋，前阿斯顿维拉球员</td></tr>
+      <tr><td>-</td><td>Hamza Abdelkarim</td><td><span class="pos-fw">FW</span></td><td>Barcelona B</td><td>西班牙</td><td>年轻前锋，巴萨B队，X因素替补</td></tr>
+      <tr><td>-</td><td>Aktay Abdallah</td><td><span class="pos-fw">FW</span></td><td>Enppi SC</td><td>埃及超</td><td>前锋</td></tr>
+    </table>
+    <div class="insight-box">
+      <strong>阵容要点：</strong>
+      <ul style="margin-left:20px;margin-top:8px;font-size:13px;">
+        <li>8名球员来自开罗国民（Al Ahly），国内联赛球员为班底，搭配5名旅欧球员</li>
+        <li>核心攻击线：Salah（利物浦）+ Marmoush（曼城）+ Ashour（Al Ahly）</li>
+        <li>世界杯经验：4次参赛（1934/1990/2018），<strong>从未在世界杯决赛圈获胜</strong></li>
+        <li>预选赛战绩：10场8胜2平不败，进20球仅失2球，场均失0.2球</li>
+        <li>首战门将选择：Shobeir首发而非El Shenawy，值得关注</li>
+        <li>Salah在76分钟被换下，可能为体能管理或战术调整</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 新西兰阵容 ===== -->
+  <div class="card">
+    <div class="card-title nz">新西兰国家队 26人大名单（FIFA排名：第85位）</div>
+    <table>
+      <tr><th>#</th><th>球员</th><th>位置</th><th>俱乐部</th><th>联赛</th><th>备注</th></tr>
+      <tr><td>1</td><td>Max Crocombe</td><td><span class="pos-gk">GK</span></td><td>Millwall</td><td>英冠 Championship</td><td>32岁主力门将，vs伊朗首发</td></tr>
+      <tr><td>12</td><td>Alex Paulsen</td><td><span class="pos-gk">GK</span></td><td>-</td><td>-</td><td>替补门将，23岁</td></tr>
+      <tr><td>22</td><td>Michael Woud</td><td><span class="pos-gk">GK</span></td><td>-</td><td>-</td><td>第三门将，27岁</td></tr>
+      <tr><td>2</td><td>Tim Payne</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>32岁右后卫，vs伊朗首发（80'被换下）</td></tr>
+      <tr><td>3</td><td>Francis de Vries</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>左后卫，31岁</td></tr>
+      <tr><td>4</td><td>Tyler Bindon</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>21岁中后卫，vs伊朗替补登场</td></tr>
+      <tr><td>5</td><td>Michael Boxall</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>37岁老将中后卫，vs伊朗首发</td></tr>
+      <tr><td>13</td><td>Liberato Cacace</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>25岁左后卫，vs伊朗首发（78'被换下），防守核心</td></tr>
+      <tr><td>15</td><td>Nando Pijnaker</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>中后卫，27岁</td></tr>
+      <tr><td>16</td><td>Finn Surman</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>22岁中后卫，vs伊朗首发，防守稳定</td></tr>
+      <tr><td>24</td><td>Callan Elliot</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>右后卫，vs伊朗替补登场</td></tr>
+      <tr><td>26</td><td>Tommy Smith</td><td><span class="pos-df">DF</span></td><td>-</td><td>-</td><td>36岁老将后卫，前英超球员</td></tr>
+      <tr><td>6</td><td>Joe Bell</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>27岁防守中场，vs伊朗首发</td></tr>
+      <tr><td>7</td><td>Matthew Garbett</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>24岁中场，全能型</td></tr>
+      <tr><td>8</td><td>Marko Stamenic</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>24岁中场核心，vs伊朗首发（90+2'被换下），技术型</td></tr>
+      <tr><td>10</td><td>Sarpreet Singh</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>27岁攻击中场，vs伊朗首发（90+2'被换下），前拜仁青训</td></tr>
+      <tr><td>14</td><td>Alex Rufer</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>30岁中场</td></tr>
+      <tr><td>20</td><td>Callum McCowatt</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>27岁边路中场，vs伊朗首发（68'被换下）</td></tr>
+      <tr><td>23</td><td>Ryan Thomas</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>31岁中场，vs伊朗替补登场，前埃因霍温球员</td></tr>
+      <tr><td>25</td><td>Lachlan Bayliss</td><td><span class="pos-mf">MF</span></td><td>-</td><td>-</td><td>23岁中场</td></tr>
+      <tr><td>9</td><td>Chris Wood (C)</td><td><span class="pos-fw">FW</span></td><td>Nottingham Forest</td><td>英超 Premier League</td><td>34岁队长，空中霸权，vs伊朗2助攻，英超前锋</td></tr>
+      <tr><td>11</td><td>Elijah Just</td><td><span class="pos-fw">FW</span></td><td>-</td><td>-</td><td>26岁前锋，vs伊朗梅开二度（7', 55'），全场最佳</td></tr>
+      <tr><td>17</td><td>Kosta Barbarouses</td><td><span class="pos-fw">FW</span></td><td>-</td><td>-</td><td>36岁老将边锋，前澳超球员</td></tr>
+      <tr><td>18</td><td>Ben Waine</td><td><span class="pos-fw">FW</span></td><td>-</td><td>-</td><td>25岁前锋</td></tr>
+      <tr><td>19</td><td>Ben Old</td><td><span class="pos-fw">FW</span></td><td>-</td><td>-</td><td>23岁前锋，vs伊朗替补登场</td></tr>
+      <tr><td>21</td><td>Jesse Randall</td><td><span class="pos-fw">FW</span></td><td>-</td><td>-</td><td>23岁前锋，vs伊朗替补登场</td></tr>
+    </table>
+    <div class="insight-box">
+      <strong>阵容要点：</strong>
+      <ul style="margin-left:20px;margin-top:8px;font-size:13px;">
+        <li>核心：Chris Wood（诺丁汉森林，英超）为进攻支点，2助攻展现策应能力</li>
+        <li>Elijah Just 首战梅开二度，是 NZ 最具威胁的得分手</li>
+        <li>世界杯经验：2次参赛（1982/2010），<strong>从未在世界杯获胜</strong>（2010年三战三平）</li>
+        <li>阵容深度有限，多数球员效力次级联赛或大洋洲联赛</li>
+        <li>旅欧球员：Wood（英超）、Crocombe（英冠）、Singh（前拜仁青训）等</li>
+        <li>4-2-3-1阵型，强调防守紧凑 + 定位球 + 直接进攻</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 主教练对比 ===== -->
+  <div class="card">
+    <div class="card-title">主教练对比</div>
+    <table class="vs-table">
+      <tr><th>项目</th><th class="egypt-col">埃及 - Hossam Hassan</th><th class="nz-col">新西兰 - Darren Bazeley</th></tr>
+      <tr><td>全名</td><td>Hossam Hassan Hassanein Hassan</td><td>Darren Shaun Bazeley</td></tr>
+      <tr><td>出生日期</td><td>1966-08-10（59岁）</td><td>1972-10-05（53岁）</td></tr>
+      <tr><td>国籍</td><td>埃及</td><td>新西兰（原英格兰）</td></tr>
+      <tr><td>上任时间</td><td>2024-02-06</td><td>2023-07-04（正式）</td></tr>
+      <tr><td>球员生涯</td><td>埃及历史最佳射手，69球/177场，参加过1990世界杯</td><td>500+场职业比赛，英格兰青年国脚，后移居新西兰</td></tr>
+      <tr><td>执教经历</td><td>Zamalek, Pyramids FC, El Masry 等埃及国内俱乐部</td><td>NZ U-17, U-20, 奥运队，首位执教过U-17/U-20世界杯+奥运会+世界杯的教练</td></tr>
+      <tr><td>常用阵型</td><td>4-2-3-1（可变3-4-1-2）</td><td>4-2-3-1 / 4-4-2 / 三中卫</td></tr>
+      <tr><td>战术风格</td><td>紧凑防守、快速转换、直接喂球给前锋</td><td>紧凑防守、定位球、直接支援前锋</td></tr>
+      <tr><td>执教纪录</td><td>预选赛10场8胜2平不败，进20失2</td><td>率队首次通过OFC直接晋级世界杯</td></tr>
+      <tr><td>历史意义</td><td>首位以球员+教练身份代表埃及参加世界杯的人</td><td>首位在FIFA各项赛事均执教过的教练</td></tr>
+      <tr><td>合同期限</td><td>未公开确认</td><td>世界杯后到期</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 世界杯首战数据 ===== -->
+  <div class="card">
+    <div class="card-title">世界杯首战详细数据</div>
+
+    <h3 style="font-size:14px;color:#C8102E;margin-bottom:10px;">比利时 1-1 埃及（6月15日，西雅图 Lumen Field）</h3>
+    <table class="vs-table">
+      <tr><th>数据项</th><th class="egypt-col">埃及</th><th>比利时</th></tr>
+      <tr><td>xG（预期进球）</td><td class="egypt-col">0.89-1.09</td><td>1.16-1.35</td></tr>
+      <tr><td>控球率</td><td class="egypt-col">47%</td><td>53%</td></tr>
+      <tr><td>射门</td><td class="egypt-col">14</td><td>14</td></tr>
+      <tr><td>射正</td><td class="egypt-col">3</td><td>3</td></tr>
+      <tr><td>总传球</td><td class="egypt-col">388</td><td>432</td></tr>
+      <tr><td>传球成功率</td><td class="egypt-col">314 (81%)</td><td>371 (86%)</td></tr>
+      <tr><td>角球</td><td class="egypt-col">7</td><td>2</td></tr>
+      <tr><td>犯规</td><td class="egypt-col">14</td><td>15</td></tr>
+      <tr><td>黄牌</td><td class="egypt-col">2（Attia 13', A.Mohamed 34'）</td><td>2（Castagne 14', De Cuyper 75'）</td></tr>
+      <tr><td>禁区内射门</td><td class="egypt-col">11</td><td>8</td></tr>
+      <tr><td>门将</td><td class="egypt-col">Mostafa Shobeir（3扑救/3射正）</td><td>Courtois（3扑救/3射正）</td></tr>
+    </table>
+    <p style="font-size:13px;margin-top:10px;"><strong>进球：</strong>Emam Ashour 19'（助攻：Salah）| Mohamed Hany 66'（乌龙球）</p>
+    <p style="font-size:13px;"><strong>埃及首发（4-2-3-1）：</strong>Shobeir; Mohamed Hany, Yasser Ibrahim, Hamdi Fathi, A.Mohamed; Marwan Attia, Mohanad Lasheen; Mostafa Ziko, Emam Ashour, Mohamed Salah; Omar Marmoush</p>
+    <p style="font-size:13px;"><strong>换人：</strong>Rabia→Ashour 71', Abdelkarim→Ziko 76', Abdelkarim→Salah 76', I.Hassan→Fathi 89', Karim Hafez→A.Mohamed 89'</p>
+    <div class="warning-box">
+      <strong>注意：</strong>Salah 在76分钟被换下（Hamza Abdelkarim替补），El Shenawy未首发（Shobeir顶替），Mohamed Abdelmonem（尼斯，法甲）未进入首发名单。这三个人员选择值得关注。
+    </div>
+
+    <hr class="divider">
+
+    <h3 style="font-size:14px;color:#012169;margin-bottom:10px;">伊朗 2-2 新西兰（6月15日，洛杉矶 SoFi Stadium，观众70,108）</h3>
+    <table class="vs-table">
+      <tr><th>数据项</th><th class="nz-col">新西兰</th><th>伊朗</th></tr>
+      <tr><td>控球率</td><td class="nz-col">52%</td><td>48%</td></tr>
+      <tr><td>射门</td><td class="nz-col">14</td><td>17</td></tr>
+      <tr><td>射正</td><td class="nz-col">8（57%）</td><td>4（24%）</td></tr>
+      <tr><td>扑救</td><td class="nz-col">2（50%）</td><td>6（75%）</td></tr>
+      <tr><td>传球</td><td class="nz-col">376（84%）</td><td>314（77%）</td></tr>
+      <tr><td>角球</td><td class="nz-col">1</td><td>4</td></tr>
+      <tr><td>犯规</td><td class="nz-col">8</td><td>10</td></tr>
+      <tr><td>黄牌</td><td class="nz-col">0</td><td>1（Hajsafi 89'）</td></tr>
+      <tr><td>越位</td><td class="nz-col">0</td><td>2</td></tr>
+      <tr><td>传中</td><td class="nz-col">12</td><td>19</td></tr>
+      <tr><td>拦截</td><td class="nz-col">13</td><td>11</td></tr>
+      <tr><td>门将</td><td class="nz-col">Max Crocombe（2扑救/4射正，50%）</td><td>Beiranvand（6扑救/8射正，75%）</td></tr>
+    </table>
+    <p style="font-size:13px;margin-top:10px;"><strong>进球：</strong>Elijah Just 7'（助攻：Wood）| Ramin Rezaeian 32' | Elijah Just 55'（助攻：Wood）| Mohammad Mohebi 64'（助攻：Rezaeian）</p>
+    <p style="font-size:13px;"><strong>NZ首发（4-2-3-1）：</strong>Crocombe; Payne, Boxall, Surman, Cacace; Bell, Stamenic; McCowatt, Singh, Just; Wood</p>
+    <p style="font-size:13px;"><strong>换人：</strong>Thomas→McCowatt 68', Old→Cacace 78', Elliot→Payne 80', Randall→Singh 90+2', Bindon→Stamenic 90+2'</p>
+    <div class="insight-box">
+      <strong>首战关键发现：</strong>
+      <ul style="margin-left:20px;margin-top:8px;font-size:13px;">
+        <li>NZ射正率57%远超伊朗的24%，进攻效率极高</li>
+        <li>Chris Wood 2助攻展现策应能力，Elijah Just 射门转化率惊人</li>
+        <li>NZ控球率52%略占优，传球成功率84%高于伊朗77%</li>
+        <li>NZ仅1个角球但8次射正，说明反击效率极高</li>
+        <li>0黄牌0红牌，纪律性优秀</li>
+        <li>埃及方面：xG低于比利时但射门数相同，7个角球显示定位球威胁</li>
+        <li>埃及禁区内射门11次 > 比利时8次，进入危险区域能力强</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 门将数据 ===== -->
+  <div class="card">
+    <div class="card-title">门将数据对比</div>
+    <table class="vs-table">
+      <tr><th>项目</th><th class="egypt-col">埃及 - Mostafa Shobeir</th><th class="egypt-col">埃及 - El Shenawy (备选)</th><th class="nz-col">NZ - Max Crocombe</th></tr>
+      <tr><td>年龄</td><td>-</td><td>37岁</td><td>32岁</td></tr>
+      <tr><td>俱乐部</td><td>Al Ahly（埃及超）</td><td>Al Ahly（埃及超）</td><td>Millwall（英冠）</td></tr>
+      <tr><td>世界杯首战</td><td>首发，3扑救/3射正（100%）</td><td>未进入首发</td><td>首发，2扑救/4射正（50%）</td></tr>
+      <tr><td>2025/26俱乐部</td><td>-</td><td>15场，失12球，5零封</td><td>23场，失24球，9零封</td></tr>
+      <tr><td>扑救率（俱乐部联赛）</td><td>-</td><td>66.67%（26/39）</td><td>75.73%（78/103）</td></tr>
+      <tr><td>扑救率百分位</td><td>-</td><td>第68百分位</td><td>第94百分位</td></tr>
+      <tr><td>每90分钟失球</td><td>-</td><td>0.80</td><td>1.04</td></tr>
+      <tr><td>零封率</td><td>-</td><td>33%（5/15）</td><td>39%（9/23）</td></tr>
+      <tr><td>世界杯预选赛</td><td>-</td><td>9场，失2球，7零封</td><td>4场，失1球，3零封</td></tr>
+      <tr><td>世界杯经验</td><td>首次</td><td>2018世界杯 2场失4球</td><td>首次</td></tr>
+      <tr><td>PSxG数据</td><td colspan="3" style="text-align:center;font-size:12px;color:#888;">公开数据有限，无法获取完整PSxG-GA数据</td></tr>
+    </table>
+    <div class="insight-box">
+      <strong>门将分析：</strong>
+      <ul style="margin-left:20px;margin-top:8px;font-size:13px;">
+        <li>El Shenawy 世界杯预选赛数据极佳（9场7零封），但首战未首发</li>
+        <li>Shobeir 首战表现稳健（3/3扑救），但比利时3次射正仅1球来自乌龙</li>
+        <li>Crocombe 英冠扑救率75.73%位居第94百分位，但世界杯首战仅50%</li>
+        <li>Crocombe 俱乐部传球成功率仅41.7%，出球能力较弱，可能被埃及高位逼抢针对</li>
+        <li>El Shenawy 传球成功率76.09%，出球能力优于Crocombe</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 近期战绩 ===== -->
+  <div class="card">
+    <div class="card-title">近期战绩对比（最近10场）</div>
+
+    <h3 style="font-size:14px;color:#C8102E;margin-bottom:8px;">埃及（近10场：5胜3平2负）</h3>
+    <div class="form-row" style="margin-bottom:10px;">
+      <span class="form-d">D</span><span class="form-l">L</span><span class="form-w">W</span><span class="form-d">D</span><span class="form-w">W</span><span class="form-d">D</span><span class="form-l">L</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-d">D</span>
+      <span style="font-size:12px;color:#666;margin-left:8px;">（左→右：最近→最早）</span>
+    </div>
+    <table>
+      <tr><th>日期</th><th>赛事</th><th>对阵</th><th>比分</th><th>结果</th><th>对手档位</th></tr>
+      <tr><td>06-15</td><td>世界杯</td><td>vs 比利时</td><td>1-1</td><td><span class="badge badge-yellow">平</span></td><td>顶级（FIFA ~8）</td></tr>
+      <tr><td>06-07</td><td>友谊赛</td><td>vs 巴西</td><td>1-2</td><td><span class="badge badge-red">负</span></td><td>顶级（FIFA ~5）</td></tr>
+      <tr><td>05-28</td><td>友谊赛</td><td>vs 俄罗斯</td><td>1-0</td><td><span class="badge badge-green">胜</span></td><td>中上游</td></tr>
+      <tr><td>03-31</td><td>友谊赛</td><td>vs 西班牙</td><td>0-0</td><td><span class="badge badge-yellow">平</span></td><td>顶级（FIFA ~1）</td></tr>
+      <tr><td>03-27</td><td>友谊赛</td><td>vs 沙特阿拉伯</td><td>4-0</td><td><span class="badge badge-green">胜</span></td><td>中游（亚洲）</td></tr>
+      <tr><td>01-17</td><td>非洲杯</td><td>vs 尼日利亚</td><td>0-0 (点2-4)</td><td><span class="badge badge-yellow">平</span></td><td>中上游（非洲）</td></tr>
+      <tr><td>01-14</td><td>非洲杯</td><td>vs 塞内加尔</td><td>0-1</td><td><span class="badge badge-red">负</span></td><td>中上游（非洲）</td></tr>
+      <tr><td>01-10</td><td>非洲杯</td><td>vs 科特迪瓦</td><td>3-2</td><td><span class="badge badge-green">胜</span></td><td>中游（非洲）</td></tr>
+      <tr><td>01-05</td><td>非洲杯</td><td>vs 贝宁</td><td>3-1 (AET)</td><td><span class="badge badge-green">胜</span></td><td>下游（非洲）</td></tr>
+      <tr><td>12-29</td><td>非洲杯</td><td>vs 安哥拉</td><td>0-0</td><td><span class="badge badge-yellow">平</span></td><td>中下游（非洲）</td></tr>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:6px;">进12球 失6球 | 零封4场 | 对顶级球队：1平2负1平（vs西班牙/比利时/巴西）</p>
+
+    <hr class="divider">
+
+    <h3 style="font-size:14px;color:#012169;margin-bottom:8px;">新西兰（近10场：3胜1平6负）</h3>
+    <div class="form-row" style="margin-bottom:10px;">
+      <span class="form-d">D</span><span class="form-l">L</span><span class="form-w">W</span><span class="form-w">W</span><span class="form-l">L</span><span class="form-l">L</span><span class="form-l">L</span><span class="form-d">D</span><span class="form-l">L</span><span class="form-l">L</span>
+      <span style="font-size:12px;color:#666;margin-left:8px;">（左→右：最近→最早）</span>
+    </div>
+    <table>
+      <tr><th>日期</th><th>赛事</th><th>对阵</th><th>比分</th><th>结果</th><th>对手档位</th></tr>
+      <tr><td>06-15</td><td>世界杯</td><td>vs 伊朗</td><td>2-2</td><td><span class="badge badge-yellow">平</span></td><td>中游（FIFA ~21）</td></tr>
+      <tr><td>06-06</td><td>友谊赛</td><td>vs 英格兰</td><td>0-1</td><td><span class="badge badge-red">负</span></td><td>顶级（FIFA ~3）</td></tr>
+      <tr><td>06-03</td><td>友谊赛</td><td>vs 海地</td><td>4-0</td><td><span class="badge badge-green">胜</span></td><td>下游（中北美）</td></tr>
+      <tr><td>03-30</td><td>友谊赛</td><td>vs 智利</td><td>4-1</td><td><span class="badge badge-green">胜</span></td><td>中游（南美）</td></tr>
+      <tr><td>03-27</td><td>友谊赛</td><td>vs 芬兰</td><td>0-2</td><td><span class="badge badge-red">负</span></td><td>中下游（欧洲）</td></tr>
+      <tr><td>11-19</td><td>友谊赛</td><td>vs 厄瓜多尔</td><td>0-2</td><td><span class="badge badge-red">负</span></td><td>中游（南美）</td></tr>
+      <tr><td>11-16</td><td>友谊赛</td><td>vs 哥伦比亚</td><td>1-2</td><td><span class="badge badge-red">负</span></td><td>中上游（南美）</td></tr>
+      <tr><td>10-14</td><td>友谊赛</td><td>vs 挪威</td><td>1-1</td><td><span class="badge badge-yellow">平</span></td><td>中游（欧洲）</td></tr>
+      <tr><td>10-09</td><td>友谊赛</td><td>vs 波兰</td><td>0-1</td><td><span class="badge badge-red">负</span></td><td>中游（欧洲）</td></tr>
+      <tr><td>09-09</td><td>友谊赛</td><td>vs 澳大利亚</td><td>1-3</td><td><span class="badge badge-red">负</span></td><td>中游（亚洲）</td></tr>
+    </table>
+    <p style="font-size:12px;color:#666;margin-top:6px;">进11球 失15球 | 零封1场 | 对中游以上对手：1平5负（仅逼平伊朗和挪威）</p>
+  </div>
+
+  <!-- ===== 纪律数据 ===== -->
+  <div class="card">
+    <div class="card-title">纪律/犯规数据</div>
+    <table class="vs-table">
+      <tr><th>项目</th><th class="egypt-col">埃及</th><th class="nz-col">新西兰</th></tr>
+      <tr><td>世界杯首战犯规</td><td class="egypt-col">14</td><td class="nz-col">8</td></tr>
+      <tr><td>世界杯首战黄牌</td><td class="egypt-col">2</td><td class="nz-col">0</td></tr>
+      <tr><td>世界杯首战红牌</td><td class="egypt-col">0</td><td class="nz-col">0</td></tr>
+      <tr><td>场均犯规（首战）</td><td class="egypt-col">14</td><td class="nz-col">8</td></tr>
+      <tr><td>纪律风格</td><td class="egypt-col">中场犯规较多，Attia/Lasheen防守硬度高</td><td class="nz-col">纪律性优秀，8犯规0黄牌，防守干净</td></tr>
+    </table>
+    <div class="insight-box">
+      <strong>纪律分析：</strong>新西兰首战仅8次犯规0黄牌，防守纪律性明显优于埃及（14犯2黄）。埃及中场Attia（13'黄牌）和A.Mohamed（34'黄牌）均在防守中吃牌，若再吃黄牌将面临累计停赛风险。新西兰的防守更依赖位置感和拦截（13次拦截 > 伊朗11次），而非犯规破坏。
+    </div>
+  </div>
+
+  <!-- ===== 替补影响力 ===== -->
+  <div class="card">
+    <div class="card-title">替补影响力</div>
+    <table class="vs-table">
+      <tr><th>项目</th><th class="egypt-col">埃及</th><th class="nz-col">新西兰</th></tr>
+      <tr><td>首战替补出场人数</td><td class="egypt-col">5人</td><td class="nz-col">5人</td></tr>
+      <tr><td>替补进球</td><td class="egypt-col">0</td><td class="nz-col">0</td></tr>
+      <tr><td>替补助攻</td><td class="egypt-col">0</td><td class="nz-col">0</td></tr>
+      <tr><td>关键替补球员</td><td class="egypt-col">Hamza Abdelkarim（巴萨B队，年轻前锋，X因素）</td><td class="nz-col">Ryan Thomas（前埃因霍温，经验丰富）</td></tr>
+      <tr><td>板凳深度</td><td class="egypt-col">较深（Trezeguet, Zizo, Ibrahim Adel等攻击手）</td><td class="nz-col">较浅（Barbarouses, Waine, Old等）</td></tr>
+      <tr><td>首战换人时机</td><td class="egypt-col">71'-89'（保守，领先后换下Salah/Ashour保比分）</td><td class="nz-col">68'-90+2'（积极调整，保持竞争力）</td></tr>
+    </table>
+    <div class="insight-box">
+      <strong>替补分析：</strong>
+      <ul style="margin-left:20px;margin-top:8px;font-size:13px;">
+        <li>埃及替补席更有深度：Trezeguet（前英超）、Zizo、Abdelkarim（巴萨B）均可改变比赛</li>
+        <li>Salah在76'被换下引发关注——可能是体能管理（34岁）或战术保护</li>
+        <li>NZ替补席以老将为主：Barbarouses（36岁）、Thomas（31岁）、Smith（36岁）</li>
+        <li>NZ首战5个换人中3个在68-80分钟，用于保持防守紧凑度和体能</li>
+        <li>两队首战替补均无直接进球贡献</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 伤病/阵容不确定性 ===== -->
+  <div class="card">
+    <div class="card-title">伤病及阵容不确定性</div>
+    <table>
+      <tr><th>球队</th><th>球员</th><th>情况</th><th>影响</th></tr>
+      <tr><td>埃及</td><td>Mohamed El Shenawy (GK)</td><td>首战未首发，Shobeir替代</td><td>主力门将位置不确定，可能因状态或轻微伤病</td></tr>
+      <tr><td>埃及</td><td>Mohamed Abdelmonem (DF)</td><td>尼斯中后卫未进入首战首发</td><td>旅欧中后卫缺席值得关注，可能因伤或战术选择</td></tr>
+      <tr><td>埃及</td><td>Mohamed Salah (FW)</td><td>76'被换下</td><td>34岁队长体能管理，需关注是否全场出战</td></tr>
+      <tr><td>新西兰</td><td>无明确伤病报告</td><td>首战阵容完整</td><td>阵容相对健康</td></tr>
+      <tr><td>新西兰</td><td>Liberato Cacace (DF)</td><td>78'被换下</td><td>可能体能问题，需关注是否全场出战</td></tr>
+    </table>
+    <div class="warning-box">
+      <strong>阵容不确定性要点：</strong>
+      <ul style="margin-left:20px;margin-top:8px;font-size:13px;">
+        <li>埃及门将选择是最大疑问：El Shenawy（预选赛9场7零封）vs Shobeir（首战表现稳健）</li>
+        <li>Abdelmonem（法甲尼斯中后卫）缺席首战首发，若回归将增强防线</li>
+        <li>Salah体能状态：34岁，被提前换下，面对NZ是否全场出战存疑</li>
+        <li>NZ阵容相对稳定，首战表现良好的阵容可能延续</li>
+        <li>公开伤病追踪网站未列出两队有严重伤病缺阵球员</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 战术对比 ===== -->
+  <div class="card">
+    <div class="card-title">战术对比与关键对位</div>
+    <table class="vs-table">
+      <tr><th>维度</th><th class="egypt-col">埃及</th><th class="nz-col">新西兰</th></tr>
+      <tr><td>核心战术</td><td class="egypt-col">紧凑防守+快速转换，Salah自由内切</td><td class="nz-col">紧凑防守+定位球+直接找Wood</td></tr>
+      <tr><td>进攻发起</td><td class="egypt-col">中场快速分球给Salah/Marmoush，利用个人能力</td><td class="nz-col">长传找Wood做桩，Just前插抢点</td></tr>
+      <tr><td>防守策略</td><td class="egypt-col">4-2-3-1紧凑防守，保护中路</td><td class="nz-col">4-4-2/4-2-3-1低位防守，封堵中路</td></tr>
+      <tr><td>定位球</td><td class="egypt-col">7角球vs比利时，定位球威胁大</td><td class="nz-col">1角球vs伊朗，定位球利用待提升</td></tr>
+      <tr><td>空中对抗</td><td class="egypt-col">中等（Yasser Ibrahim等）</td><td class="nz-col">极强（Wood + Boxall + Surman）</td></tr>
+      <tr><td>控球倾向</td><td class="egypt-col">不追求控球，注重效率（47% vs 比利时）</td><td class="nz-col">不追求控球，但首战52%略占优</td></tr>
+      <tr><td>关键对位</td><td class="egypt-col">Salah vs Cacace（左后卫）</td><td class="nz-col">Wood vs Yasser Ibrahim（中后卫）</td></tr>
+      <tr><td>关键对位2</td><td class="egypt-col">Marmoush vs Finn Surman（中后卫）</td><td class="nz-col">Just vs Hamdi Fathi（防守中场）</td></tr>
+      <tr><td>关键对位3</td><td class="egypt-col">Ashour vs Joe Bell/Stamenic（中场争夺）</td><td class="nz-col">Singh vs Attia/Lasheen（中场技术对抗）</td></tr>
+    </table>
+  </div>
+
+  <!-- ===== 关键数据总结 ===== -->
+  <div class="card">
+    <div class="card-title">关键数据速览</div>
+    <div class="stat-grid">
+      <div class="stat-item egypt"><div class="val">29</div><div class="lbl">埃及 FIFA排名</div></div>
+      <div class="stat-item nz"><div class="val">85</div><div class="lbl">新西兰 FIFA排名</div></div>
+      <div class="stat-item"><div class="val">0</div><div class="lbl">两队世界杯胜场</div></div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item egypt"><div class="val">0.89</div><div class="lbl">埃及首战xG</div></div>
+      <div class="stat-item nz"><div class="val">2</div><div class="lbl">NZ首战进球</div></div>
+      <div class="stat-item"><div class="val">57%</div><div class="lbl">NZ首战射正率</div></div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item egypt"><div class="val">7</div><div class="lbl">埃及首战角球</div></div>
+      <div class="stat-item nz"><div class="val">8</div><div class="lbl">NZ首战射正</div></div>
+      <div class="stat-item"><div class="val">2</div><div class="lbl">Wood首战助攻</div></div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-item egypt"><div class="val">67</div><div class="lbl">Salah国家队进球</div></div>
+      <div class="stat-item nz"><div class="val">0</div><div class="lbl">NZ vs 埃及历史进球</div></div>
+      <div class="stat-item"><div class="val">1.33</div><div class="lbl">H2H场均进球</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 数据来源 ===== -->
+  <div class="card">
+    <div class="card-title">数据来源</div>
+    <ul class="source-list">
+      <li>XGscore (xgscore.io) - 比利时vs埃及 xG 数据</li>
+      <li>FBref (fbref.com) - 伊朗vs新西兰详细比赛数据、球员统计</li>
+      <li>ESPN (espn.com) - 两队赛程、阵容、比赛结果</li>
+      <li>FIFA.com - 官方阵容信息</li>
+      <li>FootyStats (footystats.org) - El Shenawy 和 Crocombe 俱乐部门将数据</li>
+      <li>FWCTimes (fwctimes.com) - 主教练资料、H2H记录</li>
+      <li>WorldSoccerTalk (worldsoccertalk.com) - 埃及阵容和战术分析</li>
+      <li>MundialAnalytics (mundialanalytics.com) - 新西兰战术分析</li>
+      <li>FIFAWorldCupNews / WorldCupPass / WorldCupLocalTime - 阵容确认、比赛详情</li>
+      <li>11v11.com - 历史交锋记录</li>
+      <li>Transfermarkt - 球员资料</li>
+    </ul>
+    <p style="font-size:11px;color:#999;margin-top:12px;">报告生成时间：2026-06-20 | 数据可能因后续比赛更新而变化 | PSxG等高级门将数据公开来源有限</p>
+  </div>
+
+</div>
+</body>
+</html>
