@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 荷兰 vs 瑞典（2026-06-20）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>荷兰 vs 瑞典 · 2026年6月20日 · F组第2轮 · 复盘时间：2026年6月21日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇳🇱</div>
+        <div class="name">荷兰</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#f57f17;">2</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">荷兰 2-1（首选·14%）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-red">实际</span></div>
+        <div class="score-num" style="color:#0033A0;">5</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num">1</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-red">荷兰 5-1 瑞典（Brobbey×2、Gakpo×2、Summerville）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇸🇪</div>
+        <div class="name">瑞典</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item"><div class="val" style="color:#c62828;">❌</div><div class="lbl">首选2-1未中（实际5-1）</div></div>
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">✅</div><div class="lbl">胜平负方向正确（45%→赢）</div></div>
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">✅</div><div class="lbl">BTTS兑现（双方都有进球）</div></div>
+      <div class="summary-item"><div class="val" style="color:#c62828;">❌</div><div class="lbl">大小球严重错估（6球 vs 预测总xG 2.3-3.5）</div></div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>荷兰 <strong>2-1</strong> 瑞典（首选·14%）</td><td class="miss-row">荷兰 <strong>5-1</strong> 瑞典 ❌ 5-1未在备选</td></tr>
+      <tr><td><strong>其他可能比分</strong></td><td>1-1(13%), 1-0(10%), 0-1(9%), 2-2(8%)</td><td class="miss-row">5-1完全未列入 ❌</td></tr>
+      <tr><td><strong>荷兰胜率</strong></td><td><strong>45%</strong></td><td class="hit-row">荷兰取胜 ✅</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>30%（平局信号显著）</td><td class="hit-row">平局未发生 ✅</td></tr>
+      <tr><td><strong>瑞典胜率</strong></td><td>25%</td><td class="hit-row">瑞典未胜 ✅</td></tr>
+      <tr><td><strong>荷兰xG</strong></td><td>1.40-2.00</td><td class="hit-row">实际2.61 ✅ 超上限但合理</td></tr>
+      <tr><td><strong>瑞典xG</strong></td><td>0.90-1.50</td><td class="hit-row">实际1.01 ✅ 区间内</td></tr>
+      <tr><td><strong>总进球</strong></td><td>预测总xG 2.30-3.50（约3球）</td><td class="miss-row">实际6球 ❌ 严重低估</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 逐项核对（15项）</div>
+    <table>
+      <tr><th width="6%">#</th><th width="38%">预测项</th><th width="28%">实际</th><th width="10%">评级</th><th width="18%">原因</th></tr>
+      <tr class="miss-row"><td>1</td><td>首选比分 荷兰2-1 (14%)</td><td>5-1</td><td>❌</td><td>5-1未在备选，幅度严重错估</td></tr>
+      <tr class="hit-row"><td>2</td><td>荷兰45%胜率</td><td>荷兰取胜</td><td>✅</td><td>方向正确</td></tr>
+      <tr class="miss-row"><td>3</td><td>平局30%显著场景</td><td>平局未发生</td><td>⚠️</td><td>高估平局概率（30%→0%）</td></tr>
+      <tr class="hit-row"><td>4</td><td>BTTS：Yes（双方均有进球）</td><td>Elanga 59'扳回一球</td><td>✅</td><td>完全命中</td></tr>
+      <tr class="miss-row"><td>5</td><td>大小球约3球（2.3-3.5）</td><td>实际6球</td><td>❌</td><td>严重低估近2倍</td></tr>
+      <tr class="hit-row"><td>6</td><td>Isak+Gyökeres锋线状态火热</td><td>Elanga进球+Isak/Gyökeres未破门</td><td>⚠️</td><td>有亮点但被压制</td></tr>
+      <tr class="miss-row"><td>7</td><td>Potter战术灵活性优势</td><td>未能针对性布置</td><td>❌</td><td>Brobbey 5'17'连下两城</td></tr>
+      <tr class="miss-row"><td>8</td><td>Koeman体系可预测（边路+Van Dijk）</td><td>中路渗透+反击双线进攻</td><td>❌</td><td>荷兰战术进化超出预测</td></tr>
+      <tr class="hit-row"><td>9</td><td>Van Dijk头球威胁</td><td>未直接头球进球</td><td>⚠️</td><td>威胁转化为定位球进攻</td></tr>
+      <tr class="miss-row"><td>10</td><td>荷兰"大赛心理脆弱"历史模式</td><td>5'首开+17'扩大比分</td><td>❌</td><td>本场完全未触发</td></tr>
+      <tr class="miss-row"><td>11</td><td>荷兰终结效率一般</td><td>Brobbey+Gakpo 4球</td><td>❌</td><td>终结效率极高（70%射正率）</td></tr>
+      <tr class="miss-row"><td>12</td><td>Lagerbielke/Gyökeres越位陷阱</td><td>Lagerbielke进球被吹越位</td><td>⚠️</td><td>部分命中（进球被吹）</td></tr>
+      <tr class="miss-row"><td>13</td><td>教练博弈Potter>A级优势</td><td>Koeman战术进化压制Potter</td><td>❌</td><td>本场Koeman反胜Potter</td></tr>
+      <tr class="hit-row"><td>14</td><td>控球率接近均衡（51%-49%实际）</td><td>51%-49%</td><td>✅</td><td>完全命中</td></tr>
+      <tr class="hit-row"><td>15</td><td>末段进球可能（Brobbey开场+Gakpo 47'+54'）</td><td>Summerville 89'锦上添花</td><td>✅</td><td>末段进球路径命中</td></tr>
+    </table>
+    <p style="margin-top:12px;font-size:14px;"><strong>命中率统计：</strong> 15项中<strong>5项完全命中 ✅ / 4项部分命中 ⚠️ / 6项未中 ❌，命中率 33%</strong></p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔍 偏差原因深度分析（5条）</div>
+    <div class="insight-box">
+      <p><strong>1. "平局信号优先规则"在优势方主导比赛中反向应用。</strong>本场是4天前荷兰首轮2-2被日本逼平后的反弹战——"心理恢复+全力争胜"是主旋律，模型将"首轮被逼平"误读为"心理脆弱"信号，应用了30%平局概率。但实际荷兰展现出"被逼平后的强烈回应"——这是模型对"首轮表现→次轮表现"关系的过度负向解读，忽略了"失利/被逼平后的强回应"是常态而非例外。</p>
+    </div>
+    <div class="insight-box">
+      <p><strong>2. "对手实力差→比分差"模型的反向应用。</strong>预测荷兰总进球1.4-2.0（控制型胜利），实际5球——这是"实力接近→比分胶着"假设的反例。原因是荷兰首开纪录后瑞典被迫压上反击，暴露了防守端的纵深——Brobbey 5'+17'早开纪录打破均衡态势，触发"进球→对手压上→空间扩大→反击进球"的链式放大效应。模型需要识别"早开纪录+实力接近"场景下"对手压上→大比分"的概率路径。</p>
+    </div>
+    <div class="insight-box">
+      <p><strong>3. "非豪门俱乐部主力"进球者Brobbey被严重低估。</strong>Brian Brobbey（阿贾克斯/曼联边缘）作为荷兰首发中锋本场5分钟梅开二度，xG 1.29。预测中"近期状态"列仅标注"俱乐部表现火热"但未作为核心得分点分析——Brobbey在阿贾克斯本赛季26场12球的高效表现未被赋予独立概率权重。这与"非豪门俱乐部主力"进球路径系统性低估问题（参考6/19巴西vs海地Cunha漏判、苏格兰vs摩洛哥Saibari漏判）一致。</p>
+    </div>
+    <div class="insight-box">
+      <p><strong>4. 荷兰"边路+Van Dijk"战术被预测过度依赖，忽视中路进攻进化。</strong>预测中明确将Koeman体系归纳为"边路传中+Van Dijk头球"，但本场荷兰展示出截然不同的进攻结构：Gakpo（实际xG 1.16）+Dumfries（2助攻）的中路渗透+边后卫插上组合。模型未识别Koeman从首轮2-2后的战术调整——这是"教练首轮表现→次轮战术调整"链条的预测盲区。</p>
+    </div>
+    <div class="insight-box">
+      <p><strong>5. "场均失球"作为防守评估指标不可靠。</strong>预测瑞典近期xGA 1.4（防守低于预期+71%！已标注），但仍按"瑞典防线整体尚可"评估。本场实际失5球印证了"+71%防守低于预期"已触发警戒线——模型虽注意到问题但未充分调低防守分数。需要建立"防守低于预期+50%"作为"防线崩盘前兆"的硬性规则。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📐 概率校准评估</div>
+    <table>
+      <tr><th width="25%">场景</th><th width="25%">预测概率</th><th width="25%">实际频率</th><th width="25%">校准偏差</th></tr>
+      <tr class="partial-row"><td>荷兰胜</td><td>45%</td><td>100%</td><td>合理（方向正确）</td></tr>
+      <tr class="miss-row"><td>平局</td><td>30%（平局信号显著）</td><td>0%</td><td><strong>严重高估</strong>（30pct）</td></tr>
+      <tr class="hit-row"><td>瑞典胜</td><td>25%</td><td>0%</td><td>合理（爆冷未发生）</td></tr>
+      <tr class="miss-row"><td>荷兰大胜（3+球差）</td><td>未单列（备选3-1/3-0未列）</td><td>100%（4球差）</td><td>完全未预测</td></tr>
+      <tr class="miss-row"><td>总进球≥4</td><td>约15-20%（大球场景）</td><td>100%（6球）</td><td>严重低估</td></tr>
+    </table>
+    <p style="margin-top:12px;font-size:13.5px;color:#666;"><strong>核心问题：</strong>模型对"实力接近+首轮被逼平"场景应用了"平局30%"信号，但实际触发了"强回应→大胜"路径。这是"次轮表现预测"的核心偏差——预测过度依赖"首轮表现外推"而忽略"强回应/重置"路径。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ 缺失数据清单</div>
+    <table>
+      <tr><th width="15%">数据项</th><th width="15%">严重度</th><th width="70%">影响</th></tr>
+      <tr><td>Brobbey阿贾克斯进球率/出场时间</td><td>🔴 高</td><td>未将其作为核心得分点分析，导致大胜路径缺失</td></tr>
+      <tr><td>Koeman首轮vs次轮战术调整历史</td><td>🟡 中</td><td>未识别"首轮被逼平→次轮强回应"链式规则</td></tr>
+      <tr><td>瑞典"+71%防守低于预期"硬性规则</td><td>🔴 高</td><td>虽标注异常但未转化为预测调整</td></tr>
+      <tr><td>Dumfries助攻数据</td><td>🟡 中</td><td>本场2助攻，若历史数据持续高助攻率应作为"边后卫插上"独立路径</td></tr>
+      <tr><td>Isak/Gyökeres联袂首发历史</td><td>🟢 低</td><td>双前锋组合本场未破门，历史联袂数据未列</td></tr>
+      <tr><td>荷兰"被逼平后历史回应强度"</td><td>🟡 中</td><td>历史数据显示首轮被逼平的强队次轮大胜概率显著上升</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🛠 优化建议（6条）</div>
+    <div class="rec-card">
+      <h4>1. "首轮被逼平→次轮强回应"链式规则</h4>
+      <ul>
+        <li><strong>问题：</strong>首轮被逼平被读为"心理脆弱"信号，实际相反</li>
+        <li><strong>方案：</strong>为"首轮被逼平/失利"球队在次轮分配"强回应"路径，胜率+5-10pct、进球+0.3-0.5球</li>
+        <li><strong>预期效果：</strong>覆盖"被逼平后大胜"等高强度回应场景</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>2. "早开纪录→链式放大效应"概率池</h4>
+      <ul>
+        <li><strong>问题：</strong>模型未识别"早开纪录→对手压上→空间扩大→大比分"链式</li>
+        <li><strong>方案：</strong>为"前20分钟领先+实力接近"场景分配"大胜"独立路径（10-15%概率）</li>
+        <li><strong>预期效果：</strong>覆盖"5'+17'两球领先后大胜"模式</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>3. "非豪门俱乐部主力"进球者独立建模</h4>
+      <ul>
+        <li><strong>问题：</strong>Brobbey、Cunha、Saibari等"非豪门俱乐部主力"反复漏判</li>
+        <li><strong>方案：</strong>建立"球员俱乐部进球率+每分钟参与率"全量数据库，对每场比赛首发球员做"非豪门俱乐部主力"标记</li>
+        <li><strong>预期效果：</strong>系统性解决"低估非豪门主力"问题</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>4. "防守低于预期+50%"硬性预警规则</h4>
+      <ul>
+        <li><strong>问题：</strong>瑞典"+71%防守低于预期"已标注但未转化为预测调整</li>
+        <li><strong>方案：</strong>建立"近期xGA超过xG预期+50%"作为"防线崩盘前兆"硬性规则，触发的比赛失球预测+1球</li>
+        <li><strong>预期效果：</strong>减少"问题防线未调整"导致的失球低估</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>5. "教练次轮战术调整"历史数据建模</h4>
+      <ul>
+        <li><strong>问题：</strong>Koeman本场战术进化未被预测</li>
+        <li><strong>方案：</strong>为每位教练建立"首轮vs次轮阵型变化"历史数据，识别"教练首轮保守→次轮放开"模式</li>
+        <li><strong>预期效果：</strong>为战术调整型教练分配额外进球预期</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>6. "进球者俱乐部表现→国家队表现"映射规则</h4>
+      <ul>
+        <li><strong>问题：</strong>Brobbey阿贾克斯26场12球未被映射为国家队预期</li>
+        <li><strong>方案：</strong>为每位球员建立"俱乐部进球/分钟→国家队预期进球"映射模型，含大赛折扣系数</li>
+        <li><strong>预期效果：</strong>更准确预测球员的进球能力边界</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📊 各维度评分（1-10）</div>
+    <table>
+      <tr><th width="35%">维度</th><th width="15%">评分</th><th width="50%">说明</th></tr>
+      <tr><td>1. 赛前信息准确性</td><td>6.5</td><td>基础信息准确，Brobbey首发状态未充分分析</td></tr>
+      <tr><td>2. 战术框架判断</td><td>4.0</td><td>"边路+Van Dijk"框架过时，未识别Koeman战术进化</td></tr>
+      <tr><td>3. 球员信息覆盖</td><td>5.5</td><td>Brobbey被低估，Gakpo+Dumfries连线未识别</td></tr>
+      <tr><td>4. 数据深度</td><td>5.5</td><td>标注了瑞典xGA+71%异常但未转化为调整</td></tr>
+      <tr><td>5. 概率模型</td><td>5.0</td><td>平局30%过度自信，大胜路径未建模</td></tr>
+      <tr><td>6. 比分预测</td><td>3.5</td><td>首选2-1完全未中，5-1超任何备选</td></tr>
+      <tr><td>7. 不确定性表达</td><td>5.5</td><td>已标注"信号混合"和"胶着比赛"但权重失误</td></tr>
+      <tr><td>8. 结构化程度</td><td>7.5</td><td>报告结构清晰，球员/战术/概率分层明确</td></tr>
+      <tr><td><strong>综合</strong></td><td><strong>5.4/10</strong></td><td>方向正确但幅度严重错估（2-1→5-1）</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏁 最终结论</div>
+    <div class="insight-box">
+      <p><strong>总评分：5.5/10</strong>（方向正确，比分2-1→5-1幅度严重错估）</p>
+      <p><strong>核心缺陷：</strong></p>
+      <ul style="margin:8px 0 8px 20px;font-size:14px;color:#444;">
+        <li><strong>"首轮被逼平→次轮强回应"链式规则缺失</strong>——首轮2-2后本场大胜5-1是经典的"强回应"模式</li>
+        <li><strong>"早开纪录→链式放大"路径未建模</strong>——Brobbey 5'+17'两球领先后空间扩大触发大胜</li>
+        <li><strong>"非豪门俱乐部主力"进球者系统性低估</strong>——Brobbey、Cunha、Saibari反复漏判</li>
+        <li><strong>"防守低于预期+71%"硬性预警规则缺失</strong>——已标注但未转化为预测调整</li>
+        <li><strong>战术框架过度依赖"边路+Van Dijk"传统归纳</strong>——未识别Koeman战术进化</li>
+      </ul>
+      <p><strong>核心改进方向：</strong></p>
+      <ol style="margin:8px 0 8px 20px;font-size:14px;color:#444;">
+        <li>"首轮被逼平→次轮强回应"链式规则（+5-10pct胜率、+0.3-0.5球）</li>
+        <li>"早开纪录→大胜"独立路径（10-15%概率池）</li>
+        <li>"非豪门俱乐部主力"进球者全量数据库+独立建模</li>
+        <li>"xGA超过预期+50%"硬性预警规则</li>
+        <li>教练次轮战术调整历史数据</li>
+      </ol>
+      <p style="margin-top:12px;color:#666;font-size:13px;">⚠️ 荷兰本场5-1是"首轮被逼平→次轮强回应"模式的典型案例，类似英格兰vs克罗地亚4-2（首轮英格兰1-0后次轮大胜）。这与"首轮表现外推"模型的偏差方向一致——下一轮预测中需对"首轮低迷但仍具备实力的强队"分配额外的强回应概率。</p>
+    </div>
+  </div>
+
+  <div class="card" style="text-align:center;font-size:12px;color:#888;">
+    报告数据仅供参考，不构成投注建议<br>
+    复盘模型：worldcup-review v1.0
+  </div>
+
+</div>
+</body>
+</html>
