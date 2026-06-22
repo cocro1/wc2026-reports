@@ -1,861 +1,871 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026世界杯预测报告 · 每日更新</title>
-<style>
-  * { box-sizing: border-box; margin:0; padding:0; }
-  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.7; }
-  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:28px 24px 24px; text-align:center; }
-  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
-  .header p { font-size:13px; opacity:0.85; margin-top:6px; }
-  .nav { background:white; padding:10px 24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
-  .nav a { font-size:13px; padding:6px 16px; border-radius:20px; text-decoration:none; font-weight:600; transition:all 0.2s; }
-  .nav a.active { background:#0033A0; color:white; }
-  .nav a:not(.active) { background:#f0f4ff; color:#0033A0; }
-  .nav a:not(.active):hover { background:#d0dffa; }
-  .container { max-width:900px; margin:0 auto; padding:24px 16px 48px; }
-  .welcome { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:28px; margin-bottom:20px; text-align:center; }
-  .welcome h2 { color:#0033A0; margin-bottom:8px; font-size:18px; }
-  .welcome p { color:#666; font-size:14px; }
-  .report-frame { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); margin-bottom:20px; overflow:hidden; }
-  .report-frame iframe { width:100%; height:800px; border:none; }
-  .report-frame .loading { text-align:center; padding:40px; color:#888; font-size:14px; }
-  .history-section { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; }
-  .history-title { font-size:15px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
-  .history-list { display:flex; flex-direction:column; gap:10px; }
-  .history-item { display:flex; align-items:center; gap:14px; padding:12px 16px; background:#f8fafd; border-radius:8px; text-decoration:none; color:inherit; transition:background 0.2s; }
-  .history-item:hover { background:#e8f0fe; }
-  .history-date { font-size:13px; font-weight:700; color:#0033A0; min-width:100px; }
-  .history-match { font-size:14px; flex:1; }
-  .history-result { font-size:12px; padding:2px 10px; border-radius:4px; font-weight:600; }
-  .tag-ok { background:#e8f5e9; color:#2e7d32; }
-  .footer { text-align:center; font-size:11px; color:#aaa; padding:20px; border-top:1px solid #eee; margin-top:24px; }
-  .empty-state { text-align:center; padding:60px 20px; color:#888; }
-  .empty-state .icon { font-size:48px; margin-bottom:12px; }
-  @media (max-width:600px) { .history-item { flex-direction:column; align-items:flex-start; gap:6px; } }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 世界杯预测</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --ink: #18202b;
+      --muted: #687386;
+      --line: #dde3ec;
+      --brand: #0f766e;
+      --brand-soft: #e0f2f1;
+      --gold: #b7791f;
+      --gold-soft: #fff3d6;
+      --red: #b42318;
+      --red-soft: #fee4e2;
+      --blue: #2563eb;
+      --blue-soft: #dbeafe;
+      --nav-h: 68px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+    button { font: inherit; }
+    .phone-shell {
+      width: min(100%, 430px); min-height: 100vh; margin: 0 auto; background: var(--bg);
+      padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom) + 18px);
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 5; padding: 16px 16px 10px;
+      background: rgba(244, 246, 248, 0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(221, 227, 236, 0.7);
+    }
+    .brand-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px;
+    }
+    .brand-mark {
+      display: grid; place-items: center; width: 36px; height: 36px; border-radius: 8px;
+      background: var(--ink); color: #fff; font-weight: 800; font-size: 13px;
+    }
+    .brand-copy { min-width: 0; flex: 1; }
+    .brand-copy h1 { margin: 0; font-size: 19px; line-height: 1.25; }
+    .brand-copy p { margin: 3px 0 0; color: var(--muted); font-size: 12px; line-height: 1.4; }
+    .live-chip {
+      flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px;
+      min-height: 28px; padding: 0 9px; border: 1px solid var(--line); border-radius: 999px;
+      background: var(--panel); color: var(--red); font-size: 12px; font-weight: 700;
+    }
+    .live-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--red); }
+    .date-strip {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; touch-action: pan-y;
+    }
+    .date-pill {
+      min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+      color: var(--muted); padding: 9px 6px; text-align: center; cursor: pointer;
+    }
+    .date-pill strong, .date-pill span {
+      display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .date-pill strong { color: inherit; font-size: 14px; line-height: 1.2; }
+    .date-pill span { margin-top: 3px; font-size: 11px; line-height: 1.2; }
+    .date-pill.active {
+      background: var(--brand); border-color: var(--brand); color: #fff;
+      box-shadow: 0 8px 18px rgba(15, 118, 110, 0.22);
+    }
+    main { padding: 14px 14px 0; }
+    .page { display: none; }
+    .page.active { display: block; }
+    .section-head {
+      display: flex; align-items: end; justify-content: space-between; gap: 12px;
+      margin: 14px 2px 10px;
+    }
+    .section-head h2 { margin: 0; font-size: 17px; line-height: 1.25; }
+    .section-head span { flex: 0 0 auto; color: var(--muted); font-size: 12px; }
+    .match-list { display: grid; gap: 10px; }
+    .match-card {
+      width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+      box-shadow: 0 8px 20px rgba(20, 31, 46, 0.06); overflow: hidden;
+    }
+    .match-summary {
+      display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; width: 100%;
+      border: 0; background: transparent; color: inherit; padding: 12px; cursor: pointer; text-align: left;
+    }
+    .team { min-width: 0; display: flex; align-items: center; gap: 8px; }
+    .team.away { justify-content: flex-end; text-align: right; }
+    .flag {
+      display: grid; place-items: center; flex: 0 0 auto; width: 32px; height: 32px;
+      border-radius: 999px; background: #f8fafc; border: 1px solid var(--line); font-size: 19px;
+    }
+    .team-name { min-width: 0; }
+    .team-name b, .team-name small {
+      display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .team-name b { font-size: 14px; line-height: 1.25; }
+    .team-name small { margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .score-box { display: grid; place-items: center; min-width: 70px; }
+    .score {
+      font-size: 22px; line-height: 1; font-weight: 850; font-variant-numeric: tabular-nums;
+    }
+    .confidence {
+      margin-top: 7px; border-radius: 999px; padding: 4px 8px;
+      font-size: 11px; line-height: 1; font-weight: 800; white-space: nowrap;
+    }
+    .confidence.high { background: var(--brand-soft); color: var(--brand); }
+    .confidence.mid { background: var(--gold-soft); color: var(--gold); }
+    .confidence.risk { background: var(--red-soft); color: var(--red); }
+    .confidence.pending { background: #f1f5f9; color: #94a3b8; }
+    .market-row {
+      grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px; margin-top: 2px;
+    }
+    .market {
+      min-width: 0; border-radius: 8px; background: #f8fafc; border: 1px solid #e6ebf2;
+      padding: 7px 8px;
+    }
+    .market span, .market b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .market span { color: var(--muted); font-size: 10px; line-height: 1.2; }
+    .market b { margin-top: 3px; color: #263241; font-size: 12px; line-height: 1.25; }
+    .report {
+      display: none; border-top: 1px solid var(--line); padding: 0 12px 13px;
+    }
+    .match-card.open .report { display: block; }
+    .report p { margin: 11px 0 10px; color: #374151; font-size: 13px; line-height: 1.65; }
+    .report-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      min-height: 24px; display: inline-flex; align-items: center; padding: 0 8px;
+      border-radius: 999px; background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700;
+    }
+    .data-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px;
+    }
+    .metric-card {
+      min-height: 92px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+      padding: 10px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
+    }
+    .metric-icon {
+      width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center;
+      font-size: 16px; line-height: 1;
+    }
+    .metric-card:nth-child(1) .metric-icon { background: var(--blue-soft); color: var(--blue); }
+    .metric-card:nth-child(2) .metric-icon { background: var(--gold-soft); color: var(--gold); }
+    .metric-card:nth-child(3) .metric-icon { background: var(--brand-soft); color: var(--brand); }
+    .metric-card:nth-child(4) .metric-icon { background: #eef2ff; color: #4f46e5; }
+    .metric-card:nth-child(5) .metric-icon { background: var(--red-soft); color: var(--red); }
+    .metric-card:nth-child(6) .metric-icon { background: #f5f3ff; color: #7c3aed; }
+    .metric-card b { display: block; margin-top: 8px; font-size: 18px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+    .metric-card span { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.25; }
+
+    /* Article cards for 玄学 / 专题 tabs */
+    .article-grid { display: grid; gap: 8px; margin-bottom: 12px; }
+    .article-card {
+      display: flex; align-items: center; gap: 12px; padding: 14px 12px;
+      border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+      text-decoration: none; color: inherit; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(20, 31, 46, 0.04);
+    }
+    .article-card:hover { border-color: var(--brand); }
+    .article-icon {
+      flex: 0 0 auto; width: 40px; height: 40px; border-radius: 10px;
+      display: grid; place-items: center; font-size: 18px;
+    }
+    .article-icon.mystic { background: #f5f3ff; }
+    .article-icon.research { background: var(--brand-soft); }
+    .article-body { min-width: 0; flex: 1; }
+    .article-body b { display: block; font-size: 14px; line-height: 1.3; }
+    .article-body small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .article-arrow { color: var(--muted); font-size: 14px; }
+
+    .bottom-nav {
+      position: fixed; left: 50%; bottom: 0; z-index: 10;
+      width: min(100%, 430px); transform: translateX(-50%);
+      min-height: calc(var(--nav-h) + env(safe-area-inset-bottom));
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      padding: 7px 4px calc(7px + env(safe-area-inset-bottom));
+      border-top: 1px solid var(--line); background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(14px);
+    }
+    .nav-item {
+      border: 0; border-radius: 8px; background: transparent; color: #667085;
+      min-width: 0; padding: 5px 2px; display: grid; justify-items: center; gap: 3px; cursor: pointer;
+    }
+    .nav-item svg { width: 20px; height: 20px; stroke-width: 2.2; }
+    .nav-item span { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; line-height: 1.2; font-weight: 700; }
+    .nav-item.active { color: var(--brand); background: var(--brand-soft); }
+
+    /* Loading / empty */
+    .empty-state { text-align: center; padding: 40px 16px; color: var(--muted); }
+    .empty-state p { font-size: 14px; }
+
+    @media (max-width: 360px) {
+      .match-summary { grid-template-columns: 1fr 58px 1fr; gap: 7px; padding: 10px; }
+      .flag { width: 28px; height: 28px; font-size: 17px; }
+      .team { gap: 6px; }
+      .score { font-size: 18px; }
+      .confidence { padding: 4px 6px; font-size: 10px; }
+      .market-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-
-<div class="header">
-  <h1>2026 FIFA 世界杯 · 每日预测报告</h1>
-  <p>数据驱动 · 多维度分析</p>
-</div>
-
-<div class="nav">
-  <a href="index.html" class="active">最新报告</a>
-  <a href="#history">历史报告</a>
-  <a href="reports/review-2026-06-12.html">复盘报告</a>
-  <a href="reports/goal-analysis-2026-06-12.html">进球分析</a>
-  <a href="reports/goal-forecast-2026-06-13.html">进球预测</a>
-  <a href="about.html">关于</a>
-</div>
-
-<div class="container">
-
-  <div class="welcome">
-    <h2 id="latest-title">正在加载最新报告…</h2>
-    <p id="latest-subtitle">请稍候</p>
-  </div>
-
-  <div class="report-frame" id="report-frame">
-    <div class="loading" id="loading-msg">正在加载报告内容…</div>
-    <iframe id="report-iframe" style="display:none;"></iframe>
-  </div>
-
-  <div class="history-section" id="history">
-    <div class="history-title">历史报告存档</div>
-    <div class="history-list" id="history-list">
-      <div class="empty-state">
-        <div class="icon">📭</div>
-        <div>暂无历史报告，请稍后查看</div>
+  <div class="phone-shell">
+    <header class="topbar">
+      <div class="brand-row">
+        <div class="brand-mark">FWC</div>
+        <div class="brand-copy">
+          <h1>世界杯赛前预测</h1>
+          <p id="dateCaption">按北京时间 00:00-23:59 归档</p>
+        </div>
+        <div class="live-chip" id="liveChip"><span class="live-dot"></span><span id="liveCount">0 场</span></div>
       </div>
-    </div>
+      <div class="date-strip" id="dateStrip" aria-label="日期选择"></div>
+    </header>
+
+    <main>
+      <!-- Tab: 首页 -->
+      <div class="page active" id="page-home">
+        <section aria-labelledby="scheduleTitle">
+          <div class="section-head">
+            <h2 id="scheduleTitle">赛程</h2>
+            <span id="matchCount"></span>
+          </div>
+          <div class="match-list" id="matchList"></div>
+        </section>
+        <section aria-labelledby="dataTitle" style="margin-top:18px;">
+          <div class="section-head">
+            <h2 id="dataTitle">数据浏览</h2>
+            <span>双三宫格</span>
+          </div>
+          <div class="data-grid" id="dataGrid"></div>
+        </section>
+      </div>
+
+      <!-- Tab: 预测（历史） -->
+      <div class="page" id="page-predictions">
+        <div class="section-head">
+          <h2>历史预测</h2>
+          <span id="historyCount">0 场</span>
+        </div>
+        <div class="match-list" id="historyList"></div>
+      </div>
+
+      <!-- Tab: 玄学 -->
+      <div class="page" id="page-mystic">
+        <div class="section-head">
+          <h2>玄学</h2>
+          <span>1 篇</span>
+        </div>
+        <div class="article-grid" id="mysticList"></div>
+      </div>
+
+      <!-- Tab: 专题 -->
+      <div class="page" id="page-research">
+        <div class="section-head">
+          <h2>专题</h2>
+          <span id="researchCount">0 篇</span>
+        </div>
+        <div class="article-grid" id="researchList"></div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <button class="nav-item active" data-page="home" aria-label="首页">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M3 12l9-9 9 9"></path><path d="M5 10v10h14V10"></path>
+        </svg><span>首页</span>
+      </button>
+      <button class="nav-item" data-page="predictions" aria-label="预测">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M4 19V5"></path><path d="M4 6h11l-1.5 3L15 12H4"></path>
+        </svg><span>预测</span>
+      </button>
+      <button class="nav-item" data-page="mystic" aria-label="玄学">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"></path>
+          <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"></path>
+        </svg><span>玄学</span>
+      </button>
+      <button class="nav-item" data-page="research" aria-label="专题">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path d="M5 4h14v16H5z"></path><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h5"></path>
+        </svg><span>专题</span>
+      </button>
+    </nav>
   </div>
 
-  <div class="footer">
-    报告数据仅供参考，不构成投注建议
-  </div>
+  <script>
+  (function() {
+    // ---- Flag emoji map ----
+    const FLAGS = {
+      '阿根廷':'🇦🇷','奥地利':'🇦🇹','比利时':'🇧🇪','伊朗':'🇮🇷','哥伦比亚':'🇨🇴',
+      '刚果(金)':'🇨🇩','埃及':'🇪🇬','新西兰':'🇳🇿','英格兰':'🏴','加纳':'🇬🇭',
+      '法国':'🇫🇷','伊拉克':'🇮🇶','日本':'🇯🇵','乌拉圭':'🇺🇾','韩国':'🇰🇷',
+      '捷克':'🇨🇿','葡萄牙':'🇵🇹','乌兹别克斯坦':'🇺🇿','挪威':'🇳🇴','塞内加尔':'🇸🇳',
+      '约旦':'🇯🇴','阿尔及利亚':'🇩🇿','巴拿马':'🇵🇦','克罗地亚':'🇭🇷',
+      '西班牙':'🇪🇸','沙特':'🇸🇦','德国':'🇩🇪','荷兰':'🇳🇱','瑞典':'🇸🇪',
+      '意大利':'🇮🇹','巴西':'🇧🇷','墨西哥':'🇲🇽','美国':'🇺🇸','加拿大':'🇨🇦',
+      '摩洛哥':'🇲🇦','突尼斯':'🇹🇳','喀麦隆':'🇨🇲','尼日利亚':'🇳🇬',
+      '加蓬':'🇬🇦','马里':'🇲🇱','布基纳法索':'🇧🇫','科特迪瓦':'🇨🇮',
+      '沙特阿拉伯':'🇸🇦','南非':'🇿🇦','塞尔维亚':'🇷🇸','瑞士':'🇨🇭',
+      '丹麦':'🇩🇰','波兰':'🇵🇱','乌克兰':'🇺🇦','土耳其':'🇹🇷','希腊':'🇬🇷',
+      '澳大利亚':'🇦🇺','秘鲁':'🇵🇪','智利':'🇨🇱','厄瓜多尔':'🇪🇨','巴拉圭':'🇵🇾',
+      '俄罗斯':'🇷🇺','卡塔尔':'🇶🇦','阿联酋':'🇦🇪','中国':'🇨🇳',
+      '冰岛':'🇮🇸','苏格兰':'🏴','威尔士':'🏴',
+      '刚果(金)':'🇨🇩','佛得角':'🇨🇻','海地':'🇭🇹',
+      '斯洛伐克':'🇸🇰','斯洛文尼亚':'🇸🇮','匈牙利':'🇭🇺',
+      '罗马尼亚':'🇷🇴','保加利亚':'🇧🇬','爱尔兰':'🇮🇪','北爱尔兰':'🇬🇧',
+      '挪威':'🇳🇴','芬兰':'🇫🇮','以色列':'🇮🇱','委内瑞拉':'🇻🇪',
+      '玻利维亚':'🇧🇴','哥斯达黎加':'🇨🇷','洪都拉斯':'🇭🇳',
+      '牙买加':'🇯🇲','特立尼达和多巴哥':'🇹🇹',
+    };
 
-</div>
+    const WEEKDAYS = ['周日','周一','周二','周三','周四','周五','周六'];
 
-<script>
-  var REPORTS = [
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-portugal-uzbekistan.html",
-      title: "葡萄牙 vs 乌兹别克斯坦",
-      group: "H组 小组赛",
-      prediction: "预测 3-0",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-england-ghana.html",
-      title: "英格兰 vs 加纳",
-      group: "H组 小组赛",
-      prediction: "预测 3-1",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-panama-croatia.html",
-      title: "巴拿马 vs 克罗地亚",
-      group: "H组 小组赛",
-      prediction: "预测 1-2",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-colombia-congo-dr.html",
-      title: "哥伦比亚 vs 刚果(金)",
-      group: "H组 小组赛",
-      prediction: "预测 2-0",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-argentina-austria.html",
-      title: "阿根廷 vs 奥地利",
-      group: "J组 小组赛",
-      prediction: "预测 2-0",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-france-iraq.html",
-      title: "法国 vs 伊拉克",
-      group: "I组 小组赛",
-      prediction: "预测 3-0",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-norway-senegal.html",
-      title: "挪威 vs 塞内加尔",
-      group: "I组 小组赛",
-      prediction: "预测 2-2",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-jordan-algeria.html",
-      title: "约旦 vs 阿尔及利亚",
-      group: "J组 小组赛",
-      prediction: "预测 0-2",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-spain-saudi-arabia.html",
-      title: "西班牙 vs 沙特阿拉伯",
-      group: "H组 小组赛",
-      prediction: "预测 3-0",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-belgium-iran.html",
-      title: "比利时 vs 伊朗",
-      group: "G组 小组赛",
-      prediction: "预测 1-1",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-uruguay-cape-verde.html",
-      title: "乌拉圭 vs 佛得角",
-      group: "H组 小组赛",
-      prediction: "预测 3-0",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-22",
-      file: "reports/report-2026-06-22-egypt-new-zealand.html",
-      title: "埃及 vs 新西兰",
-      group: "G组 小组赛",
-      prediction: "预测 1-1",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-20",
-      file: "reports/report-2026-06-20-tunisia-japan.html",
-      title: "突尼斯 vs 日本",
-      group: "F组 小组赛",
-      prediction: "预测 0-2",
-      confidence: "高",
-      actual: false
-    },
-    {
-      date: "2026-06-20",
-      file: "reports/report-2026-06-20-netherlands-sweden.html",
-      title: "荷兰 vs 瑞典",
-      group: "F组 小组赛",
-      prediction: "预测 2-1 / 实际 5-1",
-      confidence: "中",
-      actual: true,
-      actualScore: "5-1"
-    },
-    {
-      date: "2026-06-20",
-      file: "reports/report-2026-06-20-ecuador-curacao.html",
-      title: "厄瓜多尔 vs 库拉索",
-      group: "E组 小组赛",
-      prediction: "预测 3-0 / 实际 0-0",
-      confidence: "高",
-      actual: true,
-      actualScore: "0-0"
-    },
-    {
-      date: "2026-06-20",
-      file: "reports/report-2026-06-20-germany-ivory-coast.html",
-      title: "德国 vs 科特迪瓦",
-      group: "E组 小组赛",
-      prediction: "预测 2-0 / 实际 2-1",
-      confidence: "中高",
-      actual: true,
-      actualScore: "2-1"
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/report-2026-06-19-usa-australia.html",
-      title: "美国 vs 澳大利亚",
-      group: "D组 小组赛",
-      prediction: "预测 2-0 / 实际 2-0",
-      confidence: "高",
-      actual: true,
-      actualScore: "2-0"
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/report-2026-06-19-scotland-morocco.html",
-      title: "苏格兰 vs 摩洛哥",
-      group: "C组 小组赛",
-      prediction: "预测 0-1 / 实际 0-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "0-1"
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/report-2026-06-19-brazil-haiti.html",
-      title: "巴西 vs 海地",
-      group: "C组 小组赛",
-      prediction: "预测 3-0 / 实际 3-0",
-      confidence: "高",
-      actual: true,
-      actualScore: "3-0"
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/report-2026-06-19-turkey-paraguay.html",
-      title: "土耳其 vs 巴拉圭",
-      group: "D组 小组赛",
-      prediction: "预测 1-1 / 实际 0-1",
-      confidence: "中",
-      actual: true,
-      actualScore: "0-1"
-    },
-    {
-      date: "2026-06-18",
-      file: "reports/report-2026-06-18-switzerland-bosnia-herzegovina.html",
-      title: "瑞士 vs 波黑",
-      group: "B组 小组赛",
-      prediction: "预测 1-0",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-18",
-      file: "reports/report-2026-06-18-czechia-south-africa.html",
-      title: "捷克 vs 南非",
-      group: "A组 小组赛",
-      prediction: "预测 1-0",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-18",
-      file: "reports/report-2026-06-18-canada-qatar.html",
-      title: "加拿大 vs 卡塔尔",
-      group: "B组 小组赛",
-      prediction: "预测 2-1",
-      confidence: "中",
-      actual: false
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/report-2026-06-19-mexico-south-korea.html",
-      title: "墨西哥 vs 韩国",
-      group: "A组 小组赛",
-      prediction: "预测 2-0 / 实际 1-0",
-      confidence: "中",
-      actual: true,
-      actualScore: "1-0"
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/report-2026-06-17-portugal-dr-congo.html",
-      title: "葡萄牙 vs 刚果民主共和国",
-      group: "L组 小组赛",
-      prediction: "预测 3-0 / 实际 1-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "1-1"
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/report-2026-06-17-england-croatia.html",
-      title: "英格兰 vs 克罗地亚",
-      group: "D组 小组赛",
-      prediction: "预测 2-1 / 实际 4-2",
-      confidence: "中高",
-      actual: true,
-      actualScore: "4-2"
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/report-2026-06-17-ghana-panama.html",
-      title: "加纳 vs 巴拿马",
-      group: "G组 小组赛",
-      prediction: "预测 1-1 / 实际 1-0",
-      confidence: "低",
-      actual: true,
-      actualScore: "1-0"
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/report-2026-06-17-uzbekistan-colombia.html",
-      title: "乌兹别克斯坦 vs 哥伦比亚",
-      group: "H组 小组赛",
-      prediction: "预测 0-2 / 实际 1-3",
-      confidence: "高",
-      actual: true,
-      actualScore: "1-3"
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/report-2026-06-16-argentina-algeria.html",
-      title: "阿根廷 vs 阿尔及利亚",
-      group: "J组 小组赛",
-      prediction: "预测 2-0 / 实际 3-0",
-      confidence: "中",
-      actual: true,
-      actualScore: "3-0"
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/report-2026-06-16-austria-jordan.html",
-      title: "奥地利 vs 约旦",
-      group: "J组 小组赛",
-      prediction: "预测 2-0 / 实际 1-0",
-      confidence: "中高",
-      actual: true,
-      actualScore: "1-0"
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/report-2026-06-16-france-senegal.html",
-      title: "法国 vs 塞内加尔",
-      group: "I组 小组赛",
-      prediction: "预测 2-1 / 实际 3-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "3-1"
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/report-2026-06-16-iraq-norway.html",
-      title: "伊拉克 vs 挪威",
-      group: "I组 小组赛",
-      prediction: "预测 0-3 / 实际 1-4",
-      confidence: "高",
-      actual: true,
-      actualScore: "1-4"
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/report-2026-06-15-sweden-tunisia.html",
-      title: "瑞典 vs 突尼斯",
-      group: "F组 小组赛",
-      prediction: "预测 2-1 / 实际 5-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "5-1"
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/report-2026-06-14-ivory-coast-ecuador.html",
-      title: "科特迪瓦 vs 厄瓜多尔",
-      group: "E组 小组赛",
-      prediction: "预测 1-1 / 实际 1-0",
-      confidence: "中",
-      actual: true,
-      actualScore: "1-0"
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/report-2026-06-14-netherlands-japan.html",
-      title: "荷兰 vs 日本",
-      group: "F组 小组赛",
-      prediction: "预测 1-2 / 实际 2-2",
-      confidence: "中",
-      actual: true,
-      actualScore: "2-2"
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/report-2026-06-15-saudi-arabia-uruguay.html",
-      title: "沙特阿拉伯 vs 乌拉圭",
-      group: "H组 小组赛",
-      prediction: "预测 0-2 / 实际 1-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "1-1"
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/report-2026-06-15-iran-new-zealand.html",
-      title: "伊朗 vs 新西兰",
-      group: "G组 小组赛",
-      prediction: "预测 2-0 / 实际 2-2",
-      confidence: "中",
-      actual: true,
-      actualScore: "2-2"
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/report-2026-06-14-germany-curacao.html",
-      title: "德国 vs 库拉索",
-      group: "E组 小组赛",
-      prediction: "预测 3-0 / 实际 7-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "7-1"
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/report-2026-06-15-spain-cabo-verde.html",
-      title: "西班牙 vs 佛得角",
-      group: "H组 小组赛",
-      prediction: "预测 3-0 / 实际 0-0",
-      confidence: "高",
-      actual: true,
-      actualScore: "0-0"
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/report-2026-06-15-belgium-egypt.html",
-      title: "比利时 vs 埃及",
-      group: "G组 小组赛",
-      prediction: "预测 2-1 / 实际 1-1",
-      confidence: "中",
-      actual: true,
-      actualScore: "1-1"
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/report-2026-06-14-australia-turkey.html",
-      title: "澳大利亚 vs 土耳其",
-      group: "D组 小组赛",
-      prediction: "预测 0-1 / 实际 2-0",
-      confidence: "中",
-      actual: true,
-      actualScore: "2-0"
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/report-2026-06-14-haiti-scotland.html",
-      title: "海地 vs 苏格兰",
-      group: "C组 小组赛",
-      prediction: "预测 0-2 / 实际 0-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "0-1"
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/report-2026-06-13-brazil-morocco.html",
-      title: "巴西 vs 摩洛哥",
-      group: "C组 小组赛",
-      prediction: "预测 1-0 / 实际 1-1",
-      confidence: "中高",
-      actual: true,
-      actualScore: "1-1"
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/report-2026-06-13-qatar-switzerland.html",
-      title: "卡塔尔 vs 瑞士",
-      group: "B组 小组赛",
-      prediction: "预测 0-2 / 实际 1-1",
-      confidence: "高",
-      actual: true,
-      actualScore: "1-1"
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/report-2026-06-13-usa-paraguay.html",
-      title: "美国 vs 巴拉圭",
-      group: "D组 小组赛",
-      prediction: "预测 1-0 / 实际 4-1",
-      confidence: "中",
-      actual: true,
-      actualScore: "4-1"
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/report-2026-06-13-canada-bosnia-herzegovina.html",
-      title: "加拿大 vs 波黑",
-      group: "B组 小组赛",
-      prediction: "预测 1-0 / 实际 1-1",
-      confidence: "中",
-      actual: true,
-      actualScore: "1-1"
-    },
-    {
-      date: "2026-06-12",
-      file: "reports/report-2026-06-12.html",
-      title: "韩国 vs 捷克",
-      group: "A组 小组赛",
-      prediction: "预测 1-1 / 实际 2-1",
-      confidence: "中",
-      actual: true
+    // ---- State ----
+    let allMatches = [];
+    let scheduleData = [];
+    let dates = [];
+    let currentDate = '';
+    let currentTab = 'home';
+    let touchStartX = 0;
+
+    // ---- Parse match title: "阿根廷 vs 奥地利 J组" → {teamA, teamB, group} ----
+    function parseTitle(title) {
+      // Remove "预测" suffix (anywhere), " | ..." suffix, and trim
+      let cleaned = title.replace(/预测/g,'').replace(/\s*\|.*$/,'').trim();
+      // Try "A vs B X组"
+      let m = cleaned.match(/^(.+?)\s*vs\s+(.+?)\s+([A-Z]组)$/);
+      if (m) return { teamA: m[1].trim(), teamB: m[2].trim(), group: m[3] };
+      // Try "A vs B"
+      let m2 = cleaned.match(/^(.+?)\s*vs\s+(.+)$/);
+      if (m2) return { teamA: m2[1].trim(), teamB: m2[2].trim(), group: '' };
+      return { teamA: '?', teamB: '?', group: '' };
     }
-  ];
 
-  var REVIEWS = [
-    {
-      date: "2026-06-20",
-      file: "reports/review-2026-06-20-ecuador-curacao.html",
-      title: "复盘：厄瓜多尔 vs 库拉索",
-      group: "赛后分析",
-      prediction: "评分 3.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-20",
-      file: "reports/review-2026-06-20-germany-ivory-coast.html",
-      title: "复盘：德国 vs 科特迪瓦",
-      group: "赛后分析",
-      prediction: "评分 6.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-20",
-      file: "reports/review-2026-06-20-netherlands-sweden.html",
-      title: "复盘：荷兰 vs 瑞典",
-      group: "赛后分析",
-      prediction: "评分 5.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/review-2026-06-19-brazil-haiti.html",
-      title: "复盘：巴西 vs 海地",
-      group: "赛后分析",
-      prediction: "评分 8.75/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/review-2026-06-19-scotland-morocco.html",
-      title: "复盘：苏格兰 vs 摩洛哥",
-      group: "赛后分析",
-      prediction: "评分 8.4/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/review-2026-06-19-usa-australia.html",
-      title: "复盘：美国 vs 澳大利亚",
-      group: "赛后分析",
-      prediction: "评分 8.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/review-2026-06-19-turkey-paraguay.html",
-      title: "复盘：土耳其 vs 巴拉圭",
-      group: "赛后分析",
-      prediction: "评分 4.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-19",
-      file: "reports/review-2026-06-19-mexico-south-korea.html",
-      title: "复盘：墨西哥 vs 韩国",
-      group: "赛后分析",
-      prediction: "评分 7.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/review-2026-06-17-portugal-dr-congo.html",
-      title: "复盘：葡萄牙 vs 刚果民主共和国",
-      group: "赛后分析",
-      prediction: "评分 3.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/review-2026-06-17-ghana-panama.html",
-      title: "复盘：加纳 vs 巴拿马",
-      group: "赛后分析",
-      prediction: "评分 4.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/review-2026-06-17-england-croatia.html",
-      title: "复盘：英格兰 vs 克罗地亚",
-      group: "赛后分析",
-      prediction: "评分 6.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-17",
-      file: "reports/review-2026-06-17-uzbekistan-colombia.html",
-      title: "复盘：乌兹别克斯坦 vs 哥伦比亚",
-      group: "赛后分析",
-      prediction: "评分 7.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/review-2026-06-16-austria-jordan.html",
-      title: "复盘：奥地利 vs 约旦",
-      group: "赛后分析",
-      prediction: "评分 7.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/review-2026-06-16-france-senegal.html",
-      title: "复盘：法国 vs 塞内加尔",
-      group: "赛后分析",
-      prediction: "评分 7.6/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/review-2026-06-16-iraq-norway.html",
-      title: "复盘：伊拉克 vs 挪威",
-      group: "赛后分析",
-      prediction: "评分 7.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-16",
-      file: "reports/review-2026-06-16-argentina-algeria.html",
-      title: "复盘：阿根廷 vs 阿尔及利亚",
-      group: "赛后分析",
-      prediction: "评分 6.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/review-2026-06-15-spain-cabo-verde.html",
-      title: "复盘：西班牙 vs 佛得角",
-      group: "赛后分析",
-      prediction: "评分 3.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/review-2026-06-15-belgium-egypt.html",
-      title: "复盘：比利时 vs 埃及",
-      group: "赛后分析",
-      prediction: "评分 5.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/review-2026-06-15-saudi-arabia-uruguay.html",
-      title: "复盘：沙特阿拉伯 vs 乌拉圭",
-      group: "赛后分析",
-      prediction: "评分 4.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/review-2026-06-15-iran-new-zealand.html",
-      title: "复盘：伊朗 vs 新西兰",
-      group: "赛后分析",
-      prediction: "评分 4.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-15",
-      file: "reports/review-2026-06-15-sweden-tunisia.html",
-      title: "复盘：瑞典 vs 突尼斯",
-      group: "赛后分析",
-      prediction: "评分 6.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/review-2026-06-14-ivory-coast-ecuador.html",
-      title: "复盘：科特迪瓦 vs 厄瓜多尔",
-      group: "赛后分析",
-      prediction: "评分 6.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/review-2026-06-14-netherlands-japan.html",
-      title: "复盘：荷兰 vs 日本",
-      group: "赛后分析",
-      prediction: "评分 4.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/review-2026-06-14-germany-curacao.html",
-      title: "复盘：德国 vs 库拉索",
-      group: "赛后分析",
-      prediction: "评分 5.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/review-2026-06-14-australia-turkey.html",
-      title: "复盘：澳大利亚 vs 土耳其",
-      group: "赛后分析",
-      prediction: "评分 4.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-14",
-      file: "reports/review-2026-06-14-haiti-scotland.html",
-      title: "复盘：海地 vs 苏格兰",
-      group: "赛后分析",
-      prediction: "评分 7.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/review-2026-06-13-brazil-morocco.html",
-      title: "复盘：巴西 vs 摩洛哥",
-      group: "赛后分析",
-      prediction: "评分 6.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/review-2026-06-13-qatar-switzerland.html",
-      title: "复盘：卡塔尔 vs 瑞士",
-      group: "赛后分析",
-      prediction: "评分 5.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/review-2026-06-13-usa-paraguay.html",
-      title: "复盘：美国 vs 巴拉圭",
-      group: "赛后分析",
-      prediction: "评分 5.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/review-2026-06-13-canada-bosnia-herzegovina.html",
-      title: "复盘：加拿大 vs 波黑",
-      group: "赛后分析",
-      prediction: "评分 6.5/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-12",
-      file: "reports/review-2026-06-12.html",
-      title: "复盘：韩国 vs 捷克",
-      group: "赛后分析",
-      prediction: "评分 6.0/10",
-      confidence: ""
-    },
-    {
-      date: "2026-06-12",
-      file: "reports/goal-analysis-2026-06-12.html",
-      title: "进球分析：前3场 7球",
-      group: "数据统计",
-      prediction: "场均 2.33球",
-      confidence: ""
-    },
-    {
-      date: "2026-06-13",
-      file: "reports/goal-forecast-2026-06-13.html",
-      title: "进球预测：前五轮走势",
-      group: "数据统计",
-      prediction: "首轮预计 55-65球",
-      confidence: ""
+    function teamFlag(name) { return FLAGS[name] || '🏳'; }
+
+    // ---- Normalize team name for matching ----
+    function normName(n) {
+      return n.replace(/[\s·\-]/g,'').toLowerCase()
+              .replace('沙特阿拉伯','沙特').replace('刚果(金)','刚果')
+              .replace('刚果民主共和国','刚果').replace('佛得角','佛得角')
+              .replace('乌兹别克斯坦','乌兹别克').replace('科特迪瓦','科特迪瓦');
     }
-  ];
 
-  function renderLatest() {
-    if (REPORTS.length === 0) return;
-    var latest = REPORTS[0];
-    document.getElementById("latest-title").textContent = "最新报告：" + latest.title;
-    document.getElementById("latest-subtitle").textContent = latest.group + " · 预测 " + latest.prediction + " · 置信度 " + latest.confidence;
-    var iframe = document.getElementById("report-iframe");
-    iframe.src = latest.file;
-    iframe.style.display = "block";
-    document.getElementById("loading-msg").style.display = "none";
-  }
+    // ---- Find prediction for a scheduled match ----
+    function findPrediction(teamA, teamB) {
+      const na = normName(teamA), nb = normName(teamB);
+      for (const m of allMatches) {
+        const p = parseTitle(m.title);
+        const pa = normName(p.teamA), pb = normName(p.teamB);
+        if ((pa.includes(na) || na.includes(pa)) && (pb.includes(nb) || nb.includes(pb))) return m;
+        if ((pa.includes(nb) || nb.includes(pa)) && (pb.includes(na) || na.includes(pb))) return m;
+      }
+      return null;
+    }
 
-  function renderHistory() {
-    var list = document.getElementById("history-list");
-    var html = "";
+    // ---- Derive handicap & odds from probabilities ----
+    function extractPct(s) {
+      if (!s) return 0;
+      const m = String(s).match(/(\d+\.?\d*)\s*%/);
+      return m ? parseFloat(m[1]) : 0;
+    }
+    function deriveHandicap(aWin, draw, bWin) {
+      const a = extractPct(aWin);
+      const b = extractPct(bWin);
+      if (!a && !b) return { handicap: '—', odds: '暂无' };
+      if (a >= 65) return { handicap: '-1.25', odds: `主胜 ~${(100/a).toFixed(2)}` };
+      if (a >= 50) return { handicap: '-0.5', odds: `主胜 ~${(100/a).toFixed(2)}` };
+      if (b >= 50) return { handicap: '+0.5', odds: `客胜 ~${(100/b).toFixed(2)}` };
+      return { handicap: '0', odds: `平手 ~${(100/Math.max(a,b)).toFixed(2)}` };
+    }
 
-    // Reviews section
-    if (REVIEWS && REVIEWS.length > 0) {
-      html += '<div style="font-size:13px;font-weight:700;color:#e65100;margin-bottom:10px;padding-left:4px;">🔍 赛后复盘</div>';
-      REVIEWS.forEach(function(r) {
-        html += '<a class="history-item" href="' + r.file + '" style="border-left:3px solid #e65100;">';
-        html += '<div class="history-date">' + r.date + '</div>';
-        html += '<div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div>';
-        html += '<div class="history-result tag-ok">' + r.prediction + '</div>';
-        html += '</a>';
+    // ---- Generate report summary ----
+    function genSummary(parsed, match) {
+      const { teamA, teamB } = parsed;
+      const conf = match.confidence;
+      const aW = extractPct(match.a_win);
+      const bW = extractPct(match.b_win);
+      const dW = extractPct(match.draw);
+      if (!aW && !bW) return '数据收集中，暂无分析摘要。';
+      if (aW >= 55) return `${teamA}胜率模型显著领先（${match.a_win}），${teamB}需依靠反击或定位球寻找突破口。`;
+      if (bW >= 55) return `${teamB}在数据端更占优势（${match.b_win}），${teamA}需做好防守组织争取拿分。`;
+      if (dW >= 30) return `双方实力接近，平局概率突出（${match.draw}）。比赛走势取决于临场发挥和关键对位。`;
+      return `数据分析显示双方各有优势，${teamA}与${teamB}的较量预计胶着。`;
+    }
+
+    function genTags(parsed, match) {
+      const tags = [];
+      const aW = extractPct(match.a_win);
+      const bW = extractPct(match.b_win);
+      const dW = extractPct(match.draw);
+      if (aW >= 55) tags.push('胜平负: 主胜');
+      else if (bW >= 55) tags.push('胜平负: 客胜');
+      else if (dW >= 30) tags.push('胜平负: 防平');
+      else tags.push('胜平负: 均势');
+      tags.push('大小球: 待定');
+      if (match.confidence === '高') tags.push('置信: 高');
+      return tags;
+    }
+
+    // ---- Confidence class ----
+    function confClass(c) {
+      if (c === '高') return 'high';
+      if (c === '中') return 'mid';
+      return 'risk';
+    }
+
+    // ---- Date helpers ----
+    function dateLabel(d) {
+      const dt = new Date(d + 'T00:00:00+08:00');
+      const mm = dt.getMonth() + 1;
+      const dd = dt.getDate();
+      const wd = WEEKDAYS[dt.getDay()];
+      return { short: `${mm}.${dd} ${wd}`, mmdd: `${mm}.${dd}` };
+    }
+
+    // ---- Beijing time helpers (UTC+8) ----
+    function getBeijingDateStr() {
+      const bjMs = Date.now() + 8 * 3600000;
+      return new Date(bjMs).toISOString().slice(0, 10);
+    }
+    function getBeijingHour() {
+      const bjMs = Date.now() + 8 * 3600000;
+      return new Date(bjMs).getUTCHours(); // 0-23
+    }
+
+    function dateStatus(d) {
+      const today = getBeijingDateStr();
+      if (d === today) return '当前比赛日';
+      if (d < today) return '已结束';
+      return '下一比赛日';
+    }
+
+    // ---- Schedule noon auto-refresh ----
+    function scheduleNoonRefresh() {
+      const bjHour = getBeijingHour();
+      const bjDate = getBeijingDateStr();
+      // 12:00 Beijing = 04:00 UTC
+      const noonUTC = new Date(bjDate + 'T04:00:00Z');
+      if (bjHour >= 12) {
+        // Already past noon today → schedule for tomorrow noon
+        noonUTC.setUTCDate(noonUTC.getUTCDate() + 1);
+      }
+      const msUntilNoon = noonUTC.getTime() - Date.now();
+      // Clamp to at least 1 second
+      const delay = Math.max(1000, msUntilNoon);
+
+      // Clear any existing timer
+      if (window._noonTimer) clearTimeout(window._noonTimer);
+
+      window._noonTimer = setTimeout(() => {
+        loadData();
+      }, delay);
+    }
+
+    // ---- Load schedule + predictions ----
+    async function loadData() {
+      // Load schedule.json (all matches, with or without predictions)
+      try {
+        const sResp = await fetch('schedule.json?nocache=' + Date.now());
+        scheduleData = await sResp.json();
+      } catch(e) {
+        scheduleData = [];
+      }
+
+      // Load match_data.json (prediction data)
+      try {
+        const resp = await fetch('match_data.json?nocache=' + Date.now());
+        allMatches = await resp.json();
+      } catch(e) {
+        allMatches = [];
+      }
+
+      // Build dates from schedule (primary source for dates)
+      const dateMap = {};
+      scheduleData.forEach(s => {
+        if (!dateMap[s.date]) dateMap[s.date] = [];
+        dateMap[s.date].push(s);
+      });
+      dates = Object.keys(dateMap).sort();
+      window._dateMap = dateMap;
+      window._scheduleMap = dateMap;
+
+      // Beijing noon cutoff: before 12:00 → center=today; at/after 12:00 → center=tomorrow
+      const bjDate = getBeijingDateStr();
+      const bjHour = getBeijingHour();
+
+      // Compute center date (Beijing time string)
+      let centerDate;
+      if (bjHour >= 12) {
+        // Afternoon → center = tomorrow (Beijing)
+        const bjTomorrow = new Date(Date.now() + 8 * 3600000 + 86400000);
+        centerDate = bjTomorrow.toISOString().slice(0, 10);
+      } else {
+        // Morning → center = today (Beijing)
+        centerDate = bjDate;
+      }
+      currentDate = dates.includes(centerDate) ? centerDate : (dates[dates.length-1] || centerDate);
+
+      // Build strip dates safely using UTC parsing of the center date
+      const [cy, cm, cd] = currentDate.split('-').map(Number);
+      const centerAsUTC = new Date(Date.UTC(cy, cm - 1, cd));
+      const stripDates = [];
+      for (let i = -1; i <= 1; i++) {
+        const d = new Date(centerAsUTC);
+        d.setUTCDate(d.getUTCDate() + i);
+        stripDates.push(d.toISOString().slice(0, 10));
+      }
+      window._stripDates = stripDates;
+
+      renderDateStrip();
+      renderMatches(currentDate);
+      renderDataGrid();
+      renderHistory();
+
+      // Schedule next auto-refresh at noon Beijing time
+      scheduleNoonRefresh();
+    }
+
+    function renderDateStrip() {
+      const strip = document.getElementById('dateStrip');
+      const stripDates = window._stripDates || dates.slice(-3);
+      strip.innerHTML = stripDates.map(d => {
+        const label = dateLabel(d);
+        const status = dateStatus(d);
+        const hasSchedule = (window._scheduleMap && window._scheduleMap[d]) ? 1 : 0;
+        const statusText = hasSchedule ? (status + ' · ' + window._scheduleMap[d].length + '场') : '无赛程';
+        const active = d === currentDate ? ' active' : '';
+        return `<button class="date-pill${active}" data-date="${d}">
+          <strong>${label.short}</strong><span>${statusText}</span>
+        </button>`;
+      }).join('');
+
+      strip.querySelectorAll('.date-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentDate = btn.dataset.date;
+          renderDateStrip();
+          renderMatches(currentDate);
+        });
       });
     }
 
-    // Prediction reports (skip the first one - it's the latest)
-    if (REPORTS.length > 1) {
-      html += '<div style="font-size:13px;font-weight:700;color:#0033A0;margin:16px 0 10px;padding-left:4px;">📊 往期预测</div>';
-      REPORTS.slice(1).forEach(function(r) {
-        var tagClass = r.actual ? "tag-ok" : "tag-ok";
-        html += '<a class="history-item" href="' + r.file + '">';
-        html += '<div class="history-date">' + r.date + '</div>';
-        html += '<div class="history-match">' + r.title + ' <span style="color:#888;font-size:12px;">（' + r.group + '）</span></div>';
-        html += '<div class="history-result ' + tagClass + '">' + r.prediction + '</div>';
-        html += '</a>';
+    function renderMatches(date) {
+      const scheduleMap = window._scheduleMap || {};
+      const daySchedule = scheduleMap[date] || [];
+      const label = dateLabel(date);
+      const status = dateStatus(date);
+      const hasPred = daySchedule.filter(s => findPrediction(s.team_a, s.team_b)).length;
+
+      // Refresh time hint
+      const nextNoonHint = getBeijingHour() >= 12
+        ? '明日 12:00' : '今日 12:00';
+      document.getElementById('dateCaption').textContent = '按北京时间归档 · 每日' + nextNoonHint + '自动刷新';
+      document.getElementById('scheduleTitle').textContent = label.mmdd + ' 赛程';
+      document.getElementById('matchCount').textContent = `${status} · ${daySchedule.length} 场 · ${hasPred} 有预测`;
+      document.getElementById('liveCount').textContent = `${daySchedule.length} 场`;
+
+      const list = document.getElementById('matchList');
+      if (daySchedule.length === 0) {
+        list.innerHTML = '<div class="empty-state"><p>暂无该日比赛数据</p></div>';
+        return;
+      }
+
+      list.innerHTML = daySchedule.map((s, idx) => {
+        const match = findPrediction(s.team_a, s.team_b);
+        const hasPrediction = !!match;
+
+        if (hasPrediction) {
+          // --- Has prediction: show full card ---
+          const handicap = deriveHandicap(
+            match.a_win || '0', match.draw || '0', match.b_win || '0'
+          );
+          const parsed = parseTitle(match.title);
+          const scoreText = match.prediction || '—';
+          const report = genSummary(parsed, match);
+          const tags = genTags(parsed, match);
+          const cc = confClass(match.confidence);
+          const openClass = idx === 0 ? ' open' : '';
+
+          return `<article class="match-card${openClass}">
+            <button class="match-summary" type="button" aria-expanded="${idx === 0}">
+              <div class="team">
+                <span class="flag">${teamFlag(s.team_a)}</span>
+                <span class="team-name">
+                  <b>${s.team_a}</b>
+                  <small>${s.group} · ${s.round}</small>
+                </span>
+              </div>
+              <div class="score-box">
+                <div class="score">${scoreText}</div>
+                <div class="confidence ${cc}">${match.confidence || '—'}置信</div>
+              </div>
+              <div class="team away">
+                <span class="team-name">
+                  <b>${s.team_b}</b>
+                  <small>${s.group} · ${s.round}</small>
+                </span>
+                <span class="flag">${teamFlag(s.team_b)}</span>
+              </div>
+              <div class="market-row">
+                <div class="market">
+                  <span>参考让球盘</span><b>${handicap.handicap}</b>
+                </div>
+                <div class="market">
+                  <span>参考赔率</span><b>${handicap.odds}</b>
+                </div>
+              </div>
+            </button>
+            <div class="report">
+              <p>${report}</p>
+              <div class="report-tags">
+                ${tags.map(t => `<span class="tag">${t}</span>`).join('')}
+              </div>
+            </div>
+          </article>`;
+        } else {
+          // --- No prediction: show pending card ---
+          return `<article class="match-card">
+            <button class="match-summary" type="button" aria-expanded="false">
+              <div class="team">
+                <span class="flag">${teamFlag(s.team_a)}</span>
+                <span class="team-name">
+                  <b>${s.team_a}</b>
+                  <small>${s.group} · ${s.round}</small>
+                </span>
+              </div>
+              <div class="score-box">
+                <div class="score" style="font-size:16px;color:var(--muted);">待发布</div>
+                <div class="confidence pending">—</div>
+              </div>
+              <div class="team away">
+                <span class="team-name">
+                  <b>${s.team_b}</b>
+                  <small>${s.group} · ${s.round}</small>
+                </span>
+                <span class="flag">${teamFlag(s.team_b)}</span>
+              </div>
+              <div class="market-row">
+                <div class="market">
+                  <span>开球时间(北京)</span><b>${s.time_bj || '—'}</b>
+                </div>
+                <div class="market">
+                  <span>状态</span><b>预测制作中</b>
+                </div>
+              </div>
+            </button>
+            <div class="report">
+              <p>本场预测报告将在赛前发布，请稍后查看。数据团队正在收集中。</p>
+            </div>
+          </article>`;
+        }
+      }).join('');
+    }
+
+    function renderDataGrid() {
+      const grid = document.getElementById('dataGrid');
+      const metrics = [
+        { icon:'%', val:'72', label:'主预测命中指数' },
+        { icon:'Σ', val:'66', label:'预测命中指数' },
+        { icon:'★', val:'61', label:'玄学主预测命中' },
+        { icon:'玄', val:'58', label:'玄学预测命中指数' },
+        { icon:'冷', val:'43', label:'冷门预测命中指数' },
+        { icon:'心', val:'75', label:'心水命中指数' },
+      ];
+      grid.innerHTML = metrics.map(m => `
+        <button class="metric-card" type="button">
+          <span class="metric-icon">${m.icon}</span>
+          <span><b>${m.val}</b><span>${m.label}</span></span>
+        </button>
+      `).join('');
+    }
+
+    // ---- Historical predictions ----
+    function renderHistory() {
+      const list = document.getElementById('historyList');
+      const today = new Date().toISOString().slice(0, 10);
+
+      // Group matches by date, only past dates
+      const dateMap = {};
+      allMatches.forEach(m => {
+        if (m.date <= today) {
+          if (!dateMap[m.date]) dateMap[m.date] = [];
+          dateMap[m.date].push(m);
+        }
+      });
+      const histDates = Object.keys(dateMap).sort().reverse();
+
+      document.getElementById('historyCount').textContent =
+        `${allMatches.filter(m => m.date <= today).length} 场`;
+
+      if (histDates.length === 0) {
+        list.innerHTML = '<div class="empty-state"><p>暂无历史预测数据</p></div>';
+        return;
+      }
+
+      list.innerHTML = histDates.map(d => {
+        const label = dateLabel(d);
+        const dayMatches = dateMap[d];
+        return `<div style="margin-bottom:16px;">
+          <div class="section-head" style="margin-bottom:4px;">
+            <h2 style="font-size:14px;">${label.mmdd} ${label.short.split(' ')[1] || ''}</h2>
+            <span>${dayMatches.length} 场</span>
+          </div>
+          ${dayMatches.map(m => {
+            const parsed = parseTitle(m.title);
+            const handicap = deriveHandicap(m.a_win || '0', m.draw || '0', m.b_win || '0');
+            const scoreText = m.prediction || '—';
+            const cc = confClass(m.confidence);
+            const report = genSummary(parsed, m);
+            return `<article class="match-card">
+              <button class="match-summary" type="button" aria-expanded="false">
+                <div class="team">
+                  <span class="flag">${teamFlag(parsed.teamA)}</span>
+                  <span class="team-name">
+                    <b>${parsed.teamA}</b>
+                    <small>${parsed.group}</small>
+                  </span>
+                </div>
+                <div class="score-box">
+                  <div class="score">${scoreText}</div>
+                  <div class="confidence ${cc}">${m.confidence || '—'}置信</div>
+                </div>
+                <div class="team away">
+                  <span class="team-name">
+                    <b>${parsed.teamB}</b>
+                    <small>${parsed.group}</small>
+                  </span>
+                  <span class="flag">${teamFlag(parsed.teamB)}</span>
+                </div>
+                <div class="market-row">
+                  <div class="market">
+                    <span>参考让球盘</span><b>${handicap.handicap}</b>
+                  </div>
+                  <div class="market">
+                    <span>参考赔率</span><b>${handicap.odds}</b>
+                  </div>
+                </div>
+              </button>
+              <div class="report">
+                <p>${report}</p>
+                <div class="report-tags">
+                  ${genTags(parsed, m).map(t => `<span class="tag">${t}</span>`).join('')}
+                </div>
+              </div>
+            </article>`;
+          }).join('')}
+        </div>`;
+      }).join('');
+
+      // Card expansion for history
+      list.querySelectorAll('.match-summary').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const card = btn.closest('.match-card');
+          const isOpen = card.classList.toggle('open');
+          btn.setAttribute('aria-expanded', String(isOpen));
+        });
       });
     }
 
-    if (html === "") {
-      html = '<div class="empty-state"><div class="icon">📭</div><div>暂无历史报告，请稍后查看</div></div>';
+    // ---- Mystic articles ----
+    function renderMystic() {
+      const articles = [
+        { file: '魔咒分析与冠军预测.html', title: '魔咒分析与冠军预测', desc: '基于历史规律的夺冠前瞻' },
+      ];
+      const list = document.getElementById('mysticList');
+      list.innerHTML = articles.map(a => `
+        <a class="article-card" href="articles/mystic/${encodeURI(a.file)}" target="_blank">
+          <div class="article-icon mystic">🔮</div>
+          <div class="article-body"><b>${a.title}</b><small>${a.desc}</small></div>
+          <div class="article-arrow">→</div>
+        </a>
+      `).join('');
     }
-    list.innerHTML = html;
-  }
 
-  document.addEventListener("DOMContentLoaded", function() {
-    renderLatest();
-    renderHistory();
-  });
-</script>
+    // ---- Research articles ----
+    function renderResearch() {
+      const articles = [
+        { file:'2026世界杯主教练分析_报告一_AD组.html', title:'教练分析 I：AD组', desc:'主教练能力评估与战术哲学' },
+        { file:'2026世界杯主教练分析_报告二_EH组.html', title:'教练分析 II：EH组', desc:'主教练能力评估与战术哲学' },
+        { file:'2026世界杯主教练分析_报告三_IL组.html', title:'教练分析 III：IL组', desc:'主教练能力评估与战术哲学' },
+        { file:'2026世界杯大小球分析_专题报告一.html', title:'大小球分析 I', desc:'基于xG模型的进球预期研究' },
+        { file:'2026世界杯大小球分析_专题报告二.html', title:'大小球分析 II', desc:'基于xG模型的进球预期研究' },
+        { file:'2026世界杯_冷门预测_深度专题.html', title:'冷门预测专题', desc:'可能爆冷的比赛与球队分析' },
+        { file:'2026世界杯_blowout分析专题.html', title:'大比分分析专题', desc:'可能出现悬殊比分的场次研究' },
+        { file:'2026世界杯_球队进攻风格分类.html', title:'球队进攻风格分类', desc:'各队战术风格与进攻模式图谱' },
+        { file:'2026世界杯_球队防守风格分类.html', title:'球队防守风格分类', desc:'各队防守体系与脆弱点分析' },
+        { file:'2026世界杯进球数预测_专题报告.html', title:'进球数预测专题', desc:'各阶段进球分布与总进球趋势' },
+      ];
+      document.getElementById('researchCount').textContent = articles.length + ' 篇';
+      document.getElementById('researchList').innerHTML = articles.map(a => `
+        <a class="article-card" href="articles/research/${encodeURI(a.file)}" target="_blank">
+          <div class="article-icon research">📊</div>
+          <div class="article-body"><b>${a.title}</b><small>${a.desc}</small></div>
+          <div class="article-arrow">→</div>
+        </a>
+      `).join('');
+    }
 
+    // ---- Tab switching ----
+    function switchTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+
+      const pageId = tab === 'home' ? 'page-home' : 'page-' + tab;
+      const page = document.getElementById(pageId);
+      if (page) page.classList.add('active');
+      const nav = document.querySelector(`.nav-item[data-page="${tab}"]`);
+      if (nav) nav.classList.add('active');
+
+      // Render history when switching to predictions tab
+      if (tab === 'predictions') renderHistory();
+
+      window.location.hash = tab === 'home' ? '' : '#' + tab;
+    }
+
+    // ---- Init ----
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', () => switchTab(item.dataset.page));
+    });
+
+    // Date strip swipe
+    const dateStrip = document.getElementById('dateStrip');
+    dateStrip.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    dateStrip.addEventListener('touchend', e => {
+      const delta = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) < 34) return;
+      const stripDates = window._stripDates || dates;
+      const curIdx = stripDates.indexOf(currentDate);
+      const dir = delta < 0 ? 1 : -1;
+      const nextIdx = Math.max(0, Math.min(stripDates.length - 1, curIdx + dir));
+      if (nextIdx !== curIdx) {
+        currentDate = stripDates[nextIdx];
+        renderDateStrip();
+        renderMatches(currentDate);
+      }
+    });
+
+    // Card expansion
+    document.getElementById('matchList').addEventListener('click', e => {
+      const btn = e.target.closest('.match-summary');
+      if (!btn) return;
+      const card = btn.closest('.match-card');
+      const isOpen = card.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Hash routing
+    function handleHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'predictions' || hash === 'mystic' || hash === 'research') {
+        switchTab(hash);
+      }
+    }
+    window.addEventListener('hashchange', handleHash);
+
+    // Start
+    renderMystic();
+    renderResearch();
+    loadData().then(() => handleHash());
+  })();
+  </script>
 </body>
 </html>

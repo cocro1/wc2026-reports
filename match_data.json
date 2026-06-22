@@ -1,7 +1,55 @@
 [
   {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-argentina-austria.html",
+    "date": "2026-06-24",
+    "file": "reports/report-2026-06-24-colombia-congo-dr.html",
+    "title": "哥伦比亚 vs 刚果(金)预测 | K组",
+    "slug": "colombia-congo-dr",
+    "group": "K组",
+    "prediction": "哥伦比亚 2-0 刚果(金)",
+    "confidence": "中",
+    "a_win": "55%",
+    "draw": "27%",
+    "b_win": "18%"
+  },
+  {
+    "date": "2026-06-24",
+    "file": "reports/report-2026-06-24-england-ghana.html",
+    "title": "英格兰 vs 加纳预测 | L组",
+    "slug": "england-ghana",
+    "group": "L组",
+    "prediction": "英格兰 3-1 加纳",
+    "confidence": "高",
+    "a_win": "68%",
+    "draw": "20%",
+    "b_win": "12%"
+  },
+  {
+    "date": "2026-06-24",
+    "file": "reports/report-2026-06-24-panama-croatia.html",
+    "title": "巴拿马 vs 克罗地亚预测 | L组",
+    "slug": "panama-croatia",
+    "group": "L组",
+    "prediction": "巴拿马 1-2 克罗地亚",
+    "confidence": "中",
+    "a_win": "18%",
+    "draw": "25%",
+    "b_win": "57%"
+  },
+  {
+    "date": "2026-06-24",
+    "file": "reports/report-2026-06-24-portugal-uzbekistan.html",
+    "title": "葡萄牙 vs 乌兹别克斯坦预测 | K组",
+    "slug": "portugal-uzbekistan",
+    "group": "K组",
+    "prediction": "葡萄牙 3-0 乌兹别克斯坦",
+    "confidence": "高",
+    "a_win": "72%",
+    "draw": "18%",
+    "b_win": "10%"
+  },
+  {
+    "date": "2026-06-23",
+    "file": "reports/report-2026-06-23-argentina-austria.html",
     "title": "阿根廷 vs 奥地利 J组",
     "slug": "argentina-austria",
     "group": "J组",
@@ -10,6 +58,42 @@
     "a_win": "阿根廷 58%",
     "draw": "平局 25%",
     "b_win": "奥地利 17%"
+  },
+  {
+    "date": "2026-06-23",
+    "file": "reports/report-2026-06-23-france-iraq.html",
+    "title": "法国 vs 伊拉克 I组",
+    "slug": "france-iraq",
+    "group": "I组",
+    "prediction": "法国 3-0 伊拉克",
+    "confidence": "高",
+    "a_win": "法国 78%",
+    "draw": "平局 14%",
+    "b_win": "伊拉克 8%"
+  },
+  {
+    "date": "2026-06-23",
+    "file": "reports/report-2026-06-23-jordan-algeria.html",
+    "title": "约旦 vs 阿尔及利亚 J组",
+    "slug": "jordan-algeria",
+    "group": "J组",
+    "prediction": "约旦 0-2 阿尔及利亚",
+    "confidence": "中",
+    "a_win": "约旦 22%",
+    "draw": "平局 28%",
+    "b_win": "阿尔及利亚 50%"
+  },
+  {
+    "date": "2026-06-23",
+    "file": "reports/report-2026-06-23-norway-senegal.html",
+    "title": "挪威 vs 塞内加尔 I组",
+    "slug": "norway-senegal",
+    "group": "I组",
+    "prediction": "挪威 2-2 塞内加尔",
+    "confidence": "中",
+    "a_win": "挪威 42%",
+    "draw": "平局 30%",
+    "b_win": "塞内加尔 28%"
   },
   {
     "date": "2026-06-22",
@@ -25,18 +109,6 @@
   },
   {
     "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-colombia-congo-dr.html",
-    "title": "哥伦比亚 vs 刚果(金)预测 | H组",
-    "slug": "colombia-congo-dr",
-    "group": "H组",
-    "prediction": "",
-    "confidence": "中",
-    "a_win": "",
-    "draw": "",
-    "b_win": ""
-  },
-  {
-    "date": "2026-06-22",
     "file": "reports/report-2026-06-22-egypt-new-zealand.html",
     "title": "埃及 vs 新西兰 G组",
     "slug": "egypt-new-zealand",
@@ -46,78 +118,6 @@
     "a_win": "埃及 38%",
     "draw": "平局 32%",
     "b_win": "新西兰 30%"
-  },
-  {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-england-ghana.html",
-    "title": "英格兰 vs 加纳预测 | H组",
-    "slug": "england-ghana",
-    "group": "H组",
-    "prediction": "",
-    "confidence": "高",
-    "a_win": "",
-    "draw": "",
-    "b_win": ""
-  },
-  {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-france-iraq.html",
-    "title": "法国 vs 伊拉克 I组",
-    "slug": "france-iraq",
-    "group": "I组",
-    "prediction": "法国 3-0 伊拉克",
-    "confidence": "高",
-    "a_win": "法国 78%",
-    "draw": "平局 14%",
-    "b_win": "伊拉克 8%"
-  },
-  {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-jordan-algeria.html",
-    "title": "约旦 vs 阿尔及利亚 J组",
-    "slug": "jordan-algeria",
-    "group": "J组",
-    "prediction": "约旦 0-2 阿尔及利亚",
-    "confidence": "中",
-    "a_win": "约旦 22%",
-    "draw": "平局 28%",
-    "b_win": "阿尔及利亚 50%"
-  },
-  {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-norway-senegal.html",
-    "title": "挪威 vs 塞内加尔 I组",
-    "slug": "norway-senegal",
-    "group": "I组",
-    "prediction": "挪威 2-2 塞内加尔",
-    "confidence": "中",
-    "a_win": "挪威 42%",
-    "draw": "平局 30%",
-    "b_win": "塞内加尔 28%"
-  },
-  {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-panama-croatia.html",
-    "title": "巴拿马 vs 克罗地亚预测 | H组",
-    "slug": "panama-croatia",
-    "group": "H组",
-    "prediction": "",
-    "confidence": "中",
-    "a_win": "",
-    "draw": "",
-    "b_win": ""
-  },
-  {
-    "date": "2026-06-22",
-    "file": "reports/report-2026-06-22-portugal-uzbekistan.html",
-    "title": "葡萄牙 vs 乌兹别克斯坦预测 | H组",
-    "slug": "portugal-uzbekistan",
-    "group": "H组",
-    "prediction": "",
-    "confidence": "高",
-    "a_win": "",
-    "draw": "",
-    "b_win": ""
   },
   {
     "date": "2026-06-22",
@@ -153,10 +153,7 @@
     "confidence": "高",
     "a_win": "厄瓜多尔胜 78%",
     "draw": "平局 14%",
-    "b_win": "库拉索胜 8%",
-    "actual": true,
-    "actualScore": "0-0",
-    "reviewFile": "reports/review-2026-06-20-ecuador-curacao.html"
+    "b_win": "库拉索胜 8%"
   },
   {
     "date": "2026-06-20",
@@ -168,10 +165,7 @@
     "confidence": "中",
     "a_win": "德国胜 63%",
     "draw": "平局 21%",
-    "b_win": "科特迪瓦胜 16%",
-    "actual": true,
-    "actualScore": "2-1",
-    "reviewFile": "reports/review-2026-06-20-germany-ivory-coast.html"
+    "b_win": "科特迪瓦胜 16%"
   },
   {
     "date": "2026-06-20",
@@ -183,10 +177,7 @@
     "confidence": "中",
     "a_win": "荷兰胜 45%",
     "draw": "平局 30%",
-    "b_win": "瑞典胜 25%",
-    "actual": true,
-    "actualScore": "5-1",
-    "reviewFile": "reports/review-2026-06-20-netherlands-sweden.html"
+    "b_win": "瑞典胜 25%"
   },
   {
     "date": "2026-06-20",
@@ -198,11 +189,7 @@
     "confidence": "高",
     "a_win": "突尼斯胜 18%",
     "draw": "平局 22%",
-    "b_win": "日本胜 60%",
-    "actual": true,
-    "actualScore": "0-4",
-    "actualWinner": "b",
-    "reviewFile": "reports/review-2026-06-20-tunisia-japan.html"
+    "b_win": "日本胜 60%"
   },
   {
     "date": "2026-06-19",

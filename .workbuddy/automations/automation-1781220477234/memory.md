@@ -1,5 +1,30 @@
 # Automation Memory — 2026世界杯预测任务
 
+## 2026-06-22 14:40 底部导航改版
+
+### 改版内容
+- 底部Tab从3个扩展为4个：首页 | 预测(历史) | 玄学 | 专题
+- 首页 = 赛程卡片 + 数据6宫格，默认日期锚定明天（6月23日居中，左右各6.22/6.24）
+- 预测Tab = 历史预测列表，按日期倒序分组，只显示≤今天的比赛
+- CSS: grid 3列→4列
+
+### 自动化流程（不变）
+生成报告后需运行 `python build_site.py` 更新 match_data.json
+
+---
+
+### 改版内容
+- 按 mobile-prototype.html 精确重建 index.html
+- teal #0f766e 色系，phone-shell 居中布局，毛玻璃 topbar + bottom nav
+- 3 Tab 底部导航（预测/玄学/专题），SPA + hash 路由
+- 日期切换条（3药丸，点击+滑动），可展开比赛卡片（展开→报告摘要+标签）
+- 数据6宫格（命中指数占位），玄学1篇+专题10篇文章卡片
+- 数据源：match_data.json（build_site.py 生成），articles/ 独立HTML
+- 修复 build_site.py：支持2种HTML报告格式的解析（p-a/p-b + table.prob）
+
+### 自动化流程
+生成报告后需运行 `python build_site.py` 更新 match_data.json
+
 ## 2026-06-22 09:16 预执行（H组第2轮4场，增强数据源）
 
 ### 数据源使用

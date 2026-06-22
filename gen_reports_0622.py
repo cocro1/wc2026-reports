@@ -3,12 +3,12 @@
 import os, json, datetime
 
 REPORTS_DIR = r"C:\Users\cocro\WorkBuddy\wc2026-reports\reports"
-MD_DIR = r"D:\我的坚果云\OB笔记\自媒体\fwc2026"
+MD_DIR = r"D:\我的坚果云\OB笔记\自媒体\fwc2026\content\predictions"
 os.makedirs(REPORTS_DIR, exist_ok=True)
 os.makedirs(MD_DIR, exist_ok=True)
 
-NOW = "2026-06-21 18:00"
-REPORT_DATE = "2026-06-22"
+NOW = "2026-06-22 17:30"
+REPORT_DATE = "2026-06-23"
 
 # ============= MATCH 1: Argentina vs Austria =============
 M1 = {
