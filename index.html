@@ -105,8 +105,8 @@
       font-size: 22px; line-height: 1; font-weight: 850; font-variant-numeric: tabular-nums;
     }
     .confidence {
-      margin-top: 7px; border-radius: 999px; padding: 4px 8px;
-      font-size: 11px; line-height: 1; font-weight: 800; white-space: nowrap;
+      border-radius: 999px; padding: 4px 10px;
+      font-size: 11px; line-height: 1; font-weight: 700; white-space: nowrap;
     }
     .confidence.high { background: var(--brand-soft); color: var(--brand); }
     .confidence.mid { background: var(--gold-soft); color: var(--gold); }
@@ -218,7 +218,7 @@
         <div class="brand-mark">FWC</div>
         <div class="brand-copy">
           <h1>世界杯赛前预测</h1>
-          <p id="dateCaption">按北京时间 00:00-23:59 归档</p>
+          <p id="dateCaption">多维度分析</p>
         </div>
         <div class="live-chip" id="liveChip"><span class="live-dot"></span><span id="liveCount">0 场</span></div>
       </div>
@@ -376,12 +376,33 @@
     }
     function deriveHandicap(aWin, draw, bWin) {
       const a = extractPct(aWin);
+      const d = extractPct(draw);
       const b = extractPct(bWin);
-      if (!a && !b) return { handicap: '—', odds: '暂无' };
-      if (a >= 65) return { handicap: '-1.25', odds: `主胜 ~${(100/a).toFixed(2)}` };
-      if (a >= 50) return { handicap: '-0.5', odds: `主胜 ~${(100/a).toFixed(2)}` };
-      if (b >= 50) return { handicap: '+0.5', odds: `客胜 ~${(100/b).toFixed(2)}` };
-      return { handicap: '0', odds: `平手 ~${(100/Math.max(a,b)).toFixed(2)}` };
+      if (!a && !b) return { handicap: '—', oddsUp: '—', oddsDown: '—' };
+      // implied probabilities → decimal odds (add 5% margin)
+      const aOdds = a > 0 ? parseFloat((1 / (a/100 + 0.05)).toFixed(2)) : 99;
+      const dOdds = d > 0 ? parseFloat((1 / (d/100 + 0.05)).toFixed(2)) : 99;
+      const bOdds = b > 0 ? parseFloat((1 / (b/100 + 0.05)).toFixed(2)) : 99;
+      // Determine handicap line and map to 上/下 odds
+      let handicap, up, down;
+      if (a >= 60) {
+        handicap = '-0.75';
+        up = aOdds; down = parseFloat((1 / (1 - a/100 + 0.05)).toFixed(2));
+      } else if (a >= 50) {
+        handicap = '-0.25';
+        up = aOdds; down = parseFloat((1 / (1 - a/100 + 0.05)).toFixed(2));
+      } else if (b >= 50) {
+        handicap = '+0.25';
+        down = bOdds; up = parseFloat((1 / (1 - b/100 + 0.05)).toFixed(2));
+      } else if (b >= 40) {
+        handicap = '+0.75';
+        down = bOdds; up = parseFloat((1 / (1 - b/100 + 0.05)).toFixed(2));
+      } else {
+        handicap = '0';
+        up = aOdds < bOdds ? aOdds : dOdds;
+        down = up === aOdds ? bOdds : dOdds;
+      }
+      return { handicap, oddsUp: up, oddsDown: down };
     }
 
     // ---- Generate report summary ----
@@ -561,8 +582,7 @@
       const status = dateStatus(date);
       const hasPred = daySchedule.filter(s => findPrediction(s.team_a, s.team_b)).length;
 
-      const nextNoonHint = getBeijingHour() >= 12 ? '明日 12:00' : '今日 12:00';
-      document.getElementById('dateCaption').textContent = '按北京时间归档 · 每日' + nextNoonHint + '自动刷新';
+      document.getElementById('dateCaption').textContent = '多维度分析';
       document.getElementById('scheduleTitle').textContent = label.mmdd + ' 赛程';
       document.getElementById('matchCount').textContent = `${status} · ${daySchedule.length} 场 · ${hasPred} 有预测`;
       document.getElementById('liveCount').textContent = `${daySchedule.length} 场`;
@@ -575,78 +595,98 @@
 
       list.innerHTML = daySchedule.map((s, idx) => {
         const match = findPrediction(s.team_a, s.team_b);
-        const hasPrediction = !!match;
+        const hasPred = !!match;
 
-        if (hasPrediction) {
-          // --- Has prediction: card is a direct link to report ---
-          const handicap = deriveHandicap(
-            match.a_win || '0', match.draw || '0', match.b_win || '0'
-          );
-          const scoreText = match.prediction || '—';
-          const cc = confClass(match.confidence);
+        // Compute probabilities
+        let probA = '—', probD = '—', probB = '—';
+        if (hasPred) {
+          const aw = extractPct(match.a_win);
+          const dr = extractPct(match.draw);
+          const bw = extractPct(match.b_win);
+          const total = aw + dr + bw;
+          if (total > 0) {
+            probA = Math.round(aw / total * 100) + '%';
+            probD = Math.round(dr / total * 100) + '%';
+            probB = Math.round(bw / total * 100) + '%';
+          }
+        }
 
-          return `<a class="match-card" href="${match.file}" target="_blank">
-            <div class="match-summary">
-              <div class="team">
+        const hc = hasPred
+          ? deriveHandicap(match.a_win || '0', match.draw || '0', match.b_win || '0')
+          : { handicap: '—', oddsUp: '—', oddsDown: '—' };
+        const scoreDisplay = hasPred && match.prediction
+          ? match.prediction.replace(':', ' : ') : '—';
+        const cc = hasPred ? confClass(match.confidence) : 'pending';
+
+        if (hasPred) {
+          return `<a class="match-card" href="${match.file}" target="_blank"
+                  style="display:block;text-decoration:none;color:inherit;">
+            <!-- Row 1: meta info (3-col, aligned with score row) -->
+            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:start;padding:11px 14px 0;">
+              <span style="font-size:12px;font-weight:500;color:var(--ink);">${s.group} · ${s.round}</span>
+              <span style="font-size:11px;color:var(--muted);text-align:center;">预测比分</span>
+              <span style="font-size:11px;color:var(--muted);text-align:right;">开赛 ${s.time_bj || '—'} 北京</span>
+            </div>
+            <!-- Row 2: teams + score (same 3-col grid) -->
+            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 10px 12px;">
+              <div style="display:flex;align-items:center;gap:8px;min-width:0;">
                 <span class="flag">${teamFlag(s.team_a)}</span>
-                <span class="team-name">
-                  <b>${s.team_a}</b>
-                  <small>${s.group} · ${s.round}</small>
-                </span>
+                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_a}</span>
               </div>
-              <div class="score-box">
-                <div class="score">${scoreText}</div>
-                <div class="confidence ${cc}">${match.confidence || '—'}置信</div>
-              </div>
-              <div class="team away">
-                <span class="team-name">
-                  <b>${s.team_b}</b>
-                  <small>${s.group} · ${s.round}</small>
-                </span>
+              <div style="font-size:28px;font-weight:500;font-variant-numeric:tabular-nums;margin:0 12px;color:var(--ink);flex-shrink:0;text-align:center;min-width:52px;">${scoreDisplay}</div>
+              <div style="display:flex;align-items:center;gap:8px;min-width:0;justify-content:flex-end;">
+                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_b}</span>
                 <span class="flag">${teamFlag(s.team_b)}</span>
               </div>
-              <div class="market-row">
-                <div class="market">
-                  <span>参考让球盘</span><b>${handicap.handicap}</b>
-                </div>
-                <div class="market">
-                  <span>参考赔率</span><b>${handicap.odds}</b>
-                </div>
+            </div>
+            <div style="height:1px;background:var(--line);margin:0 14px;"></div>
+            <!-- Row 3: confidence + probability -->
+            <div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:10px 14px;">
+              <span class="confidence ${cc}" style="margin-top:0;">${match.confidence || '—'}置信</span>
+              <span style="font-size:12px;color:#374151;font-weight:400;">${s.team_a}胜 <b style="font-weight:600;color:var(--ink);">${probA}</b></span>
+              <span style="font-size:11px;color:#b0b8c4;">|</span>
+              <span style="font-size:12px;color:#374151;font-weight:400;">平 <b style="font-weight:600;color:var(--ink);">${probD}</b></span>
+              <span style="font-size:11px;color:#b0b8c4;">|</span>
+              <span style="font-size:12px;color:#374151;font-weight:400;">${s.team_b}胜 <b style="font-weight:600;color:var(--ink);">${probB}</b></span>
+            </div>
+            <div style="height:1px;background:var(--line);margin:0 14px;"></div>
+            <!-- Row 4: handicap + odds -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 14px 14px;">
+              <div class="market">
+                <span>参考让球盘</span><b>${hc.handicap}</b>
+              </div>
+              <div class="market">
+                <span>参考赔率</span><b>${hc.oddsUp} (上) / ${hc.oddsDown} (下)</b>
               </div>
             </div>
           </a>`;
         } else {
-          // --- No prediction: static card with "pending" status ---
-          return `<article class="match-card">
-            <div class="match-summary">
-              <div class="team">
+          // Pending card (no prediction)
+          return `<div class="match-card" style="display:block;">
+            <!-- Row 1: meta -->
+            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:start;padding:11px 14px 0;">
+              <span style="font-size:12px;font-weight:500;color:var(--ink);">${s.group} · ${s.round}</span>
+              <span style="font-size:11px;color:var(--muted);text-align:center;">预测比分</span>
+              <span style="font-size:11px;color:var(--muted);text-align:right;">开赛 ${s.time_bj || '—'} 北京</span>
+            </div>
+            <!-- Row 2: teams + pending -->
+            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 10px 12px;">
+              <div style="display:flex;align-items:center;gap:8px;min-width:0;">
                 <span class="flag">${teamFlag(s.team_a)}</span>
-                <span class="team-name">
-                  <b>${s.team_a}</b>
-                  <small>${s.group} · ${s.round}</small>
-                </span>
+                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_a}</span>
               </div>
-              <div class="score-box">
-                <div class="score" style="font-size:16px;color:var(--muted);">待发布</div>
-                <div class="confidence pending">—</div>
-              </div>
-              <div class="team away">
-                <span class="team-name">
-                  <b>${s.team_b}</b>
-                  <small>${s.group} · ${s.round}</small>
-                </span>
+              <div style="font-size:20px;font-weight:500;margin:0 12px;color:var(--muted);flex-shrink:0;text-align:center;min-width:52px;">待发布</div>
+              <div style="display:flex;align-items:center;gap:8px;min-width:0;justify-content:flex-end;">
+                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_b}</span>
                 <span class="flag">${teamFlag(s.team_b)}</span>
               </div>
-              <div class="market-row">
-                <div class="market">
-                  <span>开球时间(北京)</span><b>${s.time_bj || '—'}</b>
-                </div>
-                <div class="market">
-                  <span>状态</span><b>预测制作中</b>
-                </div>
-              </div>
             </div>
-          </article>`;
+            <div style="height:1px;background:var(--line);margin:0 14px;"></div>
+            <!-- Row 3: status -->
+            <div style="display:flex;align-items:center;justify-content:center;padding:10px 14px;">
+              <span class="confidence pending" style="margin-top:0;">预测制作中</span>
+            </div>
+          </div>`;
         }
       }).join('');
     }
