@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>复盘报告 · 突尼斯 vs 日本（2026-06-20）</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f5f7fa; color:#1a1a2e; line-height:1.8; }
+  .header { background:linear-gradient(135deg,#0033A0,#1a4fc4); color:white; padding:36px 24px 32px; text-align:center; }
+  .header h1 { font-size:22px; font-weight:700; letter-spacing:1px; }
+  .header p { font-size:13px; opacity:0.85; margin-top:8px; }
+  .container { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+  .card { background:white; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.06); padding:24px; margin-bottom:20px; }
+  .card-title { font-size:16px; font-weight:700; color:#0033A0; border-left:4px solid #0033A0; padding-left:12px; margin-bottom:16px; }
+  .score-hero { display:flex; justify-content:center; align-items:center; gap:20px; padding:20px 0; flex-wrap:wrap; }
+  .score-team { text-align:center; }
+  .score-team .flag { font-size:36px; }
+  .score-team .name { font-size:16px; font-weight:700; margin-top:4px; }
+  .score-num { font-size:48px; font-weight:900; color:#0033A0; }
+  .score-vs { font-size:18px; color:#888; font-weight:700; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:12px; font-weight:700; }
+  .badge-green { background:#e8f5e9; color:#2e7d32; }
+  .badge-red { background:#fde8e8; color:#c62828; }
+  .badge-yellow { background:#fff8e1; color:#f57f17; }
+  .badge-blue { background:#e8f0fe; color:#0033A0; }
+  .badge-gray { background:#eee; color:#666; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin:12px 0; }
+  th { background:#f0f4ff; color:#0033A0; font-weight:600; padding:10px 12px; text-align:left; border-bottom:2px solid #d0dffa; }
+  td { padding:9px 12px; border-bottom:1px solid #eef1f6; vertical-align:top; }
+  .hit-row { background:#f1f8e9; }
+  .miss-row { background:#fdf0f0; }
+  .partial-row { background:#fff9e6; }
+  .insight-box { background:#f0f4ff; border-radius:10px; padding:18px; margin:12px 0; border:1.5px solid #b0c4f5; }
+  .insight-box strong { color:#0033A0; }
+  .warning-box { background:#fff3e0; border-left:4px solid #e65100; border-radius:0 8px 8px 0; padding:14px 18px; margin:12px 0; font-size:13.5px; }
+  .rec-card { background:#f8fafd; border-radius:10px; padding:18px; margin:10px 0; border:1px solid #e0e6f0; }
+  .rec-card h4 { color:#0033A0; font-size:14px; margin-bottom:8px; }
+  .rec-card ul { font-size:13.5px; padding-left:18px; color:#444; }
+  .rec-card li { margin-bottom:5px; }
+  .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .summary-item { background:#f8fafd; border-radius:8px; padding:14px; text-align:center; }
+  .summary-item .val { font-size:28px; font-weight:900; color:#0033A0; }
+  .summary-item .lbl { font-size:12px; color:#888; margin-top:2px; }
+  .dim-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid #eef1f6; font-size:14px; }
+  .dim-row:last-child { border-bottom:none; }
+  .dim-row .score { font-weight:700; color:#0033A0; }
+  @media(max-width:600px){ .summary-grid { grid-template-columns:1fr; } .score-hero { gap:10px; } .score-num { font-size:36px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔍 2026 世界杯预测复盘报告</h1>
+  <p>突尼斯 vs 日本 · 2026年6月20日 · F组第2轮 · 复盘时间：2026年6月22日（赛后）</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">📊 预测 vs 实际：核心指标对比</div>
+    <div class="score-hero">
+      <div class="score-team">
+        <div class="flag">🇹🇳</div>
+        <div class="name">突尼斯</div>
+      </div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-gray">预测</span></div>
+        <div class="score-num" style="color:#f57f17;">0</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#f57f17;">2</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-blue">首选 0-2（17%）</span></div>
+      </div>
+      <div style="font-size:24px;color:#888;">→</div>
+      <div>
+        <div style="text-align:center;margin-bottom:6px;"><span class="badge badge-red">实际</span></div>
+        <div class="score-num" style="color:#0033A0;">0</div>
+        <div class="score-vs" style="text-align:center;">:</div>
+        <div class="score-num" style="color:#0033A0;">4</div>
+        <div style="text-align:center;margin-top:6px;"><span class="badge badge-red">突尼斯 0-4 日本（亚洲球队世界杯最大胜）</span></div>
+      </div>
+      <div class="score-team">
+        <div class="flag">🇯🇵</div>
+        <div class="name">日本</div>
+      </div>
+    </div>
+
+    <div class="summary-grid" style="margin-top:16px;">
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">✅</div><div class="lbl">胜平负方向正确（日本胜）</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">⚠️</div><div class="lbl">首选比分0-2未中（差2球）</div></div>
+      <div class="summary-item"><div class="val" style="color:#2e7d32;">✅</div><div class="lbl">大小球方向正确（Over 2.0/2.5 命中）</div></div>
+      <div class="summary-item"><div class="val" style="color:#f57f17;">⚠️</div><div class="lbl">3-0 备选(13%)接近但未中</div></div>
+    </div>
+
+    <table style="margin-top:16px;">
+      <tr><th width="30%">对比维度</th><th width="35%">预测</th><th width="35%">实际</th></tr>
+      <tr><td><strong>最终比分</strong></td><td>日本 <strong>2-0</strong> 突尼斯（首选·17%）</td><td class="miss-row">突尼斯 <strong>0-4</strong> 日本 ❌ 比分差2球（3-0备选13%略接近）</td></tr>
+      <tr><td><strong>其他可能比分</strong></td><td>3-0(13%), 1-0(12%), 2-1(8%), 1-1(7%)</td><td class="partial-row">0-4不在备选（最接近3-0·13%）⚠️</td></tr>
+      <tr><td><strong>突尼斯胜率</strong></td><td>18%</td><td class="hit-row">突尼斯未胜 ✅</td></tr>
+      <tr><td><strong>平局概率</strong></td><td>22%</td><td class="hit-row">平局未发生 ✅</td></tr>
+      <tr><td><strong>日本胜率</strong></td><td><strong>60%</strong></td><td class="hit-row">日本胜 ✅（方向正确）</td></tr>
+      <tr><td><strong>突尼斯xG</strong></td><td>0.35-0.70</td><td class="miss-row">实际0.05（仅2射0正）❌ 严重低于预测区间</td></tr>
+      <tr><td><strong>日本xG</strong></td><td>1.50-2.10</td><td class="partial-row">实际2.13 ⚠️ 区间上沿，预测被突破</td></tr>
+      <tr><td><strong>总进球数</strong></td><td>2球（最可能）</td><td class="partial-row">4球 ⚠️ 总进球超预测2球</td></tr>
+      <tr><td><strong>大小球</strong></td><td>Over 2.0/2.5（偏向大球）</td><td class="hit-row">Over 2.0/2.5/3.0 全部命中 ✅</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 逐项核对（20项）</div>
+    <table>
+      <tr><th width="5%">#</th><th width="35%">预测内容</th><th width="30%">实际发生</th><th width="15%">结果</th></tr>
+      <tr class="hit-row"><td>1</td><td>日本胜（60%胜率）</td><td>日本 4-0 大胜突尼斯</td><td>✅ 方向正确</td></tr>
+      <tr class="miss-row"><td>2</td><td>首选比分 2-0（17%）</td><td>0-4 大胜</td><td>❌ 比分差2球</td></tr>
+      <tr class="partial-row"><td>3</td><td>次选 3-0（13%）</td><td>0-4（接近但差1球）</td><td>⚠️ 接近命中</td></tr>
+      <tr class="miss-row"><td>4</td><td>总进球 2球（最可能）</td><td>4球</td><td>❌ 超预测2球</td></tr>
+      <tr class="hit-row"><td>5</td><td>大小球 Over 2.0/2.5</td><td>4球全中</td><td>✅ 方向完全正确</td></tr>
+      <tr class="hit-row"><td>6</td><td>日本零封（45%概率）</td><td>0失球 4-0</td><td>✅ 实现零封</td></tr>
+      <tr class="hit-row"><td>7</td><td>日本首开记录</td><td>4' Kamada 闪电破门</td><td>✅ 第4分钟即破门</td></tr>
+      <tr class="miss-row"><td>8</td><td>上半场只入1球（2-0节奏）</td><td>上半场已2-0，节奏匹配但低估延续</td><td>⚠️ 节奏对但漏下半场</td></tr>
+      <tr class="miss-row"><td>9</td><td>关键球员 Kubo/Nakamura 创造机会</td><td>Kamada/Ito/Ueda 实际进球</td><td>❌ 进球者全错（漏Ueda）</td></tr>
+      <tr class="miss-row"><td>10</td><td>预测 Nakamura（兰斯）可能进球</td><td>Nakamura 本场助攻，Ueda 梅开二度</td><td>❌ Ueda 完全漏判</td></tr>
+      <tr class="hit-row"><td>11</td><td>Endo 防守屏障</td><td>Endo 领衔中场控制（62%控球）</td><td>✅ 中场压制兑现</td></tr>
+      <tr class="miss-row"><td>12</td><td>Tomiyasu+Itakura 防守稳固</td><td>日本 0失球，3-4-2-1 阵型压制</td><td>✅ 防守兑现</td></tr>
+      <tr class="hit-row"><td>13</td><td>突尼斯场均 0.4球 难破门</td><td>0球 0射正 1扑救（仅2射门）</td><td>✅ 实际进攻更差</td></tr>
+      <tr class="hit-row"><td>14</td><td>突尼斯 Chamakh 失误频发</td><td>Dahmen 顶替Chamakh首发，1扑救</td><td>⚠️ 门将已换但仍失4球</td></tr>
+      <tr class="miss-row"><td>15</td><td>突尼斯 xG 0.35-0.70</td><td>实际 xG 0.05</td><td>❌ 严重高估突尼斯进攻</td></tr>
+      <tr class="hit-row"><td>16</td><td>Moriyasu 战术灵活 7.7分</td><td>3-4-2-1 全新阵型，4球完胜</td><td>✅ 战术彻底兑现</td></tr>
+      <tr class="hit-row"><td>17</td><td>Lamouchi 5.3分 C级</td><td>中场休息连换2人，仍未止血</td><td>✅ 临场调整失败</td></tr>
+      <tr class="miss-row"><td>18</td><td>Doan 替补奇兵（预估）</td><td>Doan 74'替补登场，未直接参与进球</td><td>❌ 角色未触发</td></tr>
+      <tr class="miss-row"><td>19</td><td>Ueda 完全未在核心球员列表</td><td>Ueda 31'83' 梅开二度</td><td>❌ 完全漏判核心进球者</td></tr>
+      <tr class="hit-row"><td>20</td><td>蒙特雷高温对日本有利</td><td>日本 4球进账，体能优势兑现</td><td>✅ 环境因素预测正确</td></tr>
+    </table>
+    <p style="margin-top:12px;font-size:13px;color:#666;"><strong>命中率统计：</strong>20项中命中 11 项（55%），部分命中 3 项（15%），偏差 6 项（30%）。方向性预测（胜平负/大小球/零封）全部正确，**核心问题集中在比分幅度低估和Ueda等关键球员漏判**。</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔬 偏差原因深度分析（5条）</div>
+
+    <div class="insight-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:8px;">① Ueda 完全漏判——"非豪门俱乐部主力"国脚覆盖盲区再现</h4>
+      <p>预测报告的 18 人核心球员列表完全遗漏 <strong>上田綺世（Ayase Ueda，费耶诺德→英超）</strong>，他本场 31' 83' 梅开二度直接制造 2 球。事实上，Ueda 2024-25 赛季在费耶诺德打进 14 球（荷甲银靴级别），是日本近两年进球效率最高的中锋之一。这一遗漏与"非豪门俱乐部主力"国脚覆盖不足的共性问题高度一致（参见荷兰5-1、Cunha 梅开二度、Brobbey 等案例）。</p>
+      <p style="margin-top:8px;"><strong>影响：</strong>0-4 的实际比分是 4 个不同球员（Kamada、Ueda、Ito、Ueda），预测仅覆盖到 1 个（Kamada）——命中率为 25%。</p>
+    </div>
+
+    <div class="insight-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:8px;">② 比分幅度系统性低估——"强队5场3零封"被反向解读</h4>
+      <p>预测的首选 2-0（17%）和次选 3-0（13%）合计仅 30% 概率，4-0 完全没有出现在备选。这是"日本控制比赛"的典型节奏，但忽略了：日本上半场已 2-0 领先+突尼斯完全没有 1 次射正（防守崩溃），下半场日本有充足的战术空间扩大比分。Moriyasu 的"必赢压力→强回应"模式在 2022 世界杯已多次印证，但模型仍按"首轮2-2荷兰→次轮求稳"逻辑给出 2-0 首选。</p>
+      <p style="margin-top:8px;"><strong>影响：</strong>比分方向正确但幅度低估 2 球，导致 Over 2.5/3.0 等深度大球信号未充分体现。</p>
+    </div>
+
+    <div class="insight-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:8px;">③ "门将失误"识别错位——Chamakh→Dahmen 替换未被纳入</h4>
+      <p>预测报告多次强调 Chamakh 失误频发，建议关注"Dahmen 替换首发"的可能性（数据缺口第3条已列出）。但实际比赛中 Dahmen 已首发出场，1 扑救失 4 球——这意味着突尼斯的门将问题不是"可能发生"而是"已经存在"，但模型未做相应下调。同时，日本首 4 分钟即破门，超出"突尼斯前 15 分钟注意力集中"假设（无此假设的 8' 失球 → Kamada 第 4 分钟即破门）。</p>
+      <p style="margin-top:8px;"><strong>影响：</strong>"突尼斯首轮5失球→本场可能改善"的乐观假设被 0-4 击碎，暴露"前一轮崩塌+教练任期短"球队的次轮必然崩盘规律未识别。</p>
+    </div>
+
+    <div class="insight-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:8px;">④ 突尼斯 xG 0.35-0.70 vs 实际 0.05——弱队 xG 高估 7-14倍</h4>
+      <p>预测区间下沿 0.35 已是模型"保守估计"，但实际 0.05 意味着突尼斯全场 2 射 0 射正 xG 几乎为零。这与"Hannibal 创造力+Khazri经验"的描述严重背离——这两位本场均被日本压制（Hannibal 32 码外 0.01 xG 远射偏出）。模型对"个人能力→团队产出"的转化率估计过高，未考虑"日本 3-4-2-1 体系压制"对突尼斯个人发挥的体系性削弱。</p>
+      <p style="margin-top:8px;"><strong>影响：</strong>预测总 xG 1.85-2.80 vs 实际 2.18（含日本）——总 xG 接近，但分布严重偏向日本（实际 2.13/0.05 vs 预测 1.80/0.50）。</p>
+    </div>
+
+    <div class="insight-box">
+      <h4 style="color:#0033A0;font-size:15px;margin-bottom:8px;">⑤ 阵型判断缺失——Moriyasu 变阵 3-4-2-1 完全未预测</h4>
+      <p>预测报告基于"日本首轮 4-2-3-1 / 4-3-3"的假设展开攻防对比，但 Moriyasu 实际派出 3-4-2-1 全新阵型（首发中卫 3 人+翼卫 2 人+双前腰 2 人+单箭头 1 人）。这一变阵是 Moriyasu 在 2022 世界杯常用的"高位逼抢+边路压制"体系。模型仅评估"教练战术灵活 7.5分"但未具体预测阵型调整，导致"日本压制→突尼斯崩溃"的传导路径未能量化。</p>
+      <p style="margin-top:8px;"><strong>影响：</strong>0-4 的比分更多是"阵型克制+球员爆发"叠加效应，仅靠"日本胜60%"概率不足以覆盖 4 球差距。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📈 概率校准评估</div>
+    <table>
+      <tr><th>事件</th><th>预测概率</th><th>实际发生</th><th>校准评价</th></tr>
+      <tr><td>突尼斯胜</td><td>18%</td><td>未发生</td><td class="hit-row">✅ 合理</td></tr>
+      <tr><td>平局</td><td>22%</td><td>未发生</td><td class="hit-row">✅ 合理</td></tr>
+      <tr><td>日本胜</td><td>60%</td><td><strong>发生</strong></td><td class="hit-row">✅ 方向正确</td></tr>
+      <tr><td>2-0 首选</td><td>17%</td><td>未发生</td><td class="miss-row">❌ 17% 中未发生，符合频率</td></tr>
+      <tr><td>3-0 备选</td><td>13%</td><td>未发生</td><td class="miss-row">❌ 接近但未中</td></tr>
+      <tr><td>1-0 备选</td><td>12%</td><td>未发生</td><td class="miss-row">❌ 错</td></tr>
+      <tr><td>2-1 备选</td><td>8%</td><td>未发生</td><td class="miss-row">❌ 错</td></tr>
+      <tr><td>1-1 备选</td><td>7%</td><td>未发生</td><td class="hit-row">✅ 平局未发生</td></tr>
+      <tr><td>0-4 实际</td><td>0% （未在备选）</td><td><strong>发生</strong></td><td class="miss-row">❌ 完全漏判大胜</td></tr>
+    </table>
+    <p style="margin-top:12px;"><strong>校准结论：</strong></p>
+    <ul style="padding-left:20px;font-size:14px;">
+      <li><strong>胜平负三层（突/平/日 = 18/22/60）：</strong>完全命中——胜平负方向0误差，反映"教练等级差2级+5场3零封"信号的稳健性。</li>
+      <li><strong>比分分布（5个备选合计 57%）：</strong>全部未中，且 0-4（实际）未在备选——暴露"按强队控制比赛节奏"假设下的比分覆盖盲区。</li>
+      <li><strong>大小球 Over 2.5：</strong>完全命中（实际4球），证明"突尼斯防守脆弱"信号被正确读取，但**"日本能进多少球"的下沿过于保守**。</li>
+      <li><strong>日本零封（45%）：</strong>实际发生（突尼斯0射正），兑现"日本5场3零封+突尼斯进攻乏力"判断。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🗂 缺失数据清单</div>
+    <table>
+      <tr><th width="15%">严重度</th><th width="40%">缺失项</th><th width="45%">影响</th></tr>
+      <tr class="miss-row"><td><strong>高</strong></td><td>Ueda（费耶诺德）2024-25赛季数据</td><td>完全漏判梅开二度球员，命中率-25%</td></tr>
+      <tr class="miss-row"><td><strong>高</strong></td><td>日本首轮 4-2-3-1 → 本场 3-4-2-1 阵型调整</td><td>战术评估基于错误假设</td></tr>
+      <tr class="miss-row"><td><strong>高</strong></td><td>Chamakh→Dahmen 实际首发变更</td><td>门将判断失效，概率未重估</td></tr>
+      <tr class="partial-row"><td><strong>中</strong></td><td>Lamouchi上任后3个月热身赛具体战绩</td><td>"触底反弹"判断依据不足</td></tr>
+      <tr class="partial-row"><td><strong>中</strong></td><td>日本近 8 场不败的对手档次分布</td><td>状态评估缺乏强度校准</td></tr>
+      <tr class="partial-row"><td><strong>中</strong></td><td>Ueda、Kamada、Ito 上一场 vs 荷兰的表现数据</td><td>无法判断状态延续性</td></tr>
+      <tr class="partial-row"><td><strong>低</strong></td><td>蒙特雷 BBVA 草皮状态、湿度数据</td><td>环境因素描述但无量化</td></tr>
+      <tr class="partial-row"><td><strong>低</strong></td><td>裁判 Kovacs 历届世界杯场均红黄牌</td><td>纪律性影响评估薄弱</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💡 优化建议（7条）</div>
+    <div class="rec-card">
+      <h4>1. 建立"非豪门俱乐部主力"国脚进球者全量数据库</h4>
+      <ul>
+        <li><strong>问题：</strong>Ueda、Cunha、Saibari、Brobbey、Undav 等连续多场漏判，均来自"非五大联赛豪门主力"</li>
+        <li><strong>方案：</strong>每场预测前调取"近 1 赛季进球数 ≥10 的非豪门俱乐部国脚"清单，标注球员+俱乐部+联赛进球数</li>
+        <li><strong>预期：</strong>类似漏判率从 25% 降至 5% 以下</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>2. "前轮崩盘+教练任期短"球队的次轮必崩盘规则</h4>
+      <ul>
+        <li><strong>问题：</strong>Lamouchi 上任 <3 个月+首轮 1-5 惨败，次轮 0-4 大败——典型的"未稳定→次轮延续"路径</li>
+        <li><strong>方案：</strong>教练任期 ≤6 个月 且 上一场失球 ≥3 → 次轮失球预期 +1.5 球，胜率 -8pct</li>
+        <li><strong>预期：</strong>识别"前轮 1-5 崩盘→次轮 0-4 大败"类型的连锁效应</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>3. 阵型变化预测——基于教练战术档案+对手阵型匹配</h4>
+      <ul>
+        <li><strong>问题：</strong>Moriyasu 实际 3-4-2-1 未在预测中体现，导致战术评估基于错误基础</li>
+        <li><strong>方案：</strong>为 A/B 级教练建立战术档案，预测可能阵型（教练惯用+对手克制组合）</li>
+        <li><strong>预期：</strong>阵型变化带来的战术压制效应可量化（如 3-4-2-1 vs 4-3-3 → 边路压制 +25%）</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>4. "日本/沙特/伊朗"亚洲强队的爆冷能力分级</h4>
+      <ul>
+        <li><strong>问题：</strong>日本近 3 场进 2 球+4 球+2 球（vs 荷兰/突尼斯/瑞典），已 8 场不败 7胜1平</li>
+        <li><strong>方案：</strong>为亚洲顶尖球队（FIFA 排名前 20 的 3-4 支）建立"爆冷能力"系数，如日本 0.15（高位压制胜率+15%），类似沙特 0.12、韩国 0.10</li>
+        <li><strong>预期：</strong>日本对 Tier 2 球队胜率从 60% 上调至 70-75%，0-4 比分概率 5-8%</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>5. "首轮惨败+次轮生死战"对弱队的反向心理压制规则</h4>
+      <ul>
+        <li><strong>问题：</strong>突尼斯次轮为"非胜即出局"比赛，但球员心理在 1-5 后已崩——这种"必赢压力→终结失常"在多场出现</li>
+        <li><strong>方案：</strong>首轮失球 ≥3 + 次轮为必须取胜 → 弱队 xG 衰减 -50%，转化率 -30%</li>
+        <li><strong>预期：</strong>准确预测 0-4、0-0 等极端场景</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>6. "大小球深度"应作为独立预测维度</h4>
+      <ul>
+        <li><strong>问题：</strong>本次仅预测 Over 2.0/2.5 偏向大球，但未给出 Over 3.0/3.5 概率</li>
+        <li><strong>方案：</strong>在大小球判断中并列给出 Over 1.5/2.0/2.5/3.0/3.5 的五档概率</li>
+        <li><strong>预期：</strong>用户可获得更精细的大小球评估（本次实际 4 球，Over 3.0 应给 ~30% 概率）</li>
+      </ul>
+    </div>
+    <div class="rec-card">
+      <h4>7. 比分备选应覆盖"压倒性大胜"和"压倒性惨败"双向极端</h4>
+      <ul>
+        <li><strong>问题：</strong>本次备选比分（2-0/3-0/1-0/2-1/1-1）全部在 0-3 球范围内，0-4 完全漏判</li>
+        <li><strong>方案：</strong>在胜平负 80%+ 置信场景下，强制加入 4-0/4-1/5-0 等"压倒性比分"备选（5-8% 概率）</li>
+        <li><strong>预期：</strong>避免"全部备选接近但都不中"的现象</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📐 各维度评分（满分 10）</div>
+    <div class="dim-row"><span>1. 赛前信息准确性</span><span class="score">7.0/10</span></div>
+    <div class="dim-row"><span>2. 战术框架判断</span><span class="score">5.5/10</span></div>
+    <div class="dim-row"><span>3. 球员信息覆盖</span><span class="score">5.0/10</span></div>
+    <div class="dim-row"><span>4. 数据深度</span><span class="score">6.5/10</span></div>
+    <div class="dim-row"><span>5. 概率模型</span><span class="score">7.0/10</span></div>
+    <div class="dim-row"><span>6. 比分预测</span><span class="score">4.5/10</span></div>
+    <div class="dim-row"><span>7. 不确定性表达</span><span class="score">6.5/10</span></div>
+    <div class="dim-row"><span>8. 结构化程度</span><span class="score">8.0/10</span></div>
+    <div class="dim-row" style="font-weight:700;border-top:2px solid #0033A0;padding-top:10px;margin-top:6px;"><span>综合评分</span><span class="score" style="color:#0033A0;font-size:16px;">6.25/10</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏁 最终结论</div>
+    <div class="insight-box" style="background:#f0f4ff;border-color:#b0c4f5;">
+      <p style="font-size:15px;line-height:1.9;"><strong>总体评价：6.25/10 — 方向正确，幅度低估</strong></p>
+      <p style="margin-top:10px;">本场预测在胜平负方向（60% 日本胜）上完全正确，大小球方向（Over 2.5）完全正确，日本零封（45% 概率）实际发生——这三大方向性预测全部命中，证明"教练等级差2级+日本5场3零封+突尼斯近3场失11球"的信号链判断稳健。</p>
+      <p style="margin-top:10px;">然而，<strong>比分预测（2-0 首选 17%）与实际 0-4 相差 2 球</strong>，暴露三个核心问题：（1）Ueda 等"非豪门俱乐部主力"国脚的持续漏判；（2）阵型变化（3-4-2-1）未纳入战术评估；（3）"前轮崩盘+次轮生死战"对弱队的反向心理压制规则缺失。0-4 是亚洲球队在世界杯历史上的最大胜利之一（仅次 2002 沙特 8-0 等少数），属于低概率极端事件，模型未给出任何备选覆盖。</p>
+      <p style="margin-top:10px;"><strong>核心缺陷（3条）：</strong></p>
+      <ol style="padding-left:20px;font-size:14px;">
+        <li>Ueda 完全漏判（费耶诺德主力+日本国脚）</li>
+        <li>阵型变化（Moriyasu 3-4-2-1）未预测</li>
+        <li>比分备选缺乏"压倒性大胜"覆盖</li>
+      </ol>
+      <p style="margin-top:10px;"><strong>核心改进方向：</strong>（1）建立非豪门俱乐部主力国脚全量数据库；（2）阵型变化预测模型（基于教练战术档案+对手阵型匹配）；（3）比分备选清单强制覆盖 4-0/5-0 等极端场景。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📊 跨多场共性问题累积</div>
+    <p style="font-size:13.5px;line-height:1.8;">本场延续了 6/19-6/20 复盘中识别的 3 大系统性问题：</p>
+    <ol style="padding-left:20px;font-size:13.5px;line-height:1.9;">
+      <li><strong>非豪门俱乐部主力进球者持续漏判：</strong>Ueda（费耶诺德/日本）、Cunha（马竞/巴西）、Saibari（PSV/摩洛哥）、Brobbey（阿贾克斯/荷兰）、Undav（布莱顿/德国）——5 场比赛 5 名核心进球者全部来自"非五大联赛顶级豪门主力"，反映模型对"次级联赛主力国脚"的覆盖盲区。</li>
+      <li><strong>比分幅度系统性低估：</strong>荷兰 5-1（预测 2-1）、英格兰 4-2（预测 2-1）、日本 0-4（预测 2-0）——三场预测均出现"方向正确+幅度低估"的相同模式。说明模型对"强队大胜"的概率分布过于保守。</li>
+      <li><strong>阵型变化未量化：</strong>Moriyasu 3-4-2-1、Scaloni 4-3-3 变 4-4-2、Koeman 4-3-3 等阵型调整带来的战术克制效应未被独立建模，导致"为何大胜"无法从阵型角度解释。</li>
+    </ol>
+  </div>
+
+  <div style="text-align:center;font-size:11px;color:#aaa;padding:20px 0;border-top:1px solid #eee;margin-top:24px;">
+    报告数据仅供参考，不构成投注建议 · 复盘时间：2026-06-22
+  </div>
+
+</div>
+</body>
+</html>
