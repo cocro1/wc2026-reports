@@ -194,6 +194,13 @@
     .empty-state { text-align: center; padding: 40px 16px; color: var(--muted); }
     .empty-state p { font-size: 14px; }
 
+    /* Date strip: only visible on home tab */
+    body:not([data-tab="home"]) .date-strip { display: none; }
+    /* Make match-card a valid link */
+    a.match-card { display: block; text-decoration: none; color: inherit; }
+    a.match-card:hover { border-color: var(--brand); }
+    a.match-card .match-summary { cursor: pointer; }
+
     @media (max-width: 360px) {
       .match-summary { grid-template-columns: 1fr 58px 1fr; gap: 7px; padding: 10px; }
       .flag { width: 28px; height: 28px; font-size: 17px; }
@@ -554,9 +561,7 @@
       const status = dateStatus(date);
       const hasPred = daySchedule.filter(s => findPrediction(s.team_a, s.team_b)).length;
 
-      // Refresh time hint
-      const nextNoonHint = getBeijingHour() >= 12
-        ? '明日 12:00' : '今日 12:00';
+      const nextNoonHint = getBeijingHour() >= 12 ? '明日 12:00' : '今日 12:00';
       document.getElementById('dateCaption').textContent = '按北京时间归档 · 每日' + nextNoonHint + '自动刷新';
       document.getElementById('scheduleTitle').textContent = label.mmdd + ' 赛程';
       document.getElementById('matchCount').textContent = `${status} · ${daySchedule.length} 场 · ${hasPred} 有预测`;
@@ -573,19 +578,15 @@
         const hasPrediction = !!match;
 
         if (hasPrediction) {
-          // --- Has prediction: show full card ---
+          // --- Has prediction: card is a direct link to report ---
           const handicap = deriveHandicap(
             match.a_win || '0', match.draw || '0', match.b_win || '0'
           );
-          const parsed = parseTitle(match.title);
           const scoreText = match.prediction || '—';
-          const report = genSummary(parsed, match);
-          const tags = genTags(parsed, match);
           const cc = confClass(match.confidence);
-          const openClass = idx === 0 ? ' open' : '';
 
-          return `<article class="match-card${openClass}">
-            <button class="match-summary" type="button" aria-expanded="${idx === 0}">
+          return `<a class="match-card" href="${match.file}" target="_blank">
+            <div class="match-summary">
               <div class="team">
                 <span class="flag">${teamFlag(s.team_a)}</span>
                 <span class="team-name">
@@ -612,18 +613,12 @@
                   <span>参考赔率</span><b>${handicap.odds}</b>
                 </div>
               </div>
-            </button>
-            <div class="report">
-              <p>${report}</p>
-              <div class="report-tags">
-                ${tags.map(t => `<span class="tag">${t}</span>`).join('')}
-              </div>
             </div>
-          </article>`;
+          </a>`;
         } else {
-          // --- No prediction: show pending card ---
+          // --- No prediction: static card with "pending" status ---
           return `<article class="match-card">
-            <button class="match-summary" type="button" aria-expanded="false">
+            <div class="match-summary">
               <div class="team">
                 <span class="flag">${teamFlag(s.team_a)}</span>
                 <span class="team-name">
@@ -650,9 +645,6 @@
                   <span>状态</span><b>预测制作中</b>
                 </div>
               </div>
-            </button>
-            <div class="report">
-              <p>本场预测报告将在赛前发布，请稍后查看。数据团队正在收集中。</p>
             </div>
           </article>`;
         }
@@ -677,12 +669,12 @@
       `).join('');
     }
 
-    // ---- Historical predictions ----
+    // ---- 历史预测（文章卡片样式） ----
     function renderHistory() {
       const list = document.getElementById('historyList');
-      const today = new Date().toISOString().slice(0, 10);
+      const today = getBeijingDateStr();
 
-      // Group matches by date, only past dates
+      // 按日期分组，仅过去日期
       const dateMap = {};
       allMatches.forEach(m => {
         if (m.date <= today) {
@@ -703,65 +695,26 @@
       list.innerHTML = histDates.map(d => {
         const label = dateLabel(d);
         const dayMatches = dateMap[d];
-        return `<div style="margin-bottom:16px;">
-          <div class="section-head" style="margin-bottom:4px;">
+        return `<div style="margin-bottom:18px;">
+          <div class="section-head" style="margin-bottom:8px;">
             <h2 style="font-size:14px;">${label.mmdd} ${label.short.split(' ')[1] || ''}</h2>
             <span>${dayMatches.length} 场</span>
           </div>
-          ${dayMatches.map(m => {
-            const parsed = parseTitle(m.title);
-            const handicap = deriveHandicap(m.a_win || '0', m.draw || '0', m.b_win || '0');
-            const scoreText = m.prediction || '—';
-            const cc = confClass(m.confidence);
-            const report = genSummary(parsed, m);
-            return `<article class="match-card">
-              <button class="match-summary" type="button" aria-expanded="false">
-                <div class="team">
-                  <span class="flag">${teamFlag(parsed.teamA)}</span>
-                  <span class="team-name">
-                    <b>${parsed.teamA}</b>
-                    <small>${parsed.group}</small>
-                  </span>
+          <div class="article-grid">
+            ${dayMatches.map(m => {
+              const parsed = parseTitle(m.title);
+              return `<a class="article-card" href="${m.file}" target="_blank">
+                <div class="article-icon research">📈</div>
+                <div class="article-body">
+                  <b>${parsed.teamA} vs ${parsed.teamB}</b>
+                  <small>${parsed.group || ''} · ${d} · ${m.confidence || '—'}置信</small>
                 </div>
-                <div class="score-box">
-                  <div class="score">${scoreText}</div>
-                  <div class="confidence ${cc}">${m.confidence || '—'}置信</div>
-                </div>
-                <div class="team away">
-                  <span class="team-name">
-                    <b>${parsed.teamB}</b>
-                    <small>${parsed.group}</small>
-                  </span>
-                  <span class="flag">${teamFlag(parsed.teamB)}</span>
-                </div>
-                <div class="market-row">
-                  <div class="market">
-                    <span>参考让球盘</span><b>${handicap.handicap}</b>
-                  </div>
-                  <div class="market">
-                    <span>参考赔率</span><b>${handicap.odds}</b>
-                  </div>
-                </div>
-              </button>
-              <div class="report">
-                <p>${report}</p>
-                <div class="report-tags">
-                  ${genTags(parsed, m).map(t => `<span class="tag">${t}</span>`).join('')}
-                </div>
-              </div>
-            </article>`;
-          }).join('')}
+                <div class="article-arrow">→</div>
+              </a>`;
+            }).join('')}
+          </div>
         </div>`;
       }).join('');
-
-      // Card expansion for history
-      list.querySelectorAll('.match-summary').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const card = btn.closest('.match-card');
-          const isOpen = card.classList.toggle('open');
-          btn.setAttribute('aria-expanded', String(isOpen));
-        });
-      });
     }
 
     // ---- Mystic articles ----
@@ -806,6 +759,7 @@
     // ---- Tab switching ----
     function switchTab(tab) {
       currentTab = tab;
+      document.body.dataset.tab = tab;
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
 
@@ -841,15 +795,6 @@
         renderDateStrip();
         renderMatches(currentDate);
       }
-    });
-
-    // Card expansion
-    document.getElementById('matchList').addEventListener('click', e => {
-      const btn = e.target.closest('.match-summary');
-      if (!btn) return;
-      const card = btn.closest('.match-card');
-      const isOpen = card.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(isOpen));
     });
 
     // Hash routing
