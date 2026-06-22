@@ -619,7 +619,7 @@
             ? deriveHandicap(match.a_win || '0', match.draw || '0', match.b_win || '0')
             : { handicap: '—', oddsUp: '—', oddsDown: '—' });
         const scoreDisplay = hasPred && match.prediction
-          ? match.prediction.replace(':', ' : ') : '—';
+          ? (() => { const m = match.prediction.match(/(\d+)\s*[-:]\s*(\d+)/); return m ? m[1] + ' : ' + m[2] : '—'; })() : '—';
         const cc = hasPred ? confClass(match.confidence) : 'pending';
 
         if (hasPred) {
