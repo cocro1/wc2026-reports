@@ -20,6 +20,12 @@
 - CloudStudio: https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work
 - 仓库: https://github.com/cocro1/wc2026-reports
 
+### 数据采集技能
+- 位置: `.workbuddy/skills/wc2026-data-sources/`
+- 增强数据源: FBref (xG/球员)、xGscore、Transfermarkt(身价)、FIFA 官网、365Scores
+- 数据质量标注: L1(一手) > L2(聚合) > L3(二手分析) > L4(推断)
+- 采集检查清单: 15项自检 + 10阶段工作流
+
 ### 文件结构约定
 - 预测报告: `reports/report-YYYY-MM-DD-teamA-teamB.html`
 - 复盘报告: `reports/review-YYYY-MM-DD-teamA-teamB.html`
