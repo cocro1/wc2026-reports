@@ -506,6 +506,14 @@
         allMatches = [];
       }
 
+      // Load odds.json (real odds from OddsPapi)
+      try {
+        const oResp = await fetch('odds.json?nocache=' + Date.now());
+        window._oddsMap = await oResp.json();
+      } catch(e) {
+        window._oddsMap = {};
+      }
+
       // Build dates from schedule (primary source for dates)
       const dateMap = {};
       scheduleData.forEach(s => {
@@ -611,9 +619,14 @@
           }
         }
 
-        const hc = hasPred
-          ? deriveHandicap(match.a_win || '0', match.draw || '0', match.b_win || '0')
-          : { handicap: '—', oddsUp: '—', oddsDown: '—' };
+        // Try real odds from odds.json first
+        const oddsKey = `${s.team_a} vs ${s.team_b}`;
+        const realOdds = window._oddsMap && window._oddsMap[oddsKey];
+        const hc = realOdds
+          ? { handicap: realOdds.handicap, oddsUp: realOdds.odds_up, oddsDown: realOdds.odds_down }
+          : (hasPred
+            ? deriveHandicap(match.a_win || '0', match.draw || '0', match.b_win || '0')
+            : { handicap: '—', oddsUp: '—', oddsDown: '—' });
         const scoreDisplay = hasPred && match.prediction
           ? match.prediction.replace(':', ' : ') : '—';
         const cc = hasPred ? confClass(match.confidence) : 'pending';
