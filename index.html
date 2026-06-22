@@ -84,25 +84,10 @@
       width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
       box-shadow: 0 8px 20px rgba(20, 31, 46, 0.06); overflow: hidden;
     }
-    .match-summary {
-      display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; width: 100%;
-      border: 0; background: transparent; color: inherit; padding: 12px; cursor: pointer; text-align: left;
-    }
-    .team { min-width: 0; display: flex; align-items: center; gap: 8px; }
-    .team.away { justify-content: flex-end; text-align: right; }
+    /* Flag circle (used standalone, not in v2 cards) */
     .flag {
       display: grid; place-items: center; flex: 0 0 auto; width: 32px; height: 32px;
       border-radius: 999px; background: #f8fafc; border: 1px solid var(--line); font-size: 19px;
-    }
-    .team-name { min-width: 0; }
-    .team-name b, .team-name small {
-      display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    }
-    .team-name b { font-size: 14px; line-height: 1.25; }
-    .team-name small { margin-top: 3px; color: var(--muted); font-size: 11px; }
-    .score-box { display: grid; place-items: center; min-width: 70px; }
-    .score {
-      font-size: 22px; line-height: 1; font-weight: 850; font-variant-numeric: tabular-nums;
     }
     .confidence {
       border-radius: 999px; padding: 4px 10px;
@@ -202,11 +187,6 @@
     a.match-card .match-summary { cursor: pointer; }
 
     @media (max-width: 360px) {
-      .match-summary { grid-template-columns: 1fr 58px 1fr; gap: 7px; padding: 10px; }
-      .flag { width: 28px; height: 28px; font-size: 17px; }
-      .team { gap: 6px; }
-      .score { font-size: 18px; }
-      .confidence { padding: 4px 6px; font-size: 10px; }
       .market-row { grid-template-columns: 1fr; }
     }
   </style>
@@ -299,6 +279,20 @@
 
   <script>
   (function() {
+    // ---- Flag emoji map ----
+    const FLAGS = {
+
+    // ---- Adaptive team name font size (Chinese chars ~1em wide each) ----
+    function teamFontSize(name) {
+      const len = (name || '').replace(/[()（）·\-]/g, '').length;
+      if (len <= 2) return 15;
+      if (len <= 3) return 14;
+      if (len <= 4) return 13;
+      if (len <= 5) return 12;
+      if (len <= 6) return 11;
+      return 10;
+    }
+
     // ---- Flag emoji map ----
     const FLAGS = {
       '阿根廷':'🇦🇷','奥地利':'🇦🇹','比利时':'🇧🇪','伊朗':'🇮🇷','哥伦比亚':'🇨🇴',
@@ -640,16 +634,16 @@
               <span style="font-size:11px;color:var(--muted);text-align:center;">预测比分</span>
               <span style="font-size:11px;color:var(--muted);text-align:right;">开赛 ${s.time_bj || '—'} 北京</span>
             </div>
-            <!-- Row 2: teams + score (same 3-col grid) -->
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 10px 12px;">
-              <div style="display:flex;align-items:center;gap:8px;min-width:0;">
-                <span class="flag">${teamFlag(s.team_a)}</span>
-                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_a}</span>
+            <!-- Row 2: teams + score (flag on top, name below, vertical layout) -->
+            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 8px 10px;">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
+                <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_a)}</span>
+                <span style="font-size:${teamFontSize(s.team_a)}px;font-weight:600;text-align:center;line-height:1.2;word-break:keep-all;">${s.team_a}</span>
               </div>
-              <div style="font-size:28px;font-weight:500;font-variant-numeric:tabular-nums;margin:0 12px;color:var(--ink);flex-shrink:0;text-align:center;min-width:52px;">${scoreDisplay}</div>
-              <div style="display:flex;align-items:center;gap:8px;min-width:0;justify-content:flex-end;">
-                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_b}</span>
-                <span class="flag">${teamFlag(s.team_b)}</span>
+              <div style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;margin:0 8px;color:var(--ink);flex-shrink:0;text-align:center;min-width:44px;">${scoreDisplay}</div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
+                <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_b)}</span>
+                <span style="font-size:${teamFontSize(s.team_b)}px;font-weight:600;text-align:center;line-height:1.2;word-break:keep-all;">${s.team_b}</span>
               </div>
             </div>
             <div style="height:1px;background:var(--line);margin:0 14px;"></div>
@@ -682,16 +676,16 @@
               <span style="font-size:11px;color:var(--muted);text-align:center;">预测比分</span>
               <span style="font-size:11px;color:var(--muted);text-align:right;">开赛 ${s.time_bj || '—'} 北京</span>
             </div>
-            <!-- Row 2: teams + pending -->
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 10px 12px;">
-              <div style="display:flex;align-items:center;gap:8px;min-width:0;">
-                <span class="flag">${teamFlag(s.team_a)}</span>
-                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_a}</span>
+            <!-- Row 2: teams + pending (vertical flag+name) -->
+            <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:6px 8px 10px;">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
+                <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_a)}</span>
+                <span style="font-size:${teamFontSize(s.team_a)}px;font-weight:600;text-align:center;line-height:1.2;word-break:keep-all;">${s.team_a}</span>
               </div>
-              <div style="font-size:20px;font-weight:500;margin:0 12px;color:var(--muted);flex-shrink:0;text-align:center;min-width:52px;">待发布</div>
-              <div style="display:flex;align-items:center;gap:8px;min-width:0;justify-content:flex-end;">
-                <span style="font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${s.team_b}</span>
-                <span class="flag">${teamFlag(s.team_b)}</span>
+              <div style="font-size:16px;font-weight:600;margin:0 8px;color:var(--muted);flex-shrink:0;text-align:center;min-width:44px;">待发布</div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
+                <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_b)}</span>
+                <span style="font-size:${teamFontSize(s.team_b)}px;font-weight:600;text-align:center;line-height:1.2;word-break:keep-all;">${s.team_b}</span>
               </div>
             </div>
             <div style="height:1px;background:var(--line);margin:0 14px;"></div>
