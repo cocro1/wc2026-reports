@@ -1,0 +1,154 @@
+{
+  "_description": "2026世界杯所有场馆时区映射表。以北京时间(GMT+8)为最终输出标准，以ET(FIFA官方广播参考时区, UTC-4夏令时)为数据采集桥梁。使用规则见下方。",
+  "_rules": {
+    "output_standard": "北京时间 (CST, GMT+8)",
+    "bridge_timezone": "ET (北美东部夏令时, UTC-4) — FIFA官方赛程统一使用ET标注",
+    "critical_rule": "永远不要假设所有北美场馆都在同一时区！美国跨4个时区，墨西哥可能不使用夏令时。",
+    "conversion_formula": "ET + 12h = 北京时间 (ET → UTC: +4h, UTC → 北京: +8h, 合计+12h)",
+    "display_rule": "同时显示「场馆当地时区时间」+「北京时间」。当地时区必须标注场馆所在城市名。",
+    "verification_step": "输出前必须交叉核对 goaltimeguide.com/zh 的北京时间赛程表。"
+  },
+  "_us_timezone_summary": {
+    "ET_Eastern": "UTC-4 (夏令时), 城市: 费城/新泽西/波士顿/多伦多/迈阿密/亚特兰大",
+    "CT_Central": "UTC-5 (夏令时), 城市: 达拉斯/休斯顿/堪萨斯城",
+    "MT_Mountain": "UTC-6 (夏令时), 城市: 丹佛",
+    "PT_Pacific": "UTC-7 (夏令时), 城市: 旧金山/圣克拉拉/洛杉矶/西雅图/温哥华"
+  },
+  "_mexico_timezone_note": "墨西哥于2022年取消夏令时，Guadalajara全年使用CST (UTC-6)。切勿对美国CT和墨西哥CST使用相同偏移。",
+  "venues": {
+    "AT&T Stadium": {
+      "city": "达拉斯/阿灵顿",
+      "state": "德克萨斯州",
+      "timezone": "CT",
+      "utc_offset_summer": "-5",
+      "et_conversion": "ET - 1h"
+    },
+    "Lincoln Financial Field": {
+      "city": "费城",
+      "state": "宾夕法尼亚州",
+      "timezone": "ET",
+      "utc_offset_summer": "-4",
+      "et_conversion": "= ET"
+    },
+    "MetLife Stadium": {
+      "city": "纽约/新泽西",
+      "state": "新泽西州",
+      "timezone": "ET",
+      "utc_offset_summer": "-4",
+      "et_conversion": "= ET"
+    },
+    "Levi's Stadium": {
+      "city": "旧金山湾区/圣克拉拉",
+      "state": "加利福尼亚州",
+      "timezone": "PT",
+      "utc_offset_summer": "-7",
+      "et_conversion": "ET - 3h"
+    },
+    "NRG Stadium": {
+      "city": "休斯顿",
+      "state": "德克萨斯州",
+      "timezone": "CT",
+      "utc_offset_summer": "-5",
+      "et_conversion": "ET - 1h"
+    },
+    "Gillette Stadium": {
+      "city": "福克斯伯勒/波士顿",
+      "state": "马萨诸塞州",
+      "timezone": "ET",
+      "utc_offset_summer": "-4",
+      "et_conversion": "= ET"
+    },
+    "BMO Field": {
+      "city": "多伦多",
+      "state": "加拿大安大略省",
+      "timezone": "ET",
+      "utc_offset_summer": "-4",
+      "et_conversion": "= ET"
+    },
+    "Estadio Akron": {
+      "city": "瓜达拉哈拉/萨波潘",
+      "state": "墨西哥哈利斯科州",
+      "timezone": "CST",
+      "utc_offset_summer": "-6",
+      "et_conversion": "ET - 2h",
+      "_note": "墨西哥不使用夏令时，全年CST(UTC-6)。与CT(UTC-5夏令时)不同！"
+    },
+    "SoFi Stadium": {
+      "city": "洛杉矶",
+      "state": "加利福尼亚州",
+      "timezone": "PT",
+      "utc_offset_summer": "-7",
+      "et_conversion": "ET - 3h"
+    },
+    "Mercedes-Benz Stadium": {
+      "city": "亚特兰大",
+      "state": "佐治亚州",
+      "timezone": "ET",
+      "utc_offset_summer": "-4",
+      "et_conversion": "= ET"
+    },
+    "Hard Rock Stadium": {
+      "city": "迈阿密",
+      "state": "佛罗里达州",
+      "timezone": "ET",
+      "utc_offset_summer": "-4",
+      "et_conversion": "= ET"
+    },
+    "BC Place": {
+      "city": "温哥华",
+      "state": "加拿大不列颠哥伦比亚省",
+      "timezone": "PT",
+      "utc_offset_summer": "-7",
+      "et_conversion": "ET - 3h"
+    },
+    "Estadio Azteca": {
+      "city": "墨西哥城",
+      "state": "墨西哥",
+      "timezone": "CST",
+      "utc_offset_summer": "-6",
+      "et_conversion": "ET - 2h",
+      "_note": "墨西哥不使用夏令时，全年CST(UTC-6)"
+    },
+    "Estadio BBVA": {
+      "city": "蒙特雷",
+      "state": "墨西哥新莱昂州",
+      "timezone": "CST",
+      "utc_offset_summer": "-6",
+      "et_conversion": "ET - 2h",
+      "_note": "墨西哥不使用夏令时"
+    },
+    "Arrowhead Stadium": {
+      "city": "堪萨斯城",
+      "state": "密苏里州",
+      "timezone": "CT",
+      "utc_offset_summer": "-5",
+      "et_conversion": "ET - 1h"
+    },
+    "Lumen Field": {
+      "city": "西雅图",
+      "state": "华盛顿州",
+      "timezone": "PT",
+      "utc_offset_summer": "-7",
+      "et_conversion": "ET - 3h"
+    },
+    "Empower Field at Mile High": {
+      "city": "丹佛",
+      "state": "科罗拉多州",
+      "timezone": "MT",
+      "utc_offset_summer": "-6",
+      "et_conversion": "ET - 2h"
+    }
+  },
+  "_verification_sources": [
+    {"name": "goaltimeguide.com/zh", "advantage": "直接提供北京时间赛程，无需换算", "priority": 1},
+    {"name": "fwcschedule.com", "advantage": "以ET为参考时区，同时标注北京时间转换", "priority": 2},
+    {"name": "soccergraph.com", "advantage": "逐场标注ET时间和场馆城市", "priority": 3}
+  ],
+  "_conversion_examples": {
+    "et_12pm_dallas": "ET 13:00 → 北京时间 01:00(+1天), 达拉斯当地 12:00 CT",
+    "et_5pm_philly": "ET 17:00 → 北京时间 05:00(+1天), 费城当地 17:00 ET (同)",
+    "et_8pm_nj": "ET 20:00 → 北京时间 08:00(+1天), 新泽西当地 20:00 ET (同)",
+    "et_11pm_santaclara": "ET 23:00 → 北京时间 11:00(+1天), 圣克拉拉当地 20:00 PT",
+    "et_10pm_guadalajara": "ET 22:00 → 北京时间 10:00(+1天), 瓜达拉哈拉当地 20:00 CST (⚠️不是CT!)"
+  }
+}

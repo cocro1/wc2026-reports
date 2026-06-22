@@ -18,3 +18,4 @@
   - Norway 42% / Draw 30% / Senegal 28% → Norway 2-1
   - Jordan 24% / Draw 28% / Algeria 48% → Algeria 2-0
 - **数据源**: FIFA Watch, Toffeeweb, Football Prediction AI, FIFA World Cup News, fifa-worldcup26.com
+- **时区修正（23:15）**: 修复所有源时区标注错误 — 达拉斯从EDT→CT、圣克拉拉从EDT→PT。建立 venue_timezones.json + wc2026-schedule-timezone 技能防复发。

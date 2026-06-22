@@ -39,7 +39,7 @@
 - 复盘报告: `reports/review-YYYY-MM-DD-teamA-teamB.html`
 - Obsidian输出: `D:\我的坚果云\OB笔记\自媒体\fwc2026\`
 - Index: `index.html` (REPORTS + REVIEWS 两个数组)
-- **赛程数据源**: `schedule.json` — 72场小组赛完整赛程（权威日期源，北京时间）
+- **赛程数据源**: `schedule.json` — 73场小组赛完整赛程（北京时间，但非绝对权威，需与FIFA官方交叉核对）
 - **预测数据源**: `match_data.json` — 由 build_site.py 从 reports/ 生成
 - **首页合并逻辑**: index.html 先加载 schedule.json（赛程），再加载 match_data.json（预测），按队名模糊匹配合并。有预测显示预测，无预测显示"待发布"
 
@@ -47,6 +47,17 @@
 1. **所有时间必须以北京时间为准（GMT+8）**：信息源如用UTC/EST等时区，必须换算为北京时间后写入
 2. **数据准确性是校对核心**：赛程表、对战双方、比分——这三项如有错误必须立即修正，与FIFA官方交叉核对
 3. 2026世界杯有12个小组(A-L)，每组4队，共48队。小组归属错误是常见问题
+4. **文件命名日期以北京时间为准（不可协商）**：文件名中的 YYYY-MM-DD 必须与北京时间日期一致（对照 schedule.json）。例如：比赛在北京时间6月23日凌晨开赛，文件名应为2026-06-23而非美东时间的6月22日。不一致时必须重命名修正。**这条规则在生成/校对每个文件时必须手动核查**
+5. **schedule.json不是绝对权威**：如schedule.json与外部源(FIFA官网/ESPN)不一致，必须用FIFA官方源(fifawc-2026.com)做最终仲裁。2026-06-22发现schedule.json有4处日期错误（跨日比赛归属错误），盲信schedule.json导致错误扩散
+
+### 时区安全规范（2026-06-22 建立防错机制）
+**这是最频繁出错的环节，必须严格遵守：**
+- 北美跨4个时区：ET(UTC-4)/CT(UTC-5)/MT(UTC-6)/PT(UTC-7)，不可统一标注为EDT
+- 墨西哥不使用夏令时：Guadalajara/Mexico City/Monterrey 全年CST(UTC-6)，不是美国CT(UTC-5)
+- 输出格式：`⏰ 当地时间 时区 (城市当地时间) / 北京时间`
+- 场馆时区映射表：`.workbuddy/references/venue_timezones.json` 和 `.workbuddy/skills/wc2026-schedule-timezone/references/venue_timezones.json`
+- 时区安全技能：`.workbuddy/skills/wc2026-schedule-timezone/SKILL.md`
+- 验证来源：goaltimeguide.com/zh（直接标注北京时间）
 
 ### 设计规范
 - 主色: #0033A0 | 辅色: #85B7EB | 网格: 1px #000 | 留白≥65%

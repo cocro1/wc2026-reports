@@ -1,74 +1,110 @@
 {
   "阿根廷 vs 奥地利": {
+    "bookmaker": "bet365",
     "handicap": "-0.25",
     "odds_up": 1.925,
     "odds_down": 2.0,
-    "ml_home": 2.94,
-    "ml_draw": 2.28,
-    "ml_away": 3.93
+    "ml_home": 2.1,
+    "ml_draw": 3.5,
+    "ml_away": 3.4,
+    "ou_over": 1.8,
+    "ou_under": 2.0,
+    "spread_source": "pinnacle"
   },
   "法国 vs 伊拉克": {
+    "bookmaker": "bet365",
     "handicap": "-1",
     "odds_up": 2.01,
     "odds_down": 1.917,
-    "ml_home": 6.7,
-    "ml_draw": 4.45,
-    "ml_away": 1.543
+    "ml_home": 6.0,
+    "ml_draw": 4.333,
+    "ml_away": 1.533,
+    "ou_over": 1.9,
+    "ou_under": 1.9,
+    "spread_source": "pinnacle"
   },
   "葡萄牙 vs 乌兹别克斯坦": {
+    "bookmaker": "bet365",
     "handicap": "-1",
-    "odds_up": 2.0,
-    "odds_down": 1.9,
-    "ml_home": 6.7,
-    "ml_draw": 4.11,
-    "ml_away": 1.549
+    "odds_up": 2.01,
+    "odds_down": 1.892,
+    "ml_home": 7.0,
+    "ml_draw": 4.1,
+    "ml_away": 1.5,
+    "ou_over": 1.8,
+    "ou_under": 2.0,
+    "spread_source": "pinnacle"
   },
   "英格兰 vs 加纳": {
+    "bookmaker": "bet365",
     "handicap": "-1",
     "odds_up": 1.925,
     "odds_down": 1.97,
-    "ml_home": 2.11,
-    "ml_draw": 2.25,
-    "ml_away": 7.72
+    "ml_home": 1.5,
+    "ml_draw": 4.2,
+    "ml_away": 6.5,
+    "ou_over": 2.2,
+    "ou_under": 1.66,
+    "spread_source": "pinnacle"
   },
   "墨西哥 vs 捷克": {
+    "bookmaker": "bet365",
     "handicap": "-0.50",
     "odds_up": 1.943,
     "odds_down": 1.943,
-    "ml_home": 4.67,
-    "ml_draw": 2.2,
-    "ml_away": 2.65
+    "ml_home": 3.6,
+    "ml_draw": 4.0,
+    "ml_away": 1.909,
+    "ou_over": 2.1,
+    "ou_under": 1.72,
+    "spread_source": "pinnacle"
   },
   "德国 vs 厄瓜多尔": {
+    "bookmaker": "bet365",
     "handicap": "-0.50",
     "odds_up": 1.934,
     "odds_down": 1.952,
-    "ml_home": 1.925,
-    "ml_draw": 3.39,
-    "ml_away": 4.42
+    "ml_home": 1.95,
+    "ml_draw": 3.4,
+    "ml_away": 4.0,
+    "ou_over": 1.8,
+    "ou_under": 2.0,
+    "spread_source": "pinnacle"
   },
   "荷兰 vs 突尼斯": {
+    "bookmaker": "bet365",
     "handicap": "-0.50",
     "odds_up": 1.943,
     "odds_down": 1.943,
-    "ml_home": 3.55,
-    "ml_draw": 4.13,
-    "ml_away": 1.934
+    "ml_home": 3.4,
+    "ml_draw": 4.1,
+    "ml_away": 1.95,
+    "ou_over": 1.72,
+    "ou_under": 2.1,
+    "spread_source": "pinnacle"
   },
   "法国 vs 挪威": {
+    "bookmaker": "bet365",
     "handicap": "+0.25",
     "odds_up": 2.06,
     "odds_down": 1.84,
-    "ml_home": 2.38,
-    "ml_draw": 3.49,
-    "ml_away": 3.01
+    "ml_home": 2.2,
+    "ml_draw": 3.75,
+    "ml_away": 3.0,
+    "ou_over": 2.0,
+    "ou_under": 1.8,
+    "spread_source": "pinnacle"
   },
   "阿根廷 vs 约旦": {
+    "bookmaker": "bet365",
     "handicap": "+0.25",
     "odds_up": 1.99,
     "odds_down": 1.9,
-    "ml_home": 2.41,
-    "ml_draw": 2.69,
-    "ml_away": 3.96
+    "ml_home": 2.4,
+    "ml_draw": 2.8,
+    "ml_away": 3.6,
+    "ou_over": 2.62,
+    "ou_under": 1.5,
+    "spread_source": "pinnacle"
   }
 }
