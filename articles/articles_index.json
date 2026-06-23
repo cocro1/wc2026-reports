@@ -111,6 +111,15 @@
       "date": "",
       "file": "articles/simulation/2026-06-23_worldcup-dixon-coles-predictions.html",
       "preview": "--- title: \"2026美加墨世界杯 · Dixon-Coles蒙特卡洛精算预测报告\" date: \"2026-06-22\" model: \"Dixon-Coles Poisson + Monte Carlo (10,000 iterations)\" rho: -0.08 tournamen..."
+    },
+    {
+      "slug": "2026-06-24_worldcup-dixon-coles-predictions",
+      "title": "2026美加墨世界杯 · Dixon-Coles 精算预测报告",
+      "category": "simulation",
+      "cat_label": "推演",
+      "date": "",
+      "file": "articles/simulation/2026-06-24_worldcup-dixon-coles-predictions.html",
+      "preview": "2026美加墨世界杯 · Dixon-Coles 精算预测报告  **报告日期**：2026-06-24（北京时间）   **预测场次**：小组赛第二轮（Match 45–48，Group K & L）   **模型版本**：Dixon-Coles Poisson + 蒙特卡洛模拟（10,000次迭..."
     }
   ]
 }

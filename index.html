@@ -464,13 +464,6 @@
       return new Date(bjMs).getUTCHours(); // 0-23
     }
 
-    function dateStatus(d) {
-      const today = getBeijingDateStr();
-      if (d === today) return '当前比赛日';
-      if (d < today) return '已结束';
-      return '下一比赛日';
-    }
-
     // ---- Schedule noon auto-refresh ----
     function scheduleNoonRefresh() {
       const bjHour = getBeijingHour();
@@ -586,12 +579,9 @@
       const stripDates = window._stripDates || dates.slice(-3);
       strip.innerHTML = stripDates.map(d => {
         const label = dateLabel(d);
-        const status = dateStatus(d);
-        const hasSchedule = (window._scheduleMap && window._scheduleMap[d]) ? 1 : 0;
-        const statusText = hasSchedule ? (status + ' · ' + window._scheduleMap[d].length + '场') : '无赛程';
         const active = d === currentDate ? ' active' : '';
         return `<button class="date-pill${active}" data-date="${d}">
-          <strong>${label.short}</strong><span>${statusText}</span>
+          <strong>${label.short}</strong>
         </button>`;
       }).join('');
 
@@ -608,13 +598,12 @@
       const scheduleMap = window._scheduleMap || {};
       const daySchedule = scheduleMap[date] || [];
       const label = dateLabel(date);
-      const status = dateStatus(date);
       const hasPred = daySchedule.filter(s => findPrediction(s.team_a, s.team_b)).length;
 
       document.getElementById('dateCaption').textContent = '多维度分析';
       document.getElementById('scheduleTitle').textContent = label.mmdd + ' 赛程';
-      document.getElementById('matchCount').textContent = `${status} · ${daySchedule.length} 场 · ${hasPred} 有预测`;
-      document.getElementById('liveCount').textContent = `${daySchedule.length} 场`;
+      document.getElementById('matchCount').textContent = `${label.short}`;
+      document.getElementById('liveCount').textContent = `${daySchedule.length}`;
 
       const list = document.getElementById('matchList');
       if (daySchedule.length === 0) {

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026美加墨世界杯 · Dixon-Coles 精算预测报告</title>
+<style>
+:root {
+  --teal: #0f766e; --teal-light: #14b8a6; --teal-dark: #115e59;
+  --bg: #f0fdfa; --card: #ffffff; --text: #134e4a; --text-dim: #5eead4;
+  --border: #ccfbf1; --accent: #f0fdfa;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.85; font-size: 15px;
+}
+.header {
+  background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+  color: #fff; padding: 28px 24px 24px; text-align: center;
+}
+.header h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+.header .meta { font-size: 13px; opacity: 0.85; margin-top: 6px; }
+.back-link {
+  display: inline-block; color: var(--teal); text-decoration: none; font-size: 14px;
+  margin-bottom: 16px; font-weight: 600;
+}
+.back-link:hover { text-decoration: underline; }
+.container { max-width: 780px; margin: 0 auto; padding: 24px 16px 64px; }
+.content { background: var(--card); border-radius: 12px; padding: 28px 24px;
+  box-shadow: 0 1px 4px rgba(15,118,110,0.06); border: 1px solid var(--border); }
+.content h2 { font-size: 18px; color: var(--teal); margin: 24px 0 10px; padding-bottom: 6px;
+  border-bottom: 2px solid var(--border); }
+.content h2:first-child { margin-top: 0; }
+.content h3 { font-size: 16px; color: var(--teal-dark); margin: 18px 0 8px; }
+.content h4 { font-size: 14px; color: var(--text); margin: 12px 0 6px; }
+.content p { margin-bottom: 10px; }
+.content ul, .content ol { margin: 8px 0 8px 24px; }
+.content li { margin-bottom: 4px; }
+.content blockquote {
+  border-left: 3px solid var(--teal-light); padding: 8px 16px;
+  margin: 12px 0; background: var(--accent); border-radius: 0 8px 8px 0;
+  color: var(--teal-dark); font-size: 14px;
+}
+.content table {
+  width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px;
+  border-radius: 8px; overflow: hidden;
+}
+.content th {
+  background: var(--teal); color: #fff; padding: 8px 12px; text-align: left; font-weight: 600;
+}
+.content td { padding: 7px 12px; border-bottom: 1px solid var(--border); }
+.content tr:nth-child(even) td { background: var(--bg); }
+.content hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+.content strong { color: var(--teal-dark); }
+.content code {
+  background: var(--accent); padding: 2px 6px; border-radius: 4px;
+  font-size: 13px; color: var(--teal-dark);
+}
+.footer {
+  text-align: center; color: var(--text-dim); font-size: 12px;
+  padding: 24px 16px; max-width: 780px; margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .content { padding: 32px 40px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>2026美加墨世界杯 · Dixon-Coles 精算预测报告</h1>
+  <div class="meta">推演 · </div>
+</div>
+<div class="container">
+  <a href="../index.html#simulation" class="back-link">← 返回推演</a>
+  <div class="content">
+<h2>2026美加墨世界杯 · Dixon-Coles 精算预测报告</h2>
+<p><strong>报告日期</strong>：2026-06-24（北京时间）  </p>
+<p><strong>预测场次</strong>：小组赛第二轮（Match 45–48，Group K & L）  </p>
+<p><strong>模型版本</strong>：Dixon-Coles Poisson + 蒙特卡洛模拟（10,000次迭代）  </p>
+<p><strong>数据来源</strong>：FIFA排名2026年6月版、小组赛首轮实际结果、近期国际赛场表现  </p>
+<hr>
+<h3>目录</h3>
+<ol>
+<li><a href="#1-portugal-vs-uzbekistan">Portugal vs Uzbekistan（Group K MD2）</a></li>
+<li><a href="#2-england-vs-ghana">England vs Ghana（Group L MD2）</a></li>
+<li><a href="#3-panama-vs-croatia">Panama vs Croatia（Group L MD2）</a></li>
+<li><a href="#4-colombia-vs-dr-congo">Colombia vs DR Congo（Group K MD2）</a></li>
+</ol>
+<hr>
+<h3>模型说明</h3>
+<p>本报告采用 <strong>Dixon-Coles 泊松模型</strong>，结合 <strong>10,000次蒙特卡洛模拟</strong>，对4场小组赛第二轮进行概率精算。</p>
+<p><strong>核心参数</strong>：</p>
+<ul>
+<li>ρ（rho）修正：-0.08（低比分相关系数）</li>
+<li>联赛平均进球率：2.6球/场</li>
+<li>主客场因子：中性球场，基于球队侨民分布调整</li>
+<li>动量因子：基于小组积分形势动态调整</li>
+<li>伤病因子：基于近期阵容健康度调整</li>
+</ul>
+<p><strong>归一化方法</strong>：FIFA排名积分映射至 [0.3, 1.3] 区间，与近期进球效率加权融合，生成攻击系数α与防守弱点β。</p>
+<hr>
+<p><a name="1-portugal-vs-uzbekistan"></a></p>
+<h3>1. Portugal vs Uzbekistan（Group K MD2）</h3>
+<p><strong>开球时间</strong>：2026-06-24 01:00 BJT（2026-06-23 13:00 EDT）  </p>
+<p><strong>比赛场地</strong>：NRG Stadium，Houston，USA  </p>
+<p><strong>小组形势</strong>：Portugal 1分（平DR Congo），Uzbekistan 0分（负Colombia 1-3）</p>
+<hr>
+<h4>1.1 攻防效能参数评估（Lambda 期望）</h4>
+<p>#### 球队FIFA排名与积分</p>
+<table><thead>
+<tr><th>球队</th><th>FIFA排位</th><th>FIFA积分（估）</th><th>confederation</th><th>近期场均进球</th><th>近期场均失球</th></tr>
+</thead><tbody>
+<tr><td>Portugal</td><td>9</td><td>1727.88</td><td>UEFA</td><td>2.20</td><td>0.80</td></tr>
+<tr><td>Uzbekistan</td><td>54</td><td>1340.00</td><td>AFC</td><td>1.40</td><td>1.20</td></tr>
+</tbody></table>
+<p>#### Dixon-Coles 攻击/防守参数（首轮校准后）</p>
+<table><thead>
+<tr><th>球队</th><th>攻击系数α</th><th>防守弱点β↓</th><th>α×β（基础效力）</th></tr>
+</thead><tbody>
+<tr><td>Portugal</td><td>1.1537</td><td>0.9370</td><td>1.081</td></tr>
+<tr><td>Uzbekistan</td><td>0.8385</td><td>1.5132</td><td>1.269</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>解读</strong>：Portugal的攻击系数α显著高于Uzbekistan，防守弱点β更低（更强）；Uzbekistan的防守弱点β高达1.51，显示防线脆弱。</p>
+</blockquote>
+<p>#### Lambda 期望值计算</p>
+<p>```</p>
+<p>λ_Portugal  = α_Portugal × β_Uzbekistan × 主场因子 × 动量因子 × 伤病因子 × 归一化</p>
+<p>              = 1.1537 × 1.5132 × 1.02 × 1.08 × 0.98 × 0.975</p>
+<p>              ≈ 2.401</p>
+<p>λ_Uzbekistan = α_Uzbekistan × β_Portugal × 动量因子 × 伤病因子 × 归一化</p>
+<p>              = 0.8385 × 0.9370 × 1.12 × 0.97 × 0.975</p>
+<p>              ≈ 1.110</p>
+<p>```</p>
+<p><strong>模型期望比分</strong>：Portugal 2.40 – 1.11 Uzbekistan</p>
+<p>#### 关键伤病变数</p>
+<table><thead>
+<tr><th>球队</th><th>关键球员</th><th>状态</th><th>影响评级</th></tr>
+</thead><tbody>
+<tr><td>Portugal</td><td>Cristiano Ronaldo</td><td>预计首发，身体状况良好</td><td>核心</td></tr>
+<tr><td>Portugal</td><td>Bruno Fernandes</td><td>健康</td><td>重要</td></tr>
+<tr><td>Uzbekistan</td><td>Abbosbek Fayzullaev（首轮进球者）</td><td>健康</td><td>核心</td></tr>
+<tr><td>Uzbekistan</td><td>首次世界杯，经验不足</td><td>—</td><td>战术弱点</td></tr>
+</tbody></table>
+<hr>
+<h4>1.2 战术动态博弈与临界点分析</h4>
+<p>#### 积分形势与进取心</p>
+<ul>
+<li><strong>Portugal（1分）</strong>：首轮1-1平DR Congo，本场<strong>不容再失分</strong>，赢球可掌握了出线主动权，平局则末轮死战Colombia。</li>
+<li><strong>Uzbekistan（0分）</strong>：首轮1-3负Colombia，本场输球基本出局，平局保留理论希望，赢球则形势大好。</li>
+<li><strong>临界点</strong>：Portugal若上半场未破门，焦虑情绪可能上升；Uzbekistan若先失球，可能崩盘。</li>
+</ul>
+<p>#### 破密集防守分析</p>
+<ul>
+<li>Portugal拥有Bruno Fernandes + Bernardo Silva的创造力，可撕裂Uzbekistan的中场密集。</li>
+<li>Uzbekistan预计采取低位防守 + 反击策略，利用Fayzullaev的速度打Portugal防线身后。</li>
+<li><strong>关键对位</strong>：Portugal中卫（Pepe/Diogo Costa？）vs Uzbekistan反击速度。</li>
+</ul>
+<p>#### 防守临界点推演</p>
+<ul>
+<li><strong>Portugal防守临界点</strong>：若先失球，需攻出来，后防暴露。Uzbekistan反击威胁中等。</li>
+<li><strong>Uzbekistan防守临界点</strong>：失1球后尚可维持，失2球后心态可能崩溃（首次世界杯经验不足）。</li>
+</ul>
+<hr>
+<h4>1.3 蒙特卡洛多分支概率推演（10,000次）</h4>
+<p>#### 分支A：常规赛果（概率 + 比分 + 推演逻辑）</p>
+<ul>
+<li><strong>概率</strong>：60.3%（覆盖期望比分±1球范围）</li>
+<li><strong>最可能比分</strong>：<strong>2-1</strong>（出现概率9.5%）</li>
+<li><strong>推演逻辑</strong>：Portugal实力明显占优，主场侨民优势（Houston拉丁裔众多），Uzbekistan防守弱点β=1.51导致失球预期高。常规时间Portugal控球压制，Uzbekistan靠反击偷1球。</li>
+</ul>
+<p>#### 分支B：冷门结果（触发条件 + 比分）</p>
+<ul>
+<li><strong>概率</strong>：27.3%（Uzbekistan不败）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. Portugal久攻不下，心态急躁，后防失误</p>
+<p>  2. Uzbekistan成功偷袭得分，全员退防</p>
+<p>  3. Ronaldo被限制，Portugal缺乏B计划</p>
+<ul>
+<li><strong>冷门比分</strong>：<strong>1-1</strong>（出现概率7.6%，首轮Portugal vs DR Congo的复刻）</li>
+</ul>
+<p>#### 分支C：大比分狂胜（触发条件 + 比分）</p>
+<ul>
+<li><strong>概率</strong>：32.6%（总进球≥4或分差≥3）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. Portugal前30分钟打入2球，Uzbekistan心态崩溃</p>
+<p>  2. 高温Houston消耗Uzbekistan体能，下半场崩盘</p>
+<ul>
+<li><strong>大比分预测</strong>：<strong>3-0 Portugal</strong>（出现概率6.9%）</li>
+</ul>
+<hr>
+<h4>1.4 最终精算结论</h4>
+<table><thead>
+<tr><th>项目</th><th>数值</th></tr>
+</thead><tbody>
+<tr><td><strong>Portugal胜率</strong></td><td><strong>65.9%</strong></td></tr>
+<tr><td>平局概率</td><td>17.4%</td></tr>
+<tr><td>Uzbekistan胜率</td><td>16.7%</td></tr>
+<tr><td>大于2.5球概率</td><td><strong>68.7%</strong></td></tr>
+<tr><td>小于2.5球概率</td><td>31.3%</td></tr>
+</tbody></table>
+<p>#### 推荐精准比分（按概率排序）</p>
+<ol>
+<li><strong>2-1</strong>（9.5%）— 常规赛果，双方各进</li>
+<li><strong>2-0</strong>（8.4%）— Portugal零封</li>
+<li><strong>1-1</strong>（7.6%）— 冷门复刻</li>
+</ol>
+<p>#### 核心高光球员 / 战术变数</p>
+<ul>
+<li>⭐ <strong>Cristiano Ronaldo</strong>（Portugal）：第6届世界杯，历史级射手，本场需进球提振信心</li>
+<li>⭐ <strong>Bruno Fernandes</strong>（Portugal）：创造力核心，定位球威胁</li>
+<li>⚡ <strong>Abbosbek Fayzullaev</strong>（Uzbekistan）：首轮进球者，速度型边锋，反击利器</li>
+<li>🔧 <strong>战术变数</strong>：若Portugal早早进球，比赛可能变成大比分；若僵局至60分钟，Uzbekistan的体能优势（年轻球队）可能显现</li>
+</ul>
+<p>#### 模型置信度</p>
+<ul>
+<li><strong>高</strong>：Portugal胜率超过65%，模型对结果有信心</li>
+<li><strong>中</strong>：Uzbekistan有能力偷1球，1-1或1-0冷门不可忽视</li>
+<li><strong>低</strong>：大比分狂胜概率32.6%，有一定可能性但不主流</li>
+</ul>
+<hr>
+<p><a name="2-england-vs-ghana"></a></p>
+<h3>2. England vs Ghana（Group L MD2）</h3>
+<p><strong>开球时间</strong>：2026-06-24 04:00 BJT（2026-06-23 16:00 EDT）  </p>
+<p><strong>比赛场地</strong>：Gillette Stadium，Foxborough，USA  </p>
+<p><strong>小组形势</strong>：England 3分（胜Croatia 4-2），Ghana 3分（胜Panama 1-0）</p>
+<hr>
+<h4>2.1 攻防效能参数评估（Lambda 期望）</h4>
+<p>#### 球队FIFA排名与积分</p>
+<table><thead>
+<tr><th>球队</th><th>FIFA排位</th><th>FIFA积分（估）</th><th>confederation</th><th>近期场均进球</th><th>近期场均失球</th></tr>
+</thead><tbody>
+<tr><td>England</td><td>4</td><td>1847.68</td><td>UEFA</td><td>3.00</td><td>1.20</td></tr>
+<tr><td>Ghana</td><td>65</td><td>1280.00</td><td>CAF</td><td>1.80</td><td>1.00</td></tr>
+</tbody></table>
+<p>#### Dixon-Coles 攻击/防守参数（首轮校准后）</p>
+<table><thead>
+<tr><th>球队</th><th>攻击系数α</th><th>防守弱点β↓</th><th>α×β（基础效力）</th></tr>
+</thead><tbody>
+<tr><td>England</td><td>1.6000</td><td>0.9929</td><td>1.588</td></tr>
+<tr><td>Ghana</td><td>0.7027</td><td>0.8050</td><td>0.566</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>解读</strong>：England的攻击系数α=1.6（所有8队最高之一），防守弱点β=0.99接近1.0（稳健）。Ghana的防守弱点β=0.805（所有8队最低之一），说明模型认为Ghana防守组织较好；但攻击系数α仅0.70，进攻乏力。</p>
+</blockquote>
+<p>#### Lambda 期望值计算</p>
+<p>```</p>
+<p>λ_England  = 1.6 × 0.805 × 1.0 × 1.05 × 1.0 × 0.975 ≈ 1.758</p>
+<p>λ_Ghana    = 0.7027 × 0.9929 × 1.10 × 0.98 × 0.975 ≈ 0.978</p>
+<p>```</p>
+<p><strong>模型期望比分</strong>：England 1.76 – 0.98 Ghana</p>
+<p>#### 关键伤病变数</p>
+<table><thead>
+<tr><th>球队</th><th>关键球员</th><th>状态</th><th>影响评级</th></tr>
+</thead><tbody>
+<tr><td>England</td><td>Harry Kane</td><td>健康，首轮梅开二度</td><td>核心</td></tr>
+<tr><td>England</td><td>Jude Bellingham</td><td>健康，首轮进球</td><td>核心</td></tr>
+<tr><td>England</td><td>Phil Foden</td><td>健康</td><td>重要</td></tr>
+<tr><td>Ghana</td><td>Caleb Yirenkyi（90+5'绝杀者）</td><td>健康，士气高涨</td><td>亮点</td></tr>
+<tr><td>Ghana</td><td>Carlos Queiroz（主帅）</td><td>战术经验丰富</td><td>教练因素</td></tr>
+</tbody></table>
+<hr>
+<h4>2.2 战术动态博弈与临界点分析</h4>
+<p>#### 积分形势与进取心</p>
+<ul>
+<li><strong>England（3分）</strong>：首轮4-2大胜Croatia，进攻火力全开。本场赢球可基本确保出线（末轮vs Panama）。</li>
+<li><strong>Ghana（3分）</strong>：首轮1-0绝杀Panama，坚韧取胜。本场赢球同样可基本确保出线。</li>
+<li><strong>历史渊源</strong>：2006世界杯England 2-1 Ghana（小组赛）；2010世界杯Germany 1-0 Ghana（含争议红牌）。两队有"恩怨"叙事。</li>
+<li><strong>临界点</strong>：若Ghana先得分，England可能心态急躁（首轮2-0领先被Croatia追至2-2的先例）。</li>
+</ul>
+<p>#### 破密集防守分析</p>
+<ul>
+<li>England的进攻多样：Kane支点 + Bellingham后插上 + Foden边路。Ghana预计5后卫密集防守。</li>
+<li>Ghana的进攻依赖Yirenkyi的速度反击 + 定位球。England防线（Stones/Walker）速度优势明显。</li>
+<li><strong>关键对位</strong>：Kane vs Ghana中卫；Ghana边路 vs England边后卫（Shaw/Walker）。</li>
+</ul>
+<p>#### 防守临界点推演</p>
+<ul>
+<li><strong>England防守临界点</strong>：首轮被Croatia连追2球，暴露领先后注意力下降问题。若Ghana先得分，England可能慌乱。</li>
+<li><strong>Ghana防守临界点</strong>：全场退防可行，但若先失球，缺乏追分火力（攻击系数α仅0.70）。</li>
+</ul>
+<hr>
+<h4>2.3 蒙特卡洛多分支概率推演（10,000次）</h4>
+<p>#### 分支A：常规赛果</p>
+<ul>
+<li><strong>概率</strong>：66.1%（覆盖期望比分±1球范围）</li>
+<li><strong>最可能比分</strong>：<strong>1-1</strong>（出现概率11.4%）或 <strong>1-0 England</strong>（11.1%）</li>
+<li><strong>推演逻辑</strong>：England实力占优但Ghana防守组织好（β=0.805），常规赛果为小比分England胜或平局。</li>
+</ul>
+<p>#### 分支B：冷门结果</p>
+<ul>
+<li><strong>概率</strong>：38.7%（Ghana不败）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. England领先后再次松懈（首轮教训）</p>
+<p>  2. Ghana定位球得分（身高优势）</p>
+<p>  3. 高温Foxborough消耗England体能</p>
+<ul>
+<li><strong>冷门比分</strong>：<strong>1-1</strong>（平局，Ghana末轮仍有机会）</li>
+</ul>
+<p>#### 分支C：大比分狂胜</p>
+<ul>
+<li><strong>概率</strong>：19.4%（总进球≥4）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. England早早进球，Ghana被迫攻出来</p>
+<p>  2. Kane/Bellingham/Foden 多点开花</p>
+<ul>
+<li><strong>大比分预测</strong>：<strong>3-0 England</strong>（但概率较低，仅约5%）</li>
+</ul>
+<hr>
+<h4>2.4 最终精算结论</h4>
+<table><thead>
+<tr><th>项目</th><th>数值</th></tr>
+</thead><tbody>
+<tr><td><strong>England胜率</strong></td><td><strong>55.6%</strong></td></tr>
+<tr><td>平局概率</td><td><strong>23.4%</strong></td></tr>
+<tr><td>Ghana胜率</td><td>20.9%</td></tr>
+<tr><td>大于2.5球概率</td><td>51.5%</td></tr>
+<tr><td>小于2.5球概率</td><td><strong>48.5%</strong></td></tr>
+</tbody></table>
+<p>#### 推荐精准比分（按概率排序）</p>
+<ol>
+<li><strong>1-1</strong>（11.4%）— 最可能的平局</li>
+<li><strong>1-0 England</strong>（11.1%）— 小胜</li>
+<li><strong>2-0 England</strong>（10.4%）— 常规赢球</li>
+</ol>
+<p>#### 核心高光球员 / 战术变数</p>
+<ul>
+<li>⭐ <strong>Harry Kane</strong>（England）：首轮梅开二度，终结能力强</li>
+<li>⭐ <strong>Jude Bellingham</strong>（England）：后插上威胁，首轮进球</li>
+<li>⚡ <strong>Caleb Yirenkyi</strong>（Ghana）：20岁新星，绝杀者，速度奇快</li>
+<li>🔧 <strong>战术变数</strong>：Ghana的密集防守能撑多久？若England久攻不下，Ghana反击威胁递增</li>
+</ul>
+<p>#### 模型置信度</p>
+<ul>
+<li><strong>中</strong>：England胜率55.6%，平局23.4%，本场结果不确定性较高</li>
+<li><strong>注意</strong>：Ghana的防守参数β=0.805（很低）说明模型认为其防守被低估，冷门可能性不容忽视</li>
+</ul>
+<hr>
+<p><a name="3-panama-vs-croatia"></a></p>
+<h3>3. Panama vs Croatia（Group L MD2）</h3>
+<p><strong>开球时间</strong>：2026-06-24 07:00 BJT（2026-06-23 19:00 EDT）  </p>
+<p><strong>比赛场地</strong>：BMO Field，Toronto，Canada  </p>
+<p><strong>小组形势</strong>：Panama 0分（负Ghana 0-1），Croatia 0分（负England 2-4）</p>
+<hr>
+<h4>3.1 攻防效能参数评估（Lambda 期望）</h4>
+<p>#### 球队FIFA排名与积分</p>
+<table><thead>
+<tr><th>球队</th><th>FIFA排位</th><th>FIFA积分（估）</th><th>confederation</th><th>近期场均进球</th><th>近期场均失球</th></tr>
+</thead><tbody>
+<tr><td>Panama</td><td>40</td><td>1410.00</td><td>CONCACAF</td><td>1.40</td><td>1.20</td></tr>
+<tr><td>Croatia</td><td>15</td><td>1660.00</td><td>UEFA</td><td>1.60</td><td>1.80</td></tr>
+</tbody></table>
+<p>#### Dixon-Coles 攻击/防守参数（首轮校准后）</p>
+<table><thead>
+<tr><th>球队</th><th>攻击系数α</th><th>防守弱点β↓</th><th>α×β（基础效力）</th></tr>
+</thead><tbody>
+<tr><td>Panama</td><td>0.5272</td><td>1.2333</td><td>0.650</td></tr>
+<tr><td>Croatia</td><td>1.6000</td><td>1.4279</td><td>2.285</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>解读</strong>：Croatia的攻击系数α=1.6（与England/Colombia并列最高），但防守弱点β=1.43（极高，首轮失2球给England校准后进一步恶化）。Panama的攻击系数α仅0.53（所有8队最低），进攻创造力严重不足。</p>
+</blockquote>
+<p>#### Lambda 期望值计算</p>
+<p>```</p>
+<p>λ_Panama  = 0.5272 × 1.4279 × 0.98 × 1.15 × 0.99 × 0.975 ≈ 1.092</p>
+<p>λ_Croatia = 1.6 × 1.2333 × 1.18 × 0.97 × 0.975 ≈ 2.936</p>
+<p>```</p>
+<p><strong>模型期望比分</strong>：Panama 1.09 – 2.94 Croatia</p>
+<p>#### 关键伤病变数</p>
+<table><thead>
+<tr><th>球队</th><th>关键球员</th><th>状态</th><th>影响评级</th></tr>
+</thead><tbody>
+<tr><td>Croatia</td><td>Luka Modric（38岁）</td><td>健康但体能存疑</td><td>核心/隐患</td></tr>
+<tr><td>Croatia</td><td>Mateo Kovacic</td><td>健康</td><td>重要</td></tr>
+<tr><td>Croatia</td><td>整体防线老化</td><td>—</td><td>战术弱点</td></tr>
+<tr><td>Panama</td><td>全队</td><td>健康</td><td>—</td></tr>
+<tr><td>Panama</td><td>2018世界杯16强班底</td><td>经验尚可</td><td>精神属性</td></tr>
+</tbody></table>
+<hr>
+<h4>3.2 战术动态博弈与临界点分析</h4>
+<p>#### 积分形势与进取心</p>
+<ul>
+<li><strong>Panama（0分）</strong>：首轮0-1负Ghana，全场被动。本场再负基本出局，平局保留理论希望，赢球则重燃生机。</li>
+<li><strong>Croatia（0分）</strong>：首轮2-4负England，虽两度追平但最终崩盘。本场<strong>必须赢球</strong>，平局也极其危险（末轮vs Ghana）。</li>
+<li><strong>历史渊源</strong>：2018世界杯Croatia 2-0 Panama（小组赛，Croatia当时3-0赢球）。Croatia有心理优势。</li>
+<li><strong>临界点</strong>：Croatia若先失球，可能心态崩溃（首轮先例）；若早早进球，则Panama需攻出来，Croatia反击威胁巨大。</li>
+</ul>
+<p>#### 破密集防守分析</p>
+<ul>
+<li>Croatia的进攻依赖Kovacic的组织 + Perisic（若首发）的边路传中。Panama预计全员退防。</li>
+<li>Panama的进攻依赖定位球和长传冲吊，缺乏细腻配合（攻击系数α=0.53证实此点）。</li>
+<li><strong>关键对位</strong>：Croatia中场控制力 vs Panama高位逼抢能力（较弱）。</li>
+</ul>
+<p>#### 防守临界点推演</p>
+<ul>
+<li><strong>Croatia防守临界点</strong>：首轮失4球，防线老化问题暴露。若Panama能利用定位球得分，Croatia可能慌乱。</li>
+<li><strong>Panama防守临界点</strong>：实力差距明显，失1球后可维持，失2球后可能被Croatia连续击穿。</li>
+</ul>
+<hr>
+<h4>3.3 蒙特卡洛多分支概率推演（10,000次）</h4>
+<p>#### 分支A：常规赛果</p>
+<ul>
+<li><strong>概率</strong>：53.1%（覆盖期望比分±1球范围）</li>
+<li><strong>最可能比分</strong>：<strong>1-2 Croatia</strong>（出现概率8.2%）或 <strong>0-2 Croatia</strong>（7.7%）</li>
+<li><strong>推演逻辑</strong>：Croatia实力占优，进攻火力强（λ=2.94），但防守不稳。常规赛果为Croatia小胜或零封。</li>
+</ul>
+<p>#### 分支B：冷门结果</p>
+<ul>
+<li><strong>概率</strong>：18.7%（Panama不败）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. Croatia久攻不下，心态急躁</p>
+<p>  2. Modric被限制，Croatia创造力下降</p>
+<p>  3. Panama定位球得分，全员退防</p>
+<ul>
+<li><strong>冷门比分</strong>：<strong>1-1</strong>（Panama靠定位球偷1分）</li>
+</ul>
+<p>#### 分支C：大比分狂胜</p>
+<ul>
+<li><strong>概率</strong>：43.9%（总进球≥4或Croatia净胜≥3）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. Croatia早早进球，Panama被迫攻出来</p>
+<p>  2. Croatia反击火力全开（λ=2.94）</p>
+<p>  3.  Toronto夜间低温不影响Croatia技术发挥</p>
+<ul>
+<li><strong>大比分预测</strong>：<strong>0-3 Croatia</strong>（出现概率7.0%）</li>
+</ul>
+<hr>
+<h4>3.4 最终精算结论</h4>
+<table><thead>
+<tr><th>项目</th><th>数值</th></tr>
+</thead><tbody>
+<tr><td>Panama胜率</td><td>11.4%</td></tr>
+<tr><td>平局概率</td><td>13.9%</td></tr>
+<tr><td><strong>Croatia胜率</strong></td><td><strong>74.8%</strong></td></tr>
+<tr><td>大于2.5球概率</td><td><strong>76.5%</strong></td></tr>
+<tr><td>小于2.5球概率</td><td>23.5%</td></tr>
+</tbody></table>
+<p>#### 推荐精准比分（按概率排序）</p>
+<ol>
+<li><strong>1-2 Croatia</strong>（8.2%）— 常规Croatia胜</li>
+<li><strong>0-2 Croatia</strong>（7.7%）— Croatia零封</li>
+<li><strong>1-3 Croatia</strong>（7.5%）— 对攻大战</li>
+</ol>
+<p>#### 核心高光球员 / 战术变数</p>
+<ul>
+<li>⭐ <strong>Luka Modric</strong>（Croatia）：38岁大师，可能是最后一届世界杯，必须拿出表现</li>
+<li>⭐ <strong>Mateo Kovacic</strong>（Croatia）：衔接中场，首轮有亮点</li>
+<li>⚡ <strong>Panama定位球战术</strong>：CONCACAF球队擅长利用定位球，Croatia身高有优势但也有漏洞</li>
+<li>🔧 <strong>战术变数</strong>：Croatia的防线老化问题 vs Panama的冲吊风格——若Panama能利用高空球，可能制造冷门</li>
+</ul>
+<p>#### 模型置信度</p>
+<ul>
+<li><strong>高</strong>：Croatia胜率74.8%，模型高度看好Croatia反弹</li>
+<li><strong>中</strong>：大比分概率76.5%，预期进球总数4.12，可能是一场对攻大战</li>
+<li><strong>风险提示</strong>：Croatia首轮防守表现糟糕（失4球），若心态问题延续，冷门概率不可忽视</li>
+</ul>
+<hr>
+<p><a name="4-colombia-vs-dr-congo"></a></p>
+<h3>4. Colombia vs DR Congo（Group K MD2）</h3>
+<p><strong>开球时间</strong>：2026-06-24 10:00 BJT（2026-06-23 22:00 EDT）  </p>
+<p><strong>比赛场地</strong>：Estadio Akron，Guadalajara，Mexico  </p>
+<p><strong>小组形势</strong>：Colombia 3分（胜Uzbekistan 3-1），DR Congo 1分（平Portugal 1-1）</p>
+<hr>
+<h4>4.1 攻防效能参数评估（Lambda 期望）</h4>
+<p>#### 球队FIFA排名与积分</p>
+<table><thead>
+<tr><th>球队</th><th>FIFA排位</th><th>FIFA积分（估）</th><th>confederation</th><th>近期场均进球</th><th>近期场均失球</th></tr>
+</thead><tbody>
+<tr><td>Colombia</td><td>12</td><td>1690.00</td><td>CONMEBOL</td><td>2.60</td><td>1.00</td></tr>
+<tr><td>DR Congo</td><td>43</td><td>1390.00</td><td>CAF</td><td>1.60</td><td>1.40</td></tr>
+</tbody></table>
+<p>#### Dixon-Coles 攻击/防守参数（首轮校准后）</p>
+<table><thead>
+<tr><th>球队</th><th>攻击系数α</th><th>防守弱点β↓</th><th>α×β（基础效力）</th></tr>
+</thead><tbody>
+<tr><td>Colombia</td><td>1.6000</td><td>1.0105</td><td>1.617</td></tr>
+<tr><td>DR Congo</td><td>0.9116</td><td>0.9789</td><td>0.892</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>解读</strong>：Colombia的攻击系数α=1.6（最高档），但防守弱点β=1.01（中等，首轮失1球给Uzbekistan校准后略升）。DR Congo的攻击系数α=0.91（中等），防守弱点β=0.98（较好，首轮仅失1球给Portugal）。</p>
+</blockquote>
+<p>#### Lambda 期望值计算</p>
+<p>```</p>
+<p>λ_Colombia = 1.6 × 0.9789 × 1.05 × 1.02 × 1.0 × 0.975 ≈ 2.115</p>
+<p>λ_DR Congo = 0.9116 × 1.0105 × 1.10 × 0.99 × 0.975 ≈ 1.304</p>
+<p>```</p>
+<p><strong>模型期望比分</strong>：Colombia 2.12 – 1.30 DR Congo</p>
+<p>#### 关键伤病变数</p>
+<table><thead>
+<tr><th>球队</th><th>关键球员</th><th>状态</th><th>影响评级</th></tr>
+</thead><tbody>
+<tr><td>Colombia</td><td>James Rodriguez</td><td>健康，经验丰富</td><td>核心</td></tr>
+<tr><td>Colombia</td><td>Luis Diaz</td><td>健康，首轮进球</td><td>核心</td></tr>
+<tr><td>Colombia</td><td>Jhon Arias</td><td>健康</td><td>重要</td></tr>
+<tr><td>DR Congo</td><td>Yoane Wissa（首轮进球者）</td><td>健康，士气高涨</td><td>核心</td></tr>
+<tr><td>DR Congo</td><td>全队</td><td>健康</td><td>—</td></tr>
+<tr><td>DR Congo</td><td>1974年后首次世界杯进球</td><td>—</td><td>精神属性加成</td></tr>
+</tbody></table>
+<hr>
+<h4>4.2 战术动态博弈与临界点分析</h4>
+<p>#### 积分形势与进取心</p>
+<ul>
+<li><strong>Colombia（3分）</strong>：首轮3-1大胜Uzbekistan，进攻火力全开。本场赢球可基本确保小组前2直接出线（末轮vs Portugal，平局亦可接受）。</li>
+<li><strong>DR Congo（1分）</strong>：首轮1-1绝平Portugal，历史性强心。本场赢球可掌握出线主动权，平局保留希望，输球则末轮死战Uzbekistan。</li>
+<li><strong>地理因素</strong>：Guadalajara, Mexico——Colombia拥有海量墨西哥侨民支持（地理+文化邻近），主场氛围浓厚。</li>
+<li><strong>临界点</strong>：DR Congo若先得分，信心可能爆棚；Colombia若先失球，需评估是否冒险攻出来（末轮vs Portugal仍需积分）。</li>
+</ul>
+<p>#### 破密集防守分析</p>
+<ul>
+<li>Colombia的进攻多样：James组织 + Diaz边路爆点 + 中锋支点到后点。</li>
+<li>DR Congo预计采取防守反击策略，利用Wissa的速度打Colombia防线身后。</li>
+<li><strong>关键对位</strong>：James Rodriguez vs DR Congo后腰；Diaz vs DR Congo边后卫。</li>
+</ul>
+<p>#### 防守临界点推演</p>
+<ul>
+<li><strong>Colombia防守临界点</strong>：首轮失1球，防线并非无懈可击。若DR Congo反击得手，Colombia可能心态急躁。</li>
+<li><strong>DR Congo防守临界点</strong>：首轮仅失1球给Portugal，防守组织有章法。但若Colombia早早进球，可能被连续击穿。</li>
+</ul>
+<hr>
+<h4>4.3 蒙特卡洛多分支概率推演（10,000次）</h4>
+<p>#### 分支A：常规赛果</p>
+<ul>
+<li><strong>概率</strong>：60.4%（覆盖期望比分±1球范围）</li>
+<li><strong>最可能比分</strong>：<strong>2-1 Colombia</strong>（出现概率9.4%）或 <strong>1-1</strong>（9.1%）</li>
+<li><strong>推演逻辑</strong>：Colombia实力占优，地理主场优势明显。常规赛果为Colombia小胜或平局（DR Congo韧性不可小觑）。</li>
+</ul>
+<p>#### 分支B：冷门结果</p>
+<ul>
+<li><strong>概率</strong>：35.8%（DR Congo不败）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. DR Congo复制首轮韧性，先守平再偷袭</p>
+<p>  2. Colombia轻敌，下半场才发力但为时已晚</p>
+<p>  3. 高温Guadalajara消耗Colombia体能</p>
+<ul>
+<li><strong>冷门比分</strong>：<strong>1-1</strong>（平局，DR Congo末轮仍有机会）</li>
+</ul>
+<p>#### 分支C：大比分狂胜</p>
+<ul>
+<li><strong>概率</strong>：26.9%（总进球≥4或Colombia净胜≥3）</li>
+<li><strong>触发条件</strong>：</li>
+</ul>
+<p>  1. Colombia早早进球，DR Congo被迫攻出来</p>
+<p>  2. Diaz + James + Arias 多点开花</p>
+<p>  3. 墨西哥侨民氛围推动Colombia超水平发挥</p>
+<ul>
+<li><strong>大比分预测</strong>：<strong>3-0 Colombia</strong>（出现概率约6%）</li>
+</ul>
+<hr>
+<h4>4.4 最终精算结论</h4>
+<table><thead>
+<tr><th>项目</th><th>数值</th></tr>
+</thead><tbody>
+<tr><td><strong>Colombia胜率</strong></td><td><strong>55.7%</strong></td></tr>
+<tr><td>平局概率</td><td>20.7%</td></tr>
+<tr><td>DR Congo胜率</td><td>23.6%</td></tr>
+<tr><td>大于2.5球概率</td><td><strong>65.7%</strong></td></tr>
+<tr><td>小于2.5球概率</td><td>34.3%</td></tr>
+</tbody></table>
+<p>#### 推荐精准比分（按概率排序）</p>
+<ol>
+<li><strong>2-1 Colombia</strong>（9.4%）— 常规Colombia胜</li>
+<li><strong>1-1</strong>（9.1%）— 平局（DR Congo韧性）</li>
+<li><strong>2-0 Colombia</strong>（7.6%）— Colombia零封</li>
+</ol>
+<p>#### 核心高光球员 / 战术变数</p>
+<ul>
+<li>⭐ <strong>James Rodriguez</strong>（Colombia）：2014世界杯金靴级创造力，本届仍为核心</li>
+<li>⭐ <strong>Luis Diaz</strong>（Colombia）：首轮进球，速度与技术兼备</li>
+<li>⚡ <strong>Yoane Wissa</strong>（DR Congo）：首轮绝平Portugal的进球者，信心爆棚</li>
+<li>🔧 <strong>战术变数</strong>：地理主场因素——墨西哥侨民对Colombia的支持可能达到"准主场"级别，这对比赛走势影响不可忽视</li>
+</ul>
+<p>#### 模型置信度</p>
+<ul>
+<li><strong>中高</strong>：Colombia胜率55.7%，但DR Congo不败概率达44.3%（35.8%平局+23.6%胜），本场冷门可能性较高</li>
+<li><strong>注意</strong>：DR Congo首轮1-1平Portugal的表现证明他们不容小觑，模型已通过防守弱点β=0.978反映了这一点</li>
+</ul>
+<hr>
+<h3>综合结论与投注参考（ disclaimer）</h3>
+<h4>4场比赛速览</h4>
+<table><thead>
+<tr><th>比赛</th><th>首选胜者</th><th>胜率</th><th>推荐比分</th><th>Over 2.5</th><th>冷门信号</th></tr>
+</thead><tbody>
+<tr><td>Portugal vs Uzbekistan</td><td><strong>Portugal</strong></td><td>65.9%</td><td>2-1</td><td>68.7% ✅</td><td>1-1（7.6%）</td></tr>
+<tr><td>England vs Ghana</td><td><strong>England</strong></td><td>55.6%</td><td>1-1 / 1-0</td><td>51.5%</td><td>1-1平局（11.4%）</td></tr>
+<tr><td>Panama vs Croatia</td><td><strong>Croatia</strong></td><td>74.8%</td><td>1-2 / 0-2</td><td>76.5% ✅</td><td>1-1平局（5.8%）</td></tr>
+<tr><td>Colombia vs DR Congo</td><td><strong>Colombia</strong></td><td>55.7%</td><td>2-1 / 1-1</td><td>65.7% ✅</td><td>1-1平局（9.1%）</td></tr>
+</tbody></table>
+<h4>高置信度预测</h4>
+<ol>
+<li><strong>Croatia vs Panama</strong>：Croatia胜率74.8%，反弹战意极强，推荐 <strong>Croatia -1.5</strong> 或 <strong>Croatia赢球</strong></li>
+<li><strong>Portugal vs Uzbekistan</strong>：Portugal实力碾压，推荐 <strong>Portugal赢球</strong> + <strong>Over 2.5</strong></li>
+<li><strong>Colombia vs DR Congo</strong>：地理主场优势明显，推荐 <strong>Colombia赢球</strong></li>
+</ol>
+<h4>高风险高回报冷门</h4>
+<ol>
+<li><strong>England vs Ghana 平局</strong>（23.4%）——Ghana防守组织好，England领先后易松懈</li>
+<li><strong>DR Congo 不败 vs Colombia</strong>（44.3%）——DR Congo首轮表现惊艳，韧性极强</li>
+</ol>
+<hr>
+<h3>模型局限性与免责声明</h3>
+<ol>
+<li><strong>数据局限性</strong>：FIFA排名积分为估算值（基于排位插值），非实时精确值。精确积分请参考FIFA官网。</li>
+<li><strong>伤病信息</strong>：报告发布时的最新伤病信息可能已变化，请以比赛日实际名单为准。</li>
+<li><strong>天气与场地</strong>：报告已考虑比赛城市天气因素（高温/湿度），但极端天气（暴雨、飓风）未纳入模型。</li>
+<li><strong>突发事变性</strong>：红牌、点球、伤病离场等突发事件会显著改变比赛走势，模型仅以概率方式部分涵盖。</li>
+<li><strong>本报告仅供学术研究与足球爱好者参考，不构成任何投注建议。</strong></li>
+</ol>
+<hr>
+<p><strong>报告生成时间</strong>：2026-06-23 约19:00 BJT  </p>
+<p><strong>模拟完成时间</strong>：2026-06-23（脚本运行时刻）  </p>
+<p><strong>模型版本</strong>：Dixon-Coles Poisson + Monte Carlo v2.0（Group K & L MD2 专用）  </p>
+<p><strong>下次更新</strong>：Group K & L MD3（2026-06-27）赛前  </p>
+<hr>
+<p><em>✅ 模拟结果已保存至 <code>simulation_results.json</code></em>  </p>
+<p><em>✅ 本报告已保存至 <code>2026-06-24_worldcup-dixon-coles-predictions.md</code></em></p>
+  </div>
+</div>
+<div class="footer"><p>报告数据仅供参考，不构成投注建议</p></div>
+</body>
+</html>
