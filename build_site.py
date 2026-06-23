@@ -326,7 +326,21 @@ def parse_reports():
 
 
 def convert_articles():
-    """Convert markdown articles to HTML files."""
+    """Convert markdown articles to HTML files (additive — preserves existing entries)."""
+    # Load existing article index to preserve entries whose source MDs may have been deleted
+    idx_path = ARTICLES_DIR / "articles_index.json"
+    existing = {"mystic": [], "research": [], "simulation": []}
+    if idx_path.exists():
+        try:
+            loaded = json.loads(idx_path.read_text(encoding='utf-8'))
+            for cat in ["mystic", "research", "simulation"]:
+                existing[cat] = loaded.get(cat, [])
+        except Exception:
+            pass
+
+    # Track slugs processed this run (to know which entries to keep from existing)
+    processed_slugs = {cat: set() for cat in ["mystic", "research", "simulation"]}
+
     articles = {"mystic": [], "research": [], "simulation": []}
 
     for category in ["mystic", "research", "simulation"]:
@@ -356,6 +370,7 @@ def convert_articles():
             cat_label = "玄学" if category == "mystic" else ("推演" if category == "simulation" else "专题")
 
             slug = md_file.stem
+            processed_slugs[category].add(slug)
             out_path = out_dir / f"{slug}.html"
 
             full_html = f"""<!DOCTYPE html>
@@ -393,6 +408,16 @@ def convert_articles():
                 "preview": md_text[:200].replace('\n', ' ').replace('#', '').strip()[:150] + '...',
             }
             articles[category].append(article_info)
+
+        # Merge existing entries whose slugs were NOT processed this run (preserve orphaned articles)
+        for old_entry in existing.get(category, []):
+            old_slug = old_entry.get("slug", "")
+            if old_slug and old_slug not in processed_slugs[category]:
+                articles[category].append(old_entry)
+
+    # Sort: most recent first (by slug/date), then alphabetical
+    for cat in articles:
+        articles[cat].sort(key=lambda x: x.get("slug", ""), reverse=True)
 
     # Write article index
     (ARTICLES_DIR / "articles_index.json").write_text(

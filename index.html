@@ -576,6 +576,14 @@
         window._hitRates = null;
       }
 
+      // Load articles_index.json for dynamic article tabs (推演/玄学/专题)
+      try {
+        const aiResp = await fetch('articles/articles_index.json?nocache=' + Date.now());
+        window._articleIndex = await aiResp.json();
+      } catch(e) {
+        window._articleIndex = null;
+      }
+
       // Build dates from schedule (primary source for dates)
       const dateMap = {};
       scheduleData.forEach(s => {
@@ -853,58 +861,40 @@
       }).join('');
     }
 
-    // ---- Mystic articles ----
+    // ---- Article tabs (dynamic: loaded from articles_index.json) ----
+    const _articleIcons = { mystic:'🔮', simulation:'🎲', research:'📊' };
+
+    function renderArticles(category, list) {
+      const listEl = document.getElementById(category + 'List');
+      const countEl = document.getElementById(category + 'Count');
+      const icon = _articleIcons[category] || '📄';
+      if (countEl) countEl.textContent = list.length + ' 篇';
+      if (!listEl) return;
+      listEl.innerHTML = list.map(a => {
+        const file = (a.file || '').split('/').pop(); // Just filename, path prefix already in href
+        const desc = a.preview ? a.preview.replace(/^[#\s]+/, '').slice(0, 40) + '...' : (a.title || '');
+        return `
+        <a class="article-card" href="${a.file || 'articles/' + category + '/' + file}" target="_blank">
+          <div class="article-icon ${category}">${icon}</div>
+          <div class="article-body"><b>${a.title || file}</b><small>${desc}</small></div>
+          <div class="article-arrow">→</div>
+        </a>`;
+      }).join('');
+    }
+
     function renderMystic() {
-      const articles = [
-        { file: '魔咒分析与冠军预测.html', title: '魔咒分析与冠军预测', desc: '基于历史规律的夺冠前瞻' },
-      ];
-      const list = document.getElementById('mysticList');
-      list.innerHTML = articles.map(a => `
-        <a class="article-card" href="articles/mystic/${encodeURI(a.file)}" target="_blank">
-          <div class="article-icon mystic">🔮</div>
-          <div class="article-body"><b>${a.title}</b><small>${a.desc}</small></div>
-          <div class="article-arrow">→</div>
-        </a>
-      `).join('');
+      const articles = window._articleIndex ? (window._articleIndex.mystic || []) : [];
+      renderArticles('mystic', articles);
     }
 
-    // ---- Simulation (Dixon-Coles Monte Carlo) ----
     function renderSimulation() {
-      const articles = [
-        { file: '2026-06-23_worldcup-dixon-coles-predictions.html', title: 'Dixon-Coles精算预测 6/23', desc: '蒙特卡洛10,000次模拟·4场推演' },
-      ];
-      document.getElementById('simulationCount').textContent = articles.length + ' 篇';
-      document.getElementById('simulationList').innerHTML = articles.map(a => `
-        <a class="article-card" href="articles/simulation/${encodeURI(a.file)}" target="_blank">
-          <div class="article-icon simulation">🎲</div>
-          <div class="article-body"><b>${a.title}</b><small>${a.desc}</small></div>
-          <div class="article-arrow">→</div>
-        </a>
-      `).join('');
+      const articles = window._articleIndex ? (window._articleIndex.simulation || []) : [];
+      renderArticles('simulation', articles);
     }
 
-    // ---- Research articles ----
     function renderResearch() {
-      const articles = [
-        { file:'2026世界杯主教练分析_报告一_AD组.html', title:'教练分析 I：AD组', desc:'主教练能力评估与战术哲学' },
-        { file:'2026世界杯主教练分析_报告二_EH组.html', title:'教练分析 II：EH组', desc:'主教练能力评估与战术哲学' },
-        { file:'2026世界杯主教练分析_报告三_IL组.html', title:'教练分析 III：IL组', desc:'主教练能力评估与战术哲学' },
-        { file:'2026世界杯大小球分析.html', title:'大小球分析', desc:'2026世界杯大小球趋势预测' },
-        { file:'大小球博彩分析.html', title:'大小球博彩分析', desc:'小组赛第一轮大小球博彩数据' },
-        { file:'wc2026_blowout_prediction.html', title:'大比分预测', desc:'大比分高概率场次预测分析' },
-        { file:'world_cup_blowout_analysis.md.html', title:'大比分历史分析', desc:'2018&2022世界杯大比分特征' },
-        { file:'goal-forecast-2026-06-13.html', title:'进球预测', desc:'前五轮进球预测分析' },
-        { file:'前3场进球历史数据.html', title:'前三场进球历史', desc:'世界杯前3场总进球数历史数据' },
-        { file:'小组赛第一轮分析.html', title:'小组赛第一轮分析', desc:'小组赛第一轮数据分析报告' },
-      ];
-      document.getElementById('researchCount').textContent = articles.length + ' 篇';
-      document.getElementById('researchList').innerHTML = articles.map(a => `
-        <a class="article-card" href="articles/research/${encodeURI(a.file)}" target="_blank">
-          <div class="article-icon research">📊</div>
-          <div class="article-body"><b>${a.title}</b><small>${a.desc}</small></div>
-          <div class="article-arrow">→</div>
-        </a>
-      `).join('');
+      const articles = window._articleIndex ? (window._articleIndex.research || []) : [];
+      renderArticles('research', articles);
     }
 
     // ---- Tab switching ----
@@ -958,10 +948,12 @@
     window.addEventListener('hashchange', handleHash);
 
     // Start
-    renderMystic();
-    renderSimulation();
-    renderResearch();
-    loadData().then(() => handleHash());
+    loadData().then(() => {
+      renderMystic();
+      renderSimulation();
+      renderResearch();
+      handleHash();
+    });
   })();
   </script>
 </body>

@@ -116,19 +116,51 @@
 - 文件内日期标注：`YYYY-MM-DD HH:MM 北京时间 (当地时间HH:MM)`
 - 纯 Markdown 格式，无 HTML 标签
 
-### 6. 确保推演比分覆盖（铁律扩展）
+### 6. 生成 Dixon-Coles 推演汇总 MD（强制 — 影响网站「推演」tab 更新）
 
-每场比赛预测完成后，确保 Dixon-Coles 蒙特卡洛推演 MD 文件也为同一批比赛生成了数据。推演 MD 位于：
-`D:\我的坚果云\OB笔记\自媒体\fwc2026\content\dixon-coles-monte-carlo\`
+**保存路径**：`content/dixon-coles-monte-carlo/YYYY-MM-DD_worldcup-dixon-coles-predictions.md`
 
-如果缺少推演数据，后续 `build_simulation_data.py` 将无法解析。
+这是每天必须生成的统一汇总文件，覆盖当天所有预测场次。`build_site.py` 的 `convert_articles()` 自动将其转为 HTML 并加入 `articles/articles_index.json`，首页「推演」tab 从 JSON 动态加载展示。
+
+**MD 内容结构**（必须严格遵循，build_site.py 解析依赖此格式）：
+
+```markdown
+# 2026美加墨世界杯 · Dixon-Coles 精算预测报告
+
+**报告日期**：YYYY-MM-DD（北京时间）
+**预测场次**：小组赛第X轮（Match XX–XX，Group X）
+**模型版本**：Dixon-Coles Poisson + 蒙特卡洛模拟（10,000次迭代）
+**Rho参数**：-0.08
+
+---
+
+## 预测结果总览
+
+| 比赛 | 主队 xG | 客队 xG | 主胜% | 平局% | 客胜% | >2.5球% |
+|------|---------|---------|-------|-------|-------|---------|
+| TeamA vs TeamB | X.XX | X.XX | XX% | XX% | XX% | XX% |
+
+## 推荐精准比分
+
+**TeamA vs TeamB**
+1. **X-X**（概率 ~XX%）— 简要说明
+2. **X-X**（概率 ~XX%）— 简要说明
+```
+
+**关键要求**：
+- 队名使用中文（简体），与 schedule.json 一致
+- 推荐精准比分格式：`**X-X**`（仅比分数字，不带球队名后缀——这是 build_simulation_data.py 的解析要求）
+- 覆盖当天所有预测比赛，每场都要有 xG、胜平负概率、>2.5球概率、前2推荐比分
+- >2.5球概率是 `extract_over25()` 的数据源
+- 日期按北京时间标注
 
 ### 7. 输出简报
 
 ```
 - 已生成HTML: reports/report-YYYY-MM-DD-teamA-teamB.html (每个文件)
 - 已生成MD: D:\...\content\predictions\YYYY-MM-DD-teamA-teamB-prediction.md (每个文件)
-- 共生成 N 场比赛预测
+- 已生成Dixon-Coles推演MD: content/dixon-coles-monte-carlo/YYYY-MM-DD_worldcup-dixon-coles-predictions.md
+- 共生成 N 场比赛预测 + 1 篇推演汇总
 - 文件命名日期核验：每个文件的文件名日期 vs 北京时间 (✅/❌)
 ```
 

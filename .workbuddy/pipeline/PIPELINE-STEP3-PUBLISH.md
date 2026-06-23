@@ -19,14 +19,15 @@ cd C:\Users\cocro\WorkBuddy\wc2026-reports
 python build_site.py
 ```
 
-**`build_site.py` 做了什么**（4 个子步骤）：
+**`build_site.py` 做了什么**（5 个子步骤）：
 
 | 子步骤 | 输入 | 输出 | 说明 |
 |--------|------|------|------|
 | parse_reports() | `reports/report-*.html` | `match_data.json` | 从 HTML 解析预测数据（比赛日期、预测比分、备选比分、胜率、置信度） |
 | convert_articles() | `content/{mystic,research,dixon-coles-monte-carlo}/*.md` | `articles/*.html` + `articles_index.json` | 将 MD 文章转为 HTML 页面（teal 主题） |
-| calc_hit_rates() | `match_results.json` + `review-*.html` | `hit_rates.json` | 对比预测 vs 实际赛果，计算命中率 |
-| 输出 | — | 终端简报 | 报告数/文章数/命中率 |
+| calc_hit_rates() | `match_results.json` + `review-*.html` + `over25_data.json` | `hit_rates.json` | 对比预测 vs 实际赛果，计算三项命中率（预测比分 / 推演比分 / 大球概率） |
+| extract_over25() | `articles/simulation/*.html` | `over25_data.json` | 从 Dixon-Coles 推演文章提取 >2.5球概率 |
+| 输出 | — | 终端简报 | 报告数/文章数/三项命中率 |
 
 **验证**：
 ```bash
@@ -112,7 +113,12 @@ git push origin main
 ### 数据构建
 - match_data.json 比赛数：N 场
 - 最新日期：YYYY-MM-DD
-- 命中率：预测 X% (X/N) | 模拟 Y% (Y/N)
+
+### 命中率（6月23日起）
+- 预测比分命中率：X% (X/N)
+- 推演比分命中率：X% (X/N)
+- **大球概率命中率：X% (X/N)**
+  - 逻辑：over25概率>50%预测大球，实际总进球>2为大球，方向一致=命中
 
 ### 部署状态
 - CloudStudio：[链接] ✅ 已部署 / ❌ 失败
@@ -136,8 +142,9 @@ git push origin main
 2. fetch schedule.json → 按日期分组 → 渲染日期条
 3. fetch match_data.json → 与 schedule 匹配合并
 4. fetch simulation_scores.json → 查找推演比分
-5. fetch odds.json → 查找赔率
-6. fetch hit_rates.json → 显示命中率
+5. fetch over25_data.json → 查找 >2.5球概率
+6. fetch hit_rates.json → 显示三项命中率（预测/推演/大球概率）
+7. fetch articles/articles_index.json → 动态渲染「推演」「玄学」「专题」tab
 ```
 
 ### 卡片渲染关键函数
