@@ -785,12 +785,14 @@
       const hr = window._hitRates || {};
       const predRate = hr.prediction_hit_rate !== undefined ? hr.prediction_hit_rate : 0;
       const simRate = hr.simulation_hit_rate !== undefined ? hr.simulation_hit_rate : 0;
+      const overRate = hr.over25_hit_rate !== undefined ? hr.over25_hit_rate : 0;
       const predHint = hr.prediction_hits !== undefined ? ` (${hr.prediction_hits}/${hr.prediction_total})` : '';
       const simHint = hr.simulation_hits !== undefined ? ` (${hr.simulation_hits}/${hr.simulation_total})` : '';
+      const overHint = hr.over25_hits !== undefined ? ` (${hr.over25_hits}/${hr.over25_total})` : '';
       const metrics = [
         { icon:'%', val:predRate, suffix:'%', label:'预测比分命中率', hint:predHint },
         { icon:'Σ', val:simRate, suffix:'%', label:'推演比分命中率', hint:simHint },
-        { icon:'★', val:'61', label:'玄学主预测命中' },
+        { icon:'⚽', val:overRate, suffix:'%', label:'大球概率命中率', hint:overHint },
         { icon:'玄', val:'58', label:'玄学预测命中指数' },
         { icon:'冷', val:'43', label:'冷门预测命中指数' },
         { icon:'心', val:'75', label:'心水命中指数' },

@@ -402,7 +402,7 @@ def convert_articles():
 
 
 def calc_hit_rates():
-    """Calculate prediction and simulation hit rates from June 23 onwards.
+    """Calculate prediction, simulation, and over25 hit rates from June 23 onwards.
     Data sources (in priority order):
       1. match_results.json — manually maintained actual scores
       2. review-*.html — automated review reports
@@ -443,15 +443,18 @@ def calc_hit_rates():
             if key not in actual_scores:  # don't overwrite manual data
                 actual_scores[key] = f'{actual_match.group(1)}-{actual_match.group(2)}'
     
-    # Load match_data and sim_scores
+    # Load match_data, sim_scores, and over25_data
     md_path = BASE_DIR / "match_data.json"
     sim_path = BASE_DIR / "simulation_scores.json"
+    o25_path = BASE_DIR / "over25_data.json"
     
     match_data = json.loads(md_path.read_text(encoding='utf-8')) if md_path.exists() else []
     sim_scores = json.loads(sim_path.read_text(encoding='utf-8')) if sim_path.exists() else {}
+    over25_data = json.loads(o25_path.read_text(encoding='utf-8')) if o25_path.exists() else {}
     
     pred_hits = pred_total = 0
     sim_hits = sim_total = 0
+    over_hits = over_total = 0
     
     def _norm(s):
         return re.sub(r'\s+', '', (s or '').replace(':', '-'))
@@ -462,7 +465,10 @@ def calc_hit_rates():
             continue
         
         title = m.get('title', '')
-        teams_m = re.match(r'(.+?)\s+vs\s+(.+?)(?:\s+预测|\s+[A-Z]组|\s*$)', title)
+        # Strip "预测" suffix and "预测 |" separator before matching
+        title_clean = re.sub(r'预测\s*\|', '', title)
+        title_clean = re.sub(r'预测$', '', title_clean)
+        teams_m = re.match(r'(.+?)\s+vs\s+(.+?)(?:\s+[A-Z]组|\s*$)', title_clean)
         if not teams_m:
             continue
         
@@ -490,14 +496,29 @@ def calc_hit_rates():
             sim_total += 1
             if any(_norm(s) == actual_n for s in sim_list):
                 sim_hits += 1
+        
+        # Over 2.5 goals check
+        o25_entry = over25_data.get(f'{ta} vs {tb}')
+        if o25_entry:
+            over25_pct = o25_entry['over25']
+            pred_over = over25_pct > 50
+            parts = actual_n.split('-')
+            actual_total = int(parts[0]) + int(parts[1]) if len(parts) == 2 else 0
+            actual_over = actual_total > 2
+            over_total += 1
+            if pred_over == actual_over:
+                over_hits += 1
     
     return {
         'prediction_hit_rate': round(pred_hits / pred_total * 100) if pred_total > 0 else 0,
         'simulation_hit_rate': round(sim_hits / sim_total * 100) if sim_total > 0 else 0,
+        'over25_hit_rate': round(over_hits / over_total * 100) if over_total > 0 else 0,
         'prediction_hits': pred_hits,
         'prediction_total': pred_total,
         'simulation_hits': sim_hits,
         'simulation_total': sim_total,
+        'over25_hits': over_hits,
+        'over25_total': over_total,
         'cutoff_date': CUTOFF,
     }
 
