@@ -646,6 +646,7 @@
 
         // Look up top 2 Dixon-Coles Monte Carlo predicted exact scores
         const simScores = window._simScores && window._simScores[oddsKey];
+        const altScore = match.alt_score || '';
         const simTop1 = simScores && simScores.length >= 1 ? simScores[0] : '';
         const simTop2 = simScores && simScores.length >= 2 ? simScores[1] : '';
         const simDisplay = simTop1 && simTop2
@@ -669,7 +670,7 @@
               </div>
               <div style="display:flex;flex-direction:column;align-items:center;gap:1px;margin:0 8px;flex-shrink:0;min-width:44px;">
                 <div style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);text-align:center;">${scoreDisplay}</div>
-                ${simTop2 ? `<div style="font-size:12px;font-weight:400;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;">${simTop2}</div>` : ''}
+                ${altScore ? `<div style="font-size:12px;font-weight:400;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;">${altScore}</div>` : ''}
               </div>
               <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
                 <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_b)}</span>

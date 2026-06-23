@@ -291,6 +291,12 @@ def parse_reports():
         conf_m = re.search(r'置信度[^：:]*[：:]\s*(高|中|低)', html)
         confidence = conf_m.group(1) if conf_m else '中'
 
+        # Extract alt score (备选比分1)
+        alt_score = ''
+        alt_m = re.search(r'备选比分\d*[：:]\s*(\d+\s*[-:]\s*\d+)', html)
+        if alt_m:
+            alt_score = alt_m.group(1).strip()
+
         matches.append({
             "date": date_str,
             "file": f"reports/{f.name}",
@@ -298,6 +304,7 @@ def parse_reports():
             "slug": match_slug,
             "group": group,
             "prediction": score,
+            "alt_score": alt_score,
             "confidence": confidence,
             "a_win": prob_a,
             "draw": prob_d if prob_d else '',
