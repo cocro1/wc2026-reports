@@ -16,13 +16,40 @@ def strip_emoji(text: str) -> str:
     # Remove emoji codepoints (flags are regional indicators, others are misc symbols)
     return re.sub(r'[\U0001F1E0-\U0001F1FF\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF]+', '', text).strip()
 
+# English-to-Chinese team name mapping for simulation data lookup
+EN_TO_ZH_TEAM = {
+    'Portugal': '葡萄牙', 'Uzbekistan': '乌兹别克斯坦',
+    'England': '英格兰', 'Ghana': '加纳',
+    'Panama': '巴拿马', 'Croatia': '克罗地亚',
+    'Colombia': '哥伦比亚', 'DR Congo': '刚果(金)',
+    'Argentina': '阿根廷', 'Austria': '奥地利',
+    'France': '伊拉克',  # Actually France → 法国 but not needed for current data
+    'Norway': '挪威', 'Senegal': '塞内加尔',
+    'Jordan': '约旦', 'Algeria': '阿尔及利亚',
+    'Iraq': '伊拉克',
+}
+
+def clean_team_name(name: str) -> str:
+    """Strip Chinese/English parenthetical group labels and emoji from team names."""
+    # Strip Chinese parenthetical group labels: （Group K MD2）, （Group L MD2）etc.
+    name = re.sub(r'[（(][^）)]*[）)]', '', name)
+    name = strip_emoji(name)
+    return name.strip().rstrip('*').strip()
+
+def to_zh_name(name: str) -> str:
+    """Translate English team name to Chinese, or return as-is if not in mapping."""
+    return EN_TO_ZH_TEAM.get(name, name)
+
 def parse_section_header(line: str):
-    """Parse '## 1. 阿根廷 🇦🇷 vs 奥地利 🇦🇹' -> ('阿根廷', '奥地利')"""
+    """Parse '## 1. Portugal vs Uzbekistan（Group K MD2）' -> ('葡萄牙', '乌兹别克斯坦')"""
     m = re.match(r'^##\s+\d+\.\s*(.+?)\s+vs\s+(.+?)$', line, re.IGNORECASE)
     if not m:
         return None
-    a = strip_emoji(m.group(1)).strip().rstrip('*').strip()
-    b = strip_emoji(m.group(2)).strip().rstrip('*').strip()
+    a = clean_team_name(m.group(1))
+    b = clean_team_name(m.group(2))
+    # Translate to Chinese for index.html lookup compatibility
+    a = to_zh_name(a)
+    b = to_zh_name(b)
     return (a, b)
 
 def parse_recommended_scores(lines, start_idx):
@@ -36,8 +63,8 @@ def parse_recommended_scores(lines, start_idx):
             continue
         if not in_section:
             continue
-        # Match: '1. **2-1**（9.7% — 最有价值）' or '1. **3-0**（11.2% — 首选）'
-        m = re.match(r'^(\d+)\.\s*\*\*(\d+[-:]\d+)\*\*', line)
+        # Match: '1. **2-1**（9.7%）' or '2. **1-0 England**（11.1%）' (may have team name after score)
+        m = re.match(r'^(\d+)\.\s*\*\*(\d+[-:]\d+)', line)
         if m:
             scores.append(m.group(2))
             if len(scores) >= 2:

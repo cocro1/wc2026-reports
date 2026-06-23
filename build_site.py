@@ -291,11 +291,20 @@ def parse_reports():
         conf_m = re.search(r'置信度[^：:]*[：:]\s*(高|中|低)', html)
         confidence = conf_m.group(1) if conf_m else '中'
 
-        # Extract alt score (备选比分1)
+        # Extract alt score (备选比分1) — try paragraph format first, then table format
         alt_score = ''
         alt_m = re.search(r'备选比分\d*[：:]\s*(\d+\s*[-:]\s*\d+)', html)
         if alt_m:
             alt_score = alt_m.group(1).strip()
+        else:
+            # Fallback: parse table.score format — first <td>备选1</td> row
+            alt_td_m = re.search(r'<td>备选1</td>\s*<td>(?:<strong>)?(.+?)(?:</strong>)?</td>', html)
+            if alt_td_m:
+                alt_raw = alt_td_m.group(1).strip()
+                # Extract just the score from e.g. "葡萄牙 2-0 乌兹别克斯坦" → "2-0"
+                score_m = re.search(r'(\d+\s*[-:]\s*\d+)', alt_raw)
+                if score_m:
+                    alt_score = score_m.group(1).strip()
 
         matches.append({
             "date": date_str,
