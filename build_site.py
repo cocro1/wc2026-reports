@@ -502,6 +502,65 @@ def calc_hit_rates():
     }
 
 
+def extract_over25():
+    """Parse Dixon-Coles simulation HTML articles to extract >2.5 goals probability.
+    Returns a dict with forward+reverse lookup keys (Chinese team names)."""
+    import glob as _g
+
+    EN_TO_ZH = {
+        'Argentina': '阿根廷', 'Austria': '奥地利',
+        'France': '法国', 'Iraq': '伊拉克',
+        'Jordan': '约旦', 'Algeria': '阿尔及利亚',
+        'Norway': '挪威', 'Senegal': '塞内加尔',
+        'Portugal': '葡萄牙', 'Uzbekistan': '乌兹别克斯坦',
+        'England': '英格兰', 'Ghana': '加纳',
+        'Panama': '巴拿马', 'Croatia': '克罗地亚',
+        'Colombia': '哥伦比亚', 'DR Congo': '刚果(金)',
+    }
+
+    def clean_team(name):
+        name = re.sub(r'[（(][^）)]*[）)]', '', name)
+        name = re.sub(r'[\U0001F1E0-\U0001F1FF\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF]+', '', name)
+        name = name.strip().rstrip('*').strip()
+        return EN_TO_ZH.get(name, name)
+
+    def parse_section_header(line):
+        m = re.match(r'^<h3>\s*(\d+)\.\s*(.+?)\s+vs\s+(.+?)\s*</h3>\s*$', line, re.IGNORECASE)
+        if not m:
+            return None
+        return (clean_team(m.group(2)), clean_team(m.group(3)))
+
+    sim_dir = ARTICLES_DIR / "simulation"
+    over25 = {}
+
+    for fpath in sorted(_g.glob(str(sim_dir / "*dixon-coles-predictions.html"))):
+        with open(fpath, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+
+        current_teams = None
+        for line in lines:
+            teams = parse_section_header(line.strip())
+            if teams:
+                current_teams = teams
+                continue
+            if current_teams and '大于2.5球概率' in line:
+                m = re.search(r'(\d+\.?\d*)\s*%', line)
+                if m:
+                    key = f'{current_teams[0]} vs {current_teams[1]}'
+                    over25[key] = {'over25': float(m.group(1))}
+                    current_teams = None
+
+    # Add reverse lookup keys
+    result = {}
+    for k, v in over25.items():
+        result[k] = v
+        parts = k.split(' vs ')
+        if len(parts) == 2:
+            result[f'{parts[1]} vs {parts[0]}'] = v
+
+    return result
+
+
 def main():
     print("=" * 50)
     print("Build site for CloudStudio (teal theme)")
@@ -525,15 +584,22 @@ def main():
         print(f"  {cat}: {len(items)} articles")
 
     # Step 3: Calculate hit rates
-    print("\n[3/4] Calculating hit rates...")
+    print("\n[3/5] Calculating hit rates...")
     hit_rates = calc_hit_rates()
     hr_path = BASE_DIR / "hit_rates.json"
     hr_path.write_text(json.dumps(hit_rates, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f"  Pred: {hit_rates['prediction_hit_rate']}% ({hit_rates['prediction_hits']}/{hit_rates['prediction_total']})")
     print(f"  Sim:  {hit_rates['simulation_hit_rate']}% ({hit_rates['simulation_hits']}/{hit_rates['simulation_total']})")
 
-    # Step 4: Summary
-    print("\n[4/4] Done!")
+    # Step 4: Extract >2.5 goals probability from Dixon-Coles simulation articles
+    print("\n[4/5] Extracting >2.5 goals data from simulation articles...")
+    over25 = extract_over25()
+    o25_path = BASE_DIR / "over25_data.json"
+    o25_path.write_text(json.dumps(over25, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f"  Extracted >2.5 data for {len(over25)//2} matches ({len(over25)} lookup keys)")
+
+    # Step 5: Summary
+    print("\n[5/5] Done!")
     print(f"  Reports: {len(matches)} parsed")
     print(f"  Mystic:  {len(articles.get('mystic', []))} articles")
     print(f"  Simulation: {len(articles.get('simulation', []))} articles")

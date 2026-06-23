@@ -560,6 +560,14 @@
         window._simScores = {};
       }
 
+      // Load over25_data.json (>2.5 goals probability from Dixon-Coles)
+      try {
+        const o25Resp = await fetch('over25_data.json?nocache=' + Date.now());
+        window._over25Map = await o25Resp.json();
+      } catch(e) {
+        window._over25Map = {};
+      }
+
       // Load hit_rates.json for dynamic metric display
       try {
         const hrResp = await fetch('hit_rates.json?nocache=' + Date.now());
@@ -690,6 +698,12 @@
           ? simTop1 + ' / ' + simTop2
           : (simTop1 || '暂无数据');
 
+        // Look up >2.5 goals probability from Dixon-Coles simulation
+        const over25Entry = window._over25Map && window._over25Map[oddsKey];
+        const over25Display = over25Entry && over25Entry.over25 != null
+          ? over25Entry.over25 + '%'
+          : '暂无数据';
+
         if (hasPred) {
           return `<a class="match-card" href="${match.file}" target="_blank"
                   style="display:block;text-decoration:none;color:inherit;">
@@ -725,13 +739,13 @@
               <span style="font-size:12px;color:#374151;">胜 <b style="font-weight:600;color:var(--ink);">${probB}</b></span>
             </div>
             <div style="height:1px;background:var(--line);margin:0 14px;"></div>
-            <!-- Row 4: simulation scores + odds -->
+            <!-- Row 4: simulation scores + >2.5 goals -->
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 14px 14px;">
               <div class="market">
                 <span>推演比分</span><b>${simDisplay}</b>
               </div>
               <div class="market">
-                <span>参考赔率</span><b>${hc.oddsUp} (上) / ${hc.oddsDown} (下)</b>
+                <span>>2.5 球概率</span><b>${over25Display}</b>
               </div>
             </div>
           </a>`;
