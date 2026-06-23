@@ -392,6 +392,91 @@ def convert_articles():
     return articles
 
 
+def calc_hit_rates():
+    """Calculate prediction and simulation hit rates from June 23 onwards."""
+    CUTOFF = '2026-06-23'
+    
+    # Parse actual scores from review reports
+    actual_scores = {}
+    for f in sorted(REPORTS_DIR.glob("review-*.html")):
+        html = f.read_text(encoding='utf-8')
+        date_m = re.search(r'review-(\d{4}-\d{2}-\d{2})', f.name)
+        if not date_m:
+            continue
+        
+        names = re.findall(r'<div class="name">(.+?)</div>', html)
+        if len(names) < 2:
+            continue
+        
+        actual_match = re.search(
+            r'<span class="badge badge-red">实际</span>.*?'
+            r'<div class="score-num"[^>]*>(\d+)</div>\s*'
+            r'<div class="score-vs"[^>]*>:</div>\s*'
+            r'<div class="score-num"[^>]*>(\d+)</div>',
+            html, re.DOTALL
+        )
+        if actual_match:
+            actual_scores[frozenset([names[0], names[1]])] = f'{actual_match.group(1)}-{actual_match.group(2)}'
+    
+    # Load match_data and sim_scores
+    md_path = BASE_DIR / "match_data.json"
+    sim_path = BASE_DIR / "simulation_scores.json"
+    
+    match_data = json.loads(md_path.read_text(encoding='utf-8')) if md_path.exists() else []
+    sim_scores = json.loads(sim_path.read_text(encoding='utf-8')) if sim_path.exists() else {}
+    
+    pred_hits = pred_total = 0
+    sim_hits = sim_total = 0
+    
+    def _norm(s):
+        return re.sub(r'\s+', '', (s or '').replace(':', '-'))
+    
+    for m in match_data:
+        date = m.get('date', '')
+        if date < CUTOFF:
+            continue
+        
+        title = m.get('title', '')
+        teams_m = re.match(r'(.+?)\s+vs\s+(.+?)(?:\s+预测|\s+[A-Z]组|\s*$)', title)
+        if not teams_m:
+            continue
+        
+        ta, tb = teams_m.group(1).strip(), teams_m.group(2).strip()
+        key = frozenset([ta, tb])
+        actual = actual_scores.get(key)
+        if not actual:
+            continue
+        
+        actual_n = _norm(actual)
+        
+        # Prediction + alt_score
+        pred = m.get('prediction', '')
+        pred_n = _norm(re.search(r'(\d+\s*-\s*\d+)', pred).group(1) if re.search(r'(\d+\s*-\s*\d+)', pred) else pred)
+        alt_n = _norm(m.get('alt_score', ''))
+        
+        if pred_n or alt_n:
+            pred_total += 1
+            if pred_n == actual_n or alt_n == actual_n:
+                pred_hits += 1
+        
+        # Simulation top 2
+        sim_list = sim_scores.get(f'{ta} vs {tb}', []) or sim_scores.get(f'{tb} vs {ta}', [])
+        if sim_list:
+            sim_total += 1
+            if any(_norm(s) == actual_n for s in sim_list):
+                sim_hits += 1
+    
+    return {
+        'prediction_hit_rate': round(pred_hits / pred_total * 100) if pred_total > 0 else 0,
+        'simulation_hit_rate': round(sim_hits / sim_total * 100) if sim_total > 0 else 0,
+        'prediction_hits': pred_hits,
+        'prediction_total': pred_total,
+        'simulation_hits': sim_hits,
+        'simulation_total': sim_total,
+        'cutoff_date': CUTOFF,
+    }
+
+
 def main():
     print("=" * 50)
     print("Build site for CloudStudio (teal theme)")
@@ -414,8 +499,16 @@ def main():
     for cat, items in articles.items():
         print(f"  {cat}: {len(items)} articles")
 
-    # Step 3: Summary
-    print("\n[3/3] Done!")
+    # Step 3: Calculate hit rates
+    print("\n[3/4] Calculating hit rates...")
+    hit_rates = calc_hit_rates()
+    hr_path = BASE_DIR / "hit_rates.json"
+    hr_path.write_text(json.dumps(hit_rates, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f"  Pred: {hit_rates['prediction_hit_rate']}% ({hit_rates['prediction_hits']}/{hit_rates['prediction_total']})")
+    print(f"  Sim:  {hit_rates['simulation_hit_rate']}% ({hit_rates['simulation_hits']}/{hit_rates['simulation_total']})")
+
+    # Step 4: Summary
+    print("\n[4/4] Done!")
     print(f"  Reports: {len(matches)} parsed")
     print(f"  Mystic:  {len(articles.get('mystic', []))} articles")
     print(f"  Simulation: {len(articles.get('simulation', []))} articles")

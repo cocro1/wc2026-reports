@@ -527,6 +527,14 @@
         window._simScores = {};
       }
 
+      // Load hit_rates.json for dynamic metric display
+      try {
+        const hrResp = await fetch('hit_rates.json?nocache=' + Date.now());
+        window._hitRates = await hrResp.json();
+      } catch(e) {
+        window._hitRates = null;
+      }
+
       // Build dates from schedule (primary source for dates)
       const dateMap = {};
       scheduleData.forEach(s => {
@@ -731,9 +739,14 @@
 
     function renderDataGrid() {
       const grid = document.getElementById('dataGrid');
+      const hr = window._hitRates || {};
+      const predRate = hr.prediction_hit_rate !== undefined ? hr.prediction_hit_rate : 0;
+      const simRate = hr.simulation_hit_rate !== undefined ? hr.simulation_hit_rate : 0;
+      const predHint = hr.prediction_hits !== undefined ? ` (${hr.prediction_hits}/${hr.prediction_total})` : '';
+      const simHint = hr.simulation_hits !== undefined ? ` (${hr.simulation_hits}/${hr.simulation_total})` : '';
       const metrics = [
-        { icon:'%', val:'72', label:'预测比分命中率' },
-        { icon:'Σ', val:'66', label:'推演比分命中率' },
+        { icon:'%', val:predRate, suffix:'%', label:'预测比分命中率', hint:predHint },
+        { icon:'Σ', val:simRate, suffix:'%', label:'推演比分命中率', hint:simHint },
         { icon:'★', val:'61', label:'玄学主预测命中' },
         { icon:'玄', val:'58', label:'玄学预测命中指数' },
         { icon:'冷', val:'43', label:'冷门预测命中指数' },
@@ -742,7 +755,7 @@
       grid.innerHTML = metrics.map(m => `
         <button class="metric-card" type="button">
           <span class="metric-icon">${m.icon}</span>
-          <span><b>${m.val}</b><span>${m.label}</span></span>
+          <span><b>${m.val}${m.suffix||''}</b><span>${m.label}${m.hint||''}</span></span>
         </button>
       `).join('');
     }
