@@ -1,9 +1,9 @@
 {
-  "prediction_hit_rate": 0,
-  "simulation_hit_rate": 0,
-  "prediction_hits": 0,
-  "prediction_total": 0,
-  "simulation_hits": 0,
-  "simulation_total": 0,
+  "prediction_hit_rate": 75,
+  "simulation_hit_rate": 100,
+  "prediction_hits": 3,
+  "prediction_total": 4,
+  "simulation_hits": 4,
+  "simulation_total": 4,
   "cutoff_date": "2026-06-23"
 }

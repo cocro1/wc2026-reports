@@ -393,11 +393,25 @@ def convert_articles():
 
 
 def calc_hit_rates():
-    """Calculate prediction and simulation hit rates from June 23 onwards."""
+    """Calculate prediction and simulation hit rates from June 23 onwards.
+    Data sources (in priority order):
+      1. match_results.json — manually maintained actual scores
+      2. review-*.html — automated review reports
+    """
     CUTOFF = '2026-06-23'
     
-    # Parse actual scores from review reports
     actual_scores = {}
+    
+    # Source 1: match_results.json (manual, highest priority)
+    mr_path = BASE_DIR / "match_results.json"
+    if mr_path.exists():
+        mr_data = json.loads(mr_path.read_text(encoding='utf-8'))
+        for key, score in mr_data.items():
+            parts = re.split(r'\s+vs\s+', key)
+            if len(parts) == 2:
+                actual_scores[frozenset(parts)] = score.strip()
+    
+    # Source 2: review reports (automated)
     for f in sorted(REPORTS_DIR.glob("review-*.html")):
         html = f.read_text(encoding='utf-8')
         date_m = re.search(r'review-(\d{4}-\d{2}-\d{2})', f.name)
@@ -416,7 +430,9 @@ def calc_hit_rates():
             html, re.DOTALL
         )
         if actual_match:
-            actual_scores[frozenset([names[0], names[1]])] = f'{actual_match.group(1)}-{actual_match.group(2)}'
+            key = frozenset([names[0], names[1]])
+            if key not in actual_scores:  # don't overwrite manual data
+                actual_scores[key] = f'{actual_match.group(1)}-{actual_match.group(2)}'
     
     # Load match_data and sim_scores
     md_path = BASE_DIR / "match_data.json"

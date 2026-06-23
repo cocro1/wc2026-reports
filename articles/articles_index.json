@@ -101,5 +101,16 @@
       "file": "articles/research/小组赛第一轮分析.html",
       "preview": "📊 2026 FIFA世界杯小组赛第一轮数据分析报告  > 生成日期: 2026年6月11日 | 报告版本: v1.0  ---   🎯 执行摘要  **核心发现:** 2026年世界杯首次扩军至48支球队，分为12个小组。根据数据分析，**E组（西班牙、德国、日本、哥斯达黎加）和I组（法国、挪威、..."
     }
+  ],
+  "simulation": [
+    {
+      "slug": "2026-06-23_worldcup-dixon-coles-predictions",
+      "title": "🏆 2026美加墨世界杯 · Dixon-Coles蒙特卡洛精算预测报告",
+      "category": "simulation",
+      "cat_label": "推演",
+      "date": "",
+      "file": "articles/simulation/2026-06-23_worldcup-dixon-coles-predictions.html",
+      "preview": "--- title: \"2026美加墨世界杯 · Dixon-Coles蒙特卡洛精算预测报告\" date: \"2026-06-22\" model: \"Dixon-Coles Poisson + Monte Carlo (10,000 iterations)\" rho: -0.08 tournamen..."
+    }
   ]
 }
