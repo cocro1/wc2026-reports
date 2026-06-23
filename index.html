@@ -361,6 +361,46 @@
               .replace('乌兹别克斯坦','乌兹别克').replace('科特迪瓦','科特迪瓦');
     }
 
+    // Check if two team names refer to the same team
+    function sameTeam(a, b) {
+      const na = normName(a), nb = normName(b);
+      return na.includes(nb) || nb.includes(na);
+    }
+
+    // Format prediction score in team_a : team_b order
+    // prediction is "TeamX N-M TeamY" — parse, match teams, reorder if needed
+    function formatPredScore(prediction, teamA, teamB) {
+      const m = prediction.match(/^(.+?)\s+(\d+)\s*[-:]\s*(\d+)\s+(.+)$/);
+      if (!m) return '—';
+      const predTeam1 = m[1], score1 = m[2], score2 = m[3], predTeam2 = m[4];
+      // Determine which side predTeam1 belongs to
+      if (sameTeam(predTeam1, teamA)) {
+        return score1 + ' : ' + score2;  // predTeam1=teamA (left), scores already correct
+      } else if (sameTeam(predTeam1, teamB)) {
+        return score2 + ' : ' + score1;  // predTeam1=teamB (right), must swap
+      }
+      // Fallback: use original order
+      return score1 + ' : ' + score2;
+    }
+
+    // Format alt_score in team_a : team_b order.
+    // alt_score is "X-Y" without team names; direction follows the main prediction.
+    function formatAltScore(altScore, prediction, teamA, teamB) {
+      if (!altScore) return '';
+      const am = altScore.match(/(\d+)\s*[-:]\s*(\d+)/);
+      if (!am) return altScore;
+      const a1 = am[1], a2 = am[2];
+      // Check main prediction direction
+      const pm = prediction.match(/^(.+?)\s+(\d+)\s*[-:]\s*(\d+)\s+(.+)$/);
+      if (!pm) return a1 + ' : ' + a2;  // no prediction to infer, use as-is
+      const predTeam1 = pm[1];
+      if (sameTeam(predTeam1, teamB)) {
+        // prediction's first team = team_b, alt_score direction is also reversed
+        return a2 + ' : ' + a1;
+      }
+      return a1 + ' : ' + a2;
+    }
+
     // ---- Find prediction for a scheduled match ----
     function findPrediction(teamA, teamB) {
       const na = normName(teamA), nb = normName(teamB);
@@ -638,7 +678,7 @@
             ? deriveHandicap(match.a_win || '0', match.draw || '0', match.b_win || '0')
             : { handicap: '—', oddsUp: '—', oddsDown: '—' });
         const scoreDisplay = hasPred && match.prediction
-          ? (() => { const m = match.prediction.match(/(\d+)\s*[-:]\s*(\d+)/); return m ? m[1] + ' : ' + m[2] : '—'; })() : '—';
+          ? formatPredScore(match.prediction, s.team_a, s.team_b) : '—';
         const cc = hasPred ? confClass(match.confidence) : 'pending';
 
         // Look up top 2 Dixon-Coles Monte Carlo predicted exact scores
@@ -667,7 +707,7 @@
               </div>
               <div style="display:flex;flex-direction:column;align-items:center;gap:1px;margin:0 8px;flex-shrink:0;min-width:44px;">
                 <div style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);text-align:center;">${scoreDisplay}</div>
-                ${altScore ? `<div style="font-size:12px;font-weight:400;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;">${altScore}</div>` : ''}
+                ${altScore ? `<div style="font-size:12px;font-weight:400;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;">${formatAltScore(altScore, match.prediction, s.team_a, s.team_b)}</div>` : ''}
               </div>
               <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
                 <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_b)}</span>
