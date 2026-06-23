@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ENGLAND_GHANA_HTML = r"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -316,7 +316,7 @@
 <ul>
 <li>🥊 <strong>Bellingham vs Partey</strong> — 顶级中场对决。Bellingham首轮MVP级表现 vs Partey经验丰富</li>
 <li>🥊 <strong>Kane vs Tapsoba/Salisu</strong> — 凯恩空中/终结能力 vs 加纳双中卫</li>
-<li>🥊 <strong>Saka vs Mensah</strong> — Saka首轮威胁大 vs 加纳左路防守</li>
+<li>🥊 <strong>Saka vs Mensah</strong> — Saka首轮威胁大 vs 乌方左路防守</li>
 <li>🥊 <strong>Rice vs Kudus</strong> — 英格兰中场屏障 vs 加纳组织核心</li>
 </ul>
 </div>
@@ -405,3 +405,4 @@
 </div>
 </body>
 </html>
+"""

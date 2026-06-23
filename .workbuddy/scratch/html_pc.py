@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+PANAMA_CROATIA_HTML = r"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -401,3 +401,4 @@
 </div>
 </body>
 </html>
+"""

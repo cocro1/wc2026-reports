@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+COLOMBIA_CONGO_HTML = r"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -403,3 +403,4 @@
 </div>
 </body>
 </html>
+"""
