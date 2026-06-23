@@ -311,10 +311,10 @@ def parse_reports():
 
 def convert_articles():
     """Convert markdown articles to HTML files."""
-    articles = {"mystic": [], "research": []}
+    articles = {"mystic": [], "research": [], "simulation": []}
 
-    for category in ["mystic", "research"]:
-        src_dir = CONTENT_DIR / category
+    for category in ["mystic", "research", "simulation"]:
+        src_dir = CONTENT_DIR / ("dixon-coles-monte-carlo" if category == "simulation" else category)
         if not src_dir.exists():
             continue
 
@@ -337,7 +337,7 @@ def convert_articles():
             date_str = date_m.group(1) if date_m else ''
 
             # Category label
-            cat_label = "玄学" if category == "mystic" else "专题"
+            cat_label = "玄学" if category == "mystic" else ("推演" if category == "simulation" else "专题")
 
             slug = md_file.stem
             out_path = out_dir / f"{slug}.html"
@@ -356,7 +356,7 @@ def convert_articles():
   <div class="meta">{cat_label} · {date_str}</div>
 </div>
 <div class="container">
-  <a href="../index.html#{'mystic' if category == 'mystic' else 'research'}" class="back-link">← 返回{'玄学' if category == 'mystic' else '专题'}</a>
+  <a href="../index.html#{'mystic' if category == 'mystic' else ('simulation' if category == 'simulation' else 'research')}" class="back-link">← 返回{'玄学' if category == 'mystic' else ('推演' if category == 'simulation' else '专题')}</a>
   <div class="content">
 {body_html}
   </div>
@@ -411,6 +411,7 @@ def main():
     print("\n[3/3] Done!")
     print(f"  Reports: {len(matches)} parsed")
     print(f"  Mystic:  {len(articles.get('mystic', []))} articles")
+    print(f"  Simulation: {len(articles.get('simulation', []))} articles")
     print(f"  Research: {len(articles.get('research', []))} articles")
     print(f"\nReady for CloudStudio deploy.")
 
