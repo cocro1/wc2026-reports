@@ -646,9 +646,11 @@
 
         // Look up top 2 Dixon-Coles Monte Carlo predicted exact scores
         const simScores = window._simScores && window._simScores[oddsKey];
-        const simDisplay = simScores && simScores.length >= 2
-          ? simScores[0] + ' / ' + simScores[1]
-          : '暂无数据';
+        const simTop1 = simScores && simScores.length >= 1 ? simScores[0] : '';
+        const simTop2 = simScores && simScores.length >= 2 ? simScores[1] : '';
+        const simDisplay = simTop1 && simTop2
+          ? simTop1 + ' / ' + simTop2
+          : (simTop1 || '暂无数据');
 
         if (hasPred) {
           return `<a class="match-card" href="${match.file}" target="_blank"
@@ -665,7 +667,10 @@
                 <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_a)}</span>
                 <span style="font-size:${teamFontSize(s.team_a)}px;font-weight:600;text-align:center;line-height:1.2;word-break:keep-all;">${s.team_a}</span>
               </div>
-              <div style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;margin:0 8px;color:var(--ink);flex-shrink:0;text-align:center;min-width:44px;">${scoreDisplay}</div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:1px;margin:0 8px;flex-shrink:0;min-width:44px;">
+                <div style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink);text-align:center;">${scoreDisplay}</div>
+                ${simTop2 ? `<div style="font-size:12px;font-weight:400;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;">${simTop2}</div>` : ''}
+              </div>
               <div style="display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;">
                 <span style="display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:22px;flex-shrink:0;">${teamFlag(s.team_b)}</span>
                 <span style="font-size:${teamFontSize(s.team_b)}px;font-weight:600;text-align:center;line-height:1.2;word-break:keep-all;">${s.team_b}</span>
