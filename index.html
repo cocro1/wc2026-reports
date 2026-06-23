@@ -519,6 +519,14 @@
         window._oddsMap = {};
       }
 
+      // Load simulation_scores.json (Dixon-Coles Monte Carlo top-2 exact scores)
+      try {
+        const sResp = await fetch('simulation_scores.json?nocache=' + Date.now());
+        window._simScores = await sResp.json();
+      } catch(e) {
+        window._simScores = {};
+      }
+
       // Build dates from schedule (primary source for dates)
       const dateMap = {};
       scheduleData.forEach(s => {
@@ -636,6 +644,12 @@
           ? (() => { const m = match.prediction.match(/(\d+)\s*[-:]\s*(\d+)/); return m ? m[1] + ' : ' + m[2] : '—'; })() : '—';
         const cc = hasPred ? confClass(match.confidence) : 'pending';
 
+        // Look up top 2 Dixon-Coles Monte Carlo predicted exact scores
+        const simScores = window._simScores && window._simScores[oddsKey];
+        const simDisplay = simScores && simScores.length >= 2
+          ? simScores[0] + ' / ' + simScores[1]
+          : '暂无数据';
+
         if (hasPred) {
           return `<a class="match-card" href="${match.file}" target="_blank"
                   style="display:block;text-decoration:none;color:inherit;">
@@ -668,10 +682,10 @@
               <span style="font-size:12px;color:#374151;">胜 <b style="font-weight:600;color:var(--ink);">${probB}</b></span>
             </div>
             <div style="height:1px;background:var(--line);margin:0 14px;"></div>
-            <!-- Row 4: handicap + odds -->
+            <!-- Row 4: simulation scores + odds -->
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 14px 14px;">
               <div class="market">
-                <span>参考让球盘</span><b>${hc.handicap}</b>
+                <span>推演比分</span><b>${simDisplay}</b>
               </div>
               <div class="market">
                 <span>参考赔率</span><b>${hc.oddsUp} (上) / ${hc.oddsDown} (下)</b>
