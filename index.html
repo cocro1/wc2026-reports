@@ -55,11 +55,14 @@
     }
     .live-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--red); }
     .date-strip {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; touch-action: pan-y;
+      display: flex; gap: 8px; overflow-x: auto; padding: 2px 0;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
     }
+    .date-strip::-webkit-scrollbar { display: none; }
     .date-pill {
-      min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
-      color: var(--muted); padding: 9px 6px; text-align: center; cursor: pointer;
+      flex: 0 0 auto; min-width: 82px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+      color: var(--muted); padding: 9px 6px; text-align: center; cursor: pointer; scroll-snap-align: start;
     }
     .date-pill strong, .date-pill span {
       display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -163,7 +166,7 @@
       position: fixed; left: 50%; bottom: 0; z-index: 10;
       width: min(100%, 430px); transform: translateX(-50%);
       min-height: calc(var(--nav-h) + env(safe-area-inset-bottom));
-      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
       padding: 7px 4px calc(7px + env(safe-area-inset-bottom));
       border-top: 1px solid var(--line); background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(14px);
@@ -192,7 +195,7 @@
     }
   </style>
 </head>
-<body>
+<body data-tab="home">
   <div class="phone-shell">
     <header class="topbar">
       <div class="brand-row">
@@ -319,11 +322,11 @@
       '丹麦':'🇩🇰','波兰':'🇵🇱','乌克兰':'🇺🇦','土耳其':'🇹🇷','希腊':'🇬🇷',
       '澳大利亚':'🇦🇺','秘鲁':'🇵🇪','智利':'🇨🇱','厄瓜多尔':'🇪🇨','巴拉圭':'🇵🇾',
       '俄罗斯':'🇷🇺','卡塔尔':'🇶🇦','阿联酋':'🇦🇪','中国':'🇨🇳',
-      '冰岛':'🇮🇸','苏格兰':'🏴','威尔士':'🏴',
-      '刚果(金)':'🇨🇩','佛得角':'🇨🇻','海地':'🇭🇹',
+      '冰岛':'🇮🇸','苏格兰':'🏴','威尔士':'🏴','波黑':'🇧🇦',
+      '佛得角':'🇨🇻','海地':'🇭🇹','库拉索':'🇨🇼',
       '斯洛伐克':'🇸🇰','斯洛文尼亚':'🇸🇮','匈牙利':'🇭🇺',
       '罗马尼亚':'🇷🇴','保加利亚':'🇧🇬','爱尔兰':'🇮🇪','北爱尔兰':'🇬🇧',
-      '挪威':'🇳🇴','芬兰':'🇫🇮','以色列':'🇮🇱','委内瑞拉':'🇻🇪',
+      '芬兰':'🇫🇮','以色列':'🇮🇱','委内瑞拉':'🇻🇪',
       '玻利维亚':'🇧🇴','哥斯达黎加':'🇨🇷','洪都拉斯':'🇭🇳',
       '牙买加':'🇯🇲','特立尼达和多巴哥':'🇹🇹',
     };
@@ -610,15 +613,17 @@
       }
       currentDate = dates.includes(centerDate) ? centerDate : (dates[dates.length-1] || centerDate);
 
-      // Build strip dates safely using UTC parsing of the center date
-      const [cy, cm, cd] = currentDate.split('-').map(Number);
-      const centerAsUTC = new Date(Date.UTC(cy, cm - 1, cd));
-      const stripDates = [];
-      for (let i = -1; i <= 1; i++) {
-        const d = new Date(centerAsUTC);
-        d.setUTCDate(d.getUTCDate() + i);
-        stripDates.push(d.toISOString().slice(0, 10));
-      }
+      // Build strip dates: show all scheduled dates from 2 days ago to the last match date
+      const bjTodayStr = getBeijingDateStr();
+      const [ty, tm, td] = bjTodayStr.split('-').map(Number);
+      const todayUTC = new Date(Date.UTC(ty, tm - 1, td));
+      const minDateUTC = new Date(todayUTC);
+      minDateUTC.setUTCDate(minDateUTC.getUTCDate() - 2);
+      const stripDates = dates.filter(d => {
+        const [y, m, dd] = d.split('-').map(Number);
+        const du = Date.UTC(y, m - 1, dd);
+        return du >= minDateUTC.getTime();
+      });
       window._stripDates = stripDates;
 
       renderDateStrip();
@@ -632,7 +637,7 @@
 
     function renderDateStrip() {
       const strip = document.getElementById('dateStrip');
-      const stripDates = window._stripDates || dates.slice(-3);
+      const stripDates = window._stripDates || dates;
       strip.innerHTML = stripDates.map(d => {
         const label = dateLabel(d);
         const active = d === currentDate ? ' active' : '';
@@ -648,6 +653,14 @@
           renderMatches(currentDate);
         });
       });
+
+      // Auto-scroll to center on the active date
+      const activeBtn = strip.querySelector('.date-pill.active');
+      if (activeBtn) {
+        requestAnimationFrame(() => {
+          activeBtn.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+        });
+      }
     }
 
     function renderMatches(date) {

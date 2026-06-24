@@ -104,6 +104,15 @@
   ],
   "simulation": [
     {
+      "slug": "2026-06-25_worldcup-dixon-coles-predictions",
+      "title": "2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总",
+      "category": "simulation",
+      "cat_label": "推演",
+      "date": "",
+      "file": "articles/simulation/2026-06-25_worldcup-dixon-coles-predictions.html",
+      "preview": "2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总  > **比赛日**：2026-06-25（北京时间 03:00-09:00） > **数据时间**：2026-06-24 12:22 GMT+8 > **模型**：Dixon-Coles Poisson with rho=-0.0..."
+    },
+    {
       "slug": "2026-06-24_worldcup-dixon-coles-predictions",
       "title": "2026美加墨世界杯 · Dixon-Coles 精算预测报告",
       "category": "simulation",

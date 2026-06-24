@@ -41,3 +41,33 @@
   - Panama 13% / Draw 22% / Croatia 65% → Croatia 2-0
   - Colombia 62% / Draw 22% / DR Congo 16% → Colombia 2-0
 - **时区标注**: 全部用venue_timezones.json映射,精确到场馆城市(CT/ET/CST)
+
+## 2026-06-24 执行
+- **状态**: ✅ 成功
+- **比赛日**: 2026-06-25 (6场小组赛第3轮 A/B/C组)
+- **数据时间**: 2026-06-24 12:22 GMT+8
+- **生成文件** (13个):
+  1. Switzerland vs Canada (B组) → HTML+MD ✅
+  2. Bosnia vs Qatar (B组) → HTML+MD ✅
+  3. Morocco vs Haiti (C组) → HTML+MD ✅
+  4. Scotland vs Brazil (C组) → HTML+MD ✅
+  5. Czech vs Mexico (A组) → HTML+MD ✅
+  6. South Africa vs South Korea (A组) → HTML+MD ✅
+  7. Dixon-Coles Monte Carlo 汇总MD ✅
+- **关键升级**:
+  - 数据时间戳 6/23 17:25 → 6/24 12:22
+  - 引入A/B/C组前两轮实际比分(A: 墨2-0南/韩2-1捷/捷1-1南/墨1-0韩; B: 加1-1波/卡1-1瑞/瑞4-1波/加6-0卡; C: 巴1-1摩/海0-1苏/摩1-0苏/巴3-0海)
+  - 引入前两轮xG/xGA数据、门将数据、犯规数据
+  - 引入黄牌累积风险(8人: Schär/Edson Álvarez/Souček/Kim Min-jae/Hwang In-beom/Bruno Guimarães/Militão/McTominay 等)
+  - 海拔警告: Azteca 2,240m对捷克(海平面国家)显著影响; BBVA 540m对南非(海平面国家)中等影响
+  - 教练8维度评估(战术/灵活性/大赛应对/临场决策等)
+  - 替补深度评分(摩洛哥8.0 vs 海地3.5; 巴西9.5 vs 苏格兰4.5)
+- **概率预测摘要**:
+  - Switzerland 34% / Draw 28% / Canada 38% → Canada 2-1
+  - Bosnia 52% / Draw 27% / Qatar 21% → Bosnia 2-1
+  - Morocco 87% / Draw 9% / Haiti 4% → Morocco 3-0
+  - Scotland 11% / Draw 18% / Brazil 71% → Brazil 2-0
+  - Czech 13% / Draw 22% / Mexico 65% → Mexico 2-0
+  - South Africa 15% / Draw 23% / South Korea 62% → South Korea 2-1
+- **末轮累黄停盘风险最高的球队**: 韩国(5人: Kim Min-jae/Hwang In-beom/Lee Jae-sung/Hwang Hee-chan/Cho Gue-sung)
+- **时区标注**: 全部用venue_timezones.json映射,精确到场馆城市(PT/ET/CST)
