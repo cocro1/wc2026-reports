@@ -430,7 +430,13 @@ def convert_articles():
 
 def extract_over25():
     """Parse Dixon-Coles simulation HTML articles to extract >2.5 goals probability.
-    Returns a dict with forward+reverse lookup keys (Chinese team names)."""
+    Returns a dict with forward+reverse lookup keys (Chinese team names).
+
+    Handles multiple over25 label formats across report versions:
+      - v1 (6/23): 大于2.5球概率
+      - v2 (6/25): 大于 2.5 球 (with spaces, in table)
+      - v3 (6/26): Over 2.5 (English)
+    """
     import glob as _g
 
     EN_TO_ZH = {
@@ -442,16 +448,31 @@ def extract_over25():
         'England': '英格兰', 'Ghana': '加纳',
         'Panama': '巴拿马', 'Croatia': '克罗地亚',
         'Colombia': '哥伦比亚', 'DR Congo': '刚果(金)',
+        'Switzerland': '瑞士', 'Canada': '加拿大',
+        'Bosnia and Herzegovina': '波黑', 'Qatar': '卡塔尔',
+        'Scotland': '苏格兰', 'Brazil': '巴西',
+        'Morocco': '摩洛哥', 'Haiti': '海地',
+        'South Africa': '南非', 'South Korea': '韩国',
+        'Czechia': '捷克', 'Mexico': '墨西哥',
+        'Curacao': '库拉索', 'Ivory Coast': '科特迪瓦',
+        'Ecuador': '厄瓜多尔', 'Germany': '德国',
+        'Japan': '日本', 'Sweden': '瑞典',
+        'Tunisia': '突尼斯', 'Netherlands': '荷兰',
+        'Turkey': '土耳其', 'United States': '美国',
+        'Paraguay': '巴拉圭', 'Australia': '澳大利亚',
     }
 
     def clean_team(name):
-        name = re.sub(r'[（(][^）)]*[）)]', '', name)
+        # Strip all parenthetical content
+        while re.search(r'[（(][^）)]*[）)]', name):
+            name = re.sub(r'[（(][^）)]*[）)]', '', name)
         name = re.sub(r'[\U0001F1E0-\U0001F1FF\u2600-\u27BF\uD83C-\uDBFF\uDC00-\uDFFF]+', '', name)
         name = name.strip().rstrip('*').strip()
         return EN_TO_ZH.get(name, name)
 
     def parse_section_header(line):
-        m = re.match(r'^<h3>\s*(\d+)\.\s*(.+?)\s+vs\s+(.+?)\s*</h3>\s*$', line, re.IGNORECASE)
+        """Parse <h3>N. TeamA vs TeamB</h3> headers in various formats."""
+        m = re.match(r'^<h3>\s*(\d+)\.\s*(.+?)\s+vs\s+(.+?)(?:[（(]|</h3>)', line, re.IGNORECASE)
         if not m:
             return None
         return (clean_team(m.group(2)), clean_team(m.group(3)))
@@ -469,7 +490,16 @@ def extract_over25():
             if teams:
                 current_teams = teams
                 continue
-            if current_teams and '大于2.5球概率' in line:
+            if not current_teams:
+                continue
+            # Match various over25 label formats:
+            #   大于2.5球概率 (v1), 大于 2.5 球 (v2), Over 2.5 / Over 2.5 概率 (v3)
+            is_over25_line = (
+                '大于2.5球概率' in line or
+                (re.search(r'大于\s*2\.5\s*球', line) and not '小于' in line) or
+                re.search(r'Over\s+2\.5', line, re.IGNORECASE)
+            )
+            if is_over25_line:
                 m = re.search(r'(\d+\.?\d*)\s*%', line)
                 if m:
                     key = f'{current_teams[0]} vs {current_teams[1]}'

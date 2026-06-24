@@ -1,15 +1,87 @@
 {
-  "prediction_hit_rate": 75,
-  "simulation_hit_rate": 100,
-  "over25_hit_rate": 75,
-  "prediction_hits": 3,
-  "prediction_total": 4,
+  "prediction_hit_rate": 50,
+  "simulation_hit_rate": 50,
+  "over25_hit_rate": 50,
+  "prediction_hits": 4,
+  "prediction_total": 8,
   "simulation_hits": 4,
-  "simulation_total": 4,
-  "over25_hits": 3,
-  "over25_total": 4,
+  "simulation_total": 8,
+  "over25_hits": 4,
+  "over25_total": 8,
   "cutoff_date": "2026-06-23",
   "detail": [
+    {
+      "match": "哥伦比亚 vs 刚果(金)",
+      "date": "2026-06-24",
+      "actual": "1-0",
+      "actual_total": 1,
+      "over25_pct": 65.7,
+      "pred_over": true,
+      "actual_over": false,
+      "prediction": "2-0",
+      "alt_score": "1-0",
+      "pred_hit": true,
+      "sim_scores": [
+        "2-1",
+        "1-1"
+      ],
+      "sim_hit": false,
+      "over_hit": false
+    },
+    {
+      "match": "英格兰 vs 加纳",
+      "date": "2026-06-24",
+      "actual": "0-0",
+      "actual_total": 0,
+      "over25_pct": 51.5,
+      "pred_over": true,
+      "actual_over": false,
+      "prediction": "2-0",
+      "alt_score": "3-1",
+      "pred_hit": false,
+      "sim_scores": [
+        "1-1",
+        "1-0"
+      ],
+      "sim_hit": false,
+      "over_hit": false
+    },
+    {
+      "match": "巴拿马 vs 克罗地亚",
+      "date": "2026-06-24",
+      "actual": "0-1",
+      "actual_total": 1,
+      "over25_pct": 76.5,
+      "pred_over": true,
+      "actual_over": false,
+      "prediction": "3-0",
+      "alt_score": "2-0",
+      "pred_hit": false,
+      "sim_scores": [
+        "1-2",
+        "0-2"
+      ],
+      "sim_hit": false,
+      "over_hit": false
+    },
+    {
+      "match": "葡萄牙 vs 乌兹别克斯坦",
+      "date": "2026-06-24",
+      "actual": "5-0",
+      "actual_total": 5,
+      "over25_pct": 68.7,
+      "pred_over": true,
+      "actual_over": true,
+      "prediction": "3-0",
+      "alt_score": "2-0",
+      "pred_hit": false,
+      "sim_scores": [
+        "2-1",
+        "2-0"
+      ],
+      "sim_hit": false,
+      "over_hit": true
+    },
     {
       "match": "阿根廷 vs 奥地利",
       "date": "2026-06-23",
