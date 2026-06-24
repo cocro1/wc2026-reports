@@ -27,8 +27,7 @@
 - **生成文件** (8个):
   1. Portugal vs Uzbekistan (K组) → HTML+MD ✅
   2. England vs Ghana (L组) → HTML+MD ✅
-  3. Panama vs Croatia (L组) → HTML+MD ✅
-  4. Colombia vs DR Congo (K组) → HTML+MD ✅
+
 - **关键升级**:
   - 数据时间戳 6/22 12:00 → 6/23 17:25
   - 引入K/L组首轮实际比分(K: 葡1-1刚/乌1-3哥伦; L: 英4-2克/加1-0巴)

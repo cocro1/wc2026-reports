@@ -98,3 +98,48 @@
 
 ### 交付物
 - 校对报告：`.workbuddy/proofreads/proofread-2026-06-23.md`
+
+---
+
+## 2026-06-24 执行记录（18:30定时执行 — 6/25比赛校对）
+
+### 执行摘要
+校对了6份6月25日A/B/C组第3轮预测报告HTML+MD笔记+1份Dixon-Coles汇总MD。共发现并修复3类10处错误，全部通过Excel权威赛程交叉验证。
+
+### 发现并修复
+
+**1. 概率表方向错位 ×3份**（严重 — 影响首页胜率显示）
+- scotland-brazil.html：原「巴西胜 71% / 苏格兰胜 11%」→ 改为「苏格兰胜 11% / 巴西胜 71%」
+- czech-mexico.html：原「墨西哥胜 65% / 捷克胜 13%」→ 改为「捷克胜 13% / 墨西哥胜 65%」
+- south-africa-south-korea.html：原「韩国胜 62% / 南非胜 15%」→ 改为「南非胜 15% / 韩国胜 62%」
+- 根因：报告生成时把「胜方/热门方」放在第1列，但build_site.py按schedule.json顺序取值（第1列=team_a）
+- 影响：index.html首页胜率数字颠倒，违反铁律7
+
+**2. 时区转换错误 ×3份**（严重）
+- morocco-haiti.html：原「15:00 ET / 03:00 BJ」→ 改为「18:00 ET / 06:00 BJ」
+- czech-mexico.html：原「21:00 CST / 09:00 BJ」→ 改为「19:00 CST / 09:00 BJ」
+- south-africa-south-korea.html：原「21:00 CST / 09:00 BJ」→ 改为「19:00 CST / 09:00 BJ」
+- 根因：墨西哥CST (UTC-6) 与美国CT不同，ET 21:00直接套用为「21:00 CST」是错的，实际是19:00 CST
+
+**3. 备选比分不带球队名 ×4份**（违反铁律7）
+- switzerland-canada.html：「1-1」→「瑞士 1-1 加拿大」
+- bosnia-qatar.html：「1-0」→「波黑 1-0 卡塔尔」
+- morocco-haiti.html：「2-0」→「摩洛哥 2-0 海地」
+- czech-mexico.html：「1-0」→「墨西哥 1-0 捷克」
+- 方向遵循主预测（备选比分与主预测方向一致）
+
+### 验证结果
+- 6份HTML 9项校验全通过 ✅
+- 6份MD笔记 8项校验全通过 ✅
+- Dixon-Coles汇总MD 5项校验全通过 ✅
+- 时区/场馆/分组/比分方向全部与Excel权威源一致 ✅
+
+### 经验教训（已写入项目memory MEMORY.md）
+- 概率表方向是常见错误，build_site.py按schedule.json顺序取值
+- 墨西哥时区特殊：CST (UTC-6) ≠ 美国CT (UTC-5)，不能直接套用ET时间
+- 备选比分必须带球队名（铁律7）
+
+### 交付物
+- 校对报告：`.workbuddy/proofreads/proofread-2026-06-24.md`
+- GitHub推送：commit 41b898e
+- CloudStudio部署：https://4ba4efb5528941e79173f029176fe567.app.codebuddy.work
