@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总</title>
+<title>2026 美加墨世界杯小组赛 MD3 预测报告</title>
 <style>
 :root {
   --teal: #0f766e; --teal-light: #14b8a6; --teal-dark: #115e59;
@@ -68,334 +68,440 @@ body {
 </head>
 <body>
 <div class="header">
-  <h1>2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总</h1>
+  <h1>2026 美加墨世界杯小组赛 MD3 预测报告</h1>
   <div class="meta">推演 · </div>
 </div>
 <div class="container">
   <a href="../index.html#simulation" class="back-link">← 返回推演</a>
   <div class="content">
-<h2>2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总</h2>
+<h2>2026 美加墨世界杯小组赛 MD3 预测报告</h2>
+<p><strong>A/B/C 组收官战 · Dixon-Coles 蒙特卡洛 10,000 次模拟</strong></p>
 <blockquote>
-<p><strong>比赛日</strong>：2026-06-25（北京时间 03:00-09:00）</p>
-<p><strong>数据时间</strong>：2026-06-24 12:22 GMT+8</p>
-<p><strong>模型</strong>：Dixon-Coles Poisson with rho=-0.08 + 蒙特卡洛模拟 (N=10,000次)</p>
-<p><strong>覆盖比赛</strong>：6场（A/B/C组第3轮）</p>
+<p><strong>报告日期</strong>：2026-06-25（北京时间，6/24 EDT 同日比赛）  </p>
+<p><strong>模型版本</strong>：Dixon-Coles Poisson v3.0 + Monte Carlo 10,000 iterations  </p>
+<p><strong>ρ 修正系数</strong>：-0.08（弱化低比分聚集）  </p>
+<p><strong>数据源</strong>：FIFA 2026-06 排名（americaworldcup.net 官方积分榜）+ MD1+MD2 真实赛果校准</p>
 </blockquote>
 <hr>
-<h3>1. 预测概览</h3>
+<h3>0. 今日 6 场赛程速览</h3>
 <table><thead>
-<tr><th>比赛</th><th>北京时间</th><th>最可能比分</th><th>主胜</th><th>平局</th><th>客胜</th><th>xG预测</th><th>置信度</th></tr>
+<tr><th>序号</th><th>对阵</th><th>北京时间</th><th>美东/美西</th><th>场地</th><th>关键看点</th></tr>
 </thead><tbody>
-<tr><td>🇨🇭瑞士 vs 🇨🇦加拿大</td><td>03:00</td><td><strong>加拿大 2-1 瑞士</strong></td><td>38%</td><td>28%</td><td>34%</td><td>1.4-1.9 / 1.0-1.4</td><td>中</td></tr>
-<tr><td>🇧🇦波黑 vs 🇶🇦卡塔尔</td><td>03:00</td><td><strong>波黑 2-1 卡塔尔</strong></td><td>52%</td><td>27%</td><td>21%</td><td>1.5-2.0 / 0.8-1.2</td><td>中-高</td></tr>
-<tr><td>🇲🇦摩洛哥 vs 🇭🇹海地</td><td>06:00</td><td><strong>摩洛哥 3-0 海地</strong></td><td>87%</td><td>9%</td><td>4%</td><td>2.0-2.7 / 0.3-0.6</td><td>高</td></tr>
-<tr><td>🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰 vs 🇧🇷巴西</td><td>06:00</td><td><strong>巴西 2-0 苏格兰</strong></td><td>71%</td><td>18%</td><td>11%</td><td>1.8-2.5 / 0.6-0.9</td><td>高</td></tr>
-<tr><td>🇨🇿捷克 vs 🇲🇽墨西哥</td><td>09:00</td><td><strong>墨西哥 2-0 捷克</strong></td><td>65%</td><td>22%</td><td>13%</td><td>1.6-2.3 / 0.7-1.1</td><td>高</td></tr>
-<tr><td>🇿🇦南非 vs 🇰🇷韩国</td><td>09:00</td><td><strong>韩国 2-1 南非</strong></td><td>62%</td><td>23%</td><td>15%</td><td>1.4-2.0 / 0.6-0.9</td><td>中-高</td></tr>
+<tr><td>1</td><td>瑞士 🇨🇭 vs 加拿大 🇨🇦</td><td><strong>03:00</strong></td><td>6/24 15:00 EDT</td><td>BC Place, 温哥华</td><td>东道主加拿大拼小组第一</td></tr>
+<tr><td>2</td><td>波黑 🇧🇦 vs 卡塔尔 🇶🇦</td><td><strong>03:00</strong></td><td>6/24 12:00 PDT</td><td>Levi's Stadium, 圣克拉拉</td><td>双方已淘汰的荣誉战</td></tr>
+<tr><td>3</td><td>苏格兰 🏴 vs 巴西 🇧🇷</td><td><strong>06:00</strong></td><td>6/24 18:00 EDT</td><td>Hard Rock Stadium, 迈阿密</td><td>苏格兰背水一战</td></tr>
+<tr><td>4</td><td>摩洛哥 🇲🇦 vs 海地 🇭🇹</td><td><strong>06:00</strong></td><td>6/24 18:00 EDT</td><td>Mercedes-Benz Stadium, 亚特兰大</td><td>摩洛哥冲小组第一</td></tr>
+<tr><td>5</td><td>南非 🇿🇦 vs 韩国 🇰🇷</td><td><strong>09:00</strong></td><td>6/24 20:00 CDT</td><td>Estadio BBVA, 蒙特雷</td><td>太极虎求胜保晋级</td></tr>
+<tr><td>6</td><td>捷克 🇨🇿 vs 墨西哥 🇲🇽</td><td><strong>09:00</strong></td><td>6/24 20:00 CDT</td><td>Estadio Banorte, 墨西哥城</td><td>东道主墨西哥冲全胜</td></tr>
 </tbody></table>
-<hr>
-<h3>2. Dixon-Coles 模型说明</h3>
-<h4>2.1 模型公式</h4>
-<p>$$P(X=i, Y=j) = \frac{\lambda_X^i \cdot \lambda_Y^j \cdot e^{-\lambda_X - \lambda_Y}}{i! \cdot j!} \cdot \tau(i, j, \lambda_X, \lambda_Y, \rho)$$</p>
-<p>其中：</p>
+<p><strong>当前积分形势</strong>（来自 FIFA 官方积分榜校准）：</p>
 <ul>
-<li>$\lambda_X$ = 球队A预期进球（xG）</li>
-<li>$\lambda_Y$ = 球队B预期进球（xG）</li>
-<li>$\rho$ = 低比分修正系数（取 -0.08，对应0-0、0-1、1-0、1-1四种比分）</li>
-<li>$\tau$ = Dixon-Coles 修正函数</li>
-</ul>
-<h4>2.2 参数校准</h4>
-<table><thead>
-<tr><th>球队</th><th>联赛→大赛折扣</th><th>主帅调整</th><th>黄牌风险调整</th><th>净xG系数</th></tr>
-</thead><tbody>
-<tr><td>瑞士</td><td>0.95</td><td>0.95</td><td>0.97</td><td>1.00</td></tr>
-<tr><td>加拿大</td><td>0.88</td><td>1.05</td><td>1.00</td><td>1.10</td></tr>
-<tr><td>波黑</td><td>0.92</td><td>0.98</td><td>0.95</td><td>1.00</td></tr>
-<tr><td>卡塔尔</td><td>0.85</td><td>0.95</td><td>0.95</td><td>0.95</td></tr>
-<tr><td>摩洛哥</td><td>0.92</td><td>1.05</td><td>0.95</td><td>1.00</td></tr>
-<tr><td>海地</td><td>0.80</td><td>0.95</td><td>0.92</td><td>0.95</td></tr>
-<tr><td>苏格兰</td><td>0.82</td><td>0.95</td><td>0.95</td><td>0.90</td></tr>
-<tr><td>巴西</td><td>0.94</td><td>1.05</td><td>0.92</td><td>1.00</td></tr>
-<tr><td>捷克</td><td>0.87</td><td>0.95</td><td>0.95</td><td>0.95</td></tr>
-<tr><td>墨西哥</td><td>0.97</td><td>1.05</td><td>0.95</td><td>1.00</td></tr>
-<tr><td>南非</td><td>0.78</td><td>0.95</td><td>0.95</td><td>0.90</td></tr>
-<tr><td>韩国</td><td>0.92</td><td>1.00</td><td>0.88</td><td>1.00</td></tr>
-</tbody></table>
-<h4>2.3 蒙特卡洛设置</h4>
-<ul>
-<li><strong>模拟次数</strong>：10,000次</li>
-<li><strong>随机种子</strong>：固定 (保证可重复)</li>
-<li><strong>xG分布</strong>：Poisson($\lambda$)</li>
-<li><strong>输出</strong>：每场比赛完整比分概率分布</li>
+<li><strong>Group A</strong>：墨西哥 6 / 韩国 3 / 捷克 1 / 南非 1 → MEX 锁定头名；KOR 需胜保第二</li>
+<li><strong>Group B</strong>：加拿大 4 / 瑞士 4 / 波黑 1 / 卡塔尔 1 → CAN-SUI 头名之争；BIH-QAT 荣誉战</li>
+<li><strong>Group C</strong>：巴西 4 / 摩洛哥 4 / 苏格兰 3 / 海地 0 → MAR-BRA 头名之争；SCO 需胜+看脸色</li>
 </ul>
 <hr>
-<h3>3. 详细比分概率分布</h3>
-<h4>3.1 🇨🇭瑞士 vs 🇨🇦加拿大 (B组 03:00)</h4>
-<p><strong>最可能比分</strong>：</p>
-<ul>
-<li>🥇 加拿大 2-1 瑞士 (~13%)</li>
-<li>🥈 瑞士 2-1 加拿大 (~11%)</li>
-<li>🥉 加拿大 1-0 瑞士 (~10%)</li>
-<li>4. 1-1 平局 (~9%)</li>
-<li>5. 瑞士 1-0 加拿大 (~8%)</li>
-</ul>
-<p><strong>比分概率分布</strong>（蒙特卡洛 10,000次模拟）：</p>
+<h3>1. 瑞士 vs 加拿大（BC Place 温哥华）</h3>
+<h4>1.1 攻防效能参数评估（Lambda 期望）</h4>
 <table><thead>
-<tr><th>瑞士进球 \ 加拿大进球</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
+<tr><th>球队</th><th>FIFA 排名</th><th>FIFA 积分</th><th>攻击系数 α</th><th>防守系数 β</th><th>场均进球</th><th>场均失球</th></tr>
 </thead><tbody>
-<tr><td>0</td><td>5%</td><td>10%</td><td>9%</td><td>5%</td><td>2%</td></tr>
-<tr><td>1</td><td>8%</td><td>9%</td><td>7%</td><td>4%</td><td>2%</td></tr>
-<tr><td>2</td><td>11%</td><td>13%</td><td>6%</td><td>3%</td><td>1%</td></tr>
-<tr><td>3</td><td>5%</td><td>4%</td><td>2%</td><td>1%</td><td><1%</td></tr>
-<tr><td>4+</td><td>2%</td><td>1%</td><td><1%</td><td><1%</td><td><1%</td></tr>
+<tr><td>🇨🇭 瑞士</td><td>19</td><td>1645.21</td><td>1.600</td><td>0.756</td><td>2.00</td><td>0.80</td></tr>
+<tr><td>🇨🇦 加拿大</td><td>30</td><td>1570.55</td><td>1.600</td><td>0.795</td><td>2.40</td><td>0.60</td></tr>
 </tbody></table>
-<p><strong>期望总进球</strong>：2.4 球（瑞士 1.0-1.4 + 加拿大 1.4-1.9）</p>
-<p><strong>关键观察</strong>：</p>
 <ul>
-<li>这是本轮最胶着的比赛——Schär 2黄累黄停赛风险 vs 加拿大主场优势</li>
-<li>加拿大David/Davies攻击组合 + Schär缺阵对加拿大有"半个+1球"优势</li>
-<li>加拿大赢球38%略高于瑞士34%，但接近平局(28%)</li>
+<li><strong>λ 瑞士</strong> = 1.600 × 0.795 × 1.05 (主场) × 1.08 × 0.99 × 1.0 × 1.3 = <strong>1.855 球</strong></li>
+<li><strong>λ 加拿大</strong> = 1.600 × 0.756 × 1.12 × 0.98 × 1.3 = <strong>1.760 球</strong></li>
 </ul>
-<h4>3.2 🇧🇦波黑 vs 🇶🇦卡塔尔 (B组 03:00)</h4>
-<p><strong>最可能比分</strong>：</p>
+<p><strong>关键变数</strong>：加拿大作为东道主在 BC Place（温哥华）拥有满场主场优势，MD1 已 5-0 屠杀卡塔尔，攻击力恐怖（场均 2.4 球）。瑞士防守端稳定（场均 0.8 失球），但 Xhaka-Embolo 中场线面对 Davies-David 反击组合压力较大。</p>
+<h4>1.2 战术动态博弈与临界点分析</h4>
+<p><strong>积分形势</strong>：两队同积 4 分，加拿大净胜球 +6 vs 瑞士 +3，<strong>平局加拿大锁定头名</strong>。  </p>
 <ul>
-<li>🥇 波黑 2-1 卡塔尔 (~14%)</li>
-<li>🥈 波黑 1-0 卡塔尔 (~12%)</li>
-<li>🥉 波黑 2-0 卡塔尔 (~11%)</li>
-<li>4. 1-1 平局 (~10%)</li>
-<li>5. 波黑 3-1 卡塔尔 (~7%)</li>
+<li>瑞士必须赢才能拿头名（避免 16 强碰巴西/摩洛哥）  </li>
+<li>加拿大只需平即可，但主帅 Marsch 风格激进，倾向主动出击</li>
 </ul>
-<p><strong>比分概率分布</strong>：</p>
-<table><thead>
-<tr><th>波黑进球 \ 卡塔尔进球</th><th>0</th><th>1</th><th>2</th><th>3+</th></tr>
-</thead><tbody>
-<tr><td>0</td><td>4%</td><td>7%</td><td>4%</td><td>1%</td></tr>
-<tr><td>1</td><td>12%</td><td>10%</td><td>5%</td><td>2%</td></tr>
-<tr><td>2</td><td>11%</td><td>14%</td><td>6%</td><td>2%</td></tr>
-<tr><td>3</td><td>6%</td><td>7%</td><td>3%</td><td>1%</td></tr>
-<tr><td>4+</td><td>2%</td><td>2%</td><td>1%</td><td><1%</td></tr>
-</tbody></table>
-<p><strong>期望总进球</strong>：2.5 球（波黑 1.5-2.0 + 卡塔尔 0.8-1.2）</p>
-<p><strong>关键观察</strong>：</p>
+<p><strong>破密集防守</strong>：瑞士若摆大巴，加拿大需要利用边路 Davies 速度拉开空间 → 预期上半场 1-0 加拿大后，瑞士被迫压上 → 反击空间增大。  </p>
+<p><strong>防守临界点</strong>：瑞士中卫线面对 David 单兵突击时协保护暴露，预期上半场第 30-45 分钟为高危窗口。</p>
+<h4>1.3 蒙特卡洛多分支概率推演（10,000 次）</h4>
+<p><strong>分支 A：常规赛果</strong>（最可能 50.6% 概率区间）  </p>
 <ul>
-<li>波黑Džeko/Hajradinović核心 + 卡塔尔Al-Haydos/Muntari老将</li>
-<li>波黑必须赢(否则几乎出局)，动机强</li>
-<li>波黑赢球52% > 卡塔尔赢球21%，是本轮胜负倾向最明显比赛之一</li>
+<li><strong>1-1 (8.4%)</strong> / <strong>2-1 (8.4%)</strong> / <strong>1-2 (7.9%)</strong> / 2-2 (6.6%)  </li>
+<li><strong>推演逻辑</strong>：两队进攻 β 都超过 1.6，对攻场面频现；瑞士若先进球 1-0（5.1%），加拿大会立即压上 → 1-1 / 1-2 后续；反之亦然</li>
 </ul>
-<h4>3.3 🇲🇦摩洛哥 vs 🇭🇹海地 (C组 06:00)</h4>
-<p><strong>最可能比分</strong>：</p>
+<p><strong>分支 B：冷门结果</strong>（触发条件 52.7%）  </p>
 <ul>
-<li>🥇 摩洛哥 3-0 海地 (~18%)</li>
-<li>🥈 摩洛哥 2-0 海地 (~16%)</li>
-<li>🥉 摩洛哥 4-0 海地 (~12%)</li>
-<li>4. 摩洛哥 1-0 海地 (~10%)</li>
-<li>5. 摩洛哥 3-1 海地 (~7%)</li>
+<li><strong>1-1</strong> 平局收场（最频冷门）  </li>
+<li><strong>触发场景</strong>：瑞士主动放弃控球打反击 + 加拿大 David 缺阵传闻 → 双方都踢得保守</li>
 </ul>
-<p><strong>比分概率分布</strong>：</p>
-<table><thead>
-<tr><th>摩洛哥进球 \ 海地球进</th><th>0</th><th>1</th><th>2+</th></tr>
-</thead><tbody>
-<tr><td>0</td><td>1%</td><td>1%</td><td><1%</td></tr>
-<tr><td>1</td><td>10%</td><td>4%</td><td>1%</td></tr>
-<tr><td>2</td><td>16%</td><td>7%</td><td>2%</td></tr>
-<tr><td>3</td><td>18%</td><td>8%</td><td>2%</td></tr>
-<tr><td>4+</td><td>14%</td><td>5%</td><td>1%</td></tr>
-</tbody></table>
-<p><strong>期望总进球</strong>：3.0 球（摩洛哥 2.0-2.7 + 海地 0.3-0.6）</p>
-<p><strong>关键观察</strong>：</p>
+<p><strong>分支 C：大比分狂胜</strong>（28.0%）  </p>
 <ul>
-<li>这是本轮最"一边倒"比赛——FIFA#11 vs #87 + 2022四强 vs 首参赛</li>
-<li>摩洛哥Saibari(2场2球) + 海地门将Placide累黄</li>
-<li>摩洛哥赢球87% > 海地赢球4%，是本轮胜负倾向最明显比赛</li>
+<li><strong>3-0 加拿大 / 3-1 加拿大</strong>（约 7.5% 累计）  </li>
+<li><strong>触发条件</strong>：上半场加拿大早早 2-0 领先（David 反击 + Davies 边路传中），瑞士心态崩盘</li>
 </ul>
-<h4>3.4 🏴󠁧󠁢󠁳󠁣󠁴󠁿苏格兰 vs 🇧🇷巴西 (C组 06:00)</h4>
-<p><strong>最可能比分</strong>：</p>
-<ul>
-<li>🥇 巴西 2-0 苏格兰 (~15%)</li>
-<li>🥈 巴西 2-1 苏格兰 (~13%)</li>
-<li>🥉 巴西 1-0 苏格兰 (~12%)</li>
-<li>4. 巴西 3-0 苏格兰 (~10%)</li>
-<li>5. 巴西 3-1 苏格兰 (~7%)</li>
-</ul>
-<p><strong>比分概率分布</strong>：</p>
+<h4>1.4 最终精算结论</h4>
 <table><thead>
-<tr><th>巴西进球 \ 苏格兰进球</th><th>0</th><th>1</th><th>2+</th></tr>
+<tr><th>指标</th><th>概率</th></tr>
 </thead><tbody>
-<tr><td>0</td><td>2%</td><td>1%</td><td><1%</td></tr>
-<tr><td>1</td><td>12%</td><td>8%</td><td>3%</td></tr>
-<tr><td>2</td><td>15%</td><td>13%</td><td>5%</td></tr>
-<tr><td>3</td><td>10%</td><td>7%</td><td>3%</td></tr>
-<tr><td>4+</td><td>6%</td><td>4%</td><td>2%</td></tr>
+<tr><td>🇬🇧 瑞士胜</td><td><strong>41.8%</strong></td></tr>
+<tr><td>平局</td><td>21.2%</td></tr>
+<tr><td>🇨🇦 加拿大胜</td><td><strong>36.9%</strong></td></tr>
+<tr><td>大于 2.5 球</td><td><strong>70.5%</strong></td></tr>
+<tr><td>小于 2.5 球</td><td>29.4%</td></tr>
 </tbody></table>
-<p><strong>期望总进球</strong>：2.7 球（巴西 1.8-2.5 + 苏格兰 0.6-0.9）</p>
-<p><strong>关键观察</strong>：</p>
-<ul>
-<li>巴西Cunha(2场3球)状态爆表 + Alisson世界级门将</li>
-<li>Ancelotti为末轮对摩洛哥留力，可能让Bruno Guimarães/Militão累黄核心休息</li>
-<li>苏格兰必须赢(否则几乎出局)，但实力差距明显</li>
-<li>巴西赢球71% > 苏格兰赢球11%，胜负倾向明显</li>
-</ul>
-<h4>3.5 🇨🇿捷克 vs 🇲🇽墨西哥 (A组 09:00)</h4>
-<p><strong>最可能比分</strong>：</p>
-<ul>
-<li>🥇 墨西哥 2-0 捷克 (~14%)</li>
-<li>🥈 墨西哥 1-0 捷克 (~13%)</li>
-<li>🥉 墨西哥 2-1 捷克 (~11%)</li>
-<li>4. 墨西哥 3-0 捷克 (~9%)</li>
-<li>5. 1-1 平局 (~8%)</li>
-</ul>
-<p><strong>比分概率分布</strong>：</p>
-<table><thead>
-<tr><th>墨西哥进球 \ 捷克林进球</th><th>0</th><th>1</th><th>2+</th></tr>
-</thead><tbody>
-<tr><td>0</td><td>4%</td><td>4%</td><td>1%</td></tr>
-<tr><td>1</td><td>13%</td><td>8%</td><td>3%</td></tr>
-<tr><td>2</td><td>14%</td><td>11%</td><td>4%</td></tr>
-<tr><td>3</td><td>9%</td><td>7%</td><td>3%</td></tr>
-<tr><td>4+</td><td>5%</td><td>3%</td><td>1%</td></tr>
-</tbody></table>
-<p><strong>期望总进球</strong>：2.6 球（墨西哥 1.6-2.3 + 捷克 0.7-1.1）</p>
-<p><strong>关键观察</strong>：</p>
-<ul>
-<li>这是本轮"主场+海拔"优势最明显比赛——Azteca海拔2,240m</li>
-<li>墨西哥2场0失球 + Ochoa 5届世界杯传奇</li>
-<li>捷克Souček累黄 + 必赢压力</li>
-<li>墨西哥赢球65% > 捷克赢球13%，胜负倾向明显</li>
-</ul>
-<h4>3.6 🇿🇦南非 vs 🇰🇷韩国 (A组 09:00)</h4>
-<p><strong>最可能比分</strong>：</p>
-<ul>
-<li>🥇 韩国 2-1 南非 (~14%)</li>
-<li>🥈 韩国 1-0 南非 (~13%)</li>
-<li>🥉 韩国 2-0 南非 (~12%)</li>
-<li>4. 1-1 平局 (~11%)</li>
-<li>5. 韩国 3-1 南非 (~8%)</li>
-</ul>
-<p><strong>比分概率分布</strong>：</p>
-<table><thead>
-<tr><th>韩国进球 \ 南非进球</th><th>0</th><th>1</th><th>2+</th></tr>
-</thead><tbody>
-<tr><td>0</td><td>5%</td><td>4%</td><td>1%</td></tr>
-<tr><td>1</td><td>13%</td><td>9%</td><td>3%</td></tr>
-<tr><td>2</td><td>12%</td><td>14%</td><td>5%</td></tr>
-<tr><td>3</td><td>7%</td><td>8%</td><td>3%</td></tr>
-<tr><td>4+</td><td>3%</td><td>3%</td><td>1%</td></tr>
-</tbody></table>
-<p><strong>期望总进球</strong>：2.4 球（韩国 1.4-2.0 + 南非 0.6-0.9）</p>
-<p><strong>关键观察</strong>：</p>
-<ul>
-<li>韩国Son核心 + 5名累黄(Kim Min-jae/Hwang In-beom/Lee Jae-sung/Hwang Hee-chan/Cho Gue-sung)末轮停赛风险</li>
-<li>Bento本场可能让核心防守后移，进攻效率下降</li>
-<li>南非Percy Tau/Makgopa核心 + 必须赢动机</li>
-<li>韩国赢球62% > 南非赢球15%，胜负倾向中-高</li>
-</ul>
-<hr>
-<h3>4. 关键趋势与洞察</h3>
-<h4>4.1 本轮"教练等级差最大"对决</h4>
-<table><thead>
-<tr><th>比赛</th><th>主帅A</th><th>主帅B</th><th>等级差</th></tr>
-</thead><tbody>
-<tr><td>苏格兰 vs 巴西</td><td>Clarke (B级 6.8)</td><td>Ancelotti (S+级 9.0)</td><td>2.2</td></tr>
-<tr><td>摩洛哥 vs 海地</td><td>Regragui (S级 8.5)</td><td>Migne (C级 5.0)</td><td>3.5</td></tr>
-<tr><td>捷克 vs 墨西哥</td><td>Šilhavý (B-级 5.8)</td><td>Aguirre (A级 7.8)</td><td>2.0</td></tr>
-<tr><td>南非 vs 韩国</td><td>Broos (C+级 5.5)</td><td>Bento (A-级 7.5)</td><td>2.0</td></tr>
-</tbody></table>
-<p><strong>结论</strong>：摩洛哥 vs 海地(差距3.5)是本轮教练博弈最悬殊对决。</p>
-<h4>4.2 本轮"末轮累黄停赛"风险评估</h4>
-<table><thead>
-<tr><th>球队</th><th>累黄核心数</th><th>末轮对</th><th>风险等级</th></tr>
-</thead><tbody>
-<tr><td>韩国</td><td>5</td><td>墨西哥</td><td><span style="color:red">高</span></td></tr>
-<tr><td>巴西</td><td>2</td><td>摩洛哥</td><td>中</td></tr>
-<tr><td>墨西哥</td><td>1</td><td>韩国</td><td>低</td></tr>
-<tr><td>摩洛哥</td><td>1</td><td>苏格兰</td><td>低</td></tr>
-<tr><td>捷克</td><td>3</td><td>南非</td><td>中</td></tr>
-<tr><td>加拿大</td><td>0</td><td>克罗地亚</td><td>无</td></tr>
-<tr><td>苏格兰</td><td>2</td><td>摩洛哥</td><td>中</td></tr>
-<tr><td>海地</td><td>1</td><td>巴西</td><td>低</td></tr>
-<tr><td>卡塔尔</td><td>0</td><td>--</td><td>无</td></tr>
-<tr><td>南非</td><td>2</td><td>捷克</td><td>中</td></tr>
-<tr><td>瑞士</td><td>0</td><td>--</td><td>无</td></tr>
-<tr><td>波黑</td><td>0</td><td>--</td><td>无</td></tr>
-</tbody></table>
-<p><strong>结论</strong>：韩国是本轮累黄停赛风险最高的球队(5名核心)，末轮对墨西哥必崩盘。</p>
-<h4>4.3 本轮"净胜球博弈"分析</h4>
-<table><thead>
-<tr><th>比赛</th><th>强队</th><th>净胜球需求</th><th>实际预测</th></tr>
-</thead><tbody>
-<tr><td>苏格兰 vs 巴西</td><td>苏格兰</td><td>大胜(净胜球决定第二)</td><td>巴西 2-0</td></tr>
-<tr><td>摩洛哥 vs 海地</td><td>摩洛哥</td><td>不需(已小组第一)</td><td>摩洛哥 3-0</td></tr>
-<tr><td>捷克 vs 墨西哥</td><td>捷克</td><td>不需(需赢)</td><td>墨西哥 2-0</td></tr>
-<tr><td>南非 vs 韩国</td><td>南非</td><td>不需(需赢)</td><td>韩国 2-1</td></tr>
-<tr><td>瑞士 vs 加拿大</td><td>加拿大</td><td>需大胜(净胜球决定第二)</td><td>加拿大 2-1</td></tr>
-<tr><td>波黑 vs 卡塔尔</td><td>波黑</td><td>需赢(净胜球决定第二)</td><td>波黑 2-1</td></tr>
-</tbody></table>
-<p><strong>结论</strong>：本轮6场比赛中，4场有"净胜球"博弈需求，可能导致比赛更开放。</p>
-<hr>
-<h3>5. 蒙特卡洛模拟输出总结</h3>
-<h4>5.1 总进球预测分布</h4>
-<table><thead>
-<tr><th>比赛</th><th>0球</th><th>1球</th><th>2球</th><th>3球</th><th>4球</th><th>5+球</th><th>期望总进球</th></tr>
-</thead><tbody>
-<tr><td>瑞士 vs 加拿大</td><td>4%</td><td>14%</td><td>23%</td><td>22%</td><td>17%</td><td>20%</td><td>2.4</td></tr>
-<tr><td>波黑 vs 卡塔尔</td><td>3%</td><td>12%</td><td>22%</td><td>24%</td><td>19%</td><td>20%</td><td>2.5</td></tr>
-<tr><td>摩洛哥 vs 海地</td><td>1%</td><td>4%</td><td>14%</td><td>22%</td><td>23%</td><td>36%</td><td>3.0</td></tr>
-<tr><td>苏格兰 vs 巴西</td><td>2%</td><td>7%</td><td>19%</td><td>24%</td><td>21%</td><td>27%</td><td>2.7</td></tr>
-<tr><td>捷克 vs 墨西哥</td><td>4%</td><td>12%</td><td>22%</td><td>24%</td><td>19%</td><td>19%</td><td>2.6</td></tr>
-<tr><td>南非 vs 韩国</td><td>5%</td><td>14%</td><td>22%</td><td>23%</td><td>18%</td><td>18%</td><td>2.4</td></tr>
-</tbody></table>
-<p><strong>本轮总进球期望</strong>：15.6 球（场均2.6 球），属于"中等进球"轮次。</p>
-<h4>5.2 概率排序（最强 vs 最弱）</h4>
-<table><thead>
-<tr><th>排序</th><th>比赛</th><th>强队胜率</th><th>强队</th><th>弱队</th></tr>
-</thead><tbody>
-<tr><td>1</td><td>摩洛哥 vs 海地</td><td>87%</td><td>摩洛哥</td><td>海地</td></tr>
-<tr><td>2</td><td>苏格兰 vs 巴西</td><td>71%</td><td>巴西</td><td>苏格兰</td></tr>
-<tr><td>3</td><td>捷克 vs 墨西哥</td><td>65%</td><td>墨西哥</td><td>捷克</td></tr>
-<tr><td>4</td><td>南非 vs 韩国</td><td>62%</td><td>韩国</td><td>南非</td></tr>
-<tr><td>5</td><td>波黑 vs 卡塔尔</td><td>52%</td><td>波黑</td><td>卡塔尔</td></tr>
-<tr><td>6</td><td>瑞士 vs 加拿大</td><td>38%</td><td>加拿大</td><td>瑞士</td></tr>
-</tbody></table>
-<h4>5.3 出现平局概率排序</h4>
-<table><thead>
-<tr><th>排序</th><th>比赛</th><th>平局概率</th><th>备注</th></tr>
-</thead><tbody>
-<tr><td>1</td><td>瑞士 vs 加拿大</td><td>28%</td><td>实力最接近</td></tr>
-<tr><td>2</td><td>波黑 vs 卡塔尔</td><td>27%</td><td>双方必赢动机</td></tr>
-<tr><td>3</td><td>南非 vs 韩国</td><td>23%</td><td>韩国累黄风险</td></tr>
-<tr><td>4</td><td>捷克 vs 墨西哥</td><td>22%</td><td>海拔影响</td></tr>
-<tr><td>5</td><td>苏格兰 vs 巴西</td><td>18%</td><td>巴西轮换</td></tr>
-<tr><td>6</td><td>摩洛哥 vs 海地</td><td>9%</td><td>实力悬殊</td></tr>
-</tbody></table>
-<hr>
-<h3>6. 总结</h3>
-<p><strong>本轮6场比赛预测特征</strong>：</p>
+<p><strong>推荐比分</strong>（按概率排序）：</p>
 <ol>
-<li><strong>5场"实力差距明显"</strong>：摩洛哥-海地、苏格兰-巴西、捷克-墨西哥、南非-韩国、波黑-卡塔尔都有明显强弱之分</li>
-<li><strong>1场"实力接近"</strong>：瑞士-加拿大是最胶着比赛，B组头名争夺战</li>
-<li><strong>累黄博弈关键</strong>：韩国5名累黄末轮停盘风险最高</li>
-<li><strong>教练等级差最大</strong>：摩洛哥-海地(S级 vs C级 差距3.5)</li>
-<li><strong>海拔优势最大</strong>：捷克-墨西哥(Azteca海拔2,240m)</li>
-<li><strong>本轮总进球期望</strong>：15.6 球（场均2.6球）</li>
+<li><strong>1-1</strong> (8.4%) — 东道主保守收官、瑞士保住头名逻辑下最高频比分</li>
+<li><strong>2-1 瑞士</strong> (8.4%) — 瑞士反击战术破袭</li>
+<li><strong>1-2 加拿大</strong> (7.9%) — 主场气势 + David 终结</li>
 </ol>
-<p><strong>最大不确定性来源</strong>：</p>
+<p><strong>核心高光球员</strong>：🇨🇭 <strong>Xhaka</strong>（中场调度）vs 🇨🇦 <strong>David</strong>（前锋，单刀效率）+ <strong>Davies</strong>（左路走廊）  </p>
+<p><strong>战术变数</strong>：Marsch 排兵 4-3-3 强攻 vs Yakın 4-2-3-1 防守反击。</p>
+<hr>
+<h3>2. 波黑 vs 卡塔尔（Levi's Stadium 圣克拉拉）</h3>
+<h4>2.1 攻防效能参数评估</h4>
+<table><thead>
+<tr><th>球队</th><th>FIFA 排名</th><th>FIFA 积分</th><th>攻击系数 α</th><th>防守系数 β</th><th>场均进球</th><th>场均失球</th></tr>
+</thead><tbody>
+<tr><td>🇧🇦 波黑</td><td>65</td><td>1400.04</td><td>0.691</td><td>1.598</td><td>1.00</td><td>1.80</td></tr>
+<tr><td>🇶🇦 卡塔尔</td><td>55</td><td>1436.18</td><td>0.576</td><td>1.800</td><td>0.40</td><td>2.40</td></tr>
+</tbody></table>
+<ul>
+<li><strong>λ 波黑</strong> = 0.691 × 1.800 × 1.10 × 0.98 × 0.98 × 1.3 = <strong>1.708 球</strong></li>
+<li><strong>λ 卡塔尔</strong> = 0.576 × 1.598 × 1.05 × 0.98 × 1.3 = <strong>1.231 球</strong></li>
+</ul>
+<p><strong>关键变数</strong>：双方都已 1 分被淘汰。波黑有 Dzeko 老将谢幕战动力，但 MD1+MD2 仅进 2 球（0-3 瑞士、1-2 卡塔尔）。卡塔尔同样疲软，2 战 1 球进 7 球失，Afif 状态低迷。</p>
+<h4>2.2 战术动态博弈与临界点分析</h4>
+<p><strong>双方已无晋级压力</strong>，纯粹荣誉战。  </p>
+<ul>
+<li>波黑主帅可能给 Dzeko 首发告别演出 → 进攻更直接  </li>
+<li>卡塔尔可能大规模轮换，启用年轻球员</li>
+</ul>
+<p><strong>破密集防守</strong>：卡塔尔若全员退防（5-4-1），波黑需要定位球 + 边路传中。  </p>
+<p><strong>防守临界点</strong>：两队防守 β 都超过 1.5，预期开放型对攻，但进攻乏力 → 进球不会太多。</p>
+<h4>2.3 蒙特卡洛多分支概率推演</h4>
+<p><strong>分支 A：常规赛果</strong>（62.5% 区间）  </p>
+<ul>
+<li><strong>1-1 (10.6%)</strong> / <strong>2-1 波黑 (10.0%)</strong> / <strong>1-0 波黑 (9.2%)</strong> / 2-0 波黑 (7.5%)  </li>
+<li><strong>推演逻辑</strong>：波黑进攻稍强但卡塔尔不会大败，最可能小比分；1-1 概率最高因双方都不冒险</li>
+</ul>
+<p><strong>分支 B：冷门结果</strong>（43.5%）  </p>
+<ul>
+<li><strong>1-2 卡塔尔胜</strong> (6.6%) — 触发条件：Afif 突然回光返照</li>
+<li><strong>0-1 卡塔尔冷门</strong> (6.5%)</li>
+</ul>
+<p><strong>分支 C：大比分</strong>（19.3%）  </p>
+<ul>
+<li><strong>3-0 波黑 / 3-1 波黑</strong>  </li>
+<li><strong>触发</strong>：Dzeko 帽子戏法谢幕（5% 以下）</li>
+</ul>
+<h4>2.4 最终精算结论</h4>
+<table><thead>
+<tr><th>指标</th><th>概率</th></tr>
+</thead><tbody>
+<tr><td>🇧🇦 波黑胜</td><td><strong>49.0%</strong></td></tr>
+<tr><td>平局</td><td>23.3%</td></tr>
+<tr><td>🇶🇦 卡塔尔胜</td><td>27.7%</td></tr>
+<tr><td>大于 2.5 球</td><td>56.8%</td></tr>
+<tr><td>小于 2.5 球</td><td>43.2%</td></tr>
+</tbody></table>
+<p><strong>推荐比分</strong>：</p>
 <ol>
-<li>韩国5名累黄(末轮对墨西哥停盘风险) → 进攻效率下降</li>
-<li>Ancelotti为末轮对摩洛哥留力 → 巴西本场可能让核心休息</li>
-<li>瑞士Schär 2黄累黄停盘风险 → 加拿大"半个+1球"优势</li>
-<li>蒙特雷海拔540m → 南非体能压力</li>
+<li><strong>1-1</strong> (10.6%) — 双方握手言和的最可能</li>
+<li><strong>2-1 波黑</strong> (10.0%) — Dzeko 告别演出</li>
+<li><strong>1-0 波黑</strong> (9.2%) — 实用主义小胜</li>
 </ol>
-<p><strong>模型局限</strong>：</p>
+<p><strong>核心高光球员**：🇧🇦 **Dzeko**（最后一届世界杯）+ **Pjanic**（中场组织）vs 🇶🇦 **Afif** + **Almoez Ali</strong></p>
+<p><strong>战术变数</strong>：双方都会踢得放松，防守端专注度下降，进球数会高于紧张比赛。</p>
+<hr>
+<h3>3. 苏格兰 vs 巴西（Hard Rock Stadium 迈阿密）</h3>
+<h4>3.1 攻防效能参数评估</h4>
+<table><thead>
+<tr><th>球队</th><th>FIFA 排名</th><th>FIFA 积分</th><th>攻击系数 α</th><th>防守系数 β</th><th>场均进球</th><th>场均失球</th></tr>
+</thead><tbody>
+<tr><td>🏴 苏格兰</td><td>43</td><td>1495.41</td><td>0.432</td><td>0.803</td><td>0.80</td><td>1.00</td></tr>
+<tr><td>🇧🇷 巴西</td><td>6</td><td>1763.94</td><td>1.461</td><td>0.319</td><td>1.80</td><td>0.40</td></tr>
+</tbody></table>
+<ul>
+<li><strong>λ 苏格兰</strong> = 0.432 × 0.319 × 1.0 × 1.20 × 0.97 × 0.95 × 1.3 = <strong>0.198 球</strong></li>
+<li><strong>λ 巴西</strong> = 1.461 × 0.803 × 1.05 × 0.96 × 1.3 = <strong>1.537 球</strong></li>
+</ul>
+<p><strong>关键变数</strong>：苏格兰必须赢且需要摩洛哥不胜海地。巴西已 4 分基本锁定头名，主帅 Dorival 可能大规模轮换（休息主力备战 16 强），但即便如此二线阵容仍强于苏格兰。</p>
+<h4>3.2 战术动态博弈与临界点分析</h4>
+<p><strong>迈阿密 6 月晚间高温高湿</strong>（35°C+ 体感），对偏好身体对抗的苏格兰是巨大劣势。  </p>
+<ul>
+<li>苏格兰的 5-4-1 防守阵型在过去两场已经暴露出被快速边路击穿的问题  </li>
+<li>巴西二线阵容依然有 Rodrygo、Endrick、Martinelli 等顶级攻击手</li>
+</ul>
+<p><strong>破密集防守</strong>：苏格兰若全员退防，巴西需要耐心传导 + 远射。  </p>
+<p><strong>防守临界点</strong>：苏格兰中卫 Hendry-Tierney 转身慢，预期被巴西反击吊打。</p>
+<h4>3.3 蒙特卡洛多分支概率推演</h4>
+<p><strong>分支 A：常规赛果</strong>（69.7% 区间）  </p>
+<ul>
+<li><strong>0-1 (27.0%)</strong> / <strong>0-2 (20.5%)</strong> / <strong>0-0 (17.5%)</strong> / <strong>0-3 (10.8%)</strong>  </li>
+<li><strong>推演逻辑</strong>：苏格兰进攻系数仅 0.43，进球数高度压缩；即便轮换，巴西二线仍轻松打入 1-2 球</li>
+</ul>
+<p><strong>分支 B：冷门结果</strong>（27.6%）  </p>
+<ul>
+<li><strong>0-0 平局</strong>（17.5% 单一最高分） — 触发条件：巴西轮换过度 + 苏格兰死守</li>
+<li><strong>1-0 苏格兰</strong>（3.6%）— 触发：McTominay 头球破门 + 巴西进攻哑火（概率极低）</li>
+</ul>
+<p><strong>分支 C：大比分</strong>（18.0%）  </p>
+<ul>
+<li><strong>0-3 巴西</strong> (10.8%) / <strong>0-4 巴西</strong> (3.7%) / <strong>0-5</strong> (1.3%)  </li>
+<li><strong>触发</strong>：Endrick 替补爆发或苏格兰上半场丢球后崩盘</li>
+</ul>
+<h4>3.4 最终精算结论</h4>
+<table><thead>
+<tr><th>指标</th><th>概率</th></tr>
+</thead><tbody>
+<tr><td>🏴 苏格兰胜</td><td><strong>4.8%</strong></td></tr>
+<tr><td>平局</td><td>23.3%</td></tr>
+<tr><td>🇧🇷 巴西胜</td><td><strong>71.9%</strong></td></tr>
+<tr><td>大于 2.5 球</td><td>25.6%</td></tr>
+<tr><td>小于 2.5 球</td><td><strong>74.4%</strong></td></tr>
+</tbody></table>
+<p><strong>推荐比分</strong>：</p>
 <ol>
-<li>累黄影响无法精准量化</li>
-<li>主帅临场调整无法预测</li>
-<li>海拔/天气影响为定性评估</li>
-<li>xG数据样本小(每队2场)</li>
+<li><strong>0-1 巴西</strong> (27.0%) — 常规最低消费，巴西控场小胜</li>
+<li><strong>0-2 巴西</strong> (20.5%) — 巴西二线火力</li>
+<li><strong>0-0 平局</strong> (17.5%) — 巴西完全轮换的冷门选项</li>
+</ol>
+<p><strong>核心高光球员</strong>：🏴 <strong>McTominay</strong>（定位球威胁）vs 🇧🇷 <strong>Rodrygo</strong> + <strong>Endrick</strong>（二线火力）  </p>
+<p><strong>战术变数</strong>：Dorival 是否完全轮换？若轮换 6+ 人，0-0 概率上升至 25%。</p>
+<hr>
+<h3>4. 摩洛哥 vs 海地（Mercedes-Benz Stadium 亚特兰大）</h3>
+<h4>4.1 攻防效能参数评估</h4>
+<table><thead>
+<tr><th>球队</th><th>FIFA 排名</th><th>FIFA 积分</th><th>攻击系数 α</th><th>防守系数 β</th><th>场均进球</th><th>场均失球</th></tr>
+</thead><tbody>
+<tr><td>🇲🇦 摩洛哥</td><td>8</td><td>1753.92</td><td>1.088</td><td>0.324</td><td>1.20</td><td>0.40</td></tr>
+<tr><td>🇭🇹 海地</td><td>83</td><td>1294.77</td><td>0.300</td><td>1.260</td><td>0.20</td><td>2.20</td></tr>
+</tbody></table>
+<ul>
+<li><strong>λ 摩洛哥</strong> = 1.088 × 1.260 × 1.0 × 1.05 × 0.97 × 0.98 × 1.3 = <strong>1.778 球</strong></li>
+<li><strong>λ 海地</strong> = 0.300 × 0.324 × 1.0 × 1.15 × 1.0 × 1.3 = <strong>0.145 球</strong></li>
+</ul>
+<p><strong>关键变数</strong>：摩洛哥已 4 分基本锁定晋级（与巴西同分，净胜球 +1 vs +3，需要避免大败）。海地 0 分 0 进球被淘汰，纯粹荣誉战。亚特兰大穹顶球场，无天气影响。</p>
+<h4>4.2 战术动态博弈与临界点分析</h4>
+<p><strong>摩洛哥战略抉择</strong>：</p>
+<ul>
+<li>选项 A：全力争胜冲头名（避免 16 强碰其他组第二）</li>
+<li>选项 B：保留主力，大幅轮换（让主力备战 16 强）</li>
+</ul>
+<p><strong>破密集防守</strong>：海地若 5-4-1 龟缩，摩洛哥有 Hakimi、Ounahi、El Khannouss 等技术型球员，可通过短传渗透。  </p>
+<p><strong>防守临界点</strong>：海地唯一可能破门是定位球或反击偷袭。</p>
+<h4>4.3 蒙特卡洛多分支概率推演</h4>
+<p><strong>分支 A：常规赛果</strong>（72.0% 区间）  </p>
+<ul>
+<li><strong>1-0 摩洛哥 (26.1%)</strong> / <strong>2-0 摩洛哥 (23.2%)</strong> / <strong>0-0 (14.6%)</strong> / <strong>3-0 摩洛哥 (13.7%)</strong>  </li>
+<li><strong>推演逻辑</strong>：摩洛哥 λ=1.78 远高于海地 λ=0.15，控盘小胜最可能</li>
+</ul>
+<p><strong>分支 B：冷门结果</strong>（20.9%）  </p>
+<ul>
+<li><strong>0-0 平局</strong>（14.6% 最高冷门） — 触发：摩洛哥轮换 7+ 人 + 海地死守</li>
+<li><strong>海地胜</strong>（2.3%）— 极小概率的超级冷门</li>
+</ul>
+<p><strong>分支 C：大比分</strong>（24.4%）  </p>
+<ul>
+<li><strong>3-0 摩洛哥 (13.7%)</strong> / <strong>4-0 摩洛哥 (5.5%)</strong> / <strong>5-0 (2.3%)</strong>  </li>
+<li><strong>触发</strong>：摩洛哥不轮换 + 海地崩盘</li>
+</ul>
+<h4>4.4 最终精算结论</h4>
+<table><thead>
+<tr><th>指标</th><th>概率</th></tr>
+</thead><tbody>
+<tr><td>🇲🇦 摩洛哥胜</td><td><strong>78.9%</strong></td></tr>
+<tr><td>平局</td><td>18.8%</td></tr>
+<tr><td>🇭🇹 海地胜</td><td>2.3%</td></tr>
+<tr><td>大于 2.5 球</td><td>30.1%</td></tr>
+<tr><td>小于 2.5 球</td><td><strong>69.9%</strong></td></tr>
+</tbody></table>
+<p><strong>推荐比分</strong>：</p>
+<ol>
+<li><strong>1-0 摩洛哥</strong> (26.1%) — 常规最可能，控盘+定位球破门</li>
+<li><strong>2-0 摩洛哥</strong> (23.2%) — 摩洛哥完全释放进攻</li>
+<li><strong>3-0 摩洛哥</strong> (13.7%) — 若想冲头名则需多进球</li>
+</ol>
+<p><strong>核心高光球员</strong>：🇲🇦 <strong>Hakimi</strong>（右路走廊）+ <strong>El Khannouss</strong>（中场新星）vs 🇭🇹 <strong>Pierre</strong>（门将，超神发挥）  </p>
+<p><strong>战术变数</strong>：摩洛哥是否轮换？若不轮换，2-0/3-0 概率提升至 40%+。</p>
+<hr>
+<h3>5. 南非 vs 韩国（Estadio BBVA 蒙特雷）</h3>
+<h4>5.1 攻防效能参数评估</h4>
+<table><thead>
+<tr><th>球队</th><th>FIFA 排名</th><th>FIFA 积分</th><th>攻击系数 α</th><th>防守系数 β</th><th>场均进球</th><th>场均失球</th></tr>
+</thead><tbody>
+<tr><td>🇿🇦 南非</td><td>60</td><td>1419.65</td><td>0.624</td><td>1.366</td><td>0.40</td><td>1.60</td></tr>
+<tr><td>🇰🇷 韩国</td><td>25</td><td>1601.27</td><td>0.948</td><td>0.601</td><td>1.40</td><td>1.00</td></tr>
+</tbody></table>
+<ul>
+<li><strong>λ 南非</strong> = 0.624 × 0.601 × 1.0 × 1.08 × 1.0 × 0.97 × 1.3 = <strong>0.511 球</strong></li>
+<li><strong>λ 韩国</strong> = 0.948 × 1.366 × 1.0 × 1.15 × 0.98 × 1.3 = <strong>1.898 球</strong></li>
+</ul>
+<p><strong>关键变数</strong>：韩国积 3 分（净胜 0），与捷克同分但 MD1 已 0-2 输给墨西哥。<strong>韩国必须赢才能稳保小组第二</strong>（平局需看墨西哥脸色）。孙兴慜 + 李康仁是进攻双核。蒙特雷傍晚天气炎热 32°C，对双方都一般。</p>
+<h4>5.2 战术动态博弈与临界点分析</h4>
+<p><strong>韩国必胜心态</strong>：</p>
+<ul>
+<li>胜：6 分晋级，避开 16 强强敌</li>
+<li>平：3 分，可能以 4 个最好第三晋级（不安全）</li>
+<li>输：3 分，几乎肯定出局</li>
+</ul>
+<p><strong>破密集防守</strong>：南非会摆 5-4-1 死守（已 0-2 输墨西哥、1-1 平捷克），韩国需要远射 + 边路传中。  </p>
+<p><strong>防守临界点</strong>：南非反击依赖 Mokwena-Zwane 速度，但被淘汰后心态松懈；韩国李康仁的突破是破密集关键。</p>
+<h4>5.3 蒙特卡洛多分支概率推演</h4>
+<p><strong>分支 A：常规赛果</strong>（70.5% 区间）  </p>
+<ul>
+<li><strong>0-2 韩国 (16.7%)</strong> / <strong>0-1 韩国 (16.4%)</strong> / <strong>0-3 韩国 (10.4%)</strong> / <strong>0-0 (8.9%)</strong> / <strong>1-1 (8.3%)</strong> / <strong>1-2 韩国 (8.3%)</strong>  </li>
+<li><strong>推演逻辑</strong>：南非进攻系数仅 0.62，进球高度压缩；韩国控盘应能进 1-2 球</li>
+</ul>
+<p><strong>分支 B：冷门结果</strong>（26.5%）  </p>
+<ul>
+<li><strong>0-0 平局</strong> (8.9%) — 触发：韩国心态急躁 + 南非门将超神</li>
+<li><strong>1-0 南非</strong> (4.7%) — 极小冷门</li>
+</ul>
+<p><strong>分支 C：大比分</strong>（23.9%）  </p>
+<ul>
+<li><strong>0-3 韩国</strong> (10.4%) / <strong>0-4 韩国</strong> (4.5%) / <strong>0-5 韩国</strong> (2.0%)  </li>
+<li><strong>触发</strong>：孙兴慜爆发帽子戏法</li>
+</ul>
+<h4>5.4 最终精算结论</h4>
+<table><thead>
+<tr><th>指标</th><th>概率</th></tr>
+</thead><tbody>
+<tr><td>🇿🇦 南非胜</td><td>9.2%</td></tr>
+<tr><td>平局</td><td>19.5%</td></tr>
+<tr><td>🇰🇷 韩国胜</td><td><strong>71.3%</strong></td></tr>
+<tr><td>大于 2.5 球</td><td>43.7%</td></tr>
+<tr><td>小于 2.5 球</td><td>56.3%</td></tr>
+</tbody></table>
+<p><strong>推荐比分</strong>：</p>
+<ol>
+<li><strong>0-2 韩国</strong> (16.7%) — 常规最可能，控盘+锁定胜局</li>
+<li><strong>0-1 韩国</strong> (16.4%) — 实用主义小胜</li>
+<li><strong>0-3 韩国</strong> (10.4%) — 若想争净胜球保晋级</li>
+</ol>
+<p><strong>核心高光球员</strong>：🇰🇷 <strong>孙兴慜</strong>（队长+射手）+ <strong>李康仁</strong>（中场核心）vs 🇿🇦 <strong>Mokwena</strong>（门将，多次神扑）  </p>
+<p><strong>战术变数</strong>：Hong Myung-bo 是否 4-3-3 强攻？若攻则 0-3 概率上升。</p>
+<hr>
+<h3>6. 捷克 vs 墨西哥（Estadio Banorte 墨西哥城）</h3>
+<h4>6.1 攻防效能参数评估</h4>
+<table><thead>
+<tr><th>球队</th><th>FIFA 排名</th><th>FIFA 积分</th><th>攻击系数 α</th><th>防守系数 β</th><th>场均进球</th><th>场均失球</th></tr>
+</thead><tbody>
+<tr><td>🇨🇿 捷克</td><td>41</td><td>1498.36</td><td>0.673</td><td>1.377</td><td>0.80</td><td>1.40</td></tr>
+<tr><td>🇲🇽 墨西哥</td><td>15</td><td>1684.86</td><td>1.586</td><td>0.360</td><td>1.80</td><td>0.20</td></tr>
+</tbody></table>
+<ul>
+<li><strong>λ 捷克</strong> = 0.673 × 0.360 × 1.0 × 1.08 × 0.98 × 0.96 × 1.3 = <strong>0.352 球</strong></li>
+<li><strong>λ 墨西哥</strong> = 1.586 × 1.377 × 1.10 × 1.05 × 0.97 × 1.3 = <strong>2.890 球</strong></li>
+</ul>
+<p><strong>关键变数</strong>：墨西哥已 6 分锁定头名，主帅 Aguirre 几乎肯定大幅轮换（保住主力备战 16 强）。但即便二线阵容在 2240m 海拔的 Azteca（Estadio Banorte）主场作战，优势仍然碾压。<strong>海拔因素是关键</strong>：墨西哥城 2240m 高原对欧洲球队是巨大体能挑战。</p>
+<h4>6.2 战术动态博弈与临界点分析</h4>
+<p><strong>墨西哥轮换</strong>：</p>
+<ul>
+<li>选项 A：保留 4-5 名主力，平稳收官 → 2-0/3-0 小胜</li>
+<li>选项 B：完全轮换 9+ 人，给年轻人机会 → 可能 1-0 / 0-0 闷战</li>
+</ul>
+<p><strong>海拔博弈</strong>：捷克球员 90 分钟在 2240m 高度奔跑，<strong>第 60 分钟后体能下降 15-20%</strong>，预期下半场进球激增。  </p>
+<p><strong>破密集防守</strong>：捷克 5-4-1 龟缩，墨西哥需要耐心传导。<strong>Schick 反击</strong>是捷克唯一威胁，但 Schick 状态低迷（MD1+MD2 仅 1 球）。</p>
+<h4>6.3 蒙特卡洛多分支概率推演</h4>
+<p><strong>分支 A：常规赛果</strong>（57.3% 区间）  </p>
+<ul>
+<li><strong>0-2 墨西哥 (16.3%)</strong> / <strong>0-3 墨西哥 (15.9%)</strong> / <strong>0-1 墨西哥 (11.4%)</strong> / <strong>0-4 墨西哥 (10.0%)</strong> / <strong>0-5 墨西哥 (6.0%)</strong>  </li>
+<li><strong>推演逻辑</strong>：墨西哥 λ=2.89 极端高，捷克 λ=0.35 极端低，差距悬殊</li>
+</ul>
+<p><strong>分支 B：冷门结果</strong>（10.6%）  </p>
+<ul>
+<li><strong>1-1 平局</strong> — 触发：墨西哥完全轮换 10+ 人 + 捷克死守 + 高原体能优势消失</li>
+<li><strong>1-0 捷克</strong>（1.4%）— 极小冷门</li>
+</ul>
+<p><strong>分支 C：大比分狂胜</strong>（49.4%）  </p>
+<ul>
+<li><strong>0-3 墨西哥</strong> (15.9%) / <strong>0-4 墨西哥</strong> (10.0%) / <strong>0-5 墨西哥</strong> (6.0%) / <strong>0-6</strong> (3.3%)  </li>
+<li><strong>触发</strong>：墨西哥不轮换 + 海拔优势 + 捷克崩盘</li>
+</ul>
+<h4>6.4 最终精算结论</h4>
+<table><thead>
+<tr><th>指标</th><th>概率</th></tr>
+</thead><tbody>
+<tr><td>🇨🇿 捷克胜</td><td>2.8%</td></tr>
+<tr><td>平局</td><td>8.8%</td></tr>
+<tr><td>🇲🇽 墨西哥胜</td><td><strong>88.5%</strong></td></tr>
+<tr><td>大于 2.5 球</td><td><strong>62.8%</strong></td></tr>
+<tr><td>小于 2.5 球</td><td>37.2%</td></tr>
+</tbody></table>
+<p><strong>推荐比分</strong>：</p>
+<ol>
+<li><strong>0-2 墨西哥</strong> (16.3%) — 常规最可能，控盘+小胜</li>
+<li><strong>0-3 墨西哥</strong> (15.9%) — 海拔+轮换主力冲净胜球</li>
+<li><strong>0-4 墨西哥</strong> (10.0%) — 若墨西哥完全发力</li>
+</ol>
+<p><strong>核心高光球员</strong>：🇲🇽 <strong>Lozano</strong>（边路爆点）+ <strong>Vega</strong>（中场新核）vs 🇨🇿 <strong>Schick</strong>（唯一威胁）+ <strong>Soucek</strong>（中场屏障）  </p>
+<p><strong>战术变数</strong>：Aguirre 轮换幅度决定比分。<strong>海拔 2240m</strong> 是本场最大变数，预计下半场进球占 60%+。</p>
+<hr>
+<h3>7. 关键趋势洞察</h3>
+<h4>7.1 强弱分明度</h4>
+<p>本轮 6 场比赛中，<strong>4 场强弱悬殊</strong>（摩洛哥-海地、墨西哥-捷克、巴西-苏格兰、韩国-南非），平均强队胜率 77.6%。  </p>
+<p><strong>2 场胶着</strong>（瑞士-加拿大、波黑-卡塔尔），前者小组头名之争，后者荣誉战。</p>
+<h4>7.2 进球数预测</h4>
+<ul>
+<li><strong>总进球期望</strong>：16.07 球（场均 2.68 球）— 低于 D/E/F MD3 的 3.84 球/场</li>
+<li><strong>关键原因</strong>：A/B/C 组强弱差距大于 D/E/F 组，捷克、海地、苏格兰进攻乏力</li>
+</ul>
+<h4>7.3 海拔与气候变数</h4>
+<ul>
+<li><strong>墨西哥城 2240m</strong> — 捷克后 30 分钟体能崩盘预期</li>
+<li><strong>迈阿密 6 月高湿</strong> — 苏格兰身体型球队最大劣势</li>
+<li><strong>蒙特雷 32°C 傍晚</strong> — 韩国与南非都需适应</li>
+</ul>
+<h4>7.4 冷门预警</h4>
+<ul>
+<li><strong>巴西完全轮换 → 苏格兰 0-0 闷平</strong>（17.5% 概率，单一最高冷门）</li>
+<li><strong>摩洛哥大幅轮换 → 海地 0-0 偷分</strong>（14.6%）</li>
+<li><strong>加拿大保守 → 瑞士 1-1 握手</strong>（8.4%）</li>
+</ul>
+<hr>
+<h3>8. 6 场预测概率排序总览</h3>
+<table><thead>
+<tr><th>排名</th><th>比赛</th><th>强队胜率</th><th>强队预测</th><th>总进球期望</th><th>Over 2.5</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>捷克 vs 墨西哥</td><td><strong>88.5%</strong></td><td>0-3</td><td>3.30</td><td>62.8%</td></tr>
+<tr><td>2</td><td>摩洛哥 vs 海地</td><td><strong>78.9%</strong></td><td>2-0</td><td>1.94</td><td>30.1%</td></tr>
+<tr><td>3</td><td>苏格兰 vs 巴西</td><td>71.9%</td><td>0-1</td><td>1.76</td><td>25.6%</td></tr>
+<tr><td>4</td><td>南非 vs 韩国</td><td><strong>71.3%</strong></td><td>0-2</td><td>2.45</td><td>43.7%</td></tr>
+<tr><td>5</td><td>波黑 vs 卡塔尔</td><td>49.0%</td><td>2-1</td><td>2.99</td><td>56.8%</td></tr>
+<tr><td>6</td><td>瑞士 vs 加拿大</td><td>41.8%</td><td>1-1</td><td>3.69</td><td><strong>70.5%</strong></td></tr>
+</tbody></table>
+<p><strong>单日最佳投注价值</strong>（从波动率看）：</p>
+<ol>
+<li><strong>瑞士 vs 加拿大 Over 2.5</strong> (70.5%) — 双方进攻 β 都在 1.6+</li>
+<li><strong>捷克 vs 墨西哥 墨西哥让 1.5 球</strong> — 88.5% 胜率 + λ_MEX=2.89</li>
+<li><strong>摩洛哥 vs 海地 摩洛哥让 1.5 球</strong> — 78.9% 胜率 + λ_MAR=1.78</li>
 </ol>
 <hr>
-<p><strong>报告生成</strong>：2026-06-24 12:22 GMT+8</p>
-<p><strong>模型版本</strong>：Dixon-Coles v2.0 with Monte Carlo (N=10,000)</p>
-<p><strong>报告数据仅供参考，不构成投注建议</strong></p>
+<h3>9. 总结</h3>
+<p><strong>本轮 6 场关键发现</strong>：</p>
+<ol>
+<li><strong>小组头名之争最为胶着</strong>：瑞士-加拿大、巴西-摩洛哥两场都是同分对决，过程会非常激烈</li>
+<li><strong>东道主效应</strong>：加拿大（BC Place）+ 墨西哥（Azteca）双主场作战，胜率合计 88.5% / 88.5%</li>
+<li><strong>海拔效应</strong>：墨西哥城 2240m 是本轮最大物理变数，预期捷克后半场崩盘</li>
+<li><strong>海地"陪跑"地位</strong>：本届世界杯首支 0 球被淘汰的球队，2 战 0 进 4 失</li>
+<li><strong>巴西轮换玄机</strong>：Dorival 如何平衡"主力休息"与"保持状态"，是苏格兰能否偷分的核心</li>
+<li><strong>韩国生死战</strong>：孙兴慜最后一届世界杯，必须赢才能稳保 16 强席位</li>
+<li><strong>波黑卡塔尔荣誉战</strong>：双方都已出局，Dzeko 告别演出值得期待</li>
+<li><strong>进球数集中度</strong>：6 场总进球期望 16.07 球，强弱悬殊场次不会刷数据</li>
+</ol>
+<p><strong>模型局限提示</strong>：</p>
+<ul>
+<li>球员伤病信息为赛前 24 小时快照，比赛中临时变化未计入</li>
+<li>海拔/温度/湿度等环境因素以历史均值为准</li>
+<li>主帅轮换决策有较大不确定性，特别是巴西、摩洛哥、墨西哥三队</li>
+<li>MD3 各队心态复杂（晋级/淘汰/荣誉），已通过 motivation 系数微调</li>
+</ul>
+<hr>
+<p><strong>数据来源</strong>：FIFA 官方积分榜 (fifa.com) · 球队阵容预览 (americaworldcup.net) · Dixon-Coles 校准 v3.0  </p>
+<p><strong>模型作者</strong>：Dixon-Coles + Monte Carlo 自动化预测系统  </p>
+<p><strong>报告生成时间</strong>：2026-06-24 17:11 BJT  </p>
+<p><strong>下次报告</strong>：2026-06-26 03:00 BJT（D/E/F 组 MD3 已完成 → 1/8 决赛前瞻）</p>
   </div>
 </div>
 <div class="footer"><p>报告数据仅供参考，不构成投注建议</p></div>

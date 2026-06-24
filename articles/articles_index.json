@@ -75,6 +75,15 @@
       "preview": "🏆 2026 FIFA World Cup 战报 & 预测  > **撰写**：2026-06-16 17:54 CST | **数据截止**：2026-06-15 | **来源**：FIFA / Wikipedia  ---   📋 赛事基本面  - **时间**：6月11日 → 7月19日 - ..."
     },
     {
+      "slug": "2026世界杯小组赛第三轮数据分析预测报告",
+      "title": "世界杯第三轮预测：强弱之外，先看分数",
+      "category": "research",
+      "cat_label": "专题",
+      "date": "",
+      "file": "articles/research/2026世界杯小组赛第三轮数据分析预测报告.html",
+      "preview": "世界杯第三轮预测：强弱之外，先看分数  **生成时间：** 2026-06-24   **范围：** 2026 世界杯小组赛第三轮 24 场   **报告类型：** Data Analytics 分析预测报告   **分析口径：** 科学向数据分析 75% + 出线情景推演 20% + 玄学向参考 ..."
+    },
+    {
       "slug": "2026世界杯大小球分析",
       "title": "2026 世界杯大小球分析",
       "category": "research",
@@ -113,13 +122,22 @@
   ],
   "simulation": [
     {
+      "slug": "2026-06-26_worldcup-dixon-coles-predictions",
+      "title": "2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测报告",
+      "category": "simulation",
+      "cat_label": "推演",
+      "date": "",
+      "file": "articles/simulation/2026-06-26_worldcup-dixon-coles-predictions.html",
+      "preview": "2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测报告  > **比赛日**：2026-06-25 美东时间（对应北京时间 2026-06-26 04:00 / 07:00 / 10:00 BJT） > **数据生成时间**：2026-06-24 16:55 GMT+8 > **模型**..."
+    },
+    {
       "slug": "2026-06-25_worldcup-dixon-coles-predictions",
-      "title": "2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总",
+      "title": "2026 美加墨世界杯小组赛 MD3 预测报告",
       "category": "simulation",
       "cat_label": "推演",
       "date": "",
       "file": "articles/simulation/2026-06-25_worldcup-dixon-coles-predictions.html",
-      "preview": "2026世界杯小组赛第3轮 Dixon-Coles蒙特卡洛预测汇总  > **比赛日**：2026-06-25（北京时间 03:00-09:00） > **数据时间**：2026-06-24 12:22 GMT+8 > **模型**：Dixon-Coles Poisson with rho=-0.0..."
+      "preview": "2026 美加墨世界杯小组赛 MD3 预测报告 **A/B/C 组收官战 · Dixon-Coles 蒙特卡洛 10,000 次模拟**  > **报告日期**：2026-06-25（北京时间，6/24 EDT 同日比赛）   > **模型版本**：Dixon-Coles Poisson v3.0 ..."
     },
     {
       "slug": "2026-06-24_worldcup-dixon-coles-predictions",
