@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>调试 - 2026 世界杯预测</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #f4f6f8; }
+    .section { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #dde3ec; }
+    .ok { color: #0f766e; }
+    .err { color: #b42318; }
+    pre { background: #f8fafc; padding: 10px; border-radius: 4px; overflow-x: auto; max-height: 300px; overflow-y: auto; }
+    button { padding: 8px 16px; background: #0f766e; color: white; border: none; border-radius: 4px; cursor: pointer; margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🔧 调试页面 - 2026 世界杯预测</h1>
+  <button onclick="location.href='index.html'">← 返回首页</button>
+  <button onclick="location.reload()">🔄 刷新</button>
+  
+  <div class="section">
+    <h2>1. schedule.json 加载测试</h2>
+    <div id="test1">⏳ 加载中...</div>
+  </div>
+
+  <div class="section">
+    <h2>2. match_data.json 加载测试</h2>
+    <div id="test2">⏳ 加载中...</div>
+  </div>
+
+  <div class="section">
+    <h2>3. 比赛卡片渲染测试（6月25日）</h2>
+    <div id="test3">⏳ 测试中...</div>
+  </div>
+
+  <div class="section">
+    <h2>4. 浏览器控制台错误</h2>
+    <div id="test4">⏳ 监听中...（请打开浏览器控制台 F12 查看详细信息）</div>
+  </div>
+
+  <script>
+    // 捕获 JavaScript 错误
+    window.onerror = function(msg, url, line, col, error) {
+      const div = document.getElementById('test4');
+      div.innerHTML = `<p class="err">❌ JavaScript 错误:</p><pre>${msg}\n文件: ${url}\n行: ${line}, 列: ${col}</pre>`;
+    };
+
+    // 测试1: 加载 schedule.json
+    async function test1() {
+      const div = document.getElementById('test1');
+      try {
+        const resp = await fetch('schedule.json?nocache=' + Date.now());
+        const data = await resp.json();
+        div.innerHTML = `<p class="ok">✅ 加载成功!</p>
+          <p>HTTP 状态: ${resp.status}</p>
+          <p>数据条数: ${data.length} 场</p>
+          <p>日期范围: ${data[0].date} ~ ${data[data.length-1].date}</p>
+          <p>6月25日比赛:</p>
+          <pre>${JSON.stringify(data.filter(m => m.date === '2026-06-25'), null, 2)}</pre>`;
+        return data;
+      } catch(e) {
+        div.innerHTML = `<p class="err">❌ 加载失败: ${e.message}</p>`;
+        return null;
+      }
+    }
+
+    // 测试2: 加载 match_data.json
+    async function test2() {
+      const div = document.getElementById('test2');
+      try {
+        const resp = await fetch('match_data.json?nocache=' + Date.now());
+        const data = await resp.json();
+        div.innerHTML = `<p class="ok">✅ 加载成功!</p>
+          <p>HTTP 状态: ${resp.status}</p>
+          <p>数据条数: ${data.length} 场</p>
+          <p>最新比赛日期: ${data[0]?.date || '未知'}</p>
+          <p>前3场比赛:</p>
+          <pre>${JSON.stringify(data.slice(0, 3), null, 2)}</pre>`;
+        return data;
+      } catch(e) {
+        div.innerHTML = `<p class="err">❌ 加载失败: ${e.message}</p>`;
+        return null;
+      }
+    }
+
+    // 测试3: 渲染比赛卡片（模拟 renderMatches）
+    async function test3(scheduleData, matchData) {
+      const div = document.getElementById('test3');
+      if (!scheduleData || !matchData) {
+        div.innerHTML = `<p class="err">⚠️ 请先完成测试1和测试2</p>`;
+        return;
+      }
+
+      try {
+        // 查找6月25日的比赛
+        const dayMatches = scheduleData.filter(m => m.date === '2026-06-25');
+        div.innerHTML = `<p>6月25日比赛场数: ${dayMatches.length}</p>`;
+
+        // 模拟 findPrediction 函数
+        function findPrediction(teamA, teamB) {
+          return matchData.find(m => {
+            const title = m.title || '';
+            return title.includes(teamA) && title.includes(teamB);
+          });
+        }
+
+        // 检查每场比赛是否有预测数据
+        let html = '<p>比赛预测数据匹配情况:</p><ul>';
+        let hasAnyPred = false;
+        dayMatches.forEach(m => {
+          const pred = findPrediction(m.team_a, m.team_b);
+          const hasPred = !!pred;
+          if (hasPred) hasAnyPred = true;
+          html += `<li>${m.team_a} vs ${m.team_b}: ${hasPred ? '✅ 有预测' : '⚠️ 无预测'}</li>`;
+        });
+        html += '</ul>';
+
+        if (!hasAnyPred) {
+          html += `<p class="err">❌ 所有比赛都缺少预测数据！match_data.json 中可能没有6月25日的预测。</p>`;
+          html += `<p>match_data.json 中最新日期: ${matchData[0]?.date || '未知'}</p>`;
+        }
+
+        div.innerHTML += html;
+      } catch(e) {
+        div.innerHTML += `<p class="err">❌ 测试失败: ${e.message}</p>`;
+      }
+    }
+
+    // 执行测试
+    (async () => {
+      const scheduleData = await test1();
+      const matchData = await test2();
+      await test3(scheduleData, matchData);
+    })();
+  </script>
+</body>
+</html>
